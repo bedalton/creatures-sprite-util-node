@@ -13,21 +13,17 @@ npm install -g @bedalton/sprite-util
 ```  
 The `sprite-util` utility allows for the following sub-commands:
 
-**[compile](#compile)** -
-Sub command for converting raw images into a Creatures' sprite file Supports converting to all main formats, SPR, S16,
-C16 and BLK
+**[compile](#compile)**  
+Compile raw PNG and BMP images into a Creatures' sprite file. Supports SPR, S16, C16 and BLK
 
-**[parse](#parse)** -
-Sub command for converting raw images into a Creatures' sprite file Supports converting to all main formats, SPR, S16,
-C16 and BLK
+**[parse](#parse)**  
+Output sprite image contents as PNG. Supports SPR,S16,C16, and BLK
 
-**[convert-sprite](#convert-sprite)** -
-Sub command for converting raw images into a Creatures' sprite file.
-Supports converting between the main formats: SPR, S16, and C16
+**[convert-sprite](#convert-sprite)**  
+Convert sprites between the main formats: SPR, S16, and C16
 
-**[convert-breed](#convert-breed)** -
-Sub command for converting a breed's images (and optionally its ATTs)
-from one game to another
+**[convert-breed](#convert-breed)**  
+Convert a breed's images (and optionally its ATTs) from one game to another
 
 ---
 
@@ -318,7 +314,7 @@ sprite-util convert-sprite C16 --force ./C2/images/zand.s16
 **&num; Example 3: Skip files without prompt**  
 The following would skip converting and writing `zand.c16` if the file already exists
 ```console
-sprite-util convert-sprite C16 --skip-existing ./C2/images/zand.s16```
+sprite-util convert-sprite C16 --skip-existing ./C2/images/zand.s16
 ```
 
 ---
