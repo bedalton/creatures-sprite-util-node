@@ -1,0 +1,52 @@
+{
+  "name": "@bedalton/sprite-util",
+  "version": "0.1.0",
+  "main": "SpriteCompilerCLI.js",
+  "types": "SpriteCompilerCLI.d.ts",
+  "devDependencies": {
+    "source-map-support": "0.5.20",
+    "dukat": "0.5.8-rc.4"
+  },
+  "dependencies": {
+    "node-self": "1.0.0-c",
+    "glob": "7.2.0"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bedalton/creatures-sprite-util-node-cli.git"
+  },
+  "bin": {
+    "sprite-util": "sprite-util-main.js"
+  },
+  "author": "bedalton",
+  "bundleDependencies": [],
+  "description": "Command line tools for parsing, compiling or converting Creatures sprite files",
+  "bugs": {
+    "url": "https://github.com/bedalton/creatures-sprite-util-node-cli/issues"
+  },
+  "homepage": "https://github.com/bedalton/creatures-sprite-util-node-cli#readme",
+  "scripts": {
+  },
+  "keywords": [
+    "Creatures",
+    "C16",
+    "S16",
+    "SPR",
+    "BLK",
+    "Creatures1",
+    "Creatures2",
+    "Creatures3",
+    "Docking Station",
+    "DockingStation",
+    "Sprite",
+    "Compiler",
+    "Sprite Parser",
+    "BLK Compiler",
+    "BLK Parser",
+    "Breed Converter",
+    "Breed Conversion"
+  ]
+}
