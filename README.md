@@ -2,9 +2,13 @@
 
 Command line tools for parsing, compiling or converting Creatures sprite files
 
----
+## Basic Information
+This utility requires node to run.
 
-## Sub Commands:
+To download node, visit [node's downloads page](https://nodejs.org/en/download/)
+
+To use the plugin install it with node's npm. `npm install -g @bedalton/sprite-util`. 
+The `sprite-util` utility allows for the following sub-commands:
 
 **[compile](#compile)** - 
 Sub command for converting raw images into a Creatures' sprite file Supports converting to all main formats, SPR, S16,
@@ -17,7 +21,6 @@ C16 and BLK
 **[convert-sprite](#convert-sprite)** - 
 Sub command for converting raw images into a Creatures' sprite file.
 Supports converting between the main formats: SPR, S16, and C16
-
 
 **[convert-breed](#convert-breed)** - 
 Sub command for converting a breed's images (and optionally its ATTs) 
@@ -46,11 +49,11 @@ Options:
         or child command. i.e. `sprite-util convert --help`
 ```
 
-The **inputFiles** argument is a list of:
-
+### Input Files 
+The **inputFiles** argument contains one or a mix of any of the following:
 - Individual file names
 - Directories
-- Glob patterns. i.e. `./Frost-Grendel/*103.spr`
+- Glob patterns. i.e. `./Frost-Grendel/*.spr`
 
 ---
 
@@ -65,13 +68,13 @@ With PNG images, black can be made non-transparent by using the `--keep-black` f
 support transparency, and when black may be used accidentally
 
 ```
-Usage: sprite-util compile type output [options_list] inputFileNames
+Usage: sprite-util compile type output [options_list] inputFiles...
 Arguments: 
     type -> sprite output type: [SPR, S16, C16, BLK]
     Output -> Output sprite file name
     images -> Image files or folders or glob patterns
 Options: 
-    --encoding, -c -> Sprite color encoding { Value should be one of [555, 565] }
+    --encoding, -c -> Sprite color encoding: [555, 565]
     --force, --f -> Overwrite ouput file if it exists
     --skip-existing, -x -> Do not overwrite existing file
     --help, -h -> Usage info 
@@ -112,7 +115,7 @@ Pass the `--nostitch` flag to output the individual frames
 ```
 Usage: sprite-util parse [options_list] inputFiles....
 Arguments: 
-    FileNames -> Sprite files to parse (supports some glob syntax) { String }
+    FileNames -> Sprite files to parse (supports some glob syntax)
 Options: 
     --output, -o -> Directory to output sprite images to
     --prefix, -p -> Output file name prefix
@@ -173,11 +176,11 @@ Converts one game's sprites to that of another
 ```
 usage: sprite-util convert-sprite type [options_list] inputFiles...
 Arguments: 
-    type -> Target output sprite type { Value should be one of [SPR, S16, C16, BLK] }
-    files -> Image files or folders in glob format { String }
+    type -> Target output sprite type: [SPR, S16, C16, BLK]
+    files -> Image files or folders in glob format
 Options: 
     --encoding, -c [565] -> Sprite color encoding: [555, 565]
-    --output, -o -> Output folder for the converted breed files { String }
+    --output, -o -> Output folder for the converted breed files
     --help, -h -> Usage info 
 Flags:
     --force, --f -> Overwrite existing files
@@ -208,13 +211,15 @@ Converts a breed's sprites from one game to another and optionally its ATTs as w
 For C1 -> C2 or C2e, tail files are created by default, and if the breed has tails, the parts are 
 automatically reversed as is needed for C1 tails to the other games and vice-versa
 
+**Note:** This utility does **not** support **Creatures Village/Adventure** in any direction
+
 ```
 Usage: sprite-util convert-breed target-game [options_list] inputFiles...
 Arguments: 
-    target-game -> Target game for breed files { Value should be one of [C1, C2, CV, C3, DS, SM] }
+    target-game -> Target game for breed files: [C1, C2, C3, DS]
     sprites -> Image files or folders or glob pattern
 Options: 
-    --from, -> Input sprite's game variant (C1|C2|CV|C3|DS). Not really needed if extensions are correct
+    --from, -> Input sprite's game variant [C1, C2, C3, DS]. Not really needed if extensions are correct
     --encoding, -c -> Sprite color encoding: [555, 565]
     --genus, -g -> The output genus: [n]orn, [g]rendel, [e]ttin, [s]hee, geat
     --breed, -b -> The output breed slot for these body parts char [0-9] for C1; Char [a-z] for all other games 
@@ -222,8 +227,8 @@ Options:
     --skip-existing, -x [false] -> Skip existing files (cannot be used with force)
     --no-tail -> Do not create tail files (even if none are present) 
     --ignore-errors, -e [false] -> Ignore all compilation errors. Other errors will still cancel compile 
-    --att-dir, -a -> The location of atts to convert if desired { String }
-    --output, -o -> Output folder for the converted breed files { String }
+    --att-dir, -a -> The location of atts to convert if desired
+    --output, -o -> Output folder for the converted breed files
     --help, -h -> Usage info 
 ```
 
@@ -235,4 +240,3 @@ Empty tail sprite and ATT will be generated automatically, if the C1 breed does 
 `sprite-util convert-breed C3 --genus ettin --breed z --no-tail --output-dir "Coversions/C3EZ" ./Images/*0*8.spr ./Images/*4*8.spr` - 
 Converts only a C1 breed's sprites to C3 C16's and does not create a tail if none are present.
 If breed does not include a tail, a tail will be selected by the game engine
-
