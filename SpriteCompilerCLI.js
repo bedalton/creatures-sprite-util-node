@@ -31477,7 +31477,7 @@
   };
   function DynamicInternal() {
     DynamicInternal_instance = this;
-    this._global = typeof global !== 'undefined' ? global : window;
+    this._global = typeof global !== 'undefined' ? global : this;
   }
   DynamicInternal.$metadata$ = {
     simpleName: 'DynamicInternal',
@@ -55967,7 +55967,7 @@
   EmptyFloatArray = new Float32Array(1);
   randomUnittesting = false;
   isNodeJs$delegate = lazy(_no_name_provided_$factory_47());
-  _global = typeof global !== 'undefined' ? global : self;
+  _global = typeof global !== 'undefined' ? global : this;
   isNative = false;
   COMPLETING_ALREADY = new Symbol('COMPLETING_ALREADY');
   COMPLETING_WAITING_CHILDREN = new Symbol('COMPLETING_WAITING_CHILDREN');
@@ -56003,7 +56003,7 @@
   Language_CURRENT$delegate = lazy(_no_name_provided_$factory_96());
   jsLocalStorageVfs$delegate = lazy(_no_name_provided_$factory_99());
   jsbaseUrl$delegate = lazy(_no_name_provided_$factory_100());
-  globalDynamic = typeof global !== 'undefined' ? global : self;
+  globalDynamic = typeof global !== 'undefined' ? global : this;
   global = globalDynamic;
   isWeb$delegate = lazy(_no_name_provided_$factory_101());
   isWorker$delegate = lazy(_no_name_provided_$factory_102());
