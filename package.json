@@ -17,7 +17,7 @@
     "url": "git+https://github.com/bedalton/creatures-sprite-util-node.git"
   },
   "bin": {
-    "sprite-util": "sprite-util-main.js"
+    "sprite-util": "./sprite-util-main.js"
   },
   "author": "bedalton",
   "description": "Command line tools for parsing, compiling or converting Creatures sprite files",
@@ -25,8 +25,7 @@
     "url": "https://github.com/bedalton/creatures-sprite-util-node/issues"
   },
   "homepage": "https://github.com/bedalton/creatures-sprite-util-node#readme",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [
     "Creatures",
     "C16",
