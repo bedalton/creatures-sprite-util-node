@@ -511,12 +511,12 @@
   $writeTailFilesCOROUTINE$8.prototype.constructor = $writeTailFilesCOROUTINE$8;
   $writeTailAttCOROUTINE$9.prototype = Object.create(CoroutineImpl_0.prototype);
   $writeTailAttCOROUTINE$9.prototype.constructor = $writeTailAttCOROUTINE$9;
-  _no_name_provided__241.prototype = Object.create(CoroutineImpl_0.prototype);
-  _no_name_provided__241.prototype.constructor = _no_name_provided__241;
+  _no_name_provided__242.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__242.prototype.constructor = _no_name_provided__242;
   ConvertSpriteCLI.prototype = Object.create(Subcommand.prototype);
   ConvertSpriteCLI.prototype.constructor = ConvertSpriteCLI;
-  _no_name_provided__244.prototype = Object.create(CoroutineImpl_0.prototype);
-  _no_name_provided__244.prototype.constructor = _no_name_provided__244;
+  _no_name_provided__245.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__245.prototype.constructor = _no_name_provided__245;
   $nextCOROUTINE$10.prototype = Object.create(CoroutineImpl_0.prototype);
   $nextCOROUTINE$10.prototype.constructor = $nextCOROUTINE$10;
   ParseSpriteCLI.prototype = Object.create(Subcommand.prototype);
@@ -3867,7 +3867,7 @@
           var item_2_3 = tmp0_iterator_1_2.next_0_k$();
           var tmp$ret$0;
           $l$block: {
-            tmp$ret$0 = substring_0(_this_, item_2_3);
+            tmp$ret$0 = substring(_this_, item_2_3);
             break $l$block;
           }
           tmp0_mapTo_0_1.add_2bq_k$(tmp$ret$0);
@@ -3911,7 +3911,7 @@
           var item_2_3 = tmp0_iterator_1_2.next_0_k$();
           var tmp$ret$1;
           $l$block_0: {
-            tmp$ret$1 = substring_0(_this_, item_2_3);
+            tmp$ret$1 = substring(_this_, item_2_3);
             break $l$block_0;
           }
           tmp0_mapTo_0_1.add_2bq_k$(tmp$ret$1);
@@ -4150,29 +4150,6 @@
       ignoreCase = false;
     return contains_5(_this_, other, ignoreCase);
   }
-  function endsWith(_this_, char, ignoreCase) {
-    return charSequenceLength(_this_) > 0 ? equals(charSequenceGet(_this_, _get_lastIndex__2(_this_)), char, ignoreCase) : false;
-  }
-  function endsWith$default(_this_, char, ignoreCase, $mask0, $handler) {
-    if (!(($mask0 & 2) === 0))
-      ignoreCase = false;
-    return endsWith(_this_, char, ignoreCase);
-  }
-  function substring(_this_, range) {
-    var tmp$ret$1;
-    $l$block_0: {
-      var tmp0_substring_0 = range._get_start__0_k$();
-      var tmp1_substring_0 = range._get_endInclusive__0_k$() + 1 | 0;
-      var tmp$ret$0;
-      $l$block: {
-        tmp$ret$0 = _this_;
-        break $l$block;
-      }
-      tmp$ret$1 = tmp$ret$0.substring(tmp0_substring_0, tmp1_substring_0);
-      break $l$block_0;
-    }
-    return tmp$ret$1;
-  }
   function padStart_0(_this_, length, padChar) {
     if (length < 0)
       throw IllegalArgumentException_init_$Create$('' + 'Desired length ' + length + ' is less than zero.');
@@ -4254,7 +4231,7 @@
     Unit_getInstance();
     return result;
   }
-  function substring_0(_this_, range) {
+  function substring(_this_, range) {
     return toString_3(charSequenceSubSequence(_this_, range._get_start__0_k$(), range._get_endInclusive__0_k$() + 1 | 0));
   }
   function rangesDelimitedBy(_this_, delimiters, startIndex, ignoreCase, limit) {
@@ -4700,6 +4677,29 @@
       ignoreCase = false;
     return lastIndexOf_0(_this_, string, startIndex, ignoreCase);
   }
+  function endsWith(_this_, char, ignoreCase) {
+    return charSequenceLength(_this_) > 0 ? equals(charSequenceGet(_this_, _get_lastIndex__2(_this_)), char, ignoreCase) : false;
+  }
+  function endsWith$default(_this_, char, ignoreCase, $mask0, $handler) {
+    if (!(($mask0 & 2) === 0))
+      ignoreCase = false;
+    return endsWith(_this_, char, ignoreCase);
+  }
+  function substring_0(_this_, range) {
+    var tmp$ret$1;
+    $l$block_0: {
+      var tmp0_substring_0 = range._get_start__0_k$();
+      var tmp1_substring_0 = range._get_endInclusive__0_k$() + 1 | 0;
+      var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = _this_;
+        break $l$block;
+      }
+      tmp$ret$1 = tmp$ret$0.substring(tmp0_substring_0, tmp1_substring_0);
+      break $l$block_0;
+    }
+    return tmp$ret$1;
+  }
   function padEnd(_this_, length, padChar) {
     return toString_3(padEnd_0(isCharSequence(_this_) ? _this_ : THROW_CCE(), length, padChar));
   }
@@ -4810,7 +4810,7 @@
     this._$this_splitToSequence = $this_splitToSequence;
   }
   _no_name_provided__14.prototype.invoke_em8bnc_k$ = function (it) {
-    return substring_0(this._$this_splitToSequence, it);
+    return substring(this._$this_splitToSequence, it);
   };
   _no_name_provided__14.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_em8bnc_k$(p1 instanceof IntRange ? p1 : THROW_CCE());
@@ -14204,6 +14204,33 @@
     interfaces: [],
     associatedObjects: {0: Companion_getInstance_12}
   };
+  function getSelfOrParentDirectory$close(_this_, $appendSeparator) {
+    var tmp;
+    var tmp_0;
+    if (!$appendSeparator) {
+      tmp_0 = true;
+    } else {
+      var tmp_1 = new Char(47);
+      tmp_0 = endsWith$default(_this_, tmp_1, false, 2, null);
+    }
+    if (tmp_0) {
+      tmp = _this_;
+    } else {
+      {
+        tmp = ensureEndsWith(_this_, pathSeparatorChar);
+      }
+    }
+    return tmp;
+  }
+  function getLastPathComponent$close(_this_, $nullIfBlank) {
+    var tmp;
+    if ($nullIfBlank ? isBlank(_this_) : false) {
+      tmp = null;
+    } else {
+      tmp = _this_;
+    }
+    return tmp;
+  }
   function FileNameUtil() {
     FileNameUtil_instance = this;
   }
@@ -14266,6 +14293,86 @@
     }
     var extension = tmp_0;
     return nullIfEmpty_0(extension);
+  };
+  FileNameUtil.prototype.getSelfOrParentDirectory_2f0f39_k$ = function (file, appendSeparator) {
+    if (endsWith$default(file, pathSeparatorChar, false, 2, null)) {
+      return file;
+    } else {
+    }
+    var index = lastIndexOf$default(file, pathSeparatorChar, 0, false, 6, null);
+    if (index < 0) {
+      var tmp;
+      var tmp_0 = new Char(46);
+      if (contains$default(file, tmp_0, false, 2, null)) {
+        tmp = null;
+      } else {
+        {
+          tmp = getSelfOrParentDirectory$close(file, appendSeparator);
+        }
+      }
+      return tmp;
+    }var tmp_1;
+    var tmp$ret$1;
+    $l$block_0: {
+      var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = file;
+        break $l$block;
+      }
+      tmp$ret$1 = tmp$ret$0.substring(index);
+      break $l$block_0;
+    }
+    var tmp_2 = tmp$ret$1;
+    var tmp_3 = new Char(46);
+    if (contains$default(tmp_2, tmp_3, false, 2, null)) {
+      tmp_1 = getSelfOrParentDirectory$close(substring_0(file, until(0, index)), appendSeparator);
+    } else {
+      {
+        tmp_1 = getSelfOrParentDirectory$close(file, appendSeparator);
+      }
+    }
+    return tmp_1;
+  };
+  FileNameUtil.prototype.getSelfOrParentDirectory$default_zmr95_k$ = function (file, appendSeparator, $mask0, $handler) {
+    if (!(($mask0 & 2) === 0))
+      appendSeparator = false;
+    return this.getSelfOrParentDirectory_2f0f39_k$(file, appendSeparator);
+  };
+  FileNameUtil.prototype.getLastPathComponent_2f0f39_k$ = function (path_0, nullIfBlank) {
+    var tmp;
+    if (isBlank(path_0)) {
+      tmp = null;
+    } else if (path_0 === pathSeparator) {
+      tmp = getLastPathComponent$close('', nullIfBlank);
+    } else {
+      var index = lastIndexOf$default(path_0, pathSeparatorChar, 0, false, 6, null);
+      var tmp_0;
+      if (index < 0) {
+        tmp_0 = getLastPathComponent$close(path_0, nullIfBlank);
+      } else if (index === _get_lastIndex__2(path_0)) {
+        tmp_0 = getLastPathComponent$close('', nullIfBlank);
+      } else {
+        var tmp$ret$1;
+        $l$block_0: {
+          var tmp0_substring_0 = index + 1 | 0;
+          var tmp$ret$0;
+          $l$block: {
+            tmp$ret$0 = path_0;
+            break $l$block;
+          }
+          tmp$ret$1 = tmp$ret$0.substring(tmp0_substring_0);
+          break $l$block_0;
+        }
+        tmp_0 = getLastPathComponent$close(tmp$ret$1, nullIfBlank);
+      }
+      tmp = tmp_0;
+    }
+    return tmp;
+  };
+  FileNameUtil.prototype.getLastPathComponent$default_zmr95_k$ = function (path_0, nullIfBlank, $mask0, $handler) {
+    if (!(($mask0 & 2) === 0))
+      nullIfBlank = false;
+    return this.getLastPathComponent_2f0f39_k$(path_0, nullIfBlank);
   };
   FileNameUtil.$metadata$ = {
     simpleName: 'FileNameUtil',
@@ -14560,8 +14667,41 @@
     var tmp_1 = components.get_ha5a7z_k$(0) + pathSeparator;
     return tmp_1 + joinToString$default_0(out, pathSeparator, null, null, 0, null, null, 62, null);
   }
+  function ensureNotEndsWith(_this_, tail) {
+    var tmp;
+    if (_this_ === tail) {
+      tmp = '';
+    } else {
+      if (endsWith$default_0(_this_, tail, false, 2, null)) {
+        var tmp$ret$1;
+        $l$block_0: {
+          var tmp0_substring_0 = _get_lastIndex__2(_this_) - tail.length | 0;
+          var tmp$ret$0;
+          $l$block: {
+            tmp$ret$0 = _this_;
+            break $l$block;
+          }
+          tmp$ret$1 = tmp$ret$0.substring(0, tmp0_substring_0);
+          break $l$block_0;
+        }
+        tmp = tmp$ret$1;
+      } else {
+        {
+          tmp = _this_;
+        }
+      }
+    }
+    return tmp;
+  }
   function nullIfEmpty_0(_this_) {
     return (_this_ == null ? true : isBlank(_this_)) ? null : _this_;
+  }
+  function ensureEndsWith(_this_, char) {
+    if (endsWith$default(_this_, char, false, 2, null))
+      return _this_;
+    else {
+    }
+    return _this_ + char;
   }
   function JsByteReader_init_$Init$(byteString, $this) {
     JsByteReader.call($this, encodeToByteArray(byteString));
@@ -46298,111 +46438,262 @@
   };
   function _no_name_provided__217() {
   }
-  _no_name_provided__217.prototype.invoke_jg38oy_k$ = function (a, b) {
-    var tmp0_safe_receiver = leadingNumberRegex.matchEntire_3ajhph_k$(a);
-    var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver._get_groupValues__0_k$();
-    var tmp;
-    if (tmp1_safe_receiver == null) {
-      tmp = null;
-    } else {
-      var tmp$ret$1;
-      $l$block_0: {
-        {
-        }
-        var tmp$ret$0;
-        $l$block: {
-          tmp$ret$0 = new Pair(tmp1_safe_receiver.get_ha5a7z_k$(2), tmp1_safe_receiver.get_ha5a7z_k$(1));
-          break $l$block;
-        }
-        tmp$ret$1 = tmp$ret$0;
-        break $l$block_0;
+  _no_name_provided__217.prototype.invoke_jg38oy_k$ = function (aRaw, bRaw) {
+    var tmp$ret$1;
+    $l$block_0: {
+      var tmp = FileNameUtil_getInstance();
+      var tmp0_elvis_lhs = tmp.getLastPathComponent$default_zmr95_k$(aRaw, false, 2, null);
+      var tmp0_lowercase_0 = tmp0_elvis_lhs == null ? aRaw : tmp0_elvis_lhs;
+      var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = tmp0_lowercase_0;
+        break $l$block;
       }
-      tmp = tmp$ret$1;
+      tmp$ret$1 = tmp$ret$0.toLowerCase();
+      break $l$block_0;
     }
-    var tmp4_elvis_lhs = tmp;
-    var tmp_0;
-    if (tmp4_elvis_lhs == null) {
-      var tmp2_safe_receiver = trailingNumberRegex.matchEntire_3ajhph_k$(a);
-      var tmp3_safe_receiver = tmp2_safe_receiver == null ? null : tmp2_safe_receiver._get_groupValues__0_k$();
-      var tmp_1;
-      if (tmp3_safe_receiver == null) {
-        tmp_1 = null;
-      } else {
-        var tmp$ret$3;
-        $l$block_2: {
-          {
-          }
-          var tmp$ret$2;
-          $l$block_1: {
-            tmp$ret$2 = new Pair(tmp3_safe_receiver.get_ha5a7z_k$(1), tmp3_safe_receiver.get_ha5a7z_k$(2));
-            break $l$block_1;
-          }
-          tmp$ret$3 = tmp$ret$2;
-          break $l$block_2;
-        }
-        tmp_1 = tmp$ret$3;
+    var a = tmp$ret$1;
+    var tmp$ret$3;
+    $l$block_2: {
+      var tmp_0 = FileNameUtil_getInstance();
+      var tmp1_elvis_lhs = tmp_0.getLastPathComponent$default_zmr95_k$(bRaw, false, 2, null);
+      var tmp1_lowercase_0 = tmp1_elvis_lhs == null ? bRaw : tmp1_elvis_lhs;
+      var tmp$ret$2;
+      $l$block_1: {
+        tmp$ret$2 = tmp1_lowercase_0;
+        break $l$block_1;
       }
-      tmp_0 = tmp_1;
-    } else {
-      tmp_0 = tmp4_elvis_lhs;
+      tmp$ret$3 = tmp$ret$2.toLowerCase();
+      break $l$block_2;
     }
-    var aMatch = tmp_0;
-    var tmp5_safe_receiver = leadingNumberRegex.matchEntire_3ajhph_k$(b);
-    var tmp6_safe_receiver = tmp5_safe_receiver == null ? null : tmp5_safe_receiver._get_groupValues__0_k$();
+    var b = tmp$ret$3;
+    var tmp_1 = FileNameUtil_getInstance();
+    var tmp2_safe_receiver = tmp_1.getSelfOrParentDirectory$default_zmr95_k$(aRaw, false, 2, null);
     var tmp_2;
-    if (tmp6_safe_receiver == null) {
+    if (tmp2_safe_receiver == null) {
       tmp_2 = null;
     } else {
       var tmp$ret$5;
       $l$block_4: {
-        {
-        }
         var tmp$ret$4;
         $l$block_3: {
-          tmp$ret$4 = new Pair(tmp6_safe_receiver.get_ha5a7z_k$(2), tmp6_safe_receiver.get_ha5a7z_k$(1));
+          tmp$ret$4 = tmp2_safe_receiver;
           break $l$block_3;
         }
-        tmp$ret$5 = tmp$ret$4;
+        tmp$ret$5 = tmp$ret$4.toLowerCase();
         break $l$block_4;
       }
       tmp_2 = tmp$ret$5;
     }
-    var tmp9_elvis_lhs = tmp_2;
+    var tmp3_safe_receiver = tmp_2;
     var tmp_3;
-    if (tmp9_elvis_lhs == null) {
-      var tmp7_safe_receiver = trailingNumberRegex.matchEntire_3ajhph_k$(b);
-      var tmp8_safe_receiver = tmp7_safe_receiver == null ? null : tmp7_safe_receiver._get_groupValues__0_k$();
-      var tmp_4;
-      if (tmp8_safe_receiver == null) {
-        tmp_4 = null;
-      } else {
-        var tmp$ret$7;
-        $l$block_6: {
-          {
-          }
-          var tmp$ret$6;
-          $l$block_5: {
-            tmp$ret$6 = new Pair(tmp8_safe_receiver.get_ha5a7z_k$(1), tmp8_safe_receiver.get_ha5a7z_k$(2));
-            break $l$block_5;
-          }
-          tmp$ret$7 = tmp$ret$6;
-          break $l$block_6;
-        }
-        tmp_4 = tmp$ret$7;
-      }
-      tmp_3 = tmp_4;
+    if (tmp3_safe_receiver == null) {
+      tmp_3 = null;
     } else {
-      tmp_3 = tmp9_elvis_lhs;
+      var tmp$ret$7;
+      $l$block_6: {
+        {
+        }
+        var tmp$ret$6;
+        $l$block_5: {
+          tmp$ret$6 = ensureNotEndsWith(tmp3_safe_receiver, a);
+          break $l$block_5;
+        }
+        tmp$ret$7 = tmp$ret$6;
+        break $l$block_6;
+      }
+      tmp_3 = tmp$ret$7;
     }
-    var bMatch = tmp_3;
-    if (!(aMatch == null) ? !(bMatch == null) : false) {
-      var firstSort = compareTo(aMatch._first, bMatch._first);
+    var aDirectory = tmp_3;
+    var tmp_4 = FileNameUtil_getInstance();
+    var tmp4_safe_receiver = tmp_4.getSelfOrParentDirectory$default_zmr95_k$(bRaw, false, 2, null);
+    var tmp_5;
+    if (tmp4_safe_receiver == null) {
+      tmp_5 = null;
+    } else {
+      var tmp$ret$9;
+      $l$block_8: {
+        var tmp$ret$8;
+        $l$block_7: {
+          tmp$ret$8 = tmp4_safe_receiver;
+          break $l$block_7;
+        }
+        tmp$ret$9 = tmp$ret$8.toLowerCase();
+        break $l$block_8;
+      }
+      tmp_5 = tmp$ret$9;
+    }
+    var tmp5_safe_receiver = tmp_5;
+    var tmp_6;
+    if (tmp5_safe_receiver == null) {
+      tmp_6 = null;
+    } else {
+      var tmp$ret$11;
+      $l$block_10: {
+        {
+        }
+        var tmp$ret$10;
+        $l$block_9: {
+          tmp$ret$10 = ensureNotEndsWith(tmp5_safe_receiver, b);
+          break $l$block_9;
+        }
+        tmp$ret$11 = tmp$ret$10;
+        break $l$block_10;
+      }
+      tmp_6 = tmp$ret$11;
+    }
+    var bDirectory = tmp_6;
+    if (((!(aDirectory == null) ? !(aDirectory === a) : false) ? !(bDirectory == null) : false) ? !(bDirectory === b) : false) {
+      var sort = compareTo(aDirectory, bDirectory);
+      if (!(sort === 0)) {
+        return sort;
+      }}var tmp6_safe_receiver = leadingNumberRegex.matchEntire_3ajhph_k$(a);
+    var tmp7_safe_receiver = tmp6_safe_receiver == null ? null : tmp6_safe_receiver._get_groupValues__0_k$();
+    var tmp_7;
+    if (tmp7_safe_receiver == null) {
+      tmp_7 = null;
+    } else {
+      var tmp$ret$13;
+      $l$block_12: {
+        {
+        }
+        var tmp$ret$12;
+        $l$block_11: {
+          tmp$ret$12 = new Pair(tmp7_safe_receiver.get_ha5a7z_k$(2), tmp7_safe_receiver.get_ha5a7z_k$(1));
+          break $l$block_11;
+        }
+        tmp$ret$13 = tmp$ret$12;
+        break $l$block_12;
+      }
+      tmp_7 = tmp$ret$13;
+    }
+    var aMatchLeading = tmp_7;
+    var tmp8_safe_receiver = leadingNumberRegex.matchEntire_3ajhph_k$(b);
+    var tmp9_safe_receiver = tmp8_safe_receiver == null ? null : tmp8_safe_receiver._get_groupValues__0_k$();
+    var tmp_8;
+    if (tmp9_safe_receiver == null) {
+      tmp_8 = null;
+    } else {
+      var tmp$ret$15;
+      $l$block_14: {
+        {
+        }
+        var tmp$ret$14;
+        $l$block_13: {
+          tmp$ret$14 = new Pair(tmp9_safe_receiver.get_ha5a7z_k$(2), tmp9_safe_receiver.get_ha5a7z_k$(1));
+          break $l$block_13;
+        }
+        tmp$ret$15 = tmp$ret$14;
+        break $l$block_14;
+      }
+      tmp_8 = tmp$ret$15;
+    }
+    var bMatchLeading = tmp_8;
+    if (!(aMatchLeading == null) ? !(bMatchLeading == null) : false) {
+      var firstSort = compareTo(aMatchLeading._first, bMatchLeading._first);
       if (!(firstSort === 0)) {
         return firstSort;
-      }var numberA = toInt(aMatch._second);
-      var numberB = toInt(bMatch._second);
-      return numberA - numberB | 0;
-    }return compareTo(a, b);
+      }var numberA = toInt(aMatchLeading._second);
+      var numberB = toInt(bMatchLeading._second);
+      var sort_0 = numberA - numberB | 0;
+      if (!(sort_0 === 0)) {
+        return sort_0;
+      }}var tmp10_safe_receiver = trailingNumberRegex.matchEntire_3ajhph_k$(a);
+    var tmp11_safe_receiver = tmp10_safe_receiver == null ? null : tmp10_safe_receiver._get_groupValues__0_k$();
+    var tmp_9;
+    if (tmp11_safe_receiver == null) {
+      tmp_9 = null;
+    } else {
+      var tmp$ret$19;
+      $l$block_18: {
+        {
+        }
+        var tmp$ret$18;
+        $l$block_17: {
+          var tmp$ret$17;
+          $l$block_16: {
+            var tmp0_let_0_2 = tmp11_safe_receiver.get_ha5a7z_k$(1);
+            {
+            }
+            var tmp$ret$16;
+            $l$block_15: {
+              var tmp_10;
+              var tmp_11 = new Char(46);
+              if (startsWith$default(tmp0_let_0_2, tmp_11, false, 2, null)) {
+                tmp_10 = '';
+              } else {
+                {
+                  tmp_10 = tmp0_let_0_2;
+                }
+              }
+              tmp$ret$16 = tmp_10;
+              break $l$block_15;
+            }
+            tmp$ret$17 = tmp$ret$16;
+            break $l$block_16;
+          }
+          tmp$ret$18 = new Pair(tmp$ret$17, tmp11_safe_receiver.get_ha5a7z_k$(2));
+          break $l$block_17;
+        }
+        tmp$ret$19 = tmp$ret$18;
+        break $l$block_18;
+      }
+      tmp_9 = tmp$ret$19;
+    }
+    var aMatchTrailing = tmp_9;
+    var tmp12_safe_receiver = trailingNumberRegex.matchEntire_3ajhph_k$(b);
+    var tmp13_safe_receiver = tmp12_safe_receiver == null ? null : tmp12_safe_receiver._get_groupValues__0_k$();
+    var tmp_12;
+    if (tmp13_safe_receiver == null) {
+      tmp_12 = null;
+    } else {
+      var tmp$ret$23;
+      $l$block_22: {
+        {
+        }
+        var tmp$ret$22;
+        $l$block_21: {
+          var tmp$ret$21;
+          $l$block_20: {
+            var tmp0_let_0_2_0 = tmp13_safe_receiver.get_ha5a7z_k$(1);
+            {
+            }
+            var tmp$ret$20;
+            $l$block_19: {
+              var tmp_13;
+              var tmp_14 = new Char(46);
+              if (startsWith$default(tmp0_let_0_2_0, tmp_14, false, 2, null)) {
+                tmp_13 = '';
+              } else {
+                {
+                  tmp_13 = tmp0_let_0_2_0;
+                }
+              }
+              tmp$ret$20 = tmp_13;
+              break $l$block_19;
+            }
+            tmp$ret$21 = tmp$ret$20;
+            break $l$block_20;
+          }
+          tmp$ret$22 = new Pair(tmp$ret$21, tmp13_safe_receiver.get_ha5a7z_k$(2));
+          break $l$block_21;
+        }
+        tmp$ret$23 = tmp$ret$22;
+        break $l$block_22;
+      }
+      tmp_12 = tmp$ret$23;
+    }
+    var bMatchTrailing = tmp_12;
+    if (!(aMatchTrailing == null) ? !(bMatchTrailing == null) : false) {
+      var firstSort_0 = compareTo(aMatchTrailing._first, bMatchTrailing._first);
+      if (!(firstSort_0 === 0)) {
+        return firstSort_0;
+      }var numberA_0 = toInt(aMatchTrailing._second);
+      var numberB_0 = toInt(bMatchTrailing._second);
+      var sort_1 = numberA_0 - numberB_0 | 0;
+      if (!(sort_1 === 0)) {
+        return sort_1;
+      }}return compareTo(a, b);
   };
   _no_name_provided__217.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE();
@@ -46421,7 +46712,7 @@
   function leadingNumberRegex$init$() {
     var tmp$ret$0;
     $l$block: {
-      tmp$ret$0 = Regex_init_$Create$_0('^(\\d+)(.*?)(\\..+)?$');
+      tmp$ret$0 = Regex_init_$Create$_0('^(\\d+)(.+?)?(\\..+$)?');
       break $l$block;
     }
     return tmp$ret$0;
@@ -46429,7 +46720,7 @@
   function trailingNumberRegex$init$() {
     var tmp$ret$0;
     $l$block: {
-      tmp$ret$0 = Regex_init_$Create$_0('^(.*?)(\\d+)(\\..+)?$');
+      tmp$ret$0 = Regex_init_$Create$_0('^(.+?)?(\\d+)(\\..+$)?');
       break $l$block;
     }
     return tmp$ret$0;
@@ -50476,14 +50767,16 @@
       }
     }
     var extension = tmp_9;
-    var tmp_12 = _get_outputFile_(this);
-    var parentDirectoryRaw = getSelfOrParentDirectory$default(tmp_12, false, 2, null);
+    var tmp_12 = FileNameUtil_getInstance();
+    var tmp_13 = _get_outputFile_(this);
+    var parentDirectoryRaw = tmp_12.getSelfOrParentDirectory$default_zmr95_k$(tmp_13, false, 2, null);
     var outputDirectory = ensureAndGetOutputDirectory(parentDirectoryRaw, currentWorkingDirectory, true);
-    var tmp_13 = PathUtil_getInstance();
-    var tmp_14 = _get_outputFile_(this);
-    var outputFile = tmp_13.combine_yn9lj1_k$([outputDirectory, plus_1(getLastPathComponent$default(tmp_14, false, 2, null), extension)]);
-    var tmp_15 = GlobalScope_getInstance();
-    launch$default(tmp_15, null, null, _no_name_provided_$factory_196(this, allFiles, outputFile, null), 3, null);
+    var tmp_14 = PathUtil_getInstance();
+    var tmp_15 = FileNameUtil_getInstance();
+    var tmp_16 = _get_outputFile_(this);
+    var outputFile = tmp_14.combine_yn9lj1_k$([outputDirectory, plus_1(tmp_15.getLastPathComponent$default_zmr95_k$(tmp_16, false, 2, null), extension)]);
+    var tmp_17 = GlobalScope_getInstance();
+    launch$default(tmp_17, null, null, _no_name_provided_$factory_196(this, allFiles, outputFile, null), 3, null);
     Unit_getInstance();
   };
   CompileCLI.$metadata$ = {
@@ -50650,6 +50943,9 @@
   }
   function _get_quiet_($this) {
     return $this._quiet$delegate.getValue_1kobyo_k$($this, quiet$factory_0());
+  }
+  function _get_progress_($this) {
+    return $this._progress$delegate.getValue_1kobyo_k$($this, progress$factory_0());
   }
   function _get_attDirectory_($this) {
     return $this._attDirectory$delegate.getValue_1kobyo_k$($this, attDirectory$factory_0());
@@ -50848,14 +51144,17 @@
     var tmp_20 = Flag_init_$Create$(null, 1, null);
     tmp_19._quiet$delegate = default_0(this.option$default_t6jqr8_k$(tmp_20, 'quiet', 'q', 'Silence non-essential output', null, 16, null), false).provideDelegate_1kobyo_k$(this, quiet$factory());
     var tmp_21 = this;
-    var tmp_22 = String_getInstance();
-    tmp_21._attDirectory$delegate = this.option$default_t6jqr8_k$(tmp_22, 'att-dir', 'a', 'The location of atts to convert if desired', null, 16, null).provideDelegate_1kobyo_k$(this, attDirectory$factory());
+    var tmp_22 = Flag_init_$Create$(null, 1, null);
+    tmp_21._progress$delegate = default_0(this.option$default_t6jqr8_k$(tmp_22, 'progress', 'p', 'Output file conversion progress', null, 16, null), false).provideDelegate_1kobyo_k$(this, progress$factory());
     var tmp_23 = this;
     var tmp_24 = String_getInstance();
-    tmp_23._outputDirectory$delegate = this.option$default_t6jqr8_k$(tmp_24, 'output', 'o', 'Output folder for the converted breed files', null, 16, null).provideDelegate_1kobyo_k$(this, outputDirectory$factory());
+    tmp_23._attDirectory$delegate = this.option$default_t6jqr8_k$(tmp_24, 'att-dir', 'a', 'The location of atts to convert if desired', null, 16, null).provideDelegate_1kobyo_k$(this, attDirectory$factory());
     var tmp_25 = this;
     var tmp_26 = String_getInstance();
-    tmp_25._files$delegate_0 = vararg(this.argument$default_304j6g_k$(tmp_26, 'images', 'Image files or folders', null, 8, null)).provideDelegate_1kobyo_k$(this, files$factory_1());
+    tmp_25._outputDirectory$delegate = this.option$default_t6jqr8_k$(tmp_26, 'output', 'o', 'Output folder for the converted breed files', null, 16, null).provideDelegate_1kobyo_k$(this, outputDirectory$factory());
+    var tmp_27 = this;
+    var tmp_28 = String_getInstance();
+    tmp_27._files$delegate_0 = vararg(this.argument$default_304j6g_k$(tmp_28, 'images', 'Image files or folders', null, 8, null)).provideDelegate_1kobyo_k$(this, files$factory_1());
   }
   ConvertBreedCLI.prototype.execute_sv8swh_k$ = function () {
     var currentWorkingDirectory = getCurrentWorkingDirectory();
@@ -51166,7 +51465,8 @@
     var tmp7_attDirectory = _get_attDirectory_(this);
     var tmp8_encoding = _get_encoding__0(this);
     var tmp9_quiet = _get_quiet_(this);
-    var opts = ConvertBreedOptions_init_$Create$(tmp5_fromGame, tmp6_toGame, spriteFiles, tmp7_attDirectory, attFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, tmp8_encoding, ignoreErrors, tailFiles, null, tmp9_quiet, 16384, null);
+    var tmp10_progress = _get_progress_(this);
+    var opts = ConvertBreedOptions_init_$Create$(tmp5_fromGame, tmp6_toGame, spriteFiles, tmp7_attDirectory, attFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, tmp8_encoding, ignoreErrors, tailFiles, null, tmp9_quiet, tmp10_progress, 16384, null);
     var tmp_25 = GlobalScope_getInstance();
     launch$default(tmp_25, null, null, _no_name_provided_$factory_200(opts, this, null), 3, null);
     Unit_getInstance();
@@ -51176,7 +51476,7 @@
     kind: 'class',
     interfaces: []
   };
-  function ConvertBreedOptions_init_$Init$(fromGame, toGame, spriteFiles, attDirectory, attFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, $mask0, $marker, $this) {
+  function ConvertBreedOptions_init_$Init$(fromGame, toGame, spriteFiles, attDirectory, attFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, progress, $mask0, $marker, $this) {
     if (!(($mask0 & 16384) === 0)) {
       var tmp$ret$0;
       var tmp$ret$0_0;
@@ -51186,11 +51486,11 @@
         break $l$block;
       }
       failed = tmp$ret$0;
-    }ConvertBreedOptions.call($this, fromGame, toGame, spriteFiles, attDirectory, attFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, encoding, ignoreErrors, tailFiles, failed, quiet);
+    }ConvertBreedOptions.call($this, fromGame, toGame, spriteFiles, attDirectory, attFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, progress);
     return $this;
   }
-  function ConvertBreedOptions_init_$Create$(fromGame, toGame, spriteFiles, attDirectory, attFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, $mask0, $marker) {
-    return ConvertBreedOptions_init_$Init$(fromGame, toGame, spriteFiles, attDirectory, attFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, $mask0, $marker, Object.create(ConvertBreedOptions.prototype));
+  function ConvertBreedOptions_init_$Create$(fromGame, toGame, spriteFiles, attDirectory, attFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, progress, $mask0, $marker) {
+    return ConvertBreedOptions_init_$Init$(fromGame, toGame, spriteFiles, attDirectory, attFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, progress, $mask0, $marker, Object.create(ConvertBreedOptions.prototype));
   }
   function _no_name_provided__232(this$0) {
     this._this$0_37 = this$0;
@@ -51223,7 +51523,7 @@
     kind: 'class',
     interfaces: []
   };
-  function ConvertBreedOptions(fromGame, toGame, spriteFiles, attDirectory, attFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, encoding, ignoreErrors, tailFiles, failed, quiet) {
+  function ConvertBreedOptions(fromGame, toGame, spriteFiles, attDirectory, attFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, progress) {
     this._fromGame_1 = fromGame;
     this._toGame_2 = toGame;
     this._spriteFiles = spriteFiles;
@@ -51240,6 +51540,7 @@
     this._tailFiles = tailFiles;
     this._failed = failed;
     this._quiet = quiet;
+    this._progress = progress;
     var tmp = this;
     tmp._filesCount$delegate = lazy(_no_name_provided_$factory_201(this));
     var tmp_0 = this;
@@ -51275,7 +51576,7 @@
     return tmp$ret$0;
   };
   ConvertBreedOptions.prototype.toString = function () {
-    return '' + 'ConvertBreedOptions(fromGame=' + this._fromGame_1 + ', toGame=' + this._toGame_2 + ', spriteFiles=' + this._spriteFiles + ', attDirectory=' + this._attDirectory + ', attFiles=' + this._attFiles + ', overwriteAll=' + this._overwriteAll_3 + ', overwriteNone=' + this._overwriteNone_3 + ', currentWorkingDirectory=' + this._currentWorkingDirectory + ', outputDirectory=' + this._outputDirectory_3 + ', outputGenus=' + this._outputGenus + ', outputBreed=' + this._outputBreed + ', encoding=' + this._encoding_4 + ', ignoreErrors=' + this._ignoreErrors + ', tailFiles=' + this._tailFiles + ', failed=' + this._failed + ', quiet=' + this._quiet + ')';
+    return '' + 'ConvertBreedOptions(fromGame=' + this._fromGame_1 + ', toGame=' + this._toGame_2 + ', spriteFiles=' + this._spriteFiles + ', attDirectory=' + this._attDirectory + ', attFiles=' + this._attFiles + ', overwriteAll=' + this._overwriteAll_3 + ', overwriteNone=' + this._overwriteNone_3 + ', currentWorkingDirectory=' + this._currentWorkingDirectory + ', outputDirectory=' + this._outputDirectory_3 + ', outputGenus=' + this._outputGenus + ', outputBreed=' + this._outputBreed + ', encoding=' + this._encoding_4 + ', ignoreErrors=' + this._ignoreErrors + ', tailFiles=' + this._tailFiles + ', failed=' + this._failed + ', quiet=' + this._quiet + ', progress=' + this._progress + ')';
   };
   ConvertBreedOptions.prototype.hashCode = function () {
     var result = this._fromGame_1 == null ? 0 : this._fromGame_1.hashCode();
@@ -51294,6 +51595,7 @@
     result = imul(result, 31) + hashCode(this._tailFiles) | 0;
     result = imul(result, 31) + hashCode(this._failed) | 0;
     result = imul(result, 31) + (this._quiet | 0) | 0;
+    result = imul(result, 31) + (this._progress | 0) | 0;
     return result;
   };
   ConvertBreedOptions.prototype.equals = function (other) {
@@ -51335,6 +51637,8 @@
     if (!equals_1(this._failed, tmp0_other_with_cast._failed))
       return false;
     if (!(this._quiet === tmp0_other_with_cast._quiet))
+      return false;
+    if (!(this._progress === tmp0_other_with_cast._progress))
       return false;
     return true;
   };
@@ -51385,14 +51689,20 @@
     return promptOverwrite(promptString, overwriteAll, overwriteNone, $cont);
   }
   function convert(opts, i, originalFileName, bytes) {
-    var callback = createCallback(i, opts._get_filesCount__0_k$(), originalFileName);
     var tmp;
-    if (!(opts._fromGame_1 == null)) {
-      tmp = convertBodyPart(originalFileName, bytes, opts._fromGame_1, opts._toGame_2, opts._encoding_4, callback);
+    if (!opts._quiet ? opts._progress : false) {
+      tmp = createCallback(i, opts._get_filesCount__0_k$(), originalFileName);
     } else {
-      tmp = convertBodyPart_0(originalFileName, bytes, opts._toGame_2, opts._encoding_4, callback);
+      tmp = _no_name_provided_$factory_204();
     }
-    return tmp;
+    var callback = tmp;
+    var tmp_0;
+    if (!(opts._fromGame_1 == null)) {
+      tmp_0 = convertBodyPart(originalFileName, bytes, opts._fromGame_1, opts._toGame_2, opts._encoding_4, callback);
+    } else {
+      tmp_0 = convertBodyPart_0(originalFileName, bytes, opts._toGame_2, opts._encoding_4, callback);
+    }
+    return tmp_0;
   }
   function writeSprite(outputDirectory, outputFileName, originalFileName, compiledBytes, overwrite, ignoreErrors) {
     var outputFilePath = PathUtil_getInstance().combine_yn9lj1_k$([outputDirectory, outputFileName]);
@@ -51614,8 +51924,8 @@
     return tmp;
   }
   function createCallback(i, fileCount, fileName) {
-    var percent = _no_name_provided_$factory_204(i, fileCount, fileName);
-    return _no_name_provided_$factory_205(percent);
+    var percent = _no_name_provided_$factory_205(i, fileCount, fileName);
+    return _no_name_provided_$factory_206(percent);
   }
   function getOutputBreed(toGame, outputBreedString) {
     var tmp;
@@ -51987,13 +52297,10 @@
     interfaces: [],
     suspendArity: [0]
   };
-  function _no_name_provided__236($i, $fileCount, $fileName) {
-    this._$i_3 = $i;
-    this._$fileCount = $fileCount;
-    this._$fileName = $fileName;
+  function _no_name_provided__236() {
   }
-  _no_name_provided__236.prototype.invoke_fcwjfj_k$ = function (pass, current, total) {
-    return '' + 'Sprite ' + (this._$i_3 + 1 | 0) + '/' + this._$fileCount + ': ' + this._$fileName + '; Pass:' + pass + '/2; ' + toFixed(current / (total * 1.0) * 100, 2) + '%';
+  _no_name_provided__236.prototype.invoke_fcwjfj_k$ = function (_anonymous_parameter_0_, _anonymous_parameter_1_, _anonymous_parameter_2_) {
+    return true;
   };
   _no_name_provided__236.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
@@ -52004,10 +52311,27 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__237($percent) {
-    this._$percent = $percent;
+  function _no_name_provided__237($i, $fileCount, $fileName) {
+    this._$i_3 = $i;
+    this._$fileCount = $fileCount;
+    this._$fileName = $fileName;
   }
   _no_name_provided__237.prototype.invoke_fcwjfj_k$ = function (pass, current, total) {
+    return '' + 'Sprite ' + (this._$i_3 + 1 | 0) + '/' + this._$fileCount + ': ' + this._$fileName + '; Pass:' + pass + '/2; ' + toFixed(current / (total * 1.0) * 100, 2) + '%';
+  };
+  _no_name_provided__237.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
+    var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
+    var tmp_0 = (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE();
+    return this.invoke_fcwjfj_k$(tmp, tmp_0, (!(p3 == null) ? typeof p3 === 'number' : false) ? p3 : THROW_CCE());
+  };
+  _no_name_provided__237.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__238($percent) {
+    this._$percent = $percent;
+  }
+  _no_name_provided__238.prototype.invoke_fcwjfj_k$ = function (pass, current, total) {
     if (current === total ? pass === 2 : false) {
       {
         var tmp0_i_0 = Log_getInstance();
@@ -52044,24 +52368,24 @@
         }}
     }return true;
   };
-  _no_name_provided__237.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
+  _no_name_provided__238.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     var tmp_0 = (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE();
     return this.invoke_fcwjfj_k$(tmp, tmp_0, (!(p3 == null) ? typeof p3 === 'number' : false) ? p3 : THROW_CCE());
   };
-  _no_name_provided__237.$metadata$ = {
+  _no_name_provided__238.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__238() {
+  function _no_name_provided__239() {
   }
-  _no_name_provided__238.prototype.invoke_ha5a7z_k$ = function (it) {
+  _no_name_provided__239.prototype.invoke_ha5a7z_k$ = function (it) {
     return '0 0 0 0';
   };
-  _no_name_provided__238.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__239.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__238.$metadata$ = {
+  _no_name_provided__239.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -52092,7 +52416,8 @@
 
             tmp_0._path1 = tmp_1;
             var tmp_2 = this;
-            tmp_2._originalFileName2 = ensureNotNull(getLastPathComponent$default(this._path1, false, 2, null));
+            var tmp_3 = FileNameUtil_getInstance();
+            tmp_2._originalFileName2 = ensureNotNull(tmp_3.getLastPathComponent$default_zmr95_k$(this._path1, false, 2, null));
             this._part3 = charSequenceGet(this._originalFileName2, 0);
             if (this._opts._toGame_2.equals(GameVariant_C1_getInstance())) {
               if (this._part3.equals(new Char(109))) {
@@ -52100,66 +52425,66 @@
               } else if (this._part3.equals(new Char(110))) {
                 this._part3 = new Char(109);
               }}
-            var tmp_3 = this;
+            var tmp_4 = this;
             var tmp0_safe_receiver = this._opts._outputGenus;
-            var tmp_4;
+            var tmp_5;
             if (tmp0_safe_receiver == null) {
-              tmp_4 = null;
+              tmp_5 = null;
             } else {
-              tmp_4 = charSequenceGet(this._originalFileName2, 1).compareTo_wi8o78_k$(new Char(52)) < 0 ? tmp0_safe_receiver._first : tmp0_safe_receiver._second;
+              tmp_5 = charSequenceGet(this._originalFileName2, 1).compareTo_wi8o78_k$(new Char(52)) < 0 ? tmp0_safe_receiver._first : tmp0_safe_receiver._second;
             }
 
-            var tmp1_elvis_lhs = tmp_4;
-            tmp_3._genus4 = tmp1_elvis_lhs == null ? charSequenceGet(this._originalFileName2, 1) : tmp1_elvis_lhs;
+            var tmp1_elvis_lhs = tmp_5;
+            tmp_4._genus4 = tmp1_elvis_lhs == null ? charSequenceGet(this._originalFileName2, 1) : tmp1_elvis_lhs;
             this._lifeStage5 = charSequenceGet(this._originalFileName2, 2);
-            var tmp_5 = this;
+            var tmp_6 = this;
             var tmp2_elvis_lhs = this._opts._outputBreed;
-            tmp_5._breedSlot6 = tmp2_elvis_lhs == null ? charSequenceGet(this._originalFileName2, 3) : tmp2_elvis_lhs;
+            tmp_6._breedSlot6 = tmp2_elvis_lhs == null ? charSequenceGet(this._originalFileName2, 3) : tmp2_elvis_lhs;
             this._extension7 = this._opts._get_toExtension__0_k$();
             this._outputFileName8 = '' + this._part3 + this._genus4 + this._lifeStage5 + this._breedSlot6 + '.' + this._extension7;
             this._outputFilePath9 = PathUtil_getInstance().combine_yn9lj1_k$([this._opts._outputDirectory_3, this._outputFileName8]);
             if (this._i_1 >= this._opts._get_filesCount__0_k$()) {
               return true;
             }
-            var tmp_6 = this;
             var tmp_7 = this;
-            tmp_7._tmp0_suspend_010 = _no_name_provided_$factory_206(this._i_1, this._opts, null);
-            tmp_6._next11 = this._tmp0_suspend_010;
+            var tmp_8 = this;
+            tmp_8._tmp0_suspend_010 = _no_name_provided_$factory_207(this._i_1, this._opts, null);
+            tmp_7._next11 = this._tmp0_suspend_010;
             this._originalBytes12 = loadBytes(this._path1);
             this._exceptionState = 1;
-            var tmp_8 = this;
-            tmp_8._TRY_RESULT13 = convert(this._opts, this._i_1, this._originalFileName2, this._originalBytes12);
+            var tmp_9 = this;
+            tmp_9._TRY_RESULT13 = convert(this._opts, this._i_1, this._originalFileName2, this._originalBytes12);
             this._exceptionState = 18;
             this._state_0 = 4;
             continue $sm;
           case 1:
             this._exceptionState = 18;
-            var tmp_9 = this._exception_0;
-            if (tmp_9 instanceof Exception) {
+            var tmp_10 = this._exception_0;
+            if (tmp_10 instanceof Exception) {
               this._e14 = this._exception_0;
               if (!this._opts._ignoreErrors ? true : !this._opts._quiet) {
                 var tmp1_e_0 = Log_getInstance();
                 if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                  var tmp_10 = LoggerObject_getInstance();
-                  var tmp_11 = LoggerObject_getInstance()._prependLogType ? '**ERROR** ' : '';
-                  var tmp_12;
+                  var tmp_11 = LoggerObject_getInstance();
+                  var tmp_12 = LoggerObject_getInstance()._prependLogType ? '**ERROR** ' : '';
+                  var tmp_13;
                   if (!(null == null ? true : isBlank(null))) {
-                    tmp_12 = 'null::';
+                    tmp_13 = 'null::';
                   } else {
                     {
-                      tmp_12 = '';
+                      tmp_13 = '';
                     }
                   }
-                  var tmp_13 = tmp_12;
+                  var tmp_14 = tmp_13;
                   var tmp0_safe_receiver_3 = nullIfEmpty(this._e14.message);
-                  var tmp_14;
+                  var tmp_15;
                   if (tmp0_safe_receiver_3 == null) {
-                    tmp_14 = null;
+                    tmp_15 = null;
                   } else {
-                    tmp_14 = '' + ' with error: ' + tmp0_safe_receiver_3;
+                    tmp_15 = '' + ' with error: ' + tmp0_safe_receiver_3;
                   }
-                  var tmp1_elvis_lhs_2 = tmp_14;
-                  tmp_10.error_a4enbm_k$('' + tmp_11 + tmp_13 + ('' + 'Error 1004: Failed to convert ' + this._originalFileName2 + ' to ' + this._opts._toGame_2 + ' sprite format' + (tmp1_elvis_lhs_2 == null ? '' : tmp1_elvis_lhs_2)));
+                  var tmp1_elvis_lhs_2 = tmp_15;
+                  tmp_11.error_a4enbm_k$('' + tmp_12 + tmp_14 + ('' + 'Error 1004: Failed to convert ' + this._originalFileName2 + ' to ' + this._opts._toGame_2 + ' sprite format' + (tmp1_elvis_lhs_2 == null ? '' : tmp1_elvis_lhs_2)));
                 }}this._opts._failed.add_2bq_k$(this._filePath0);
               Unit_getInstance();
               if (this._opts._ignoreErrors) {
@@ -52169,8 +52494,8 @@
                   return suspendResult;
                 }continue $sm;
               } else {
-                var tmp_15 = this;
-                tmp_15._WHEN_RESULT15 = exitNative(1004);
+                var tmp_16 = this;
+                tmp_16._WHEN_RESULT15 = exitNative(1004);
                 this._state_0 = 3;
                 continue $sm;
               }
@@ -52186,17 +52511,17 @@
             this._state_0 = 3;
             continue $sm;
           case 3:
-            var tmp_16 = this;
+            var tmp_17 = this;
             return this._WHEN_RESULT15;
           case 4:
             this._exceptionState = 18;
             this._compiledBytes16 = this._TRY_RESULT13;
             this._nameWithoutExtension17 = FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(this._originalFileName2);
-            var tmp_17 = this;
+            var tmp_18 = this;
             var tmp3_safe_receiver = this._opts._attFiles;
-            var tmp_18;
+            var tmp_19;
             if (tmp3_safe_receiver == null) {
-              tmp_18 = null;
+              tmp_19 = null;
             } else {
               var tmp$ret$0;
               l$ret$1: do {
@@ -52212,10 +52537,10 @@
                 tmp$ret$0 = null;
               }
                while (false);
-              tmp_18 = tmp$ret$0;
+              tmp_19 = tmp$ret$0;
             }
 
-            tmp_17._tmp4_safe_receiver18 = tmp_18;
+            tmp_18._tmp4_safe_receiver18 = tmp_19;
             if (this._tmp4_safe_receiver18 == null) {
               this._WHEN_RESULT19 = null;
               this._state_0 = 6;
@@ -52230,8 +52555,8 @@
 
             break;
           case 5:
-            var tmp_19 = this;
-            tmp_19._WHEN_RESULT19 = Unit_getInstance();
+            var tmp_20 = this;
+            tmp_20._WHEN_RESULT19 = Unit_getInstance();
             this._state_0 = 6;
             continue $sm;
           case 6:
@@ -52269,27 +52594,27 @@
               var part0 = generatePart0(this._compiledBytes16);
               try {
                 var tmp2_plus_0 = this._outputFileName8.substring(1);
-                var tmp_20 = '0' + tmp2_plus_0;
+                var tmp_21 = '0' + tmp2_plus_0;
                 var tmp3_plus_0 = this._originalFileName2.substring(1);
-                writeSprite(this._opts._outputDirectory_3, tmp_20, '0' + tmp3_plus_0, part0, true, this._opts._ignoreErrors);
+                writeSprite(this._opts._outputDirectory_3, tmp_21, '0' + tmp3_plus_0, part0, true, this._opts._ignoreErrors);
                 Unit_getInstance();
               } catch ($p) {
                 if ($p instanceof Exception) {
                   var tmp4_e_0 = Log_getInstance();
                   if (tmp4_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                    var tmp_21 = LoggerObject_getInstance();
-                    var tmp_22 = LoggerObject_getInstance()._prependLogType ? '**ERROR** ' : '';
-                    var tmp_23;
+                    var tmp_22 = LoggerObject_getInstance();
+                    var tmp_23 = LoggerObject_getInstance()._prependLogType ? '**ERROR** ' : '';
+                    var tmp_24;
                     if (!(null == null ? true : isBlank(null))) {
-                      tmp_23 = 'null::';
+                      tmp_24 = 'null::';
                     } else {
                       {
-                        tmp_23 = '';
+                        tmp_24 = '';
                       }
                     }
-                    var tmp_24 = tmp_23;
+                    var tmp_25 = tmp_24;
                     var tmp0_plus_0_2 = this._outputFileName8.substring(1);
-                    tmp_21.error_a4enbm_k$('' + tmp_22 + tmp_24 + ('' + 'Error 1005: Failed to write part 0 ' + ('0' + tmp0_plus_0_2)));
+                    tmp_22.error_a4enbm_k$('' + tmp_23 + tmp_25 + ('' + 'Error 1005: Failed to write part 0 ' + ('0' + tmp0_plus_0_2)));
                   }return false;
                 } else {
                   {
@@ -52324,11 +52649,11 @@
             continue $sm;
           case 11:
             this._exceptionState = 13;
-            var tmp_25 = this._exception_0;
-            if (tmp_25 instanceof Exception) {
+            var tmp_26 = this._exception_0;
+            if (tmp_26 instanceof Exception) {
               this._e25 = this._exception_0;
-              var tmp_26 = this;
-              tmp_26._TRY_RESULT23 = false;
+              var tmp_27 = this;
+              tmp_27._TRY_RESULT23 = false;
               this._state_0 = 12;
               continue $sm;
             } else {
@@ -52346,58 +52671,58 @@
             continue $sm;
           case 13:
             this._exceptionState = 18;
-            var tmp_27 = this._exception_0;
-            if (tmp_27 instanceof Exception) {
+            var tmp_28 = this._exception_0;
+            if (tmp_28 instanceof Exception) {
               this._e26 = this._exception_0;
-              var tmp_28 = this;
+              var tmp_29 = this;
               var tmp5_safe_receiver = nullIfEmpty(this._e26.message);
-              var tmp_29;
+              var tmp_30;
               if (tmp5_safe_receiver == null) {
-                tmp_29 = null;
+                tmp_30 = null;
               } else {
-                tmp_29 = '' + ' with error: ' + tmp5_safe_receiver;
+                tmp_30 = '' + ' with error: ' + tmp5_safe_receiver;
               }
-              var tmp6_elvis_lhs = tmp_29;
-              tmp_28._error27 = '' + 'Failed to write sprite ' + this._originalFileName2 + " to '" + this._outputFilePath9 + "' " + (tmp6_elvis_lhs == null ? '' : tmp6_elvis_lhs);
+              var tmp6_elvis_lhs = tmp_30;
+              tmp_29._error27 = '' + 'Failed to write sprite ' + this._originalFileName2 + " to '" + this._outputFilePath9 + "' " + (tmp6_elvis_lhs == null ? '' : tmp6_elvis_lhs);
               if (this._opts._ignoreErrors) {
                 this._opts._failed.add_2bq_k$(this._filePath0);
                 Unit_getInstance();
                 if (!this._opts._quiet) {
                   var tmp5_e_0 = Log_getInstance();
                   if (tmp5_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                    var tmp_30 = LoggerObject_getInstance();
-                    var tmp_31 = LoggerObject_getInstance()._prependLogType ? '**ERROR** ' : '';
-                    var tmp_32;
+                    var tmp_31 = LoggerObject_getInstance();
+                    var tmp_32 = LoggerObject_getInstance()._prependLogType ? '**ERROR** ' : '';
+                    var tmp_33;
                     if (!(null == null ? true : isBlank(null))) {
-                      tmp_32 = 'null::';
+                      tmp_33 = 'null::';
                     } else {
                       {
-                        tmp_32 = '';
+                        tmp_33 = '';
                       }
                     }
-                    var tmp_33 = tmp_32;
-                    tmp_30.error_a4enbm_k$('' + tmp_31 + tmp_33 + this._error27);
+                    var tmp_34 = tmp_33;
+                    tmp_31.error_a4enbm_k$('' + tmp_32 + tmp_34 + this._error27);
                   }}this._state_0 = 14;
                 suspendResult = this._next11(this);
                 if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
                   return suspendResult;
                 }continue $sm;
               } else {
-                var tmp_34 = this;
+                var tmp_35 = this;
                 var tmp6_e_0 = Log_getInstance();
                 if (tmp6_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                  var tmp_35 = LoggerObject_getInstance();
-                  var tmp_36 = LoggerObject_getInstance()._prependLogType ? '**ERROR** ' : '';
-                  var tmp_37;
+                  var tmp_36 = LoggerObject_getInstance();
+                  var tmp_37 = LoggerObject_getInstance()._prependLogType ? '**ERROR** ' : '';
+                  var tmp_38;
                   if (!(null == null ? true : isBlank(null))) {
-                    tmp_37 = 'null::';
+                    tmp_38 = 'null::';
                   } else {
                     {
-                      tmp_37 = '';
+                      tmp_38 = '';
                     }
                   }
-                  var tmp_38 = tmp_37;
-                  tmp_35.error_a4enbm_k$('' + tmp_36 + tmp_38 + ('' + 'Error 1005: ' + this._error27));
+                  var tmp_39 = tmp_38;
+                  tmp_36.error_a4enbm_k$('' + tmp_37 + tmp_39 + ('' + 'Error 1005: ' + this._error27));
                 }return exitNative(1005);
               }
             } else {
@@ -52871,7 +53196,7 @@
             this._rows1 = _get_isC1e_(this._opts_2._toGame_2) ? 10 : 16;
             var tmp_1 = this;
             var tmp_2 = until(0, this._rows1);
-            tmp_1._att2 = encodeToByteArray(joinToString$default_0(tmp_2, '\r\n', null, null, 0, null, _no_name_provided_$factory_207(), 30, null));
+            tmp_1._att2 = encodeToByteArray(joinToString$default_0(tmp_2, '\r\n', null, null, 0, null, _no_name_provided_$factory_208(), 30, null));
             this._outputAtt3 = PathUtil_getInstance().combine_yn9lj1_k$([this._opts_2._outputDirectory_3, '' + this._fileName + '.att']);
             this._state_0 = 1;
             suspendResult = shouldWrite(this._outputAtt3, this._opts_2._overwriteAll_3, this._opts_2._overwriteNone_3, this);
@@ -52984,6 +53309,11 @@
       return _get_quiet_(receiver);
     }, null);
   }
+  function progress$factory() {
+    return getPropertyCallableRef('progress', 1, KProperty1, function (receiver) {
+      return _get_progress_(receiver);
+    }, null);
+  }
   function attDirectory$factory() {
     return getPropertyCallableRef('attDirectory', 1, KProperty1, function (receiver) {
       return _get_attDirectory_(receiver);
@@ -53047,6 +53377,11 @@
   function quiet$factory_0() {
     return getPropertyCallableRef('quiet', 1, KProperty1, function (receiver) {
       return _get_quiet_(receiver);
+    }, null);
+  }
+  function progress$factory_0() {
+    return getPropertyCallableRef('progress', 1, KProperty1, function (receiver) {
+      return _get_progress_(receiver);
     }, null);
   }
   function attDirectory$factory_0() {
@@ -53123,19 +53458,25 @@
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_204($i, $fileCount, $fileName) {
-    var i = new _no_name_provided__236($i, $fileCount, $fileName);
+  function _no_name_provided_$factory_204() {
+    var i = new _no_name_provided__236();
     return function (p1, p2, p3) {
       return i.invoke_fcwjfj_k$(p1, p2, p3);
     };
   }
-  function _no_name_provided_$factory_205($percent) {
-    var i = new _no_name_provided__237($percent);
+  function _no_name_provided_$factory_205($i, $fileCount, $fileName) {
+    var i = new _no_name_provided__237($i, $fileCount, $fileName);
     return function (p1, p2, p3) {
       return i.invoke_fcwjfj_k$(p1, p2, p3);
     };
   }
-  function _no_name_provided_$factory_206($i, $opts, resultContinuation) {
+  function _no_name_provided_$factory_206($percent) {
+    var i = new _no_name_provided__238($percent);
+    return function (p1, p2, p3) {
+      return i.invoke_fcwjfj_k$(p1, p2, p3);
+    };
+  }
+  function _no_name_provided_$factory_207($i, $opts, resultContinuation) {
     var i = new _no_name_provided__235($i, $opts, resultContinuation);
     var l = function ($cont) {
       return i.invoke_0_k$($cont);
@@ -53143,8 +53484,8 @@
     l.$arity = 0;
     return l;
   }
-  function _no_name_provided_$factory_207() {
-    var i = new _no_name_provided__238();
+  function _no_name_provided_$factory_208() {
+    var i = new _no_name_provided__239();
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
@@ -53170,52 +53511,55 @@
   function _get_quiet__0($this) {
     return $this._quiet$delegate_0.getValue_1kobyo_k$($this, quiet$factory_2());
   }
+  function _get_progress__0($this) {
+    return $this._progress$delegate_0.getValue_1kobyo_k$($this, progress$factory_2());
+  }
   function _get_keepBlack_($this) {
     return $this._keepBlack$delegate.getValue_1kobyo_k$($this, keepBlack$factory_0());
   }
   function _get_files__1($this) {
     return $this._files$delegate_1.getValue_1kobyo_k$($this, files$factory_4());
   }
-  function _no_name_provided__239() {
-  }
-  _no_name_provided__239.prototype.invoke_6wfw3l_k$ = function (value) {
-    return Companion_getInstance_61().fromString_6wfw3l_k$(value);
-  };
-  _no_name_provided__239.prototype.invoke_20e8_k$ = function (p1) {
-    return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
-  };
-  _no_name_provided__239.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
   function _no_name_provided__240() {
   }
-  _no_name_provided__240.prototype.invoke_ixg9nz_k$ = function (encoding) {
-    return encoding._simpleName_1;
+  _no_name_provided__240.prototype.invoke_6wfw3l_k$ = function (value) {
+    return Companion_getInstance_61().fromString_6wfw3l_k$(value);
   };
   _no_name_provided__240.prototype.invoke_20e8_k$ = function (p1) {
-    return this.invoke_ixg9nz_k$(p1 instanceof ColorEncoding ? p1 : THROW_CCE());
+    return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
   _no_name_provided__240.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__241($opts, this$0, resultContinuation) {
+  function _no_name_provided__241() {
+  }
+  _no_name_provided__241.prototype.invoke_ixg9nz_k$ = function (encoding) {
+    return encoding._simpleName_1;
+  };
+  _no_name_provided__241.prototype.invoke_20e8_k$ = function (p1) {
+    return this.invoke_ixg9nz_k$(p1 instanceof ColorEncoding ? p1 : THROW_CCE());
+  };
+  _no_name_provided__241.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__242($opts, this$0, resultContinuation) {
     this._$opts_1 = $opts;
     this._this$0_40 = this$0;
     CoroutineImpl_0.call(this, resultContinuation);
   }
-  _no_name_provided__241.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
+  _no_name_provided__242.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
     var tmp = this.create_y6imfn_k$($this$launch, $cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   };
-  _no_name_provided__241.prototype.invoke_20e8_k$ = function (p1, $cont) {
+  _no_name_provided__242.prototype.invoke_20e8_k$ = function (p1, $cont) {
     this.invoke_2i3g7c_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $cont);
     return Unit_getInstance();
   };
-  _no_name_provided__241.prototype.doResume_0_k$ = function () {
+  _no_name_provided__242.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
     $sm: do
       try {
@@ -53288,12 +53632,12 @@
       }
      while (true);
   };
-  _no_name_provided__241.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
-    var i = new _no_name_provided__241(this._$opts_1, this._this$0_40, completion);
+  _no_name_provided__242.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
+    var i = new _no_name_provided__242(this._$opts_1, this._this$0_40, completion);
     i._$this$launch_1 = $this$launch;
     return i;
   };
-  _no_name_provided__241.$metadata$ = {
+  _no_name_provided__242.$metadata$ = {
     kind: 'class',
     interfaces: [],
     suspendArity: [1]
@@ -53304,8 +53648,8 @@
     tmp._outputType$delegate = this.argument$default_304j6g_k$(SpriteArgType, 'type', 'Target output sprite type', null, 8, null).provideDelegate_1kobyo_k$(this, outputType$factory());
     var tmp_0 = this;
     var tmp_1 = listOf([ColorEncoding_X_555_getInstance(), ColorEncoding_X_565_getInstance()]);
-    var tmp_2 = _no_name_provided_$factory_208();
-    var tmp_3 = new Choice(tmp_1, tmp_2, _no_name_provided_$factory_209());
+    var tmp_2 = _no_name_provided_$factory_209();
+    var tmp_3 = new Choice(tmp_1, tmp_2, _no_name_provided_$factory_210());
     tmp_0._encoding$delegate_1 = default_0(this.option$default_t6jqr8_k$(tmp_3, 'encoding', 'c', 'Sprite color encoding', null, 16, null), ColorEncoding_X_565_getInstance()).provideDelegate_1kobyo_k$(this, encoding$factory_3());
     var tmp_4 = this;
     var tmp_5 = String_getInstance();
@@ -53324,10 +53668,13 @@
     tmp_12._quiet$delegate_0 = default_0(this.option$default_t6jqr8_k$(tmp_13, 'quiet', 'q', 'Only output error text', null, 16, null), false).provideDelegate_1kobyo_k$(this, quiet$factory_1());
     var tmp_14 = this;
     var tmp_15 = Flag_init_$Create$(null, 1, null);
-    tmp_14._keepBlack$delegate = default_0(this.option$default_t6jqr8_k$(tmp_15, 'keep-black', 'b', 'Prevent solid black from being transparent (shifts black to make it opaque)', null, 16, null), false).provideDelegate_1kobyo_k$(this, keepBlack$factory());
+    tmp_14._progress$delegate_0 = default_0(this.option$default_t6jqr8_k$(tmp_15, 'progress', 'p', 'Log conversion progress', null, 16, null), false).provideDelegate_1kobyo_k$(this, progress$factory_1());
     var tmp_16 = this;
-    var tmp_17 = String_getInstance();
-    tmp_16._files$delegate_1 = vararg(this.argument$default_304j6g_k$(tmp_17, 'files', 'Image files or folders in glob format', null, 8, null)).provideDelegate_1kobyo_k$(this, files$factory_3());
+    var tmp_17 = Flag_init_$Create$(null, 1, null);
+    tmp_16._keepBlack$delegate = default_0(this.option$default_t6jqr8_k$(tmp_17, 'keep-black', 'b', 'Prevent solid black from being transparent (shifts black to make it opaque)', null, 16, null), false).provideDelegate_1kobyo_k$(this, keepBlack$factory());
+    var tmp_18 = this;
+    var tmp_19 = String_getInstance();
+    tmp_18._files$delegate_1 = vararg(this.argument$default_304j6g_k$(tmp_19, 'files', 'Image files or folders in glob format', null, 8, null)).provideDelegate_1kobyo_k$(this, files$factory_3());
     this.subcommands_t5tza2_k$([]);
   }
   ConvertSpriteCLI.prototype.execute_sv8swh_k$ = function () {
@@ -53451,9 +53798,9 @@
     }var tmp_13 = _get_outputType_(this);
     var tmp_14 = _get_encoding__1(this);
     var tmp_15 = _get_keepBlack_(this);
-    var opts = ConvertSpriteOptions_init_$Create$(tmp_13, spriteFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, tmp_14, ignoreErrors, tmp_15, null, _get_quiet__0(this), 512, null);
+    var opts = ConvertSpriteOptions_init_$Create$(tmp_13, spriteFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, tmp_14, ignoreErrors, tmp_15, null, _get_quiet__0(this), _get_progress__0(this), 512, null);
     var tmp_16 = GlobalScope_getInstance();
-    launch$default(tmp_16, null, null, _no_name_provided_$factory_210(opts, this, null), 3, null);
+    launch$default(tmp_16, null, null, _no_name_provided_$factory_211(opts, this, null), 3, null);
     Unit_getInstance();
   };
   ConvertSpriteCLI.$metadata$ = {
@@ -53461,7 +53808,7 @@
     kind: 'class',
     interfaces: []
   };
-  function ConvertSpriteOptions_init_$Init$(toType, spriteFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, encoding, ignoreErrors, keepBlack, failed, quiet, $mask0, $marker, $this) {
+  function ConvertSpriteOptions_init_$Init$(toType, spriteFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, encoding, ignoreErrors, keepBlack, failed, quiet, progress, $mask0, $marker, $this) {
     if (!(($mask0 & 512) === 0)) {
       var tmp$ret$0;
       var tmp$ret$0_0;
@@ -53471,26 +53818,26 @@
         break $l$block;
       }
       failed = tmp$ret$0;
-    }ConvertSpriteOptions.call($this, toType, spriteFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, encoding, ignoreErrors, keepBlack, failed, quiet);
+    }ConvertSpriteOptions.call($this, toType, spriteFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, encoding, ignoreErrors, keepBlack, failed, quiet, progress);
     return $this;
   }
-  function ConvertSpriteOptions_init_$Create$(toType, spriteFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, encoding, ignoreErrors, keepBlack, failed, quiet, $mask0, $marker) {
-    return ConvertSpriteOptions_init_$Init$(toType, spriteFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, encoding, ignoreErrors, keepBlack, failed, quiet, $mask0, $marker, Object.create(ConvertSpriteOptions.prototype));
+  function ConvertSpriteOptions_init_$Create$(toType, spriteFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, encoding, ignoreErrors, keepBlack, failed, quiet, progress, $mask0, $marker) {
+    return ConvertSpriteOptions_init_$Init$(toType, spriteFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, encoding, ignoreErrors, keepBlack, failed, quiet, progress, $mask0, $marker, Object.create(ConvertSpriteOptions.prototype));
   }
-  function _no_name_provided__242(this$0) {
+  function _no_name_provided__243(this$0) {
     this._this$0_41 = this$0;
   }
-  _no_name_provided__242.prototype.invoke_0_k$ = function () {
+  _no_name_provided__243.prototype.invoke_0_k$ = function () {
     return this._this$0_41._spriteFiles_0._get_size__0_k$();
   };
-  _no_name_provided__242.$metadata$ = {
+  _no_name_provided__243.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__243(this$0) {
+  function _no_name_provided__244(this$0) {
     this._this$0_42 = this$0;
   }
-  _no_name_provided__243.prototype.invoke_0_k$ = function () {
+  _no_name_provided__244.prototype.invoke_0_k$ = function () {
     var tmp$ret$1;
     $l$block_0: {
       var tmp0_lowercase_0 = this._this$0_42._toType._get_name__0_k$();
@@ -53504,11 +53851,11 @@
     }
     return tmp$ret$1;
   };
-  _no_name_provided__243.$metadata$ = {
+  _no_name_provided__244.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function ConvertSpriteOptions(toType, spriteFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, encoding, ignoreErrors, keepBlack, failed, quiet) {
+  function ConvertSpriteOptions(toType, spriteFiles, overwriteAll, overwriteNone, currentWorkingDirectory, outputDirectory, encoding, ignoreErrors, keepBlack, failed, quiet, progress) {
     this._toType = toType;
     this._spriteFiles_0 = spriteFiles;
     this._overwriteAll_5 = overwriteAll;
@@ -53520,10 +53867,11 @@
     this._keepBlack = keepBlack;
     this._failed_0 = failed;
     this._quiet_0 = quiet;
+    this._progress_0 = progress;
     var tmp = this;
-    tmp._filesCount$delegate_0 = lazy(_no_name_provided_$factory_211(this));
+    tmp._filesCount$delegate_0 = lazy(_no_name_provided_$factory_212(this));
     var tmp_0 = this;
-    tmp_0._toExtension$delegate_0 = lazy(_no_name_provided_$factory_212(this));
+    tmp_0._toExtension$delegate_0 = lazy(_no_name_provided_$factory_213(this));
   }
   ConvertSpriteOptions.prototype._get_filesCount__0_k$ = function () {
     var tmp$ret$0;
@@ -53544,7 +53892,7 @@
     return tmp$ret$0;
   };
   ConvertSpriteOptions.prototype.toString = function () {
-    return '' + 'ConvertSpriteOptions(toType=' + this._toType + ', spriteFiles=' + this._spriteFiles_0 + ', overwriteAll=' + this._overwriteAll_5 + ', overwriteNone=' + this._overwriteNone_5 + ', currentWorkingDirectory=' + this._currentWorkingDirectory_0 + ', outputDirectory=' + this._outputDirectory_4 + ', encoding=' + this._encoding_5 + ', ignoreErrors=' + this._ignoreErrors_0 + ', keepBlack=' + this._keepBlack + ', failed=' + this._failed_0 + ', quiet=' + this._quiet_0 + ')';
+    return '' + 'ConvertSpriteOptions(toType=' + this._toType + ', spriteFiles=' + this._spriteFiles_0 + ', overwriteAll=' + this._overwriteAll_5 + ', overwriteNone=' + this._overwriteNone_5 + ', currentWorkingDirectory=' + this._currentWorkingDirectory_0 + ', outputDirectory=' + this._outputDirectory_4 + ', encoding=' + this._encoding_5 + ', ignoreErrors=' + this._ignoreErrors_0 + ', keepBlack=' + this._keepBlack + ', failed=' + this._failed_0 + ', quiet=' + this._quiet_0 + ', progress=' + this._progress_0 + ')';
   };
   ConvertSpriteOptions.prototype.hashCode = function () {
     var result = this._toType.hashCode();
@@ -53558,6 +53906,7 @@
     result = imul(result, 31) + (this._keepBlack | 0) | 0;
     result = imul(result, 31) + hashCode(this._failed_0) | 0;
     result = imul(result, 31) + (this._quiet_0 | 0) | 0;
+    result = imul(result, 31) + (this._progress_0 | 0) | 0;
     return result;
   };
   ConvertSpriteOptions.prototype.equals = function (other) {
@@ -53590,6 +53939,8 @@
       return false;
     if (!(this._quiet_0 === tmp0_other_with_cast._quiet_0))
       return false;
+    if (!(this._progress_0 === tmp0_other_with_cast._progress_0))
+      return false;
     return true;
   };
   ConvertSpriteOptions.$metadata$ = {
@@ -53613,7 +53964,7 @@
       {
       }
       {
-        if (!opts._quiet_0) {
+        if (!opts._quiet_0 ? opts._progress_0 : false) {
           {
             var tmp0_i_0_2 = Log_getInstance();
             if (tmp0_i_0_2._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
@@ -53653,18 +54004,18 @@
     }
     return tmp$ret$3;
   }
-  function _no_name_provided__244($i, $opts, resultContinuation) {
+  function _no_name_provided__245($i, $opts, resultContinuation) {
     this._$i_4 = $i;
     this._$opts_2 = $opts;
     CoroutineImpl_0.call(this, resultContinuation);
   }
-  _no_name_provided__244.prototype.invoke_0_k$ = function ($cont) {
+  _no_name_provided__245.prototype.invoke_0_k$ = function ($cont) {
     var tmp = this.create_s8oglw_k$($cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   };
-  _no_name_provided__244.prototype.doResume_0_k$ = function () {
+  _no_name_provided__245.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
     $sm: do
       try {
@@ -53718,11 +54069,11 @@
       }
      while (true);
   };
-  _no_name_provided__244.prototype.create_s8oglw_k$ = function (completion) {
-    var i = new _no_name_provided__244(this._$i_4, this._$opts_2, completion);
+  _no_name_provided__245.prototype.create_s8oglw_k$ = function (completion) {
+    var i = new _no_name_provided__245(this._$i_4, this._$opts_2, completion);
     return i;
   };
-  _no_name_provided__244.$metadata$ = {
+  _no_name_provided__245.$metadata$ = {
     kind: 'class',
     interfaces: [],
     suspendArity: [0]
@@ -53762,7 +54113,7 @@
             }
             var tmp_2 = this;
             var tmp_3 = this;
-            tmp_3._tmp0_suspend_06 = _no_name_provided_$factory_213(this._i_2, this._opts_3, null);
+            tmp_3._tmp0_suspend_06 = _no_name_provided_$factory_214(this._i_2, this._opts_3, null);
             tmp_2._next7 = this._tmp0_suspend_06;
             this._state_0 = 1;
             suspendResult = shouldWrite(this._outputFilePath5, this._opts_3._overwriteAll_5, this._opts_3._overwriteNone_5, this);
@@ -54084,6 +54435,11 @@
       return _get_quiet__0(receiver);
     }, null);
   }
+  function progress$factory_1() {
+    return getPropertyCallableRef('progress', 1, KProperty1, function (receiver) {
+      return _get_progress__0(receiver);
+    }, null);
+  }
   function keepBlack$factory() {
     return getPropertyCallableRef('keepBlack', 1, KProperty1, function (receiver) {
       return _get_keepBlack_(receiver);
@@ -54129,6 +54485,11 @@
       return _get_quiet__0(receiver);
     }, null);
   }
+  function progress$factory_2() {
+    return getPropertyCallableRef('progress', 1, KProperty1, function (receiver) {
+      return _get_progress__0(receiver);
+    }, null);
+  }
   function keepBlack$factory_0() {
     return getPropertyCallableRef('keepBlack', 1, KProperty1, function (receiver) {
       return _get_keepBlack_(receiver);
@@ -54149,31 +54510,25 @@
       return receiver._get_toExtension__0_k$();
     }, null);
   }
-  function _no_name_provided_$factory_208() {
-    var i = new _no_name_provided__239();
+  function _no_name_provided_$factory_209() {
+    var i = new _no_name_provided__240();
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_209() {
-    var i = new _no_name_provided__240();
+  function _no_name_provided_$factory_210() {
+    var i = new _no_name_provided__241();
     return function (p1) {
       return i.invoke_ixg9nz_k$(p1);
     };
   }
-  function _no_name_provided_$factory_210($opts, this$0, resultContinuation) {
-    var i = new _no_name_provided__241($opts, this$0, resultContinuation);
+  function _no_name_provided_$factory_211($opts, this$0, resultContinuation) {
+    var i = new _no_name_provided__242($opts, this$0, resultContinuation);
     var l = function (p1, $cont) {
       return i.invoke_2i3g7c_k$(p1, $cont);
     };
     l.$arity = 1;
     return l;
-  }
-  function _no_name_provided_$factory_211(this$0) {
-    var i = new _no_name_provided__242(this$0);
-    return function () {
-      return i.invoke_0_k$();
-    };
   }
   function _no_name_provided_$factory_212(this$0) {
     var i = new _no_name_provided__243(this$0);
@@ -54181,8 +54536,14 @@
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_213($i, $opts, resultContinuation) {
-    var i = new _no_name_provided__244($i, $opts, resultContinuation);
+  function _no_name_provided_$factory_213(this$0) {
+    var i = new _no_name_provided__244(this$0);
+    return function () {
+      return i.invoke_0_k$();
+    };
+  }
+  function _no_name_provided_$factory_214($i, $opts, resultContinuation) {
+    var i = new _no_name_provided__245($i, $opts, resultContinuation);
     var l = function ($cont) {
       return i.invoke_0_k$($cont);
     };
@@ -54198,8 +54559,8 @@
   function _get_numberPadding_($this) {
     return $this._numberPadding$delegate.getValue_1kobyo_k$($this, numberPadding$factory_0());
   }
-  function _get_progress_($this) {
-    return $this._progress$delegate.getValue_1kobyo_k$($this, progress$factory_0());
+  function _get_progress__1($this) {
+    return $this._progress$delegate_1.getValue_1kobyo_k$($this, progress$factory_4());
   }
   function _get_noStitch_($this) {
     return $this._noStitch$delegate.getValue_1kobyo_k$($this, noStitch$factory_0());
@@ -54223,7 +54584,7 @@
     tmp_3._numberPadding$delegate = this.option$default_t6jqr8_k$(tmp_4, 'number-padding', 'n', 'Minimum number of digits for frame number in output file names', null, 16, null).provideDelegate_1kobyo_k$(this, numberPadding$factory());
     var tmp_5 = this;
     var tmp_6 = new Flag('Output parsing progress');
-    tmp_5._progress$delegate = default_0(this.option$default_t6jqr8_k$(tmp_6, null, null, null, null, 30, null), false).provideDelegate_1kobyo_k$(this, progress$factory());
+    tmp_5._progress$delegate_1 = default_0(this.option$default_t6jqr8_k$(tmp_6, null, null, null, null, 30, null), false).provideDelegate_1kobyo_k$(this, progress$factory_3());
     var tmp_7 = this;
     var tmp_8 = Flag_init_$Create$(null, 1, null);
     tmp_7._noStitch$delegate = default_0(this.option$default_t6jqr8_k$(tmp_8, 'nostitch', 's', 'Do not stitch BLK into a single PNG image', null, 16, null), false).provideDelegate_1kobyo_k$(this, noStitch$factory());
@@ -54302,7 +54663,7 @@
         tmp_2 = tmp3_elvis_lhs == null ? plus_1(FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(path_0), '-') : tmp3_elvis_lhs;
       }
       var prefix = tmp_2;
-      parseFile(path_0, replace$default_0(outputDirectory, '\\ ', ' ', false, 4, null), prefix, !_get_noStitch_(this), _get_keepBlack__0(this), _get_progress_(this), _get_numberPadding_(this));
+      parseFile(path_0, replace$default_0(outputDirectory, '\\ ', ' ', false, 4, null), prefix, !_get_noStitch_(this), _get_keepBlack__0(this), _get_progress__1(this), _get_numberPadding_(this));
     }
   };
   ParseSpriteCLI.$metadata$ = {
@@ -54457,7 +54818,7 @@
       if (stitch) {
         var tmp_14;
         if (showProgress) {
-          tmp_14 = _no_name_provided_$factory_214();
+          tmp_14 = _no_name_provided_$factory_215();
         } else {
           tmp_14 = null;
         }
@@ -54560,7 +54921,7 @@
         }
       }}var tmp_24;
     if (showProgress) {
-      tmp_24 = _no_name_provided_$factory_215();
+      tmp_24 = _no_name_provided_$factory_216();
     } else {
       tmp_24 = null;
     }
@@ -54706,9 +55067,9 @@
           tmp_35.info_x8r8dk_k$(false, tmp$ret$29);
         }}
     }}
-  function _no_name_provided__245() {
+  function _no_name_provided__246() {
   }
-  _no_name_provided__245.prototype.invoke_fcwjfj_k$ = function (pass, i, total) {
+  _no_name_provided__246.prototype.invoke_fcwjfj_k$ = function (pass, i, total) {
     if (total > 0) {
       var tmp$ret$0;
       $l$block: {
@@ -54752,18 +55113,18 @@
         }}
     }return true;
   };
-  _no_name_provided__245.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
+  _no_name_provided__246.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     var tmp_0 = (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE();
     return this.invoke_fcwjfj_k$(tmp, tmp_0, (!(p3 == null) ? typeof p3 === 'number' : false) ? p3 : THROW_CCE());
   };
-  _no_name_provided__245.$metadata$ = {
+  _no_name_provided__246.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__246() {
+  function _no_name_provided__247() {
   }
-  _no_name_provided__246.prototype.invoke_27zxwg_k$ = function (i, total) {
+  _no_name_provided__247.prototype.invoke_27zxwg_k$ = function (i, total) {
     var tmp$ret$0;
     $l$block: {
       var tmp0_floor_0 = i / total * 100.0;
@@ -54806,11 +55167,11 @@
       }}
     return true;
   };
-  _no_name_provided__246.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__247.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__246.$metadata$ = {
+  _no_name_provided__247.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -54829,9 +55190,9 @@
       return _get_numberPadding_(receiver);
     }, null);
   }
-  function progress$factory() {
+  function progress$factory_3() {
     return getPropertyCallableRef('progress', 1, KProperty1, function (receiver) {
-      return _get_progress_(receiver);
+      return _get_progress__1(receiver);
     }, null);
   }
   function noStitch$factory() {
@@ -54864,9 +55225,9 @@
       return _get_numberPadding_(receiver);
     }, null);
   }
-  function progress$factory_0() {
+  function progress$factory_4() {
     return getPropertyCallableRef('progress', 1, KProperty1, function (receiver) {
-      return _get_progress_(receiver);
+      return _get_progress__1(receiver);
     }, null);
   }
   function noStitch$factory_0() {
@@ -54884,14 +55245,14 @@
       return _get_input_(receiver);
     }, null);
   }
-  function _no_name_provided_$factory_214() {
-    var i = new _no_name_provided__245();
+  function _no_name_provided_$factory_215() {
+    var i = new _no_name_provided__246();
     return function (p1, p2, p3) {
       return i.invoke_fcwjfj_k$(p1, p2, p3);
     };
   }
-  function _no_name_provided_$factory_215() {
-    var i = new _no_name_provided__246();
+  function _no_name_provided_$factory_216() {
+    var i = new _no_name_provided__247();
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
@@ -54940,25 +55301,13 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__247() {
-  }
-  _no_name_provided__247.prototype.invoke_6wfw3l_k$ = function (arg) {
-    return Companion_getInstance_63().fromString_6wfw3l_k$(arg);
-  };
-  _no_name_provided__247.prototype.invoke_20e8_k$ = function (p1) {
-    return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
-  };
-  _no_name_provided__247.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
   function _no_name_provided__248() {
   }
-  _no_name_provided__248.prototype.invoke_v3krwk_k$ = function (type) {
-    return type._get_name__0_k$();
+  _no_name_provided__248.prototype.invoke_6wfw3l_k$ = function (arg) {
+    return Companion_getInstance_63().fromString_6wfw3l_k$(arg);
   };
   _no_name_provided__248.prototype.invoke_20e8_k$ = function (p1) {
-    return this.invoke_v3krwk_k$(p1 instanceof SpriteType ? p1 : THROW_CCE());
+    return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
   _no_name_provided__248.$metadata$ = {
     kind: 'class',
@@ -54966,7 +55315,19 @@
   };
   function _no_name_provided__249() {
   }
-  _no_name_provided__249.prototype.invoke_6wfw3l_k$ = function (arg) {
+  _no_name_provided__249.prototype.invoke_v3krwk_k$ = function (type) {
+    return type._get_name__0_k$();
+  };
+  _no_name_provided__249.prototype.invoke_20e8_k$ = function (p1) {
+    return this.invoke_v3krwk_k$(p1 instanceof SpriteType ? p1 : THROW_CCE());
+  };
+  _no_name_provided__249.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__250() {
+  }
+  _no_name_provided__250.prototype.invoke_6wfw3l_k$ = function (arg) {
     var tmp0_elvis_lhs = Companion_getInstance_62().fromString_6wfw3l_k$(arg);
     var tmp;
     if (tmp0_elvis_lhs == null) {
@@ -54976,58 +55337,58 @@
     }
     return tmp;
   };
-  _no_name_provided__249.prototype.invoke_20e8_k$ = function (p1) {
-    return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
-  };
-  _no_name_provided__249.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__250() {
-  }
-  _no_name_provided__250.prototype.invoke_wl7vma_k$ = function (type) {
-    return type._get_name__0_k$();
-  };
   _no_name_provided__250.prototype.invoke_20e8_k$ = function (p1) {
-    return this.invoke_wl7vma_k$(p1 instanceof GameVariant ? p1 : THROW_CCE());
+    return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
   _no_name_provided__250.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided_$factory_216() {
-    var i = new _no_name_provided__247();
-    return function (p1) {
-      return i.invoke_6wfw3l_k$(p1);
-    };
+  function _no_name_provided__251() {
   }
+  _no_name_provided__251.prototype.invoke_wl7vma_k$ = function (type) {
+    return type._get_name__0_k$();
+  };
+  _no_name_provided__251.prototype.invoke_20e8_k$ = function (p1) {
+    return this.invoke_wl7vma_k$(p1 instanceof GameVariant ? p1 : THROW_CCE());
+  };
+  _no_name_provided__251.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
   function _no_name_provided_$factory_217() {
     var i = new _no_name_provided__248();
     return function (p1) {
-      return i.invoke_v3krwk_k$(p1);
+      return i.invoke_6wfw3l_k$(p1);
     };
   }
   function _no_name_provided_$factory_218() {
     var i = new _no_name_provided__249();
     return function (p1) {
-      return i.invoke_6wfw3l_k$(p1);
+      return i.invoke_v3krwk_k$(p1);
     };
   }
   function _no_name_provided_$factory_219() {
     var i = new _no_name_provided__250();
+    return function (p1) {
+      return i.invoke_6wfw3l_k$(p1);
+    };
+  }
+  function _no_name_provided_$factory_220() {
+    var i = new _no_name_provided__251();
     return function (p1) {
       return i.invoke_wl7vma_k$(p1);
     };
   }
   function SpriteArgType$init$() {
     var tmp = toList(values_3());
-    var tmp_0 = _no_name_provided_$factory_216();
-    return new Choice(tmp, tmp_0, _no_name_provided_$factory_217());
+    var tmp_0 = _no_name_provided_$factory_217();
+    return new Choice(tmp, tmp_0, _no_name_provided_$factory_218());
   }
   function GameArgType$init$() {
     var tmp = toList(values_2());
-    var tmp_0 = _no_name_provided_$factory_218();
-    return new Choice(tmp, tmp_0, _no_name_provided_$factory_219());
+    var tmp_0 = _no_name_provided_$factory_219();
+    return new Choice(tmp, tmp_0, _no_name_provided_$factory_220());
   }
   function runMain(args) {
     var parser = ArgParser_init_$Create$('SpriteUtil', false, null, false, false, 30, null);
@@ -55052,9 +55413,9 @@
   function duplicateFileNamesWithoutExtension(_this_, maxLength) {
     var tmp;
     if (!(maxLength == null) ? maxLength > 0 : false) {
-      tmp = _no_name_provided_$factory_220(maxLength);
+      tmp = _no_name_provided_$factory_221(maxLength);
     } else {
-      tmp = _no_name_provided_$factory_221();
+      tmp = _no_name_provided_$factory_222();
     }
     var process_1 = tmp;
     var tmp$ret$2;
@@ -55209,7 +55570,7 @@
     if (tmp$ret$3) {
       var newline = '\n\t-';
       var doubleIndent = '\n\t\t';
-      var filesListString = newline + joinToString$default_0(duplicates, newline, null, null, 0, null, _no_name_provided_$factory_222(doubleIndent), 30, null);
+      var filesListString = newline + joinToString$default_0(duplicates, newline, null, null, 0, null, _no_name_provided_$factory_223(doubleIndent), 30, null);
       var tmp_1;
       var tmp$ret$5;
       $l$block_4: {
@@ -55282,7 +55643,7 @@
     if (tmp$ret$0) {
       var newline = '\n\t-';
       var doubleIndent = '\n\t\t';
-      var filesListString = newline + joinToString$default_0(duplicates, newline, null, null, 0, null, _no_name_provided_$factory_223(doubleIndent), 30, null);
+      var filesListString = newline + joinToString$default_0(duplicates, newline, null, null, 0, null, _no_name_provided_$factory_224(doubleIndent), 30, null);
       var tmp;
       var tmp$ret$2;
       $l$block_1: {
@@ -55345,10 +55706,10 @@
     }
     return tmp$ret$6;
   }
-  function _no_name_provided__251($maxLength) {
+  function _no_name_provided__252($maxLength) {
     this._$maxLength = $maxLength;
   }
-  _no_name_provided__251.prototype.invoke_6wfw3l_k$ = function (aPath) {
+  _no_name_provided__252.prototype.invoke_6wfw3l_k$ = function (aPath) {
     var tmp0_safe_receiver = FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(aPath);
     var tmp;
     if (tmp0_safe_receiver == null) {
@@ -55385,16 +55746,16 @@
     }
     return tmp_0;
   };
-  _no_name_provided__251.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__252.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__251.$metadata$ = {
+  _no_name_provided__252.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__252() {
+  function _no_name_provided__253() {
   }
-  _no_name_provided__252.prototype.invoke_6wfw3l_k$ = function (aPath) {
+  _no_name_provided__253.prototype.invoke_6wfw3l_k$ = function (aPath) {
     var tmp0_safe_receiver = FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(aPath);
     var tmp;
     if (tmp0_safe_receiver == null) {
@@ -55414,37 +55775,21 @@
     }
     return tmp;
   };
-  _no_name_provided__252.prototype.invoke_20e8_k$ = function (p1) {
-    return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
-  };
-  _no_name_provided__252.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__253($doubleIndent) {
-    this._$doubleIndent = $doubleIndent;
-  }
-  _no_name_provided__253.prototype.invoke_vugk84_k$ = function (_name_for_destructuring_parameter_0_) {
-    var name = _name_for_destructuring_parameter_0_.component1_0_k$();
-    var files = _name_for_destructuring_parameter_0_.component2_0_k$();
-    var tmp = name + this._$doubleIndent;
-    return tmp + joinToString$default_0(files, this._$doubleIndent, null, null, 0, null, null, 62, null);
-  };
   _no_name_provided__253.prototype.invoke_20e8_k$ = function (p1) {
-    return this.invoke_vugk84_k$(p1 instanceof Pair ? p1 : THROW_CCE());
+    return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
   _no_name_provided__253.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided__254($doubleIndent) {
-    this._$doubleIndent_0 = $doubleIndent;
+    this._$doubleIndent = $doubleIndent;
   }
   _no_name_provided__254.prototype.invoke_vugk84_k$ = function (_name_for_destructuring_parameter_0_) {
     var name = _name_for_destructuring_parameter_0_.component1_0_k$();
     var files = _name_for_destructuring_parameter_0_.component2_0_k$();
-    var tmp = name + this._$doubleIndent_0;
-    return tmp + joinToString$default_0(files, this._$doubleIndent_0, null, null, 0, null, null, 62, null);
+    var tmp = name + this._$doubleIndent;
+    return tmp + joinToString$default_0(files, this._$doubleIndent, null, null, 0, null, null, 62, null);
   };
   _no_name_provided__254.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_vugk84_k$(p1 instanceof Pair ? p1 : THROW_CCE());
@@ -55453,26 +55798,42 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided_$factory_220($maxLength) {
-    var i = new _no_name_provided__251($maxLength);
+  function _no_name_provided__255($doubleIndent) {
+    this._$doubleIndent_0 = $doubleIndent;
+  }
+  _no_name_provided__255.prototype.invoke_vugk84_k$ = function (_name_for_destructuring_parameter_0_) {
+    var name = _name_for_destructuring_parameter_0_.component1_0_k$();
+    var files = _name_for_destructuring_parameter_0_.component2_0_k$();
+    var tmp = name + this._$doubleIndent_0;
+    return tmp + joinToString$default_0(files, this._$doubleIndent_0, null, null, 0, null, null, 62, null);
+  };
+  _no_name_provided__255.prototype.invoke_20e8_k$ = function (p1) {
+    return this.invoke_vugk84_k$(p1 instanceof Pair ? p1 : THROW_CCE());
+  };
+  _no_name_provided__255.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided_$factory_221($maxLength) {
+    var i = new _no_name_provided__252($maxLength);
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_221() {
-    var i = new _no_name_provided__252();
+  function _no_name_provided_$factory_222() {
+    var i = new _no_name_provided__253();
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
-    };
-  }
-  function _no_name_provided_$factory_222($doubleIndent) {
-    var i = new _no_name_provided__253($doubleIndent);
-    return function (p1) {
-      return i.invoke_vugk84_k$(p1);
     };
   }
   function _no_name_provided_$factory_223($doubleIndent) {
     var i = new _no_name_provided__254($doubleIndent);
+    return function (p1) {
+      return i.invoke_vugk84_k$(p1);
+    };
+  }
+  function _no_name_provided_$factory_224($doubleIndent) {
+    var i = new _no_name_provided__255($doubleIndent);
     return function (p1) {
       return i.invoke_vugk84_k$(p1);
     };
@@ -55488,14 +55849,16 @@
     }if (!fileExists(outputFilePath)) {
       return true;
     }var tmp = ensureNotNull(FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(outputFilePath));
-    var promptString = '' + 'Overwrite file ' + tmp + ' in ' + getSelfOrParentDirectory$default(outputFilePath, false, 2, null) + '?\r\n\t' + '[y]es (default), [n]o, [a]ll overwrite all, [x] overwrite none: ';
+    var tmp_0 = FileNameUtil_getInstance();
+    var promptString = '' + 'Overwrite file ' + tmp + ' in ' + tmp_0.getSelfOrParentDirectory$default_zmr95_k$(outputFilePath, false, 2, null) + '?\r\n\t' + '[y]es (default), [n]o, [a]ll overwrite all, [x] overwrite none: ';
     return promptOverwrite(promptString, overwriteAll, overwriteNone, $cont);
   }
   function shouldWrite_0(outputFilePath, $cont) {
     if (!fileExists(outputFilePath)) {
       return true;
     }var tmp = ensureNotNull(FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(outputFilePath));
-    var promptString = '' + 'Overwrite file ' + tmp + ' in ' + getSelfOrParentDirectory$default(outputFilePath, false, 2, null) + '?\r\n\t' + '[y]es (default), [n]o';
+    var tmp_0 = FileNameUtil_getInstance();
+    var promptString = '' + 'Overwrite file ' + tmp + ' in ' + tmp_0.getSelfOrParentDirectory$default_zmr95_k$(outputFilePath, false, 2, null) + '?\r\n\t' + '[y]es (default), [n]o';
     return promptOverwrite$default(promptString, null, null, 6, null, $cont);
   }
   function ensureAndGetOutputDirectory(outputDirectory, currentWorkingDirectory, recursive) {
@@ -55616,140 +55979,203 @@
       recursive = true;
     return ensureAndGetOutputDirectory(outputDirectory, currentWorkingDirectory, recursive);
   }
-  function getLastPathComponent(path_0, nullIfBlank) {
-    var tmp;
-    if (isBlank(path_0)) {
-      tmp = null;
-    } else if (path_0 === pathSeparator) {
-      tmp = getLastPathComponent$close('', nullIfBlank);
-    } else {
-      var index = lastIndexOf$default(path_0, pathSeparatorChar, 0, false, 6, null);
-      var tmp_0;
-      if (index < 0) {
-        tmp_0 = getLastPathComponent$close(path_0, nullIfBlank);
-      } else if (index === _get_lastIndex__2(path_0)) {
-        tmp_0 = getLastPathComponent$close('', nullIfBlank);
-      } else {
-        var tmp$ret$1;
-        $l$block_0: {
-          var tmp0_substring_0 = index + 1 | 0;
-          var tmp$ret$0;
-          $l$block: {
-            tmp$ret$0 = path_0;
-            break $l$block;
-          }
-          tmp$ret$1 = tmp$ret$0.substring(tmp0_substring_0);
-          break $l$block_0;
-        }
-        tmp_0 = getLastPathComponent$close(tmp$ret$1, nullIfBlank);
-      }
-      tmp = tmp_0;
-    }
-    return tmp;
-  }
-  function getLastPathComponent$default(path_0, nullIfBlank, $mask0, $handler) {
-    if (!(($mask0 & 2) === 0))
-      nullIfBlank = false;
-    return getLastPathComponent(path_0, nullIfBlank);
-  }
   function unpackPaths(_this_, extensions, fileNameRegex, baseDirectory) {
-    var tmp$ret$6;
-    $l$block_6: {
-      var tmp$ret$5;
-      $l$block_5: {
-        var tmp0_flatMapTo_0_1 = ArrayList_init_$Create$();
-        var tmp0_iterator_1_2 = _this_.iterator_0_k$();
-        while (tmp0_iterator_1_2.hasNext_0_k$()) {
-          var element_2_3 = tmp0_iterator_1_2.next_0_k$();
-          var tmp$ret$0;
-          $l$block_4: {
-            var tmp;
-            if (isAbsolute_0(element_2_3)) {
-              tmp = PathUtil_getInstance().combine_yn9lj1_k$([element_2_3]);
-            } else {
-              tmp = PathUtil_getInstance().combine_yn9lj1_k$([baseDirectory, element_2_3]);
-            }
-            var pathTemp_6 = tmp;
-            var tmp_0;
-            if (fileExists(pathTemp_6)) {
-              var tmp_1;
-              if (!isDirectory(element_2_3)) {
-                tmp$ret$0 = listOf_0(element_2_3);
-                break $l$block_4;
-              } else {
-                tmp_1 = ensureEndsWith(element_2_3, pathSeparatorChar) + '*';
-              }
-              tmp_0 = tmp_1;
-            } else {
-              tmp_0 = pathTemp_6;
-            }
-            var path_7 = tmp_0;
-            var tmp_2;
-            var tmp_3;
-            if (!(fileNameRegex == null)) {
-              var tmp$ret$1;
-              $l$block_0: {
-                tmp$ret$1 = !extensions.isEmpty_0_k$();
-                break $l$block_0;
-              }
-              tmp_3 = tmp$ret$1;
-            } else {
-              tmp_3 = false;
-            }
-            if (tmp_3) {
-              tmp_2 = _no_name_provided_$factory_224(extensions, fileNameRegex);
-            } else {
-              if (!(fileNameRegex == null)) {
-                tmp_2 = _no_name_provided_$factory_225(fileNameRegex);
-              } else {
-                var tmp$ret$2;
-                $l$block_1: {
-                  tmp$ret$2 = !extensions.isEmpty_0_k$();
-                  break $l$block_1;
-                }
-                if (tmp$ret$2) {
-                  tmp_2 = _no_name_provided_$factory_226(extensions);
-                } else {
-                  {
-                    tmp_2 = _no_name_provided_$factory_227();
-                  }
-                }
-              }
-            }
-            var filter_8 = tmp_2;
-            var tmp$ret$4;
-            $l$block_3: {
-              var tmp0_filter_0_17 = distinct(toList(globFiles(path_7, baseDirectory)));
-              var tmp$ret$3;
-              $l$block_2: {
-                var tmp0_filterTo_0_1_18 = ArrayList_init_$Create$();
-                var tmp0_iterator_1_2_19 = tmp0_filter_0_17.iterator_0_k$();
-                while (tmp0_iterator_1_2_19.hasNext_0_k$()) {
-                  var element_2_3_20 = tmp0_iterator_1_2_19.next_0_k$();
-                  if (filter_8(element_2_3_20)) {
-                    tmp0_filterTo_0_1_18.add_2bq_k$(element_2_3_20);
-                    Unit_getInstance();
-                  }}
-                tmp$ret$3 = tmp0_filterTo_0_1_18;
-                break $l$block_2;
-              }
-              tmp$ret$4 = tmp$ret$3;
-              break $l$block_3;
-            }
-            tmp$ret$0 = sortedNice(tmp$ret$4);
-            break $l$block_4;
-          }
-          var list_3_4 = tmp$ret$0;
-          addAll(tmp0_flatMapTo_0_1, list_3_4);
-          Unit_getInstance();
-        }
-        tmp$ret$5 = tmp0_flatMapTo_0_1;
-        break $l$block_5;
+    var tmp;
+    var tmp_0;
+    if (!(fileNameRegex == null)) {
+      var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = !extensions.isEmpty_0_k$();
+        break $l$block;
       }
-      tmp$ret$6 = tmp$ret$5;
-      break $l$block_6;
+      tmp_0 = tmp$ret$0;
+    } else {
+      tmp_0 = false;
     }
-    return tmp$ret$6;
+    if (tmp_0) {
+      var tmp$ret$5;
+      $l$block_4: {
+        var tmp$ret$4;
+        $l$block_3: {
+          var tmp0_mapTo_0_1 = ArrayList_init_$Create$_0(collectionSizeOrDefault(extensions, 10));
+          var tmp0_iterator_1_2 = extensions.iterator_0_k$();
+          while (tmp0_iterator_1_2.hasNext_0_k$()) {
+            var item_2_3 = tmp0_iterator_1_2.next_0_k$();
+            var tmp$ret$3;
+            $l$block_2: {
+              var tmp$ret$2;
+              $l$block_1: {
+                var tmp$ret$1;
+                $l$block_0: {
+                  tmp$ret$1 = item_2_3;
+                  break $l$block_0;
+                }
+                tmp$ret$2 = tmp$ret$1.toLowerCase();
+                break $l$block_1;
+              }
+              tmp$ret$3 = tmp$ret$2;
+              break $l$block_2;
+            }
+            tmp0_mapTo_0_1.add_2bq_k$(tmp$ret$3);
+            Unit_getInstance();
+          }
+          tmp$ret$4 = tmp0_mapTo_0_1;
+          break $l$block_3;
+        }
+        tmp$ret$5 = tmp$ret$4;
+        break $l$block_4;
+      }
+      var extensionsLowerCase = tmp$ret$5;
+      tmp = _no_name_provided_$factory_225(extensionsLowerCase, fileNameRegex);
+    } else {
+      if (!(fileNameRegex == null)) {
+        tmp = _no_name_provided_$factory_226(fileNameRegex);
+      } else {
+        var tmp$ret$6;
+        $l$block_5: {
+          tmp$ret$6 = !extensions.isEmpty_0_k$();
+          break $l$block_5;
+        }
+        if (tmp$ret$6) {
+          var tmp$ret$11;
+          $l$block_10: {
+            var tmp$ret$10;
+            $l$block_9: {
+              var tmp0_mapTo_0_1_0 = ArrayList_init_$Create$_0(collectionSizeOrDefault(extensions, 10));
+              var tmp0_iterator_1_2_0 = extensions.iterator_0_k$();
+              while (tmp0_iterator_1_2_0.hasNext_0_k$()) {
+                var item_2_3_0 = tmp0_iterator_1_2_0.next_0_k$();
+                var tmp$ret$9;
+                $l$block_8: {
+                  var tmp$ret$8;
+                  $l$block_7: {
+                    var tmp$ret$7;
+                    $l$block_6: {
+                      tmp$ret$7 = item_2_3_0;
+                      break $l$block_6;
+                    }
+                    tmp$ret$8 = tmp$ret$7.toLowerCase();
+                    break $l$block_7;
+                  }
+                  tmp$ret$9 = tmp$ret$8;
+                  break $l$block_8;
+                }
+                tmp0_mapTo_0_1_0.add_2bq_k$(tmp$ret$9);
+                Unit_getInstance();
+              }
+              tmp$ret$10 = tmp0_mapTo_0_1_0;
+              break $l$block_9;
+            }
+            tmp$ret$11 = tmp$ret$10;
+            break $l$block_10;
+          }
+          var extensionsLowerCase_0 = tmp$ret$11;
+          tmp = _no_name_provided_$factory_227(extensionsLowerCase_0);
+        } else {
+          {
+            {
+              var tmp0_i_0 = Log_getInstance();
+              if (tmp0_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
+                var tmp_1 = LoggerObject_getInstance();
+                var tmp$ret$14;
+                $l$block_13: {
+                  var tmp_2 = LoggerObject_getInstance()._prependLogType ? '**LOG1** ' : '';
+                  var tmp_3;
+                  var tmp$ret$12;
+                  $l$block_11: {
+                    {
+                    }
+                    tmp$ret$12 = null == null ? true : isBlank(null);
+                    break $l$block_11;
+                  }
+                  if (!tmp$ret$12) {
+                    tmp_3 = 'null::';
+                  } else {
+                    {
+                      tmp_3 = '';
+                    }
+                  }
+                  var tmp_4 = tmp_3;
+                  var tmp$ret$13;
+                  $l$block_12: {
+                    tmp$ret$13 = 'No filter';
+                    break $l$block_12;
+                  }
+                  tmp$ret$14 = '' + tmp_2 + tmp_4 + tmp$ret$13;
+                  break $l$block_13;
+                }
+                tmp_1.info_x8r8dk_k$(false, tmp$ret$14);
+              }}
+            tmp = _no_name_provided_$factory_228();
+          }
+        }
+      }
+    }
+    var filter = tmp;
+    var tmp$ret$19;
+    $l$block_19: {
+      var tmp$ret$17;
+      $l$block_17: {
+        var tmp$ret$16;
+        $l$block_16: {
+          var tmp0_flatMapTo_0_1 = ArrayList_init_$Create$();
+          var tmp0_iterator_1_2_1 = _this_.iterator_0_k$();
+          while (tmp0_iterator_1_2_1.hasNext_0_k$()) {
+            var element_2_3 = tmp0_iterator_1_2_1.next_0_k$();
+            var tmp$ret$15;
+            $l$block_15: {
+              var tmp_5;
+              if (isAbsolute_0(element_2_3)) {
+                tmp_5 = PathUtil_getInstance().combine_yn9lj1_k$([element_2_3]);
+              } else {
+                tmp_5 = PathUtil_getInstance().combine_yn9lj1_k$([baseDirectory, element_2_3]);
+              }
+              var pathTemp_6 = tmp_5;
+              var tmp_6;
+              if (fileExists(pathTemp_6)) {
+                var tmp_7;
+                if (!isDirectory(element_2_3)) {
+                  tmp$ret$15 = listOf_0(element_2_3);
+                  break $l$block_15;
+                } else {
+                  tmp_7 = ensureEndsWith(element_2_3, pathSeparatorChar) + '*';
+                }
+                tmp_6 = tmp_7;
+              } else {
+                tmp_6 = pathTemp_6;
+              }
+              var path_7 = tmp_6;
+              tmp$ret$15 = sortedNice(toList(globFiles(path_7, baseDirectory)));
+              break $l$block_15;
+            }
+            var list_3_4 = tmp$ret$15;
+            addAll(tmp0_flatMapTo_0_1, list_3_4);
+            Unit_getInstance();
+          }
+          tmp$ret$16 = tmp0_flatMapTo_0_1;
+          break $l$block_16;
+        }
+        tmp$ret$17 = tmp$ret$16;
+        break $l$block_17;
+      }
+      var tmp1_filter_0 = tmp$ret$17;
+      var tmp$ret$18;
+      $l$block_18: {
+        var tmp0_filterTo_0_1 = ArrayList_init_$Create$();
+        var tmp0_iterator_1_2_2 = tmp1_filter_0.iterator_0_k$();
+        while (tmp0_iterator_1_2_2.hasNext_0_k$()) {
+          var element_2_3_0 = tmp0_iterator_1_2_2.next_0_k$();
+          if (filter(element_2_3_0)) {
+            tmp0_filterTo_0_1.add_2bq_k$(element_2_3_0);
+            Unit_getInstance();
+          }}
+        tmp$ret$18 = tmp0_filterTo_0_1;
+        break $l$block_18;
+      }
+      tmp$ret$19 = tmp$ret$18;
+      break $l$block_19;
+    }
+    return distinct(tmp$ret$19);
   }
   function unpackPaths$default(_this_, extensions, fileNameRegex, baseDirectory, $mask0, $handler) {
     if (!(($mask0 & 1) === 0))
@@ -55760,20 +56186,11 @@
       baseDirectory = getCurrentWorkingDirectory();
     return unpackPaths(_this_, extensions, fileNameRegex, baseDirectory);
   }
-  function getLastPathComponent$close(_this_, $nullIfBlank) {
-    var tmp;
-    if ($nullIfBlank ? isBlank(_this_) : false) {
-      tmp = null;
-    } else {
-      tmp = _this_;
-    }
-    return tmp;
-  }
-  function _no_name_provided__255($extensions, $fileNameRegex) {
-    this._$extensions = $extensions;
+  function _no_name_provided__256($extensionsLowerCase, $fileNameRegex) {
+    this._$extensionsLowerCase = $extensionsLowerCase;
     this._$fileNameRegex = $fileNameRegex;
   }
-  _no_name_provided__255.prototype.invoke_6wfw3l_k$ = function (childPath) {
+  _no_name_provided__256.prototype.invoke_6wfw3l_k$ = function (childPath) {
     var tmp;
     var tmp_0;
     var tmp_1;
@@ -55783,16 +56200,16 @@
       break $l$block;
     }
     if (tmp$ret$0) {
-      var tmp0_safe_receiver_10 = FileNameUtil_getInstance().getExtension_6wfw3l_k$(childPath);
+      var tmp0_safe_receiver = FileNameUtil_getInstance().getExtension_6wfw3l_k$(childPath);
       var tmp_2;
-      if (tmp0_safe_receiver_10 == null) {
+      if (tmp0_safe_receiver == null) {
         tmp_2 = null;
       } else {
         var tmp$ret$2;
         $l$block_1: {
           var tmp$ret$1;
           $l$block_0: {
-            tmp$ret$1 = tmp0_safe_receiver_10;
+            tmp$ret$1 = tmp0_safe_receiver;
             break $l$block_0;
           }
           tmp$ret$2 = tmp$ret$1.toLowerCase();
@@ -55800,50 +56217,16 @@
         }
         tmp_2 = tmp$ret$2;
       }
-      tmp_1 = contains_2(this._$extensions, tmp_2);
+      tmp_1 = contains_2(this._$extensionsLowerCase, tmp_2);
     } else {
       {
         tmp_1 = false;
       }
     }
     if (tmp_1) {
-      var tmp1_elvis_lhs_11 = getLastPathComponent$default(childPath, false, 2, null);
-      tmp_0 = this._$fileNameRegex.matches_3ajhph_k$(tmp1_elvis_lhs_11 == null ? '' : tmp1_elvis_lhs_11);
-    } else {
-      {
-        tmp_0 = false;
-      }
-    }
-    if (tmp_0) {
-      tmp = !isDirectory(childPath);
-    } else {
-      {
-        tmp = false;
-      }
-    }
-    return tmp;
-  };
-  _no_name_provided__255.prototype.invoke_20e8_k$ = function (p1) {
-    return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
-  };
-  _no_name_provided__255.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__256($fileNameRegex) {
-    this._$fileNameRegex_0 = $fileNameRegex;
-  }
-  _no_name_provided__256.prototype.invoke_6wfw3l_k$ = function (childPath) {
-    var tmp;
-    var tmp_0;
-    var tmp$ret$0;
-    $l$block: {
-      tmp$ret$0 = !isBlank(childPath);
-      break $l$block;
-    }
-    if (tmp$ret$0) {
-      var tmp0_elvis_lhs_13 = getLastPathComponent$default(childPath, false, 2, null);
-      tmp_0 = this._$fileNameRegex_0.matches_3ajhph_k$(tmp0_elvis_lhs_13 == null ? '' : tmp0_elvis_lhs_13);
+      var tmp_3 = FileNameUtil_getInstance();
+      var tmp1_elvis_lhs = tmp_3.getLastPathComponent$default_zmr95_k$(childPath, false, 2, null);
+      tmp_0 = this._$fileNameRegex.matches_3ajhph_k$(tmp1_elvis_lhs == null ? '' : tmp1_elvis_lhs);
     } else {
       {
         tmp_0 = false;
@@ -55865,8 +56248,8 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__257($extensions) {
-    this._$extensions_0 = $extensions;
+  function _no_name_provided__257($fileNameRegex) {
+    this._$fileNameRegex_0 = $fileNameRegex;
   }
   _no_name_provided__257.prototype.invoke_6wfw3l_k$ = function (childPath) {
     var tmp;
@@ -55877,24 +56260,9 @@
       break $l$block;
     }
     if (tmp$ret$0) {
-      var tmp0_safe_receiver_15 = FileNameUtil_getInstance().getExtension_6wfw3l_k$(childPath);
-      var tmp_1;
-      if (tmp0_safe_receiver_15 == null) {
-        tmp_1 = null;
-      } else {
-        var tmp$ret$2;
-        $l$block_1: {
-          var tmp$ret$1;
-          $l$block_0: {
-            tmp$ret$1 = tmp0_safe_receiver_15;
-            break $l$block_0;
-          }
-          tmp$ret$2 = tmp$ret$1.toLowerCase();
-          break $l$block_1;
-        }
-        tmp_1 = tmp$ret$2;
-      }
-      tmp_0 = contains_2(this._$extensions_0, tmp_1);
+      var tmp_1 = FileNameUtil_getInstance();
+      var tmp0_elvis_lhs = tmp_1.getLastPathComponent$default_zmr95_k$(childPath, false, 2, null);
+      tmp_0 = this._$fileNameRegex_0.matches_3ajhph_k$(tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs);
     } else {
       {
         tmp_0 = false;
@@ -55916,16 +56284,42 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__258() {
+  function _no_name_provided__258($extensionsLowerCase) {
+    this._$extensionsLowerCase_0 = $extensionsLowerCase;
   }
   _no_name_provided__258.prototype.invoke_6wfw3l_k$ = function (childPath) {
     var tmp;
+    var tmp_0;
     var tmp$ret$0;
     $l$block: {
       tmp$ret$0 = !isBlank(childPath);
       break $l$block;
     }
     if (tmp$ret$0) {
+      var tmp0_safe_receiver = FileNameUtil_getInstance().getExtension_6wfw3l_k$(childPath);
+      var tmp_1;
+      if (tmp0_safe_receiver == null) {
+        tmp_1 = null;
+      } else {
+        var tmp$ret$2;
+        $l$block_1: {
+          var tmp$ret$1;
+          $l$block_0: {
+            tmp$ret$1 = tmp0_safe_receiver;
+            break $l$block_0;
+          }
+          tmp$ret$2 = tmp$ret$1.toLowerCase();
+          break $l$block_1;
+        }
+        tmp_1 = tmp$ret$2;
+      }
+      tmp_0 = contains_2(this._$extensionsLowerCase_0, tmp_1);
+    } else {
+      {
+        tmp_0 = false;
+      }
+    }
+    if (tmp_0) {
       tmp = !isDirectory(childPath);
     } else {
       {
@@ -55941,26 +56335,51 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided_$factory_224($extensions, $fileNameRegex) {
-    var i = new _no_name_provided__255($extensions, $fileNameRegex);
+  function _no_name_provided__259() {
+  }
+  _no_name_provided__259.prototype.invoke_6wfw3l_k$ = function (childPath) {
+    var tmp;
+    var tmp$ret$0;
+    $l$block: {
+      tmp$ret$0 = !isBlank(childPath);
+      break $l$block;
+    }
+    if (tmp$ret$0) {
+      tmp = !isDirectory(childPath);
+    } else {
+      {
+        tmp = false;
+      }
+    }
+    return tmp;
+  };
+  _no_name_provided__259.prototype.invoke_20e8_k$ = function (p1) {
+    return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
+  };
+  _no_name_provided__259.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided_$factory_225($extensionsLowerCase, $fileNameRegex) {
+    var i = new _no_name_provided__256($extensionsLowerCase, $fileNameRegex);
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_225($fileNameRegex) {
-    var i = new _no_name_provided__256($fileNameRegex);
+  function _no_name_provided_$factory_226($fileNameRegex) {
+    var i = new _no_name_provided__257($fileNameRegex);
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_226($extensions) {
-    var i = new _no_name_provided__257($extensions);
+  function _no_name_provided_$factory_227($extensionsLowerCase) {
+    var i = new _no_name_provided__258($extensionsLowerCase);
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_227() {
-    var i = new _no_name_provided__258();
+  function _no_name_provided_$factory_228() {
+    var i = new _no_name_provided__259();
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
@@ -55994,74 +56413,6 @@
     } else {
       {
         tmp = WINDOWS_ABSOLUTE_PATH_PREFIX.matches_3ajhph_k$(path_0);
-      }
-    }
-    return tmp;
-  }
-  function getSelfOrParentDirectory(file, appendSeparator) {
-    if (endsWith$default(file, pathSeparatorChar, false, 2, null)) {
-      return file;
-    } else {
-    }
-    var index = lastIndexOf$default(file, pathSeparatorChar, 0, false, 6, null);
-    if (index < 0) {
-      var tmp = new Char(46);
-      if (contains$default(file, tmp, false, 2, null)) {
-        return null;
-      } else {
-        {
-          getSelfOrParentDirectory$close(file, appendSeparator);
-          Unit_getInstance();
-        }
-      }
-    }var tmp_0;
-    var tmp$ret$1;
-    $l$block_0: {
-      var tmp$ret$0;
-      $l$block: {
-        tmp$ret$0 = file;
-        break $l$block;
-      }
-      tmp$ret$1 = tmp$ret$0.substring(index);
-      break $l$block_0;
-    }
-    var tmp_1 = tmp$ret$1;
-    var tmp_2 = new Char(46);
-    if (contains$default(tmp_1, tmp_2, false, 2, null)) {
-      tmp_0 = getSelfOrParentDirectory$close(substring(file, until(0, index)), appendSeparator);
-    } else {
-      {
-        tmp_0 = getSelfOrParentDirectory$close(file, appendSeparator);
-      }
-    }
-    return tmp_0;
-  }
-  function getSelfOrParentDirectory$default(file, appendSeparator, $mask0, $handler) {
-    if (!(($mask0 & 2) === 0))
-      appendSeparator = false;
-    return getSelfOrParentDirectory(file, appendSeparator);
-  }
-  function ensureEndsWith(_this_, char) {
-    if (endsWith$default(_this_, char, false, 2, null))
-      return _this_;
-    else {
-    }
-    return _this_ + char;
-  }
-  function getSelfOrParentDirectory$close(_this_, $appendSeparator) {
-    var tmp;
-    var tmp_0;
-    if (!$appendSeparator) {
-      tmp_0 = true;
-    } else {
-      var tmp_1 = new Char(47);
-      tmp_0 = endsWith$default(_this_, tmp_1, false, 2, null);
-    }
-    if (tmp_0) {
-      tmp = _this_;
-    } else {
-      {
-        tmp = ensureEndsWith(_this_, pathSeparatorChar);
       }
     }
     return tmp;
@@ -56206,59 +56557,59 @@
     return tmp.join(tmpdir_1, tmp$ret$1 + randomBytes_1);
   }
   function readLine(prompt, default_1, $cont) {
-    return await_0(new Promise(_no_name_provided_$factory_228(prompt, default_1)), $cont);
+    return await_0(new Promise(_no_name_provided_$factory_229(prompt, default_1)), $cont);
   }
   function readLine$default(prompt, default_1, $mask0, $handler, $cont) {
     if (!(($mask0 & 2) === 0))
       default_1 = null;
     return readLine(prompt, default_1, $cont);
   }
-  function _no_name_provided__259($resolve, $default) {
+  function _no_name_provided__260($resolve, $default) {
     this._$resolve = $resolve;
     this._$default = $default;
   }
-  _no_name_provided__259.prototype.invoke_a4enbm_k$ = function (it) {
+  _no_name_provided__260.prototype.invoke_a4enbm_k$ = function (it) {
     var tmp0_elvis_lhs = nullIfEmpty_0(it);
     this._$resolve(tmp0_elvis_lhs == null ? this._$default : tmp0_elvis_lhs);
   };
-  _no_name_provided__259.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__260.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_a4enbm_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
-    return Unit_getInstance();
-  };
-  _no_name_provided__259.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__260($prompt, $default) {
-    this._$prompt = $prompt;
-    this._$default_0 = $default;
-  }
-  _no_name_provided__260.prototype.invoke_lmz38d_k$ = function (resolve, _anonymous_parameter_1_) {
-    var tmp = {};
-    var readLineOptions = (!(tmp == null) ? isObject(tmp) : false) ? tmp : THROW_CCE();
-    readLineOptions.input = process_0.stdin;
-    readLineOptions.output = process_0.openStdin();
-    var readLine_0 = createInterface_0(readLineOptions);
-    readLine_0.question(this._$prompt, _no_name_provided_$factory_229(resolve, this._$default_0));
-  };
-  _no_name_provided__260.prototype.invoke_osx4an_k$ = function (p1, p2) {
-    var tmp = (!(p1 == null) ? typeof p1 === 'function' : false) ? p1 : THROW_CCE();
-    this.invoke_lmz38d_k$(tmp, (!(p2 == null) ? typeof p2 === 'function' : false) ? p2 : THROW_CCE());
     return Unit_getInstance();
   };
   _no_name_provided__260.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided_$factory_228($prompt, $default) {
-    var i = new _no_name_provided__260($prompt, $default);
+  function _no_name_provided__261($prompt, $default) {
+    this._$prompt = $prompt;
+    this._$default_0 = $default;
+  }
+  _no_name_provided__261.prototype.invoke_lmz38d_k$ = function (resolve, _anonymous_parameter_1_) {
+    var tmp = {};
+    var readLineOptions = (!(tmp == null) ? isObject(tmp) : false) ? tmp : THROW_CCE();
+    readLineOptions.input = process_0.stdin;
+    readLineOptions.output = process_0.openStdin();
+    var readLine_0 = createInterface_0(readLineOptions);
+    readLine_0.question(this._$prompt, _no_name_provided_$factory_230(resolve, this._$default_0));
+  };
+  _no_name_provided__261.prototype.invoke_osx4an_k$ = function (p1, p2) {
+    var tmp = (!(p1 == null) ? typeof p1 === 'function' : false) ? p1 : THROW_CCE();
+    this.invoke_lmz38d_k$(tmp, (!(p2 == null) ? typeof p2 === 'function' : false) ? p2 : THROW_CCE());
+    return Unit_getInstance();
+  };
+  _no_name_provided__261.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided_$factory_229($prompt, $default) {
+    var i = new _no_name_provided__261($prompt, $default);
     return function (p1, p2) {
       i.invoke_lmz38d_k$(p1, p2);
       return Unit_getInstance();
     };
   }
-  function _no_name_provided_$factory_229($resolve, $default) {
-    var i = new _no_name_provided__259($resolve, $default);
+  function _no_name_provided_$factory_230($resolve, $default) {
+    var i = new _no_name_provided__260($resolve, $default);
     return function (p1) {
       i.invoke_a4enbm_k$(p1);
       return Unit_getInstance();
