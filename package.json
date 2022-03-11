@@ -1,16 +1,16 @@
 {
   "name": "@bedalton/sprite-util",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "SpriteCompilerCLI.js",
   "types": "SpriteCompilerCLI.d.ts",
-  "devDependencies": {
-    "source-map-support": "0.5.20",
-    "dukat": "0.5.8-rc.4"
-  },
+  "devDependencies": {},
   "dependencies": {
     "node-self": "1.0.0-c",
     "glob": "7.2.0"
   },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": [],
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -25,7 +25,6 @@
     "url": "https://github.com/bedalton/creatures-sprite-util-node/issues"
   },
   "homepage": "https://github.com/bedalton/creatures-sprite-util-node#readme",
-  "scripts": {},
   "keywords": [
     "Creatures",
     "C16",
@@ -44,5 +43,6 @@
     "BLK Parser",
     "Breed Converter",
     "Breed Conversion"
-  ]
+  ],
+  "scripts": {}
 }

@@ -3,6 +3,19 @@ type Nullable<T> = T | null | undefined
 
 type MultiPassCallback = (pass: number, index: number, total: number) => Nullable<boolean>;
 type SinglePassCallback = (index: number, total: number) => boolean;
+type ShouldOverwriteCallback = (fileName: string) => Promise<boolean>;
+
+// Allows overwriting
+export var shouldOverwriteOverride: Nullable<ShouldOverwriteCallback>;
+
+export function setShouldOverwriteCallback(callback: ShouldOverwriteCallback);
+
+export function runWithCLIString(args: String);
+
+export function runCliWithArray(args: Array<String>);
+
+export function setLogger(logger:(level: string, message: string)=>void)
+
 type Encoding = "555"|"565";
 type SpriteType = "SPR"|"S16"|"C16"|"BLK";
 type Game = "C1"|"C2"|"CV"|"C3"|"DS";
@@ -64,3 +77,13 @@ export function stitchBlkToPng(
     blkBytes: Int8Array,
     progressCallback: Nullable<MultiPassCallback>
 ): Int8Array;
+
+
+export interface ILoggerObject {
+    log(replace: boolean, message: string)
+    info(replace: boolean, message: string)
+    warning(message: string)
+    error(message: string)
+    logMemory()
+   readonly prependLogType: Nullable<boolean>
+}
