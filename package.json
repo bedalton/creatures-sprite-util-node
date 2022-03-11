@@ -25,6 +25,7 @@
     "url": "https://github.com/bedalton/creatures-sprite-util-node/issues"
   },
   "homepage": "https://github.com/bedalton/creatures-sprite-util-node#readme",
+  "scripts": {},
   "keywords": [
     "Creatures",
     "C16",
@@ -43,6 +44,5 @@
     "BLK Parser",
     "Breed Converter",
     "Breed Conversion"
-  ],
-  "scripts": {}
+  ]
 }
