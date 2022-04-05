@@ -55501,28 +55501,29 @@
     this.subcommands_t5tza2_k$([]);
   }
   ConvertSpriteCLI.prototype.execute_sv8swh_k$ = function () {
-    var currentWorkingDirectory = getCurrentWorkingDirectory();
-    var tmp = _get_files__1(this);
-    var spriteFiles = unpackPaths$default(tmp, BASE_SPRITE_FILE_EXTENSIONS, null, null, 6, null);
-    if (spriteFiles.isEmpty_0_k$()) {
-      if (!_get_ignoreErrors__0(this)) {
+    var tmp;
+    try {
+      tmp = _get_outputType_(this);
+    } catch ($p) {
+      var tmp_0;
+      if ($p instanceof Exception) {
         {
           var tmp0_e_0 = Log_getInstance();
           if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-            var tmp_0 = tmp0_e_0._loggerObject;
+            var tmp_1 = tmp0_e_0._loggerObject;
             var tmp$ret$2;
             $l$block_1: {
-              var tmp_1;
+              var tmp_2;
               var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
               if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
-                tmp_1 = '**ERROR** ';
+                tmp_2 = '**ERROR** ';
               } else {
                 {
-                  tmp_1 = '';
+                  tmp_2 = '';
                 }
               }
-              var tmp_2 = tmp_1;
-              var tmp_3;
+              var tmp_3 = tmp_2;
+              var tmp_4;
               var tmp$ret$0;
               $l$block: {
                 {
@@ -55531,96 +55532,107 @@
                 break $l$block;
               }
               if (!tmp$ret$0) {
-                tmp_3 = 'null::';
+                tmp_4 = 'null::';
               } else {
                 {
-                  tmp_3 = '';
+                  tmp_4 = '';
                 }
               }
-              var tmp_4 = tmp_3;
+              var tmp_5 = tmp_4;
               var tmp$ret$1;
               $l$block_0: {
-                tmp$ret$1 = 'Error 1002: No valid sprites found';
+                var tmp0_elvis_lhs_3 = $p.message;
+                tmp$ret$1 = tmp0_elvis_lhs_3 == null ? 'Invalid or empty sprite output type' : tmp0_elvis_lhs_3;
                 break $l$block_0;
               }
-              tmp$ret$2 = '' + tmp_2 + tmp_4 + tmp$ret$1;
+              tmp$ret$2 = '' + tmp_3 + tmp_5 + tmp$ret$1;
               break $l$block_1;
             }
-            tmp_0.error(tmp$ret$2);
+            tmp_1.error(tmp$ret$2);
+          }}
+        printStackTrace($p);
+        return exitNative(1008);
+      } else {
+        {
+          throw $p;
+        }
+      }
+      tmp = tmp_0;
+    }
+    var outputType = tmp;
+    var currentWorkingDirectory = getCurrentWorkingDirectory();
+    var tmp_6 = _get_files__1(this);
+    var spriteFiles = unpackPaths$default(tmp_6, BASE_SPRITE_FILE_EXTENSIONS, null, null, 6, null);
+    if (spriteFiles.isEmpty_0_k$()) {
+      if (!_get_ignoreErrors__0(this)) {
+        {
+          var tmp1_e_0 = Log_getInstance();
+          if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+            var tmp_7 = tmp1_e_0._loggerObject;
+            var tmp$ret$5;
+            $l$block_4: {
+              var tmp_8;
+              var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
+              if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
+                tmp_8 = '**ERROR** ';
+              } else {
+                {
+                  tmp_8 = '';
+                }
+              }
+              var tmp_9 = tmp_8;
+              var tmp_10;
+              var tmp$ret$3;
+              $l$block_2: {
+                {
+                }
+                tmp$ret$3 = null == null ? true : isBlank(null);
+                break $l$block_2;
+              }
+              if (!tmp$ret$3) {
+                tmp_10 = 'null::';
+              } else {
+                {
+                  tmp_10 = '';
+                }
+              }
+              var tmp_11 = tmp_10;
+              var tmp$ret$4;
+              $l$block_3: {
+                tmp$ret$4 = 'Error 1002: No valid sprites found';
+                break $l$block_3;
+              }
+              tmp$ret$5 = '' + tmp_9 + tmp_11 + tmp$ret$4;
+              break $l$block_4;
+            }
+            tmp_7.error(tmp$ret$5);
           }}
         return exitNative(1002);
       }return exitNative(0);
     }var duplicates = logDuplicatesAndGetHasDuplicates_0(spriteFiles, currentWorkingDirectory);
     if (duplicates) {
       return exitNative(1011);
-    }var tmp_5 = _get_outputDirectory__0(this);
-    var outputDirectory = ensureAndGetOutputDirectory$default(tmp_5, currentWorkingDirectory, false, 4, null);
+    }var tmp_12 = _get_outputDirectory__0(this);
+    var outputDirectory = ensureAndGetOutputDirectory$default(tmp_12, currentWorkingDirectory, false, 4, null);
     var ignoreErrors = _get_ignoreErrors__0(this);
     if (_get_overwriteExisting__1(this) ? _get_overwriteNone__1(this) : false) {
       {
-        var tmp1_e_0 = Log_getInstance();
-        if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-          var tmp_6 = tmp1_e_0._loggerObject;
-          var tmp$ret$5;
-          $l$block_4: {
-            var tmp_7;
-            var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
-              tmp_7 = '**ERROR** ';
-            } else {
-              {
-                tmp_7 = '';
-              }
-            }
-            var tmp_8 = tmp_7;
-            var tmp_9;
-            var tmp$ret$3;
-            $l$block_2: {
-              {
-              }
-              tmp$ret$3 = null == null ? true : isBlank(null);
-              break $l$block_2;
-            }
-            if (!tmp$ret$3) {
-              tmp_9 = 'null::';
-            } else {
-              {
-                tmp_9 = '';
-              }
-            }
-            var tmp_10 = tmp_9;
-            var tmp$ret$4;
-            $l$block_3: {
-              tmp$ret$4 = 'Error 1003: Cannot use overwrite existing and overwrite none.';
-              break $l$block_3;
-            }
-            tmp$ret$5 = '' + tmp_8 + tmp_10 + tmp$ret$4;
-            break $l$block_4;
-          }
-          tmp_6.error(tmp$ret$5);
-        }}
-      return exitNative(1003);
-    }var overwriteAll = new Pointer(_get_overwriteExisting__1(this) ? !_get_overwriteNone__1(this) : false);
-    var overwriteNone = new Pointer(!_get_overwriteExisting__1(this) ? _get_overwriteNone__1(this) : false);
-    var shouldWrite_1 = createDefaultShouldOverwriteCallback(overwriteAll, overwriteNone);
-    if (!_get_quiet__0(this)) {
-      {
-        var tmp2_i_0 = Log_getInstance();
-        if (tmp2_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
-          var tmp_11 = tmp2_i_0._loggerObject;
+        var tmp2_e_0 = Log_getInstance();
+        if (tmp2_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+          var tmp_13 = tmp2_e_0._loggerObject;
           var tmp$ret$8;
           $l$block_7: {
-            var tmp_12;
-            var tmp0_elvis_lhs_1_1_1 = tmp2_i_0._loggerObject.prependLogType;
+            var tmp_14;
+            var tmp0_elvis_lhs_1_1_1 = tmp2_e_0._loggerObject.prependLogType;
             if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
-              tmp_12 = '**LOG1** ';
+              tmp_14 = '**ERROR** ';
             } else {
               {
-                tmp_12 = '';
+                tmp_14 = '';
               }
             }
-            var tmp_13 = tmp_12;
-            var tmp_14;
+            var tmp_15 = tmp_14;
+            var tmp_16;
             var tmp$ret$6;
             $l$block_5: {
               {
@@ -55629,29 +55641,75 @@
               break $l$block_5;
             }
             if (!tmp$ret$6) {
-              tmp_14 = 'null::';
+              tmp_16 = 'null::';
             } else {
               {
-                tmp_14 = '';
+                tmp_16 = '';
               }
             }
-            var tmp_15 = tmp_14;
+            var tmp_17 = tmp_16;
             var tmp$ret$7;
             $l$block_6: {
-              tmp$ret$7 = '' + 'Converting ' + spriteFiles._get_size__0_k$() + ' sprites to ' + _get_outputType_(this)._get_name__0_k$() + ' format';
+              tmp$ret$7 = 'Error 1003: Cannot use overwrite existing and overwrite none.';
               break $l$block_6;
             }
-            tmp$ret$8 = '' + tmp_13 + tmp_15 + tmp$ret$7;
+            tmp$ret$8 = '' + tmp_15 + tmp_17 + tmp$ret$7;
             break $l$block_7;
           }
-          tmp_11.info(false, tmp$ret$8);
+          tmp_13.error(tmp$ret$8);
         }}
-    }var tmp_16 = _get_outputType_(this);
-    var tmp_17 = _get_encoding__1(this);
-    var tmp_18 = _get_keepBlack_(this);
-    var opts = ConvertSpriteOptions_init_$Create$(tmp_16, spriteFiles, shouldWrite_1, currentWorkingDirectory, outputDirectory, tmp_17, ignoreErrors, tmp_18, null, _get_quiet__0(this), _get_progress__0(this), 256, null);
-    var tmp_19 = GlobalScope_getInstance();
-    launch$default(tmp_19, null, null, _no_name_provided_$factory_226(opts, this, null), 3, null);
+      return exitNative(1003);
+    }var overwriteAll = new Pointer(_get_overwriteExisting__1(this) ? !_get_overwriteNone__1(this) : false);
+    var overwriteNone = new Pointer(!_get_overwriteExisting__1(this) ? _get_overwriteNone__1(this) : false);
+    var shouldWrite_1 = createDefaultShouldOverwriteCallback(overwriteAll, overwriteNone);
+    if (!_get_quiet__0(this)) {
+      {
+        var tmp3_i_0 = Log_getInstance();
+        if (tmp3_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
+          var tmp_18 = tmp3_i_0._loggerObject;
+          var tmp$ret$11;
+          $l$block_10: {
+            var tmp_19;
+            var tmp0_elvis_lhs_1_1_2 = tmp3_i_0._loggerObject.prependLogType;
+            if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_2) {
+              tmp_19 = '**LOG1** ';
+            } else {
+              {
+                tmp_19 = '';
+              }
+            }
+            var tmp_20 = tmp_19;
+            var tmp_21;
+            var tmp$ret$9;
+            $l$block_8: {
+              {
+              }
+              tmp$ret$9 = null == null ? true : isBlank(null);
+              break $l$block_8;
+            }
+            if (!tmp$ret$9) {
+              tmp_21 = 'null::';
+            } else {
+              {
+                tmp_21 = '';
+              }
+            }
+            var tmp_22 = tmp_21;
+            var tmp$ret$10;
+            $l$block_9: {
+              tmp$ret$10 = '' + 'Converting ' + spriteFiles._get_size__0_k$() + ' sprites to ' + outputType._get_name__0_k$() + ' format';
+              break $l$block_9;
+            }
+            tmp$ret$11 = '' + tmp_20 + tmp_22 + tmp$ret$10;
+            break $l$block_10;
+          }
+          tmp_18.info(false, tmp$ret$11);
+        }}
+    }var tmp_23 = _get_encoding__1(this);
+    var tmp_24 = _get_keepBlack_(this);
+    var opts = ConvertSpriteOptions_init_$Create$(outputType, spriteFiles, shouldWrite_1, currentWorkingDirectory, outputDirectory, tmp_23, ignoreErrors, tmp_24, null, _get_quiet__0(this), _get_progress__0(this), 256, null);
+    var tmp_25 = GlobalScope_getInstance();
+    launch$default(tmp_25, null, null, _no_name_provided_$factory_226(opts, this, null), 3, null);
     Unit_getInstance();
   };
   ConvertSpriteCLI.$metadata$ = {
@@ -55802,13 +55860,71 @@
     return tmp.doResume_0_k$();
   }
   function convert_0(opts, i, originalFileName, bytes) {
-    var tmp = Companion_getInstance_71();
-    var tmp0_elvis_lhs = FileNameUtil_getInstance().getExtension_6wfw3l_k$(originalFileName);
-    var fromSprite = tmp.fromString_6wfw3l_k$(tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs);
+    var tmp;
+    try {
+      var tmp_0 = Companion_getInstance_71();
+      var tmp0_elvis_lhs = FileNameUtil_getInstance().getExtension_6wfw3l_k$(originalFileName);
+      tmp = tmp_0.fromString_6wfw3l_k$(tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs);
+    } catch ($p) {
+      var tmp_1;
+      if ($p instanceof Exception) {
+        {
+          var tmp0_e_0 = Log_getInstance();
+          if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+            var tmp_2 = tmp0_e_0._loggerObject;
+            var tmp$ret$2;
+            $l$block_1: {
+              var tmp_3;
+              var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
+              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                tmp_3 = '**ERROR** ';
+              } else {
+                {
+                  tmp_3 = '';
+                }
+              }
+              var tmp_4 = tmp_3;
+              var tmp_5;
+              var tmp$ret$0;
+              $l$block: {
+                {
+                }
+                tmp$ret$0 = null == null ? true : isBlank(null);
+                break $l$block;
+              }
+              if (!tmp$ret$0) {
+                tmp_5 = 'null::';
+              } else {
+                {
+                  tmp_5 = '';
+                }
+              }
+              var tmp_6 = tmp_5;
+              var tmp$ret$1;
+              $l$block_0: {
+                var tmp_7 = FileNameUtil_getInstance();
+                var tmp0_elvis_lhs_3 = nullIfEmpty(tmp_7.getLastPathComponent$default_zmr95_k$(originalFileName, false, 2, null));
+                tmp$ret$1 = '' + 'Failed to obtain input sprite format with name: ' + (tmp0_elvis_lhs_3 == null ? originalFileName : tmp0_elvis_lhs_3) + " and extension '" + FileNameUtil_getInstance().getExtension_6wfw3l_k$(originalFileName) + "'";
+                break $l$block_0;
+              }
+              tmp$ret$2 = '' + tmp_4 + tmp_6 + tmp$ret$1;
+              break $l$block_1;
+            }
+            tmp_2.error(tmp$ret$2);
+          }}
+        tmp_1 = exitNative(1017);
+      } else {
+        {
+          throw $p;
+        }
+      }
+      tmp = tmp_1;
+    }
+    var fromSprite = tmp;
     var bytesBuffer = new MemoryByteStreamReader(bytes);
-    var tmp$ret$3;
-    $l$block_2: {
-      var tmp0_apply_0 = convertSprite(bytesBuffer, fromSprite, opts._toType, opts._keepBlack, opts._encoding_5, null);
+    var tmp$ret$6;
+    $l$block_5: {
+      var tmp1_apply_0 = convertSprite(bytesBuffer, fromSprite, opts._toType, opts._keepBlack, opts._encoding_5, null);
       {
       }
       {
@@ -55816,50 +55932,50 @@
           {
             var tmp0_i_0_2 = Log_getInstance();
             if (tmp0_i_0_2._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
-              var tmp_0 = tmp0_i_0_2._loggerObject;
-              var tmp$ret$2;
-              $l$block_1: {
-                var tmp_1;
+              var tmp_8 = tmp0_i_0_2._loggerObject;
+              var tmp$ret$5;
+              $l$block_4: {
+                var tmp_9;
                 var tmp0_elvis_lhs_1_1_3 = tmp0_i_0_2._loggerObject.prependLogType;
                 if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3) {
-                  tmp_1 = '**LOG1** ';
+                  tmp_9 = '**LOG1** ';
                 } else {
                   {
-                    tmp_1 = '';
+                    tmp_9 = '';
                   }
                 }
-                var tmp_2 = tmp_1;
-                var tmp_3;
-                var tmp$ret$0;
-                $l$block: {
+                var tmp_10 = tmp_9;
+                var tmp_11;
+                var tmp$ret$3;
+                $l$block_2: {
                   {
                   }
-                  tmp$ret$0 = null == null ? true : isBlank(null);
-                  break $l$block;
+                  tmp$ret$3 = null == null ? true : isBlank(null);
+                  break $l$block_2;
                 }
-                if (!tmp$ret$0) {
-                  tmp_3 = 'null::';
+                if (!tmp$ret$3) {
+                  tmp_11 = 'null::';
                 } else {
                   {
-                    tmp_3 = '';
+                    tmp_11 = '';
                   }
                 }
-                var tmp_4 = tmp_3;
-                var tmp$ret$1;
-                $l$block_0: {
-                  tmp$ret$1 = '' + 'Converting Sprite ' + (i + 1 | 0) + '/' + opts._get_filesCount__0_k$() + ': ' + originalFileName;
-                  break $l$block_0;
+                var tmp_12 = tmp_11;
+                var tmp$ret$4;
+                $l$block_3: {
+                  tmp$ret$4 = '' + 'Converting Sprite ' + (i + 1 | 0) + '/' + opts._get_filesCount__0_k$() + ': ' + originalFileName;
+                  break $l$block_3;
                 }
-                tmp$ret$2 = '' + tmp_2 + tmp_4 + tmp$ret$1;
-                break $l$block_1;
+                tmp$ret$5 = '' + tmp_10 + tmp_12 + tmp$ret$4;
+                break $l$block_4;
               }
-              tmp_0.info(false, tmp$ret$2);
+              tmp_8.info(false, tmp$ret$5);
             }}
         }}
-      tmp$ret$3 = tmp0_apply_0;
-      break $l$block_2;
+      tmp$ret$6 = tmp1_apply_0;
+      break $l$block_5;
     }
-    return tmp$ret$3;
+    return tmp$ret$6;
   }
   function _no_name_provided__260($i, $opts, resultContinuation) {
     this._$i_4 = $i;
@@ -55961,80 +56077,21 @@
             }
 
             tmp_0._path1_0 = tmp_1;
-            this._originalFileName2_0 = ensureNotNull(FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(this._path1_0));
-            this._extension3 = this._opts_3._get_toExtension__0_k$();
-            this._outputFileName4 = '' + this._originalFileName2_0 + '.' + this._extension3;
-            this._outputFilePath5 = PathUtil_getInstance().combine_yn9lj1_k$([this._opts_3._outputDirectory_4, this._outputFileName4]);
-            if (this._i_2 >= this._opts_3._get_filesCount__0_k$()) {
-              return true;
-            }
             var tmp_2 = this;
-            var tmp_3 = this;
-            tmp_3._tmp0_suspend_06 = _no_name_provided_$factory_229(this._i_2, this._opts_3, null);
-            tmp_2._next7 = this._tmp0_suspend_06;
-            this._state_0 = 1;
-            suspendResult = this._opts_3._shouldWrite_6(this._outputFilePath5, this);
-            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
-              return suspendResult;
-            }
-            continue $sm;
-          case 1:
-            this._ARGUMENT8 = suspendResult;
-            if (!this._ARGUMENT8) {
-              this._state_0 = 2;
-              suspendResult = this._next7(this);
-              if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
-                return suspendResult;
-              }continue $sm;
-            } else {
-              this._state_0 = 3;
-              continue $sm;
-            }
-
-            break;
-          case 2:
-            Unit_getInstance();
-            this._state_0 = 3;
-            continue $sm;
-          case 3:
-            var tmp0_safe_receiver = FileNameUtil_getInstance().getExtension_6wfw3l_k$(this._originalFileName2_0);
-            var tmp_4;
-            if (tmp0_safe_receiver == null) {
-              tmp_4 = null;
-            } else {
-              tmp_4 = tmp0_safe_receiver.toLowerCase();
-            }
-
-            if (tmp_4 === this._opts_3._get_toExtension__0_k$()) {
-              this._exceptionState = 5;
-              this._bytes9 = loadBytes(this._path1_0);
-              writeBytes_1(this._outputFilePath5, this._bytes9);
-              this._state_0 = 4;
-              suspendResult = this._next7(this);
-              if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
-                return suspendResult;
-              }continue $sm;
-            } else {
-              {
-                this._state_0 = 7;
-                continue $sm;
-              }
-            }
-
-            break;
-          case 4:
-            return suspendResult;
-          case 5:
-            this._exceptionState = 20;
-            var tmp_5 = this._exception_0;
-            if (tmp_5 instanceof Exception) {
-              this._e10 = this._exception_0;
-              var tmp1_e_0 = Log_getInstance();
-              if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                var tmp_6 = tmp1_e_0._loggerObject;
+            var tmp_3 = FileNameUtil_getInstance();
+            var tmp0_elvis_lhs = tmp_3.getLastPathComponent$default_zmr95_k$(this._path1_0, false, 2, null);
+            tmp_2._originalFileName2_0 = tmp0_elvis_lhs == null ? this._path1_0 : tmp0_elvis_lhs;
+            this._extension3 = this._opts_3._get_toExtension__0_k$();
+            var tmp_4 = this;
+            var tmp_5 = this;
+            tmp_5._tmp0_apply_04 = FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(this._originalFileName2_0);
+            if (this._tmp0_apply_04 == null) {
+              var tmp0_e_0_2 = Log_getInstance();
+              if (tmp0_e_0_2._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_6 = tmp0_e_0_2._loggerObject;
                 var tmp_7;
-                var tmp0_elvis_lhs_1_1 = tmp1_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                var tmp0_elvis_lhs_1_1_3 = tmp0_e_0_2._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3) {
                   tmp_7 = '**ERROR** ';
                 } else {
                   {
@@ -56051,7 +56108,99 @@
                   }
                 }
                 var tmp_10 = tmp_9;
-                tmp_6.error('' + tmp_8 + tmp_10 + ('' + 'Failed to write bytes: ' + getKClassFromExpression_0(this._e10)._get_simpleName__0_k$() + ': ' + this._e10.message));
+                tmp_6.error('' + tmp_8 + tmp_10 + ('' + 'Failed to ascertain output file name pattern for file ' + this._path1_0));
+              }return exitNative(1004);
+            }
+            tmp_4._outputFileName5 = ensureNotNull(this._tmp0_apply_04);
+            this._outputFileName5 = this._outputFileName5 + ('' + '.' + this._extension3);
+            this._outputFilePath6 = PathUtil_getInstance().combine_yn9lj1_k$([this._opts_3._outputDirectory_4, this._outputFileName5]);
+            if (this._i_2 >= this._opts_3._get_filesCount__0_k$()) {
+              return true;
+            }
+            var tmp_11 = this;
+            var tmp_12 = this;
+            tmp_12._tmp1_suspend_07 = _no_name_provided_$factory_229(this._i_2, this._opts_3, null);
+            tmp_11._next8 = this._tmp1_suspend_07;
+            this._state_0 = 1;
+            suspendResult = this._opts_3._shouldWrite_6(this._outputFilePath6, this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            this._ARGUMENT9 = suspendResult;
+            if (!this._ARGUMENT9) {
+              this._state_0 = 2;
+              suspendResult = this._next8(this);
+              if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+                return suspendResult;
+              }continue $sm;
+            } else {
+              this._state_0 = 3;
+              continue $sm;
+            }
+
+            break;
+          case 2:
+            Unit_getInstance();
+            this._state_0 = 3;
+            continue $sm;
+          case 3:
+            var tmp1_safe_receiver = FileNameUtil_getInstance().getExtension_6wfw3l_k$(this._originalFileName2_0);
+            var tmp_13;
+            if (tmp1_safe_receiver == null) {
+              tmp_13 = null;
+            } else {
+              tmp_13 = tmp1_safe_receiver.toLowerCase();
+            }
+
+            if (tmp_13 === this._opts_3._get_toExtension__0_k$()) {
+              this._exceptionState = 5;
+              this._bytes10 = loadBytes(this._path1_0);
+              writeBytes_1(this._outputFilePath6, this._bytes10);
+              this._state_0 = 4;
+              suspendResult = this._next8(this);
+              if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+                return suspendResult;
+              }continue $sm;
+            } else {
+              {
+                this._state_0 = 7;
+                continue $sm;
+              }
+            }
+
+            break;
+          case 4:
+            return suspendResult;
+          case 5:
+            this._exceptionState = 20;
+            var tmp_14 = this._exception_0;
+            if (tmp_14 instanceof Exception) {
+              this._e11 = this._exception_0;
+              var tmp2_e_0 = Log_getInstance();
+              if (tmp2_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_15 = tmp2_e_0._loggerObject;
+                var tmp_16;
+                var tmp0_elvis_lhs_1_1 = tmp2_e_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                  tmp_16 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_16 = '';
+                  }
+                }
+                var tmp_17 = tmp_16;
+                var tmp_18;
+                if (!(null == null ? true : isBlank(null))) {
+                  tmp_18 = 'null::';
+                } else {
+                  {
+                    tmp_18 = '';
+                  }
+                }
+                var tmp_19 = tmp_18;
+                tmp_15.error('' + tmp_17 + tmp_19 + ('' + 'Failed to write bytes: ' + getKClassFromExpression_0(this._e11)._get_simpleName__0_k$() + ': ' + this._e11.message));
               }this._state_0 = 6;
               continue $sm;
             } else {
@@ -56066,62 +56215,62 @@
             this._state_0 = 7;
             continue $sm;
           case 7:
-            this._originalBytes11 = loadBytes(this._path1_0);
+            this._originalBytes12 = loadBytes(this._path1_0);
             this._exceptionState = 8;
-            var tmp_11 = this;
-            tmp_11._TRY_RESULT12 = convert_0(this._opts_3, this._i_2, this._originalFileName2_0, this._originalBytes11);
+            var tmp_20 = this;
+            tmp_20._TRY_RESULT13 = convert_0(this._opts_3, this._i_2, this._originalFileName2_0, this._originalBytes12);
             this._exceptionState = 20;
             this._state_0 = 11;
             continue $sm;
           case 8:
             this._exceptionState = 20;
-            var tmp_12 = this._exception_0;
-            if (tmp_12 instanceof Exception) {
-              this._e13 = this._exception_0;
-              var tmp_13 = this;
-              tmp_13._tmp2_e_014 = Log_getInstance();
-              if (this._tmp2_e_014._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                var tmp_14 = this._tmp2_e_014._loggerObject;
-                var tmp_15;
-                var tmp0_elvis_lhs_1_1_0 = this._tmp2_e_014._loggerObject.prependLogType;
+            var tmp_21 = this._exception_0;
+            if (tmp_21 instanceof Exception) {
+              this._e14 = this._exception_0;
+              var tmp_22 = this;
+              tmp_22._tmp3_e_015 = Log_getInstance();
+              if (this._tmp3_e_015._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_23 = this._tmp3_e_015._loggerObject;
+                var tmp_24;
+                var tmp0_elvis_lhs_1_1_0 = this._tmp3_e_015._loggerObject.prependLogType;
                 if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
-                  tmp_15 = '**ERROR** ';
+                  tmp_24 = '**ERROR** ';
                 } else {
                   {
-                    tmp_15 = '';
+                    tmp_24 = '';
                   }
                 }
-                var tmp_16 = tmp_15;
-                var tmp_17;
+                var tmp_25 = tmp_24;
+                var tmp_26;
                 if (!(null == null ? true : isBlank(null))) {
-                  tmp_17 = 'null::';
+                  tmp_26 = 'null::';
                 } else {
                   {
-                    tmp_17 = '';
+                    tmp_26 = '';
                   }
                 }
-                var tmp_18 = tmp_17;
-                var tmp_19 = this._opts_3._toType._get_name__0_k$();
-                var tmp0_safe_receiver_4 = nullIfEmpty(this._e13.message);
-                var tmp_20;
+                var tmp_27 = tmp_26;
+                var tmp_28 = this._opts_3._toType._get_name__0_k$();
+                var tmp0_safe_receiver_4 = nullIfEmpty(this._e14.message);
+                var tmp_29;
                 if (tmp0_safe_receiver_4 == null) {
-                  tmp_20 = null;
+                  tmp_29 = null;
                 } else {
-                  tmp_20 = '' + ' with error: ' + tmp0_safe_receiver_4;
+                  tmp_29 = '' + ' with error: ' + tmp0_safe_receiver_4;
                 }
-                var tmp1_elvis_lhs_3 = tmp_20;
-                tmp_14.error('' + tmp_16 + tmp_18 + ('' + 'Error: 1004: Failed to convert ' + this._originalFileName2_0 + ' to ' + tmp_19 + ' sprite format' + (tmp1_elvis_lhs_3 == null ? '' : tmp1_elvis_lhs_3)));
+                var tmp1_elvis_lhs_3 = tmp_29;
+                tmp_23.error('' + tmp_25 + tmp_27 + ('' + 'Error: 1004: Failed to convert ' + this._originalFileName2_0 + ' to ' + tmp_28 + ' sprite format' + (tmp1_elvis_lhs_3 == null ? '' : tmp1_elvis_lhs_3)));
               }this._opts_3._failed_0.add_2bq_k$(this._filePath0_0);
               Unit_getInstance();
               if (this._opts_3._ignoreErrors_0) {
                 this._state_0 = 9;
-                suspendResult = this._next7(this);
+                suspendResult = this._next8(this);
                 if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
                   return suspendResult;
                 }continue $sm;
               } else {
-                var tmp_21 = this;
-                tmp_21._WHEN_RESULT15 = exitNative(1004);
+                var tmp_30 = this;
+                tmp_30._WHEN_RESULT16 = exitNative(1004);
                 this._state_0 = 10;
                 continue $sm;
               }
@@ -56133,18 +56282,18 @@
 
             break;
           case 9:
-            this._WHEN_RESULT15 = suspendResult;
+            this._WHEN_RESULT16 = suspendResult;
             this._state_0 = 10;
             continue $sm;
           case 10:
-            var tmp_22 = this;
-            return this._WHEN_RESULT15;
+            var tmp_31 = this;
+            return this._WHEN_RESULT16;
           case 11:
             this._exceptionState = 20;
-            this._compiledBytes16 = this._TRY_RESULT12;
+            this._compiledBytes17 = this._TRY_RESULT13;
             this._exceptionState = 16;
-            this._wrote18 = writeSprite(this._opts_3._outputDirectory_4, this._outputFileName4, this._originalFileName2_0, this._compiledBytes16, true, this._opts_3._ignoreErrors_0);
-            if (!this._wrote18) {
+            this._wrote19 = writeSprite(this._opts_3._outputDirectory_4, this._outputFileName5, this._originalFileName2_0, this._compiledBytes17, true, this._opts_3._ignoreErrors_0);
+            if (!this._wrote19) {
               this._opts_3._failed_0.add_2bq_k$(this._filePath0_0);
               Unit_getInstance();
               if (!this._opts_3._ignoreErrors_0) {
@@ -56152,35 +56301,35 @@
               }}
             this._exceptionState = 14;
             this._state_0 = 12;
-            suspendResult = this._next7(this);
+            suspendResult = this._next8(this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
             continue $sm;
           case 12:
             if (suspendResult) {
-              this._WHEN_RESULT20 = this._wrote18;
+              this._WHEN_RESULT21_0 = this._wrote19;
               this._state_0 = 13;
               continue $sm;
             } else {
-              this._WHEN_RESULT20 = false;
+              this._WHEN_RESULT21_0 = false;
               this._state_0 = 13;
               continue $sm;
             }
 
             break;
           case 13:
-            this._TRY_RESULT19 = this._WHEN_RESULT20;
+            this._TRY_RESULT20 = this._WHEN_RESULT21_0;
             this._exceptionState = 16;
             this._state_0 = 15;
             continue $sm;
           case 14:
             this._exceptionState = 16;
-            var tmp_23 = this._exception_0;
-            if (tmp_23 instanceof Exception) {
-              this._e21 = this._exception_0;
-              var tmp_24 = this;
-              tmp_24._TRY_RESULT19 = false;
+            var tmp_32 = this._exception_0;
+            if (tmp_32 instanceof Exception) {
+              this._e22 = this._exception_0;
+              var tmp_33 = this;
+              tmp_33._TRY_RESULT20 = false;
               this._state_0 = 15;
               continue $sm;
             } else {
@@ -56192,82 +56341,82 @@
             break;
           case 15:
             this._exceptionState = 16;
-            this._TRY_RESULT17 = this._TRY_RESULT19;
+            this._TRY_RESULT18 = this._TRY_RESULT20;
             this._exceptionState = 20;
             this._state_0 = 19;
             continue $sm;
           case 16:
             this._exceptionState = 20;
-            var tmp_25 = this._exception_0;
-            if (tmp_25 instanceof Exception) {
-              this._e22 = this._exception_0;
-              var tmp_26 = this;
-              var tmp1_safe_receiver = nullIfEmpty(this._e22.message);
-              var tmp_27;
-              if (tmp1_safe_receiver == null) {
-                tmp_27 = null;
+            var tmp_34 = this._exception_0;
+            if (tmp_34 instanceof Exception) {
+              this._e23 = this._exception_0;
+              var tmp_35 = this;
+              var tmp2_safe_receiver = nullIfEmpty(this._e23.message);
+              var tmp_36;
+              if (tmp2_safe_receiver == null) {
+                tmp_36 = null;
               } else {
-                tmp_27 = '' + ' with error: ' + tmp1_safe_receiver;
+                tmp_36 = '' + ' with error: ' + tmp2_safe_receiver;
               }
-              var tmp2_elvis_lhs = tmp_27;
-              tmp_26._error23 = '' + 'Failed to write sprite ' + this._originalFileName2_0 + " to '" + this._outputFilePath5 + "' " + (tmp2_elvis_lhs == null ? '' : tmp2_elvis_lhs);
+              var tmp3_elvis_lhs = tmp_36;
+              tmp_35._error24 = '' + 'Failed to write sprite ' + this._originalFileName2_0 + " to '" + this._outputFilePath6 + "' " + (tmp3_elvis_lhs == null ? '' : tmp3_elvis_lhs);
               if (this._opts_3._ignoreErrors_0) {
                 this._opts_3._failed_0.add_2bq_k$(this._filePath0_0);
                 Unit_getInstance();
-                var tmp_28 = this;
-                tmp_28._tmp3_e_025 = Log_getInstance();
-                if (this._tmp3_e_025._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                  var tmp_29 = this._tmp3_e_025._loggerObject;
-                  var tmp_30;
-                  var tmp0_elvis_lhs_1_1_1 = this._tmp3_e_025._loggerObject.prependLogType;
+                var tmp_37 = this;
+                tmp_37._tmp4_e_026 = Log_getInstance();
+                if (this._tmp4_e_026._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                  var tmp_38 = this._tmp4_e_026._loggerObject;
+                  var tmp_39;
+                  var tmp0_elvis_lhs_1_1_1 = this._tmp4_e_026._loggerObject.prependLogType;
                   if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
-                    tmp_30 = '**ERROR** ';
+                    tmp_39 = '**ERROR** ';
                   } else {
                     {
-                      tmp_30 = '';
+                      tmp_39 = '';
                     }
                   }
-                  var tmp_31 = tmp_30;
-                  var tmp_32;
+                  var tmp_40 = tmp_39;
+                  var tmp_41;
                   if (!(null == null ? true : isBlank(null))) {
-                    tmp_32 = 'null::';
+                    tmp_41 = 'null::';
                   } else {
                     {
-                      tmp_32 = '';
+                      tmp_41 = '';
                     }
                   }
-                  var tmp_33 = tmp_32;
-                  tmp_29.error('' + tmp_31 + tmp_33 + this._error23);
+                  var tmp_42 = tmp_41;
+                  tmp_38.error('' + tmp_40 + tmp_42 + this._error24);
                 }this._state_0 = 17;
-                suspendResult = this._next7(this);
+                suspendResult = this._next8(this);
                 if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
                   return suspendResult;
                 }continue $sm;
               } else {
-                var tmp_34 = this;
-                var tmp4_e_0 = Log_getInstance();
-                if (tmp4_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                  var tmp_35 = tmp4_e_0._loggerObject;
-                  var tmp_36;
-                  var tmp0_elvis_lhs_1_1_2 = tmp4_e_0._loggerObject.prependLogType;
+                var tmp_43 = this;
+                var tmp5_e_0 = Log_getInstance();
+                if (tmp5_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                  var tmp_44 = tmp5_e_0._loggerObject;
+                  var tmp_45;
+                  var tmp0_elvis_lhs_1_1_2 = tmp5_e_0._loggerObject.prependLogType;
                   if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_2) {
-                    tmp_36 = '**ERROR** ';
+                    tmp_45 = '**ERROR** ';
                   } else {
                     {
-                      tmp_36 = '';
+                      tmp_45 = '';
                     }
                   }
-                  var tmp_37 = tmp_36;
-                  var tmp_38;
+                  var tmp_46 = tmp_45;
+                  var tmp_47;
                   if (!(null == null ? true : isBlank(null))) {
-                    tmp_38 = 'null::';
+                    tmp_47 = 'null::';
                   } else {
                     {
-                      tmp_38 = '';
+                      tmp_47 = '';
                     }
                   }
-                  var tmp_39 = tmp_38;
-                  tmp_35.error('' + tmp_37 + tmp_39 + ('' + 'Error: 1005: ' + this._error23));
+                  var tmp_48 = tmp_47;
+                  tmp_44.error('' + tmp_46 + tmp_48 + ('' + 'Error: 1005: ' + this._error24));
                 }return exitNative(1005);
               }
             } else {
@@ -56279,16 +56428,16 @@
             break;
           case 17:
             Unit_getInstance();
-            this._WHEN_RESULT24 = false;
+            this._WHEN_RESULT25 = false;
             this._state_0 = 18;
             continue $sm;
           case 18:
-            this._TRY_RESULT17 = this._WHEN_RESULT24;
+            this._TRY_RESULT18 = this._WHEN_RESULT25;
             this._state_0 = 19;
             continue $sm;
           case 19:
             this._exceptionState = 20;
-            return this._TRY_RESULT17;
+            return this._TRY_RESULT18;
           case 20:
             throw this._exception_0;
         }
