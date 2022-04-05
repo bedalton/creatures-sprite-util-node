@@ -3,16 +3,29 @@
 Command line tools for parsing, compiling or converting Creatures sprite files
 
 ## Basic Information
-This utility requires node to run.
+This is a command line program, and must be run from the CMD program. Be aware of your current working directory,
+as all non-absolute paths will be relative to it.
 
-To download node, visit [node's downloads page](https://nodejs.org/en/download/)
+To use this utility, copy `sprite-util.exe` to the folder of your choosing and  
+optionally add this directory to your PATH variable.
 
-To use this utility, install it with node's npm.
+Executable can be referenced by absolute path or relative path if not added to the system PATH variable.
+
+**Example**<br/>
+Say I copied my `sprite-util.exe` file to `C:\Users\Gandalf\Documents\Creatures\Utils`.   
+When I want to compile a sprite, I could reference that executable by relative or absolute path.  
+Now to compile a C16 with all of my sprites in my `C:\Users\Gandalf\Documents\Creatures\Projects\SuperVendor\images` folder into the parent `SuperVendor` folder
+I could:
 ```console
-npm install -g @bedalton/sprite-util
-```  
+> cd C:\Users\Gandalf\Documents\Creatures\Projects\SuperVendor
+> ..\..\Utils\sprite-util compile C16 super-vendor.c16 images\*.png
+```
+
 The `sprite-util` utility allows for the following sub-commands:
 
+---
+
+### Base Commands
 **[compile](#compile)**  
 Compile raw PNG and BMP images into a Creatures' sprite file. Supports SPR, S16, C16 and BLK
 
@@ -25,9 +38,6 @@ Convert sprites between the main formats: SPR, S16, and C16
 **[convert-breed](#convert-breed)**  
 Convert a breed's images (and optionally its ATTs) from one game to another
 
----
-
-### Base Command
 
 ```
 Usage: 
@@ -52,7 +62,7 @@ Options:
 The **inputFiles** argument contains one or any mix of the following:
 - Individual file names
 - Directories
-- Glob patterns. i.e. `./Frost-Grendel/*.spr`
+- Glob patterns. i.e. `Frost-Grendel\*.spr`
 
 **Files are:**
 - used in the order they are defined
@@ -124,14 +134,14 @@ Help:
 The following produces a C16 called butterfly in the current working
 directory, using all image BMP and PNG files in the butterfly subdirectory
 ```console
-sprite-util compile C16 butterfly.c16 ./bufferfly/*
+sprite-util compile C16 butterfly.c16 bufferfly\*
 ``` 
 
 
 **&num; Example 3: Keep Black**  
 Create a sprite using PNG files where black is meant to be visible:
 ```console
-sprite-util compile S16 theDarkness.s16 --keep-black ./darkness/*.png
+sprite-util compile S16 theDarkness.s16 --keep-black darkness\*.png
 ```
 
 The flag `--keep-black` it will keep all solid black pixels from becoming transparent  
@@ -142,7 +152,7 @@ where blacks are not expected to be transparent
 
 ```console
 # To create a sprite using three explicitly defined sprites.<br/>
-sprite-util compile SPR lemon.spr ./lemon000.png ./lemon001.png ./trellis.png
+sprite-util compile SPR lemon.spr lemon000.png lemon001.png trellis.png
 ```
 
 
@@ -150,7 +160,7 @@ sprite-util compile SPR lemon.spr ./lemon000.png ./lemon001.png ./trellis.png
 This will produce a BLK with the given PNG.  *Note: Only one image can be converted at a time*
 
 ```console
-sprite-util compile BLK fantasia.blk ./fantasia_metaroom.png
+sprite-util compile BLK fantasia.blk fantasia_metaroom.png
 ```
 
 
@@ -198,40 +208,40 @@ use the `--prefix,-p` flag followed by the text you want to use.
 To produce images from `a408.spr` as `f-norn_000, f-norn_001...`
 instead of the default `a408-00, a408-01` you would use the following:
 ```console
-sprite-util parse -o ./a408 -n 3 -p "f-norn_" ./a408.spr
+sprite-util parse -o a408 -n 3 -p "f-norn_" a408.spr
 ```
 
-- `a408/f-norn_000.png`
-- `a408/f-norn_001.png`
-- `a408/f-norn_002.png`
-- `a408/f-norn_00{n}.png`...
+- `a408\f-norn_000.png`
+- `a408\f-norn_001.png`
+- `a408\f-norn_002.png`
+- `a408\f-norn_00{n}.png`...
 
 
 **&num; Example 3: Multiple files parse with glob**  
 The following produces a PNG for each frame in each file matching the glob pattern
 ```console
-sprite-util parse -n 3 -p "f-norn_" ./a4*.spr
+sprite-util parse -n 3 -p "f-norn_" a4*.spr
 ```
 
 For sprite a408.spr
 
-- `a408/f-norn_a408-000.png`
-- `a408/f-norn_a408-001.png`
-- `a408/f-norn_a408-002.png`
-- `a408/f-norn_a408-00{n}.png`...
+- `a408\f-norn_a408-000.png`
+- `a408\f-norn_a408-001.png`
+- `a408\f-norn_a408-002.png`
+- `a408\f-norn_a408-00{n}.png`...
 
 For sprite a428.spr
 
-- `a428/f-norn_a428-000.png`
-- `a428/f-norn_a428-001.png`
-- `a428/f-norn_a428-002.png`
-- `a428/f-norn_a428-00{n}.png`...
+- `a428\f-norn_a428-000.png`
+- `a428\f-norn_a428-001.png`
+- `a428\f-norn_a428-002.png`
+- `a428\f-norn_a428-00{n}.png`...
 
 
 **&num; Example 4: Keep Black**  
 By default black becomes transparent in the output file. To prevent this, use the `--keep-black, -b` flag
 ```console
-sprite-util --keep-black ./darkness.spr
+sprite-util --keep-black darkness.spr
 ```
 This will output the PNG without transparency using black instead like the original source file
 
@@ -297,24 +307,24 @@ sprite-util C16 zand.s16
 You can convert multiple images by listing files, folders or globs.  
 The following converts 1 S16 files named `zand.s16` along with every S16 sprites in the `images` folder to C16
 ```console
-sprite-util convert-sprite C16 -o ./conversions ./zand.s16 ./images/*.s16
+sprite-util convert-sprite C16 -o conversions zand.s16 images\*.s16
 ```
 Depending on the files in the `images` folder, output would be something like
-- `conversions/zand.c16`
-- `conversions/acrn.c16`
-- `conversions/ball.c16`
-- `conversions/cact.c16`
+- `conversions\zand.c16`
+- `conversions\acrn.c16`
+- `conversions\ball.c16`
+- `conversions\cact.c16`
 
 **&num; Example 3: Overwrite without prompt**  
 The code below would overwrite `zand.c16` if it existed without asking first
 ```console
-sprite-util convert-sprite C16 --force ./C2/images/zand.s16
+sprite-util convert-sprite C16 --force C2\images\zand.s16
 ```
 
 **&num; Example 3: Skip files without prompt**  
 The following would skip converting and writing `zand.c16` if the file already exists
 ```console
-sprite-util convert-sprite C16 --skip-existing ./C2/images/zand.s16
+sprite-util convert-sprite C16 --skip-existing C2\images\zand.s16
 ```
 
 ---
@@ -360,20 +370,20 @@ Help:
 **# Example 1: Convert a breed "simple"**
 The following would convert a breed's sprites to C3, keeping the genus, age and breed slot the same
 ```console
-sprite-util convert-breed C3 ./Images/*0*8.spr ./Images/*4*8.spr
+sprite-util convert-breed C3 Images\*0*8.spr Images\*4*8.spr
 ```
 
 **# Example 1: Change slot**
 The following code would produce a C3 compatible breed sprites in `ettin slot z` from a `norn slot 8`
 ```console
-sprite-util convert-breed C3 --genus ettin --breed z ./Images/*0*8.spr ./Images/*4*8.spr
+sprite-util convert-breed C3 --genus ettin --breed z Images\*0*8.spr Images\*4*8.spr
 ```
 
 **# Example 3: Convert ATTs**
 To convert ATTs in addition to sprites, use the `--att-dir, -a` option followed by the ATT directory
 So to convert a norn slot 8 breed from C1 to C3 ettin z you would use:
 ```console
-sprite-util convert-breed C3 --genus ettin --breed z --att-dir "./Body Data" ./Images/*0*8.spr ./Images/*4*8.spr
+sprite-util convert-breed C3 --genus ettin --breed z --att-dir "Body Data" Images\*0*8.spr Images\*4*8.spr
 ```
 
 **NOTE** Despite the ATTs being converted automatically.
@@ -386,7 +396,7 @@ by default if one does not exist for the breed.
 To prevent this, use the `--no-tail` flag.  
 The following would produce norn sprites and ATTs for parts `a` to `l`, but not `m` or `n`.
 ```console
-sprite-util convert-breed C3 --genus ettin --breed z --no-tail --att-dir "./Body Data" ./Images/*0*8.spr ./Images/*4*8.spr
+sprite-util convert-breed C3 --genus ettin --breed z --no-tail --att-dir "Body Data" Images\*0*8.spr Images\*4*8.spr
 ```
 
 **# Example 5: Remap a breed**  
@@ -394,5 +404,5 @@ You can technically remap a breed by passing in the same game as the one it is f
 The following would create a copy of norn slot `a` into ettin slot `z`;
 ** Be sure to include the `--att-dir` flag or the body data will not be remapped
 ```console
-sprite-util convert-breed C3 --genus ettin --breed z --att-dir "./Body Data" ./Images/*0*a.c16 ./Images/*4*a.c16
+sprite-util convert-breed C3 --genus ettin --breed z --att-dir "Body Data" Images\*0*a.c16 Images\*4*a.c16
 ```
