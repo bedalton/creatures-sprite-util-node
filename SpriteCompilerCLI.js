@@ -531,6 +531,8 @@
   _no_name_provided__267.prototype.constructor = _no_name_provided__267;
   _no_name_provided__268.prototype = Object.create(CoroutineImpl_0.prototype);
   _no_name_provided__268.prototype.constructor = _no_name_provided__268;
+  MissingFilesException.prototype = Object.create(Exception.prototype);
+  MissingFilesException.prototype.constructor = MissingFilesException;
   function toList(_this_) {
     var tmp0_subject = _this_.length;
     switch (tmp0_subject) {
@@ -13567,6 +13569,7 @@
       throw IndexOutOfBoundsException_init_$Create$('' + 'Index ' + index + ' out of bounds ' + _get_indices_(_this_));
     return _this_[index];
   }
+  var encoding$delegate;
   function _get_bytes_($this) {
     var tmp0_elvis_lhs = $this._mBytes;
     var tmp;
@@ -13605,11 +13608,11 @@
   };
   function MemoryByteStreamReader(bytes) {
     var tmp = this;
-    tmp._size$delegate = lazy(_no_name_provided_$factory_39(bytes));
+    tmp._size$delegate = lazy(_no_name_provided_$factory_40(bytes));
     this._position = 0;
     this._mBytes = bytes;
     var tmp_0 = this;
-    tmp_0._lastIndex$delegate = lazy(_no_name_provided_$factory_40(this));
+    tmp_0._lastIndex$delegate = lazy(_no_name_provided_$factory_41(this));
   }
   MemoryByteStreamReader.prototype._get_size__0_k$ = function () {
     var tmp$ret$0;
@@ -13764,21 +13767,109 @@
   function position(_this_, newPosition) {
     return _this_.position_wiekkq_k$(toLong(newPosition));
   }
+  function _no_name_provided__58() {
+  }
+  _no_name_provided__58.prototype.invoke_wi8o78_k$ = function (it) {
+    return it.toString();
+  };
+  _no_name_provided__58.prototype.invoke_20e8_k$ = function (p1) {
+    return this.invoke_wi8o78_k$(p1 instanceof Char ? p1 : THROW_CCE());
+  };
+  _no_name_provided__58.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__59() {
+  }
+  _no_name_provided__59.prototype.invoke_0_k$ = function () {
+    var tmp$ret$3;
+    $l$block_2: {
+      var tmp0_apply_0 = listOf([new Char(0), new Char(1), new Char(2), new Char(3), new Char(4), new Char(5), new Char(6), new Char(7), new Char(8), new Char(9), new Char(10), new Char(11), new Char(12), new Char(13), new Char(14), new Char(15), new Char(16), new Char(17), new Char(18), new Char(19), new Char(20), new Char(21), new Char(22), new Char(23), new Char(24), new Char(25), new Char(26), new Char(27), new Char(28), new Char(29), new Char(30), new Char(31), new Char(32), new Char(33), new Char(34), new Char(35), new Char(36), new Char(37), new Char(38), new Char(39), new Char(40), new Char(41), new Char(42), new Char(43), new Char(44), new Char(45), new Char(46), new Char(47), new Char(48), new Char(49), new Char(50), new Char(51), new Char(52), new Char(53), new Char(54), new Char(55), new Char(56), new Char(57), new Char(58), new Char(59), new Char(60), new Char(61), new Char(62), new Char(63), new Char(64), new Char(65), new Char(66), new Char(67), new Char(68), new Char(69), new Char(70), new Char(71), new Char(72), new Char(73), new Char(74), new Char(75), new Char(76), new Char(77), new Char(78), new Char(79), new Char(80), new Char(81), new Char(82), new Char(83), new Char(84), new Char(85), new Char(86), new Char(87), new Char(88), new Char(89), new Char(90), new Char(91), new Char(92), new Char(93), new Char(94), new Char(95), new Char(96), new Char(97), new Char(98), new Char(99), new Char(100), new Char(101), new Char(102), new Char(103), new Char(104), new Char(105), new Char(106), new Char(107), new Char(108), new Char(109), new Char(110), new Char(111), new Char(112), new Char(113), new Char(114), new Char(115), new Char(116), new Char(117), new Char(118), new Char(119), new Char(120), new Char(121), new Char(122), new Char(123), new Char(124), new Char(125), new Char(126), new Char(127), new Char(8364), new Char(65533), new Char(8218), new Char(402), new Char(8222), new Char(8230), new Char(8224), new Char(8225), new Char(710), new Char(8240), new Char(352), new Char(8249), new Char(338), new Char(65533), new Char(381), new Char(65533), new Char(65533), new Char(8216), new Char(8217), new Char(8220), new Char(8221), new Char(8226), new Char(8211), new Char(8212), new Char(732), new Char(8482), new Char(353), new Char(8250), new Char(339), new Char(65533), new Char(382), new Char(376), new Char(160), new Char(161), new Char(162), new Char(163), new Char(164), new Char(165), new Char(166), new Char(167), new Char(168), new Char(169), new Char(170), new Char(171), new Char(172), new Char(173), new Char(174), new Char(175), new Char(176), new Char(177), new Char(178), new Char(179), new Char(180), new Char(181), new Char(182), new Char(183), new Char(184), new Char(185), new Char(186), new Char(187), new Char(188), new Char(189), new Char(190), new Char(191), new Char(192), new Char(193), new Char(194), new Char(195), new Char(196), new Char(197), new Char(198), new Char(199), new Char(200), new Char(201), new Char(202), new Char(203), new Char(204), new Char(205), new Char(206), new Char(207), new Char(208), new Char(209), new Char(210), new Char(211), new Char(212), new Char(213), new Char(214), new Char(215), new Char(216), new Char(217), new Char(218), new Char(219), new Char(220), new Char(221), new Char(222), new Char(223), new Char(224), new Char(225), new Char(226), new Char(227), new Char(228), new Char(229), new Char(230), new Char(231), new Char(232), new Char(233), new Char(234), new Char(235), new Char(236), new Char(237), new Char(238), new Char(239), new Char(240), new Char(241), new Char(242), new Char(243), new Char(244), new Char(245), new Char(246), new Char(247), new Char(248), new Char(249), new Char(250), new Char(251), new Char(252), new Char(253), new Char(254), new Char(255)]);
+      {
+      }
+      {
+        if (!(tmp0_apply_0._get_size__0_k$() === 256)) {
+          var tmp = '' + 'Character encoding is wrong. Expected 256 chars. Found: ' + tmp0_apply_0._get_size__0_k$();
+          throw CreaturesIOException_init_$Create$(tmp, null, 2, null);
+        }{
+          var tmp0_i_0_2 = Log_getInstance();
+          if (tmp0_i_0_2._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
+            var tmp_0 = tmp0_i_0_2._loggerObject;
+            var tmp$ret$2;
+            $l$block_1: {
+              var tmp_1;
+              var tmp0_elvis_lhs_1_3 = tmp0_i_0_2._loggerObject.prependLogType;
+              if (tmp0_elvis_lhs_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_3) {
+                tmp_1 = '**LOG1** ';
+              } else {
+                {
+                  tmp_1 = '';
+                }
+              }
+              var tmp_2 = tmp_1;
+              var tmp_3;
+              var tmp$ret$0;
+              $l$block: {
+                {
+                }
+                tmp$ret$0 = null == null ? true : isBlank(null);
+                break $l$block;
+              }
+              if (!tmp$ret$0) {
+                tmp_3 = 'null::';
+              } else {
+                {
+                  tmp_3 = '';
+                }
+              }
+              var tmp_4 = tmp_3;
+              var tmp$ret$1;
+              $l$block_0: {
+                tmp$ret$1 = joinToString$default_0(tmp0_apply_0, ',', null, null, 0, null, _no_name_provided_$factory_42(), 30, null);
+                break $l$block_0;
+              }
+              tmp$ret$2 = '' + tmp_2 + tmp_4 + tmp$ret$1;
+              break $l$block_1;
+            }
+            tmp_0.info(false, tmp$ret$2);
+          }}
+      }
+      tmp$ret$3 = tmp0_apply_0;
+      break $l$block_2;
+    }
+    return tmp$ret$3;
+  };
+  _no_name_provided__59.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
   function size$factory() {
     return getPropertyCallableRef('size', 1, KProperty1, function (receiver) {
       return receiver._get_size__0_k$();
     }, null);
   }
-  function _no_name_provided_$factory_39($bytes) {
+  function _no_name_provided_$factory_39() {
+    var i = new _no_name_provided__59();
+    return function () {
+      return i.invoke_0_k$();
+    };
+  }
+  function _no_name_provided_$factory_40($bytes) {
     var i = new _no_name_provided__56($bytes);
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_40(this$0) {
+  function _no_name_provided_$factory_41(this$0) {
     var i = new _no_name_provided__57(this$0);
     return function () {
       return i.invoke_0_k$();
+    };
+  }
+  function _no_name_provided_$factory_42() {
+    var i = new _no_name_provided__58();
+    return function (p1) {
+      return i.invoke_wi8o78_k$(p1);
     };
   }
   function MemoryByteStreamWriter_init_$Init$(size_0, buffer, $mask0, $marker, $this) {
@@ -14144,7 +14235,7 @@
     if (!$appendSeparator) {
       tmp_0 = true;
     } else {
-      var tmp_1 = new Char(47);
+      var tmp_1 = _get_pathSeparatorChar_();
       tmp_0 = endsWith$default(_this_, tmp_1, false, 2, null);
     }
     if (tmp_0) {
@@ -14168,22 +14259,24 @@
   function FileNameUtil() {
     FileNameUtil_instance = this;
   }
-  FileNameUtil.prototype.getFileNameWithoutExtension_6wfw3l_k$ = function (fileName) {
-    var tmp = _get_pathSeparatorChar_();
-    var startIndex = lastIndexOf$default(fileName, tmp, 0, false, 6, null);
+  FileNameUtil.prototype.getFileNameWithoutExtension_6wfw3l_k$ = function (fileNameIn) {
+    var tmp = PathUtil_getInstance();
+    var fileName = ensureNotNull(tmp.normalizePath$default_zmr95_k$(fileNameIn, false, 2, null));
+    var tmp_0 = _get_pathSeparatorChar_();
+    var startIndex = lastIndexOf$default(fileName, tmp_0, 0, false, 6, null);
     if (startIndex < 0)
       startIndex = 0;
     else
       startIndex = startIndex + 1 | 0;
     if (startIndex === _get_lastIndex__2(fileName)) {
       return null;
-    }var tmp_0 = new Char(46);
-    var lastIndex = lastIndexOf$default(fileName, tmp_0, 0, false, 6, null);
-    var tmp_1;
+    }var tmp_1 = new Char(46);
+    var lastIndex = lastIndexOf$default(fileName, tmp_1, 0, false, 6, null);
+    var tmp_2;
     if (lastIndex < 0) {
-      tmp_1 = fileName;
+      tmp_2 = fileName;
     } else if (lastIndex === 0) {
-      tmp_1 = null;
+      tmp_2 = null;
     } else if (lastIndex > startIndex) {
       var tmp$ret$1;
       $l$block_0: {
@@ -14196,20 +14289,22 @@
         tmp$ret$1 = tmp$ret$0.substring(tmp0_substring_0, lastIndex);
         break $l$block_0;
       }
-      tmp_1 = tmp$ret$1;
+      tmp_2 = tmp$ret$1;
     } else {
-      tmp_1 = null;
+      tmp_2 = null;
     }
-    var string = tmp_1;
+    var string = tmp_2;
     var tmp0_safe_receiver = string;
-    return tmp0_safe_receiver == null ? null : nullIfEmpty(tmp0_safe_receiver);
+    return tmp0_safe_receiver == null ? null : nullIfEmpty_0(tmp0_safe_receiver);
   };
-  FileNameUtil.prototype.getExtension_6wfw3l_k$ = function (fileName) {
-    var tmp = new Char(46);
-    var lastIndex = lastIndexOf$default(fileName, tmp, 0, false, 6, null);
-    var tmp_0;
+  FileNameUtil.prototype.getExtension_6wfw3l_k$ = function (fileNameIn) {
+    var tmp = PathUtil_getInstance();
+    var fileName = ensureNotNull(tmp.normalizePath$default_zmr95_k$(fileNameIn, false, 2, null));
+    var tmp_0 = new Char(46);
+    var lastIndex = lastIndexOf$default(fileName, tmp_0, 0, false, 6, null);
+    var tmp_1;
     if (lastIndex < 0) {
-      tmp_0 = null;
+      tmp_1 = null;
     } else if (lastIndex < _get_lastIndex__2(fileName)) {
       var tmp$ret$1;
       $l$block_0: {
@@ -14222,33 +14317,35 @@
         tmp$ret$1 = tmp$ret$0.substring(tmp0_substring_0);
         break $l$block_0;
       }
-      tmp_0 = tmp$ret$1;
+      tmp_1 = tmp$ret$1;
     } else {
-      tmp_0 = null;
+      tmp_1 = null;
     }
-    var extension = tmp_0;
-    return nullIfEmpty(extension);
+    var extension = tmp_1;
+    return nullIfEmpty_0(extension);
   };
-  FileNameUtil.prototype.getSelfOrParentDirectory_2f0f39_k$ = function (file, appendSeparator) {
-    var tmp = _get_pathSeparatorChar_();
-    if (endsWith$default(file, tmp, false, 2, null)) {
+  FileNameUtil.prototype.getSelfOrParentDirectory_2f0f39_k$ = function (fileIn, appendSeparator) {
+    var tmp = PathUtil_getInstance();
+    var file = ensureNotNull(tmp.normalizePath$default_zmr95_k$(fileIn, false, 2, null));
+    var tmp_0 = _get_pathSeparatorChar_();
+    if (endsWith$default(file, tmp_0, false, 2, null)) {
       return file;
     } else {
     }
-    var tmp_0 = _get_pathSeparatorChar_();
-    var index = lastIndexOf$default(file, tmp_0, 0, false, 6, null);
+    var tmp_1 = _get_pathSeparatorChar_();
+    var index = lastIndexOf$default(file, tmp_1, 0, false, 6, null);
     if (index < 0) {
-      var tmp_1;
-      var tmp_2 = new Char(46);
-      if (contains$default(file, tmp_2, false, 2, null)) {
-        tmp_1 = null;
+      var tmp_2;
+      var tmp_3 = new Char(46);
+      if (contains$default(file, tmp_3, false, 2, null)) {
+        tmp_2 = null;
       } else {
         {
-          tmp_1 = getSelfOrParentDirectory$close(file, appendSeparator);
+          tmp_2 = getSelfOrParentDirectory$close(file, appendSeparator);
         }
       }
-      return tmp_1;
-    }var tmp_3;
+      return tmp_2;
+    }var tmp_4;
     var tmp$ret$1;
     $l$block_0: {
       var tmp$ret$0;
@@ -14259,21 +14356,21 @@
       tmp$ret$1 = tmp$ret$0.substring(index);
       break $l$block_0;
     }
-    var tmp_4 = tmp$ret$1;
-    var tmp_5 = new Char(46);
-    if (contains$default(tmp_4, tmp_5, false, 2, null)) {
-      tmp_3 = getSelfOrParentDirectory$close(substring_0(file, until(0, index)), appendSeparator);
+    var tmp_5 = tmp$ret$1;
+    var tmp_6 = new Char(46);
+    if (contains$default(tmp_5, tmp_6, false, 2, null)) {
+      tmp_4 = getSelfOrParentDirectory$close(substring_0(file, until(0, index)), appendSeparator);
     } else {
       {
-        tmp_3 = getSelfOrParentDirectory$close(file, appendSeparator);
+        tmp_4 = getSelfOrParentDirectory$close(file, appendSeparator);
       }
     }
-    return tmp_3;
+    return tmp_4;
   };
-  FileNameUtil.prototype.getSelfOrParentDirectory$default_zmr95_k$ = function (file, appendSeparator, $mask0, $handler) {
+  FileNameUtil.prototype.getSelfOrParentDirectory$default_zmr95_k$ = function (fileIn, appendSeparator, $mask0, $handler) {
     if (!(($mask0 & 2) === 0))
       appendSeparator = false;
-    return this.getSelfOrParentDirectory_2f0f39_k$(file, appendSeparator);
+    return this.getSelfOrParentDirectory_2f0f39_k$(fileIn, appendSeparator);
   };
   FileNameUtil.prototype.getLastPathComponent_2f0f39_k$ = function (path_0, nullIfBlank) {
     var tmp;
@@ -14323,20 +14420,20 @@
       new FileNameUtil();
     return FileNameUtil_instance;
   }
-  function _no_name_provided__58($message) {
+  function _no_name_provided__60($message) {
     this._$message = $message;
   }
-  _no_name_provided__58.prototype.invoke_0_k$ = function () {
+  _no_name_provided__60.prototype.invoke_0_k$ = function () {
     return this._$message;
   };
-  _no_name_provided__58.$metadata$ = {
+  _no_name_provided__60.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function CommonException(message, throwable) {
     RuntimeException_init_$Init$_1(message, throwable, this);
     var tmp = this;
-    tmp._message$delegate = lazy(_no_name_provided_$factory_41(message));
+    tmp._message$delegate = lazy(_no_name_provided_$factory_43(message));
     captureStack(this, CommonException);
   }
   CommonException.prototype._get_message__0_k$ = function () {
@@ -14405,11 +14502,51 @@
       return receiver._get_message__0_k$();
     }, null);
   }
-  function _no_name_provided_$factory_41($message) {
-    var i = new _no_name_provided__58($message);
+  function _no_name_provided_$factory_43($message) {
+    var i = new _no_name_provided__60($message);
     return function () {
       return i.invoke_0_k$();
     };
+  }
+  function isNullOrEmpty(_this_) {
+    {
+    }
+    return _this_ == null ? true : _this_.isEmpty_0_k$();
+  }
+  function nullIfEmpty(_this_) {
+    var tmp$ret$1;
+    $l$block_0: {
+      var tmp;
+      if (_this_.isEmpty_0_k$()) {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = null;
+          break $l$block;
+        }
+        tmp = tmp$ret$0;
+      } else {
+        tmp = _this_;
+      }
+      tmp$ret$1 = tmp;
+      break $l$block_0;
+    }
+    return tmp$ret$1;
+  }
+  function isNotNullOrEmpty(_this_) {
+    {
+    }
+    var tmp;
+    if (!(_this_ == null)) {
+      var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = !_this_.isEmpty_0_k$();
+        break $l$block;
+      }
+      tmp = tmp$ret$0;
+    } else {
+      tmp = false;
+    }
+    return tmp;
   }
   function HasIntValue() {
   }
@@ -14489,6 +14626,26 @@
   function LogLevel_ERROR_getInstance() {
     LogLevel_initEntries();
     return LogLevel_ERROR_instance;
+  }
+  function getEscape($this, string, escapeBase, escapeChar) {
+    var escape = '' + escapeChar + escapeChar + escapeChar + escapeBase + escapeChar + escapeChar + escapeChar;
+    $l$break: while (true) {
+      var tmp = escape;
+      if (!contains$default_0(string, tmp, false, 2, null)) {
+        break $l$break;
+      }var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = escapeChar.toString() + escapeBase;
+        break $l$block;
+      }
+      escape = tmp$ret$0 + escapeChar;
+    }
+    return escape;
+  }
+  function getEscape$default($this, string, escapeBase, escapeChar, $mask0, $handler) {
+    if (!(($mask0 & 8) === 0))
+      escapeChar = new Char(59);
+    return getEscape($this, string, escapeBase, escapeChar);
   }
   function PathUtil() {
     PathUtil_instance = this;
@@ -14615,6 +14772,191 @@
     }
     return tmp_1;
   };
+  PathUtil.prototype.normalizePath_2f0f39_k$ = function (path_0, divide_0) {
+    if (isBlank(path_0)) {
+      return '';
+    }var quoteEscape = getEscape$default(this, path_0, 'quote', new Char(0), 8, null);
+    var tmp$ret$1;
+    $l$block_0: {
+      var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = Regex_init_$Create$_0('[^`\\\\]"');
+        break $l$block;
+      }
+      var tmp0_replace_0 = tmp$ret$0;
+      tmp$ret$1 = tmp0_replace_0.replace_abi4bo_k$(path_0, quoteEscape);
+      break $l$block_0;
+    }
+    var out = tmp$ret$1;
+    var tmp;
+    var tmp_0;
+    var tmp_1 = out;
+    if (startsWith$default_0(tmp_1, '"', false, 2, null)) {
+      var tmp_2 = out;
+      var tmp_3 = new Char(34);
+      tmp_0 = endsWith$default(tmp_2, tmp_3, false, 2, null);
+    } else {
+      {
+        tmp_0 = false;
+      }
+    }
+    if (tmp_0) {
+      var tmp_4 = out;
+      var tmp_5 = new Char(34);
+      tmp = contains$default(tmp_4, tmp_5, false, 2, null);
+    } else {
+      {
+        tmp = false;
+      }
+    }
+    if (tmp) {
+      if (!divide_0) {
+        return null;
+      }var tmp$ret$6;
+      $l$block_6: {
+        var tmp$ret$3;
+        $l$block_2: {
+          var tmp1_substring_0 = out;
+          var tmp$ret$2;
+          $l$block_1: {
+            tmp$ret$2 = tmp1_substring_0;
+            break $l$block_1;
+          }
+          tmp$ret$3 = tmp$ret$2.substring(1);
+          break $l$block_2;
+        }
+        var tmp_6 = tmp$ret$3;
+        var tmp_7 = charArrayOf([new Char(34)]);
+        var tmp2_firstOrNull_0 = split$default(tmp_6, tmp_7, false, 0, 6, null);
+        var tmp0_iterator_1 = tmp2_firstOrNull_0.iterator_0_k$();
+        while (tmp0_iterator_1.hasNext_0_k$()) {
+          var element_2 = tmp0_iterator_1.next_0_k$();
+          var tmp$ret$5;
+          $l$block_4: {
+            var tmp$ret$4;
+            $l$block_3: {
+              tmp$ret$4 = !isBlank(element_2);
+              break $l$block_3;
+            }
+            tmp$ret$5 = tmp$ret$4;
+            break $l$block_4;
+          }
+          if (tmp$ret$5) {
+            tmp$ret$6 = element_2;
+            break $l$block_6;
+          } else {
+          }
+        }
+        tmp$ret$6 = null;
+        break $l$block_6;
+      }
+      var temp = tmp$ret$6;
+      if (!(temp == null)) {
+        out = '' + '"' + temp + '"';
+      }} else {
+    }
+    var temp_0 = stripSurroundingQuotes(out, 2);
+    var canHaveSpaces = !(temp_0 === out);
+    out = temp_0;
+    var spacesEscape = getEscape(this, out, 'space', new Char(35));
+    var tmp$ret$8;
+    $l$block_8: {
+      var tmp$ret$7;
+      $l$block_7: {
+        tmp$ret$7 = Regex_init_$Create$_0('[^`\\\\][ ]');
+        break $l$block_7;
+      }
+      var tmp3_replace_0 = tmp$ret$7;
+      tmp$ret$8 = tmp3_replace_0.replace_abi4bo_k$(path_0, spacesEscape);
+      break $l$block_8;
+    }
+    out = tmp$ret$8;
+    var tmp$ret$10;
+    $l$block_10: {
+      var tmp4_replace_0 = superUnescape(out);
+      var tmp$ret$9;
+      $l$block_9: {
+        tmp$ret$9 = Regex_init_$Create$_0('[\\\\]{1,2}');
+        break $l$block_9;
+      }
+      var tmp5_replace_0 = tmp$ret$9;
+      var tmp6_replace_0 = pathSeparator;
+      tmp$ret$10 = tmp5_replace_0.replace_abi4bo_k$(tmp4_replace_0, tmp6_replace_0);
+      break $l$block_10;
+    }
+    out = tmp$ret$10;
+    if (!canHaveSpaces) {
+      var tmp$ret$13;
+      $l$block_14: {
+        var tmp_8 = out;
+        var tmp_9 = charArrayOf([new Char(32)]);
+        var tmp7_firstOrNull_0 = split$default(tmp_8, tmp_9, false, 0, 6, null);
+        var tmp0_iterator_1_0 = tmp7_firstOrNull_0.iterator_0_k$();
+        while (tmp0_iterator_1_0.hasNext_0_k$()) {
+          var element_2_0 = tmp0_iterator_1_0.next_0_k$();
+          var tmp$ret$12;
+          $l$block_12: {
+            var tmp$ret$11;
+            $l$block_11: {
+              tmp$ret$11 = !isBlank(element_2_0);
+              break $l$block_11;
+            }
+            tmp$ret$12 = tmp$ret$11;
+            break $l$block_12;
+          }
+          if (tmp$ret$12) {
+            tmp$ret$13 = element_2_0;
+            break $l$block_14;
+          } else {
+          }
+        }
+        tmp$ret$13 = null;
+        break $l$block_14;
+      }
+      var tmp0_safe_receiver = tmp$ret$13;
+      var tmp_10;
+      if (tmp0_safe_receiver == null) {
+        tmp_10 = null;
+      } else {
+        var tmp$ret$14;
+        $l$block_15: {
+          {
+          }
+          {
+            if (!divide_0 ? !(out === tmp0_safe_receiver) : false) {
+              return null;
+            }}
+          tmp$ret$14 = tmp0_safe_receiver;
+          break $l$block_15;
+        }
+        tmp_10 = tmp$ret$14;
+      }
+      var tmp1_elvis_lhs = tmp_10;
+      out = tmp1_elvis_lhs == null ? out : tmp1_elvis_lhs;
+    }var tmp_11 = out;
+    out = replace$default_0(tmp_11, '"', '', false, 4, null);
+    var tmp$ret$16;
+    $l$block_17: {
+      var tmp_12 = out;
+      var tmp_13 = replace$default_0(tmp_12, spacesEscape, ' ', false, 4, null);
+      var tmp8_let_0 = replace$default_0(tmp_13, quoteEscape, '"', false, 4, null);
+      {
+      }
+      var tmp$ret$15;
+      $l$block_16: {
+        tmp$ret$15 = PathUtil_getInstance().combine_yn9lj1_k$([out]);
+        break $l$block_16;
+      }
+      tmp$ret$16 = tmp$ret$15;
+      break $l$block_17;
+    }
+    return tmp$ret$16;
+  };
+  PathUtil.prototype.normalizePath$default_zmr95_k$ = function (path_0, divide_0, $mask0, $handler) {
+    if (!(($mask0 & 2) === 0))
+      divide_0 = false;
+    return this.normalizePath_2f0f39_k$(path_0, divide_0);
+  };
   PathUtil.$metadata$ = {
     simpleName: 'PathUtil',
     kind: 'object',
@@ -14699,7 +15041,7 @@
     }
     return tmp;
   }
-  function nullIfEmpty(_this_) {
+  function nullIfEmpty_0(_this_) {
     return (_this_ == null ? true : isBlank(_this_)) ? null : _this_;
   }
   function ensureEndsWith(_this_, char) {
@@ -14708,6 +15050,139 @@
     else {
     }
     return _this_ + char;
+  }
+  function stripSurroundingQuotes(_this_, trim_1) {
+    var tmp$ret$0;
+    $l$block: {
+      tmp$ret$0 = charSequenceLength(_this_) === 0;
+      break $l$block;
+    }
+    if (tmp$ret$0)
+      return '';
+    else {
+    }
+    if (_this_.length === 1) {
+      return (charSequenceGet(_this_, 0).equals(new Char(34)) ? true : charSequenceGet(_this_, 0).equals(new Char(39))) ? '' : _this_;
+    }var tmp;
+    if (trim_1 > 0) {
+      var tmp$ret$1;
+      $l$block_0: {
+        tmp$ret$1 = toString_3(trim_0(isCharSequence(_this_) ? _this_ : THROW_CCE()));
+        break $l$block_0;
+      }
+      tmp = tmp$ret$1;
+    } else {
+      tmp = _this_;
+    }
+    var string = tmp;
+    var tmp_0;
+    var tmp_1 = string;
+    var tmp_2 = new Char(34);
+    if (startsWith$default(tmp_1, tmp_2, false, 2, null)) {
+      var tmp_3 = string;
+      var tmp_4 = new Char(34);
+      tmp_0 = endsWith$default(tmp_3, tmp_4, false, 2, null);
+    } else {
+      {
+        tmp_0 = false;
+      }
+    }
+    if (tmp_0) {
+      var tmp$ret$3;
+      $l$block_2: {
+        var tmp0_substring_0 = string;
+        var tmp1_substring_0 = _get_lastIndex__2(string);
+        var tmp$ret$2;
+        $l$block_1: {
+          tmp$ret$2 = tmp0_substring_0;
+          break $l$block_1;
+        }
+        tmp$ret$3 = tmp$ret$2.substring(1, tmp1_substring_0);
+        break $l$block_2;
+      }
+      string = tmp$ret$3;
+    } else {
+      var tmp_5;
+      var tmp_6 = string;
+      var tmp_7 = new Char(39);
+      if (startsWith$default(tmp_6, tmp_7, false, 2, null)) {
+        var tmp_8 = string;
+        var tmp_9 = new Char(39);
+        tmp_5 = endsWith$default(tmp_8, tmp_9, false, 2, null);
+      } else {
+        {
+          tmp_5 = false;
+        }
+      }
+      if (tmp_5) {
+        var tmp$ret$5;
+        $l$block_4: {
+          var tmp2_substring_0 = string;
+          var tmp3_substring_0 = _get_lastIndex__2(string);
+          var tmp$ret$4;
+          $l$block_3: {
+            tmp$ret$4 = tmp2_substring_0;
+            break $l$block_3;
+          }
+          tmp$ret$5 = tmp$ret$4.substring(1, tmp3_substring_0);
+          break $l$block_4;
+        }
+        string = tmp$ret$5;
+      } else {
+      }
+    }
+    var tmp$ret$8;
+    $l$block_7: {
+      var tmp4_let_0 = superUnescape(string);
+      {
+      }
+      var tmp$ret$7;
+      $l$block_6: {
+        var tmp_10;
+        if (trim_1 > 1) {
+          var tmp$ret$6;
+          $l$block_5: {
+            tmp$ret$6 = toString_3(trim_0(isCharSequence(tmp4_let_0) ? tmp4_let_0 : THROW_CCE()));
+            break $l$block_5;
+          }
+          tmp_10 = tmp$ret$6;
+        } else {
+          tmp_10 = tmp4_let_0;
+        }
+        tmp$ret$7 = tmp_10;
+        break $l$block_6;
+      }
+      tmp$ret$8 = tmp$ret$7;
+      break $l$block_7;
+    }
+    return tmp$ret$8;
+  }
+  function superUnescape(string) {
+    var escape = ';;#\\@(_x.x_)@/#;;';
+    $l$break: while (true) {
+      var tmp = escape;
+      if (!contains$default_0(string, tmp, false, 2, null)) {
+        break $l$break;
+      }escape = '' + '!x(' + escape + ')x!';
+    }
+    var tmp$ret$0;
+    $l$block: {
+      var tmp_0 = escape;
+      var tmp_1 = replace$default_0(string, '\\\\', tmp_0, false, 4, null);
+      var tmp_2 = replace$default_0(tmp_1, '\\n', '\n', false, 4, null);
+      var tmp_3 = replace$default_0(tmp_2, '\\r', '\r', false, 4, null);
+      var tmp_4 = replace$default_0(tmp_3, '\\"', '"', false, 4, null);
+      var tmp_5 = replace$default_0(tmp_4, "\\'", "'", false, 4, null);
+      var tmp_6 = replace$default_0(tmp_5, '\\t', '\t', false, 4, null);
+      var tmp_7 = replace$default_0(tmp_6, '\\b', '\b', false, 4, null);
+      var tmp_8 = replace$default_0(tmp_7, '\\', '', false, 4, null);
+      var tmp_9 = escape;
+      var tmp0_replace_0 = replace$default_0(tmp_8, tmp_9, '\\', false, 4, null);
+      var tmp1_replace_0 = NEWLINE_REGEX;
+      tmp$ret$0 = tmp1_replace_0.replace_abi4bo_k$(tmp0_replace_0, '\r\n');
+      break $l$block;
+    }
+    return tmp$ret$0;
   }
   function NEWLINE_REGEX$init$() {
     var tmp$ret$0;
@@ -14774,95 +15249,6 @@
     get: JsByteReader.prototype._get_size__0_k$
   });
   var readBuffer;
-  var encoding$delegate;
-  function _no_name_provided__59() {
-  }
-  _no_name_provided__59.prototype.invoke_wi8o78_k$ = function (it) {
-    return it.toString();
-  };
-  _no_name_provided__59.prototype.invoke_20e8_k$ = function (p1) {
-    return this.invoke_wi8o78_k$(p1 instanceof Char ? p1 : THROW_CCE());
-  };
-  _no_name_provided__59.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__60() {
-  }
-  _no_name_provided__60.prototype.invoke_0_k$ = function () {
-    var tmp$ret$3;
-    $l$block_2: {
-      var tmp0_apply_0 = listOf([new Char(0), new Char(1), new Char(2), new Char(3), new Char(4), new Char(5), new Char(6), new Char(7), new Char(8), new Char(9), new Char(10), new Char(11), new Char(12), new Char(13), new Char(14), new Char(15), new Char(16), new Char(17), new Char(18), new Char(19), new Char(20), new Char(21), new Char(22), new Char(23), new Char(24), new Char(25), new Char(26), new Char(27), new Char(28), new Char(29), new Char(30), new Char(31), new Char(32), new Char(33), new Char(34), new Char(35), new Char(36), new Char(37), new Char(38), new Char(39), new Char(40), new Char(41), new Char(42), new Char(43), new Char(44), new Char(45), new Char(46), new Char(47), new Char(48), new Char(49), new Char(50), new Char(51), new Char(52), new Char(53), new Char(54), new Char(55), new Char(56), new Char(57), new Char(58), new Char(59), new Char(60), new Char(61), new Char(62), new Char(63), new Char(64), new Char(65), new Char(66), new Char(67), new Char(68), new Char(69), new Char(70), new Char(71), new Char(72), new Char(73), new Char(74), new Char(75), new Char(76), new Char(77), new Char(78), new Char(79), new Char(80), new Char(81), new Char(82), new Char(83), new Char(84), new Char(85), new Char(86), new Char(87), new Char(88), new Char(89), new Char(90), new Char(91), new Char(92), new Char(93), new Char(94), new Char(95), new Char(96), new Char(97), new Char(98), new Char(99), new Char(100), new Char(101), new Char(102), new Char(103), new Char(104), new Char(105), new Char(106), new Char(107), new Char(108), new Char(109), new Char(110), new Char(111), new Char(112), new Char(113), new Char(114), new Char(115), new Char(116), new Char(117), new Char(118), new Char(119), new Char(120), new Char(121), new Char(122), new Char(123), new Char(124), new Char(125), new Char(126), new Char(127), new Char(8364), new Char(65533), new Char(8218), new Char(402), new Char(8222), new Char(8230), new Char(8224), new Char(8225), new Char(710), new Char(8240), new Char(352), new Char(8249), new Char(338), new Char(65533), new Char(381), new Char(65533), new Char(65533), new Char(8216), new Char(8217), new Char(8220), new Char(8221), new Char(8226), new Char(8211), new Char(8212), new Char(732), new Char(8482), new Char(353), new Char(8250), new Char(339), new Char(65533), new Char(382), new Char(376), new Char(160), new Char(161), new Char(162), new Char(163), new Char(164), new Char(165), new Char(166), new Char(167), new Char(168), new Char(169), new Char(170), new Char(171), new Char(172), new Char(173), new Char(174), new Char(175), new Char(176), new Char(177), new Char(178), new Char(179), new Char(180), new Char(181), new Char(182), new Char(183), new Char(184), new Char(185), new Char(186), new Char(187), new Char(188), new Char(189), new Char(190), new Char(191), new Char(192), new Char(193), new Char(194), new Char(195), new Char(196), new Char(197), new Char(198), new Char(199), new Char(200), new Char(201), new Char(202), new Char(203), new Char(204), new Char(205), new Char(206), new Char(207), new Char(208), new Char(209), new Char(210), new Char(211), new Char(212), new Char(213), new Char(214), new Char(215), new Char(216), new Char(217), new Char(218), new Char(219), new Char(220), new Char(221), new Char(222), new Char(223), new Char(224), new Char(225), new Char(226), new Char(227), new Char(228), new Char(229), new Char(230), new Char(231), new Char(232), new Char(233), new Char(234), new Char(235), new Char(236), new Char(237), new Char(238), new Char(239), new Char(240), new Char(241), new Char(242), new Char(243), new Char(244), new Char(245), new Char(246), new Char(247), new Char(248), new Char(249), new Char(250), new Char(251), new Char(252), new Char(253), new Char(254), new Char(255)]);
-      {
-      }
-      {
-        if (!(tmp0_apply_0._get_size__0_k$() === 256)) {
-          var tmp = '' + 'Character encoding is wrong. Expected 256 chars. Found: ' + tmp0_apply_0._get_size__0_k$();
-          throw CreaturesIOException_init_$Create$(tmp, null, 2, null);
-        }{
-          var tmp0_i_0_2 = Log_getInstance();
-          if (tmp0_i_0_2._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
-            var tmp_0 = tmp0_i_0_2._loggerObject;
-            var tmp$ret$2;
-            $l$block_1: {
-              var tmp_1;
-              var tmp0_elvis_lhs_1_1_3 = tmp0_i_0_2._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3) {
-                tmp_1 = '**LOG1** ';
-              } else {
-                {
-                  tmp_1 = '';
-                }
-              }
-              var tmp_2 = tmp_1;
-              var tmp_3;
-              var tmp$ret$0;
-              $l$block: {
-                {
-                }
-                tmp$ret$0 = null == null ? true : isBlank(null);
-                break $l$block;
-              }
-              if (!tmp$ret$0) {
-                tmp_3 = 'null::';
-              } else {
-                {
-                  tmp_3 = '';
-                }
-              }
-              var tmp_4 = tmp_3;
-              var tmp$ret$1;
-              $l$block_0: {
-                tmp$ret$1 = joinToString$default_0(tmp0_apply_0, ',', null, null, 0, null, _no_name_provided_$factory_43(), 30, null);
-                break $l$block_0;
-              }
-              tmp$ret$2 = '' + tmp_2 + tmp_4 + tmp$ret$1;
-              break $l$block_1;
-            }
-            tmp_0.info(false, tmp$ret$2);
-          }}
-      }
-      tmp$ret$3 = tmp0_apply_0;
-      break $l$block_2;
-    }
-    return tmp$ret$3;
-  };
-  _no_name_provided__60.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided_$factory_42() {
-    var i = new _no_name_provided__60();
-    return function () {
-      return i.invoke_0_k$();
-    };
-  }
-  function _no_name_provided_$factory_43() {
-    var i = new _no_name_provided__59();
-    return function (p1) {
-      return i.invoke_wi8o78_k$(p1);
-    };
-  }
   var floatsBuffer;
   var doubleBuffer;
   function _get_pathSeparatorChar_() {
@@ -47855,7 +48241,7 @@
     var fileNameWithoutExtension = tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs;
     if (!(fileNameWithoutExtension.length === 4)) {
       throw Exception_init_$Create$('' + 'Invalid file name length for body part. Expected 4 chars, got ' + fileNameWithoutExtension.length);
-    }var tmp1_safe_receiver = nullIfEmpty(fromGameIn);
+    }var tmp1_safe_receiver = nullIfEmpty_0(fromGameIn);
     var tmp;
     if (tmp1_safe_receiver == null) {
       tmp = null;
@@ -47891,7 +48277,7 @@
     }
     var toGame = tmp_1;
     var tmp3_safe_receiver = colorEncoding_0;
-    var tmp4_safe_receiver = tmp3_safe_receiver == null ? null : nullIfEmpty(tmp3_safe_receiver);
+    var tmp4_safe_receiver = tmp3_safe_receiver == null ? null : nullIfEmpty_0(tmp3_safe_receiver);
     var tmp_2;
     if (tmp4_safe_receiver == null) {
       tmp_2 = null;
@@ -51452,7 +51838,7 @@
             this._exceptionState = 3;
             this._exceptionState = 2;
             this._state_0 = 1;
-            suspendResult = compileAndWrite(this._this$0_38, this._$allFiles, this._$outputFile, this._$shouldWrite, this);
+            suspendResult = compileAndWrite(this._this$0_38, this._$allFiles, this._$outputFile._v, this._$shouldWrite, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -51832,112 +52218,224 @@
         }}
       return exitNative(1003);
     }var currentWorkingDirectory = getCurrentWorkingDirectory();
-    var tmp_4 = _get_files_(this);
-    var tmp_5 = ImageLoader_getInstance()._get_supportedExtensions__0_k$();
-    var allFiles = unpackPaths$default(tmp_4, tmp_5, null, null, 6, null);
+    var tmp_4;
+    try {
+      var tmp_5 = _get_files_(this);
+      var tmp_6 = ImageLoader_getInstance()._get_supportedExtensions__0_k$();
+      tmp_4 = unpackPaths$default(tmp_5, tmp_6, null, null, 6, null);
+    } catch ($p) {
+      var tmp_7;
+      if ($p instanceof MissingFilesException) {
+        {
+          var tmp1_e_0 = Log_getInstance();
+          if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+            var tmp_8 = tmp1_e_0._loggerObject;
+            var tmp$ret$5;
+            $l$block_4: {
+              var tmp_9;
+              var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
+              if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
+                tmp_9 = '**ERROR** ';
+              } else {
+                {
+                  tmp_9 = '';
+                }
+              }
+              var tmp_10 = tmp_9;
+              var tmp_11;
+              var tmp$ret$3;
+              $l$block_2: {
+                {
+                }
+                tmp$ret$3 = null == null ? true : isBlank(null);
+                break $l$block_2;
+              }
+              if (!tmp$ret$3) {
+                tmp_11 = 'null::';
+              } else {
+                {
+                  tmp_11 = '';
+                }
+              }
+              var tmp_12 = tmp_11;
+              var tmp$ret$4;
+              $l$block_3: {
+                tmp$ret$4 = 'Error 1015: ' + ensureNotNull($p.message);
+                break $l$block_3;
+              }
+              tmp$ret$5 = '' + tmp_10 + tmp_12 + tmp$ret$4;
+              break $l$block_4;
+            }
+            tmp_8.error(tmp$ret$5);
+          }}
+        return exitNative(1015);
+      } else {
+        {
+          throw $p;
+        }
+      }
+      tmp_4 = tmp_7;
+    }
+    var allFiles = tmp_4;
     if (allFiles.isEmpty_0_k$()) {
       {
-        var tmp1_e_0 = Log_getInstance();
-        if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-          var tmp_6 = tmp1_e_0._loggerObject;
-          var tmp$ret$5;
-          $l$block_4: {
-            var tmp_7;
-            var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
-              tmp_7 = '**ERROR** ';
+        var tmp2_e_0 = Log_getInstance();
+        if (tmp2_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+          var tmp_13 = tmp2_e_0._loggerObject;
+          var tmp$ret$8;
+          $l$block_7: {
+            var tmp_14;
+            var tmp0_elvis_lhs_1_1_1 = tmp2_e_0._loggerObject.prependLogType;
+            if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
+              tmp_14 = '**ERROR** ';
             } else {
               {
-                tmp_7 = '';
+                tmp_14 = '';
               }
             }
-            var tmp_8 = tmp_7;
-            var tmp_9;
-            var tmp$ret$3;
-            $l$block_2: {
+            var tmp_15 = tmp_14;
+            var tmp_16;
+            var tmp$ret$6;
+            $l$block_5: {
               {
               }
-              tmp$ret$3 = null == null ? true : isBlank(null);
-              break $l$block_2;
+              tmp$ret$6 = null == null ? true : isBlank(null);
+              break $l$block_5;
             }
-            if (!tmp$ret$3) {
-              tmp_9 = 'null::';
+            if (!tmp$ret$6) {
+              tmp_16 = 'null::';
             } else {
               {
-                tmp_9 = '';
+                tmp_16 = '';
               }
             }
-            var tmp_10 = tmp_9;
-            var tmp$ret$4;
-            $l$block_3: {
-              tmp$ret$4 = 'Error 1002: No valid images found';
-              break $l$block_3;
+            var tmp_17 = tmp_16;
+            var tmp$ret$7;
+            $l$block_6: {
+              tmp$ret$7 = 'Error 1002: No valid images found';
+              break $l$block_6;
             }
-            tmp$ret$5 = '' + tmp_8 + tmp_10 + tmp$ret$4;
-            break $l$block_4;
+            tmp$ret$8 = '' + tmp_15 + tmp_17 + tmp$ret$7;
+            break $l$block_7;
           }
-          tmp_6.error(tmp$ret$5);
+          tmp_13.error(tmp$ret$8);
         }}
       return exitNative(1002);
-    }var tmp_11;
+    }var tmp_18;
     var tmp1_safe_receiver = FileNameUtil_getInstance().getExtension_6wfw3l_k$(_get_outputFile_(this));
-    var tmp_12;
+    var tmp_19;
     if (tmp1_safe_receiver == null) {
-      tmp_12 = null;
+      tmp_19 = null;
     } else {
-      var tmp$ret$7;
-      $l$block_6: {
-        var tmp$ret$6;
-        $l$block_5: {
-          tmp$ret$6 = tmp1_safe_receiver;
-          break $l$block_5;
+      var tmp$ret$10;
+      $l$block_9: {
+        var tmp$ret$9;
+        $l$block_8: {
+          tmp$ret$9 = tmp1_safe_receiver;
+          break $l$block_8;
         }
-        tmp$ret$7 = tmp$ret$6.toLowerCase();
-        break $l$block_6;
+        tmp$ret$10 = tmp$ret$9.toLowerCase();
+        break $l$block_9;
       }
-      tmp_12 = tmp$ret$7;
+      tmp_19 = tmp$ret$10;
     }
-    var tmp_13 = tmp_12;
-    var tmp$ret$9;
-    $l$block_8: {
-      var tmp2_lowercase_0 = _get_type_(this)._get_name__0_k$();
-      var tmp$ret$8;
-      $l$block_7: {
-        tmp$ret$8 = tmp2_lowercase_0;
-        break $l$block_7;
-      }
-      tmp$ret$9 = tmp$ret$8.toLowerCase();
-      break $l$block_8;
-    }
-    if (!(tmp_13 === tmp$ret$9)) {
+    var tmp_20 = tmp_19;
+    var tmp$ret$12;
+    $l$block_11: {
+      var tmp3_lowercase_0 = _get_type_(this)._get_name__0_k$();
       var tmp$ret$11;
       $l$block_10: {
-        var tmp3_lowercase_0 = _get_type_(this)._get_name__0_k$();
-        var tmp$ret$10;
-        $l$block_9: {
-          tmp$ret$10 = tmp3_lowercase_0;
-          break $l$block_9;
-        }
-        tmp$ret$11 = tmp$ret$10.toLowerCase();
+        tmp$ret$11 = tmp3_lowercase_0;
         break $l$block_10;
       }
-      tmp_11 = '' + '.' + tmp$ret$11;
+      tmp$ret$12 = tmp$ret$11.toLowerCase();
+      break $l$block_11;
+    }
+    if (!(tmp_20 === tmp$ret$12)) {
+      var tmp$ret$14;
+      $l$block_13: {
+        var tmp4_lowercase_0 = _get_type_(this)._get_name__0_k$();
+        var tmp$ret$13;
+        $l$block_12: {
+          tmp$ret$13 = tmp4_lowercase_0;
+          break $l$block_12;
+        }
+        tmp$ret$14 = tmp$ret$13.toLowerCase();
+        break $l$block_13;
+      }
+      tmp_18 = '' + '.' + tmp$ret$14;
     } else {
       {
-        tmp_11 = '';
+        tmp_18 = '';
       }
     }
-    var extension = tmp_11;
-    var tmp_14 = FileNameUtil_getInstance();
-    var tmp_15 = _get_outputFile_(this);
-    var parentDirectoryRaw = tmp_14.getSelfOrParentDirectory$default_zmr95_k$(tmp_15, false, 2, null);
+    var extension = tmp_18;
+    var tmp$ret$18;
+    $l$block_17: {
+      var tmp5_apply_0 = nullIfEmpty_0(_get_outputFile_(this));
+      {
+      }
+      {
+        if (tmp5_apply_0 == null) {
+          {
+            var tmp0_e_0_2 = Log_getInstance();
+            if (tmp0_e_0_2._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+              var tmp_21 = tmp0_e_0_2._loggerObject;
+              var tmp$ret$17;
+              $l$block_16: {
+                var tmp_22;
+                var tmp0_elvis_lhs_1_1_3 = tmp0_e_0_2._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3) {
+                  tmp_22 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_22 = '';
+                  }
+                }
+                var tmp_23 = tmp_22;
+                var tmp_24;
+                var tmp$ret$15;
+                $l$block_14: {
+                  {
+                  }
+                  tmp$ret$15 = null == null ? true : isBlank(null);
+                  break $l$block_14;
+                }
+                if (!tmp$ret$15) {
+                  tmp_24 = 'null::';
+                } else {
+                  {
+                    tmp_24 = '';
+                  }
+                }
+                var tmp_25 = tmp_24;
+                var tmp$ret$16;
+                $l$block_15: {
+                  tmp$ret$16 = 'Error 1018: Output file cannot be blank';
+                  break $l$block_15;
+                }
+                tmp$ret$17 = '' + tmp_23 + tmp_25 + tmp$ret$16;
+                break $l$block_16;
+              }
+              tmp_21.error(tmp$ret$17);
+            }}
+          return exitNative(1018);
+        }}
+      tmp$ret$18 = tmp5_apply_0;
+      break $l$block_17;
+    }
+    var outputFile = {_v: ensureNotNull(tmp$ret$18)};
+    outputFile._v = outputFile._v + extension;
+    var tmp_26 = FileNameUtil_getInstance();
+    var tmp_27 = outputFile._v;
+    var parentDirectoryRaw = tmp_26.getSelfOrParentDirectory$default_zmr95_k$(tmp_27, false, 2, null);
     var outputDirectory = ensureAndGetOutputDirectory(parentDirectoryRaw, currentWorkingDirectory, true);
-    var tmp_16 = PathUtil_getInstance();
-    var tmp_17 = FileNameUtil_getInstance();
-    var tmp_18 = _get_outputFile_(this);
-    var outputFile = tmp_16.combine_yn9lj1_k$([outputDirectory, plus_1(tmp_17.getLastPathComponent$default_zmr95_k$(tmp_18, false, 2, null), extension)]);
-    var tmp_19 = GlobalScope_getInstance();
-    launch$default(tmp_19, null, null, _no_name_provided_$factory_210(this, allFiles, outputFile, shouldWrite_1, null), 3, null);
+    var tmp_28 = PathUtil_getInstance();
+    var tmp_29 = FileNameUtil_getInstance();
+    var tmp_30 = outputFile._v;
+    outputFile._v = tmp_28.combine_yn9lj1_k$([outputDirectory, ensureNotNull(tmp_29.getLastPathComponent$default_zmr95_k$(tmp_30, false, 2, null))]);
+    var tmp_31 = GlobalScope_getInstance();
+    launch$default(tmp_31, null, null, _no_name_provided_$factory_210(this, allFiles, outputFile, shouldWrite_1, null), 3, null);
     Unit_getInstance();
   };
   CompileCLI.$metadata$ = {
@@ -52156,10 +52654,10 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__245($opts, $shouldWrite, this$0, resultContinuation) {
+  function _no_name_provided__245($opts, $shouldWrite, $quiet, resultContinuation) {
     this._$opts = $opts;
     this._$shouldWrite_0 = $shouldWrite;
-    this._this$0_39 = this$0;
+    this._$quiet = $quiet;
     CoroutineImpl_0.call(this, resultContinuation);
   }
   _no_name_provided__245.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
@@ -52206,7 +52704,7 @@
             continue $sm;
           case 3:
             if (this._WHEN_RESULT0) {
-              if (!_get_quiet_(this._this$0_39)) {
+              if (!this._$quiet) {
                 var tmp0_i_0 = Log_getInstance();
                 if (tmp0_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
                   var tmp_0 = tmp0_i_0._loggerObject;
@@ -52283,7 +52781,7 @@
      while (true);
   };
   _no_name_provided__245.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
-    var i = new _no_name_provided__245(this._$opts, this._$shouldWrite_0, this._this$0_39, completion);
+    var i = new _no_name_provided__245(this._$opts, this._$shouldWrite_0, this._$quiet, completion);
     i._$this$launch_0 = $this$launch;
     return i;
   };
@@ -52344,75 +52842,86 @@
   }
   ConvertBreedCLI.prototype.execute_sv8swh_k$ = function () {
     var currentWorkingDirectory = getCurrentWorkingDirectory();
-    var tmp0_$receiver = _get_files__0(this);
-    var tmp1_fileNameRegex = BREED_SPRITE_FILE_REGEX;
-    var spriteFiles = unpackPaths$default(tmp0_$receiver, null, tmp1_fileNameRegex, currentWorkingDirectory, 1, null);
+    var tmp;
+    try {
+      var tmp0_$receiver = _get_files__0(this);
+      var tmp1_fileNameRegex = BREED_SPRITE_FILE_REGEX;
+      tmp = unpackPaths$default(tmp0_$receiver, null, tmp1_fileNameRegex, currentWorkingDirectory, 1, null);
+    } catch ($p) {
+      var tmp_0;
+      if ($p instanceof MissingFilesException) {
+        {
+          var tmp0_e_0 = Log_getInstance();
+          if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+            var tmp_1 = tmp0_e_0._loggerObject;
+            var tmp$ret$2;
+            $l$block_1: {
+              var tmp_2;
+              var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
+              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                tmp_2 = '**ERROR** ';
+              } else {
+                {
+                  tmp_2 = '';
+                }
+              }
+              var tmp_3 = tmp_2;
+              var tmp_4;
+              var tmp$ret$0;
+              $l$block: {
+                {
+                }
+                tmp$ret$0 = null == null ? true : isBlank(null);
+                break $l$block;
+              }
+              if (!tmp$ret$0) {
+                tmp_4 = 'null::';
+              } else {
+                {
+                  tmp_4 = '';
+                }
+              }
+              var tmp_5 = tmp_4;
+              var tmp$ret$1;
+              $l$block_0: {
+                tmp$ret$1 = 'Error 1015: ' + ensureNotNull($p.message);
+                break $l$block_0;
+              }
+              tmp$ret$2 = '' + tmp_3 + tmp_5 + tmp$ret$1;
+              break $l$block_1;
+            }
+            tmp_1.error(tmp$ret$2);
+          }}
+        return exitNative(1015);
+      } else {
+        {
+          throw $p;
+        }
+      }
+      tmp = tmp_0;
+    }
+    var spriteFiles = tmp;
     if (spriteFiles.isEmpty_0_k$()) {
-      var tmp;
+      var tmp_6;
       if (_get_ignoreErrors_(this)) {
         if (!_get_quiet_(this)) {
           {
-            var tmp0_w_0 = Log_getInstance();
-            if (tmp0_w_0._logLevel._value_3 >= LogLevel_WARN_getInstance()._value_3) {
-              var tmp_0 = tmp0_w_0._loggerObject;
-              var tmp$ret$2;
-              $l$block_1: {
-                var tmp_1;
-                var tmp0_elvis_lhs_1_1 = tmp0_w_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
-                  tmp_1 = '**WARN** ';
-                } else {
-                  {
-                    tmp_1 = '';
-                  }
-                }
-                var tmp_2 = tmp_1;
-                var tmp_3;
-                var tmp$ret$0;
-                $l$block: {
-                  {
-                  }
-                  tmp$ret$0 = null == null ? true : isBlank(null);
-                  break $l$block;
-                }
-                if (!tmp$ret$0) {
-                  tmp_3 = 'null::';
-                } else {
-                  {
-                    tmp_3 = '';
-                  }
-                }
-                var tmp_4 = tmp_3;
-                var tmp$ret$1;
-                $l$block_0: {
-                  tmp$ret$1 = 'Warn 1002: No valid breed sprite files found';
-                  break $l$block_0;
-                }
-                tmp$ret$2 = '' + tmp_2 + tmp_4 + tmp$ret$1;
-                break $l$block_1;
-              }
-              tmp_0.warning(tmp$ret$2);
-            }}
-        }tmp = exitNative(0);
-      } else {
-        if (!_get_quiet_(this)) {
-          {
-            var tmp1_e_0 = Log_getInstance();
-            if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-              var tmp_5 = tmp1_e_0._loggerObject;
+            var tmp1_w_0 = Log_getInstance();
+            if (tmp1_w_0._logLevel._value_3 >= LogLevel_WARN_getInstance()._value_3) {
+              var tmp_7 = tmp1_w_0._loggerObject;
               var tmp$ret$5;
               $l$block_4: {
-                var tmp_6;
-                var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
+                var tmp_8;
+                var tmp0_elvis_lhs_1_1_0 = tmp1_w_0._loggerObject.prependLogType;
                 if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
-                  tmp_6 = '**ERROR** ';
+                  tmp_8 = '**WARN** ';
                 } else {
                   {
-                    tmp_6 = '';
+                    tmp_8 = '';
                   }
                 }
-                var tmp_7 = tmp_6;
-                var tmp_8;
+                var tmp_9 = tmp_8;
+                var tmp_10;
                 var tmp$ret$3;
                 $l$block_2: {
                   {
@@ -52421,151 +52930,155 @@
                   break $l$block_2;
                 }
                 if (!tmp$ret$3) {
-                  tmp_8 = 'null::';
+                  tmp_10 = 'null::';
                 } else {
                   {
-                    tmp_8 = '';
+                    tmp_10 = '';
                   }
                 }
-                var tmp_9 = tmp_8;
+                var tmp_11 = tmp_10;
                 var tmp$ret$4;
                 $l$block_3: {
-                  tmp$ret$4 = 'Error 1002: No valid breed sprite files found';
+                  tmp$ret$4 = 'Warn 1002: No valid breed sprite files found';
                   break $l$block_3;
                 }
-                tmp$ret$5 = '' + tmp_7 + tmp_9 + tmp$ret$4;
+                tmp$ret$5 = '' + tmp_9 + tmp_11 + tmp$ret$4;
                 break $l$block_4;
               }
-              tmp_5.error(tmp$ret$5);
+              tmp_7.warning(tmp$ret$5);
             }}
-        }tmp = exitNative(1002);
+        }tmp_6 = exitNative(0);
+      } else {
+        if (!_get_quiet_(this)) {
+          {
+            var tmp2_e_0 = Log_getInstance();
+            if (tmp2_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+              var tmp_12 = tmp2_e_0._loggerObject;
+              var tmp$ret$8;
+              $l$block_7: {
+                var tmp_13;
+                var tmp0_elvis_lhs_1_1_1 = tmp2_e_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
+                  tmp_13 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_13 = '';
+                  }
+                }
+                var tmp_14 = tmp_13;
+                var tmp_15;
+                var tmp$ret$6;
+                $l$block_5: {
+                  {
+                  }
+                  tmp$ret$6 = null == null ? true : isBlank(null);
+                  break $l$block_5;
+                }
+                if (!tmp$ret$6) {
+                  tmp_15 = 'null::';
+                } else {
+                  {
+                    tmp_15 = '';
+                  }
+                }
+                var tmp_16 = tmp_15;
+                var tmp$ret$7;
+                $l$block_6: {
+                  tmp$ret$7 = 'Error 1002: No valid breed sprite files found';
+                  break $l$block_6;
+                }
+                tmp$ret$8 = '' + tmp_14 + tmp_16 + tmp$ret$7;
+                break $l$block_7;
+              }
+              tmp_12.error(tmp$ret$8);
+            }}
+        }tmp_6 = exitNative(1002);
       }
-      return tmp;
-    }var tmp2_safe_receiver = _get_attDirectory_(this);
-    var tmp_10;
+      return tmp_6;
+    }var quiet = _get_quiet_(this);
+    var tmp2_safe_receiver = _get_attDirectory_(this);
+    var tmp_17;
     if (tmp2_safe_receiver == null) {
-      tmp_10 = null;
+      tmp_17 = null;
     } else {
-      var tmp$ret$7;
-      $l$block_6: {
+      tmp_17 = replace$default_0(tmp2_safe_receiver, '\\ ', ' ', false, 4, null);
+    }
+    var attDirectory = tmp_17;
+    var tmp3_safe_receiver = attDirectory;
+    var tmp_18;
+    if (tmp3_safe_receiver == null) {
+      tmp_18 = null;
+    } else {
+      var tmp$ret$10;
+      $l$block_9: {
         {
         }
-        var tmp$ret$6;
-        $l$block_5: {
-          var tmp0_$receiver_2 = listOf_0(tmp2_safe_receiver);
-          var tmp1_fileNameRegex_3 = BREED_ATT_FILE_REGEX;
-          tmp$ret$6 = unpackPaths$default(tmp0_$receiver_2, null, tmp1_fileNameRegex_3, currentWorkingDirectory, 1, null);
-          break $l$block_5;
+        var tmp$ret$9;
+        $l$block_8: {
+          tmp$ret$9 = getAttFiles(currentWorkingDirectory, attDirectory, quiet);
+          break $l$block_8;
         }
-        tmp$ret$7 = tmp$ret$6;
-        break $l$block_6;
+        tmp$ret$10 = tmp$ret$9;
+        break $l$block_9;
       }
-      tmp_10 = tmp$ret$7;
+      tmp_18 = tmp$ret$10;
     }
-    var attFiles = tmp_10;
+    var attFiles = tmp_18;
     var outputGenus = getOutputGenus(_get_outputGenus_(this));
     var outputBreed = getOutputBreed(_get_toGame_(this), _get_outputBreed_(this));
-    var tmp_11;
-    var tmp3_safe_receiver = outputGenus;
-    var tmp_12 = tmp3_safe_receiver == null ? null : tmp3_safe_receiver._first;
-    var tmp$ret$9;
-    $l$block_8: {
-      var tmp2_lowercase_0 = _get_spriteType__0(_get_toGame_(this))._get_name__0_k$();
-      var tmp$ret$8;
-      $l$block_7: {
-        tmp$ret$8 = tmp2_lowercase_0;
-        break $l$block_7;
+    var tmp_19;
+    var tmp4_safe_receiver = outputGenus;
+    var tmp_20 = tmp4_safe_receiver == null ? null : tmp4_safe_receiver._first;
+    var tmp$ret$12;
+    $l$block_11: {
+      var tmp3_lowercase_0 = _get_spriteType__0(_get_toGame_(this))._get_name__0_k$();
+      var tmp$ret$11;
+      $l$block_10: {
+        tmp$ret$11 = tmp3_lowercase_0;
+        break $l$block_10;
       }
-      tmp$ret$9 = tmp$ret$8.toLowerCase();
-      break $l$block_8;
+      tmp$ret$12 = tmp$ret$11.toLowerCase();
+      break $l$block_11;
     }
-    if (logDuplicatesAndGetHasDuplicates(spriteFiles, tmp_12, outputBreed, tmp$ret$9)) {
-      tmp_11 = true;
+    if (logDuplicatesAndGetHasDuplicates(spriteFiles, tmp_20, outputBreed, tmp$ret$12)) {
+      tmp_19 = true;
     } else {
       {
-        var tmp$ret$10;
-        $l$block_9: {
+        var tmp$ret$13;
+        $l$block_12: {
           var tmp0_elvis_lhs_1 = attFiles;
-          tmp$ret$10 = tmp0_elvis_lhs_1 == null ? emptyList() : tmp0_elvis_lhs_1;
-          break $l$block_9;
+          tmp$ret$13 = tmp0_elvis_lhs_1 == null ? emptyList() : tmp0_elvis_lhs_1;
+          break $l$block_12;
         }
-        var tmp_13 = tmp$ret$10;
-        var tmp4_safe_receiver = outputGenus;
-        tmp_11 = logDuplicatesAndGetHasDuplicates(tmp_13, tmp4_safe_receiver == null ? null : tmp4_safe_receiver._first, outputBreed, 'att');
+        var tmp_21 = tmp$ret$13;
+        var tmp5_safe_receiver = outputGenus;
+        tmp_19 = logDuplicatesAndGetHasDuplicates(tmp_21, tmp5_safe_receiver == null ? null : tmp5_safe_receiver._first, outputBreed, 'att');
       }
     }
-    var duplicates = tmp_11;
+    var duplicates = tmp_19;
     if (duplicates) {
       return exitNative(1011);
-    }var tmp_14 = _get_outputDirectory_(this);
-    var outputDirectory = ensureAndGetOutputDirectory$default(tmp_14, currentWorkingDirectory, false, 4, null);
+    }var tmp_22 = _get_outputDirectory_(this);
+    var outputDirectory = ensureAndGetOutputDirectory$default(tmp_22, currentWorkingDirectory, false, 4, null);
     var ignoreErrors = _get_ignoreErrors_(this);
     if (_get_overwriteExisting__0(this) ? _get_overwriteNone__0(this) : false) {
       {
-        var tmp3_e_0 = Log_getInstance();
-        if (tmp3_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-          var tmp_15 = tmp3_e_0._loggerObject;
-          var tmp$ret$13;
-          $l$block_12: {
-            var tmp_16;
-            var tmp0_elvis_lhs_1_1_1 = tmp3_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
-              tmp_16 = '**ERROR** ';
-            } else {
-              {
-                tmp_16 = '';
-              }
-            }
-            var tmp_17 = tmp_16;
-            var tmp_18;
-            var tmp$ret$11;
-            $l$block_10: {
-              {
-              }
-              tmp$ret$11 = null == null ? true : isBlank(null);
-              break $l$block_10;
-            }
-            if (!tmp$ret$11) {
-              tmp_18 = 'null::';
-            } else {
-              {
-                tmp_18 = '';
-              }
-            }
-            var tmp_19 = tmp_18;
-            var tmp$ret$12;
-            $l$block_11: {
-              tmp$ret$12 = 'Error 1003: Cannot use overwrite existing and overwrite none.';
-              break $l$block_11;
-            }
-            tmp$ret$13 = '' + tmp_17 + tmp_19 + tmp$ret$12;
-            break $l$block_12;
-          }
-          tmp_15.error(tmp$ret$13);
-        }}
-      return exitNative(1003);
-    }var overwriteAll = new Pointer(_get_overwriteExisting__0(this) ? !_get_overwriteNone__0(this) : false);
-    var overwriteNone = new Pointer(!_get_overwriteExisting__0(this) ? _get_overwriteNone__0(this) : false);
-    var tmp5_elvis_lhs = shouldOverwriteOverride;
-    var shouldWrite_1 = tmp5_elvis_lhs == null ? createDefaultShouldOverwriteCallback(overwriteAll, overwriteNone) : tmp5_elvis_lhs;
-    if (!_get_quiet_(this)) {
-      {
-        var tmp4_i_0 = Log_getInstance();
-        if (tmp4_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
-          var tmp_20 = tmp4_i_0._loggerObject;
+        var tmp4_e_0 = Log_getInstance();
+        if (tmp4_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+          var tmp_23 = tmp4_e_0._loggerObject;
           var tmp$ret$16;
           $l$block_15: {
-            var tmp_21;
-            var tmp0_elvis_lhs_1_1_2 = tmp4_i_0._loggerObject.prependLogType;
+            var tmp_24;
+            var tmp0_elvis_lhs_1_1_2 = tmp4_e_0._loggerObject.prependLogType;
             if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_2) {
-              tmp_21 = '**LOG1** ';
+              tmp_24 = '**ERROR** ';
             } else {
               {
-                tmp_21 = '';
+                tmp_24 = '';
               }
             }
-            var tmp_22 = tmp_21;
-            var tmp_23;
+            var tmp_25 = tmp_24;
+            var tmp_26;
             var tmp$ret$14;
             $l$block_13: {
               {
@@ -52574,87 +53087,135 @@
               break $l$block_13;
             }
             if (!tmp$ret$14) {
-              tmp_23 = 'null::';
+              tmp_26 = 'null::';
             } else {
               {
-                tmp_23 = '';
+                tmp_26 = '';
               }
             }
-            var tmp_24 = tmp_23;
+            var tmp_27 = tmp_26;
             var tmp$ret$15;
             $l$block_14: {
-              tmp$ret$15 = '' + 'Converting ' + spriteFiles._get_size__0_k$() + ' sprites to ' + _get_toGame_(this)._code_0;
+              tmp$ret$15 = 'Error 1003: Cannot use overwrite existing and overwrite none.';
               break $l$block_14;
             }
-            tmp$ret$16 = '' + tmp_22 + tmp_24 + tmp$ret$15;
+            tmp$ret$16 = '' + tmp_25 + tmp_27 + tmp$ret$15;
             break $l$block_15;
           }
-          tmp_20.info(false, tmp$ret$16);
+          tmp_23.error(tmp$ret$16);
         }}
-    }var tmp_25;
-    var tmp_26;
+      return exitNative(1003);
+    }var overwriteAll = new Pointer(_get_overwriteExisting__0(this) ? !_get_overwriteNone__0(this) : false);
+    var overwriteNone = new Pointer(!_get_overwriteExisting__0(this) ? _get_overwriteNone__0(this) : false);
+    var tmp6_elvis_lhs = shouldOverwriteOverride;
+    var shouldWrite_1 = tmp6_elvis_lhs == null ? createDefaultShouldOverwriteCallback(overwriteAll, overwriteNone) : tmp6_elvis_lhs;
+    if (!quiet) {
+      {
+        var tmp5_i_0 = Log_getInstance();
+        if (tmp5_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
+          var tmp_28 = tmp5_i_0._loggerObject;
+          var tmp$ret$19;
+          $l$block_18: {
+            var tmp_29;
+            var tmp0_elvis_lhs_1_1_3 = tmp5_i_0._loggerObject.prependLogType;
+            if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3) {
+              tmp_29 = '**LOG1** ';
+            } else {
+              {
+                tmp_29 = '';
+              }
+            }
+            var tmp_30 = tmp_29;
+            var tmp_31;
+            var tmp$ret$17;
+            $l$block_16: {
+              {
+              }
+              tmp$ret$17 = null == null ? true : isBlank(null);
+              break $l$block_16;
+            }
+            if (!tmp$ret$17) {
+              tmp_31 = 'null::';
+            } else {
+              {
+                tmp_31 = '';
+              }
+            }
+            var tmp_32 = tmp_31;
+            var tmp$ret$18;
+            $l$block_17: {
+              tmp$ret$18 = '' + 'Converting ' + spriteFiles._get_size__0_k$() + ' sprites to ' + _get_toGame_(this)._code_0;
+              break $l$block_17;
+            }
+            tmp$ret$19 = '' + tmp_30 + tmp_32 + tmp$ret$18;
+            break $l$block_18;
+          }
+          tmp_28.info(false, tmp$ret$19);
+        }}
+    }var tmp_33;
+    var tmp_34;
     if (!_get_noTails_(this)) {
-      var tmp$ret$17;
-      $l$block_21: {
-        var tmp_27;
+      var tmp$ret$20;
+      $l$block_24: {
+        var tmp_35;
         if (isInterface(spriteFiles, Collection)) {
-          tmp_27 = spriteFiles.isEmpty_0_k$();
+          tmp_35 = spriteFiles.isEmpty_0_k$();
         } else {
           {
-            tmp_27 = false;
+            tmp_35 = false;
           }
         }
-        if (tmp_27) {
-          tmp$ret$17 = true;
-          break $l$block_21;
+        if (tmp_35) {
+          tmp$ret$20 = true;
+          break $l$block_24;
         } else {
         }
         var tmp0_iterator_1 = spriteFiles.iterator_0_k$();
         while (tmp0_iterator_1.hasNext_0_k$()) {
           var element_2 = tmp0_iterator_1.next_0_k$();
-          var tmp$ret$20;
-          $l$block_19: {
-            var tmp$ret$19;
-            $l$block_18: {
-              var tmp$ret$18;
-              $l$block_17: {
-                tmp$ret$18 = element_2;
-                break $l$block_17;
+          var tmp$ret$23;
+          $l$block_22: {
+            var tmp$ret$22;
+            $l$block_21: {
+              var tmp$ret$21;
+              $l$block_20: {
+                tmp$ret$21 = element_2;
+                break $l$block_20;
               }
-              tmp$ret$19 = tmp$ret$18.toLowerCase();
-              break $l$block_18;
+              tmp$ret$22 = tmp$ret$21.toLowerCase();
+              break $l$block_21;
             }
-            tmp$ret$20 = charSequenceGet(tmp$ret$19, 0).equals(new Char(109));
-            break $l$block_19;
+            tmp$ret$23 = charSequenceGet(tmp$ret$22, 0).equals(new Char(109));
+            break $l$block_22;
           }
-          if (tmp$ret$20) {
-            tmp$ret$17 = false;
-            break $l$block_21;
+          if (tmp$ret$23) {
+            tmp$ret$20 = false;
+            break $l$block_24;
           } else {
           }
         }
-        tmp$ret$17 = true;
-        break $l$block_21;
+        tmp$ret$20 = true;
+        break $l$block_24;
       }
-      tmp_26 = tmp$ret$17;
+      tmp_34 = tmp$ret$20;
     } else {
-      tmp_26 = false;
+      tmp_34 = false;
     }
-    if (tmp_26) {
-      var tmp_28;
+    if (tmp_34) {
+      var tmp_36;
       if (!(outputGenus == null) ? !(outputBreed == null) : false) {
-        tmp_28 = listOf_0('' + outputGenus._first + '0' + outputBreed);
+        tmp_36 = listOf_0('' + outputGenus._first + '0' + outputBreed);
       } else {
-        var tmp$ret$23;
-        $l$block_24: {
-          var tmp$ret$22;
-          $l$block_23: {
+        var tmp$ret$26;
+        $l$block_27: {
+          var tmp$ret$25;
+          $l$block_26: {
             var tmp0_mapTo_0_1 = ArrayList_init_$Create$_0(collectionSizeOrDefault(spriteFiles, 10));
             var tmp0_iterator_1_2 = spriteFiles.iterator_0_k$();
             while (tmp0_iterator_1_2.hasNext_0_k$()) {
               var item_2_3 = tmp0_iterator_1_2.next_0_k$();
-              var tmp$ret$21;
-              $l$block_22: {
+              var tmp$ret$24;
+              $l$block_25: {
                 var fileName_5 = ensureNotNull(FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(item_2_3));
                 var tmp0_safe_receiver_8 = outputGenus;
                 var tmp1_elvis_lhs_7 = tmp0_safe_receiver_8 == null ? null : tmp0_safe_receiver_8._first;
@@ -52663,38 +53224,36 @@
                   genus_6 = genus_6 - 4 | 0;
                 }var tmp2_elvis_lhs_10 = outputBreed;
                 var breed_9 = tmp2_elvis_lhs_10 == null ? charSequenceGet(fileName_5, 3) : tmp2_elvis_lhs_10;
-                tmp$ret$21 = '' + genus_6 + '0' + breed_9;
-                break $l$block_22;
+                tmp$ret$24 = '' + genus_6 + '0' + breed_9;
+                break $l$block_25;
               }
-              tmp0_mapTo_0_1.add_2bq_k$(tmp$ret$21);
+              tmp0_mapTo_0_1.add_2bq_k$(tmp$ret$24);
               Unit_getInstance();
             }
-            tmp$ret$22 = tmp0_mapTo_0_1;
-            break $l$block_23;
+            tmp$ret$25 = tmp0_mapTo_0_1;
+            break $l$block_26;
           }
-          tmp$ret$23 = tmp$ret$22;
-          break $l$block_24;
+          tmp$ret$26 = tmp$ret$25;
+          break $l$block_27;
         }
-        tmp_28 = distinct(tmp$ret$23);
+        tmp_36 = distinct(tmp$ret$26);
       }
-      tmp_25 = tmp_28;
+      tmp_33 = tmp_36;
     } else {
       {
-        tmp_25 = emptyList();
+        tmp_33 = emptyList();
       }
     }
-    var tailFiles = tmp_25;
+    var tailFiles = tmp_33;
     var fromGame = _get_fromGame_(this);
     var toGame = _get_toGame_(this);
     var fromGames = !(fromGame == null) ? null : inferGame(spriteFiles);
     var ageProgressions = getAgeProgressions(_get_noAgeProgression_(this), fromGames, toGame, spriteFiles);
-    var tmp6_attDirectory = _get_attDirectory_(this);
     var tmp7_encoding = _get_encoding__0(this);
-    var tmp8_quiet = _get_quiet_(this);
-    var tmp9_progress = _get_progress_(this);
-    var opts = ConvertBreedOptions_init_$Create$(fromGame, fromGames, toGame, spriteFiles, tmp6_attDirectory, attFiles, ageProgressions, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, tmp7_encoding, ignoreErrors, tailFiles, null, tmp8_quiet, tmp9_progress, shouldWrite_1, 16384, null);
-    var tmp_29 = GlobalScope_getInstance();
-    launch$default(tmp_29, null, null, _no_name_provided_$factory_214(opts, shouldWrite_1, this, null), 3, null);
+    var tmp8_progress = _get_progress_(this);
+    var opts = ConvertBreedOptions_init_$Create$(fromGame, fromGames, toGame, spriteFiles, attDirectory, attFiles, ageProgressions, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, tmp7_encoding, ignoreErrors, tailFiles, null, quiet, tmp8_progress, shouldWrite_1, 16384, null);
+    var tmp_37 = GlobalScope_getInstance();
+    launch$default(tmp_37, null, null, _no_name_provided_$factory_214(opts, shouldWrite_1, quiet, null), 3, null);
     Unit_getInstance();
   };
   ConvertBreedCLI.$metadata$ = {
@@ -52719,20 +53278,20 @@
     return ConvertBreedOptions_init_$Init$(fromGame, fromGames, toGame, spriteFiles, attDirectory, attFiles, ageProgressions, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, progress, shouldWriteCallback, $mask0, $marker, Object.create(ConvertBreedOptions.prototype));
   }
   function _no_name_provided__246(this$0) {
-    this._this$0_40 = this$0;
+    this._this$0_39 = this$0;
   }
   _no_name_provided__246.prototype.invoke_0_k$ = function () {
-    return this._this$0_40._spriteFiles._get_size__0_k$();
+    return this._this$0_39._spriteFiles._get_size__0_k$();
   };
   _no_name_provided__246.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided__247(this$0) {
-    this._this$0_41 = this$0;
+    this._this$0_40 = this$0;
   }
   _no_name_provided__247.prototype.invoke_0_k$ = function () {
-    var tmp0_subject = this._this$0_41._toGame_2;
+    var tmp0_subject = this._this$0_40._toGame_2;
     return tmp0_subject.equals(GameVariant_C1_getInstance()) ? 'spr' : tmp0_subject.equals(GameVariant_C2_getInstance()) ? 's16' : 'c16';
   };
   _no_name_provided__247.$metadata$ = {
@@ -52740,10 +53299,10 @@
     interfaces: []
   };
   function _no_name_provided__248(this$0) {
-    this._this$0_42 = this$0;
+    this._this$0_41 = this$0;
   }
   _no_name_provided__248.prototype.invoke_0_k$ = function () {
-    return getFallbackTailSpriteBytes(this._this$0_42);
+    return getFallbackTailSpriteBytes(this._this$0_41);
   };
   _no_name_provided__248.$metadata$ = {
     kind: 'class',
@@ -53078,7 +53637,7 @@
     } catch ($p) {
       var tmp_15;
       if ($p instanceof Exception) {
-        var tmp1_safe_receiver = nullIfEmpty($p.message);
+        var tmp1_safe_receiver = nullIfEmpty_0($p.message);
         var tmp_16;
         if (tmp1_safe_receiver == null) {
           tmp_16 = null;
@@ -53325,7 +53884,17 @@
       return null;
     }var tmp;
     try {
-      var tmp0_subject = outputGenusString;
+      var tmp$ret$1;
+      $l$block_0: {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = outputGenusString;
+          break $l$block;
+        }
+        tmp$ret$1 = tmp$ret$0.toLowerCase();
+        break $l$block_0;
+      }
+      var tmp0_subject = tmp$ret$1;
       var tmp_0;
       switch (tmp0_subject) {
         case 'n':
@@ -53355,8 +53924,8 @@
           var tmp0_e_0 = Log_getInstance();
           if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
             var tmp_2 = tmp0_e_0._loggerObject;
-            var tmp$ret$2;
-            $l$block_1: {
+            var tmp$ret$4;
+            $l$block_3: {
               var tmp_3;
               var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
               if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
@@ -53368,14 +53937,14 @@
               }
               var tmp_4 = tmp_3;
               var tmp_5;
-              var tmp$ret$0;
-              $l$block: {
+              var tmp$ret$2;
+              $l$block_1: {
                 {
                 }
-                tmp$ret$0 = null == null ? true : isBlank(null);
-                break $l$block;
+                tmp$ret$2 = null == null ? true : isBlank(null);
+                break $l$block_1;
               }
-              if (!tmp$ret$0) {
+              if (!tmp$ret$2) {
                 tmp_5 = 'null::';
               } else {
                 {
@@ -53383,15 +53952,15 @@
                 }
               }
               var tmp_6 = tmp_5;
-              var tmp$ret$1;
-              $l$block_0: {
-                tmp$ret$1 = '' + 'Error 1007: ' + $p.message;
-                break $l$block_0;
+              var tmp$ret$3;
+              $l$block_2: {
+                tmp$ret$3 = '' + 'Error 1007: ' + $p.message;
+                break $l$block_2;
               }
-              tmp$ret$2 = '' + tmp_4 + tmp_6 + tmp$ret$1;
-              break $l$block_1;
+              tmp$ret$4 = '' + tmp_4 + tmp_6 + tmp$ret$3;
+              break $l$block_3;
             }
-            tmp_2.error(tmp$ret$2);
+            tmp_2.error(tmp$ret$4);
           }}
         return exitNative(1007);
       } else {
@@ -53743,6 +54312,229 @@
       }
     }
     return fromGames;
+  }
+  function getAttFiles(currentWorkingDirectory, attDirectory, quiet) {
+    var tmp;
+    try {
+      var tmp$ret$1;
+      $l$block_0: {
+        {
+        }
+        var tmp$ret$0;
+        $l$block: {
+          var tmp0_$receiver_2 = listOf_0(attDirectory);
+          var tmp1_fileNameRegex_3 = BREED_ATT_FILE_REGEX;
+          tmp$ret$0 = nullIfEmpty(unpackPaths$default(tmp0_$receiver_2, null, tmp1_fileNameRegex_3, currentWorkingDirectory, 1, null));
+          break $l$block;
+        }
+        tmp$ret$1 = tmp$ret$0;
+        break $l$block_0;
+      }
+      tmp = tmp$ret$1;
+    } catch ($p) {
+      var tmp_0;
+      if ($p instanceof MissingFilesException) {
+        {
+          var tmp0_e_0 = Log_getInstance();
+          if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+            var tmp_1 = tmp0_e_0._loggerObject;
+            var tmp$ret$4;
+            $l$block_3: {
+              var tmp_2;
+              var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
+              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                tmp_2 = '**ERROR** ';
+              } else {
+                {
+                  tmp_2 = '';
+                }
+              }
+              var tmp_3 = tmp_2;
+              var tmp_4;
+              var tmp$ret$2;
+              $l$block_1: {
+                {
+                }
+                tmp$ret$2 = null == null ? true : isBlank(null);
+                break $l$block_1;
+              }
+              if (!tmp$ret$2) {
+                tmp_4 = 'null::';
+              } else {
+                {
+                  tmp_4 = '';
+                }
+              }
+              var tmp_5 = tmp_4;
+              var tmp$ret$3;
+              $l$block_2: {
+                tmp$ret$3 = 'Error 1015: ' + ensureNotNull($p.message);
+                break $l$block_2;
+              }
+              tmp$ret$4 = '' + tmp_3 + tmp_5 + tmp$ret$3;
+              break $l$block_3;
+            }
+            tmp_1.error(tmp$ret$4);
+          }}
+        tmp_0 = exitNative(1015);
+      } else {
+        {
+          throw $p;
+        }
+      }
+      tmp = tmp_0;
+    }
+    var attFiles = tmp;
+    if (isNotNullOrEmpty(attFiles)) {
+      return attFiles;
+    }var errorCode = 1002;
+    if (quiet) {
+      return exitNative(errorCode);
+    }if (isBlank(attDirectory)) {
+      {
+        var tmp1_e_0 = Log_getInstance();
+        if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+          var tmp_6 = tmp1_e_0._loggerObject;
+          var tmp$ret$7;
+          $l$block_6: {
+            var tmp_7;
+            var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
+            if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
+              tmp_7 = '**ERROR** ';
+            } else {
+              {
+                tmp_7 = '';
+              }
+            }
+            var tmp_8 = tmp_7;
+            var tmp_9;
+            var tmp$ret$5;
+            $l$block_4: {
+              {
+              }
+              tmp$ret$5 = null == null ? true : isBlank(null);
+              break $l$block_4;
+            }
+            if (!tmp$ret$5) {
+              tmp_9 = 'null::';
+            } else {
+              {
+                tmp_9 = '';
+              }
+            }
+            var tmp_10 = tmp_9;
+            var tmp$ret$6;
+            $l$block_5: {
+              tmp$ret$6 = 'ATT directory is unset or empty';
+              break $l$block_5;
+            }
+            tmp$ret$7 = '' + tmp_8 + tmp_10 + tmp$ret$6;
+            break $l$block_6;
+          }
+          tmp_6.error(tmp$ret$7);
+        }}
+      return exitNative(errorCode);
+    }var attDirectoryAbsolute = qualifyPath(currentWorkingDirectory, attDirectory);
+    var tmp_11 = FileNameUtil_getInstance();
+    var tmp_12 = attDirectoryAbsolute;
+    var tmp0_elvis_lhs = tmp_11.getLastPathComponent$default_zmr95_k$(tmp_12, false, 2, null);
+    var lastPathComponent = tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs;
+    var tmp_13 = new Char(42);
+    if (contains$default(lastPathComponent, tmp_13, false, 2, null)) {
+      var tmp_14 = FileNameUtil_getInstance();
+      var tmp_15 = attDirectoryAbsolute;
+      var tmp1_elvis_lhs = tmp_14.getSelfOrParentDirectory$default_zmr95_k$(tmp_15, false, 2, null);
+      attDirectoryAbsolute = tmp1_elvis_lhs == null ? '' : tmp1_elvis_lhs;
+    } else {
+    }
+    if (!fileExists(attDirectoryAbsolute)) {
+      {
+        var tmp2_e_0 = Log_getInstance();
+        if (tmp2_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+          var tmp_16 = tmp2_e_0._loggerObject;
+          var tmp$ret$10;
+          $l$block_9: {
+            var tmp_17;
+            var tmp0_elvis_lhs_1_1_1 = tmp2_e_0._loggerObject.prependLogType;
+            if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
+              tmp_17 = '**ERROR** ';
+            } else {
+              {
+                tmp_17 = '';
+              }
+            }
+            var tmp_18 = tmp_17;
+            var tmp_19;
+            var tmp$ret$8;
+            $l$block_7: {
+              {
+              }
+              tmp$ret$8 = null == null ? true : isBlank(null);
+              break $l$block_7;
+            }
+            if (!tmp$ret$8) {
+              tmp_19 = 'null::';
+            } else {
+              {
+                tmp_19 = '';
+              }
+            }
+            var tmp_20 = tmp_19;
+            var tmp$ret$9;
+            $l$block_8: {
+              tmp$ret$9 = '' + 'ATT directory ' + attDirectoryAbsolute + ' does not exist';
+              break $l$block_8;
+            }
+            tmp$ret$10 = '' + tmp_18 + tmp_20 + tmp$ret$9;
+            break $l$block_9;
+          }
+          tmp_16.error(tmp$ret$10);
+        }}
+    } else {
+      {
+        var tmp3_e_0 = Log_getInstance();
+        if (tmp3_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+          var tmp_21 = tmp3_e_0._loggerObject;
+          var tmp$ret$13;
+          $l$block_12: {
+            var tmp_22;
+            var tmp0_elvis_lhs_1_1_2 = tmp3_e_0._loggerObject.prependLogType;
+            if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_2) {
+              tmp_22 = '**ERROR** ';
+            } else {
+              {
+                tmp_22 = '';
+              }
+            }
+            var tmp_23 = tmp_22;
+            var tmp_24;
+            var tmp$ret$11;
+            $l$block_10: {
+              {
+              }
+              tmp$ret$11 = null == null ? true : isBlank(null);
+              break $l$block_10;
+            }
+            if (!tmp$ret$11) {
+              tmp_24 = 'null::';
+            } else {
+              {
+                tmp_24 = '';
+              }
+            }
+            var tmp_25 = tmp_24;
+            var tmp$ret$12;
+            $l$block_11: {
+              tmp$ret$12 = '' + 'No ATTs found in ' + attDirectoryAbsolute;
+              break $l$block_11;
+            }
+            tmp$ret$13 = '' + tmp_23 + tmp_25 + tmp$ret$12;
+            break $l$block_12;
+          }
+          tmp_21.error(tmp$ret$13);
+        }}
+    }
+    return exitNative(errorCode);
   }
   function _no_name_provided__249($i, $opts, $shouldWrite, resultContinuation) {
     this._$i_2 = $i;
@@ -54097,7 +54889,7 @@
                     }
                   }
                   var tmp_19 = tmp_18;
-                  var tmp0_safe_receiver_4 = nullIfEmpty(this._e16.message);
+                  var tmp0_safe_receiver_4 = nullIfEmpty_0(this._e16.message);
                   var tmp_20;
                   if (tmp0_safe_receiver_4 == null) {
                     tmp_20 = null;
@@ -54328,7 +55120,7 @@
             if (tmp_39 instanceof Exception) {
               this._e28 = this._exception_0;
               var tmp_40 = this;
-              var tmp10_safe_receiver = nullIfEmpty(this._e28.message);
+              var tmp10_safe_receiver = nullIfEmpty_0(this._e28.message);
               var tmp_41;
               if (tmp10_safe_receiver == null) {
                 tmp_41 = null;
@@ -54966,20 +55758,15 @@
         switch (tmp) {
           case 0:
             this._exceptionState = 3;
-            var tmp_0 = this;
-            tmp_0._tmp0_isNullOrEmpty_00 = this._opts_2._attFiles;
-            if (this._tmp0_isNullOrEmpty_00 == null ? true : this._tmp0_isNullOrEmpty_00.isEmpty_0_k$())
+            if (isNullOrEmpty(this._opts_2._attFiles))
               return true;
-            else {
-            }
-
-            this._rows1 = _get_isC1e_(this._opts_2._toGame_2) ? 10 : 16;
-            var tmp_1 = this;
-            var tmp_2 = until(0, this._rows1);
-            tmp_1._att2 = encodeToByteArray(joinToString$default_0(tmp_2, '\r\n', null, null, 0, null, _no_name_provided_$factory_223(), 30, null));
-            this._outputAtt3 = PathUtil_getInstance().combine_yn9lj1_k$([this._opts_2._outputDirectory_3, '' + this._fileName + '.att']);
+            this._rows0 = _get_isC1e_(this._opts_2._toGame_2) ? 10 : 16;
+            var tmp_0 = this;
+            var tmp_1 = until(0, this._rows0);
+            tmp_0._att1 = encodeToByteArray(joinToString$default_0(tmp_1, '\r\n', null, null, 0, null, _no_name_provided_$factory_223(), 30, null));
+            this._outputAtt2 = PathUtil_getInstance().combine_yn9lj1_k$([this._opts_2._outputDirectory_3, '' + this._fileName + '.att']);
             this._state_0 = 1;
-            suspendResult = this._shouldWrite_5(this._outputAtt3, this);
+            suspendResult = this._shouldWrite_5(this._outputAtt2, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -54987,32 +55774,32 @@
           case 1:
             if (suspendResult) {
               try {
-                writeBytes_1(this._outputAtt3, this._att2);
+                writeBytes_1(this._outputAtt2, this._att1);
               } catch ($p) {
                 if ($p instanceof Exception) {
-                  var tmp1_e_0 = Log_getInstance();
-                  if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                    var tmp_3 = tmp1_e_0._loggerObject;
-                    var tmp_4;
-                    var tmp0_elvis_lhs_1_1 = tmp1_e_0._loggerObject.prependLogType;
+                  var tmp0_e_0 = Log_getInstance();
+                  if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                    var tmp_2 = tmp0_e_0._loggerObject;
+                    var tmp_3;
+                    var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
                     if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
-                      tmp_4 = '**ERROR** ';
+                      tmp_3 = '**ERROR** ';
                     } else {
                       {
-                        tmp_4 = '';
+                        tmp_3 = '';
                       }
                     }
-                    var tmp_5 = tmp_4;
-                    var tmp_6;
+                    var tmp_4 = tmp_3;
+                    var tmp_5;
                     if (!(null == null ? true : isBlank(null))) {
-                      tmp_6 = 'null::';
+                      tmp_5 = 'null::';
                     } else {
                       {
-                        tmp_6 = '';
+                        tmp_5 = '';
                       }
                     }
-                    var tmp_7 = tmp_6;
-                    tmp_3.error('' + tmp_5 + tmp_7 + ('' + 'Error 1016: Failed to write tail placeholder ' + this._fileName + '.att to ' + this._outputAtt3 + '. Error: ' + $p.message));
+                    var tmp_6 = tmp_5;
+                    tmp_2.error('' + tmp_4 + tmp_6 + ('' + 'Error 1016: Failed to write tail placeholder ' + this._fileName + '.att to ' + this._outputAtt2 + '. Error: ' + $p.message));
                   }return false;
                 } else {
                   {
@@ -55231,8 +56018,8 @@
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_214($opts, $shouldWrite, this$0, resultContinuation) {
-    var i = new _no_name_provided__245($opts, $shouldWrite, this$0, resultContinuation);
+  function _no_name_provided_$factory_214($opts, $shouldWrite, $quiet, resultContinuation) {
+    var i = new _no_name_provided__245($opts, $shouldWrite, $quiet, resultContinuation);
     var l = function (p1, $cont) {
       return i.invoke_2i3g7c_k$(p1, $cont);
     };
@@ -55351,7 +56138,7 @@
   };
   function _no_name_provided__257($opts, this$0, resultContinuation) {
     this._$opts_1 = $opts;
-    this._this$0_43 = this$0;
+    this._this$0_42 = this$0;
     CoroutineImpl_0.call(this, resultContinuation);
   }
   _no_name_provided__257.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
@@ -55380,7 +56167,7 @@
             continue $sm;
           case 1:
             if (suspendResult) {
-              if (!_get_quiet__0(this._this$0_43)) {
+              if (!_get_quiet__0(this._this$0_42)) {
                 var tmp0_i_0 = Log_getInstance();
                 if (tmp0_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
                   var tmp_0 = tmp0_i_0._loggerObject;
@@ -55456,7 +56243,7 @@
      while (true);
   };
   _no_name_provided__257.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
-    var i = new _no_name_provided__257(this._$opts_1, this._this$0_43, completion);
+    var i = new _no_name_provided__257(this._$opts_1, this._this$0_42, completion);
     i._$this$launch_1 = $this$launch;
     return i;
   };
@@ -55561,27 +56348,30 @@
     }
     var outputType = tmp;
     var currentWorkingDirectory = getCurrentWorkingDirectory();
-    var tmp_6 = _get_files__1(this);
-    var spriteFiles = unpackPaths$default(tmp_6, BASE_SPRITE_FILE_EXTENSIONS, null, null, 6, null);
-    if (spriteFiles.isEmpty_0_k$()) {
-      if (!_get_ignoreErrors__0(this)) {
+    var tmp_6;
+    try {
+      var tmp_7 = _get_files__1(this);
+      tmp_6 = unpackPaths$default(tmp_7, BASE_SPRITE_FILE_EXTENSIONS, null, null, 6, null);
+    } catch ($p_0) {
+      var tmp_8;
+      if ($p_0 instanceof MissingFilesException) {
         {
           var tmp1_e_0 = Log_getInstance();
           if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-            var tmp_7 = tmp1_e_0._loggerObject;
+            var tmp_9 = tmp1_e_0._loggerObject;
             var tmp$ret$5;
             $l$block_4: {
-              var tmp_8;
+              var tmp_10;
               var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
               if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
-                tmp_8 = '**ERROR** ';
+                tmp_10 = '**ERROR** ';
               } else {
                 {
-                  tmp_8 = '';
+                  tmp_10 = '';
                 }
               }
-              var tmp_9 = tmp_8;
-              var tmp_10;
+              var tmp_11 = tmp_10;
+              var tmp_12;
               var tmp$ret$3;
               $l$block_2: {
                 {
@@ -55590,49 +56380,50 @@
                 break $l$block_2;
               }
               if (!tmp$ret$3) {
-                tmp_10 = 'null::';
+                tmp_12 = 'null::';
               } else {
                 {
-                  tmp_10 = '';
+                  tmp_12 = '';
                 }
               }
-              var tmp_11 = tmp_10;
+              var tmp_13 = tmp_12;
               var tmp$ret$4;
               $l$block_3: {
-                tmp$ret$4 = 'Error 1002: No valid sprites found';
+                tmp$ret$4 = 'Error 1015: ' + ensureNotNull($p_0.message);
                 break $l$block_3;
               }
-              tmp$ret$5 = '' + tmp_9 + tmp_11 + tmp$ret$4;
+              tmp$ret$5 = '' + tmp_11 + tmp_13 + tmp$ret$4;
               break $l$block_4;
             }
-            tmp_7.error(tmp$ret$5);
+            tmp_9.error(tmp$ret$5);
           }}
-        return exitNative(1002);
-      }return exitNative(0);
-    }var duplicates = logDuplicatesAndGetHasDuplicates_0(spriteFiles, currentWorkingDirectory);
-    if (duplicates) {
-      return exitNative(1011);
-    }var tmp_12 = _get_outputDirectory__0(this);
-    var outputDirectory = ensureAndGetOutputDirectory$default(tmp_12, currentWorkingDirectory, false, 4, null);
-    var ignoreErrors = _get_ignoreErrors__0(this);
-    if (_get_overwriteExisting__1(this) ? _get_overwriteNone__1(this) : false) {
+        tmp_8 = exitNative(1015);
+      } else {
+        {
+          throw $p_0;
+        }
+      }
+      tmp_6 = tmp_8;
+    }
+    var spriteFiles = tmp_6;
+    if (spriteFiles.isEmpty_0_k$()) {
       {
         var tmp2_e_0 = Log_getInstance();
         if (tmp2_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-          var tmp_13 = tmp2_e_0._loggerObject;
+          var tmp_14 = tmp2_e_0._loggerObject;
           var tmp$ret$8;
           $l$block_7: {
-            var tmp_14;
+            var tmp_15;
             var tmp0_elvis_lhs_1_1_1 = tmp2_e_0._loggerObject.prependLogType;
             if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
-              tmp_14 = '**ERROR** ';
+              tmp_15 = '**ERROR** ';
             } else {
               {
-                tmp_14 = '';
+                tmp_15 = '';
               }
             }
-            var tmp_15 = tmp_14;
-            var tmp_16;
+            var tmp_16 = tmp_15;
+            var tmp_17;
             var tmp$ret$6;
             $l$block_5: {
               {
@@ -55641,45 +56432,48 @@
               break $l$block_5;
             }
             if (!tmp$ret$6) {
-              tmp_16 = 'null::';
+              tmp_17 = 'null::';
             } else {
               {
-                tmp_16 = '';
+                tmp_17 = '';
               }
             }
-            var tmp_17 = tmp_16;
+            var tmp_18 = tmp_17;
             var tmp$ret$7;
             $l$block_6: {
-              tmp$ret$7 = 'Error 1003: Cannot use overwrite existing and overwrite none.';
+              tmp$ret$7 = 'Error 1002: No valid sprites found';
               break $l$block_6;
             }
-            tmp$ret$8 = '' + tmp_15 + tmp_17 + tmp$ret$7;
+            tmp$ret$8 = '' + tmp_16 + tmp_18 + tmp$ret$7;
             break $l$block_7;
           }
-          tmp_13.error(tmp$ret$8);
+          tmp_14.error(tmp$ret$8);
         }}
-      return exitNative(1003);
-    }var overwriteAll = new Pointer(_get_overwriteExisting__1(this) ? !_get_overwriteNone__1(this) : false);
-    var overwriteNone = new Pointer(!_get_overwriteExisting__1(this) ? _get_overwriteNone__1(this) : false);
-    var shouldWrite_1 = createDefaultShouldOverwriteCallback(overwriteAll, overwriteNone);
-    if (!_get_quiet__0(this)) {
+      return exitNative(1002);
+    }var duplicates = logDuplicatesAndGetHasDuplicates_0(spriteFiles, currentWorkingDirectory);
+    if (duplicates) {
+      return exitNative(1011);
+    }var tmp_19 = _get_outputDirectory__0(this);
+    var outputDirectory = ensureAndGetOutputDirectory$default(tmp_19, currentWorkingDirectory, false, 4, null);
+    var ignoreErrors = _get_ignoreErrors__0(this);
+    if (_get_overwriteExisting__1(this) ? _get_overwriteNone__1(this) : false) {
       {
-        var tmp3_i_0 = Log_getInstance();
-        if (tmp3_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
-          var tmp_18 = tmp3_i_0._loggerObject;
+        var tmp3_e_0 = Log_getInstance();
+        if (tmp3_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+          var tmp_20 = tmp3_e_0._loggerObject;
           var tmp$ret$11;
           $l$block_10: {
-            var tmp_19;
-            var tmp0_elvis_lhs_1_1_2 = tmp3_i_0._loggerObject.prependLogType;
+            var tmp_21;
+            var tmp0_elvis_lhs_1_1_2 = tmp3_e_0._loggerObject.prependLogType;
             if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_2) {
-              tmp_19 = '**LOG1** ';
+              tmp_21 = '**ERROR** ';
             } else {
               {
-                tmp_19 = '';
+                tmp_21 = '';
               }
             }
-            var tmp_20 = tmp_19;
-            var tmp_21;
+            var tmp_22 = tmp_21;
+            var tmp_23;
             var tmp$ret$9;
             $l$block_8: {
               {
@@ -55688,28 +56482,75 @@
               break $l$block_8;
             }
             if (!tmp$ret$9) {
-              tmp_21 = 'null::';
+              tmp_23 = 'null::';
             } else {
               {
-                tmp_21 = '';
+                tmp_23 = '';
               }
             }
-            var tmp_22 = tmp_21;
+            var tmp_24 = tmp_23;
             var tmp$ret$10;
             $l$block_9: {
-              tmp$ret$10 = '' + 'Converting ' + spriteFiles._get_size__0_k$() + ' sprites to ' + outputType._get_name__0_k$() + ' format';
+              tmp$ret$10 = 'Error 1003: Cannot use overwrite existing and overwrite none.';
               break $l$block_9;
             }
-            tmp$ret$11 = '' + tmp_20 + tmp_22 + tmp$ret$10;
+            tmp$ret$11 = '' + tmp_22 + tmp_24 + tmp$ret$10;
             break $l$block_10;
           }
-          tmp_18.info(false, tmp$ret$11);
+          tmp_20.error(tmp$ret$11);
         }}
-    }var tmp_23 = _get_encoding__1(this);
-    var tmp_24 = _get_keepBlack_(this);
-    var opts = ConvertSpriteOptions_init_$Create$(outputType, spriteFiles, shouldWrite_1, currentWorkingDirectory, outputDirectory, tmp_23, ignoreErrors, tmp_24, null, _get_quiet__0(this), _get_progress__0(this), 256, null);
-    var tmp_25 = GlobalScope_getInstance();
-    launch$default(tmp_25, null, null, _no_name_provided_$factory_226(opts, this, null), 3, null);
+      return exitNative(1003);
+    }var overwriteAll = new Pointer(_get_overwriteExisting__1(this) ? !_get_overwriteNone__1(this) : false);
+    var overwriteNone = new Pointer(!_get_overwriteExisting__1(this) ? _get_overwriteNone__1(this) : false);
+    var shouldWrite_1 = createDefaultShouldOverwriteCallback(overwriteAll, overwriteNone);
+    if (!_get_quiet__0(this)) {
+      {
+        var tmp4_i_0 = Log_getInstance();
+        if (tmp4_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
+          var tmp_25 = tmp4_i_0._loggerObject;
+          var tmp$ret$14;
+          $l$block_13: {
+            var tmp_26;
+            var tmp0_elvis_lhs_1_1_3 = tmp4_i_0._loggerObject.prependLogType;
+            if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3) {
+              tmp_26 = '**LOG1** ';
+            } else {
+              {
+                tmp_26 = '';
+              }
+            }
+            var tmp_27 = tmp_26;
+            var tmp_28;
+            var tmp$ret$12;
+            $l$block_11: {
+              {
+              }
+              tmp$ret$12 = null == null ? true : isBlank(null);
+              break $l$block_11;
+            }
+            if (!tmp$ret$12) {
+              tmp_28 = 'null::';
+            } else {
+              {
+                tmp_28 = '';
+              }
+            }
+            var tmp_29 = tmp_28;
+            var tmp$ret$13;
+            $l$block_12: {
+              tmp$ret$13 = '' + 'Converting ' + spriteFiles._get_size__0_k$() + ' sprites to ' + outputType._get_name__0_k$() + ' format';
+              break $l$block_12;
+            }
+            tmp$ret$14 = '' + tmp_27 + tmp_29 + tmp$ret$13;
+            break $l$block_13;
+          }
+          tmp_25.info(false, tmp$ret$14);
+        }}
+    }var tmp_30 = _get_encoding__1(this);
+    var tmp_31 = _get_keepBlack_(this);
+    var opts = ConvertSpriteOptions_init_$Create$(outputType, spriteFiles, shouldWrite_1, currentWorkingDirectory, outputDirectory, tmp_30, ignoreErrors, tmp_31, null, _get_quiet__0(this), _get_progress__0(this), 256, null);
+    var tmp_32 = GlobalScope_getInstance();
+    launch$default(tmp_32, null, null, _no_name_provided_$factory_226(opts, this, null), 3, null);
     Unit_getInstance();
   };
   ConvertSpriteCLI.$metadata$ = {
@@ -55734,22 +56575,22 @@
     return ConvertSpriteOptions_init_$Init$(toType, spriteFiles, shouldWrite_1, currentWorkingDirectory, outputDirectory, encoding, ignoreErrors, keepBlack, failed, quiet, progress, $mask0, $marker, Object.create(ConvertSpriteOptions.prototype));
   }
   function _no_name_provided__258(this$0) {
-    this._this$0_44 = this$0;
+    this._this$0_43 = this$0;
   }
   _no_name_provided__258.prototype.invoke_0_k$ = function () {
-    return this._this$0_44._spriteFiles_0._get_size__0_k$();
+    return this._this$0_43._spriteFiles_0._get_size__0_k$();
   };
   _no_name_provided__258.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided__259(this$0) {
-    this._this$0_45 = this$0;
+    this._this$0_44 = this$0;
   }
   _no_name_provided__259.prototype.invoke_0_k$ = function () {
     var tmp$ret$1;
     $l$block_0: {
-      var tmp0_lowercase_0 = this._this$0_45._toType._get_name__0_k$();
+      var tmp0_lowercase_0 = this._this$0_44._toType._get_name__0_k$();
       var tmp$ret$0;
       $l$block: {
         tmp$ret$0 = tmp0_lowercase_0;
@@ -55903,7 +56744,7 @@
               var tmp$ret$1;
               $l$block_0: {
                 var tmp_7 = FileNameUtil_getInstance();
-                var tmp0_elvis_lhs_3 = nullIfEmpty(tmp_7.getLastPathComponent$default_zmr95_k$(originalFileName, false, 2, null));
+                var tmp0_elvis_lhs_3 = nullIfEmpty_0(tmp_7.getLastPathComponent$default_zmr95_k$(originalFileName, false, 2, null));
                 tmp$ret$1 = '' + 'Failed to obtain input sprite format with name: ' + (tmp0_elvis_lhs_3 == null ? originalFileName : tmp0_elvis_lhs_3) + " and extension '" + FileNameUtil_getInstance().getExtension_6wfw3l_k$(originalFileName) + "'";
                 break $l$block_0;
               }
@@ -56251,7 +57092,7 @@
                 }
                 var tmp_27 = tmp_26;
                 var tmp_28 = this._opts_3._toType._get_name__0_k$();
-                var tmp0_safe_receiver_4 = nullIfEmpty(this._e14.message);
+                var tmp0_safe_receiver_4 = nullIfEmpty_0(this._e14.message);
                 var tmp_29;
                 if (tmp0_safe_receiver_4 == null) {
                   tmp_29 = null;
@@ -56351,7 +57192,7 @@
             if (tmp_34 instanceof Exception) {
               this._e23 = this._exception_0;
               var tmp_35 = this;
-              var tmp2_safe_receiver = nullIfEmpty(this._e23.message);
+              var tmp2_safe_receiver = nullIfEmpty_0(this._e23.message);
               var tmp_36;
               if (tmp2_safe_receiver == null) {
                 tmp_36 = null;
@@ -56652,119 +57493,175 @@
     tmp_11._input$delegate = vararg(this.argument$default_304j6g_k$(tmp_12, 'File name', 'Sprite files to parse (supports some glob syntax)', null, 8, null)).provideDelegate_1kobyo_k$(this, input$factory());
   }
   ParseSpriteCLI.prototype.execute_sv8swh_k$ = function () {
-    var tmp = _get_input_(this);
-    var input = unpackPaths$default(tmp, ALL_SPRITE_FILE_EXTENSIONS, null, null, 6, null);
+    var tmp;
+    try {
+      var tmp_0 = _get_input_(this);
+      tmp = unpackPaths$default(tmp_0, ALL_SPRITE_FILE_EXTENSIONS, null, null, 6, null);
+    } catch ($p) {
+      var tmp_1;
+      if ($p instanceof MissingFilesException) {
+        {
+          var tmp0_e_0 = Log_getInstance();
+          if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+            var tmp_2 = tmp0_e_0._loggerObject;
+            var tmp$ret$2;
+            $l$block_1: {
+              var tmp_3;
+              var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
+              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                tmp_3 = '**ERROR** ';
+              } else {
+                {
+                  tmp_3 = '';
+                }
+              }
+              var tmp_4 = tmp_3;
+              var tmp_5;
+              var tmp$ret$0;
+              $l$block: {
+                {
+                }
+                tmp$ret$0 = null == null ? true : isBlank(null);
+                break $l$block;
+              }
+              if (!tmp$ret$0) {
+                tmp_5 = 'null::';
+              } else {
+                {
+                  tmp_5 = '';
+                }
+              }
+              var tmp_6 = tmp_5;
+              var tmp$ret$1;
+              $l$block_0: {
+                tmp$ret$1 = 'Error 1015: ' + ensureNotNull($p.message);
+                break $l$block_0;
+              }
+              tmp$ret$2 = '' + tmp_4 + tmp_6 + tmp$ret$1;
+              break $l$block_1;
+            }
+            tmp_2.error(tmp$ret$2);
+          }}
+        return exitNative(1015);
+      } else {
+        {
+          throw $p;
+        }
+      }
+      tmp = tmp_1;
+    }
+    var input = tmp;
     if (input.isEmpty_0_k$()) {
       {
-        var tmp0_e_0 = Log_getInstance();
-        if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-          var tmp_0 = tmp0_e_0._loggerObject;
-          var tmp$ret$2;
-          $l$block_1: {
-            var tmp_1;
-            var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
-              tmp_1 = '**ERROR** ';
+        var tmp1_e_0 = Log_getInstance();
+        if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+          var tmp_7 = tmp1_e_0._loggerObject;
+          var tmp$ret$5;
+          $l$block_4: {
+            var tmp_8;
+            var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
+            if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
+              tmp_8 = '**ERROR** ';
             } else {
               {
-                tmp_1 = '';
+                tmp_8 = '';
               }
             }
-            var tmp_2 = tmp_1;
-            var tmp_3;
-            var tmp$ret$0;
-            $l$block: {
+            var tmp_9 = tmp_8;
+            var tmp_10;
+            var tmp$ret$3;
+            $l$block_2: {
               {
               }
-              tmp$ret$0 = null == null ? true : isBlank(null);
-              break $l$block;
+              tmp$ret$3 = null == null ? true : isBlank(null);
+              break $l$block_2;
             }
-            if (!tmp$ret$0) {
-              tmp_3 = 'null::';
+            if (!tmp$ret$3) {
+              tmp_10 = 'null::';
             } else {
               {
-                tmp_3 = '';
+                tmp_10 = '';
               }
             }
-            var tmp_4 = tmp_3;
-            var tmp$ret$1;
-            $l$block_0: {
-              var tmp_5 = _get_input_(this);
-              tmp$ret$1 = '' + 'No sprites found to parse in [' + joinToString$default_0(tmp_5, ',', null, null, 0, null, null, 62, null) + ']';
-              break $l$block_0;
+            var tmp_11 = tmp_10;
+            var tmp$ret$4;
+            $l$block_3: {
+              var tmp_12 = _get_input_(this);
+              tmp$ret$4 = '' + 'No sprites found to parse in [' + joinToString$default_0(tmp_12, ',', null, null, 0, null, null, 62, null) + ']';
+              break $l$block_3;
             }
-            tmp$ret$2 = '' + tmp_2 + tmp_4 + tmp$ret$1;
-            break $l$block_1;
+            tmp$ret$5 = '' + tmp_9 + tmp_11 + tmp$ret$4;
+            break $l$block_4;
           }
-          tmp_0.error(tmp$ret$2);
+          tmp_7.error(tmp$ret$5);
         }}
       return exitNative(1002);
     }var nest = !(input._get_size__0_k$() === 1);
-    var tmp0_elvis_lhs = _get_output_(this);
-    var output_0 = ensureEndsWith(tmp0_elvis_lhs == null ? getCurrentWorkingDirectory() : tmp0_elvis_lhs, _get_pathSeparatorChar_());
-    var tmp$ret$5;
-    $l$block_4: {
-      var tmp1_map_0 = duplicateFileNamesWithoutExtension$default(input, null, 1, null);
-      var tmp$ret$4;
-      $l$block_3: {
-        var tmp0_mapTo_0_1 = ArrayList_init_$Create$_0(collectionSizeOrDefault(tmp1_map_0, 10));
-        var tmp0_iterator_1_2 = tmp1_map_0.iterator_0_k$();
+    var currentWorkingDirectory = getCurrentWorkingDirectory();
+    var output_0 = ensureEndsWith(ensureAndGetOutputDirectory(_get_output_(this), currentWorkingDirectory, true), _get_pathSeparatorChar_());
+    var tmp$ret$8;
+    $l$block_7: {
+      var tmp2_map_0 = duplicateFileNamesWithoutExtension$default(input, null, 1, null);
+      var tmp$ret$7;
+      $l$block_6: {
+        var tmp0_mapTo_0_1 = ArrayList_init_$Create$_0(collectionSizeOrDefault(tmp2_map_0, 10));
+        var tmp0_iterator_1_2 = tmp2_map_0.iterator_0_k$();
         while (tmp0_iterator_1_2.hasNext_0_k$()) {
           var item_2_3 = tmp0_iterator_1_2.next_0_k$();
-          var tmp$ret$3;
-          $l$block_2: {
-            tmp$ret$3 = item_2_3._first;
-            break $l$block_2;
+          var tmp$ret$6;
+          $l$block_5: {
+            tmp$ret$6 = item_2_3._first;
+            break $l$block_5;
           }
-          tmp0_mapTo_0_1.add_2bq_k$(tmp$ret$3);
+          tmp0_mapTo_0_1.add_2bq_k$(tmp$ret$6);
           Unit_getInstance();
         }
-        tmp$ret$4 = tmp0_mapTo_0_1;
-        break $l$block_3;
+        tmp$ret$7 = tmp0_mapTo_0_1;
+        break $l$block_6;
       }
-      tmp$ret$5 = tmp$ret$4;
-      break $l$block_4;
+      tmp$ret$8 = tmp$ret$7;
+      break $l$block_7;
     }
-    var duplicates = tmp$ret$5;
-    var tmp1_iterator = input.iterator_0_k$();
-    while (tmp1_iterator.hasNext_0_k$()) {
-      var path_0 = tmp1_iterator.next_0_k$();
-      var tmp_6;
+    var duplicates = tmp$ret$8;
+    var tmp0_iterator = input.iterator_0_k$();
+    while (tmp0_iterator.hasNext_0_k$()) {
+      var path_0 = tmp0_iterator.next_0_k$();
+      var tmp_13;
       if (nest) {
         var folderName = FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(path_0);
-        var tmp_7;
+        var tmp_14;
         if (contains_2(duplicates, folderName)) {
-          var tmp$ret$7;
-          $l$block_6: {
-            var tmp2_lowercase_0 = ensureNotNull(FileNameUtil_getInstance().getExtension_6wfw3l_k$(path_0));
-            var tmp$ret$6;
-            $l$block_5: {
-              tmp$ret$6 = tmp2_lowercase_0;
-              break $l$block_5;
+          var tmp$ret$10;
+          $l$block_9: {
+            var tmp3_lowercase_0 = ensureNotNull(FileNameUtil_getInstance().getExtension_6wfw3l_k$(path_0));
+            var tmp$ret$9;
+            $l$block_8: {
+              tmp$ret$9 = tmp3_lowercase_0;
+              break $l$block_8;
             }
-            tmp$ret$7 = tmp$ret$6.toLowerCase();
-            break $l$block_6;
+            tmp$ret$10 = tmp$ret$9.toLowerCase();
+            break $l$block_9;
           }
-          tmp_7 = '_' + tmp$ret$7;
+          tmp_14 = '_' + tmp$ret$10;
         } else {
-          tmp_7 = '';
+          tmp_14 = '';
         }
-        var suffix = tmp_7;
-        tmp_6 = output_0 + folderName + suffix + _get_pathSeparatorChar_();
+        var suffix = tmp_14;
+        tmp_13 = output_0 + folderName + suffix + _get_pathSeparatorChar_();
       } else {
-        tmp_6 = output_0;
+        tmp_13 = output_0;
       }
-      var outputDirectory = tmp_6;
-      var tmp_8;
+      var outputDirectory = tmp_13;
+      var tmp_15;
       if (nest) {
-        var tmp2_elvis_lhs = _get_prefix_(this);
-        tmp_8 = (tmp2_elvis_lhs == null ? '' : tmp2_elvis_lhs) + FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(path_0) + '-' + FileNameUtil_getInstance().getExtension_6wfw3l_k$(path_0) + new Char(45);
+        var tmp1_elvis_lhs = _get_prefix_(this);
+        tmp_15 = (tmp1_elvis_lhs == null ? '' : tmp1_elvis_lhs) + FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(path_0) + '-' + FileNameUtil_getInstance().getExtension_6wfw3l_k$(path_0) + new Char(45);
       } else {
-        var tmp3_elvis_lhs = _get_prefix_(this);
-        tmp_8 = tmp3_elvis_lhs == null ? plus_1(FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(path_0), '-') : tmp3_elvis_lhs;
+        var tmp2_elvis_lhs = _get_prefix_(this);
+        tmp_15 = tmp2_elvis_lhs == null ? plus_1(FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(path_0), '-') : tmp2_elvis_lhs;
       }
-      var prefix = tmp_8;
-      parseFile(path_0, replace$default_0(outputDirectory, '\\ ', ' ', false, 4, null), prefix, !_get_noStitch_(this), _get_keepBlack__0(this), _get_progress__1(this), _get_numberPadding_(this));
+      var prefix = tmp_15;
+      parseFile(path_0, outputDirectory, prefix, !_get_noStitch_(this), _get_keepBlack__0(this), _get_progress__1(this), _get_numberPadding_(this));
     }
   };
   ParseSpriteCLI.$metadata$ = {
@@ -58264,7 +59161,7 @@
         }
         var tmp$ret$0;
         $l$block: {
-          var directory_2 = replace$default_0(tmp0_safe_receiver, '\\ ', ' ', false, 4, null);
+          var directory_2 = ensureNotNull(PathUtil_getInstance().normalizePath_2f0f39_k$(outputDirectory, true));
           var tmp_0;
           if (!isAbsolute_0(directory_2)) {
             tmp_0 = PathUtil_getInstance().combine_yn9lj1_k$([currentWorkingDirectory, directory_2]);
@@ -58482,105 +59379,83 @@
           tmp = _no_name_provided_$factory_244(extensionsLowerCase_0);
         } else {
           {
-            {
-              var tmp0_i_0 = Log_getInstance();
-              if (tmp0_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
-                var tmp_1 = tmp0_i_0._loggerObject;
-                var tmp$ret$14;
-                $l$block_13: {
-                  var tmp_2;
-                  var tmp0_elvis_lhs_1_1 = tmp0_i_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
-                    tmp_2 = '**LOG1** ';
-                  } else {
-                    {
-                      tmp_2 = '';
-                    }
-                  }
-                  var tmp_3 = tmp_2;
-                  var tmp_4;
-                  var tmp$ret$12;
-                  $l$block_11: {
-                    {
-                    }
-                    tmp$ret$12 = null == null ? true : isBlank(null);
-                    break $l$block_11;
-                  }
-                  if (!tmp$ret$12) {
-                    tmp_4 = 'null::';
-                  } else {
-                    {
-                      tmp_4 = '';
-                    }
-                  }
-                  var tmp_5 = tmp_4;
-                  var tmp$ret$13;
-                  $l$block_12: {
-                    tmp$ret$13 = 'No filter';
-                    break $l$block_12;
-                  }
-                  tmp$ret$14 = '' + tmp_3 + tmp_5 + tmp$ret$13;
-                  break $l$block_13;
-                }
-                tmp_1.info(false, tmp$ret$14);
-              }}
             tmp = _no_name_provided_$factory_245();
           }
         }
       }
     }
     var filter = tmp;
+    var tmp$ret$12;
+    $l$block_11: {
+      tmp$ret$12 = ArrayList_init_$Create$();
+      break $l$block_11;
+    }
+    var missingFiles = tmp$ret$12;
+    var tmp$ret$13;
+    $l$block_12: {
+      tmp$ret$13 = ArrayList_init_$Create$();
+      break $l$block_12;
+    }
+    var emptyGlobs = tmp$ret$13;
     var tmp$ret$19;
-    $l$block_19: {
+    $l$block_18: {
       var tmp$ret$17;
-      $l$block_17: {
+      $l$block_16: {
         var tmp$ret$16;
-        $l$block_16: {
+        $l$block_15: {
           var tmp0_flatMapTo_0_1 = ArrayList_init_$Create$();
           var tmp0_iterator_1_2_1 = _this_.iterator_0_k$();
           while (tmp0_iterator_1_2_1.hasNext_0_k$()) {
             var element_2_3 = tmp0_iterator_1_2_1.next_0_k$();
             var tmp$ret$15;
-            $l$block_15: {
-              var tmp_6;
-              if (isAbsolute_0(element_2_3)) {
-                tmp_6 = PathUtil_getInstance().combine_yn9lj1_k$([element_2_3]);
-              } else {
-                tmp_6 = PathUtil_getInstance().combine_yn9lj1_k$([baseDirectory, element_2_3]);
-              }
-              var pathTemp_6 = tmp_6;
-              var tmp_7;
-              if (fileExists(pathTemp_6)) {
-                var tmp_8;
-                if (!isDirectory(element_2_3)) {
-                  tmp$ret$15 = listOf_0(element_2_3);
-                  break $l$block_15;
-                } else {
-                  tmp_8 = ensureEndsWith(element_2_3, _get_pathSeparatorChar_()) + '*';
+            $l$block_14: {
+              var path_6 = qualifyPath(baseDirectory, element_2_3);
+              var tmp_1;
+              var tmp_2 = new Char(42);
+              if (contains$default(path_6, tmp_2, false, 2, null)) {
+                var tmp$ret$14;
+                $l$block_13: {
+                  var tmp0_apply_0_7 = sortedNice(toList(globFiles(path_6, baseDirectory)));
+                  {
+                  }
+                  {
+                    if (tmp0_apply_0_7.isEmpty_0_k$()) {
+                      emptyGlobs.add_2bq_k$(path_6);
+                      Unit_getInstance();
+                    }}
+                  tmp$ret$14 = tmp0_apply_0_7;
+                  break $l$block_13;
                 }
-                tmp_7 = tmp_8;
+                tmp_1 = tmp$ret$14;
               } else {
-                tmp_7 = pathTemp_6;
+                if (!fileExists(path_6)) {
+                  missingFiles.add_2bq_k$(path_6);
+                  Unit_getInstance();
+                  tmp_1 = emptyList();
+                } else {
+                  {
+                    tmp_1 = listOf_0(path_6);
+                  }
+                }
               }
-              var path_7 = tmp_7;
-              tmp$ret$15 = sortedNice(toList(globFiles(path_7, baseDirectory)));
-              break $l$block_15;
+              tmp$ret$15 = tmp_1;
+              break $l$block_14;
             }
             var list_3_4 = tmp$ret$15;
             addAll(tmp0_flatMapTo_0_1, list_3_4);
             Unit_getInstance();
           }
           tmp$ret$16 = tmp0_flatMapTo_0_1;
-          break $l$block_16;
+          break $l$block_15;
         }
         tmp$ret$17 = tmp$ret$16;
-        break $l$block_17;
+        break $l$block_16;
       }
-      var tmp1_filter_0 = tmp$ret$17;
+      var tmp0_filter_0 = tmp$ret$17;
       var tmp$ret$18;
-      $l$block_18: {
+      $l$block_17: {
         var tmp0_filterTo_0_1 = ArrayList_init_$Create$();
-        var tmp0_iterator_1_2_2 = tmp1_filter_0.iterator_0_k$();
+        var tmp0_iterator_1_2_2 = tmp0_filter_0.iterator_0_k$();
         while (tmp0_iterator_1_2_2.hasNext_0_k$()) {
           var element_2_3_0 = tmp0_iterator_1_2_2.next_0_k$();
           if (filter(element_2_3_0)) {
@@ -58588,12 +59463,35 @@
             Unit_getInstance();
           }}
         tmp$ret$18 = tmp0_filterTo_0_1;
-        break $l$block_18;
+        break $l$block_17;
       }
       tmp$ret$19 = tmp$ret$18;
+      break $l$block_18;
+    }
+    var result = distinct(tmp$ret$19);
+    var tmp_3;
+    var tmp$ret$20;
+    $l$block_19: {
+      tmp$ret$20 = !missingFiles.isEmpty_0_k$();
       break $l$block_19;
     }
-    return distinct(tmp$ret$19);
+    if (tmp$ret$20) {
+      tmp_3 = true;
+    } else {
+      {
+        var tmp$ret$21;
+        $l$block_20: {
+          tmp$ret$21 = !emptyGlobs.isEmpty_0_k$();
+          break $l$block_20;
+        }
+        tmp_3 = tmp$ret$21;
+      }
+    }
+    if (tmp_3) {
+      throw MissingFilesException_init_$Create$(missingFiles, emptyGlobs, null, 4, null);
+    } else {
+    }
+    return result;
   }
   function unpackPaths$default(_this_, extensions, fileNameRegex, baseDirectory, $mask0, $handler) {
     if (!(($mask0 & 1) === 0))
@@ -58603,6 +59501,111 @@
     if (!(($mask0 & 4) === 0))
       baseDirectory = getCurrentWorkingDirectory();
     return unpackPaths(_this_, extensions, fileNameRegex, baseDirectory);
+  }
+  function qualifyPath(baseDirectory, aPath) {
+    var tmp;
+    if (isAbsolute_0(aPath)) {
+      tmp = PathUtil_getInstance().combine_yn9lj1_k$([aPath]);
+    } else {
+      tmp = PathUtil_getInstance().combine_yn9lj1_k$([baseDirectory, aPath]);
+    }
+    var pathTemp = tmp;
+    var tmp_0;
+    if (fileExists(pathTemp)) {
+      var tmp_1;
+      if (!isDirectory(aPath)) {
+        return aPath;
+      } else {
+        tmp_1 = ensureEndsWith(aPath, _get_pathSeparatorChar_()) + '*';
+      }
+      tmp_0 = tmp_1;
+    } else {
+      tmp_0 = pathTemp;
+    }
+    return tmp_0;
+  }
+  function formatMissingFilesErrorMessage(missingFiles, emptyGlobs) {
+    if (missingFiles.isEmpty_0_k$() ? emptyGlobs.isEmpty_0_k$() : false) {
+      throw Exception_init_$Create$('Cannot generate missing files error without missing files or empty globs');
+    }var tmp;
+    var tmp_0;
+    var tmp$ret$0;
+    $l$block: {
+      tmp$ret$0 = !missingFiles.isEmpty_0_k$();
+      break $l$block;
+    }
+    if (tmp$ret$0) {
+      var tmp$ret$1;
+      $l$block_0: {
+        tmp$ret$1 = !emptyGlobs.isEmpty_0_k$();
+        break $l$block_0;
+      }
+      tmp_0 = tmp$ret$1;
+    } else {
+      {
+        tmp_0 = false;
+      }
+    }
+    if (tmp_0) {
+      tmp = getMissingFilesMessage(missingFiles) + '\n' + getEmptyGlobMessage(emptyGlobs);
+    } else {
+      var tmp$ret$2;
+      $l$block_1: {
+        tmp$ret$2 = !missingFiles.isEmpty_0_k$();
+        break $l$block_1;
+      }
+      if (tmp$ret$2) {
+        tmp = getMissingFilesMessage(missingFiles);
+      } else {
+        {
+          tmp = getEmptyGlobMessage(emptyGlobs);
+        }
+      }
+    }
+    return tmp;
+  }
+  function getEmptyGlobMessage(emptyGlobs) {
+    return '' + 'Failed to glob any files with: \n\t - ' + joinToString$default_0(emptyGlobs, '\n\t- ', null, null, 0, null, _no_name_provided_$factory_246(), 30, null) + '\n';
+  }
+  function getMissingFilesMessage(missingFiles) {
+    return '' + 'Failed to locate files:\n\t- ' + joinToString$default_0(missingFiles, '\n\t- ', null, null, 0, null, _no_name_provided_$factory_247(), 30, null) + ' \n';
+  }
+  function MissingFilesException_init_$Init$(paths, emptyGlobs, throwable, $mask0, $marker, $this) {
+    if (!(($mask0 & 4) === 0))
+      throwable = null;
+    MissingFilesException.call($this, paths, emptyGlobs, throwable);
+    return $this;
+  }
+  function MissingFilesException_init_$Create$(paths, emptyGlobs, throwable, $mask0, $marker) {
+    var tmp = MissingFilesException_init_$Init$(paths, emptyGlobs, throwable, $mask0, $marker, Object.create(MissingFilesException.prototype));
+    captureStack(tmp, MissingFilesException_init_$Create$);
+    return tmp;
+  }
+  function MissingFilesException(paths, emptyGlobs, throwable) {
+    Exception_init_$Init$_1(formatMissingFilesErrorMessage(paths, emptyGlobs), throwable, this);
+    this._paths = paths;
+    this._emptyGlobs = emptyGlobs;
+    captureStack(this, MissingFilesException);
+  }
+  MissingFilesException.$metadata$ = {
+    simpleName: 'MissingFilesException',
+    kind: 'class',
+    interfaces: []
+  };
+  function unescapePath(path_0) {
+    var tmp$ret$1;
+    $l$block_0: {
+      var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = Regex_init_$Create$_0('[\\\\/][\\\\/]?');
+        break $l$block;
+      }
+      var tmp0_replace_0 = tmp$ret$0;
+      var tmp1_replace_0 = pathSeparator;
+      tmp$ret$1 = tmp0_replace_0.replace_abi4bo_k$(path_0, tmp1_replace_0);
+      break $l$block_0;
+    }
+    return tmp$ret$1;
   }
   function _no_name_provided__273($extensionsLowerCase, $fileNameRegex) {
     this._$extensionsLowerCase = $extensionsLowerCase;
@@ -58778,6 +59781,36 @@
     kind: 'class',
     interfaces: []
   };
+  function _no_name_provided__277() {
+  }
+  _no_name_provided__277.prototype.invoke_6wfw3l_k$ = function (p0) {
+    return unescapePath(p0);
+  };
+  _no_name_provided__277.prototype.invoke_20e8_k$ = function (p1) {
+    return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
+  };
+  _no_name_provided__277.prototype._get_name__0_k$ = function () {
+    return 'unescapePath';
+  };
+  _no_name_provided__277.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__278() {
+  }
+  _no_name_provided__278.prototype.invoke_6wfw3l_k$ = function (p0) {
+    return unescapePath(p0);
+  };
+  _no_name_provided__278.prototype.invoke_20e8_k$ = function (p1) {
+    return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
+  };
+  _no_name_provided__278.prototype._get_name__0_k$ = function () {
+    return 'unescapePath';
+  };
+  _no_name_provided__278.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
   function _no_name_provided_$factory_242($extensionsLowerCase, $fileNameRegex) {
     var i = new _no_name_provided__273($extensionsLowerCase, $fileNameRegex);
     return function (p1) {
@@ -58801,6 +59834,22 @@
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
+  }
+  function _no_name_provided_$factory_246() {
+    var i = new _no_name_provided__277();
+    var l = function (p1) {
+      return i.invoke_6wfw3l_k$(p1);
+    };
+    l.callableName = i._get_name__0_k$();
+    return l;
+  }
+  function _no_name_provided_$factory_247() {
+    var i = new _no_name_provided__278();
+    var l = function (p1) {
+      return i.invoke_6wfw3l_k$(p1);
+    };
+    l.callableName = i._get_name__0_k$();
+    return l;
   }
   function BREED_FILENAME_WITHOUT_EXTENSION_REGEX$init$() {
     var tmp$ret$0;
@@ -58987,35 +60036,35 @@
     return tmp.join(tmpdir_1, tmp$ret$1 + randomBytes_1);
   }
   function readLine(prompt, default_1, $cont) {
-    var tmp = new Promise(_no_name_provided_$factory_246(prompt, default_1));
-    return await_0(tmp.catch(_no_name_provided_$factory_247()), $cont);
+    var tmp = new Promise(_no_name_provided_$factory_248(prompt, default_1));
+    return await_0(tmp.catch(_no_name_provided_$factory_249()), $cont);
   }
   function readLine$default(prompt, default_1, $mask0, $handler, $cont) {
     if (!(($mask0 & 2) === 0))
       default_1 = null;
     return readLine(prompt, default_1, $cont);
   }
-  function _no_name_provided__277($resolve, $default) {
+  function _no_name_provided__279($resolve, $default) {
     this._$resolve = $resolve;
     this._$default = $default;
   }
-  _no_name_provided__277.prototype.invoke_a4enbm_k$ = function (it) {
-    var tmp0_elvis_lhs = nullIfEmpty(it);
+  _no_name_provided__279.prototype.invoke_a4enbm_k$ = function (it) {
+    var tmp0_elvis_lhs = nullIfEmpty_0(it);
     this._$resolve(tmp0_elvis_lhs == null ? this._$default : tmp0_elvis_lhs);
   };
-  _no_name_provided__277.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__279.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_a4enbm_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__277.$metadata$ = {
+  _no_name_provided__279.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__278($prompt, $default) {
+  function _no_name_provided__280($prompt, $default) {
     this._$prompt = $prompt;
     this._$default_0 = $default;
   }
-  _no_name_provided__278.prototype.invoke_lmz38d_k$ = function (resolve, _anonymous_parameter_1_) {
+  _no_name_provided__280.prototype.invoke_lmz38d_k$ = function (resolve, _anonymous_parameter_1_) {
     var tmp = {};
     var readLineOptions = (!(tmp == null) ? isObject(tmp) : false) ? tmp : THROW_CCE();
     readLineOptions.input = process_0.stdin;
@@ -59023,7 +60072,7 @@
     readLineOptions.output = isObject(tmp_0) ? tmp_0 : null;
     var readLine_0 = createInterface_0(readLineOptions);
     try {
-      readLine_0.question(this._$prompt, _no_name_provided_$factory_248(resolve, this._$default_0));
+      readLine_0.question(this._$prompt, _no_name_provided_$factory_250(resolve, this._$default_0));
     } catch ($p) {
       if ($p instanceof Exception) {
         {
@@ -59076,18 +60125,18 @@
       }
     }
   };
-  _no_name_provided__278.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__280.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'function' : false) ? p1 : THROW_CCE();
     this.invoke_lmz38d_k$(tmp, (!(p2 == null) ? typeof p2 === 'function' : false) ? p2 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__278.$metadata$ = {
+  _no_name_provided__280.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__279() {
+  function _no_name_provided__281() {
   }
-  _no_name_provided__279.prototype.invoke_onfaoi_k$ = function (e) {
+  _no_name_provided__281.prototype.invoke_onfaoi_k$ = function (e) {
     {
       var tmp0_e_0 = Log_getInstance();
       if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
@@ -59132,28 +60181,28 @@
       }}
     return null;
   };
-  _no_name_provided__279.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__281.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_onfaoi_k$(p1 instanceof Error ? p1 : THROW_CCE());
   };
-  _no_name_provided__279.$metadata$ = {
+  _no_name_provided__281.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided_$factory_246($prompt, $default) {
-    var i = new _no_name_provided__278($prompt, $default);
+  function _no_name_provided_$factory_248($prompt, $default) {
+    var i = new _no_name_provided__280($prompt, $default);
     return function (p1, p2) {
       i.invoke_lmz38d_k$(p1, p2);
       return Unit_getInstance();
     };
   }
-  function _no_name_provided_$factory_247() {
-    var i = new _no_name_provided__279();
+  function _no_name_provided_$factory_249() {
+    var i = new _no_name_provided__281();
     return function (p1) {
       return i.invoke_onfaoi_k$(p1);
     };
   }
-  function _no_name_provided_$factory_248($resolve, $default) {
-    var i = new _no_name_provided__277($resolve, $default);
+  function _no_name_provided_$factory_250($resolve, $default) {
+    var i = new _no_name_provided__279($resolve, $default);
     return function (p1) {
       i.invoke_a4enbm_k$(p1);
       return Unit_getInstance();
@@ -59373,12 +60422,12 @@
   propertyRefClassMetadataCache = propertyRefClassMetadataCache$init$();
   EMPTY_DESCRIPTOR_ARRAY = EMPTY_DESCRIPTOR_ARRAY$init$();
   EMPTY_SERIALIZER_ARRAY = EMPTY_SERIALIZER_ARRAY$init$();
+  encoding$delegate = lazy(_no_name_provided_$factory_39());
   BASE64_ALPHABET = toCharArray('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/');
   NON_BASE_64_REGEX = NON_BASE_64_REGEX$init$();
   NEWLINE_REGEX = NEWLINE_REGEX$init$();
   errorToleranceRange = rangeTo(-1.0E-4, 1.0E-4);
   readBuffer = new DataView(new ArrayBuffer(8));
-  encoding$delegate = lazy(_no_name_provided_$factory_42());
   floatsBuffer = new Float32Array(1);
   doubleBuffer = new Float64Array(1);
   pathSeparatorChar$delegate = lazy(_no_name_provided_$factory_44());
