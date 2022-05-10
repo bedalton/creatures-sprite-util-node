@@ -1,6 +1,6 @@
 {
-  "name": "sprite-util",
-  "version": "0.1.9",
+  "name": "@bedalton/sprite-util",
+  "version": "0.1.10",
   "main": "SpriteCompilerCLI.js",
   "types": "SpriteCompilerCLI.d.ts",
   "devDependencies": {},

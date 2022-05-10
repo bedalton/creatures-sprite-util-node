@@ -347,7 +347,8 @@ Flags:
     --keep-ages -> Do not shift ages to match target game
     --force, -f [false] -> Force overwrite of existing files (cannot be used with --skip-existing or -x)
     --skip-existing, -x -> Skip existing files (cannot be used with --force)
-    --no-tail -> Do not create tail files (even if none are present) 
+    --no-tail -> Do not create tail files (even if none are present)  
+    --samesize -> Make all body part frames the same size  
     --ignore-errors, -e -> Ignore all compilation errors. **Other errors will still cancel compile** 
     --progress -> Output file conversion progress   
     --quiet, -q -> Silence non-essential output 

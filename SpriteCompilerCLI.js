@@ -33,8 +33,10 @@
   ListIteratorImpl.prototype.constructor = ListIteratorImpl;
   AbstractSet.prototype = Object.create(AbstractCollection.prototype);
   AbstractSet.prototype.constructor = AbstractSet;
-  _no_name_provided__2.prototype = Object.create(AbstractSet.prototype);
-  _no_name_provided__2.prototype.constructor = _no_name_provided__2;
+  _no_name_provided__3.prototype = Object.create(AbstractSet.prototype);
+  _no_name_provided__3.prototype.constructor = _no_name_provided__3;
+  _no_name_provided__5.prototype = Object.create(AbstractCollection.prototype);
+  _no_name_provided__5.prototype.constructor = _no_name_provided__5;
   CoroutineSingletons.prototype = Object.create(Enum.prototype);
   CoroutineSingletons.prototype.constructor = CoroutineSingletons;
   Error_0.prototype = Object.create(Error.prototype);
@@ -61,10 +63,10 @@
   AbstractMutableSet.prototype.constructor = AbstractMutableSet;
   AbstractEntrySet.prototype = Object.create(AbstractMutableSet.prototype);
   AbstractEntrySet.prototype.constructor = AbstractEntrySet;
-  _no_name_provided__17.prototype = Object.create(AbstractMutableSet.prototype);
-  _no_name_provided__17.prototype.constructor = _no_name_provided__17;
-  _no_name_provided__18.prototype = Object.create(AbstractMutableCollection.prototype);
-  _no_name_provided__18.prototype.constructor = _no_name_provided__18;
+  _no_name_provided__19.prototype = Object.create(AbstractMutableSet.prototype);
+  _no_name_provided__19.prototype.constructor = _no_name_provided__19;
+  _no_name_provided__20.prototype = Object.create(AbstractMutableCollection.prototype);
+  _no_name_provided__20.prototype.constructor = _no_name_provided__20;
   AbstractMutableMap.prototype = Object.create(AbstractMap.prototype);
   AbstractMutableMap.prototype.constructor = AbstractMutableMap;
   ArrayList.prototype = Object.create(AbstractMutableList.prototype);
@@ -103,10 +105,10 @@
   CharacterCodingException.prototype.constructor = CharacterCodingException;
   RegexOption.prototype = Object.create(Enum.prototype);
   RegexOption.prototype.constructor = RegexOption;
-  _no_name_provided__46.prototype = Object.create(AbstractCollection.prototype);
-  _no_name_provided__46.prototype.constructor = _no_name_provided__46;
-  _no_name_provided__47.prototype = Object.create(AbstractList.prototype);
-  _no_name_provided__47.prototype.constructor = _no_name_provided__47;
+  _no_name_provided__48.prototype = Object.create(AbstractCollection.prototype);
+  _no_name_provided__48.prototype.constructor = _no_name_provided__48;
+  _no_name_provided__49.prototype = Object.create(AbstractList.prototype);
+  _no_name_provided__49.prototype.constructor = _no_name_provided__49;
   Long.prototype = Object.create(Number_0.prototype);
   Long.prototype.constructor = Long;
   _no_name_provided__1_1.prototype = Object.create(CoroutineImpl_0.prototype);
@@ -155,24 +157,40 @@
   RingBuffer.prototype.constructor = RingBuffer;
   FastArrayList.prototype = Object.create(AbstractMutableList.prototype);
   FastArrayList.prototype.constructor = FastArrayList;
-  _no_name_provided__68.prototype = Object.create(KmemGCImpl.prototype);
-  _no_name_provided__68.prototype.constructor = _no_name_provided__68;
+  _no_name_provided__70.prototype = Object.create(KmemGCImpl.prototype);
+  _no_name_provided__70.prototype.constructor = _no_name_provided__70;
   None.prototype = Object.create(TraceBase.prototype);
   None.prototype.constructor = None;
   AbstractCoroutine.prototype = Object.create(JobSupport.prototype);
   AbstractCoroutine.prototype.constructor = AbstractCoroutine;
+  CancelHandler.prototype = Object.create(CancelHandlerBase.prototype);
+  CancelHandler.prototype.constructor = CancelHandler;
+  DisposeHandlersOnCancel.prototype = Object.create(CancelHandler.prototype);
+  DisposeHandlersOnCancel.prototype.constructor = DisposeHandlersOnCancel;
+  CompletionHandlerBase.prototype = Object.create(LinkedListNode.prototype);
+  CompletionHandlerBase.prototype.constructor = CompletionHandlerBase;
+  JobNode.prototype = Object.create(CompletionHandlerBase.prototype);
+  JobNode.prototype.constructor = JobNode;
+  AwaitAllNode.prototype = Object.create(JobNode.prototype);
+  AwaitAllNode.prototype.constructor = AwaitAllNode;
+  $awaitAllCOROUTINE$0.prototype = Object.create(CoroutineImpl_0.prototype);
+  $awaitAllCOROUTINE$0.prototype.constructor = $awaitAllCOROUTINE$0;
   StandaloneCoroutine.prototype = Object.create(AbstractCoroutine.prototype);
   StandaloneCoroutine.prototype.constructor = StandaloneCoroutine;
   LazyStandaloneCoroutine.prototype = Object.create(StandaloneCoroutine.prototype);
   LazyStandaloneCoroutine.prototype.constructor = LazyStandaloneCoroutine;
+  DeferredCoroutine.prototype = Object.create(AbstractCoroutine.prototype);
+  DeferredCoroutine.prototype.constructor = DeferredCoroutine;
+  LazyDeferredCoroutine.prototype = Object.create(DeferredCoroutine.prototype);
+  LazyDeferredCoroutine.prototype.constructor = LazyDeferredCoroutine;
   DispatchedTask.prototype = Object.create(SchedulerTask.prototype);
   DispatchedTask.prototype.constructor = DispatchedTask;
   CancellableContinuationImpl.prototype = Object.create(DispatchedTask.prototype);
   CancellableContinuationImpl.prototype.constructor = CancellableContinuationImpl;
-  CancelHandler.prototype = Object.create(CancelHandlerBase.prototype);
-  CancelHandler.prototype.constructor = CancelHandler;
   BeforeResumeCancelHandler.prototype = Object.create(CancelHandler.prototype);
   BeforeResumeCancelHandler.prototype.constructor = BeforeResumeCancelHandler;
+  InvokeOnCancel.prototype = Object.create(CancelHandler.prototype);
+  InvokeOnCancel.prototype.constructor = InvokeOnCancel;
   CompletableDeferredImpl.prototype = Object.create(JobSupport.prototype);
   CompletableDeferredImpl.prototype.constructor = CompletableDeferredImpl;
   CancelledContinuation.prototype = Object.create(CompletedExceptionally.prototype);
@@ -193,10 +211,6 @@
   LinkedListHead.prototype.constructor = LinkedListHead;
   NodeList_0.prototype = Object.create(LinkedListHead.prototype);
   NodeList_0.prototype.constructor = NodeList_0;
-  CompletionHandlerBase.prototype = Object.create(LinkedListNode.prototype);
-  CompletionHandlerBase.prototype.constructor = CompletionHandlerBase;
-  JobNode.prototype = Object.create(CompletionHandlerBase.prototype);
-  JobNode.prototype.constructor = JobNode;
   ChildCompletion.prototype = Object.create(JobNode.prototype);
   ChildCompletion.prototype.constructor = ChildCompletion;
   JobCancellingNode.prototype = Object.create(JobNode.prototype);
@@ -217,6 +231,8 @@
   Unconfined.prototype.constructor = Unconfined;
   DispatchedContinuation.prototype = Object.create(DispatchedTask.prototype);
   DispatchedContinuation.prototype.constructor = DispatchedContinuation;
+  ScopeCoroutine.prototype = Object.create(AbstractCoroutine.prototype);
+  ScopeCoroutine.prototype.constructor = ScopeCoroutine;
   JsMainDispatcher.prototype = Object.create(MainCoroutineDispatcher.prototype);
   JsMainDispatcher.prototype.constructor = JsMainDispatcher;
   UnconfinedEventLoop.prototype = Object.create(EventLoop.prototype);
@@ -239,12 +255,12 @@
   WindowMessageQueue.prototype.constructor = WindowMessageQueue;
   Signal.prototype = Object.create(BaseSignal.prototype);
   Signal.prototype.constructor = Signal;
-  _no_name_provided__77.prototype = Object.create(AbstractCoroutineContextElement.prototype);
-  _no_name_provided__77.prototype.constructor = _no_name_provided__77;
-  _no_name_provided__79.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__79.prototype = Object.create(AbstractCoroutineContextElement.prototype);
   _no_name_provided__79.prototype.constructor = _no_name_provided__79;
-  _no_name_provided__80.prototype = Object.create(CoroutineImpl_0.prototype);
-  _no_name_provided__80.prototype.constructor = _no_name_provided__80;
+  _no_name_provided__81.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__81.prototype.constructor = _no_name_provided__81;
+  _no_name_provided__82.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__82.prototype.constructor = _no_name_provided__82;
   $flushCOROUTINE$11.prototype = Object.create(CoroutineImpl_0.prototype);
   $flushCOROUTINE$11.prototype.constructor = $flushCOROUTINE$11;
   Companion_29.prototype = Object.create(DeflatePortable.prototype);
@@ -281,8 +297,8 @@
   VfsV2.prototype.constructor = VfsV2;
   VfsFile.prototype = Object.create(VfsNamed.prototype);
   VfsFile.prototype.constructor = VfsFile;
-  _no_name_provided__97.prototype = Object.create(Proxy.prototype);
-  _no_name_provided__97.prototype.constructor = _no_name_provided__97;
+  _no_name_provided__99.prototype = Object.create(Proxy.prototype);
+  _no_name_provided__99.prototype.constructor = _no_name_provided__99;
   MapLikeStorageVfs.prototype = Object.create(VfsV2.prototype);
   MapLikeStorageVfs.prototype.constructor = MapLikeStorageVfs;
   NodeVfs.prototype = Object.create(VfsV2.prototype);
@@ -303,8 +319,8 @@
   ASCII.prototype.constructor = ASCII;
   InvalidOperationException.prototype = Object.create(Exception.prototype);
   InvalidOperationException.prototype.constructor = InvalidOperationException;
-  _no_name_provided__107.prototype = Object.create(NativeThreadLocal.prototype);
-  _no_name_provided__107.prototype.constructor = _no_name_provided__107;
+  _no_name_provided__109.prototype = Object.create(NativeThreadLocal.prototype);
+  _no_name_provided__109.prototype.constructor = _no_name_provided__109;
   $writeCOROUTINE$134.prototype = Object.create(CoroutineImpl_0.prototype);
   $writeCOROUTINE$134.prototype.constructor = $writeCOROUTINE$134;
   $getPositionCOROUTINE$154.prototype = Object.create(CoroutineImpl_0.prototype);
@@ -335,10 +351,10 @@
   FileNotFoundException.prototype.constructor = FileNotFoundException;
   EOFException.prototype = Object.create(IOException_0.prototype);
   EOFException.prototype.constructor = EOFException;
-  _no_name_provided__144.prototype = Object.create(UTC8CharsetBase.prototype);
-  _no_name_provided__144.prototype.constructor = _no_name_provided__144;
-  _no_name_provided__145.prototype = Object.create(AsyncSocketFactory.prototype);
-  _no_name_provided__145.prototype.constructor = _no_name_provided__145;
+  _no_name_provided__146.prototype = Object.create(UTC8CharsetBase.prototype);
+  _no_name_provided__146.prototype.constructor = _no_name_provided__146;
+  _no_name_provided__147.prototype = Object.create(AsyncSocketFactory.prototype);
+  _no_name_provided__147.prototype.constructor = _no_name_provided__147;
   HttpClientBrowserJs.prototype = Object.create(HttpClient.prototype);
   HttpClientBrowserJs.prototype.constructor = HttpClientBrowserJs;
   Type.prototype = Object.create(Enum.prototype);
@@ -493,46 +509,92 @@
   $convertC2eAttToC1eCOROUTINE$2.prototype.constructor = $convertC2eAttToC1eCOROUTINE$2;
   $copyAttCOROUTINE$3.prototype = Object.create(CoroutineImpl_0.prototype);
   $copyAttCOROUTINE$3.prototype.constructor = $copyAttCOROUTINE$3;
-  _no_name_provided__248.prototype = Object.create(CoroutineImpl_0.prototype);
-  _no_name_provided__248.prototype.constructor = _no_name_provided__248;
-  $compileAndWriteCOROUTINE$4.prototype = Object.create(CoroutineImpl_0.prototype);
-  $compileAndWriteCOROUTINE$4.prototype.constructor = $compileAndWriteCOROUTINE$4;
+  _no_name_provided__250.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__250.prototype.constructor = _no_name_provided__250;
   CompileCLI.prototype = Object.create(Subcommand.prototype);
   CompileCLI.prototype.constructor = CompileCLI;
-  _no_name_provided__252.prototype = Object.create(CoroutineImpl_0.prototype);
-  _no_name_provided__252.prototype.constructor = _no_name_provided__252;
+  $compileSpriteCOROUTINE$4.prototype = Object.create(CoroutineImpl_0.prototype);
+  $compileSpriteCOROUTINE$4.prototype.constructor = $compileSpriteCOROUTINE$4;
+  $compileAndWriteCOROUTINE$5.prototype = Object.create(CoroutineImpl_0.prototype);
+  $compileAndWriteCOROUTINE$5.prototype.constructor = $compileAndWriteCOROUTINE$5;
+  _no_name_provided__251.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__251.prototype.constructor = _no_name_provided__251;
+  _no_name_provided__255.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__255.prototype.constructor = _no_name_provided__255;
   ConvertBreedCLI.prototype = Object.create(Subcommand.prototype);
   ConvertBreedCLI.prototype.constructor = ConvertBreedCLI;
-  _no_name_provided__256.prototype = Object.create(CoroutineImpl_0.prototype);
-  _no_name_provided__256.prototype.constructor = _no_name_provided__256;
-  $nextCOROUTINE$5.prototype = Object.create(CoroutineImpl_0.prototype);
-  $nextCOROUTINE$5.prototype.constructor = $nextCOROUTINE$5;
-  $convertAttForFileCOROUTINE$6.prototype = Object.create(CoroutineImpl_0.prototype);
-  $convertAttForFileCOROUTINE$6.prototype.constructor = $convertAttForFileCOROUTINE$6;
-  $promptOverwriteCOROUTINE$7.prototype = Object.create(CoroutineImpl_0.prototype);
-  $promptOverwriteCOROUTINE$7.prototype.constructor = $promptOverwriteCOROUTINE$7;
-  $writeTailFilesCOROUTINE$8.prototype = Object.create(CoroutineImpl_0.prototype);
-  $writeTailFilesCOROUTINE$8.prototype.constructor = $writeTailFilesCOROUTINE$8;
-  $writeTailAttCOROUTINE$9.prototype = Object.create(CoroutineImpl_0.prototype);
-  $writeTailAttCOROUTINE$9.prototype.constructor = $writeTailAttCOROUTINE$9;
-  _no_name_provided__264.prototype = Object.create(CoroutineImpl_0.prototype);
-  _no_name_provided__264.prototype.constructor = _no_name_provided__264;
+  _no_name_provided__259.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__259.prototype.constructor = _no_name_provided__259;
+  $convertBreedCOROUTINE$6.prototype = Object.create(CoroutineImpl_0.prototype);
+  $convertBreedCOROUTINE$6.prototype.constructor = $convertBreedCOROUTINE$6;
+  $nextCOROUTINE$7.prototype = Object.create(CoroutineImpl_0.prototype);
+  $nextCOROUTINE$7.prototype.constructor = $nextCOROUTINE$7;
+  $convertAttForFileCOROUTINE$8.prototype = Object.create(CoroutineImpl_0.prototype);
+  $convertAttForFileCOROUTINE$8.prototype.constructor = $convertAttForFileCOROUTINE$8;
+  $promptOverwriteCOROUTINE$9.prototype = Object.create(CoroutineImpl_0.prototype);
+  $promptOverwriteCOROUTINE$9.prototype.constructor = $promptOverwriteCOROUTINE$9;
+  $writeTailFilesCOROUTINE$10.prototype = Object.create(CoroutineImpl_0.prototype);
+  $writeTailFilesCOROUTINE$10.prototype.constructor = $writeTailFilesCOROUTINE$10;
+  _no_name_provided__265.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__265.prototype.constructor = _no_name_provided__265;
+  _no_name_provided__268.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__268.prototype.constructor = _no_name_provided__268;
   ConvertSpriteCLI.prototype = Object.create(Subcommand.prototype);
   ConvertSpriteCLI.prototype.constructor = ConvertSpriteCLI;
-  _no_name_provided__267.prototype = Object.create(CoroutineImpl_0.prototype);
-  _no_name_provided__267.prototype.constructor = _no_name_provided__267;
-  $nextCOROUTINE$10.prototype = Object.create(CoroutineImpl_0.prototype);
-  $nextCOROUTINE$10.prototype.constructor = $nextCOROUTINE$10;
+  _no_name_provided__271.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__271.prototype.constructor = _no_name_provided__271;
+  $convertSpriteCOROUTINE$11.prototype = Object.create(CoroutineImpl_0.prototype);
+  $convertSpriteCOROUTINE$11.prototype.constructor = $convertSpriteCOROUTINE$11;
+  $nextCOROUTINE$12.prototype = Object.create(CoroutineImpl_0.prototype);
+  $nextCOROUTINE$12.prototype.constructor = $nextCOROUTINE$12;
+  _no_name_provided__272.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__272.prototype.constructor = _no_name_provided__272;
+  _no_name_provided__273.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__273.prototype.constructor = _no_name_provided__273;
   ParseSpriteCLI.prototype = Object.create(Subcommand.prototype);
   ParseSpriteCLI.prototype.constructor = ParseSpriteCLI;
-  Flag.prototype = Object.create(ArgType.prototype);
-  Flag.prototype.constructor = Flag;
   _no_name_provided__274.prototype = Object.create(CoroutineImpl_0.prototype);
   _no_name_provided__274.prototype.constructor = _no_name_provided__274;
-  _no_name_provided__275.prototype = Object.create(CoroutineImpl_0.prototype);
-  _no_name_provided__275.prototype.constructor = _no_name_provided__275;
+  $parseSpritesCOROUTINE$13.prototype = Object.create(CoroutineImpl_0.prototype);
+  $parseSpritesCOROUTINE$13.prototype.constructor = $parseSpritesCOROUTINE$13;
+  _no_name_provided__277.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__277.prototype.constructor = _no_name_provided__277;
+  Flag.prototype = Object.create(ArgType.prototype);
+  Flag.prototype.constructor = Flag;
+  _no_name_provided__282.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__282.prototype.constructor = _no_name_provided__282;
+  _no_name_provided__283.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__283.prototype.constructor = _no_name_provided__283;
   MissingFilesException.prototype = Object.create(Exception.prototype);
   MissingFilesException.prototype.constructor = MissingFilesException;
+  AppRequestTermination.prototype = Object.create(Exception.prototype);
+  AppRequestTermination.prototype.constructor = AppRequestTermination;
+  AppRequestTerminationOK.prototype = Object.create(AppRequestTermination.prototype);
+  AppRequestTerminationOK.prototype.constructor = AppRequestTerminationOK;
+  AppRequestTerminationError.prototype = Object.create(AppRequestTermination.prototype);
+  AppRequestTerminationError.prototype.constructor = AppRequestTerminationError;
+  _no_name_provided__294.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__294.prototype.constructor = _no_name_provided__294;
+  _no_name_provided__295.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__295.prototype.constructor = _no_name_provided__295;
+  _no_name_provided__296.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__296.prototype.constructor = _no_name_provided__296;
+  _no_name_provided__297.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__297.prototype.constructor = _no_name_provided__297;
+  ConvertSpriteTaskJs.prototype = Object.create(ConvertSpriteTask.prototype);
+  ConvertSpriteTaskJs.prototype.constructor = ConvertSpriteTaskJs;
+  _no_name_provided__299.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__299.prototype.constructor = _no_name_provided__299;
+  ConvertBreedTaskJs.prototype = Object.create(ConvertBreedTask.prototype);
+  ConvertBreedTaskJs.prototype.constructor = ConvertBreedTaskJs;
+  _no_name_provided__301.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__301.prototype.constructor = _no_name_provided__301;
+  CompileSpriteTaskJs.prototype = Object.create(CompileSpriteTask.prototype);
+  CompileSpriteTaskJs.prototype.constructor = CompileSpriteTaskJs;
+  _no_name_provided__303.prototype = Object.create(CoroutineImpl_0.prototype);
+  _no_name_provided__303.prototype.constructor = _no_name_provided__303;
+  ParseSpriteTaskJs.prototype = Object.create(ParseSpriteTask.prototype);
+  ParseSpriteTaskJs.prototype.constructor = ParseSpriteTaskJs;
   function toList(_this_) {
     var tmp0_subject = _this_.length;
     switch (tmp0_subject) {
@@ -664,6 +726,22 @@
   function _get_lastIndex_(_this_) {
     return _this_.length - 1 | 0;
   }
+  function drop(_this_, n) {
+    {
+      var tmp0_require_0 = n >= 0;
+      {
+      }
+      if (!tmp0_require_0) {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = '' + 'Requested element count ' + n + ' is less than zero.';
+          break $l$block;
+        }
+        var message_2 = tmp$ret$0;
+        throw IllegalArgumentException_init_$Create$(toString_3(message_2));
+      }}
+    return takeLast(_this_, coerceAtLeast(_this_.length - n | 0, 0));
+  }
   function contains_0(_this_, element) {
     return indexOf(_this_, element) >= 0;
   }
@@ -717,6 +795,39 @@
   function _get_lastIndex__0(_this_) {
     return _this_.length - 1 | 0;
   }
+  function takeLast(_this_, n) {
+    {
+      var tmp0_require_0 = n >= 0;
+      {
+      }
+      if (!tmp0_require_0) {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = '' + 'Requested element count ' + n + ' is less than zero.';
+          break $l$block;
+        }
+        var message_2 = tmp$ret$0;
+        throw IllegalArgumentException_init_$Create$(toString_3(message_2));
+      }}
+    if (n === 0)
+      return emptyList();
+    var size_0 = _this_.length;
+    if (n >= size_0)
+      return toList(_this_);
+    if (n === 1)
+      return listOf_0(_this_[size_0 - 1 | 0]);
+    var list = ArrayList_init_$Create$_0(n);
+    var inductionVariable = size_0 - n | 0;
+    if (inductionVariable < size_0)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        list.add_2bq_k$(_this_[index]);
+        Unit_getInstance();
+      }
+       while (inductionVariable < size_0);
+    return list;
+  }
   function indexOf_1(_this_, element) {
     var inductionVariable = 0;
     var last_2 = _this_.length - 1 | 0;
@@ -752,22 +863,6 @@
         }}
        while (inductionVariable <= last_2);
     return -1;
-  }
-  function drop(_this_, n) {
-    {
-      var tmp0_require_0 = n >= 0;
-      {
-      }
-      if (!tmp0_require_0) {
-        var tmp$ret$0;
-        $l$block: {
-          tmp$ret$0 = '' + 'Requested element count ' + n + ' is less than zero.';
-          break $l$block;
-        }
-        var message_2 = tmp$ret$0;
-        throw IllegalArgumentException_init_$Create$(toString_3(message_2));
-      }}
-    return takeLast(_this_, coerceAtLeast(_this_.length - n | 0, 0));
   }
   function last(_this_) {
     var tmp$ret$0;
@@ -859,39 +954,6 @@
   }
   function getOrNull_0(_this_, index) {
     return (index >= 0 ? index <= _get_lastIndex_(_this_) : false) ? _this_[index] : null;
-  }
-  function takeLast(_this_, n) {
-    {
-      var tmp0_require_0 = n >= 0;
-      {
-      }
-      if (!tmp0_require_0) {
-        var tmp$ret$0;
-        $l$block: {
-          tmp$ret$0 = '' + 'Requested element count ' + n + ' is less than zero.';
-          break $l$block;
-        }
-        var message_2 = tmp$ret$0;
-        throw IllegalArgumentException_init_$Create$(toString_3(message_2));
-      }}
-    if (n === 0)
-      return emptyList();
-    var size_0 = _this_.length;
-    if (n >= size_0)
-      return toList(_this_);
-    if (n === 1)
-      return listOf_0(_this_[size_0 - 1 | 0]);
-    var list = ArrayList_init_$Create$_0(n);
-    var inductionVariable = size_0 - n | 0;
-    if (inductionVariable < size_0)
-      do {
-        var index = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        list.add_2bq_k$(_this_[index]);
-        Unit_getInstance();
-      }
-       while (inductionVariable < size_0);
-    return list;
   }
   function toList_0(_this_) {
     var tmp0_subject = _this_.length;
@@ -1894,6 +1956,19 @@
     kind: 'class',
     interfaces: [Iterator_0]
   };
+  function _no_name_provided__2($entryIterator) {
+    this._$entryIterator_0 = $entryIterator;
+  }
+  _no_name_provided__2.prototype.hasNext_0_k$ = function () {
+    return this._$entryIterator_0.hasNext_0_k$();
+  };
+  _no_name_provided__2.prototype.next_0_k$ = function () {
+    return this._$entryIterator_0.next_0_k$()._get_value__0_k$();
+  };
+  _no_name_provided__2.$metadata$ = {
+    kind: 'class',
+    interfaces: [Iterator_0]
+  };
   function toString($this, o) {
     return o === $this ? '(this Map)' : toString_2(o);
   }
@@ -1976,41 +2051,66 @@
       new Companion_1();
     return Companion_instance_0;
   }
-  function _no_name_provided__2(this$0) {
+  function _no_name_provided__3(this$0) {
     this._this$0_0 = this$0;
     AbstractSet.call(this);
   }
-  _no_name_provided__2.prototype.contains_2bw_k$ = function (element) {
+  _no_name_provided__3.prototype.contains_2bw_k$ = function (element) {
     return this._this$0_0.containsKey_2bw_k$(element);
   };
-  _no_name_provided__2.prototype.contains_2bq_k$ = function (element) {
+  _no_name_provided__3.prototype.contains_2bq_k$ = function (element) {
     if (!(element == null ? true : isObject(element)))
       return false;
     else {
     }
     return this.contains_2bw_k$((element == null ? true : isObject(element)) ? element : THROW_CCE());
   };
-  _no_name_provided__2.prototype.iterator_0_k$ = function () {
+  _no_name_provided__3.prototype.iterator_0_k$ = function () {
     var entryIterator = this._this$0_0._get_entries__0_k$().iterator_0_k$();
     return new _no_name_provided__0(entryIterator);
   };
-  _no_name_provided__2.prototype._get_size__0_k$ = function () {
+  _no_name_provided__3.prototype._get_size__0_k$ = function () {
     return this._this$0_0._get_size__0_k$();
   };
-  _no_name_provided__2.$metadata$ = {
+  _no_name_provided__3.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__3(this$0) {
+  function _no_name_provided__4(this$0) {
     this._this$0_1 = this$0;
   }
-  _no_name_provided__3.prototype.invoke_4v0zae_k$ = function (it) {
+  _no_name_provided__4.prototype.invoke_4v0zae_k$ = function (it) {
     return this._this$0_1.toString_4v0zae_k$(it);
   };
-  _no_name_provided__3.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__4.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_4v0zae_k$((!(p1 == null) ? isInterface(p1, Entry) : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__3.$metadata$ = {
+  _no_name_provided__4.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__5(this$0) {
+    this._this$0_2 = this$0;
+    AbstractCollection.call(this);
+  }
+  _no_name_provided__5.prototype.contains_2c7_k$ = function (element) {
+    return this._this$0_2.containsValue_2c7_k$(element);
+  };
+  _no_name_provided__5.prototype.contains_2bq_k$ = function (element) {
+    if (!(element == null ? true : isObject(element)))
+      return false;
+    else {
+    }
+    return this.contains_2c7_k$((element == null ? true : isObject(element)) ? element : THROW_CCE());
+  };
+  _no_name_provided__5.prototype.iterator_0_k$ = function () {
+    var entryIterator = this._this$0_2._get_entries__0_k$().iterator_0_k$();
+    return new _no_name_provided__2(entryIterator);
+  };
+  _no_name_provided__5.prototype._get_size__0_k$ = function () {
+    return this._this$0_2._get_size__0_k$();
+  };
+  _no_name_provided__5.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -2150,7 +2250,7 @@
   AbstractMap.prototype._get_keys__0_k$ = function () {
     if (this.__keys == null) {
       var tmp = this;
-      tmp.__keys = new _no_name_provided__2(this);
+      tmp.__keys = new _no_name_provided__3(this);
     }return ensureNotNull(this.__keys);
   };
   AbstractMap.prototype.toString = function () {
@@ -2160,13 +2260,19 @@
   AbstractMap.prototype.toString_4v0zae_k$ = function (entry) {
     return toString(this, entry._get_key__0_k$()) + '=' + toString(this, entry._get_value__0_k$());
   };
+  AbstractMap.prototype._get_values__0_k$ = function () {
+    if (this.__values == null) {
+      var tmp = this;
+      tmp.__values = new _no_name_provided__5(this);
+    }return ensureNotNull(this.__values);
+  };
   AbstractMap.$metadata$ = {
     simpleName: 'AbstractMap',
     kind: 'class',
     interfaces: [Map_0]
   };
   function _no_name_provided_$factory_0(this$0) {
-    var i = new _no_name_provided__3(this$0);
+    var i = new _no_name_provided__4(this$0);
     return function (p1) {
       return i.invoke_4v0zae_k$(p1);
     };
@@ -2453,6 +2559,9 @@
       default:return _this_;
     }
   }
+  function throwCountOverflow() {
+    throw ArithmeticException_init_$Create$('Count overflow has happened.');
+  }
   function throwIndexOverflow() {
     throw ArithmeticException_init_$Create$('Index overflow has happened.');
   }
@@ -2584,6 +2693,9 @@
   EmptyMap.prototype._get_keys__0_k$ = function () {
     return EmptySet_getInstance();
   };
+  EmptyMap.prototype._get_values__0_k$ = function () {
+    return EmptyList_getInstance();
+  };
   EmptyMap.$metadata$ = {
     simpleName: 'EmptyMap',
     kind: 'object',
@@ -2705,17 +2817,17 @@
   function generateSequence(seedFunction, nextFunction) {
     return new GeneratorSequence(seedFunction, nextFunction);
   }
-  function _no_name_provided__4(this$0) {
-    this._this$0_2 = this$0;
-    this._iterator = this._this$0_2._sequence.iterator_0_k$();
+  function _no_name_provided__6(this$0) {
+    this._this$0_3 = this$0;
+    this._iterator = this._this$0_3._sequence.iterator_0_k$();
   }
-  _no_name_provided__4.prototype.next_0_k$ = function () {
-    return this._this$0_2._transformer(this._iterator.next_0_k$());
+  _no_name_provided__6.prototype.next_0_k$ = function () {
+    return this._this$0_3._transformer(this._iterator.next_0_k$());
   };
-  _no_name_provided__4.prototype.hasNext_0_k$ = function () {
+  _no_name_provided__6.prototype.hasNext_0_k$ = function () {
     return this._iterator.hasNext_0_k$();
   };
-  _no_name_provided__4.$metadata$ = {
+  _no_name_provided__6.$metadata$ = {
     kind: 'class',
     interfaces: [Iterator_0]
   };
@@ -2724,7 +2836,7 @@
     this._transformer = transformer;
   }
   TransformingSequence.prototype.iterator_0_k$ = function () {
-    return new _no_name_provided__4(this);
+    return new _no_name_provided__6(this);
   };
   TransformingSequence.$metadata$ = {
     simpleName: 'TransformingSequence',
@@ -2741,12 +2853,12 @@
     kind: 'interface',
     interfaces: [Sequence]
   };
-  function _no_name_provided__5(this$0) {
-    this._this$0_3 = this$0;
-    this._left = this._this$0_3._count;
-    this._iterator_0 = this._this$0_3._sequence_0.iterator_0_k$();
+  function _no_name_provided__7(this$0) {
+    this._this$0_4 = this$0;
+    this._left = this._this$0_4._count;
+    this._iterator_0 = this._this$0_4._sequence_0.iterator_0_k$();
   }
-  _no_name_provided__5.prototype.next_0_k$ = function () {
+  _no_name_provided__7.prototype.next_0_k$ = function () {
     if (this._left === 0)
       throw NoSuchElementException_init_$Create$();
     var tmp0_this = this;
@@ -2755,10 +2867,10 @@
     Unit_getInstance();
     return this._iterator_0.next_0_k$();
   };
-  _no_name_provided__5.prototype.hasNext_0_k$ = function () {
+  _no_name_provided__7.prototype.hasNext_0_k$ = function () {
     return this._left > 0 ? this._iterator_0.hasNext_0_k$() : false;
   };
-  _no_name_provided__5.$metadata$ = {
+  _no_name_provided__7.$metadata$ = {
     kind: 'class',
     interfaces: [Iterator_0]
   };
@@ -2783,7 +2895,7 @@
     return n >= this._count ? this : new TakeSequence(this._sequence_0, n);
   };
   TakeSequence.prototype.iterator_0_k$ = function () {
-    return new _no_name_provided__5(this);
+    return new _no_name_provided__7(this);
   };
   TakeSequence.$metadata$ = {
     simpleName: 'TakeSequence',
@@ -2791,15 +2903,15 @@
     interfaces: [Sequence, DropTakeSequence]
   };
   function calcNext($this) {
-    $this._nextItem = $this._nextState === -2 ? $this._this$0_4._getInitialValue() : $this._this$0_4._getNextValue(ensureNotNull($this._nextItem));
+    $this._nextItem = $this._nextState === -2 ? $this._this$0_5._getInitialValue() : $this._this$0_5._getNextValue(ensureNotNull($this._nextItem));
     $this._nextState = $this._nextItem == null ? 0 : 1;
   }
-  function _no_name_provided__6(this$0) {
-    this._this$0_4 = this$0;
+  function _no_name_provided__8(this$0) {
+    this._this$0_5 = this$0;
     this._nextItem = null;
     this._nextState = -2;
   }
-  _no_name_provided__6.prototype.next_0_k$ = function () {
+  _no_name_provided__8.prototype.next_0_k$ = function () {
     if (this._nextState < 0)
       calcNext(this);
     if (this._nextState === 0)
@@ -2809,12 +2921,12 @@
     this._nextState = -1;
     return result;
   };
-  _no_name_provided__6.prototype.hasNext_0_k$ = function () {
+  _no_name_provided__8.prototype.hasNext_0_k$ = function () {
     if (this._nextState < 0)
       calcNext(this);
     return this._nextState === 1;
   };
-  _no_name_provided__6.$metadata$ = {
+  _no_name_provided__8.$metadata$ = {
     kind: 'class',
     interfaces: [Iterator_0]
   };
@@ -2823,7 +2935,7 @@
     this._getNextValue = getNextValue;
   }
   GeneratorSequence.prototype.iterator_0_k$ = function () {
-    return new _no_name_provided__6(this);
+    return new _no_name_provided__8(this);
   };
   GeneratorSequence.$metadata$ = {
     simpleName: 'GeneratorSequence',
@@ -3068,9 +3180,9 @@
     kind: 'interface',
     interfaces: [CoroutineContext]
   };
-  function _no_name_provided__7() {
+  function _no_name_provided__9() {
   }
-  _no_name_provided__7.prototype.invoke_2v6pkd_k$ = function (acc, element) {
+  _no_name_provided__9.prototype.invoke_2v6pkd_k$ = function (acc, element) {
     var removed = acc.minusKey_djuxjq_k$(element._get_key__0_k$());
     var tmp;
     if (removed === EmptyCoroutineContext_getInstance()) {
@@ -3088,11 +3200,11 @@
     }
     return tmp;
   };
-  _no_name_provided__7.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__9.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? isInterface(p1, CoroutineContext) : false) ? p1 : THROW_CCE();
     return this.invoke_2v6pkd_k$(tmp, (!(p2 == null) ? isInterface(p2, Element_0) : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__7.$metadata$ = {
+  _no_name_provided__9.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -3113,7 +3225,7 @@
     interfaces: []
   };
   function _no_name_provided_$factory_1() {
-    var i = new _no_name_provided__7();
+    var i = new _no_name_provided__9();
     return function (p1, p2) {
       return i.invoke_2v6pkd_k$(p1, p2);
     };
@@ -3187,9 +3299,9 @@
       }
     }
   }
-  function _no_name_provided__8() {
+  function _no_name_provided__10() {
   }
-  _no_name_provided__8.prototype.invoke_mz4o2y_k$ = function (acc, element) {
+  _no_name_provided__10.prototype.invoke_mz4o2y_k$ = function (acc, element) {
     var tmp;
     var tmp$ret$0;
     $l$block: {
@@ -3205,11 +3317,11 @@
     }
     return tmp;
   };
-  _no_name_provided__8.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__10.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE();
     return this.invoke_mz4o2y_k$(tmp, (!(p2 == null) ? isInterface(p2, Element_0) : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__8.$metadata$ = {
+  _no_name_provided__10.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -3333,7 +3445,7 @@
     interfaces: [Element_0]
   };
   function _no_name_provided_$factory_2() {
-    var i = new _no_name_provided__8();
+    var i = new _no_name_provided__10();
     return function (p1, p2) {
       return i.invoke_mz4o2y_k$(p1, p2);
     };
@@ -3696,39 +3808,39 @@
     }
     return tmp;
   }
-  function _no_name_provided__9() {
+  function _no_name_provided__11() {
   }
-  _no_name_provided__9.prototype.invoke_6wfw3l_k$ = function (line) {
+  _no_name_provided__11.prototype.invoke_6wfw3l_k$ = function (line) {
     return line;
   };
-  _no_name_provided__9.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__11.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__9.$metadata$ = {
+  _no_name_provided__11.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__10($indent) {
+  function _no_name_provided__12($indent) {
     this._$indent = $indent;
   }
-  _no_name_provided__10.prototype.invoke_6wfw3l_k$ = function (line) {
+  _no_name_provided__12.prototype.invoke_6wfw3l_k$ = function (line) {
     return this._$indent + line;
   };
-  _no_name_provided__10.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__12.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__10.$metadata$ = {
+  _no_name_provided__12.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_3() {
-    var i = new _no_name_provided__9();
+    var i = new _no_name_provided__11();
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
   function _no_name_provided_$factory_4($indent) {
-    var i = new _no_name_provided__10($indent);
+    var i = new _no_name_provided__12($indent);
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
@@ -4603,10 +4715,10 @@
     } else {
       var tmp;
       var tmp_0;
-      if ($this._this$0_5._limit > 0) {
+      if ($this._this$0_6._limit > 0) {
         var tmp0_this = $this;
         tmp0_this._counter = tmp0_this._counter + 1 | 0;
-        tmp_0 = tmp0_this._counter >= $this._this$0_5._limit;
+        tmp_0 = tmp0_this._counter >= $this._this$0_6._limit;
       } else {
         tmp_0 = false;
       }
@@ -4614,17 +4726,17 @@
         tmp = true;
       } else {
         {
-          tmp = $this._nextSearchIndex > charSequenceLength($this._this$0_5._input);
+          tmp = $this._nextSearchIndex > charSequenceLength($this._this$0_6._input);
         }
       }
       if (tmp) {
-        $this._nextItem_0 = numberRangeToNumber($this._currentStartIndex, _get_lastIndex__2($this._this$0_5._input));
+        $this._nextItem_0 = numberRangeToNumber($this._currentStartIndex, _get_lastIndex__2($this._this$0_6._input));
         $this._nextSearchIndex = -1;
       } else {
         {
-          var match = $this._this$0_5._getNextMatch($this._this$0_5._input, $this._nextSearchIndex);
+          var match = $this._this$0_6._getNextMatch($this._this$0_6._input, $this._nextSearchIndex);
           if (match == null) {
-            $this._nextItem_0 = numberRangeToNumber($this._currentStartIndex, _get_lastIndex__2($this._this$0_5._input));
+            $this._nextItem_0 = numberRangeToNumber($this._currentStartIndex, _get_lastIndex__2($this._this$0_6._input));
             $this._nextSearchIndex = -1;
           } else {
             var tmp1_container = match;
@@ -4639,15 +4751,15 @@
       $this._nextState_0 = 1;
     }
   }
-  function _no_name_provided__11(this$0) {
-    this._this$0_5 = this$0;
+  function _no_name_provided__13(this$0) {
+    this._this$0_6 = this$0;
     this._nextState_0 = -1;
-    this._currentStartIndex = coerceIn(this._this$0_5._startIndex, 0, charSequenceLength(this._this$0_5._input));
+    this._currentStartIndex = coerceIn(this._this$0_6._startIndex, 0, charSequenceLength(this._this$0_6._input));
     this._nextSearchIndex = this._currentStartIndex;
     this._nextItem_0 = null;
     this._counter = 0;
   }
-  _no_name_provided__11.prototype.next_0_k$ = function () {
+  _no_name_provided__13.prototype.next_0_k$ = function () {
     if (this._nextState_0 === -1)
       calcNext_0(this);
     if (this._nextState_0 === 0)
@@ -4658,12 +4770,12 @@
     this._nextState_0 = -1;
     return result;
   };
-  _no_name_provided__11.prototype.hasNext_0_k$ = function () {
+  _no_name_provided__13.prototype.hasNext_0_k$ = function () {
     if (this._nextState_0 === -1)
       calcNext_0(this);
     return this._nextState_0 === 1;
   };
-  _no_name_provided__11.$metadata$ = {
+  _no_name_provided__13.$metadata$ = {
     kind: 'class',
     interfaces: [Iterator_0]
   };
@@ -4674,7 +4786,7 @@
     this._getNextMatch = getNextMatch;
   }
   DelimitedRangesSequence.prototype.iterator_0_k$ = function () {
-    return new _no_name_provided__11(this);
+    return new _no_name_provided__13(this);
   };
   DelimitedRangesSequence.$metadata$ = {
     simpleName: 'DelimitedRangesSequence',
@@ -4823,11 +4935,11 @@
   function lines(_this_) {
     return toList_3(lineSequence(_this_));
   }
-  function _no_name_provided__12($delimiters, $ignoreCase) {
+  function _no_name_provided__14($delimiters, $ignoreCase) {
     this._$delimiters = $delimiters;
     this._$ignoreCase = $ignoreCase;
   }
-  _no_name_provided__12.prototype.invoke_w2qdfo_k$ = function ($this$$receiver, currentIndex) {
+  _no_name_provided__14.prototype.invoke_w2qdfo_k$ = function ($this$$receiver, currentIndex) {
     var tmp$ret$1;
     $l$block_0: {
       var tmp0_let_0 = indexOfAny($this$$receiver, this._$delimiters, currentIndex, this._$ignoreCase);
@@ -4843,19 +4955,19 @@
     }
     return tmp$ret$1;
   };
-  _no_name_provided__12.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__14.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? isCharSequence(p1) : false) ? p1 : THROW_CCE();
     return this.invoke_w2qdfo_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__12.$metadata$ = {
+  _no_name_provided__14.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__13($delimitersList, $ignoreCase) {
+  function _no_name_provided__15($delimitersList, $ignoreCase) {
     this._$delimitersList = $delimitersList;
     this._$ignoreCase_0 = $ignoreCase;
   }
-  _no_name_provided__13.prototype.invoke_w2qdfo_k$ = function ($this$$receiver, currentIndex) {
+  _no_name_provided__15.prototype.invoke_w2qdfo_k$ = function ($this$$receiver, currentIndex) {
     var tmp0_safe_receiver = findAnyOf($this$$receiver, this._$delimitersList, currentIndex, this._$ignoreCase_0, false);
     var tmp;
     if (tmp0_safe_receiver == null) {
@@ -4877,41 +4989,41 @@
     }
     return tmp;
   };
-  _no_name_provided__13.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__15.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? isCharSequence(p1) : false) ? p1 : THROW_CCE();
     return this.invoke_w2qdfo_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__13.$metadata$ = {
+  _no_name_provided__15.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__14($this_splitToSequence) {
+  function _no_name_provided__16($this_splitToSequence) {
     this._$this_splitToSequence = $this_splitToSequence;
   }
-  _no_name_provided__14.prototype.invoke_em8bnc_k$ = function (it) {
+  _no_name_provided__16.prototype.invoke_em8bnc_k$ = function (it) {
     return substring(this._$this_splitToSequence, it);
   };
-  _no_name_provided__14.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__16.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_em8bnc_k$(p1 instanceof IntRange ? p1 : THROW_CCE());
   };
-  _no_name_provided__14.$metadata$ = {
+  _no_name_provided__16.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_5($delimiters, $ignoreCase) {
-    var i = new _no_name_provided__12($delimiters, $ignoreCase);
+    var i = new _no_name_provided__14($delimiters, $ignoreCase);
     return function (p1, p2) {
       return i.invoke_w2qdfo_k$(p1, p2);
     };
   }
   function _no_name_provided_$factory_6($delimitersList, $ignoreCase) {
-    var i = new _no_name_provided__13($delimitersList, $ignoreCase);
+    var i = new _no_name_provided__15($delimitersList, $ignoreCase);
     return function (p1, p2) {
       return i.invoke_w2qdfo_k$(p1, p2);
     };
   }
   function _no_name_provided_$factory_7($this_splitToSequence) {
-    var i = new _no_name_provided__14($this_splitToSequence);
+    var i = new _no_name_provided__16($this_splitToSequence);
     return function (p1) {
       return i.invoke_em8bnc_k$(p1);
     };
@@ -5830,6 +5942,11 @@
   function setOf_0(element) {
     return hashSetOf([element]);
   }
+  function checkCountOverflow(count) {
+    if (count < 0) {
+      throwCountOverflow();
+    }return count;
+  }
   function checkIndexOverflow(index) {
     if (index < 0) {
       throwIndexOverflow();
@@ -6143,35 +6260,35 @@
     kind: 'class',
     interfaces: [MutableList]
   };
-  function _no_name_provided__15($entryIterator) {
-    this._$entryIterator_0 = $entryIterator;
+  function _no_name_provided__17($entryIterator) {
+    this._$entryIterator_1 = $entryIterator;
   }
-  _no_name_provided__15.prototype.hasNext_0_k$ = function () {
-    return this._$entryIterator_0.hasNext_0_k$();
+  _no_name_provided__17.prototype.hasNext_0_k$ = function () {
+    return this._$entryIterator_1.hasNext_0_k$();
   };
-  _no_name_provided__15.prototype.next_0_k$ = function () {
-    return this._$entryIterator_0.next_0_k$()._get_key__0_k$();
+  _no_name_provided__17.prototype.next_0_k$ = function () {
+    return this._$entryIterator_1.next_0_k$()._get_key__0_k$();
   };
-  _no_name_provided__15.prototype.remove_sv8swh_k$ = function () {
-    return this._$entryIterator_0.remove_sv8swh_k$();
+  _no_name_provided__17.prototype.remove_sv8swh_k$ = function () {
+    return this._$entryIterator_1.remove_sv8swh_k$();
   };
-  _no_name_provided__15.$metadata$ = {
+  _no_name_provided__17.$metadata$ = {
     kind: 'class',
     interfaces: [MutableIterator]
   };
-  function _no_name_provided__16($entryIterator) {
-    this._$entryIterator_1 = $entryIterator;
+  function _no_name_provided__18($entryIterator) {
+    this._$entryIterator_2 = $entryIterator;
   }
-  _no_name_provided__16.prototype.hasNext_0_k$ = function () {
-    return this._$entryIterator_1.hasNext_0_k$();
+  _no_name_provided__18.prototype.hasNext_0_k$ = function () {
+    return this._$entryIterator_2.hasNext_0_k$();
   };
-  _no_name_provided__16.prototype.next_0_k$ = function () {
-    return this._$entryIterator_1.next_0_k$()._get_value__0_k$();
+  _no_name_provided__18.prototype.next_0_k$ = function () {
+    return this._$entryIterator_2.next_0_k$()._get_value__0_k$();
   };
-  _no_name_provided__16.prototype.remove_sv8swh_k$ = function () {
-    return this._$entryIterator_1.remove_sv8swh_k$();
+  _no_name_provided__18.prototype.remove_sv8swh_k$ = function () {
+    return this._$entryIterator_2.remove_sv8swh_k$();
   };
-  _no_name_provided__16.$metadata$ = {
+  _no_name_provided__18.$metadata$ = {
     kind: 'class',
     interfaces: [MutableIterator]
   };
@@ -6218,86 +6335,86 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__17(this$0) {
-    this._this$0_6 = this$0;
+  function _no_name_provided__19(this$0) {
+    this._this$0_7 = this$0;
     AbstractMutableSet.call(this);
   }
-  _no_name_provided__17.prototype.add_2bw_k$ = function (element) {
+  _no_name_provided__19.prototype.add_2bw_k$ = function (element) {
     throw UnsupportedOperationException_init_$Create$_0('Add is not supported on keys');
   };
-  _no_name_provided__17.prototype.add_2bq_k$ = function (element) {
+  _no_name_provided__19.prototype.add_2bq_k$ = function (element) {
     return this.add_2bw_k$((element == null ? true : isObject(element)) ? element : THROW_CCE());
   };
-  _no_name_provided__17.prototype.clear_sv8swh_k$ = function () {
-    this._this$0_6.clear_sv8swh_k$();
+  _no_name_provided__19.prototype.clear_sv8swh_k$ = function () {
+    this._this$0_7.clear_sv8swh_k$();
   };
-  _no_name_provided__17.prototype.contains_2bw_k$ = function (element) {
-    return this._this$0_6.containsKey_2bw_k$(element);
+  _no_name_provided__19.prototype.contains_2bw_k$ = function (element) {
+    return this._this$0_7.containsKey_2bw_k$(element);
   };
-  _no_name_provided__17.prototype.contains_2bq_k$ = function (element) {
+  _no_name_provided__19.prototype.contains_2bq_k$ = function (element) {
     if (!(element == null ? true : isObject(element)))
       return false;
     else {
     }
     return this.contains_2bw_k$((element == null ? true : isObject(element)) ? element : THROW_CCE());
   };
-  _no_name_provided__17.prototype.iterator_0_k$ = function () {
-    var entryIterator = this._this$0_6._get_entries__0_k$().iterator_0_k$();
-    return new _no_name_provided__15(entryIterator);
+  _no_name_provided__19.prototype.iterator_0_k$ = function () {
+    var entryIterator = this._this$0_7._get_entries__0_k$().iterator_0_k$();
+    return new _no_name_provided__17(entryIterator);
   };
-  _no_name_provided__17.prototype.remove_2bw_k$ = function (element) {
+  _no_name_provided__19.prototype.remove_2bw_k$ = function (element) {
     this.checkIsMutable_sv8swh_k$();
-    if (this._this$0_6.containsKey_2bw_k$(element)) {
-      this._this$0_6.remove_2bw_k$(element);
+    if (this._this$0_7.containsKey_2bw_k$(element)) {
+      this._this$0_7.remove_2bw_k$(element);
       Unit_getInstance();
       return true;
     }return false;
   };
-  _no_name_provided__17.prototype.remove_2bq_k$ = function (element) {
+  _no_name_provided__19.prototype.remove_2bq_k$ = function (element) {
     if (!(element == null ? true : isObject(element)))
       return false;
     else {
     }
     return this.remove_2bw_k$((element == null ? true : isObject(element)) ? element : THROW_CCE());
   };
-  _no_name_provided__17.prototype._get_size__0_k$ = function () {
-    return this._this$0_6._get_size__0_k$();
+  _no_name_provided__19.prototype._get_size__0_k$ = function () {
+    return this._this$0_7._get_size__0_k$();
   };
-  _no_name_provided__17.prototype.checkIsMutable_sv8swh_k$ = function () {
-    return this._this$0_6.checkIsMutable_sv8swh_k$();
+  _no_name_provided__19.prototype.checkIsMutable_sv8swh_k$ = function () {
+    return this._this$0_7.checkIsMutable_sv8swh_k$();
   };
-  _no_name_provided__17.$metadata$ = {
+  _no_name_provided__19.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__18(this$0) {
-    this._this$0_7 = this$0;
+  function _no_name_provided__20(this$0) {
+    this._this$0_8 = this$0;
     AbstractMutableCollection.call(this);
   }
-  _no_name_provided__18.prototype.add_2c7_k$ = function (element) {
+  _no_name_provided__20.prototype.add_2c7_k$ = function (element) {
     throw UnsupportedOperationException_init_$Create$_0('Add is not supported on values');
   };
-  _no_name_provided__18.prototype.add_2bq_k$ = function (element) {
+  _no_name_provided__20.prototype.add_2bq_k$ = function (element) {
     return this.add_2c7_k$((element == null ? true : isObject(element)) ? element : THROW_CCE());
   };
-  _no_name_provided__18.prototype.contains_2c7_k$ = function (element) {
-    return this._this$0_7.containsValue_2c7_k$(element);
+  _no_name_provided__20.prototype.contains_2c7_k$ = function (element) {
+    return this._this$0_8.containsValue_2c7_k$(element);
   };
-  _no_name_provided__18.prototype.contains_2bq_k$ = function (element) {
+  _no_name_provided__20.prototype.contains_2bq_k$ = function (element) {
     if (!(element == null ? true : isObject(element)))
       return false;
     else {
     }
     return this.contains_2c7_k$((element == null ? true : isObject(element)) ? element : THROW_CCE());
   };
-  _no_name_provided__18.prototype.iterator_0_k$ = function () {
-    var entryIterator = this._this$0_7._get_entries__0_k$().iterator_0_k$();
-    return new _no_name_provided__16(entryIterator);
+  _no_name_provided__20.prototype.iterator_0_k$ = function () {
+    var entryIterator = this._this$0_8._get_entries__0_k$().iterator_0_k$();
+    return new _no_name_provided__18(entryIterator);
   };
-  _no_name_provided__18.prototype._get_size__0_k$ = function () {
-    return this._this$0_7._get_size__0_k$();
+  _no_name_provided__20.prototype._get_size__0_k$ = function () {
+    return this._this$0_8._get_size__0_k$();
   };
-  _no_name_provided__18.prototype.equals = function (other) {
+  _no_name_provided__20.prototype.equals = function (other) {
     if (this === other)
       return true;
     if (!(!(other == null) ? isInterface(other, Collection) : false))
@@ -6306,13 +6423,13 @@
     }
     return Companion_getInstance().orderedEquals_tuq55s_k$(this, other);
   };
-  _no_name_provided__18.prototype.hashCode = function () {
+  _no_name_provided__20.prototype.hashCode = function () {
     return Companion_getInstance().orderedHashCode_dxd51x_k$(this);
   };
-  _no_name_provided__18.prototype.checkIsMutable_sv8swh_k$ = function () {
-    return this._this$0_7.checkIsMutable_sv8swh_k$();
+  _no_name_provided__20.prototype.checkIsMutable_sv8swh_k$ = function () {
+    return this._this$0_8.checkIsMutable_sv8swh_k$();
   };
-  _no_name_provided__18.$metadata$ = {
+  _no_name_provided__20.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -6327,13 +6444,13 @@
   AbstractMutableMap.prototype._get_keys__0_k$ = function () {
     if (this.__keys_0 == null) {
       var tmp = this;
-      tmp.__keys_0 = new _no_name_provided__17(this);
+      tmp.__keys_0 = new _no_name_provided__19(this);
     }return ensureNotNull(this.__keys_0);
   };
   AbstractMutableMap.prototype._get_values__0_k$ = function () {
     if (this.__values_0 == null) {
       var tmp = this;
-      tmp.__values_0 = new _no_name_provided__18(this);
+      tmp.__values_0 = new _no_name_provided__20(this);
     }return ensureNotNull(this.__values_0);
   };
   AbstractMutableMap.prototype.remove_2bw_k$ = function (key) {
@@ -6783,41 +6900,41 @@
        while (!(i === end));
     return target;
   }
-  function _no_name_provided__19($comparator) {
+  function _no_name_provided__21($comparator) {
     this._$comparator = $comparator;
   }
-  _no_name_provided__19.prototype.invoke_1qgdm_k$ = function (a, b) {
+  _no_name_provided__21.prototype.invoke_1qgdm_k$ = function (a, b) {
     return this._$comparator.compare(a, b);
   };
-  _no_name_provided__19.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__21.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE();
     return this.invoke_1qgdm_k$(tmp, (p2 == null ? true : isObject(p2)) ? p2 : THROW_CCE());
   };
-  _no_name_provided__19.$metadata$ = {
+  _no_name_provided__21.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__20() {
+  function _no_name_provided__22() {
   }
-  _no_name_provided__20.prototype.invoke_27zxwg_k$ = function (a, b) {
+  _no_name_provided__22.prototype.invoke_27zxwg_k$ = function (a, b) {
     return (a & 3) - (b & 3) | 0;
   };
-  _no_name_provided__20.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__22.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__20.$metadata$ = {
+  _no_name_provided__22.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_8($comparator) {
-    var i = new _no_name_provided__19($comparator);
+    var i = new _no_name_provided__21($comparator);
     return function (p1, p2) {
       return i.invoke_1qgdm_k$(p1, p2);
     };
   }
   function _no_name_provided_$factory_9() {
-    var i = new _no_name_provided__20();
+    var i = new _no_name_provided__22();
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
@@ -7078,7 +7195,7 @@
     }var tmp1_this = $this;
     tmp1_this._keyIndex = tmp1_this._keyIndex + 1 | 0;
     if (tmp1_this._keyIndex < $this._keys.length) {
-      $this._chainOrEntry = $this._this$0_8._backingMap[$this._keys[$this._keyIndex]];
+      $this._chainOrEntry = $this._this$0_9._backingMap[$this._keys[$this._keyIndex]];
       var tmp = $this;
       var tmp_0 = $this._chainOrEntry;
       tmp._isChain = !(tmp_0 == null) ? isArray(tmp_0) : false;
@@ -7143,22 +7260,22 @@
     var chainOrEntry = $this._backingMap[hashCode_1];
     return chainOrEntry === undefined ? null : chainOrEntry;
   }
-  function _no_name_provided__21(this$0) {
-    this._this$0_8 = this$0;
+  function _no_name_provided__23(this$0) {
+    this._this$0_9 = this$0;
     this._state = -1;
-    this._keys = Object.keys(this._this$0_8._backingMap);
+    this._keys = Object.keys(this._this$0_9._backingMap);
     this._keyIndex = -1;
     this._chainOrEntry = null;
     this._isChain = false;
     this._itemIndex = -1;
     this._lastEntry = null;
   }
-  _no_name_provided__21.prototype.hasNext_0_k$ = function () {
+  _no_name_provided__23.prototype.hasNext_0_k$ = function () {
     if (this._state === -1)
       this._state = computeNext(this);
     return this._state === 0;
   };
-  _no_name_provided__21.prototype.next_0_k$ = function () {
+  _no_name_provided__23.prototype.next_0_k$ = function () {
     if (!this.hasNext_0_k$())
       throw NoSuchElementException_init_$Create$();
     var tmp;
@@ -7184,7 +7301,7 @@
     this._state = -1;
     return lastEntry;
   };
-  _no_name_provided__21.prototype.remove_sv8swh_k$ = function () {
+  _no_name_provided__23.prototype.remove_sv8swh_k$ = function () {
     var tmp$ret$2;
     $l$block_1: {
       var tmp0_checkNotNull_0 = this._lastEntry;
@@ -7211,7 +7328,7 @@
       break $l$block_1;
     }
     Unit_getInstance();
-    this._this$0_8.remove_2bw_k$(ensureNotNull(this._lastEntry)._get_key__0_k$());
+    this._this$0_9.remove_2bw_k$(ensureNotNull(this._lastEntry)._get_key__0_k$());
     Unit_getInstance();
     this._lastEntry = null;
     var tmp0_this = this;
@@ -7219,7 +7336,7 @@
     tmp0_this._itemIndex = tmp1 - 1 | 0;
     Unit_getInstance();
   };
-  _no_name_provided__21.$metadata$ = {
+  _no_name_provided__23.$metadata$ = {
     kind: 'class',
     interfaces: [MutableIterator]
   };
@@ -7361,7 +7478,7 @@
     return tmp0_safe_receiver == null ? null : tmp0_safe_receiver._get_value__0_k$();
   };
   InternalHashCodeMap.prototype.iterator_0_k$ = function () {
-    return new _no_name_provided__21(this);
+    return new _no_name_provided__23(this);
   };
   InternalHashCodeMap.$metadata$ = {
     simpleName: 'InternalHashCodeMap',
@@ -8103,34 +8220,10 @@
     interfaces: [KCallable]
   };
   var functionClasses;
-  function _no_name_provided__22() {
-  }
-  _no_name_provided__22.prototype.invoke_wi7j7l_k$ = function (it) {
-    return isObject(it);
-  };
-  _no_name_provided__22.prototype.invoke_20e8_k$ = function (p1) {
-    return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
-  };
-  _no_name_provided__22.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__23() {
-  }
-  _no_name_provided__23.prototype.invoke_wi7j7l_k$ = function (it) {
-    return isNumber(it);
-  };
-  _no_name_provided__23.prototype.invoke_20e8_k$ = function (p1) {
-    return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
-  };
-  _no_name_provided__23.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
   function _no_name_provided__24() {
   }
   _no_name_provided__24.prototype.invoke_wi7j7l_k$ = function (it) {
-    return !(it == null) ? typeof it === 'boolean' : false;
+    return isObject(it);
   };
   _no_name_provided__24.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
@@ -8142,7 +8235,7 @@
   function _no_name_provided__25() {
   }
   _no_name_provided__25.prototype.invoke_wi7j7l_k$ = function (it) {
-    return !(it == null) ? typeof it === 'number' : false;
+    return isNumber(it);
   };
   _no_name_provided__25.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
@@ -8154,7 +8247,7 @@
   function _no_name_provided__26() {
   }
   _no_name_provided__26.prototype.invoke_wi7j7l_k$ = function (it) {
-    return !(it == null) ? typeof it === 'number' : false;
+    return !(it == null) ? typeof it === 'boolean' : false;
   };
   _no_name_provided__26.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
@@ -8202,7 +8295,7 @@
   function _no_name_provided__30() {
   }
   _no_name_provided__30.prototype.invoke_wi7j7l_k$ = function (it) {
-    return !(it == null) ? isArray(it) : false;
+    return !(it == null) ? typeof it === 'number' : false;
   };
   _no_name_provided__30.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
@@ -8214,7 +8307,7 @@
   function _no_name_provided__31() {
   }
   _no_name_provided__31.prototype.invoke_wi7j7l_k$ = function (it) {
-    return !(it == null) ? typeof it === 'string' : false;
+    return !(it == null) ? typeof it === 'number' : false;
   };
   _no_name_provided__31.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
@@ -8226,7 +8319,7 @@
   function _no_name_provided__32() {
   }
   _no_name_provided__32.prototype.invoke_wi7j7l_k$ = function (it) {
-    return it instanceof Error;
+    return !(it == null) ? isArray(it) : false;
   };
   _no_name_provided__32.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
@@ -8238,7 +8331,7 @@
   function _no_name_provided__33() {
   }
   _no_name_provided__33.prototype.invoke_wi7j7l_k$ = function (it) {
-    return !(it == null) ? isBooleanArray(it) : false;
+    return !(it == null) ? typeof it === 'string' : false;
   };
   _no_name_provided__33.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
@@ -8250,7 +8343,7 @@
   function _no_name_provided__34() {
   }
   _no_name_provided__34.prototype.invoke_wi7j7l_k$ = function (it) {
-    return !(it == null) ? isCharArray(it) : false;
+    return it instanceof Error;
   };
   _no_name_provided__34.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
@@ -8262,7 +8355,7 @@
   function _no_name_provided__35() {
   }
   _no_name_provided__35.prototype.invoke_wi7j7l_k$ = function (it) {
-    return !(it == null) ? isByteArray(it) : false;
+    return !(it == null) ? isBooleanArray(it) : false;
   };
   _no_name_provided__35.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
@@ -8274,7 +8367,7 @@
   function _no_name_provided__36() {
   }
   _no_name_provided__36.prototype.invoke_wi7j7l_k$ = function (it) {
-    return !(it == null) ? isShortArray(it) : false;
+    return !(it == null) ? isCharArray(it) : false;
   };
   _no_name_provided__36.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
@@ -8286,7 +8379,7 @@
   function _no_name_provided__37() {
   }
   _no_name_provided__37.prototype.invoke_wi7j7l_k$ = function (it) {
-    return !(it == null) ? isIntArray(it) : false;
+    return !(it == null) ? isByteArray(it) : false;
   };
   _no_name_provided__37.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
@@ -8298,7 +8391,7 @@
   function _no_name_provided__38() {
   }
   _no_name_provided__38.prototype.invoke_wi7j7l_k$ = function (it) {
-    return !(it == null) ? isLongArray(it) : false;
+    return !(it == null) ? isShortArray(it) : false;
   };
   _no_name_provided__38.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
@@ -8310,7 +8403,7 @@
   function _no_name_provided__39() {
   }
   _no_name_provided__39.prototype.invoke_wi7j7l_k$ = function (it) {
-    return !(it == null) ? isFloatArray(it) : false;
+    return !(it == null) ? isIntArray(it) : false;
   };
   _no_name_provided__39.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
@@ -8322,7 +8415,7 @@
   function _no_name_provided__40() {
   }
   _no_name_provided__40.prototype.invoke_wi7j7l_k$ = function (it) {
-    return !(it == null) ? isDoubleArray(it) : false;
+    return !(it == null) ? isLongArray(it) : false;
   };
   _no_name_provided__40.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
@@ -8331,10 +8424,34 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__41($arity) {
-    this._$arity = $arity;
+  function _no_name_provided__41() {
   }
   _no_name_provided__41.prototype.invoke_wi7j7l_k$ = function (it) {
+    return !(it == null) ? isFloatArray(it) : false;
+  };
+  _no_name_provided__41.prototype.invoke_20e8_k$ = function (p1) {
+    return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
+  };
+  _no_name_provided__41.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__42() {
+  }
+  _no_name_provided__42.prototype.invoke_wi7j7l_k$ = function (it) {
+    return !(it == null) ? isDoubleArray(it) : false;
+  };
+  _no_name_provided__42.prototype.invoke_20e8_k$ = function (p1) {
+    return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
+  };
+  _no_name_provided__42.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__43($arity) {
+    this._$arity = $arity;
+  }
+  _no_name_provided__43.prototype.invoke_wi7j7l_k$ = function (it) {
     var tmp;
     if (typeof it === 'function') {
       var tmp$ret$0;
@@ -8348,10 +8465,10 @@
     }
     return tmp;
   };
-  _no_name_provided__41.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__43.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
   };
-  _no_name_provided__41.$metadata$ = {
+  _no_name_provided__43.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -8720,121 +8837,121 @@
     return PrimitiveClasses_instance;
   }
   function _no_name_provided_$factory_10() {
-    var i = new _no_name_provided__22();
-    return function (p1) {
-      return i.invoke_wi7j7l_k$(p1);
-    };
-  }
-  function _no_name_provided_$factory_11() {
-    var i = new _no_name_provided__23();
-    return function (p1) {
-      return i.invoke_wi7j7l_k$(p1);
-    };
-  }
-  function _no_name_provided_$factory_12() {
     var i = new _no_name_provided__24();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_13() {
+  function _no_name_provided_$factory_11() {
     var i = new _no_name_provided__25();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_14() {
+  function _no_name_provided_$factory_12() {
     var i = new _no_name_provided__26();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_15() {
+  function _no_name_provided_$factory_13() {
     var i = new _no_name_provided__27();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_16() {
+  function _no_name_provided_$factory_14() {
     var i = new _no_name_provided__28();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_17() {
+  function _no_name_provided_$factory_15() {
     var i = new _no_name_provided__29();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_18() {
+  function _no_name_provided_$factory_16() {
     var i = new _no_name_provided__30();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_19() {
+  function _no_name_provided_$factory_17() {
     var i = new _no_name_provided__31();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_20() {
+  function _no_name_provided_$factory_18() {
     var i = new _no_name_provided__32();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_21() {
+  function _no_name_provided_$factory_19() {
     var i = new _no_name_provided__33();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_22() {
+  function _no_name_provided_$factory_20() {
     var i = new _no_name_provided__34();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_23() {
+  function _no_name_provided_$factory_21() {
     var i = new _no_name_provided__35();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_24() {
+  function _no_name_provided_$factory_22() {
     var i = new _no_name_provided__36();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_25() {
+  function _no_name_provided_$factory_23() {
     var i = new _no_name_provided__37();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_26() {
+  function _no_name_provided_$factory_24() {
     var i = new _no_name_provided__38();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_27() {
+  function _no_name_provided_$factory_25() {
     var i = new _no_name_provided__39();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_28() {
+  function _no_name_provided_$factory_26() {
     var i = new _no_name_provided__40();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
   }
+  function _no_name_provided_$factory_27() {
+    var i = new _no_name_provided__41();
+    return function (p1) {
+      return i.invoke_wi7j7l_k$(p1);
+    };
+  }
+  function _no_name_provided_$factory_28() {
+    var i = new _no_name_provided__42();
+    return function (p1) {
+      return i.invoke_wi7j7l_k$(p1);
+    };
+  }
   function _no_name_provided_$factory_29($arity) {
-    var i = new _no_name_provided__41($arity);
+    var i = new _no_name_provided__43($arity);
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
@@ -9367,27 +9484,27 @@
       new Companion_8();
     return Companion_instance_7;
   }
-  function _no_name_provided__42(this$0, $input, $startIndex) {
-    this._this$0_9 = this$0;
+  function _no_name_provided__44(this$0, $input, $startIndex) {
+    this._this$0_10 = this$0;
     this._$input = $input;
     this._$startIndex = $startIndex;
   }
-  _no_name_provided__42.prototype.invoke_0_k$ = function () {
-    return this._this$0_9.find_w2qdfo_k$(this._$input, this._$startIndex);
+  _no_name_provided__44.prototype.invoke_0_k$ = function () {
+    return this._this$0_10.find_w2qdfo_k$(this._$input, this._$startIndex);
   };
-  _no_name_provided__42.$metadata$ = {
+  _no_name_provided__44.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__43() {
+  function _no_name_provided__45() {
   }
-  _no_name_provided__43.prototype.invoke_p75qlr_k$ = function (match) {
+  _no_name_provided__45.prototype.invoke_p75qlr_k$ = function (match) {
     return match.next_0_k$();
   };
-  _no_name_provided__43.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__45.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_p75qlr_k$((!(p1 == null) ? isInterface(p1, MatchResult) : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__43.$metadata$ = {
+  _no_name_provided__45.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -9555,45 +9672,45 @@
     if (match == null)
       return null;
     var range = numberRangeToNumber(match.index, _this_.lastIndex - 1 | 0);
-    return new _no_name_provided__48(range, match, _this_, input);
+    return new _no_name_provided__50(range, match, _this_, input);
   }
-  function _no_name_provided__44() {
+  function _no_name_provided__46() {
   }
-  _no_name_provided__44.prototype.invoke_ot21mf_k$ = function (it) {
+  _no_name_provided__46.prototype.invoke_ot21mf_k$ = function (it) {
     return it._value;
   };
-  _no_name_provided__44.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__46.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ot21mf_k$(p1 instanceof RegexOption ? p1 : THROW_CCE());
   };
-  _no_name_provided__44.$metadata$ = {
+  _no_name_provided__46.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__45(this$0) {
-    this._this$0_10 = this$0;
+  function _no_name_provided__47(this$0) {
+    this._this$0_11 = this$0;
   }
-  _no_name_provided__45.prototype.invoke_ha5a7z_k$ = function (it) {
-    return this._this$0_10.get_ha5a7z_k$(it);
+  _no_name_provided__47.prototype.invoke_ha5a7z_k$ = function (it) {
+    return this._this$0_11.get_ha5a7z_k$(it);
   };
-  _no_name_provided__45.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__47.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__45.$metadata$ = {
+  _no_name_provided__47.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__46($match) {
+  function _no_name_provided__48($match) {
     this._$match = $match;
     AbstractCollection.call(this);
   }
-  _no_name_provided__46.prototype._get_size__0_k$ = function () {
+  _no_name_provided__48.prototype._get_size__0_k$ = function () {
     return this._$match.length;
   };
-  _no_name_provided__46.prototype.iterator_0_k$ = function () {
+  _no_name_provided__48.prototype.iterator_0_k$ = function () {
     var tmp = asSequence(_get_indices__0(this));
     return map(tmp, _no_name_provided_$factory_33(this)).iterator_0_k$();
   };
-  _no_name_provided__46.prototype.get_ha5a7z_k$ = function (index) {
+  _no_name_provided__48.prototype.get_ha5a7z_k$ = function (index) {
     var tmp$ret$1;
     $l$block_0: {
       var tmp$ret$0;
@@ -9625,18 +9742,18 @@
     }
     return tmp;
   };
-  _no_name_provided__46.$metadata$ = {
+  _no_name_provided__48.$metadata$ = {
     kind: 'class',
     interfaces: [MatchGroupCollection]
   };
-  function _no_name_provided__47($match) {
+  function _no_name_provided__49($match) {
     this._$match_0 = $match;
     AbstractList.call(this);
   }
-  _no_name_provided__47.prototype._get_size__0_k$ = function () {
+  _no_name_provided__49.prototype._get_size__0_k$ = function () {
     return this._$match_0.length;
   };
-  _no_name_provided__47.prototype.get_ha5a7z_k$ = function (index) {
+  _no_name_provided__49.prototype.get_ha5a7z_k$ = function (index) {
     var tmp$ret$1;
     $l$block_0: {
       var tmp$ret$0;
@@ -9650,36 +9767,36 @@
     var tmp0_elvis_lhs = tmp$ret$1;
     return tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs;
   };
-  _no_name_provided__47.$metadata$ = {
+  _no_name_provided__49.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__48($range, $match, $this_findNext, $input) {
+  function _no_name_provided__50($range, $match, $this_findNext, $input) {
     this._$range = $range;
     this._$match_1 = $match;
     this._$this_findNext = $this_findNext;
     this._$input_0 = $input;
     this._range = this._$range;
     var tmp = this;
-    tmp._groups = new _no_name_provided__46(this._$match_1);
+    tmp._groups = new _no_name_provided__48(this._$match_1);
     this._groupValues_ = null;
   }
-  _no_name_provided__48.prototype._get_range__0_k$ = function () {
+  _no_name_provided__50.prototype._get_range__0_k$ = function () {
     return this._range;
   };
-  _no_name_provided__48.prototype._get_groups__0_k$ = function () {
+  _no_name_provided__50.prototype._get_groups__0_k$ = function () {
     return this._groups;
   };
-  _no_name_provided__48.prototype._get_groupValues__0_k$ = function () {
+  _no_name_provided__50.prototype._get_groupValues__0_k$ = function () {
     if (this._groupValues_ == null) {
       var tmp = this;
-      tmp._groupValues_ = new _no_name_provided__47(this._$match_1);
+      tmp._groupValues_ = new _no_name_provided__49(this._$match_1);
     }return ensureNotNull(this._groupValues_);
   };
-  _no_name_provided__48.prototype.next_0_k$ = function () {
+  _no_name_provided__50.prototype.next_0_k$ = function () {
     return findNext(this._$this_findNext, this._$input_0, this._$range.isEmpty_0_k$() ? this._$range._get_start__0_k$() + 1 | 0 : this._$range._get_endInclusive__0_k$() + 1 | 0);
   };
-  _no_name_provided__48.$metadata$ = {
+  _no_name_provided__50.$metadata$ = {
     kind: 'class',
     interfaces: [MatchResult]
   };
@@ -9692,25 +9809,25 @@
     return RegexOption_MULTILINE_instance;
   }
   function _no_name_provided_$factory_30(this$0, $input, $startIndex) {
-    var i = new _no_name_provided__42(this$0, $input, $startIndex);
+    var i = new _no_name_provided__44(this$0, $input, $startIndex);
     return function () {
       return i.invoke_0_k$();
     };
   }
   function _no_name_provided_$factory_31() {
-    var i = new _no_name_provided__43();
+    var i = new _no_name_provided__45();
     return function (p1) {
       return i.invoke_p75qlr_k$(p1);
     };
   }
   function _no_name_provided_$factory_32() {
-    var i = new _no_name_provided__44();
+    var i = new _no_name_provided__46();
     return function (p1) {
       return i.invoke_ot21mf_k$(p1);
     };
   }
   function _no_name_provided_$factory_33(this$0) {
-    var i = new _no_name_provided__45(this$0);
+    var i = new _no_name_provided__47(this$0);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
@@ -10702,7 +10819,7 @@
     return array;
   }
   function arrayIterator(array) {
-    return new _no_name_provided__49(array);
+    return new _no_name_provided__51(array);
   }
   function booleanArray(size_0) {
     var tmp$ret$1;
@@ -10789,14 +10906,14 @@
     }
     return tmp$ret$2;
   }
-  function _no_name_provided__49($array) {
+  function _no_name_provided__51($array) {
     this._$array = $array;
     this._index_1 = 0;
   }
-  _no_name_provided__49.prototype.hasNext_0_k$ = function () {
+  _no_name_provided__51.prototype.hasNext_0_k$ = function () {
     return !(this._index_1 === this._$array.length);
   };
-  _no_name_provided__49.prototype.next_0_k$ = function () {
+  _no_name_provided__51.prototype.next_0_k$ = function () {
     var tmp;
     if (!(this._index_1 === this._$array.length)) {
       var tmp0_this = this;
@@ -10808,7 +10925,7 @@
     }
     return tmp;
   };
-  _no_name_provided__49.$metadata$ = {
+  _no_name_provided__51.$metadata$ = {
     kind: 'class',
     interfaces: [Iterator_0]
   };
@@ -11028,20 +11145,20 @@
   function arrayToString(array) {
     return joinToString$default(array, ', ', '[', ']', 0, null, _no_name_provided_$factory_34(), 24, null);
   }
-  function _no_name_provided__50() {
+  function _no_name_provided__52() {
   }
-  _no_name_provided__50.prototype.invoke_wi7j7l_k$ = function (it) {
+  _no_name_provided__52.prototype.invoke_wi7j7l_k$ = function (it) {
     return toString_3(it);
   };
-  _no_name_provided__50.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__52.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wi7j7l_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
   };
-  _no_name_provided__50.$metadata$ = {
+  _no_name_provided__52.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_34() {
-    var i = new _no_name_provided__50();
+    var i = new _no_name_provided__52();
     return function (p1) {
       return i.invoke_wi7j7l_k$(p1);
     };
@@ -12645,6 +12762,11 @@
     Exception.call($this);
     return $this;
   }
+  function Exception_init_$Init$_2(cause, $this) {
+    extendThrowable($this, void 1, cause);
+    Exception.call($this);
+    return $this;
+  }
   function Exception() {
     captureStack(this, Exception);
   }
@@ -13046,21 +13168,21 @@
     }
     return tmp$ret$0;
   }
-  function _no_name_provided__51($this_elementDescriptors) {
+  function _no_name_provided__53($this_elementDescriptors) {
     this._$this_elementDescriptors = $this_elementDescriptors;
     this._elementsLeft = this._$this_elementDescriptors._get_elementsCount__0_k$();
   }
-  _no_name_provided__51.prototype.hasNext_0_k$ = function () {
+  _no_name_provided__53.prototype.hasNext_0_k$ = function () {
     return this._elementsLeft > 0;
   };
-  _no_name_provided__51.prototype.next_0_k$ = function () {
+  _no_name_provided__53.prototype.next_0_k$ = function () {
     var tmp = this._$this_elementDescriptors._get_elementsCount__0_k$();
     var tmp0_this = this;
     var tmp1 = tmp0_this._elementsLeft;
     tmp0_this._elementsLeft = tmp1 - 1 | 0;
     return this._$this_elementDescriptors.getElementDescriptor_ha5a7z_k$(tmp - tmp1 | 0);
   };
-  _no_name_provided__51.$metadata$ = {
+  _no_name_provided__53.$metadata$ = {
     kind: 'class',
     interfaces: [Iterator_0]
   };
@@ -13070,7 +13192,7 @@
   _no_name_provided__1_2.prototype.iterator_2_0_k$ = function () {
     var tmp$ret$0;
     $l$block: {
-      tmp$ret$0 = new _no_name_provided__51(this._$this_elementDescriptors_0);
+      tmp$ret$0 = new _no_name_provided__53(this._$this_elementDescriptors_0);
       break $l$block;
     }
     return tmp$ret$0;
@@ -13305,11 +13427,11 @@
        while (inductionVariable <= last_2);
     return indices;
   }
-  function _no_name_provided__52(this$0) {
-    this._this$0_11 = this$0;
+  function _no_name_provided__54(this$0) {
+    this._this$0_12 = this$0;
   }
-  _no_name_provided__52.prototype.invoke_0_k$ = function () {
-    var tmp0_safe_receiver = this._this$0_11._generatedSerializer;
+  _no_name_provided__54.prototype.invoke_0_k$ = function () {
+    var tmp0_safe_receiver = this._this$0_12._generatedSerializer;
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.childSerializers_0_k$();
     var tmp;
     if (tmp1_elvis_lhs == null) {
@@ -13324,15 +13446,15 @@
     }
     return tmp;
   };
-  _no_name_provided__52.$metadata$ = {
+  _no_name_provided__54.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__53(this$0) {
-    this._this$0_12 = this$0;
+  function _no_name_provided__55(this$0) {
+    this._this$0_13 = this$0;
   }
-  _no_name_provided__53.prototype.invoke_0_k$ = function () {
-    var tmp0_safe_receiver = this._this$0_12._generatedSerializer;
+  _no_name_provided__55.prototype.invoke_0_k$ = function () {
+    var tmp0_safe_receiver = this._this$0_13._generatedSerializer;
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.typeParametersSerializers_0_k$();
     var tmp;
     if (tmp1_safe_receiver == null) {
@@ -13364,30 +13486,30 @@
     }
     return compactArray(tmp);
   };
-  _no_name_provided__53.$metadata$ = {
+  _no_name_provided__55.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__54(this$0) {
-    this._this$0_13 = this$0;
-  }
-  _no_name_provided__54.prototype.invoke_0_k$ = function () {
-    return hashCodeImpl(this._this$0_13, this._this$0_13._get_typeParameterDescriptors__0_k$());
-  };
-  _no_name_provided__54.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__55(this$0) {
+  function _no_name_provided__56(this$0) {
     this._this$0_14 = this$0;
   }
-  _no_name_provided__55.prototype.invoke_ha5a7z_k$ = function (i) {
-    return this._this$0_14.getElementName_ha5a7z_k$(i) + ': ' + this._this$0_14.getElementDescriptor_ha5a7z_k$(i)._get_serialName__0_k$();
+  _no_name_provided__56.prototype.invoke_0_k$ = function () {
+    return hashCodeImpl(this._this$0_14, this._this$0_14._get_typeParameterDescriptors__0_k$());
   };
-  _no_name_provided__55.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__56.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__57(this$0) {
+    this._this$0_15 = this$0;
+  }
+  _no_name_provided__57.prototype.invoke_ha5a7z_k$ = function (i) {
+    return this._this$0_15.getElementName_ha5a7z_k$(i) + ': ' + this._this$0_15.getElementDescriptor_ha5a7z_k$(i)._get_serialName__0_k$();
+  };
+  _no_name_provided__57.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__55.$metadata$ = {
+  _no_name_provided__57.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -13543,25 +13665,25 @@
     }, null);
   }
   function _no_name_provided_$factory_35(this$0) {
-    var i = new _no_name_provided__52(this$0);
-    return function () {
-      return i.invoke_0_k$();
-    };
-  }
-  function _no_name_provided_$factory_36(this$0) {
-    var i = new _no_name_provided__53(this$0);
-    return function () {
-      return i.invoke_0_k$();
-    };
-  }
-  function _no_name_provided_$factory_37(this$0) {
     var i = new _no_name_provided__54(this$0);
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_38(this$0) {
+  function _no_name_provided_$factory_36(this$0) {
     var i = new _no_name_provided__55(this$0);
+    return function () {
+      return i.invoke_0_k$();
+    };
+  }
+  function _no_name_provided_$factory_37(this$0) {
+    var i = new _no_name_provided__56(this$0);
+    return function () {
+      return i.invoke_0_k$();
+    };
+  }
+  function _no_name_provided_$factory_38(this$0) {
+    var i = new _no_name_provided__57(this$0);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
@@ -13616,29 +13738,29 @@
     }
     return tmp;
   }
-  function _no_name_provided__56($bytes) {
+  function _no_name_provided__58($bytes) {
     this._$bytes = $bytes;
   }
-  _no_name_provided__56.prototype.invoke_0_k$ = function () {
+  _no_name_provided__58.prototype.invoke_0_k$ = function () {
     return toLong(this._$bytes.length);
   };
-  _no_name_provided__56.$metadata$ = {
+  _no_name_provided__58.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__57(this$0) {
-    this._this$0_15 = this$0;
+  function _no_name_provided__59(this$0) {
+    this._this$0_16 = this$0;
   }
-  _no_name_provided__57.prototype.invoke_0_k$ = function () {
+  _no_name_provided__59.prototype.invoke_0_k$ = function () {
     var tmp$ret$0;
     $l$block: {
-      var tmp0_minus_0 = this._this$0_15._get_size__0_k$();
+      var tmp0_minus_0 = this._this$0_16._get_size__0_k$();
       tmp$ret$0 = tmp0_minus_0.minus_wiekkq_k$(new Long(1, 0));
       break $l$block;
     }
     return tmp$ret$0;
   };
-  _no_name_provided__57.$metadata$ = {
+  _no_name_provided__59.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -13803,9 +13925,9 @@
   function position(_this_, newPosition) {
     return _this_.position_wiekkq_k$(toLong(newPosition));
   }
-  function _no_name_provided__58() {
+  function _no_name_provided__60() {
   }
-  _no_name_provided__58.prototype.invoke_0_k$ = function () {
+  _no_name_provided__60.prototype.invoke_0_k$ = function () {
     var tmp$ret$0;
     $l$block: {
       var tmp0_apply_0 = listOf([new Char(0), new Char(1), new Char(2), new Char(3), new Char(4), new Char(5), new Char(6), new Char(7), new Char(8), new Char(9), new Char(10), new Char(11), new Char(12), new Char(13), new Char(14), new Char(15), new Char(16), new Char(17), new Char(18), new Char(19), new Char(20), new Char(21), new Char(22), new Char(23), new Char(24), new Char(25), new Char(26), new Char(27), new Char(28), new Char(29), new Char(30), new Char(31), new Char(32), new Char(33), new Char(34), new Char(35), new Char(36), new Char(37), new Char(38), new Char(39), new Char(40), new Char(41), new Char(42), new Char(43), new Char(44), new Char(45), new Char(46), new Char(47), new Char(48), new Char(49), new Char(50), new Char(51), new Char(52), new Char(53), new Char(54), new Char(55), new Char(56), new Char(57), new Char(58), new Char(59), new Char(60), new Char(61), new Char(62), new Char(63), new Char(64), new Char(65), new Char(66), new Char(67), new Char(68), new Char(69), new Char(70), new Char(71), new Char(72), new Char(73), new Char(74), new Char(75), new Char(76), new Char(77), new Char(78), new Char(79), new Char(80), new Char(81), new Char(82), new Char(83), new Char(84), new Char(85), new Char(86), new Char(87), new Char(88), new Char(89), new Char(90), new Char(91), new Char(92), new Char(93), new Char(94), new Char(95), new Char(96), new Char(97), new Char(98), new Char(99), new Char(100), new Char(101), new Char(102), new Char(103), new Char(104), new Char(105), new Char(106), new Char(107), new Char(108), new Char(109), new Char(110), new Char(111), new Char(112), new Char(113), new Char(114), new Char(115), new Char(116), new Char(117), new Char(118), new Char(119), new Char(120), new Char(121), new Char(122), new Char(123), new Char(124), new Char(125), new Char(126), new Char(127), new Char(8364), new Char(65533), new Char(8218), new Char(402), new Char(8222), new Char(8230), new Char(8224), new Char(8225), new Char(710), new Char(8240), new Char(352), new Char(8249), new Char(338), new Char(65533), new Char(381), new Char(65533), new Char(65533), new Char(8216), new Char(8217), new Char(8220), new Char(8221), new Char(8226), new Char(8211), new Char(8212), new Char(732), new Char(8482), new Char(353), new Char(8250), new Char(339), new Char(65533), new Char(382), new Char(376), new Char(160), new Char(161), new Char(162), new Char(163), new Char(164), new Char(165), new Char(166), new Char(167), new Char(168), new Char(169), new Char(170), new Char(171), new Char(172), new Char(173), new Char(174), new Char(175), new Char(176), new Char(177), new Char(178), new Char(179), new Char(180), new Char(181), new Char(182), new Char(183), new Char(184), new Char(185), new Char(186), new Char(187), new Char(188), new Char(189), new Char(190), new Char(191), new Char(192), new Char(193), new Char(194), new Char(195), new Char(196), new Char(197), new Char(198), new Char(199), new Char(200), new Char(201), new Char(202), new Char(203), new Char(204), new Char(205), new Char(206), new Char(207), new Char(208), new Char(209), new Char(210), new Char(211), new Char(212), new Char(213), new Char(214), new Char(215), new Char(216), new Char(217), new Char(218), new Char(219), new Char(220), new Char(221), new Char(222), new Char(223), new Char(224), new Char(225), new Char(226), new Char(227), new Char(228), new Char(229), new Char(230), new Char(231), new Char(232), new Char(233), new Char(234), new Char(235), new Char(236), new Char(237), new Char(238), new Char(239), new Char(240), new Char(241), new Char(242), new Char(243), new Char(244), new Char(245), new Char(246), new Char(247), new Char(248), new Char(249), new Char(250), new Char(251), new Char(252), new Char(253), new Char(254), new Char(255)]);
@@ -13821,7 +13943,7 @@
     }
     return tmp$ret$0;
   };
-  _no_name_provided__58.$metadata$ = {
+  _no_name_provided__60.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -13831,19 +13953,19 @@
     }, null);
   }
   function _no_name_provided_$factory_39() {
-    var i = new _no_name_provided__58();
+    var i = new _no_name_provided__60();
     return function () {
       return i.invoke_0_k$();
     };
   }
   function _no_name_provided_$factory_40($bytes) {
-    var i = new _no_name_provided__56($bytes);
+    var i = new _no_name_provided__58($bytes);
     return function () {
       return i.invoke_0_k$();
     };
   }
   function _no_name_provided_$factory_41(this$0) {
-    var i = new _no_name_provided__57(this$0);
+    var i = new _no_name_provided__59(this$0);
     return function () {
       return i.invoke_0_k$();
     };
@@ -14096,9 +14218,8 @@
   }
   function Companion_13() {
     Companion_instance_12 = this;
-    var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('tuple', null, 2);
-    tmp0_serialDesc.addElement_5xhc52_k$('first', false);
-    tmp0_serialDesc.addElement_5xhc52_k$('second', false);
+    var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('bedalton.creatures.structs.Pointer', null, 1);
+    tmp0_serialDesc.addElement_5xhc52_k$('value', false);
     Companion_getInstance_12()._$cachedDescriptor = tmp0_serialDesc;
   }
   Companion_13.$metadata$ = {
@@ -14112,8 +14233,55 @@
       new Companion_13();
     return Companion_instance_12;
   }
-  function Tuple(first_1, second) {
+  function Pointer(value) {
     Companion_getInstance_12();
+    this._value_2 = value;
+    ensureNeverFrozen(this);
+  }
+  Pointer.prototype.toString = function () {
+    return toString_2(this._value_2);
+  };
+  Pointer.prototype.hashCode = function () {
+    return this._value_2 == null ? 0 : hashCode(this._value_2);
+  };
+  Pointer.prototype.equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof Pointer))
+      return false;
+    else {
+    }
+    var tmp0_other_with_cast = other instanceof Pointer ? other : THROW_CCE();
+    if (!equals_1(this._value_2, tmp0_other_with_cast._value_2))
+      return false;
+    return true;
+  };
+  Pointer.$metadata$ = {
+    simpleName: 'Pointer',
+    kind: 'class',
+    interfaces: [],
+    associatedObjects: {0: Companion_getInstance_12}
+  };
+  function Companion_14() {
+    Companion_instance_13 = this;
+    var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('tuple', null, 2);
+    tmp0_serialDesc.addElement_5xhc52_k$('first', false);
+    tmp0_serialDesc.addElement_5xhc52_k$('second', false);
+    Companion_getInstance_13()._$cachedDescriptor_0 = tmp0_serialDesc;
+  }
+  Companion_14.$metadata$ = {
+    simpleName: 'Companion',
+    kind: 'object',
+    interfaces: [SerializerFactory]
+  };
+  var Companion_instance_13;
+  function Companion_getInstance_13() {
+    if (Companion_instance_13 == null)
+      new Companion_14();
+    return Companion_instance_13;
+  }
+  function Tuple(first_1, second) {
+    Companion_getInstance_13();
     this._first_3 = first_1;
     this._second_1 = second;
   }
@@ -14149,7 +14317,7 @@
     simpleName: 'Tuple',
     kind: 'class',
     interfaces: [],
-    associatedObjects: {0: Companion_getInstance_12}
+    associatedObjects: {0: Companion_getInstance_13}
   };
   Object.defineProperty(Tuple.prototype, 'first', {
     configurable: true,
@@ -14159,66 +14327,186 @@
     configurable: true,
     get: Tuple.prototype._get_second__0_k$
   });
-  function Companion_14() {
-    Companion_instance_13 = this;
-    var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('bedalton.creatures.structs.Pointer', null, 1);
-    tmp0_serialDesc.addElement_5xhc52_k$('value', false);
-    Companion_getInstance_13()._$cachedDescriptor_0 = tmp0_serialDesc;
+  function LoggerBuilder() {
+    this._mLog = null;
+    this._mInfo = null;
+    this._mWarning = null;
+    this._mError = null;
+    this._mLogMemory = null;
   }
-  Companion_14.$metadata$ = {
-    simpleName: 'Companion',
-    kind: 'object',
-    interfaces: [SerializerFactory]
+  LoggerBuilder.prototype.withLog = function (log) {
+    this._mLog = log;
   };
-  var Companion_instance_13;
-  function Companion_getInstance_13() {
-    if (Companion_instance_13 == null)
-      new Companion_14();
-    return Companion_instance_13;
+  LoggerBuilder.prototype.info = function (log) {
+    this._mInfo = log;
+    return this;
+  };
+  LoggerBuilder.prototype.warning = function (log) {
+    this._mWarning = log;
+    return this;
+  };
+  LoggerBuilder.prototype.error = function (log) {
+    this._mError = log;
+    return this;
+  };
+  LoggerBuilder.prototype.logMemory = function (log) {
+    this._mLogMemory = log;
+    return this;
+  };
+  LoggerBuilder.prototype.build = function () {
+    var tmp = this._mLog;
+    var tmp_0 = this._mInfo;
+    var tmp_1 = this._mWarning;
+    var tmp_2 = this._mError;
+    var tmp_3 = this._mLogMemory;
+    return CallbackLogger_init_$Create$(tmp, tmp_0, tmp_1, tmp_2, tmp_3, null, 32, null);
+  };
+  LoggerBuilder.$metadata$ = {
+    simpleName: 'LoggerBuilder',
+    kind: 'class',
+    interfaces: []
+  };
+  function CallbackLogger_init_$Init$(mLog, mInfo, mWarning, mError, mLogMemory, prependLogType, $mask0, $marker, $this) {
+    if (!(($mask0 & 32) === 0))
+      prependLogType = null;
+    CallbackLogger.call($this, mLog, mInfo, mWarning, mError, mLogMemory, prependLogType);
+    return $this;
   }
-  function Pointer(value) {
-    Companion_getInstance_13();
-    this._value_2 = value;
-    ensureNeverFrozen(this);
+  function CallbackLogger_init_$Create$(mLog, mInfo, mWarning, mError, mLogMemory, prependLogType, $mask0, $marker) {
+    return CallbackLogger_init_$Init$(mLog, mInfo, mWarning, mError, mLogMemory, prependLogType, $mask0, $marker, Object.create(CallbackLogger.prototype));
   }
-  Pointer.prototype.toString = function () {
-    return toString_2(this._value_2);
+  function CallbackLogger(mLog, mInfo, mWarning, mError, mLogMemory, prependLogType) {
+    this._mLog_0 = mLog;
+    this._mInfo_0 = mInfo;
+    this._mWarning_0 = mWarning;
+    this._mError_0 = mError;
+    this._mLogMemory_0 = mLogMemory;
+    this._prependLogType = prependLogType;
+  }
+  CallbackLogger.prototype._get_prependLogType__0_k$ = function () {
+    return this._prependLogType;
   };
-  Pointer.prototype.hashCode = function () {
-    return this._value_2 == null ? 0 : hashCode(this._value_2);
+  CallbackLogger.prototype.log = function (replace_1, message) {
+    var tmp0_safe_receiver = this._mLog_0;
+    if (tmp0_safe_receiver == null)
+      null;
+    else
+      tmp0_safe_receiver(replace_1, message);
+    Unit_getInstance();
   };
-  Pointer.prototype.equals = function (other) {
+  CallbackLogger.prototype.info = function (replace_1, message) {
+    var tmp0_safe_receiver = this._mInfo_0;
+    if (tmp0_safe_receiver == null)
+      null;
+    else
+      tmp0_safe_receiver(replace_1, message);
+    Unit_getInstance();
+  };
+  CallbackLogger.prototype.warning = function (message) {
+    var tmp0_safe_receiver = this._mWarning_0;
+    if (tmp0_safe_receiver == null)
+      null;
+    else
+      tmp0_safe_receiver(message);
+    Unit_getInstance();
+  };
+  CallbackLogger.prototype.error = function (message) {
+    var tmp0_safe_receiver = this._mError_0;
+    if (tmp0_safe_receiver == null)
+      null;
+    else
+      tmp0_safe_receiver(message);
+    Unit_getInstance();
+  };
+  CallbackLogger.prototype.logMemory = function () {
+    var tmp0_safe_receiver = this._mLogMemory_0;
+    if (tmp0_safe_receiver == null)
+      null;
+    else
+      tmp0_safe_receiver();
+    Unit_getInstance();
+  };
+  CallbackLogger.prototype.toString = function () {
+    return '' + 'CallbackLogger(mLog=' + this._mLog_0 + ', mInfo=' + this._mInfo_0 + ', mWarning=' + this._mWarning_0 + ', mError=' + this._mError_0 + ', mLogMemory=' + this._mLogMemory_0 + ', prependLogType=' + this._prependLogType + ')';
+  };
+  CallbackLogger.prototype.hashCode = function () {
+    var result = this._mLog_0 == null ? 0 : hashCode(this._mLog_0);
+    result = imul(result, 31) + (this._mInfo_0 == null ? 0 : hashCode(this._mInfo_0)) | 0;
+    result = imul(result, 31) + (this._mWarning_0 == null ? 0 : hashCode(this._mWarning_0)) | 0;
+    result = imul(result, 31) + (this._mError_0 == null ? 0 : hashCode(this._mError_0)) | 0;
+    result = imul(result, 31) + (this._mLogMemory_0 == null ? 0 : hashCode(this._mLogMemory_0)) | 0;
+    result = imul(result, 31) + (this._prependLogType == null ? 0 : this._prependLogType | 0) | 0;
+    return result;
+  };
+  CallbackLogger.prototype.equals = function (other) {
     if (this === other)
       return true;
-    if (!(other instanceof Pointer))
+    if (!(other instanceof CallbackLogger))
       return false;
     else {
     }
-    var tmp0_other_with_cast = other instanceof Pointer ? other : THROW_CCE();
-    if (!equals_1(this._value_2, tmp0_other_with_cast._value_2))
+    var tmp0_other_with_cast = other instanceof CallbackLogger ? other : THROW_CCE();
+    if (!equals_1(this._mLog_0, tmp0_other_with_cast._mLog_0))
+      return false;
+    if (!equals_1(this._mInfo_0, tmp0_other_with_cast._mInfo_0))
+      return false;
+    if (!equals_1(this._mWarning_0, tmp0_other_with_cast._mWarning_0))
+      return false;
+    if (!equals_1(this._mError_0, tmp0_other_with_cast._mError_0))
+      return false;
+    if (!equals_1(this._mLogMemory_0, tmp0_other_with_cast._mLogMemory_0))
+      return false;
+    if (!(this._prependLogType == tmp0_other_with_cast._prependLogType))
       return false;
     return true;
   };
-  Pointer.$metadata$ = {
-    simpleName: 'Pointer',
+  CallbackLogger.$metadata$ = {
+    simpleName: 'CallbackLogger',
     kind: 'class',
-    interfaces: [],
-    associatedObjects: {0: Companion_getInstance_13}
+    interfaces: []
   };
-  function getSelfOrParentDirectory$close(_this_, $appendSeparator) {
+  Object.defineProperty(CallbackLogger.prototype, 'prependLogType', {
+    configurable: true,
+    get: CallbackLogger.prototype._get_prependLogType__0_k$,
+    set: CallbackLogger.prototype._set_prependLogType__3vfqq4_k$
+  });
+  function pathSeparator($this, path_0) {
+    if (path_0 == null ? true : isBlank(path_0)) {
+      return _get_pathSeparatorChar_();
+    }var tmp = _get_pathSeparatorChar_();
+    if (contains$default(path_0, tmp, false, 2, null)) {
+      return _get_pathSeparatorChar_();
+    } else {
+    }
+    var tmp_0;
+    var tmp_1 = new Char(47);
+    if (contains$default(path_0, tmp_1, false, 2, null)) {
+      return new Char(47);
+    } else {
+      var tmp_2 = new Char(92);
+      if (contains$default(path_0, tmp_2, false, 2, null)) {
+        return new Char(92);
+      } else {
+        {
+          tmp_0 = _get_pathSeparatorChar_();
+        }
+      }
+    }
+    return tmp_0;
+  }
+  function getSelfOrParentDirectory$close(_this_, $appendSeparator, separator) {
     var tmp;
     var tmp_0;
     if (!$appendSeparator) {
       tmp_0 = true;
     } else {
-      var tmp_1 = _get_pathSeparatorChar_();
-      tmp_0 = endsWith$default(_this_, tmp_1, false, 2, null);
+      tmp_0 = endsWith$default(_this_, separator, false, 2, null);
     }
     if (tmp_0) {
       tmp = _this_;
     } else {
       {
-        tmp = ensureEndsWith(_this_, _get_pathSeparatorChar_());
+        tmp = ensureEndsWith(_this_, separator);
       }
     }
     return tmp;
@@ -14236,22 +14524,18 @@
     FileNameUtil_instance = this;
   }
   FileNameUtil.prototype.getFileNameWithoutExtension_6wfw3l_k$ = function (fileName) {
-    var tmp = _get_pathSeparatorChar_();
-    var startIndex = lastIndexOf$default(fileName, tmp, 0, false, 6, null);
+    var separator = pathSeparator(this, fileName);
+    var startIndex = lastIndexOf$default(fileName, separator, 0, false, 6, null);
     if (startIndex < 0)
       startIndex = 0;
     else
       startIndex = startIndex + 1 | 0;
     if (startIndex === _get_lastIndex__2(fileName)) {
       return null;
-    }var tmp_0 = new Char(46);
-    var lastIndex = lastIndexOf$default(fileName, tmp_0, 0, false, 6, null);
-    var tmp_1;
-    if (lastIndex < 0) {
-      tmp_1 = fileName;
-    } else if (lastIndex === 0) {
-      tmp_1 = null;
-    } else if (lastIndex > startIndex) {
+    }var tmp = new Char(46);
+    var lastIndex = lastIndexOf$default(fileName, tmp, 0, false, 6, null);
+    var tmp_0;
+    if (lastIndex < startIndex) {
       var tmp$ret$1;
       $l$block_0: {
         var tmp0_substring_0 = startIndex;
@@ -14260,14 +14544,29 @@
           tmp$ret$0 = fileName;
           break $l$block;
         }
-        tmp$ret$1 = tmp$ret$0.substring(tmp0_substring_0, lastIndex);
+        tmp$ret$1 = tmp$ret$0.substring(tmp0_substring_0);
         break $l$block_0;
       }
-      tmp_1 = tmp$ret$1;
+      tmp_0 = tmp$ret$1;
+    } else if (lastIndex === 0) {
+      tmp_0 = null;
+    } else if (lastIndex > startIndex) {
+      var tmp$ret$3;
+      $l$block_2: {
+        var tmp1_substring_0 = startIndex;
+        var tmp$ret$2;
+        $l$block_1: {
+          tmp$ret$2 = fileName;
+          break $l$block_1;
+        }
+        tmp$ret$3 = tmp$ret$2.substring(tmp1_substring_0, lastIndex);
+        break $l$block_2;
+      }
+      tmp_0 = tmp$ret$3;
     } else {
-      tmp_1 = null;
+      tmp_0 = null;
     }
-    var string = tmp_1;
+    var string = tmp_0;
     var tmp0_safe_receiver = string;
     return tmp0_safe_receiver == null ? null : nullIfEmpty_0(tmp0_safe_receiver);
   };
@@ -14278,18 +14577,49 @@
     if (lastIndex < 0) {
       tmp_0 = null;
     } else if (lastIndex < _get_lastIndex__2(fileName)) {
-      var tmp$ret$1;
-      $l$block_0: {
-        var tmp0_substring_0 = lastIndex + 1 | 0;
-        var tmp$ret$0;
-        $l$block: {
-          tmp$ret$0 = fileName;
-          break $l$block;
+      var tmp$ret$3;
+      $l$block_2: {
+        var tmp$ret$1;
+        $l$block_0: {
+          var tmp0_substring_0 = lastIndex + 1 | 0;
+          var tmp$ret$0;
+          $l$block: {
+            tmp$ret$0 = fileName;
+            break $l$block;
+          }
+          tmp$ret$1 = tmp$ret$0.substring(tmp0_substring_0);
+          break $l$block_0;
         }
-        tmp$ret$1 = tmp$ret$0.substring(tmp0_substring_0);
-        break $l$block_0;
+        var tmp1_let_0 = tmp$ret$1;
+        {
+        }
+        var tmp$ret$2;
+        $l$block_1: {
+          var tmp_1;
+          var tmp_2;
+          var tmp_3 = new Char(47);
+          if (contains$default(tmp1_let_0, tmp_3, false, 2, null)) {
+            tmp_2 = true;
+          } else {
+            {
+              var tmp_4 = new Char(92);
+              tmp_2 = contains$default(tmp1_let_0, tmp_4, false, 2, null);
+            }
+          }
+          if (tmp_2) {
+            tmp_1 = null;
+          } else {
+            {
+              tmp_1 = tmp1_let_0;
+            }
+          }
+          tmp$ret$2 = tmp_1;
+          break $l$block_1;
+        }
+        tmp$ret$3 = tmp$ret$2;
+        break $l$block_2;
       }
-      tmp_0 = tmp$ret$1;
+      tmp_0 = tmp$ret$3;
     } else {
       tmp_0 = null;
     }
@@ -14297,25 +14627,24 @@
     return nullIfEmpty_0(extension);
   };
   FileNameUtil.prototype.getSelfOrParentDirectory_2f0f39_k$ = function (file, appendSeparator) {
-    var tmp = _get_pathSeparatorChar_();
-    if (endsWith$default(file, tmp, false, 2, null)) {
+    var separator = pathSeparator(this, file);
+    if (endsWith$default(file, separator, false, 2, null)) {
       return file;
     } else {
     }
-    var tmp_0 = _get_pathSeparatorChar_();
-    var index = lastIndexOf$default(file, tmp_0, 0, false, 6, null);
+    var index = lastIndexOf$default(file, separator, 0, false, 6, null);
     if (index < 0) {
-      var tmp_1;
-      var tmp_2 = new Char(46);
-      if (contains$default(file, tmp_2, false, 2, null)) {
-        tmp_1 = null;
+      var tmp;
+      var tmp_0 = new Char(46);
+      if (contains$default(file, tmp_0, false, 2, null)) {
+        tmp = null;
       } else {
         {
-          tmp_1 = getSelfOrParentDirectory$close(file, appendSeparator);
+          tmp = getSelfOrParentDirectory$close(file, appendSeparator, separator);
         }
       }
-      return tmp_1;
-    }var tmp_3;
+      return tmp;
+    }var tmp_1;
     var tmp$ret$1;
     $l$block_0: {
       var tmp$ret$0;
@@ -14326,16 +14655,16 @@
       tmp$ret$1 = tmp$ret$0.substring(index);
       break $l$block_0;
     }
-    var tmp_4 = tmp$ret$1;
-    var tmp_5 = new Char(46);
-    if (contains$default(tmp_4, tmp_5, false, 2, null)) {
-      tmp_3 = getSelfOrParentDirectory$close(substring_0(file, until(0, index)), appendSeparator);
+    var tmp_2 = tmp$ret$1;
+    var tmp_3 = new Char(46);
+    if (contains$default(tmp_2, tmp_3, false, 2, null)) {
+      tmp_1 = getSelfOrParentDirectory$close(substring_0(file, until(0, index)), appendSeparator, separator);
     } else {
       {
-        tmp_3 = getSelfOrParentDirectory$close(file, appendSeparator);
+        tmp_1 = getSelfOrParentDirectory$close(file, appendSeparator, separator);
       }
     }
-    return tmp_3;
+    return tmp_1;
   };
   FileNameUtil.prototype.getSelfOrParentDirectory$default_zmr95_k$ = function (file, appendSeparator, $mask0, $handler) {
     if (!(($mask0 & 2) === 0))
@@ -14343,15 +14672,18 @@
     return this.getSelfOrParentDirectory_2f0f39_k$(file, appendSeparator);
   };
   FileNameUtil.prototype.getLastPathComponent_2f0f39_k$ = function (path_0, nullIfBlank) {
+    var separator = pathSeparator(this, path_0);
     var tmp;
     if (isBlank(path_0)) {
       tmp = null;
-    } else if (path_0 === pathSeparator) {
+    } else if (path_0 === separator.toString()) {
       tmp = getLastPathComponent$close('', nullIfBlank);
     } else {
-      var tmp_0 = _get_pathSeparatorChar_();
-      var index = lastIndexOf$default(path_0, tmp_0, 0, false, 6, null);
-      var tmp_1;
+      var index = lastIndexOf$default(path_0, separator, 0, false, 6, null);
+      if (index < 0) {
+        var tmp_0 = new Char(47);
+        index = lastIndexOf$default(path_0, tmp_0, 0, false, 6, null);
+      }var tmp_1;
       if (index < 0) {
         tmp_1 = getLastPathComponent$close(path_0, nullIfBlank);
       } else if (index === _get_lastIndex__2(path_0)) {
@@ -14390,13 +14722,13 @@
       new FileNameUtil();
     return FileNameUtil_instance;
   }
-  function _no_name_provided__59($message) {
+  function _no_name_provided__61($message) {
     this._$message = $message;
   }
-  _no_name_provided__59.prototype.invoke_0_k$ = function () {
+  _no_name_provided__61.prototype.invoke_0_k$ = function () {
     return this._$message;
   };
-  _no_name_provided__59.$metadata$ = {
+  _no_name_provided__61.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -14473,7 +14805,7 @@
     }, null);
   }
   function _no_name_provided_$factory_42($message) {
-    var i = new _no_name_provided__59($message);
+    var i = new _no_name_provided__61($message);
     return function () {
       return i.invoke_0_k$();
     };
@@ -14564,6 +14896,18 @@
   }
   Log.prototype.hasMode_6wfw3l_k$ = function (mode) {
     return this._modes.contains_2bq_k$(mode);
+  };
+  Log.prototype.setMode_5xhc52_k$ = function (mode, active) {
+    var hasMode = this._modes.contains_2bq_k$(mode);
+    if (active === hasMode) {
+      return Unit_getInstance();
+    }if (active) {
+      this._modes.add_2bq_k$(mode);
+      Unit_getInstance();
+    } else {
+      this._modes.remove_2bq_k$(mode);
+      Unit_getInstance();
+    }
   };
   Log.$metadata$ = {
     simpleName: 'Log',
@@ -14675,7 +15019,7 @@
       tmp = false;
     }
     if (tmp) {
-      var tmp_0 = '' + "Cannot build path with parent '.." + pathSeparator + "' components";
+      var tmp_0 = '' + "Cannot build path with parent '.." + pathSeparator_0 + "' components";
       throw IOException_init_$Create$(tmp_0, null, 2, null);
     } else {
     }
@@ -14726,12 +15070,12 @@
         var tmp1_iterator = drop(components, 1).iterator_0_k$();
         while (tmp1_iterator.hasNext_0_k$()) {
           var component = tmp1_iterator.next_0_k$();
-          if (!startsWith$default_0(component, pathSeparator, false, 2, null)) {
-            out.append_uch40_k$(pathSeparator);
+          if (!startsWith$default_0(component, pathSeparator_0, false, 2, null)) {
+            out.append_uch40_k$(pathSeparator_0);
             Unit_getInstance();
           } else {
           }
-          if (endsWith$default_0(component, pathSeparator, false, 2, null)) {
+          if (endsWith$default_0(component, pathSeparator_0, false, 2, null)) {
             var tmp$ret$7;
             $l$block_7: {
               var tmp1_substring_0 = _get_lastIndex__2(component);
@@ -14754,8 +15098,8 @@
         }
 
         var tmp_4 = last(components);
-        if (endsWith$default_0(tmp_4, pathSeparator, false, 2, null)) {
-          out.append_uch40_k$(pathSeparator);
+        if (endsWith$default_0(tmp_4, pathSeparator_0, false, 2, null)) {
+          out.append_uch40_k$(pathSeparator_0);
           Unit_getInstance();
         } else {
         }
@@ -14874,7 +15218,7 @@
         break $l$block_9;
       }
       var tmp7_replace_0 = tmp$ret$9;
-      var tmp8_replace_0 = pathSeparator;
+      var tmp8_replace_0 = pathSeparator_0;
       tmp$ret$10 = tmp7_replace_0.replace_abi4bo_k$(tmp6_replace_0, tmp8_replace_0);
       break $l$block_10;
     }
@@ -14968,7 +15312,7 @@
       }
     }
     var expandedPath = tmp;
-    var components = split$default_0(expandedPath, [pathSeparator], false, 0, 6, null);
+    var components = split$default_0(expandedPath, [pathSeparator_0], false, 0, 6, null);
     var tmp$ret$0;
     $l$block: {
       tmp$ret$0 = ArrayList_init_$Create$();
@@ -15000,10 +15344,11 @@
         Unit_getInstance();
       }
     }
-    var tmp_1 = components.get_ha5a7z_k$(0) + pathSeparator;
-    return tmp_1 + joinToString$default_0(out, pathSeparator, null, null, 0, null, null, 62, null);
+    var tmp_1 = components.get_ha5a7z_k$(0) + pathSeparator_0;
+    return tmp_1 + joinToString$default_0(out, pathSeparator_0, null, null, 0, null, null, 62, null);
   }
   var NEWLINE_REGEX;
+  var allchars;
   function ensureNotEndsWith(_this_, tail) {
     var tmp;
     if (_this_ === tail) {
@@ -15250,7 +15595,7 @@
     return tmp$ret$0;
   }
   var pathSeparatorChar$delegate;
-  var pathSeparator;
+  var pathSeparator_0;
   var applicationSupportPath;
   function expandTilde(path_0) {
     var tmp0_elvis_lhs = process;
@@ -15276,9 +15621,9 @@
     }
     return tmp_0.combine_yn9lj1_k$([tmp_2, tmp$ret$1]);
   }
-  function _no_name_provided__60() {
+  function _no_name_provided__62() {
   }
-  _no_name_provided__60.prototype.invoke_0_k$ = function () {
+  _no_name_provided__62.prototype.invoke_0_k$ = function () {
     var tmp;
     var tmp_0 = require != null;
     if ((!(tmp_0 == null) ? typeof tmp_0 === 'boolean' : false) ? tmp_0 : THROW_CCE()) {
@@ -15307,7 +15652,7 @@
     }
     return tmp;
   };
-  _no_name_provided__60.$metadata$ = {
+  _no_name_provided__62.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -15317,7 +15662,7 @@
     }, null);
   }
   function _no_name_provided_$factory_43() {
-    var i = new _no_name_provided__60();
+    var i = new _no_name_provided__62();
     return function () {
       return i.invoke_0_k$();
     };
@@ -15328,76 +15673,61 @@
   function info$info(receiver, p0) {
     receiver.info(p0);
   }
-  function _no_name_provided__61($boundThis) {
+  function _no_name_provided__63($boundThis) {
     this._$boundThis = $boundThis;
   }
-  _no_name_provided__61.prototype.invoke_qi8yb4_k$ = function (p0) {
+  _no_name_provided__63.prototype.invoke_qi8yb4_k$ = function (p0) {
     return log$log(this._$boundThis, p0);
   };
-  _no_name_provided__61.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__63.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_qi8yb4_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__61.$metadata$ = {
+  _no_name_provided__63.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__62($boundThis) {
+  function _no_name_provided__64($boundThis) {
     this._$boundThis_0 = $boundThis;
   }
-  _no_name_provided__62.prototype.invoke_qi8yb4_k$ = function (p0) {
+  _no_name_provided__64.prototype.invoke_qi8yb4_k$ = function (p0) {
     return info$info(this._$boundThis_0, p0);
   };
-  _no_name_provided__62.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__64.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_qi8yb4_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__62.$metadata$ = {
+  _no_name_provided__64.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function DefaultLoggerObject() {
     DefaultLoggerObject_instance = this;
-    this._prependLogType = false;
+    this._prependLogType_0 = false;
   }
   DefaultLoggerObject.prototype._get_prependLogType__0_k$ = function () {
-    return this._prependLogType;
+    return this._prependLogType_0;
   };
-  DefaultLoggerObject.prototype.log_x8r8dk_k$ = function (replace_1, message) {
+  DefaultLoggerObject.prototype.log = function (replace_1, message) {
     if (replace_1) {
       logReplace(message, _no_name_provided_$factory_44(console));
       return Unit_getInstance();
     }console.log(message);
   };
-  DefaultLoggerObject.prototype.log = function (replace_1, message) {
-    return this.log_x8r8dk_k$(replace_1, message);
-  };
-  DefaultLoggerObject.prototype.info_x8r8dk_k$ = function (replace_1, message) {
+  DefaultLoggerObject.prototype.info = function (replace_1, message) {
     if (replace_1) {
       logReplace(message, _no_name_provided_$factory_45(console));
       return Unit_getInstance();
     }console.info(message);
   };
-  DefaultLoggerObject.prototype.info = function (replace_1, message) {
-    return this.info_x8r8dk_k$(replace_1, message);
-  };
-  DefaultLoggerObject.prototype.warning_a4enbm_k$ = function (message) {
+  DefaultLoggerObject.prototype.warning = function (message) {
     console.warn(message);
   };
-  DefaultLoggerObject.prototype.warning = function (message) {
-    return this.warning_a4enbm_k$(message);
-  };
-  DefaultLoggerObject.prototype.error_a4enbm_k$ = function (message) {
+  DefaultLoggerObject.prototype.error = function (message) {
     console.error(message);
   };
-  DefaultLoggerObject.prototype.error = function (message) {
-    return this.error_a4enbm_k$(message);
-  };
-  DefaultLoggerObject.prototype.logMemory_sv8swh_k$ = function () {
-    console.log('Cannot log memory');
-  };
   DefaultLoggerObject.prototype.logMemory = function () {
-    return this.logMemory_sv8swh_k$();
+    console.log('Cannot log memory');
   };
   DefaultLoggerObject.$metadata$ = {
     simpleName: 'DefaultLoggerObject',
@@ -15457,14 +15787,14 @@
     return typeof process.stdout === 'object';
   }
   function _no_name_provided_$factory_44($boundThis) {
-    var i = new _no_name_provided__61($boundThis);
+    var i = new _no_name_provided__63($boundThis);
     return function (p1) {
       i.invoke_qi8yb4_k$(p1);
       return Unit_getInstance();
     };
   }
   function _no_name_provided_$factory_45($boundThis) {
-    var i = new _no_name_provided__62($boundThis);
+    var i = new _no_name_provided__64($boundThis);
     return function (p1) {
       i.invoke_qi8yb4_k$(p1);
       return Unit_getInstance();
@@ -15615,13 +15945,13 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__63(this$0) {
-    this._this$0_16 = this$0;
+  function _no_name_provided__65(this$0) {
+    this._this$0_17 = this$0;
   }
-  _no_name_provided__63.prototype.invoke_0_k$ = function () {
+  _no_name_provided__65.prototype.invoke_0_k$ = function () {
     var tmp$ret$2;
     $l$block_1: {
-      var tmp0_map_0 = this._this$0_16._get_months__0_k$();
+      var tmp0_map_0 = this._this$0_17._get_months__0_k$();
       var tmp$ret$1;
       $l$block_0: {
         var tmp0_mapTo_0_1 = ArrayList_init_$Create$_0(collectionSizeOrDefault(tmp0_map_0, 10));
@@ -15644,17 +15974,17 @@
     }
     return tmp$ret$2;
   };
-  _no_name_provided__63.$metadata$ = {
+  _no_name_provided__65.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__64(this$0) {
-    this._this$0_17 = this$0;
+  function _no_name_provided__66(this$0) {
+    this._this$0_18 = this$0;
   }
-  _no_name_provided__64.prototype.invoke_0_k$ = function () {
+  _no_name_provided__66.prototype.invoke_0_k$ = function () {
     var tmp$ret$2;
     $l$block_1: {
-      var tmp0_map_0 = this._this$0_17._get_daysOfWeek__0_k$();
+      var tmp0_map_0 = this._this$0_18._get_daysOfWeek__0_k$();
       var tmp$ret$1;
       $l$block_0: {
         var tmp0_mapTo_0_1 = ArrayList_init_$Create$_0(collectionSizeOrDefault(tmp0_map_0, 10));
@@ -15677,7 +16007,7 @@
     }
     return tmp$ret$2;
   };
-  _no_name_provided__64.$metadata$ = {
+  _no_name_provided__66.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -15745,13 +16075,13 @@
     interfaces: []
   };
   function _no_name_provided_$factory_46(this$0) {
-    var i = new _no_name_provided__63(this$0);
+    var i = new _no_name_provided__65(this$0);
     return function () {
       return i.invoke_0_k$();
     };
   }
   function _no_name_provided_$factory_47(this$0) {
-    var i = new _no_name_provided__64(this$0);
+    var i = new _no_name_provided__66(this$0);
     return function () {
       return i.invoke_0_k$();
     };
@@ -16922,12 +17252,12 @@
       new KlockInternal();
     return KlockInternal_instance;
   }
-  function _no_name_provided__65() {
+  function _no_name_provided__67() {
   }
-  _no_name_provided__65.prototype.invoke_0_k$ = function () {
+  _no_name_provided__67.prototype.invoke_0_k$ = function () {
     return process.hrtime();
   };
-  _no_name_provided__65.$metadata$ = {
+  _no_name_provided__67.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -16937,7 +17267,7 @@
     }, null);
   }
   function _no_name_provided_$factory_48() {
-    var i = new _no_name_provided__65();
+    var i = new _no_name_provided__67();
     return function () {
       return i.invoke_0_k$();
     };
@@ -18582,29 +18912,29 @@
   function Pool_init_$Create$_1(preallocate, gen, $mask0, $marker) {
     return Pool_init_$Init$_1(preallocate, gen, $mask0, $marker, Object.create(Pool.prototype));
   }
-  function _no_name_provided__66() {
+  function _no_name_provided__68() {
   }
-  _no_name_provided__66.prototype.invoke_iav7o_k$ = function (it) {
+  _no_name_provided__68.prototype.invoke_iav7o_k$ = function (it) {
     return Unit_getInstance();
   };
-  _no_name_provided__66.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__68.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_iav7o_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__66.$metadata$ = {
+  _no_name_provided__68.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__67() {
+  function _no_name_provided__69() {
   }
-  _no_name_provided__67.prototype.invoke_iav7o_k$ = function (it) {
+  _no_name_provided__69.prototype.invoke_iav7o_k$ = function (it) {
     return Unit_getInstance();
   };
-  _no_name_provided__67.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__69.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_iav7o_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__67.$metadata$ = {
+  _no_name_provided__69.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -18681,14 +19011,14 @@
     interfaces: []
   };
   function _no_name_provided_$factory_49() {
-    var i = new _no_name_provided__66();
+    var i = new _no_name_provided__68();
     return function (p1) {
       i.invoke_iav7o_k$(p1);
       return Unit_getInstance();
     };
   }
   function _no_name_provided_$factory_50() {
-    var i = new _no_name_provided__67();
+    var i = new _no_name_provided__69();
     return function (p1) {
       i.invoke_iav7o_k$(p1);
       return Unit_getInstance();
@@ -19961,15 +20291,15 @@
     return _this_.compareTo_wiekkq_k$(min) < 0 ? min : _this_.compareTo_wiekkq_k$(max) > 0 ? max : _this_;
   }
   var KmemGC;
-  function _no_name_provided__68() {
+  function _no_name_provided__70() {
     KmemGCImpl.call(this);
   }
-  _no_name_provided__68.$metadata$ = {
+  _no_name_provided__70.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function KmemGC$init$() {
-    return new _no_name_provided__68();
+    return new _no_name_provided__70();
   }
   var EmptyByteArray;
   var EmptyShortArray;
@@ -20231,9 +20561,9 @@
   }
   var isNodeJs$delegate;
   var _global;
-  function _no_name_provided__69() {
+  function _no_name_provided__71() {
   }
-  _no_name_provided__69.prototype.invoke_0_k$ = function () {
+  _no_name_provided__71.prototype.invoke_0_k$ = function () {
     var tmp$ret$0;
     $l$block: {
       var tmp0_unsafeCast_0 = typeof process === 'object' && typeof require === 'function';
@@ -20242,12 +20572,12 @@
     }
     return tmp$ret$0;
   };
-  _no_name_provided__69.$metadata$ = {
+  _no_name_provided__71.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_51() {
-    var i = new _no_name_provided__69();
+    var i = new _no_name_provided__71();
     return function () {
       return i.invoke_0_k$();
     };
@@ -20576,6 +20906,271 @@
     kind: 'class',
     interfaces: [Job, Continuation, CoroutineScope]
   };
+  function awaitAll(_this_, $cont) {
+    var tmp = new $awaitAllCOROUTINE$0(_this_, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  }
+  function DisposeHandlersOnCancel($outer, nodes) {
+    this._$this_7 = $outer;
+    CancelHandler.call(this);
+    this._nodes = nodes;
+  }
+  DisposeHandlersOnCancel.prototype.disposeAll_sv8swh_k$ = function () {
+    {
+      var tmp0_forEach_0 = this._nodes;
+      var indexedObject = tmp0_forEach_0;
+      var inductionVariable = 0;
+      var last_2 = indexedObject.length;
+      while (inductionVariable < last_2) {
+        var element_2 = indexedObject[inductionVariable];
+        inductionVariable = inductionVariable + 1 | 0;
+        {
+          element_2._get_handle__0_k$().dispose_sv8swh_k$();
+        }
+      }
+    }
+  };
+  DisposeHandlersOnCancel.prototype.invoke_houul8_k$ = function (cause) {
+    this.disposeAll_sv8swh_k$();
+  };
+  DisposeHandlersOnCancel.prototype.invoke = function (cause) {
+    return this.invoke_houul8_k$(cause);
+  };
+  DisposeHandlersOnCancel.prototype.toString = function () {
+    return '' + 'DisposeHandlersOnCancel[' + this._nodes + ']';
+  };
+  DisposeHandlersOnCancel.$metadata$ = {
+    simpleName: 'DisposeHandlersOnCancel',
+    kind: 'class',
+    interfaces: []
+  };
+  function AwaitAllNode($outer, continuation) {
+    this._$this_8 = $outer;
+    JobNode.call(this);
+    this._continuation = continuation;
+    this.__disposer = atomic(null);
+  }
+  AwaitAllNode.prototype._get_handle__0_k$ = function () {
+    var tmp = this._handle;
+    if (!(tmp == null))
+      return tmp;
+    else {
+      throwUninitializedPropertyAccessException('handle');
+    }
+  };
+  AwaitAllNode.prototype._set_disposer__g6jnve_k$ = function (value) {
+    this.__disposer._value_4 = value;
+  };
+  AwaitAllNode.prototype._get_disposer__0_k$ = function () {
+    return this.__disposer._value_4;
+  };
+  AwaitAllNode.prototype.invoke_houul8_k$ = function (cause) {
+    if (!(cause == null)) {
+      var token = this._continuation.tryResumeWithException_onfaoi_k$(cause);
+      if (!(token == null)) {
+        this._continuation.completeResume_wu1lm5_k$(token);
+        var tmp0_safe_receiver = this._get_disposer__0_k$();
+        if (tmp0_safe_receiver == null)
+          null;
+        else {
+          tmp0_safe_receiver.disposeAll_sv8swh_k$();
+          Unit_getInstance();
+        }
+        Unit_getInstance();
+      }} else if (this._$this_8._notCompletedCount.atomicfu$decrementAndGet() === 0) {
+      var tmp$ret$4;
+      $l$block_3: {
+        var tmp1_resume_0 = this._continuation;
+        var tmp$ret$2;
+        $l$block_1: {
+          var tmp0_map_0 = this._$this_8._deferreds;
+          var tmp$ret$1;
+          $l$block_0: {
+            var tmp0_mapTo_0_1 = ArrayList_init_$Create$_0(tmp0_map_0.length);
+            var indexedObject = tmp0_map_0;
+            var inductionVariable = 0;
+            var last_2 = indexedObject.length;
+            while (inductionVariable < last_2) {
+              var item_2_3 = indexedObject[inductionVariable];
+              inductionVariable = inductionVariable + 1 | 0;
+              var tmp$ret$0;
+              $l$block: {
+                tmp$ret$0 = item_2_3.getCompleted_0_k$();
+                break $l$block;
+              }
+              tmp0_mapTo_0_1.add_2bq_k$(tmp$ret$0);
+              Unit_getInstance();
+            }
+            tmp$ret$1 = tmp0_mapTo_0_1;
+            break $l$block_0;
+          }
+          tmp$ret$2 = tmp$ret$1;
+          break $l$block_1;
+        }
+        var tmp2_resume_0 = tmp$ret$2;
+        var tmp$ret$3;
+        $l$block_2: {
+          var tmp0_success_0_1 = Companion_getInstance_2();
+          tmp$ret$3 = _Result___init__impl_(tmp2_resume_0);
+          break $l$block_2;
+        }
+        tmp$ret$4 = tmp1_resume_0.resumeWith_bnunh2_k$(tmp$ret$3);
+        break $l$block_3;
+      }
+    }};
+  AwaitAllNode.prototype.invoke = function (cause) {
+    return this.invoke_houul8_k$(cause);
+  };
+  AwaitAllNode.$metadata$ = {
+    simpleName: 'AwaitAllNode',
+    kind: 'class',
+    interfaces: []
+  };
+  function AwaitAll(deferreds) {
+    this._deferreds = deferreds;
+    this._notCompletedCount = atomic_1(this._deferreds.length);
+  }
+  AwaitAll.prototype.await_0_k$ = function ($cont) {
+    var tmp$ret$7;
+    $l$block_6: {
+      var tmp0__anonymous__1_1 = $cont;
+      var cancellable_2_2 = new CancellableContinuationImpl(intercepted(tmp0__anonymous__1_1), 1);
+      cancellable_2_2.initCancellability_sv8swh_k$();
+      {
+        var tmp_5 = 0;
+        var tmp_6 = this._deferreds.length;
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = fillArrayVal(Array(tmp_6), null);
+          break $l$block;
+        }
+        var tmp_7 = tmp$ret$0;
+        while (tmp_5 < tmp_6) {
+          var tmp_8 = tmp_5;
+          var tmp$ret$4;
+          $l$block_3: {
+            var deferred_9 = this._deferreds[tmp_8];
+            deferred_9.start_0_k$();
+            Unit_getInstance();
+            var tmp$ret$3;
+            $l$block_2: {
+              var tmp0_apply_0_10 = new AwaitAllNode(this, cancellable_2_2);
+              {
+              }
+              {
+                var tmp = tmp0_apply_0_10;
+                var tmp$ret$2;
+                $l$block_1: {
+                  var tmp$ret$1;
+                  $l$block_0: {
+                    tmp$ret$1 = tmp0_apply_0_10;
+                    break $l$block_0;
+                  }
+                  tmp$ret$2 = tmp$ret$1;
+                  break $l$block_1;
+                }
+                tmp._handle = deferred_9.invokeOnCompletion_wjzpsu_k$(tmp$ret$2);
+              }
+              tmp$ret$3 = tmp0_apply_0_10;
+              break $l$block_2;
+            }
+            tmp$ret$4 = tmp$ret$3;
+            break $l$block_3;
+          }
+          tmp_7[tmp_8] = tmp$ret$4;
+          tmp_5 = tmp_5 + 1 | 0;
+        }
+        var nodes_4 = tmp_7;
+        var disposer_11 = new DisposeHandlersOnCancel(this, nodes_4);
+        {
+          var indexedObject = nodes_4;
+          var inductionVariable = 0;
+          var last_2 = indexedObject.length;
+          while (inductionVariable < last_2) {
+            var element_2_13 = indexedObject[inductionVariable];
+            inductionVariable = inductionVariable + 1 | 0;
+            {
+              element_2_13._set_disposer__g6jnve_k$(disposer_11);
+            }
+          }
+        }
+        if (cancellable_2_2._get_isCompleted__0_k$()) {
+          disposer_11.disposeAll_sv8swh_k$();
+        } else {
+          var tmp$ret$6;
+          $l$block_5: {
+            var tmp$ret$5;
+            $l$block_4: {
+              tmp$ret$5 = disposer_11;
+              break $l$block_4;
+            }
+            tmp$ret$6 = tmp$ret$5;
+            break $l$block_5;
+          }
+          cancellable_2_2.invokeOnCancellation_aip8gd_k$(tmp$ret$6);
+        }
+      }
+      tmp$ret$7 = cancellable_2_2.getResult_0_k$();
+      break $l$block_6;
+    }
+    return tmp$ret$7;
+  };
+  AwaitAll.$metadata$ = {
+    simpleName: 'AwaitAll',
+    kind: 'class',
+    interfaces: []
+  };
+  function $awaitAllCOROUTINE$0(_this_, resultContinuation) {
+    CoroutineImpl_0.call(this, resultContinuation);
+    this.__this_ = _this_;
+  }
+  $awaitAllCOROUTINE$0.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 3;
+            if (this.__this_.isEmpty_0_k$()) {
+              this._WHEN_RESULT0 = emptyList();
+              this._state_0 = 2;
+              continue $sm;
+            } else {
+              this._state_0 = 1;
+              suspendResult = (new AwaitAll(copyToArray_0(this.__this_))).await_0_k$(this);
+              if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+                return suspendResult;
+              }continue $sm;
+            }
+
+            break;
+          case 1:
+            this._WHEN_RESULT0 = suspendResult;
+            this._state_0 = 2;
+            continue $sm;
+          case 2:
+            return this._WHEN_RESULT0;
+          case 3:
+            throw this._exception_0;
+        }
+      } catch ($p) {
+        if (this._exceptionState === 3) {
+          throw $p;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p;
+        }
+      }
+     while (true);
+  };
+  $awaitAllCOROUTINE$0.$metadata$ = {
+    simpleName: '$awaitAllCOROUTINE$0',
+    kind: 'class',
+    interfaces: []
+  };
   function launch(_this_, context, start, block) {
     var newContext = newCoroutineContext(_this_, context);
     var coroutine = start._get_isLazy__0_k$() ? new LazyStandaloneCoroutine(newContext, block) : new StandaloneCoroutine(newContext, true);
@@ -20588,6 +21183,19 @@
     if (!(($mask0 & 2) === 0))
       start = CoroutineStart_DEFAULT_getInstance();
     return launch(_this_, context, start, block);
+  }
+  function async(_this_, context, start, block) {
+    var newContext = newCoroutineContext(_this_, context);
+    var coroutine = start._get_isLazy__0_k$() ? new LazyDeferredCoroutine(newContext, block) : new DeferredCoroutine(newContext, true);
+    coroutine.start_hfyz87_k$(start, coroutine, block);
+    return coroutine;
+  }
+  function async$default(_this_, context, start, block, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      context = EmptyCoroutineContext_getInstance();
+    if (!(($mask0 & 2) === 0))
+      start = CoroutineStart_DEFAULT_getInstance();
+    return async(_this_, context, start, block);
   }
   function StandaloneCoroutine(parentContext, active) {
     AbstractCoroutine.call(this, parentContext, true, active);
@@ -20603,13 +21211,37 @@
   };
   function LazyStandaloneCoroutine(parentContext, block) {
     StandaloneCoroutine.call(this, parentContext, false);
-    this._continuation = createCoroutineUnintercepted(block, this, this);
+    this._continuation_0 = createCoroutineUnintercepted(block, this, this);
   }
   LazyStandaloneCoroutine.prototype.onStart_sv8swh_k$ = function () {
-    startCoroutineCancellable_0(this._continuation, this);
+    startCoroutineCancellable_0(this._continuation_0, this);
   };
   LazyStandaloneCoroutine.$metadata$ = {
     simpleName: 'LazyStandaloneCoroutine',
+    kind: 'class',
+    interfaces: []
+  };
+  function DeferredCoroutine(parentContext, active) {
+    AbstractCoroutine.call(this, parentContext, true, active);
+  }
+  DeferredCoroutine.prototype.getCompleted_0_k$ = function () {
+    var tmp = this.getCompletedInternal_0_k$();
+    return (tmp == null ? true : isObject(tmp)) ? tmp : THROW_CCE();
+  };
+  DeferredCoroutine.$metadata$ = {
+    simpleName: 'DeferredCoroutine',
+    kind: 'class',
+    interfaces: [Deferred, SelectClause1]
+  };
+  function LazyDeferredCoroutine(parentContext, block) {
+    DeferredCoroutine.call(this, parentContext, false);
+    this._continuation_1 = createCoroutineUnintercepted(block, this, this);
+  }
+  LazyDeferredCoroutine.prototype.onStart_sv8swh_k$ = function () {
+    startCoroutineCancellable_0(this._continuation_1, this);
+  };
+  LazyDeferredCoroutine.$metadata$ = {
+    simpleName: 'LazyDeferredCoroutine',
     kind: 'class',
     interfaces: []
   };
@@ -20620,6 +21252,7 @@
     kind: 'interface',
     interfaces: [Continuation]
   };
+  var RESUME_TOKEN;
   function _get_stateDebugRepresentation_($this) {
     var tmp0_subject = $this._get_state__0_k$();
     var tmp;
@@ -20652,6 +21285,23 @@
     var tmp = $this._delegate;
     var dispatched = tmp instanceof DispatchedContinuation ? tmp : THROW_CCE();
     return dispatched.postponeCancellation_onfaoi_k$(cause);
+  }
+  function callCancelHandler($this, handler, cause) {
+    var tmp;
+    try {
+      tmp = invokeIt(handler, cause);
+    } catch ($p) {
+      var tmp_0;
+      if ($p instanceof Error) {
+        tmp_0 = handleCoroutineException($this._get_context__0_k$(), new CompletionHandlerException('' + 'Exception in invokeOnCancellation handler for ' + $this, $p));
+      } else {
+        {
+          throw $p;
+        }
+      }
+      tmp = tmp_0;
+    }
+    return tmp;
   }
   function trySuspend($this) {
     {
@@ -20733,6 +21383,23 @@
     $this.detachChild_sv8swh_k$();
     $this.cancel_h62ekz_k$(cancellationCause);
     Unit_getInstance();
+  }
+  function multipleHandlersError($this, handler, state) {
+    {
+      var tmp0_error_0 = '' + "It's prohibited to register multiple handlers, tried to register " + handler + ', already has ' + state;
+      throw IllegalStateException_init_$Create$_0(toString_3(tmp0_error_0));
+    }
+  }
+  function makeCancelHandler($this, handler) {
+    var tmp;
+    if (handler instanceof CancelHandler) {
+      tmp = handler;
+    } else {
+      {
+        tmp = new InvokeOnCancel(handler);
+      }
+    }
+    return tmp;
   }
   function dispatchResume($this, mode) {
     if (tryResume($this))
@@ -20832,6 +21499,41 @@
     if (!(($mask0 & 8) === 0))
       onCancellation = null;
     return resumeImpl($this, proposedUpdate, resumeMode, onCancellation);
+  }
+  function tryResumeImpl($this, proposedUpdate, idempotent, onCancellation) {
+    {
+      var tmp0_loop_0 = $this.__state;
+      while (true) {
+        var tmp$ret$0;
+        $l$block: {
+          var tmp1__anonymous__1 = tmp0_loop_0._value_4;
+          var tmp0_subject_2 = tmp1__anonymous__1;
+          if (!(tmp0_subject_2 == null) ? isInterface(tmp0_subject_2, NotCompleted) : false) {
+            var update_3 = resumedState($this, tmp1__anonymous__1, proposedUpdate, $this._get_resumeMode__0_k$(), onCancellation, idempotent);
+            if (!$this.__state.atomicfu$compareAndSet(tmp1__anonymous__1, update_3)) {
+              tmp$ret$0 = Unit_getInstance();
+              break $l$block;
+            }detachChildIfNonResuable($this);
+            return RESUME_TOKEN;
+          } else {
+            if (tmp0_subject_2 instanceof CompletedContinuation_0) {
+              var tmp;
+              if (!(idempotent == null) ? tmp1__anonymous__1._idempotentResume === idempotent : false) {
+                {
+                }
+                tmp = RESUME_TOKEN;
+              } else {
+                tmp = null;
+              }
+              return tmp;
+            } else {
+              return null;
+            }
+          }
+        }
+      }
+      Unit_getInstance();
+    }
   }
   function alreadyResumedError($this, proposedUpdate) {
     {
@@ -21034,6 +21736,63 @@
     var tmp_0 = this._get_resumeMode__0_k$();
     return resumeImpl$default(this, tmp, tmp_0, null, 8, null);
   };
+  CancellableContinuationImpl.prototype.invokeOnCancellation_aip8gd_k$ = function (handler) {
+    var cancelHandler = makeCancelHandler(this, handler);
+    {
+      var tmp0_loop_0 = this.__state;
+      while (true) {
+        {
+          var tmp1__anonymous__1 = tmp0_loop_0._value_4;
+          var tmp0_subject_2 = tmp1__anonymous__1;
+          if (tmp0_subject_2 instanceof Active) {
+            if (this.__state.atomicfu$compareAndSet(tmp1__anonymous__1, cancelHandler))
+              return Unit_getInstance();
+          } else {
+            if (tmp0_subject_2 instanceof CancelHandler)
+              multipleHandlersError(this, handler, tmp1__anonymous__1);
+            else {
+              if (tmp0_subject_2 instanceof CompletedExceptionally) {
+                if (!tmp1__anonymous__1.makeHandled_0_k$())
+                  multipleHandlersError(this, handler, tmp1__anonymous__1);
+                if (tmp1__anonymous__1 instanceof CancelledContinuation) {
+                  var tmp1_safe_receiver_3 = tmp1__anonymous__1 instanceof CompletedExceptionally ? tmp1__anonymous__1 : null;
+                  callCancelHandler(this, handler, tmp1_safe_receiver_3 == null ? null : tmp1_safe_receiver_3._cause);
+                } else {
+                }
+                return Unit_getInstance();
+              } else {
+                if (tmp0_subject_2 instanceof CompletedContinuation_0) {
+                  if (!(tmp1__anonymous__1._cancelHandler == null))
+                    multipleHandlersError(this, handler, tmp1__anonymous__1);
+                  if (cancelHandler instanceof BeforeResumeCancelHandler)
+                    return Unit_getInstance();
+                  else {
+                  }
+                  if (tmp1__anonymous__1._get_cancelled__0_k$()) {
+                    callCancelHandler(this, handler, tmp1__anonymous__1._cancelCause);
+                    return Unit_getInstance();
+                  }var update_4 = tmp1__anonymous__1.copy$default_tn4acp_k$(null, cancelHandler, null, null, null, 29, null);
+                  if (this.__state.atomicfu$compareAndSet(tmp1__anonymous__1, update_4))
+                    return Unit_getInstance();
+                } else {
+                  {
+                    if (cancelHandler instanceof BeforeResumeCancelHandler)
+                      return Unit_getInstance();
+                    else {
+                    }
+                    var update_5 = CompletedContinuation_init_$Create$(tmp1__anonymous__1, cancelHandler, null, null, null, 28, null);
+                    if (this.__state.atomicfu$compareAndSet(tmp1__anonymous__1, update_5))
+                      return Unit_getInstance();
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      Unit_getInstance();
+    }
+  };
   CancellableContinuationImpl.prototype.detachChild_sv8swh_k$ = function () {
     var tmp0_elvis_lhs = this._parentHandle;
     var tmp;
@@ -21045,6 +21804,14 @@
     var handle = tmp;
     handle.dispose_sv8swh_k$();
     this._parentHandle = NonDisposableHandle_getInstance();
+  };
+  CancellableContinuationImpl.prototype.tryResumeWithException_onfaoi_k$ = function (exception) {
+    return tryResumeImpl(this, CompletedExceptionally_init_$Create$(exception, false, 2, null), null, null);
+  };
+  CancellableContinuationImpl.prototype.completeResume_wu1lm5_k$ = function (token) {
+    {
+    }
+    dispatchResume(this, this._get_resumeMode__0_k$());
   };
   CancellableContinuationImpl.prototype.getSuccessfulResult_6jiqgr_k$ = function (state) {
     var tmp0_subject = state;
@@ -21093,6 +21860,7 @@
     interfaces: [CancellableContinuation, CoroutineStackFrame]
   };
   function CancelHandler() {
+    CancelHandlerBase.call(this);
   }
   CancelHandler.$metadata$ = {
     simpleName: 'CancelHandler',
@@ -21237,6 +22005,24 @@
     kind: 'class',
     interfaces: []
   };
+  function InvokeOnCancel(handler) {
+    CancelHandler.call(this);
+    this._handler = handler;
+  }
+  InvokeOnCancel.prototype.invoke_houul8_k$ = function (cause) {
+    this._handler(cause);
+  };
+  InvokeOnCancel.prototype.invoke = function (cause) {
+    return this.invoke_houul8_k$(cause);
+  };
+  InvokeOnCancel.prototype.toString = function () {
+    return '' + 'InvokeOnCancel[' + _get_classSimpleName_(this._handler) + '@' + _get_hexAddress_(this) + ']';
+  };
+  InvokeOnCancel.$metadata$ = {
+    simpleName: 'InvokeOnCancel',
+    kind: 'class',
+    interfaces: []
+  };
   function CompletableDeferred() {
   }
   CompletableDeferred.$metadata$ = {
@@ -21265,6 +22051,10 @@
   }
   CompletableDeferredImpl.prototype._get_onCancelComplete__0_k$ = function () {
     return true;
+  };
+  CompletableDeferredImpl.prototype.getCompleted_0_k$ = function () {
+    var tmp = this.getCompletedInternal_0_k$();
+    return (tmp == null ? true : isObject(tmp)) ? tmp : THROW_CCE();
   };
   CompletableDeferredImpl.prototype.complete_2c5_k$ = function (value) {
     return this.makeCompleting_wi7j7l_k$(value);
@@ -21412,15 +22202,40 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__70() {
+  function recoverResult(state, uCont) {
+    var tmp;
+    if (state instanceof CompletedExceptionally) {
+      var tmp$ret$0;
+      $l$block: {
+        var tmp0_failure_0 = Companion_getInstance_2();
+        var tmp1_failure_0 = recoverStackTrace(state._cause, uCont);
+        tmp$ret$0 = _Result___init__impl_(createFailure(tmp1_failure_0));
+        break $l$block;
+      }
+      tmp = tmp$ret$0;
+    } else {
+      {
+        var tmp$ret$1;
+        $l$block_0: {
+          var tmp2_success_0 = Companion_getInstance_2();
+          var tmp3_success_0 = (state == null ? true : isObject(state)) ? state : THROW_CCE();
+          tmp$ret$1 = _Result___init__impl_(tmp3_success_0);
+          break $l$block_0;
+        }
+        tmp = tmp$ret$1;
+      }
+    }
+    return tmp;
   }
-  _no_name_provided__70.prototype.invoke_k332zt_k$ = function (it) {
+  function _no_name_provided__72() {
+  }
+  _no_name_provided__72.prototype.invoke_k332zt_k$ = function (it) {
     return it instanceof CoroutineDispatcher ? it : null;
   };
-  _no_name_provided__70.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__72.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_k332zt_k$((!(p1 == null) ? isInterface(p1, Element_0) : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__70.$metadata$ = {
+  _no_name_provided__72.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -21463,7 +22278,7 @@
     interfaces: [ContinuationInterceptor]
   };
   function _no_name_provided_$factory_52() {
-    var i = new _no_name_provided__70();
+    var i = new _no_name_provided__72();
     return function (p1) {
       return i.invoke_k332zt_k$(p1);
     };
@@ -21549,6 +22364,18 @@
     if (GlobalScope_instance == null)
       new GlobalScope_0();
     return GlobalScope_instance;
+  }
+  function coroutineScope(block, $cont) {
+    {
+    }
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0__anonymous__1 = $cont;
+      var coroutine_2 = new ScopeCoroutine(tmp0__anonymous__1._get_context__0_k$(), tmp0__anonymous__1);
+      tmp$ret$0 = startUndispatchedOrReturn(coroutine_2, coroutine_2, block);
+      break $l$block;
+    }
+    return tmp$ret$0;
   }
   var CoroutineStart_DEFAULT_instance;
   var CoroutineStart_LAZY_instance;
@@ -23170,6 +23997,9 @@
       message = null;
     return this.toCancellationException_ntgz4s_k$(_this__0, message);
   };
+  JobSupport.prototype.invokeOnCompletion_wjzpsu_k$ = function (handler) {
+    return this.invokeOnCompletion_431mg2_k$(false, true, handler);
+  };
   JobSupport.prototype.invokeOnCompletion_431mg2_k$ = function (onCancelling, invokeImmediately, handler) {
     var node = makeNode(this, handler, onCancelling);
     {
@@ -23432,6 +24262,28 @@
   JobSupport.prototype.nameString_0_k$ = function () {
     return _get_classSimpleName_(this);
   };
+  JobSupport.prototype.getCompletedInternal_0_k$ = function () {
+    var state = this._get_state__0_k$();
+    {
+      {
+      }
+      if (!!(!(state == null) ? isInterface(state, Incomplete) : false)) {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = 'This job has not completed yet';
+          break $l$block;
+        }
+        var message_1 = tmp$ret$0;
+        throw IllegalStateException_init_$Create$_0(toString_3(message_1));
+      } else {
+      }
+    }
+    if (state instanceof CompletedExceptionally)
+      throw state._cause;
+    else {
+    }
+    return unboxState(state);
+  };
   JobSupport.$metadata$ = {
     simpleName: 'JobSupport',
     kind: 'class',
@@ -23493,12 +24345,12 @@
   };
   function InvokeOnCancelling(handler) {
     JobCancellingNode.call(this);
-    this._handler = handler;
+    this._handler_0 = handler;
     this.__invoked = atomic_1(0);
   }
   InvokeOnCancelling.prototype.invoke_houul8_k$ = function (cause) {
     if (this.__invoked.atomicfu$compareAndSet(0, 1))
-      this._handler(cause);
+      this._handler_0(cause);
   };
   InvokeOnCancelling.prototype.invoke = function (cause) {
     return this.invoke_houul8_k$(cause);
@@ -23510,10 +24362,10 @@
   };
   function InvokeOnCompletion(handler) {
     JobNode.call(this);
-    this._handler_0 = handler;
+    this._handler_1 = handler;
   }
   InvokeOnCompletion.prototype.invoke_houul8_k$ = function (cause) {
-    return this._handler_0(cause);
+    return this._handler_1(cause);
   };
   InvokeOnCompletion.prototype.invoke = function (cause) {
     return this.invoke_houul8_k$(cause);
@@ -23523,6 +24375,11 @@
     kind: 'class',
     interfaces: []
   };
+  function unboxState(_this_) {
+    var tmp0_safe_receiver = _this_ instanceof IncompleteStateBox ? _this_ : null;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver._state_2;
+    return tmp1_elvis_lhs == null ? _this_ : tmp1_elvis_lhs;
+  }
   function IncompleteStateBox(state) {
     this._state_2 = state;
   }
@@ -23763,9 +24620,9 @@
                     {
                       var tmp$ret$4;
                       $l$block_4: {
-                        var tmp0_withContinuationContext_0_7 = tmp1_resumeCancellableWith_0._continuation_0;
+                        var tmp0_withContinuationContext_0_7 = tmp1_resumeCancellableWith_0._continuation_2;
                         var tmp1_withContinuationContext_0_8 = tmp1_resumeCancellableWith_0._countOrElement;
-                        tmp$ret$4 = tmp1_resumeCancellableWith_0._continuation_0.resumeWith_bnunh2_k$(result);
+                        tmp$ret$4 = tmp1_resumeCancellableWith_0._continuation_2.resumeWith_bnunh2_k$(result);
                         break $l$block_4;
                       }
                     }
@@ -23816,13 +24673,13 @@
   function DispatchedContinuation(dispatcher, continuation) {
     DispatchedTask.call(this, -1);
     this._dispatcher = dispatcher;
-    this._continuation_0 = continuation;
+    this._continuation_2 = continuation;
     this.__state_1 = UNDEFINED;
     this._countOrElement = threadContextElements(this._get_context__0_k$());
     this.__reusableCancellableContinuation = atomic(null);
   }
   DispatchedContinuation.prototype._get_context__0_k$ = function () {
-    return this._continuation_0._get_context__0_k$();
+    return this._continuation_2._get_context__0_k$();
   };
   DispatchedContinuation.prototype.isReusable_0_k$ = function () {
     return !(this.__reusableCancellableContinuation._value_4 == null);
@@ -23928,7 +24785,7 @@
     return this;
   };
   DispatchedContinuation.prototype.resumeWith_bnunh2_k$ = function (result) {
-    var context = this._continuation_0._get_context__0_k$();
+    var context = this._continuation_2._get_context__0_k$();
     var state = toState$default(result, null, 1, null);
     if (this._dispatcher.isDispatchNeeded_d7pszg_k$(context)) {
       this.__state_1 = state;
@@ -23959,7 +24816,7 @@
                 $l$block_0: {
                   var tmp0_withCoroutineContext_0_4 = this._get_context__0_k$();
                   var tmp1_withCoroutineContext_0_5 = this._countOrElement;
-                  tmp$ret$1 = this._continuation_0.resumeWith_bnunh2_k$(result);
+                  tmp$ret$1 = this._continuation_2.resumeWith_bnunh2_k$(result);
                   break $l$block_0;
                 }
               }
@@ -23995,7 +24852,7 @@
     }
   };
   DispatchedContinuation.prototype.toString = function () {
-    return '' + 'DispatchedContinuation[' + this._dispatcher + ', ' + toDebugString(this._continuation_0) + ']';
+    return '' + 'DispatchedContinuation[' + this._dispatcher + ', ' + toDebugString(this._continuation_2) + ']';
   };
   DispatchedContinuation.$metadata$ = {
     simpleName: 'DispatchedContinuation',
@@ -24029,7 +24886,7 @@
     try {
       var tmp = this._get_delegate__0_k$();
       var delegate = tmp instanceof DispatchedContinuation ? tmp : THROW_CCE();
-      var continuation = delegate._continuation_0;
+      var continuation = delegate._continuation_2;
       var tmp$ret$5;
       $l$block_4: {
         var tmp0_withContinuationContext_0 = delegate._countOrElement;
@@ -24242,14 +25099,34 @@
       var tmp3_resumeUndispatchedWith_0 = delegate instanceof DispatchedContinuation ? delegate : THROW_CCE();
       var tmp$ret$2;
       $l$block_1: {
-        var tmp0_withContinuationContext_0_1 = tmp3_resumeUndispatchedWith_0._continuation_0;
+        var tmp0_withContinuationContext_0_1 = tmp3_resumeUndispatchedWith_0._continuation_2;
         var tmp1_withContinuationContext_0_2 = tmp3_resumeUndispatchedWith_0._countOrElement;
-        tmp$ret$2 = tmp3_resumeUndispatchedWith_0._continuation_0.resumeWith_bnunh2_k$(result);
+        tmp$ret$2 = tmp3_resumeUndispatchedWith_0._continuation_2.resumeWith_bnunh2_k$(result);
         break $l$block_1;
       }
     } else
       delegate.resumeWith_bnunh2_k$(result);
   }
+  function ScopeCoroutine(context, uCont) {
+    AbstractCoroutine.call(this, context, true, true);
+    this._uCont = uCont;
+  }
+  ScopeCoroutine.prototype._get_isScopedCoroutine__0_k$ = function () {
+    return true;
+  };
+  ScopeCoroutine.prototype.afterCompletion_qi8yb4_k$ = function (state) {
+    var tmp = intercepted(this._uCont);
+    var tmp_0 = recoverResult(state, this._uCont);
+    resumeCancellableWith$default(tmp, tmp_0, null, 2, null);
+  };
+  ScopeCoroutine.prototype.afterResume_qi8yb4_k$ = function (state) {
+    this._uCont.resumeWith_bnunh2_k$(recoverResult(state, this._uCont));
+  };
+  ScopeCoroutine.$metadata$ = {
+    simpleName: 'ScopeCoroutine',
+    kind: 'class',
+    interfaces: [CoroutineStackFrame]
+  };
   function Symbol(symbol) {
     this._symbol = symbol;
   }
@@ -24324,6 +25201,77 @@
       tmp = tmp_2;
     }
     return tmp;
+  }
+  function startUndispatchedOrReturn(_this_, receiver, block) {
+    var tmp$ret$3;
+    $l$block_5: {
+      var tmp;
+      try {
+        var tmp$ret$2;
+        $l$block_1: {
+          var tmp$ret$1;
+          $l$block_0: {
+            var tmp$ret$0;
+            $l$block: {
+              tmp$ret$0 = block;
+              break $l$block;
+            }
+            tmp$ret$1 = tmp$ret$0(receiver, _this_);
+            break $l$block_0;
+          }
+          tmp$ret$2 = tmp$ret$1;
+          break $l$block_1;
+        }
+        tmp = tmp$ret$2;
+      } catch ($p) {
+        var tmp_0;
+        if ($p instanceof Error) {
+          tmp_0 = CompletedExceptionally_init_$Create$($p, false, 2, null);
+        } else {
+          {
+            throw $p;
+          }
+        }
+        tmp = tmp_0;
+      }
+      var result_1 = tmp;
+      if (result_1 === _get_COROUTINE_SUSPENDED_()) {
+        tmp$ret$3 = _get_COROUTINE_SUSPENDED_();
+        break $l$block_5;
+      }var state_3 = _this_.makeCompletingOnce_wi7j7l_k$(result_1);
+      if (state_3 === COMPLETING_WAITING_CHILDREN) {
+        tmp$ret$3 = _get_COROUTINE_SUSPENDED_();
+        break $l$block_5;
+      }var tmp_1;
+      if (state_3 instanceof CompletedExceptionally) {
+        var tmp_2;
+        var tmp$ret$4;
+        $l$block_4: {
+          var tmp0__anonymous__5 = state_3._cause;
+          tmp$ret$4 = true;
+          break $l$block_4;
+        }
+        if (tmp$ret$4) {
+          throw recoverStackTrace(state_3._cause, _this_._uCont);
+        } else {
+          if (result_1 instanceof CompletedExceptionally) {
+            throw recoverStackTrace(result_1._cause, _this_._uCont);
+          } else {
+            {
+              tmp_2 = result_1;
+            }
+          }
+        }
+        tmp_1 = tmp_2;
+      } else {
+        {
+          tmp_1 = unboxState(state_3);
+        }
+      }
+      tmp$ret$3 = tmp_1;
+      break $l$block_5;
+    }
+    return tmp$ret$3;
   }
   function startCoroutineUndispatched(_this_, receiver, completion) {
     var tmp$ret$8;
@@ -24676,28 +25624,28 @@
       new SetTimeoutDispatcher();
     return SetTimeoutDispatcher_instance;
   }
-  function _no_name_provided__71(this$0) {
-    this._this$0_18 = this$0;
+  function _no_name_provided__73(this$0) {
+    this._this$0_19 = this$0;
   }
-  _no_name_provided__71.prototype.invoke_sv8swh_k$ = function () {
-    this._this$0_18.process_sv8swh_k$();
+  _no_name_provided__73.prototype.invoke_sv8swh_k$ = function () {
+    this._this$0_19.process_sv8swh_k$();
   };
-  _no_name_provided__71.prototype.invoke_0_k$ = function () {
+  _no_name_provided__73.prototype.invoke_0_k$ = function () {
     this.invoke_sv8swh_k$();
     return Unit_getInstance();
   };
-  _no_name_provided__71.$metadata$ = {
+  _no_name_provided__73.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function ScheduledMessageQueue($outer) {
-    this._$this_7 = $outer;
+    this._$this_9 = $outer;
     MessageQueue.call(this);
     var tmp = this;
     tmp._processQueue = _no_name_provided_$factory_53(this);
   }
   ScheduledMessageQueue.prototype.schedule_sv8swh_k$ = function () {
-    this._$this_7.scheduleQueueProcessing_sv8swh_k$();
+    this._$this_9.scheduleQueueProcessing_sv8swh_k$();
   };
   ScheduledMessageQueue.prototype.reschedule_sv8swh_k$ = function () {
     setTimeout(this._processQueue, 0);
@@ -24785,33 +25733,33 @@
     kind: 'class',
     interfaces: [Delay]
   };
-  function _no_name_provided__72(this$0) {
-    this._this$0_19 = this$0;
+  function _no_name_provided__74(this$0) {
+    this._this$0_20 = this$0;
   }
-  _no_name_provided__72.prototype.invoke_h9nkbz_k$ = function (event) {
-    if (event.source == this._this$0_19._window_0 ? event.data == this._this$0_19._messageName : false) {
+  _no_name_provided__74.prototype.invoke_h9nkbz_k$ = function (event) {
+    if (event.source == this._this$0_20._window_0 ? event.data == this._this$0_20._messageName : false) {
       event.stopPropagation();
-      this._this$0_19.process_sv8swh_k$();
+      this._this$0_20.process_sv8swh_k$();
     }};
-  _no_name_provided__72.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__74.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_h9nkbz_k$((p1 == null ? true : p1) ? p1 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__72.$metadata$ = {
+  _no_name_provided__74.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__73(this$0) {
-    this._this$0_20 = this$0;
+  function _no_name_provided__75(this$0) {
+    this._this$0_21 = this$0;
   }
-  _no_name_provided__73.prototype.invoke_89eg7z_k$ = function (it) {
-    this._this$0_20.process_sv8swh_k$();
+  _no_name_provided__75.prototype.invoke_89eg7z_k$ = function (it) {
+    this._this$0_21.process_sv8swh_k$();
   };
-  _no_name_provided__73.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__75.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_89eg7z_k$(p1 instanceof Unit ? p1 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__73.$metadata$ = {
+  _no_name_provided__75.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -24835,21 +25783,21 @@
     interfaces: []
   };
   function _no_name_provided_$factory_53(this$0) {
-    var i = new _no_name_provided__71(this$0);
+    var i = new _no_name_provided__73(this$0);
     return function () {
       i.invoke_sv8swh_k$();
       return Unit_getInstance();
     };
   }
   function _no_name_provided_$factory_54(this$0) {
-    var i = new _no_name_provided__72(this$0);
+    var i = new _no_name_provided__74(this$0);
     return function (p1) {
       i.invoke_h9nkbz_k$(p1);
       return Unit_getInstance();
     };
   }
   function _no_name_provided_$factory_55(this$0) {
-    var i = new _no_name_provided__73(this$0);
+    var i = new _no_name_provided__75(this$0);
     return function (p1) {
       i.invoke_89eg7z_k$(p1);
       return Unit_getInstance();
@@ -24871,10 +25819,10 @@
     }
     return tmp$ret$0;
   }
-  function _no_name_provided__74($cancellable_2_2) {
+  function _no_name_provided__76($cancellable_2_2) {
     this._$cancellable_2_2 = $cancellable_2_2;
   }
-  _no_name_provided__74.prototype.invoke_iav7o_k$ = function (it) {
+  _no_name_provided__76.prototype.invoke_iav7o_k$ = function (it) {
     var tmp$ret$1;
     $l$block_0: {
       var tmp$ret$0;
@@ -24887,18 +25835,18 @@
       break $l$block_0;
     }
   };
-  _no_name_provided__74.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__76.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_iav7o_k$((p1 == null ? true : isObject(p1)) ? p1 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__74.$metadata$ = {
+  _no_name_provided__76.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__75($cancellable_2_2) {
+  function _no_name_provided__77($cancellable_2_2) {
     this._$cancellable_2_2_0 = $cancellable_2_2;
   }
-  _no_name_provided__75.prototype.invoke_1ti8hr_k$ = function (it) {
+  _no_name_provided__77.prototype.invoke_1ti8hr_k$ = function (it) {
     var tmp$ret$1;
     $l$block_0: {
       var tmp$ret$0;
@@ -24911,23 +25859,23 @@
       break $l$block_0;
     }
   };
-  _no_name_provided__75.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__77.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_1ti8hr_k$(p1 instanceof Error ? p1 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__75.$metadata$ = {
+  _no_name_provided__77.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_56($cancellable_2_2) {
-    var i = new _no_name_provided__74($cancellable_2_2);
+    var i = new _no_name_provided__76($cancellable_2_2);
     return function (p1) {
       i.invoke_iav7o_k$(p1);
       return Unit_getInstance();
     };
   }
   function _no_name_provided_$factory_57($cancellable_2_2) {
-    var i = new _no_name_provided__75($cancellable_2_2);
+    var i = new _no_name_provided__77($cancellable_2_2);
     return function (p1) {
       i.invoke_1ti8hr_k$(p1);
       return Unit_getInstance();
@@ -25103,16 +26051,16 @@
   function Signal_init_$Create$(onRegister, $mask0, $marker) {
     return Signal_init_$Init$(onRegister, $mask0, $marker, Object.create(Signal.prototype));
   }
-  function _no_name_provided__76() {
+  function _no_name_provided__78() {
   }
-  _no_name_provided__76.prototype.invoke_sv8swh_k$ = function () {
+  _no_name_provided__78.prototype.invoke_sv8swh_k$ = function () {
     return Unit_getInstance();
   };
-  _no_name_provided__76.prototype.invoke_0_k$ = function () {
+  _no_name_provided__78.prototype.invoke_0_k$ = function () {
     this.invoke_sv8swh_k$();
     return Unit_getInstance();
   };
-  _no_name_provided__76.$metadata$ = {
+  _no_name_provided__78.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -25136,7 +26084,7 @@
     interfaces: []
   };
   function _no_name_provided_$factory_58() {
-    var i = new _no_name_provided__76();
+    var i = new _no_name_provided__78();
     return function () {
       i.invoke_sv8swh_k$();
       return Unit_getInstance();
@@ -25147,7 +26095,7 @@
     var rresult = {_v: null};
     var resultEx = {_v: null};
     var suspendCount = {_v: 0};
-    startCoroutineUndispatched_0(callback, new _no_name_provided__78(suspendCount, resultEx, completed, rresult));
+    startCoroutineUndispatched_0(callback, new _no_name_provided__80(suspendCount, resultEx, completed, rresult));
     if (!completed._v) {
       invalidOp('' + 'runBlockingNoSuspensions was not completed synchronously! suspendCount=' + suspendCount._v);
     }if (!(resultEx._v == null))
@@ -25234,15 +26182,15 @@
   function _get_unitInstance_($this) {
     return Unit_getInstance();
   }
-  function _no_name_provided__77($suspendCount) {
+  function _no_name_provided__79($suspendCount) {
     this._$suspendCount = $suspendCount;
     AbstractCoroutineContextElement.call(this, Key_getInstance());
     this._key_1 = Key_getInstance();
   }
-  _no_name_provided__77.prototype._get_key__0_k$ = function () {
+  _no_name_provided__79.prototype._get_key__0_k$ = function () {
     return this._key_1;
   };
-  _no_name_provided__77.prototype.interceptContinuation_x4ijla_k$ = function (continuation) {
+  _no_name_provided__79.prototype.interceptContinuation_x4ijla_k$ = function (continuation) {
     var tmp$ret$0;
     $l$block: {
       {
@@ -25257,22 +26205,22 @@
     }
     return tmp$ret$0;
   };
-  _no_name_provided__77.$metadata$ = {
+  _no_name_provided__79.$metadata$ = {
     kind: 'class',
     interfaces: [ContinuationInterceptor, Delay]
   };
-  function _no_name_provided__78($suspendCount, $resultEx, $completed, $rresult) {
+  function _no_name_provided__80($suspendCount, $resultEx, $completed, $rresult) {
     this._$suspendCount_0 = $suspendCount;
     this._$resultEx = $resultEx;
     this._$completed = $completed;
     this._$rresult = $rresult;
     var tmp = this;
-    tmp._context_1 = new _no_name_provided__77(this._$suspendCount_0);
+    tmp._context_1 = new _no_name_provided__79(this._$suspendCount_0);
   }
-  _no_name_provided__78.prototype._get_context__0_k$ = function () {
+  _no_name_provided__80.prototype._get_context__0_k$ = function () {
     return this._context_1;
   };
-  _no_name_provided__78.prototype.resumeWith_suddo1_k$ = function (result) {
+  _no_name_provided__80.prototype.resumeWith_suddo1_k$ = function (result) {
     var exception = Result__exceptionOrNull_impl(result);
     if (!(exception == null)) {
       this._$resultEx._v = exception;
@@ -25307,10 +26255,10 @@
       this._$completed._v = true;
     }
   };
-  _no_name_provided__78.prototype.resumeWith_bnunh2_k$ = function (result) {
+  _no_name_provided__80.prototype.resumeWith_bnunh2_k$ = function (result) {
     return this.resumeWith_suddo1_k$(result);
   };
-  _no_name_provided__78.$metadata$ = {
+  _no_name_provided__80.$metadata$ = {
     kind: 'class',
     interfaces: [Continuation]
   };
@@ -25396,23 +26344,23 @@
   function compress_1(_this_, i, o, context, $cont) {
     return _this_.compress_ydifiq_k$(new BitReader(i), o, context, $cont);
   }
-  function _no_name_provided__79($this_uncompress, $i, $o, resultContinuation) {
+  function _no_name_provided__81($this_uncompress, $i, $o, resultContinuation) {
     this._$this_uncompress = $this_uncompress;
     this._$i = $i;
     this._$o = $o;
     CoroutineImpl_0.call(this, resultContinuation);
   }
-  _no_name_provided__79.prototype.invoke_sv8swh_k$ = function ($cont) {
+  _no_name_provided__81.prototype.invoke_sv8swh_k$ = function ($cont) {
     var tmp = this.create_s8oglw_k$($cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   };
-  _no_name_provided__79.prototype.invoke_0_k$ = function ($cont) {
+  _no_name_provided__81.prototype.invoke_0_k$ = function ($cont) {
     this.invoke_sv8swh_k$($cont);
     return Unit_getInstance();
   };
-  _no_name_provided__79.prototype.doResume_0_k$ = function () {
+  _no_name_provided__81.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
     $sm: do
       try {
@@ -25441,33 +26389,33 @@
       }
      while (true);
   };
-  _no_name_provided__79.prototype.create_s8oglw_k$ = function (completion) {
-    var i = new _no_name_provided__79(this._$this_uncompress, this._$i, this._$o, completion);
+  _no_name_provided__81.prototype.create_s8oglw_k$ = function (completion) {
+    var i = new _no_name_provided__81(this._$this_uncompress, this._$i, this._$o, completion);
     return i;
   };
-  _no_name_provided__79.$metadata$ = {
+  _no_name_provided__81.$metadata$ = {
     kind: 'class',
     interfaces: [],
     suspendArity: 0
   };
-  function _no_name_provided__80($this_compress, $i, $o, $context, resultContinuation) {
+  function _no_name_provided__82($this_compress, $i, $o, $context, resultContinuation) {
     this._$this_compress = $this_compress;
     this._$i_0 = $i;
     this._$o_0 = $o;
     this._$context = $context;
     CoroutineImpl_0.call(this, resultContinuation);
   }
-  _no_name_provided__80.prototype.invoke_sv8swh_k$ = function ($cont) {
+  _no_name_provided__82.prototype.invoke_sv8swh_k$ = function ($cont) {
     var tmp = this.create_s8oglw_k$($cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   };
-  _no_name_provided__80.prototype.invoke_0_k$ = function ($cont) {
+  _no_name_provided__82.prototype.invoke_0_k$ = function ($cont) {
     this.invoke_sv8swh_k$($cont);
     return Unit_getInstance();
   };
-  _no_name_provided__80.prototype.doResume_0_k$ = function () {
+  _no_name_provided__82.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
     $sm: do
       try {
@@ -25496,17 +26444,17 @@
       }
      while (true);
   };
-  _no_name_provided__80.prototype.create_s8oglw_k$ = function (completion) {
-    var i = new _no_name_provided__80(this._$this_compress, this._$i_0, this._$o_0, this._$context, completion);
+  _no_name_provided__82.prototype.create_s8oglw_k$ = function (completion) {
+    var i = new _no_name_provided__82(this._$this_compress, this._$i_0, this._$o_0, this._$context, completion);
     return i;
   };
-  _no_name_provided__80.$metadata$ = {
+  _no_name_provided__82.$metadata$ = {
     kind: 'class',
     interfaces: [],
     suspendArity: 0
   };
   function _no_name_provided_$factory_59($this_uncompress, $i, $o, resultContinuation) {
-    var i = new _no_name_provided__79($this_uncompress, $i, $o, resultContinuation);
+    var i = new _no_name_provided__81($this_uncompress, $i, $o, resultContinuation);
     var l = function ($cont) {
       return i.invoke_sv8swh_k$($cont);
     };
@@ -25514,7 +26462,7 @@
     return l;
   }
   function _no_name_provided_$factory_60($this_compress, $i, $o, $context, resultContinuation) {
-    var i = new _no_name_provided__80($this_compress, $i, $o, $context, resultContinuation);
+    var i = new _no_name_provided__82($this_compress, $i, $o, $context, resultContinuation);
     var l = function ($cont) {
       return i.invoke_sv8swh_k$($cont);
     };
@@ -25524,7 +26472,7 @@
   var Deflate$delegate;
   function $flushCOROUTINE$11(_this_, finish, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this_ = _this_;
+    this.__this__0 = _this_;
     this._finish = finish;
   }
   $flushCOROUTINE$11.prototype.doResume_0_k$ = function () {
@@ -25535,9 +26483,9 @@
         switch (tmp) {
           case 0:
             this._exceptionState = 3;
-            if (this._finish ? true : this.__this_._get_mustFlush__0_k$()) {
+            if (this._finish ? true : this.__this__0._get_mustFlush__0_k$()) {
               this._state_0 = 1;
-              suspendResult = this.__this_._out.write_ysdrhq_k$(this.__this_._bab._data_1, 0, this.__this_._bab._get_size__0_k$(), this);
+              suspendResult = this.__this__0._out.write_ysdrhq_k$(this.__this__0._bab._data_1, 0, this.__this__0._bab._get_size__0_k$(), this);
               if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
                 return suspendResult;
               }continue $sm;
@@ -25548,7 +26496,7 @@
 
             break;
           case 1:
-            this.__this_._bab.clear_sv8swh_k$();
+            this.__this__0._bab.clear_sv8swh_k$();
             this._state_0 = 2;
             continue $sm;
           case 2:
@@ -25734,7 +26682,7 @@
   }
   function $compressCOROUTINE$9(_this_, i, o, context, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__0 = _this_;
+    this.__this__1 = _this_;
     this._i = i;
     this._o = o;
     this._context_2 = context;
@@ -25831,7 +26779,7 @@
   };
   function $uncompressCOROUTINE$10(_this_, reader, out, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__1 = _this_;
+    this.__this__2 = _this_;
     this._reader_0 = reader;
     this._out_0 = out;
   }
@@ -25843,7 +26791,7 @@
         switch (tmp) {
           case 0:
             this._exceptionState = 19;
-            this._sout0 = new SlidingWindowWithOutput(new SlidingWindow(this.__this__1._windowBits), this._out_0);
+            this._sout0 = new SlidingWindowWithOutput(new SlidingWindow(this.__this__2._windowBits), this._out_0);
             this._lastBlock1 = false;
             this._tempTree2 = new HuffmanTree();
             this._tempDist3 = new HuffmanTree();
@@ -25921,7 +26869,7 @@
                 var tmp2_fill_0 = this._lengths5.length;
                 fill_0(this._lengths5, 0, 0, tmp2_fill_0);
                 while (n < hlithdist) {
-                  var value = read(this._reader_0, this.__this__1, codeLen);
+                  var value = read(this._reader_0, this.__this__2, codeLen);
                   if (!(0 <= value ? value <= 18 : false)) {
                     throw IllegalStateException_init_$Create$_0('Invalid');
                   }var tmp1_subject = value;
@@ -26029,7 +26977,7 @@
           case 9:
             this._zlenof14 = this._value13 - 257 | 0;
             this._lengthExtra15 = this._reader_0.readBits_ha5a7z_k$(Companion_getInstance_28()._LEN_EXTRA[this._zlenof14]);
-            this._distanceData16 = read(this._reader_0, this.__this__1, this._dist12);
+            this._distanceData16 = read(this._reader_0, this.__this__2, this._dist12);
             this._distanceExtra17 = this._reader_0.readBits_ha5a7z_k$(Companion_getInstance_28()._DIST_EXTRA[this._distanceData16]);
             this._distance18 = Companion_getInstance_28()._DIST_BASE[this._distanceData16] + this._distanceExtra17 | 0;
             this._length19 = Companion_getInstance_28()._LEN_BASE[this._zlenof14] + this._lengthExtra15 | 0;
@@ -26123,36 +27071,36 @@
     kind: 'class',
     interfaces: [CompressionMethod]
   };
-  function _no_name_provided__81() {
+  function _no_name_provided__83() {
   }
-  _no_name_provided__81.prototype.invoke_0_k$ = function () {
+  _no_name_provided__83.prototype.invoke_0_k$ = function () {
     return Deflate(15);
   };
-  _no_name_provided__81.$metadata$ = {
+  _no_name_provided__83.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_61() {
-    var i = new _no_name_provided__81();
+    var i = new _no_name_provided__83();
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided__82() {
+  function _no_name_provided__84() {
   }
-  _no_name_provided__82.prototype.invoke_ha5a7z_k$ = function (it) {
+  _no_name_provided__84.prototype.invoke_ha5a7z_k$ = function (it) {
     return Deflate(it);
   };
-  _no_name_provided__82.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__84.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__82.$metadata$ = {
+  _no_name_provided__84.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function $writeCOROUTINE$19(_this_, buffer, offset_0, len, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__2 = _this_;
+    this.__this__3 = _this_;
     this._buffer_2 = buffer;
     this._offset_0 = offset_0;
     this._len = len;
@@ -26166,13 +27114,13 @@
           case 0:
             this._exceptionState = 2;
             this._state_0 = 1;
-            suspendResult = this.__this__2._$o_1.write_ysdrhq_k$(this._buffer_2, this._offset_0, this._len, this);
+            suspendResult = this.__this__3._$o_1.write_ysdrhq_k$(this._buffer_2, this._offset_0, this._len, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
             continue $sm;
           case 1:
-            this.__this__2._$chash._v = Adler32_getInstance().update_9piif6_k$(this.__this__2._$chash._v, this._buffer_2, this._offset_0, this._len);
+            this.__this__3._$chash._v = Adler32_getInstance().update_9piif6_k$(this.__this__3._$chash._v, this._buffer_2, this._offset_0, this._len);
             return Unit_getInstance();
           case 2:
             throw this._exception_0;
@@ -26194,7 +27142,7 @@
   };
   function $readCOROUTINE$20(_this_, buffer, offset_0, len, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__3 = _this_;
+    this.__this__4 = _this_;
     this._buffer_3 = buffer;
     this._offset_1 = offset_0;
     this._len_0 = len;
@@ -26208,7 +27156,7 @@
           case 0:
             this._exceptionState = 2;
             this._state_0 = 1;
-            suspendResult = this.__this__3._$i_1.read_irqg4d_k$(this._buffer_3, this._offset_1, this._len_0, this);
+            suspendResult = this.__this__4._$i_1.read_irqg4d_k$(this._buffer_3, this._offset_1, this._len_0, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -26216,7 +27164,7 @@
           case 1:
             var read_0 = suspendResult;
             if (read_0 > 0) {
-              this.__this__3._$adler._v = Adler32_getInstance().update_9piif6_k$(this.__this__3._$adler._v, this._buffer_3, this._offset_1, read_0);
+              this.__this__4._$adler._v = Adler32_getInstance().update_9piif6_k$(this.__this__4._$adler._v, this._buffer_3, this._offset_1, read_0);
             }
             return read_0;
           case 2:
@@ -26252,44 +27200,44 @@
       new Companion_30();
     return Companion_instance_29;
   }
-  function _no_name_provided__83($o, $chash) {
+  function _no_name_provided__85($o, $chash) {
     this._$o_1 = $o;
     this._$chash = $chash;
   }
-  _no_name_provided__83.prototype.write_ysdrhq_k$ = function (buffer, offset_0, len, $cont) {
+  _no_name_provided__85.prototype.write_ysdrhq_k$ = function (buffer, offset_0, len, $cont) {
     var tmp = new $writeCOROUTINE$19(this, buffer, offset_0, len, $cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   };
-  _no_name_provided__83.$metadata$ = {
+  _no_name_provided__85.$metadata$ = {
     kind: 'class',
     interfaces: [AsyncOutputStream]
   };
-  function _no_name_provided__84($i, $adler) {
+  function _no_name_provided__86($i, $adler) {
     this._$i_1 = $i;
     this._$adler = $adler;
     this._$$delegate_0 = this._$i_1;
   }
-  _no_name_provided__84.prototype.getLength_0_k$ = function ($cont) {
+  _no_name_provided__86.prototype.getLength_0_k$ = function ($cont) {
     return this._$$delegate_0.getLength_0_k$($cont);
   };
-  _no_name_provided__84.prototype.getPosition_0_k$ = function ($cont) {
+  _no_name_provided__86.prototype.getPosition_0_k$ = function ($cont) {
     return this._$$delegate_0.getPosition_0_k$($cont);
   };
-  _no_name_provided__84.prototype.read_irqg4d_k$ = function (buffer, offset_0, len, $cont) {
+  _no_name_provided__86.prototype.read_irqg4d_k$ = function (buffer, offset_0, len, $cont) {
     var tmp = new $readCOROUTINE$20(this, buffer, offset_0, len, $cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   };
-  _no_name_provided__84.$metadata$ = {
+  _no_name_provided__86.$metadata$ = {
     kind: 'class',
     interfaces: [AsyncInputStreamWithLength]
   };
   function $uncompressCOROUTINE$17(_this_, reader, out, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__4 = _this_;
+    this.__this__5 = _this_;
     this._reader_1 = reader;
     this._out_1 = out;
   }
@@ -26343,8 +27291,8 @@
             }
             this._chash11 = {_v: Adler32_getInstance()._initialValue};
             this._state_0 = 3;
-            var tmp_1 = this.__this__4._deflater(this._windowBits6);
-            suspendResult = tmp_1.uncompress_hzt0ks_k$(this._r0, new _no_name_provided__83(this._o1, this._chash11), this);
+            var tmp_1 = this.__this__5._deflater(this._windowBits6);
+            suspendResult = tmp_1.uncompress_hzt0ks_k$(this._r0, new _no_name_provided__85(this._o1, this._chash11), this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -26392,7 +27340,7 @@
   };
   function $compressCOROUTINE$18(_this_, i, o, context, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__5 = _this_;
+    this.__this__6 = _this_;
     this._i_0 = i;
     this._o_0 = o;
     this._context_3 = context;
@@ -26436,8 +27384,8 @@
           case 2:
             this._adler5 = {_v: Adler32_getInstance()._initialValue};
             this._state_0 = 3;
-            var tmp_0 = this.__this__5._deflater(this._slidingBits0);
-            suspendResult = compress_1(tmp_0, new _no_name_provided__84(this._i_0, this._adler5), this._o_0, this._context_3, this);
+            var tmp_0 = this.__this__6._deflater(this._slidingBits0);
+            suspendResult = compress_1(tmp_0, new _no_name_provided__86(this._i_0, this._adler5), this._o_0, this._context_3, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -26491,7 +27439,7 @@
     interfaces: [CompressionMethod]
   };
   function _no_name_provided_$factory_62() {
-    var i = new _no_name_provided__82();
+    var i = new _no_name_provided__84();
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
@@ -26501,7 +27449,7 @@
   }
   function $prepareBytesUpToCOROUTINE$22(_this_, expectedBytes, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__6 = _this_;
+    this.__this__7 = _this_;
     this._expectedBytes = expectedBytes;
   }
   $prepareBytesUpToCOROUTINE$22.prototype.doResume_0_k$ = function () {
@@ -26515,14 +27463,14 @@
             this._state_0 = 1;
             continue $sm;
           case 1:
-            if (!(this.__this__6._sbuffers._get_availableRead__0_k$() < this._expectedBytes)) {
+            if (!(this.__this__7._sbuffers._get_availableRead__0_k$() < this._expectedBytes)) {
               this._state_0 = 4;
               continue $sm;
             }
             this._state_0 = 2;
             var tmp_0 = this;
-            tmp_0._tmp0_min_00 = this.__this__6._tempBA.length;
-            suspendResult = this.__this__6._s.read_irqg4d_k$(this.__this__6._tempBA, 0, Math.min(this._tmp0_min_00, this._expectedBytes), this);
+            tmp_0._tmp0_min_00 = this.__this__7._tempBA.length;
+            suspendResult = this.__this__7._s.read_irqg4d_k$(this.__this__7._tempBA, 0, Math.min(this._tmp0_min_00, this._expectedBytes), this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -26539,12 +27487,12 @@
 
             break;
           case 3:
-            this.__this__6._sbuffers.write_irqg4d_k$(this.__this__6._tempBA, 0, read_0);
+            this.__this__7._sbuffers.write_irqg4d_k$(this.__this__7._tempBA, 0, read_0);
             Unit_getInstance();
             this._state_0 = 1;
             continue $sm;
           case 4:
-            return this.__this__6;
+            return this.__this__7;
           case 5:
             throw this._exception_0;
         }
@@ -26565,7 +27513,7 @@
   };
   function $abytesCOROUTINE$23(_this_, count, out, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__7 = _this_;
+    this.__this__8 = _this_;
     this._count_0 = count;
     this._out_2 = out;
   }
@@ -26578,7 +27526,7 @@
           case 0:
             this._exceptionState = 2;
             this._state_0 = 1;
-            suspendResult = this.__this__7.prepareBytesUpTo_ha5a7z_k$(this._count_0, this);
+            suspendResult = this.__this__8.prepareBytesUpTo_ha5a7z_k$(this._count_0, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -26606,7 +27554,7 @@
   };
   function $readCOROUTINE$24(_this_, buffer, offset_0, len, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__8 = _this_;
+    this.__this__9 = _this_;
     this._buffer_4 = buffer;
     this._offset_2 = offset_0;
     this._len_1 = len;
@@ -26620,7 +27568,7 @@
           case 0:
             this._exceptionState = 2;
             this._state_0 = 1;
-            suspendResult = this.__this__8.prepareBytesUpTo_ha5a7z_k$(this._len_1, this);
+            suspendResult = this.__this__9.prepareBytesUpTo_ha5a7z_k$(this._len_1, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -26649,7 +27597,7 @@
   };
   function $getLengthCOROUTINE$27(_this_, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__9 = _this_;
+    this.__this__10 = _this_;
   }
   $getLengthCOROUTINE$27.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
@@ -26660,7 +27608,7 @@
           case 0:
             this._exceptionState = 3;
             var tmp_0 = this;
-            var tmp_1 = this.__this__9._s;
+            var tmp_1 = this.__this__10._s;
             tmp_0._tmp0_safe_receiver0 = isInterface(tmp_1, AsyncGetLengthStream) ? tmp_1 : null;
             if (this._tmp0_safe_receiver0 == null) {
               this._WHEN_RESULT1 = null;
@@ -27433,36 +28381,10 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__85() {
-  }
-  _no_name_provided__85.prototype.invoke_a7p0jt_k$ = function ($this$registerType, it) {
-    return $this$registerType.toBool_kajtkh_k$(it);
-  };
-  _no_name_provided__85.prototype.invoke_osx4an_k$ = function (p1, p2) {
-    var tmp = p1 instanceof TypeContext ? p1 : THROW_CCE();
-    return this.invoke_a7p0jt_k$(tmp, (p2 == null ? true : isObject(p2)) ? p2 : THROW_CCE());
-  };
-  _no_name_provided__85.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__86() {
-  }
-  _no_name_provided__86.prototype.invoke_a7p0jt_k$ = function ($this$registerType, it) {
-    return $this$registerType.toByte_kajtkh_k$(it);
-  };
-  _no_name_provided__86.prototype.invoke_osx4an_k$ = function (p1, p2) {
-    var tmp = p1 instanceof TypeContext ? p1 : THROW_CCE();
-    return this.invoke_a7p0jt_k$(tmp, (p2 == null ? true : isObject(p2)) ? p2 : THROW_CCE());
-  };
-  _no_name_provided__86.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
   function _no_name_provided__87() {
   }
   _no_name_provided__87.prototype.invoke_a7p0jt_k$ = function ($this$registerType, it) {
-    return $this$registerType.toChar_kajtkh_k$(it);
+    return $this$registerType.toBool_kajtkh_k$(it);
   };
   _no_name_provided__87.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = p1 instanceof TypeContext ? p1 : THROW_CCE();
@@ -27475,7 +28397,7 @@
   function _no_name_provided__88() {
   }
   _no_name_provided__88.prototype.invoke_a7p0jt_k$ = function ($this$registerType, it) {
-    return $this$registerType.toShort_kajtkh_k$(it);
+    return $this$registerType.toByte_kajtkh_k$(it);
   };
   _no_name_provided__88.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = p1 instanceof TypeContext ? p1 : THROW_CCE();
@@ -27488,7 +28410,7 @@
   function _no_name_provided__89() {
   }
   _no_name_provided__89.prototype.invoke_a7p0jt_k$ = function ($this$registerType, it) {
-    return $this$registerType.toInt_kajtkh_k$(it);
+    return $this$registerType.toChar_kajtkh_k$(it);
   };
   _no_name_provided__89.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = p1 instanceof TypeContext ? p1 : THROW_CCE();
@@ -27501,7 +28423,7 @@
   function _no_name_provided__90() {
   }
   _no_name_provided__90.prototype.invoke_a7p0jt_k$ = function ($this$registerType, it) {
-    return $this$registerType.toLong_kajtkh_k$(it);
+    return $this$registerType.toShort_kajtkh_k$(it);
   };
   _no_name_provided__90.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = p1 instanceof TypeContext ? p1 : THROW_CCE();
@@ -27514,7 +28436,7 @@
   function _no_name_provided__91() {
   }
   _no_name_provided__91.prototype.invoke_a7p0jt_k$ = function ($this$registerType, it) {
-    return $this$registerType.toFloat_kajtkh_k$(it);
+    return $this$registerType.toInt_kajtkh_k$(it);
   };
   _no_name_provided__91.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = p1 instanceof TypeContext ? p1 : THROW_CCE();
@@ -27527,7 +28449,7 @@
   function _no_name_provided__92() {
   }
   _no_name_provided__92.prototype.invoke_a7p0jt_k$ = function ($this$registerType, it) {
-    return $this$registerType.toDouble_kajtkh_k$(it);
+    return $this$registerType.toLong_kajtkh_k$(it);
   };
   _no_name_provided__92.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = p1 instanceof TypeContext ? p1 : THROW_CCE();
@@ -27540,7 +28462,7 @@
   function _no_name_provided__93() {
   }
   _no_name_provided__93.prototype.invoke_a7p0jt_k$ = function ($this$registerType, it) {
-    return toSet_0($this$registerType._get_list__kajtkh_k$(it));
+    return $this$registerType.toFloat_kajtkh_k$(it);
   };
   _no_name_provided__93.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = p1 instanceof TypeContext ? p1 : THROW_CCE();
@@ -27553,7 +28475,7 @@
   function _no_name_provided__94() {
   }
   _no_name_provided__94.prototype.invoke_a7p0jt_k$ = function ($this$registerType, it) {
-    return $this$registerType._get_list__kajtkh_k$(it);
+    return $this$registerType.toDouble_kajtkh_k$(it);
   };
   _no_name_provided__94.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = p1 instanceof TypeContext ? p1 : THROW_CCE();
@@ -27566,7 +28488,7 @@
   function _no_name_provided__95() {
   }
   _no_name_provided__95.prototype.invoke_a7p0jt_k$ = function ($this$registerType, it) {
-    return toMutableList_2($this$registerType._get_list__kajtkh_k$(it));
+    return toSet_0($this$registerType._get_list__kajtkh_k$(it));
   };
   _no_name_provided__95.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = p1 instanceof TypeContext ? p1 : THROW_CCE();
@@ -27579,15 +28501,41 @@
   function _no_name_provided__96() {
   }
   _no_name_provided__96.prototype.invoke_a7p0jt_k$ = function ($this$registerType, it) {
-    var tmp0_safe_receiver = it;
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : toString_3(tmp0_safe_receiver);
-    return tmp1_elvis_lhs == null ? 'null' : tmp1_elvis_lhs;
+    return $this$registerType._get_list__kajtkh_k$(it);
   };
   _no_name_provided__96.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = p1 instanceof TypeContext ? p1 : THROW_CCE();
     return this.invoke_a7p0jt_k$(tmp, (p2 == null ? true : isObject(p2)) ? p2 : THROW_CCE());
   };
   _no_name_provided__96.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__97() {
+  }
+  _no_name_provided__97.prototype.invoke_a7p0jt_k$ = function ($this$registerType, it) {
+    return toMutableList_2($this$registerType._get_list__kajtkh_k$(it));
+  };
+  _no_name_provided__97.prototype.invoke_osx4an_k$ = function (p1, p2) {
+    var tmp = p1 instanceof TypeContext ? p1 : THROW_CCE();
+    return this.invoke_a7p0jt_k$(tmp, (p2 == null ? true : isObject(p2)) ? p2 : THROW_CCE());
+  };
+  _no_name_provided__97.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__98() {
+  }
+  _no_name_provided__98.prototype.invoke_a7p0jt_k$ = function ($this$registerType, it) {
+    var tmp0_safe_receiver = it;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : toString_3(tmp0_safe_receiver);
+    return tmp1_elvis_lhs == null ? 'null' : tmp1_elvis_lhs;
+  };
+  _no_name_provided__98.prototype.invoke_osx4an_k$ = function (p1, p2) {
+    var tmp = p1 instanceof TypeContext ? p1 : THROW_CCE();
+    return this.invoke_a7p0jt_k$(tmp, (p2 == null ? true : isObject(p2)) ? p2 : THROW_CCE());
+  };
+  _no_name_provided__98.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -27670,73 +28618,73 @@
     interfaces: []
   };
   function _no_name_provided_$factory_63() {
-    var i = new _no_name_provided__85();
-    return function (p1, p2) {
-      return i.invoke_a7p0jt_k$(p1, p2);
-    };
-  }
-  function _no_name_provided_$factory_64() {
-    var i = new _no_name_provided__86();
-    return function (p1, p2) {
-      return i.invoke_a7p0jt_k$(p1, p2);
-    };
-  }
-  function _no_name_provided_$factory_65() {
     var i = new _no_name_provided__87();
     return function (p1, p2) {
       return i.invoke_a7p0jt_k$(p1, p2);
     };
   }
-  function _no_name_provided_$factory_66() {
+  function _no_name_provided_$factory_64() {
     var i = new _no_name_provided__88();
     return function (p1, p2) {
       return i.invoke_a7p0jt_k$(p1, p2);
     };
   }
-  function _no_name_provided_$factory_67() {
+  function _no_name_provided_$factory_65() {
     var i = new _no_name_provided__89();
     return function (p1, p2) {
       return i.invoke_a7p0jt_k$(p1, p2);
     };
   }
-  function _no_name_provided_$factory_68() {
+  function _no_name_provided_$factory_66() {
     var i = new _no_name_provided__90();
     return function (p1, p2) {
       return i.invoke_a7p0jt_k$(p1, p2);
     };
   }
-  function _no_name_provided_$factory_69() {
+  function _no_name_provided_$factory_67() {
     var i = new _no_name_provided__91();
     return function (p1, p2) {
       return i.invoke_a7p0jt_k$(p1, p2);
     };
   }
-  function _no_name_provided_$factory_70() {
+  function _no_name_provided_$factory_68() {
     var i = new _no_name_provided__92();
     return function (p1, p2) {
       return i.invoke_a7p0jt_k$(p1, p2);
     };
   }
-  function _no_name_provided_$factory_71() {
+  function _no_name_provided_$factory_69() {
     var i = new _no_name_provided__93();
     return function (p1, p2) {
       return i.invoke_a7p0jt_k$(p1, p2);
     };
   }
-  function _no_name_provided_$factory_72() {
+  function _no_name_provided_$factory_70() {
     var i = new _no_name_provided__94();
     return function (p1, p2) {
       return i.invoke_a7p0jt_k$(p1, p2);
     };
   }
-  function _no_name_provided_$factory_73() {
+  function _no_name_provided_$factory_71() {
     var i = new _no_name_provided__95();
     return function (p1, p2) {
       return i.invoke_a7p0jt_k$(p1, p2);
     };
   }
-  function _no_name_provided_$factory_74() {
+  function _no_name_provided_$factory_72() {
     var i = new _no_name_provided__96();
+    return function (p1, p2) {
+      return i.invoke_a7p0jt_k$(p1, p2);
+    };
+  }
+  function _no_name_provided_$factory_73() {
+    var i = new _no_name_provided__97();
+    return function (p1, p2) {
+      return i.invoke_a7p0jt_k$(p1, p2);
+    };
+  }
+  function _no_name_provided_$factory_74() {
+    var i = new _no_name_provided__98();
     return function (p1, p2) {
       return i.invoke_a7p0jt_k$(p1, p2);
     };
@@ -28034,28 +28982,28 @@
     interfaces: [AsyncInputOpenable, Extra]
   };
   function JailVfs(jailRoot) {
-    return (new _no_name_provided__97(jailRoot))._get_root__0_k$();
+    return (new _no_name_provided__99(jailRoot))._get_root__0_k$();
   }
-  function _no_name_provided__97($jailRoot) {
+  function _no_name_provided__99($jailRoot) {
     this._$jailRoot = $jailRoot;
     Proxy.call(this);
     this._baseJail = normalize(this._$jailRoot._get_pathInfo__i519nt_k$());
   }
-  _no_name_provided__97.prototype.toString = function () {
+  _no_name_provided__99.prototype.toString = function () {
     return '' + 'JailVfs(' + this._$jailRoot + ')';
   };
-  _no_name_provided__97.$metadata$ = {
+  _no_name_provided__99.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   var resourcesVfsDebug;
-  function _no_name_provided__98(this$0) {
-    this._this$0_21 = this$0;
+  function _no_name_provided__100(this$0) {
+    this._this$0_22 = this$0;
   }
-  _no_name_provided__98.prototype.invoke_0_k$ = function () {
-    return this._this$0_21._timeProvider;
+  _no_name_provided__100.prototype.invoke_0_k$ = function () {
+    return this._this$0_22._timeProvider;
   };
-  _no_name_provided__98.$metadata$ = {
+  _no_name_provided__100.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -28102,7 +29050,7 @@
     interfaces: []
   };
   function _no_name_provided_$factory_75(this$0) {
-    var i = new _no_name_provided__98(this$0);
+    var i = new _no_name_provided__100(this$0);
     return function () {
       return i.invoke_0_k$();
     };
@@ -28155,7 +29103,7 @@
     return Node_init_$Init$($outer, name, isDirectory_0, parent, $mask0, $marker, Object.create(Node_0.prototype));
   }
   function Node_0($outer, name, isDirectory_0, parent) {
-    this._$this_8 = $outer;
+    this._$this_10 = $outer;
     this._name_2 = name;
     this._isDirectory = isDirectory_0;
     var tmp = this;
@@ -28238,7 +29186,7 @@
         tmp = this._parent_0;
         break;
       default:var tmp_0;
-        if (this._$this_8._caseSensitive) {
+        if (this._$this_10._caseSensitive) {
           tmp_0 = this._children.get_2bw_k$(name);
         } else {
           var tmp$ret$1;
@@ -28260,7 +29208,7 @@
     return tmp;
   };
   Node_0.prototype.createChild_2f0f39_k$ = function (name, isDirectory_0) {
-    return new Node_0(this._$this_8, name, isDirectory_0, this);
+    return new Node_0(this._$this_10, name, isDirectory_0, this);
   };
   Node_0.prototype.access_2f0f39_k$ = function (path_0, createFolders) {
     var tmp;
@@ -28369,34 +29317,10 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__99() {
-  }
-  _no_name_provided__99.prototype.invoke_lysikz_k$ = function (it) {
-    return UrlVfs$default(it, null, false, 6, null);
-  };
-  _no_name_provided__99.prototype.invoke_20e8_k$ = function (p1) {
-    return this.invoke_lysikz_k$(p1 instanceof URL_0 ? p1 : THROW_CCE());
-  };
-  _no_name_provided__99.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__100() {
-  }
-  _no_name_provided__100.prototype.invoke_lysikz_k$ = function (it) {
-    return UrlVfs$default(it, null, false, 6, null);
-  };
-  _no_name_provided__100.prototype.invoke_20e8_k$ = function (p1) {
-    return this.invoke_lysikz_k$(p1 instanceof URL_0 ? p1 : THROW_CCE());
-  };
-  _no_name_provided__100.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
   function _no_name_provided__101() {
   }
   _no_name_provided__101.prototype.invoke_lysikz_k$ = function (it) {
-    return _get_rootLocalVfs_().get_6wfw3l_k$(it._path_0);
+    return UrlVfs$default(it, null, false, 6, null);
   };
   _no_name_provided__101.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_lysikz_k$(p1 instanceof URL_0 ? p1 : THROW_CCE());
@@ -28405,20 +29329,44 @@
     kind: 'class',
     interfaces: []
   };
+  function _no_name_provided__102() {
+  }
+  _no_name_provided__102.prototype.invoke_lysikz_k$ = function (it) {
+    return UrlVfs$default(it, null, false, 6, null);
+  };
+  _no_name_provided__102.prototype.invoke_20e8_k$ = function (p1) {
+    return this.invoke_lysikz_k$(p1 instanceof URL_0 ? p1 : THROW_CCE());
+  };
+  _no_name_provided__102.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__103() {
+  }
+  _no_name_provided__103.prototype.invoke_lysikz_k$ = function (it) {
+    return _get_rootLocalVfs_().get_6wfw3l_k$(it._path_0);
+  };
+  _no_name_provided__103.prototype.invoke_20e8_k$ = function (p1) {
+    return this.invoke_lysikz_k$(p1 instanceof URL_0 ? p1 : THROW_CCE());
+  };
+  _no_name_provided__103.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
   function _no_name_provided_$factory_76() {
-    var i = new _no_name_provided__99();
+    var i = new _no_name_provided__101();
     return function (p1) {
       return i.invoke_lysikz_k$(p1);
     };
   }
   function _no_name_provided_$factory_77() {
-    var i = new _no_name_provided__100();
+    var i = new _no_name_provided__102();
     return function (p1) {
       return i.invoke_lysikz_k$(p1);
     };
   }
   function _no_name_provided_$factory_78() {
-    var i = new _no_name_provided__101();
+    var i = new _no_name_provided__103();
     return function (p1) {
       return i.invoke_lysikz_k$(p1);
     };
@@ -28475,31 +29423,10 @@
     return tmp$ret$0;
   }
   var smallBytesPool$delegate;
-  function _no_name_provided__102() {
-  }
-  _no_name_provided__102.prototype.invoke_ha5a7z_k$ = function (it) {
-    return new Int8Array(65536);
-  };
-  _no_name_provided__102.prototype.invoke_20e8_k$ = function (p1) {
-    return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
-  };
-  _no_name_provided__102.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__103() {
-  }
-  _no_name_provided__103.prototype.invoke_0_k$ = function () {
-    return Pool_init_$Create$_0(1, _no_name_provided_$factory_81());
-  };
-  _no_name_provided__103.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
   function _no_name_provided__104() {
   }
   _no_name_provided__104.prototype.invoke_ha5a7z_k$ = function (it) {
-    return new Int8Array(16);
+    return new Int8Array(65536);
   };
   _no_name_provided__104.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
@@ -28511,9 +29438,30 @@
   function _no_name_provided__105() {
   }
   _no_name_provided__105.prototype.invoke_0_k$ = function () {
-    return Pool_init_$Create$_0(16, _no_name_provided_$factory_82());
+    return Pool_init_$Create$_0(1, _no_name_provided_$factory_81());
   };
   _no_name_provided__105.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__106() {
+  }
+  _no_name_provided__106.prototype.invoke_ha5a7z_k$ = function (it) {
+    return new Int8Array(16);
+  };
+  _no_name_provided__106.prototype.invoke_20e8_k$ = function (p1) {
+    return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
+  };
+  _no_name_provided__106.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__107() {
+  }
+  _no_name_provided__107.prototype.invoke_0_k$ = function () {
+    return Pool_init_$Create$_0(16, _no_name_provided_$factory_82());
+  };
+  _no_name_provided__107.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -28523,25 +29471,25 @@
     }, null);
   }
   function _no_name_provided_$factory_79() {
-    var i = new _no_name_provided__103();
-    return function () {
-      return i.invoke_0_k$();
-    };
-  }
-  function _no_name_provided_$factory_80() {
     var i = new _no_name_provided__105();
     return function () {
       return i.invoke_0_k$();
     };
   }
+  function _no_name_provided_$factory_80() {
+    var i = new _no_name_provided__107();
+    return function () {
+      return i.invoke_0_k$();
+    };
+  }
   function _no_name_provided_$factory_81() {
-    var i = new _no_name_provided__102();
+    var i = new _no_name_provided__104();
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
   }
   function _no_name_provided_$factory_82() {
-    var i = new _no_name_provided__104();
+    var i = new _no_name_provided__106();
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
@@ -29140,36 +30088,36 @@
     }
     return tmp$ret$0;
   }
-  function _no_name_provided__106() {
+  function _no_name_provided__108() {
   }
-  _no_name_provided__106.prototype.invoke_0_k$ = function () {
+  _no_name_provided__108.prototype.invoke_0_k$ = function () {
     return Regex_init_$Create$_0('[^ -~]');
   };
-  _no_name_provided__106.$metadata$ = {
+  _no_name_provided__108.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_83() {
-    var i = new _no_name_provided__106();
+    var i = new _no_name_provided__108();
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided__107(this$0) {
-    this._this$0_22 = this$0;
+  function _no_name_provided__109(this$0) {
+    this._this$0_23 = this$0;
     NativeThreadLocal.call(this);
   }
-  _no_name_provided__107.prototype.initialValue_0_k$ = function () {
-    return this._this$0_22._gen_0();
+  _no_name_provided__109.prototype.initialValue_0_k$ = function () {
+    return this._this$0_23._gen_0();
   };
-  _no_name_provided__107.$metadata$ = {
+  _no_name_provided__109.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function threadLocal(gen) {
     this._gen_0 = gen;
     var tmp = this;
-    tmp._local = new _no_name_provided__107(this);
+    tmp._local = new _no_name_provided__109(this);
   }
   threadLocal.$metadata$ = {
     simpleName: 'threadLocal',
@@ -29184,17 +30132,17 @@
     interfaces: []
   };
   var MimeType_byExtensions$delegate;
-  function _no_name_provided__108() {
+  function _no_name_provided__110() {
   }
-  _no_name_provided__108.prototype.invoke_0_k$ = function () {
+  _no_name_provided__110.prototype.invoke_0_k$ = function () {
     return LinkedHashMap_init_$Create$();
   };
-  _no_name_provided__108.$metadata$ = {
+  _no_name_provided__110.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_84() {
-    var i = new _no_name_provided__108();
+    var i = new _no_name_provided__110();
     return function () {
       return i.invoke_0_k$();
     };
@@ -29423,39 +30371,39 @@
       new Companion_35();
     return Companion_instance_34;
   }
-  function _no_name_provided__109(this$0) {
-    this._this$0_23 = this$0;
-  }
-  _no_name_provided__109.prototype.invoke_0_k$ = function () {
-    return this._this$0_23.toUrlString$default_29kf1o_k$(false, null, 3, null).toString();
-  };
-  _no_name_provided__109.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__110(this$0) {
+  function _no_name_provided__111(this$0) {
     this._this$0_24 = this$0;
   }
-  _no_name_provided__110.prototype.invoke_0_k$ = function () {
-    return this._this$0_24.toUrlString$default_29kf1o_k$(false, null, 2, null).toString();
+  _no_name_provided__111.prototype.invoke_0_k$ = function () {
+    return this._this$0_24.toUrlString$default_29kf1o_k$(false, null, 3, null).toString();
   };
-  _no_name_provided__110.$metadata$ = {
+  _no_name_provided__111.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__111(this$0) {
+  function _no_name_provided__112(this$0) {
     this._this$0_25 = this$0;
   }
-  _no_name_provided__111.prototype.invoke_0_k$ = function () {
+  _no_name_provided__112.prototype.invoke_0_k$ = function () {
+    return this._this$0_25.toUrlString$default_29kf1o_k$(false, null, 2, null).toString();
+  };
+  _no_name_provided__112.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__113(this$0) {
+    this._this$0_26 = this$0;
+  }
+  _no_name_provided__113.prototype.invoke_0_k$ = function () {
     var tmp;
-    if (!(this._this$0_25._query == null)) {
-      tmp = '' + this._this$0_25._path_0 + '?' + this._this$0_25._query;
+    if (!(this._this$0_26._query == null)) {
+      tmp = '' + this._this$0_26._path_0 + '?' + this._this$0_26._query;
     } else {
-      tmp = this._this$0_25._path_0;
+      tmp = this._this$0_26._path_0;
     }
     return tmp;
   };
-  _no_name_provided__111.$metadata$ = {
+  _no_name_provided__113.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -29597,19 +30545,19 @@
     }, null);
   }
   function _no_name_provided_$factory_85(this$0) {
-    var i = new _no_name_provided__109(this$0);
+    var i = new _no_name_provided__111(this$0);
     return function () {
       return i.invoke_0_k$();
     };
   }
   function _no_name_provided_$factory_86(this$0) {
-    var i = new _no_name_provided__110(this$0);
+    var i = new _no_name_provided__112(this$0);
     return function () {
       return i.invoke_0_k$();
     };
   }
   function _no_name_provided_$factory_87(this$0) {
-    var i = new _no_name_provided__111(this$0);
+    var i = new _no_name_provided__113(this$0);
     return function () {
       return i.invoke_0_k$();
     };
@@ -29677,12 +30625,12 @@
   function _get_defaultHttpFactory_() {
     return _get__defaultHttpFactory_();
   }
-  function _no_name_provided__112() {
+  function _no_name_provided__114() {
   }
-  _no_name_provided__112.prototype.invoke_0_k$ = function () {
+  _no_name_provided__114.prototype.invoke_0_k$ = function () {
     return new ProxiedHttpFactory(_get_httpFactory_());
   };
-  _no_name_provided__112.$metadata$ = {
+  _no_name_provided__114.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -29692,7 +30640,7 @@
     }, null);
   }
   function _no_name_provided_$factory_88() {
-    var i = new _no_name_provided__112();
+    var i = new _no_name_provided__114();
     return function () {
       return i.invoke_0_k$();
     };
@@ -29714,7 +30662,7 @@
   };
   function $writeCOROUTINE$134(_this_, byte, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__10 = _this_;
+    this.__this__11 = _this_;
     this._byte = byte;
   }
   $writeCOROUTINE$134.prototype.doResume_0_k$ = function () {
@@ -29740,7 +30688,7 @@
             this._exceptionState = 8;
             this._temp_12[0] = toByte(this._byte);
             this._state_0 = 4;
-            suspendResult = this.__this__10.write_ysdrhq_k$(this._temp_12, 0, 1, this);
+            suspendResult = this.__this__11.write_ysdrhq_k$(this._temp_12, 0, 1, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -29880,10 +30828,10 @@
     return tmp.doResume_0_k$();
   }
   function toAsyncInputStream(_this_) {
-    return new _no_name_provided__113(_this_);
+    return new _no_name_provided__115(_this_);
   }
   function toAsyncOutputStream(_this_) {
-    return new _no_name_provided__114(_this_);
+    return new _no_name_provided__116(_this_);
   }
   function write32BE_0(_this_, v, $cont) {
     var tmp = new $write32BECOROUTINE$153(_this_, v, $cont);
@@ -29893,7 +30841,7 @@
   }
   function $getPositionCOROUTINE$154(_this_, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__11 = _this_;
+    this.__this__12 = _this_;
   }
   $getPositionCOROUTINE$154.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
@@ -29904,12 +30852,12 @@
           case 0:
             this._exceptionState = 3;
             var tmp_0 = this;
-            var tmp_1 = this.__this__11._sync;
+            var tmp_1 = this.__this__12._sync;
             var tmp0_safe_receiver = isInterface(tmp_1, SyncPositionStream) ? tmp_1 : null;
             tmp_0._tmp1_elvis_lhs0 = tmp0_safe_receiver == null ? null : tmp0_safe_receiver._get_position__0_k$();
             if (this._tmp1_elvis_lhs0 == null) {
               this._state_0 = 1;
-              suspendResult = AsyncGetPositionStream.prototype.getPosition_0_k$.call(this.__this__11, this);
+              suspendResult = AsyncGetPositionStream.prototype.getPosition_0_k$.call(this.__this__12, this);
               if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
                 return suspendResult;
               }continue $sm;
@@ -29946,7 +30894,7 @@
   };
   function $getLengthCOROUTINE$155(_this_, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__12 = _this_;
+    this.__this__13 = _this_;
   }
   $getLengthCOROUTINE$155.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
@@ -29957,12 +30905,12 @@
           case 0:
             this._exceptionState = 3;
             var tmp_0 = this;
-            var tmp_1 = this.__this__12._sync;
+            var tmp_1 = this.__this__13._sync;
             var tmp0_safe_receiver = isInterface(tmp_1, SyncLengthStream) ? tmp_1 : null;
             tmp_0._tmp1_elvis_lhs0_0 = tmp0_safe_receiver == null ? null : tmp0_safe_receiver._get_length__0_k$();
             if (this._tmp1_elvis_lhs0_0 == null) {
               this._state_0 = 1;
-              suspendResult = AsyncGetLengthStream.prototype.getLength_0_k$.call(this.__this__12, this);
+              suspendResult = AsyncGetLengthStream.prototype.getLength_0_k$.call(this.__this__13, this);
               if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
                 return suspendResult;
               }continue $sm;
@@ -29997,42 +30945,42 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__113($this_toAsyncInputStream) {
+  function _no_name_provided__115($this_toAsyncInputStream) {
     this._$this_toAsyncInputStream = $this_toAsyncInputStream;
     this._sync = this._$this_toAsyncInputStream;
   }
-  _no_name_provided__113.prototype.read_irqg4d_k$ = function (buffer, offset_0, len, $cont) {
+  _no_name_provided__115.prototype.read_irqg4d_k$ = function (buffer, offset_0, len, $cont) {
     return this._sync.read_irqg4d_k$(buffer, offset_0, len);
   };
-  _no_name_provided__113.prototype.getPosition_0_k$ = function ($cont) {
+  _no_name_provided__115.prototype.getPosition_0_k$ = function ($cont) {
     var tmp = new $getPositionCOROUTINE$154(this, $cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   };
-  _no_name_provided__113.prototype.getLength_0_k$ = function ($cont) {
+  _no_name_provided__115.prototype.getLength_0_k$ = function ($cont) {
     var tmp = new $getLengthCOROUTINE$155(this, $cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   };
-  _no_name_provided__113.$metadata$ = {
+  _no_name_provided__115.$metadata$ = {
     kind: 'class',
     interfaces: [AsyncInputStreamWithLength]
   };
-  function _no_name_provided__114($this_toAsyncOutputStream) {
+  function _no_name_provided__116($this_toAsyncOutputStream) {
     this._$this_toAsyncOutputStream = $this_toAsyncOutputStream;
   }
-  _no_name_provided__114.prototype.write_ysdrhq_k$ = function (buffer, offset_0, len, $cont) {
+  _no_name_provided__116.prototype.write_ysdrhq_k$ = function (buffer, offset_0, len, $cont) {
     return this._$this_toAsyncOutputStream.write_ysdrhq_k$(buffer, offset_0, len);
   };
-  _no_name_provided__114.$metadata$ = {
+  _no_name_provided__116.$metadata$ = {
     kind: 'class',
     interfaces: [AsyncOutputStream]
   };
   function $readBytesExactCOROUTINE$137(_this_, len, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__13 = _this_;
+    this.__this__14 = _this_;
     this._len_2 = len;
   }
   $readBytesExactCOROUTINE$137.prototype.doResume_0_k$ = function () {
@@ -30046,7 +30994,7 @@
             var tmp_0 = this;
             tmp_0._tmp0_apply_00 = new Int8Array(this._len_2);
             this._state_0 = 1;
-            suspendResult = readExact(this.__this__13, this._tmp0_apply_00, 0, this._len_2, this);
+            suspendResult = readExact(this.__this__14, this._tmp0_apply_00, 0, this._len_2, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -30073,7 +31021,7 @@
   };
   function $readExactCOROUTINE$141(_this_, buffer, offset_0, len, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__14 = _this_;
+    this.__this__15 = _this_;
     this._buffer_5 = buffer;
     this._offset_3 = offset_0;
     this._len_3 = len;
@@ -30088,7 +31036,7 @@
             this._exceptionState = 5;
             this._remaining0 = this._len_3;
             this._coffset1 = this._offset_3;
-            this._reader2 = this.__this__14;
+            this._reader2 = this.__this__15;
             this._state_0 = 1;
             continue $sm;
           case 1:
@@ -30142,7 +31090,7 @@
   };
   function $getAvailableCOROUTINE$150(_this_, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__15 = _this_;
+    this.__this__16 = _this_;
   }
   $getAvailableCOROUTINE$150.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
@@ -30153,7 +31101,7 @@
           case 0:
             this._exceptionState = 3;
             this._state_0 = 1;
-            suspendResult = this.__this__15.getLength_0_k$(this);
+            suspendResult = this.__this__16.getLength_0_k$(this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -30161,7 +31109,7 @@
           case 1:
             this._ARGUMENT0 = suspendResult;
             this._state_0 = 2;
-            suspendResult = this.__this__15.getPosition_0_k$(this);
+            suspendResult = this.__this__16.getPosition_0_k$(this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -30189,7 +31137,7 @@
   };
   function $write16LECOROUTINE$151(_this_, v, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__16 = _this_;
+    this.__this__17 = _this_;
     this._v_0 = v;
   }
   $write16LECOROUTINE$151.prototype.doResume_0_k$ = function () {
@@ -30215,7 +31163,7 @@
             this._exceptionState = 8;
             write16LE(this._temp_12_0, 0, this._v_0);
             this._state_0 = 4;
-            suspendResult = this.__this__16.write_ysdrhq_k$(this._temp_12_0, 0, 2, this);
+            suspendResult = this.__this__17.write_ysdrhq_k$(this._temp_12_0, 0, 2, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -30266,7 +31214,7 @@
   };
   function $hasAvailableCOROUTINE$152(_this_, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__17 = _this_;
+    this.__this__18 = _this_;
   }
   $hasAvailableCOROUTINE$152.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
@@ -30277,7 +31225,7 @@
           case 0:
             this._exceptionState = 2;
             this._state_0 = 1;
-            suspendResult = getAvailable(this.__this__17, this);
+            suspendResult = getAvailable(this.__this__18, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -30305,7 +31253,7 @@
   };
   function $write32BECOROUTINE$153(_this_, v, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__18 = _this_;
+    this.__this__19 = _this_;
     this._v_1 = v;
   }
   $write32BECOROUTINE$153.prototype.doResume_0_k$ = function () {
@@ -30331,7 +31279,7 @@
             this._exceptionState = 8;
             write32BE(this._temp_12_1, 0, this._v_1);
             this._state_0 = 4;
-            suspendResult = this.__this__18.write_ysdrhq_k$(this._temp_12_1, 0, 4, this);
+            suspendResult = this.__this__19.write_ysdrhq_k$(this._temp_12_1, 0, 4, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -31172,17 +32120,17 @@
     }
   }
   var traceTimes$delegate;
-  function _no_name_provided__115() {
+  function _no_name_provided__117() {
   }
-  _no_name_provided__115.prototype.invoke_0_k$ = function () {
+  _no_name_provided__117.prototype.invoke_0_k$ = function () {
     return Environment_getInstance().get_6wfw3l_k$('TRACE_TIMES') === 'true';
   };
-  _no_name_provided__115.$metadata$ = {
+  _no_name_provided__117.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_89() {
-    var i = new _no_name_provided__115();
+    var i = new _no_name_provided__117();
     return function () {
       return i.invoke_0_k$();
     };
@@ -31372,9 +32320,9 @@
     }
     return toString_1(tmp$ret$0, radix);
   }
-  function _no_name_provided__116() {
+  function _no_name_provided__118() {
   }
-  _no_name_provided__116.prototype.invoke_0_k$ = function () {
+  _no_name_provided__118.prototype.invoke_0_k$ = function () {
     var tmp$ret$1;
     $l$block_0: {
       var tmp0_toLowerCase_0 = OS_getInstance()._get_rawName__0_k$();
@@ -31388,13 +32336,13 @@
     }
     return tmp$ret$1;
   };
-  _no_name_provided__116.$metadata$ = {
+  _no_name_provided__118.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__117() {
+  function _no_name_provided__119() {
   }
-  _no_name_provided__117.prototype.invoke_0_k$ = function () {
+  _no_name_provided__119.prototype.invoke_0_k$ = function () {
     var tmp$ret$1;
     $l$block_0: {
       var tmp0_toLowerCase_0 = OS_getInstance()._get_platformName__0_k$();
@@ -31408,23 +32356,23 @@
     }
     return tmp$ret$1;
   };
-  _no_name_provided__117.$metadata$ = {
+  _no_name_provided__119.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__118() {
+  function _no_name_provided__120() {
   }
-  _no_name_provided__118.prototype.invoke_0_k$ = function () {
+  _no_name_provided__120.prototype.invoke_0_k$ = function () {
     var tmp = OS_getInstance()._get_rawNameLC__0_k$();
     return contains$default_0(tmp, 'win', false, 2, null);
   };
-  _no_name_provided__118.$metadata$ = {
+  _no_name_provided__120.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__119() {
+  function _no_name_provided__121() {
   }
-  _no_name_provided__119.prototype.invoke_0_k$ = function () {
+  _no_name_provided__121.prototype.invoke_0_k$ = function () {
     var tmp;
     var tmp_0;
     var tmp_1 = OS_getInstance()._get_rawNameLC__0_k$();
@@ -31446,26 +32394,6 @@
     }
     return tmp;
   };
-  _no_name_provided__119.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__120() {
-  }
-  _no_name_provided__120.prototype.invoke_0_k$ = function () {
-    var tmp = OS_getInstance()._get_rawNameLC__0_k$();
-    return contains$default_0(tmp, 'mac', false, 2, null);
-  };
-  _no_name_provided__120.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__121() {
-  }
-  _no_name_provided__121.prototype.invoke_0_k$ = function () {
-    var tmp = OS_getInstance()._get_rawNameLC__0_k$();
-    return contains$default_0(tmp, 'ios', false, 2, null);
-  };
   _no_name_provided__121.$metadata$ = {
     kind: 'class',
     interfaces: []
@@ -31473,8 +32401,8 @@
   function _no_name_provided__122() {
   }
   _no_name_provided__122.prototype.invoke_0_k$ = function () {
-    var tmp = OS_getInstance()._get_platformNameLC__0_k$();
-    return contains$default_0(tmp, 'android', false, 2, null);
+    var tmp = OS_getInstance()._get_rawNameLC__0_k$();
+    return contains$default_0(tmp, 'mac', false, 2, null);
   };
   _no_name_provided__122.$metadata$ = {
     kind: 'class',
@@ -31484,7 +32412,7 @@
   }
   _no_name_provided__123.prototype.invoke_0_k$ = function () {
     var tmp = OS_getInstance()._get_rawNameLC__0_k$();
-    return contains$default_0(tmp, 'watchos', false, 2, null);
+    return contains$default_0(tmp, 'ios', false, 2, null);
   };
   _no_name_provided__123.$metadata$ = {
     kind: 'class',
@@ -31493,10 +32421,30 @@
   function _no_name_provided__124() {
   }
   _no_name_provided__124.prototype.invoke_0_k$ = function () {
+    var tmp = OS_getInstance()._get_platformNameLC__0_k$();
+    return contains$default_0(tmp, 'android', false, 2, null);
+  };
+  _no_name_provided__124.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__125() {
+  }
+  _no_name_provided__125.prototype.invoke_0_k$ = function () {
+    var tmp = OS_getInstance()._get_rawNameLC__0_k$();
+    return contains$default_0(tmp, 'watchos', false, 2, null);
+  };
+  _no_name_provided__125.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__126() {
+  }
+  _no_name_provided__126.prototype.invoke_0_k$ = function () {
     var tmp = OS_getInstance()._get_rawNameLC__0_k$();
     return contains$default_0(tmp, 'tvos', false, 2, null);
   };
-  _no_name_provided__124.$metadata$ = {
+  _no_name_provided__126.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -31570,55 +32518,55 @@
     }, null);
   }
   function _no_name_provided_$factory_90() {
-    var i = new _no_name_provided__116();
-    return function () {
-      return i.invoke_0_k$();
-    };
-  }
-  function _no_name_provided_$factory_91() {
-    var i = new _no_name_provided__117();
-    return function () {
-      return i.invoke_0_k$();
-    };
-  }
-  function _no_name_provided_$factory_92() {
     var i = new _no_name_provided__118();
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_93() {
+  function _no_name_provided_$factory_91() {
     var i = new _no_name_provided__119();
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_94() {
+  function _no_name_provided_$factory_92() {
     var i = new _no_name_provided__120();
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_95() {
+  function _no_name_provided_$factory_93() {
     var i = new _no_name_provided__121();
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_96() {
+  function _no_name_provided_$factory_94() {
     var i = new _no_name_provided__122();
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_97() {
+  function _no_name_provided_$factory_95() {
     var i = new _no_name_provided__123();
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_98() {
+  function _no_name_provided_$factory_96() {
     var i = new _no_name_provided__124();
+    return function () {
+      return i.invoke_0_k$();
+    };
+  }
+  function _no_name_provided_$factory_97() {
+    var i = new _no_name_provided__125();
+    return function () {
+      return i.invoke_0_k$();
+    };
+  }
+  function _no_name_provided_$factory_98() {
+    var i = new _no_name_provided__126();
     return function () {
       return i.invoke_0_k$();
     };
@@ -31880,9 +32828,9 @@
     interfaces: []
   };
   var Language_CURRENT$delegate;
-  function _no_name_provided__125() {
+  function _no_name_provided__127() {
   }
-  _no_name_provided__125.prototype.invoke_0_k$ = function () {
+  _no_name_provided__127.prototype.invoke_0_k$ = function () {
     var tmp$ret$3;
     $l$block_2: {
       var tmp0_mapNotNull_0 = _get_systemLanguageStrings_();
@@ -31927,17 +32875,17 @@
     }
     return tmp$ret$3;
   };
-  _no_name_provided__125.$metadata$ = {
+  _no_name_provided__127.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__126() {
+  function _no_name_provided__128() {
   }
-  _no_name_provided__126.prototype.invoke_0_k$ = function () {
+  _no_name_provided__128.prototype.invoke_0_k$ = function () {
     var tmp0_elvis_lhs = firstOrNull(Companion_getInstance_37()._get_SYSTEM_LANGS__0_k$());
     return tmp0_elvis_lhs == null ? Language_ENGLISH_getInstance() : tmp0_elvis_lhs;
   };
-  _no_name_provided__126.$metadata$ = {
+  _no_name_provided__128.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -32112,12 +33060,12 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__127() {
+  function _no_name_provided__129() {
   }
-  _no_name_provided__127.prototype.invoke_0_k$ = function () {
+  _no_name_provided__129.prototype.invoke_0_k$ = function () {
     return KorAtomicRef_0(Companion_getInstance_37()._get_SYSTEM__0_k$());
   };
-  _no_name_provided__127.$metadata$ = {
+  _no_name_provided__129.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -32176,19 +33124,19 @@
     }, null);
   }
   function _no_name_provided_$factory_99() {
-    var i = new _no_name_provided__127();
+    var i = new _no_name_provided__129();
     return function () {
       return i.invoke_0_k$();
     };
   }
   function _no_name_provided_$factory_100() {
-    var i = new _no_name_provided__125();
+    var i = new _no_name_provided__127();
     return function () {
       return i.invoke_0_k$();
     };
   }
   function _no_name_provided_$factory_101() {
-    var i = new _no_name_provided__126();
+    var i = new _no_name_provided__128();
     return function () {
       return i.invoke_0_k$();
     };
@@ -32203,18 +33151,18 @@
     return tmp$ret$0;
   }
   var jsLocalStorageVfs$delegate;
-  function _no_name_provided__128() {
+  function _no_name_provided__130() {
   }
-  _no_name_provided__128.$metadata$ = {
+  _no_name_provided__130.$metadata$ = {
     kind: 'class',
     interfaces: [SimpleStorage]
   };
-  function _no_name_provided__129() {
+  function _no_name_provided__131() {
   }
-  _no_name_provided__129.prototype.invoke_0_k$ = function () {
-    return new MapLikeStorageVfs(new _no_name_provided__128());
+  _no_name_provided__131.prototype.invoke_0_k$ = function () {
+    return new MapLikeStorageVfs(new _no_name_provided__130());
   };
-  _no_name_provided__129.$metadata$ = {
+  _no_name_provided__131.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -32224,7 +33172,7 @@
     }, null);
   }
   function _no_name_provided_$factory_102() {
-    var i = new _no_name_provided__129();
+    var i = new _no_name_provided__131();
     return function () {
       return i.invoke_0_k$();
     };
@@ -32305,9 +33253,9 @@
   function jsObjectKeys$outlinedJsCode$(obj) {
     return Object.keys(obj);
   }
-  function _no_name_provided__130() {
+  function _no_name_provided__132() {
   }
-  _no_name_provided__130.prototype.invoke_0_k$ = function () {
+  _no_name_provided__132.prototype.invoke_0_k$ = function () {
     var tmp0_safe_receiver = document.location;
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.href;
     var href = tmp1_elvis_lhs == null ? '.' : tmp1_elvis_lhs;
@@ -32322,36 +33270,6 @@
     }
     return tmp;
   };
-  _no_name_provided__130.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__131() {
-  }
-  _no_name_provided__131.prototype.invoke_0_k$ = function () {
-    var tmp$ret$0;
-    $l$block: {
-      var tmp0_unsafeCast_0 = typeof window === 'object';
-      tmp$ret$0 = tmp0_unsafeCast_0;
-      break $l$block;
-    }
-    return tmp$ret$0;
-  };
-  _no_name_provided__131.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__132() {
-  }
-  _no_name_provided__132.prototype.invoke_0_k$ = function () {
-    var tmp$ret$0;
-    $l$block: {
-      var tmp0_unsafeCast_0 = typeof importScripts === 'function';
-      tmp$ret$0 = tmp0_unsafeCast_0;
-      break $l$block;
-    }
-    return tmp$ret$0;
-  };
   _no_name_provided__132.$metadata$ = {
     kind: 'class',
     interfaces: []
@@ -32361,13 +33279,43 @@
   _no_name_provided__133.prototype.invoke_0_k$ = function () {
     var tmp$ret$0;
     $l$block: {
-      var tmp0_unsafeCast_0 = typeof process !== 'undefined' && process.release && process.release.name.search(/node|io.js/) !== -1;
+      var tmp0_unsafeCast_0 = typeof window === 'object';
       tmp$ret$0 = tmp0_unsafeCast_0;
       break $l$block;
     }
     return tmp$ret$0;
   };
   _no_name_provided__133.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__134() {
+  }
+  _no_name_provided__134.prototype.invoke_0_k$ = function () {
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_unsafeCast_0 = typeof importScripts === 'function';
+      tmp$ret$0 = tmp0_unsafeCast_0;
+      break $l$block;
+    }
+    return tmp$ret$0;
+  };
+  _no_name_provided__134.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__135() {
+  }
+  _no_name_provided__135.prototype.invoke_0_k$ = function () {
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_unsafeCast_0 = typeof process !== 'undefined' && process.release && process.release.name.search(/node|io.js/) !== -1;
+      tmp$ret$0 = tmp0_unsafeCast_0;
+      break $l$block;
+    }
+    return tmp$ret$0;
+  };
+  _no_name_provided__135.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -32392,25 +33340,25 @@
     }, null);
   }
   function _no_name_provided_$factory_103() {
-    var i = new _no_name_provided__130();
-    return function () {
-      return i.invoke_0_k$();
-    };
-  }
-  function _no_name_provided_$factory_104() {
-    var i = new _no_name_provided__131();
-    return function () {
-      return i.invoke_0_k$();
-    };
-  }
-  function _no_name_provided_$factory_105() {
     var i = new _no_name_provided__132();
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_106() {
+  function _no_name_provided_$factory_104() {
     var i = new _no_name_provided__133();
+    return function () {
+      return i.invoke_0_k$();
+    };
+  }
+  function _no_name_provided_$factory_105() {
+    var i = new _no_name_provided__134();
+    return function () {
+      return i.invoke_0_k$();
+    };
+  }
+  function _no_name_provided_$factory_106() {
+    var i = new _no_name_provided__135();
     return function () {
       return i.invoke_0_k$();
     };
@@ -32498,28 +33446,10 @@
     }
     return tmp;
   }
-  function _no_name_provided__134() {
-  }
-  _no_name_provided__134.prototype.invoke_0_k$ = function () {
-    return '/tmp';
-  };
-  _no_name_provided__134.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__135() {
-  }
-  _no_name_provided__135.prototype.invoke_0_k$ = function () {
-    return '.';
-  };
-  _no_name_provided__135.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
   function _no_name_provided__136() {
   }
   _no_name_provided__136.prototype.invoke_0_k$ = function () {
-    return _get_applicationVfs_().jail_0_k$();
+    return '/tmp';
   };
   _no_name_provided__136.$metadata$ = {
     kind: 'class',
@@ -32528,7 +33458,7 @@
   function _no_name_provided__137() {
   }
   _no_name_provided__137.prototype.invoke_0_k$ = function () {
-    return localVfs(_get_absoluteCwd_());
+    return '.';
   };
   _no_name_provided__137.$metadata$ = {
     kind: 'class',
@@ -32537,7 +33467,7 @@
   function _no_name_provided__138() {
   }
   _no_name_provided__138.prototype.invoke_0_k$ = function () {
-    return localVfs(_get_absoluteCwd_());
+    return _get_applicationVfs_().jail_0_k$();
   };
   _no_name_provided__138.$metadata$ = {
     kind: 'class',
@@ -32546,7 +33476,7 @@
   function _no_name_provided__139() {
   }
   _no_name_provided__139.prototype.invoke_0_k$ = function () {
-    return _get_jsLocalStorageVfs_()._get_root__0_k$();
+    return localVfs(_get_absoluteCwd_());
   };
   _no_name_provided__139.$metadata$ = {
     kind: 'class',
@@ -32555,7 +33485,7 @@
   function _no_name_provided__140() {
   }
   _no_name_provided__140.prototype.invoke_0_k$ = function () {
-    return MemoryVfs$default(null, false, 3, null);
+    return localVfs(_get_absoluteCwd_());
   };
   _no_name_provided__140.$metadata$ = {
     kind: 'class',
@@ -32564,7 +33494,7 @@
   function _no_name_provided__141() {
   }
   _no_name_provided__141.prototype.invoke_0_k$ = function () {
-    return localVfs(_get_absoluteCwd_());
+    return _get_jsLocalStorageVfs_()._get_root__0_k$();
   };
   _no_name_provided__141.$metadata$ = {
     kind: 'class',
@@ -32573,7 +33503,7 @@
   function _no_name_provided__142() {
   }
   _no_name_provided__142.prototype.invoke_0_k$ = function () {
-    return localVfs(_get_absoluteCwd_());
+    return MemoryVfs$default(null, false, 3, null);
   };
   _no_name_provided__142.$metadata$ = {
     kind: 'class',
@@ -32582,6 +33512,24 @@
   function _no_name_provided__143() {
   }
   _no_name_provided__143.prototype.invoke_0_k$ = function () {
+    return localVfs(_get_absoluteCwd_());
+  };
+  _no_name_provided__143.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__144() {
+  }
+  _no_name_provided__144.prototype.invoke_0_k$ = function () {
+    return localVfs(_get_absoluteCwd_());
+  };
+  _no_name_provided__144.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__145() {
+  }
+  _no_name_provided__145.prototype.invoke_0_k$ = function () {
     var tmp;
     if (_get_isNodeJs_()) {
       tmp = localVfs(_get_tmpdir_());
@@ -32590,7 +33538,7 @@
     }
     return tmp;
   };
-  _no_name_provided__143.$metadata$ = {
+  _no_name_provided__145.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -32615,61 +33563,61 @@
     }, null);
   }
   function _no_name_provided_$factory_107() {
-    var i = new _no_name_provided__134();
-    return function () {
-      return i.invoke_0_k$();
-    };
-  }
-  function _no_name_provided_$factory_108() {
-    var i = new _no_name_provided__135();
-    return function () {
-      return i.invoke_0_k$();
-    };
-  }
-  function _no_name_provided_$factory_109() {
     var i = new _no_name_provided__136();
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_110() {
+  function _no_name_provided_$factory_108() {
     var i = new _no_name_provided__137();
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_111() {
+  function _no_name_provided_$factory_109() {
     var i = new _no_name_provided__138();
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_112() {
+  function _no_name_provided_$factory_110() {
     var i = new _no_name_provided__139();
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_113() {
+  function _no_name_provided_$factory_111() {
     var i = new _no_name_provided__140();
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_114() {
+  function _no_name_provided_$factory_112() {
     var i = new _no_name_provided__141();
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_115() {
+  function _no_name_provided_$factory_113() {
     var i = new _no_name_provided__142();
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_116() {
+  function _no_name_provided_$factory_114() {
     var i = new _no_name_provided__143();
+    return function () {
+      return i.invoke_0_k$();
+    };
+  }
+  function _no_name_provided_$factory_115() {
+    var i = new _no_name_provided__144();
+    return function () {
+      return i.invoke_0_k$();
+    };
+  }
+  function _no_name_provided_$factory_116() {
+    var i = new _no_name_provided__145();
     return function () {
       return i.invoke_0_k$();
     };
@@ -32881,7 +33829,7 @@
     interfaces: []
   };
   var UTF8;
-  function _no_name_provided__144() {
+  function _no_name_provided__146() {
     UTC8CharsetBase.call(this, 'UTF-8');
     var tmp = this;
     var tmp_0;
@@ -32908,7 +33856,7 @@
     }
     tmp_2._textEncoder = tmp_3;
   }
-  _no_name_provided__144.prototype.decode_g45q85_k$ = function (out, src, start, end) {
+  _no_name_provided__146.prototype.decode_g45q85_k$ = function (out, src, start, end) {
     if (!(this._textDecoder == null)) {
       var tmp$ret$1;
       $l$block_0: {
@@ -32927,7 +33875,7 @@
       UTC8CharsetBase.prototype.decode_g45q85_k$.call(this, out, src, start, end);
     }
   };
-  _no_name_provided__144.prototype.encode_kaapbp_k$ = function (out, src, start, end) {
+  _no_name_provided__146.prototype.encode_kaapbp_k$ = function (out, src, start, end) {
     if (!(this._textEncoder == null)) {
       var tmp$ret$0;
       $l$block: {
@@ -32952,32 +33900,32 @@
       UTC8CharsetBase.prototype.encode_kaapbp_k$.call(this, out, src, start, end);
     }
   };
-  _no_name_provided__144.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function UTF8$init$() {
-    return new _no_name_provided__144();
-  }
-  var asyncSocketFactory$delegate;
-  function _no_name_provided__145() {
-    AsyncSocketFactory.call(this);
-  }
-  _no_name_provided__145.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__146() {
-  }
-  _no_name_provided__146.prototype.invoke_0_k$ = function () {
-    return new _no_name_provided__145();
-  };
   _no_name_provided__146.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
+  function UTF8$init$() {
+    return new _no_name_provided__146();
+  }
+  var asyncSocketFactory$delegate;
+  function _no_name_provided__147() {
+    AsyncSocketFactory.call(this);
+  }
+  _no_name_provided__147.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__148() {
+  }
+  _no_name_provided__148.prototype.invoke_0_k$ = function () {
+    return new _no_name_provided__147();
+  };
+  _no_name_provided__148.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
   function _no_name_provided_$factory_117() {
-    var i = new _no_name_provided__146();
+    var i = new _no_name_provided__148();
     return function () {
       return i.invoke_0_k$();
     };
@@ -33000,21 +33948,21 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__147() {
+  function _no_name_provided__149() {
   }
-  _no_name_provided__147.prototype.createClient_0_k$ = function () {
+  _no_name_provided__149.prototype.createClient_0_k$ = function () {
     return new HttpClientBrowserJs();
   };
-  _no_name_provided__147.$metadata$ = {
+  _no_name_provided__149.$metadata$ = {
     kind: 'class',
     interfaces: [HttpFactory]
   };
-  function _no_name_provided__148() {
+  function _no_name_provided__150() {
   }
-  _no_name_provided__148.prototype.invoke_0_k$ = function () {
-    return new _no_name_provided__147();
+  _no_name_provided__150.prototype.invoke_0_k$ = function () {
+    return new _no_name_provided__149();
   };
-  _no_name_provided__148.$metadata$ = {
+  _no_name_provided__150.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -33024,7 +33972,7 @@
     }, null);
   }
   function _no_name_provided_$factory_118() {
-    var i = new _no_name_provided__148();
+    var i = new _no_name_provided__150();
     return function () {
       return i.invoke_0_k$();
     };
@@ -33040,9 +33988,9 @@
   }
   var rawOsName$delegate;
   var rawPlatformName;
-  function _no_name_provided__149() {
+  function _no_name_provided__151() {
   }
-  _no_name_provided__149.prototype.invoke_0_k$ = function () {
+  _no_name_provided__151.prototype.invoke_0_k$ = function () {
     var tmp;
     if (_get_isNodeJs_()) {
       var tmp$ret$0;
@@ -33063,7 +34011,7 @@
     }
     return tmp;
   };
-  _no_name_provided__149.$metadata$ = {
+  _no_name_provided__151.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -33073,7 +34021,7 @@
     }, null);
   }
   function _no_name_provided_$factory_119() {
-    var i = new _no_name_provided__149();
+    var i = new _no_name_provided__151();
     return function () {
       return i.invoke_0_k$();
     };
@@ -33091,9 +34039,9 @@
     return tmp$ret$0;
   }
   var systemLanguageStrings$delegate;
-  function _no_name_provided__150() {
+  function _no_name_provided__152() {
   }
-  _no_name_provided__150.prototype.invoke_0_k$ = function () {
+  _no_name_provided__152.prototype.invoke_0_k$ = function () {
     var tmp;
     if (_get_isNodeJs_()) {
       var env = process.env;
@@ -33107,7 +34055,7 @@
     }
     return tmp;
   };
-  _no_name_provided__150.$metadata$ = {
+  _no_name_provided__152.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -33117,7 +34065,7 @@
     }, null);
   }
   function _no_name_provided_$factory_120() {
-    var i = new _no_name_provided__150();
+    var i = new _no_name_provided__152();
     return function () {
       return i.invoke_0_k$();
     };
@@ -34235,29 +35183,29 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__151() {
+  function _no_name_provided__153() {
   }
-  _no_name_provided__151.prototype.invoke_xf6auj_k$ = function (it) {
+  _no_name_provided__153.prototype.invoke_xf6auj_k$ = function (it) {
     it.clear_0_k$();
     Unit_getInstance();
   };
-  _no_name_provided__151.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__153.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_xf6auj_k$(p1 instanceof Bucket ? p1 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__151.$metadata$ = {
+  _no_name_provided__153.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__152() {
+  function _no_name_provided__154() {
   }
-  _no_name_provided__152.prototype.invoke_ha5a7z_k$ = function (it) {
+  _no_name_provided__154.prototype.invoke_ha5a7z_k$ = function (it) {
     return new Bucket();
   };
-  _no_name_provided__152.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__154.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__152.$metadata$ = {
+  _no_name_provided__154.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -34423,15 +35371,15 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__153() {
+  function _no_name_provided__155() {
   }
-  _no_name_provided__153.prototype.invoke_ha5a7z_k$ = function (it) {
+  _no_name_provided__155.prototype.invoke_ha5a7z_k$ = function (it) {
     return new Edge();
   };
-  _no_name_provided__153.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__155.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__153.$metadata$ = {
+  _no_name_provided__155.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -34881,20 +35829,20 @@
     interfaces: []
   };
   function _no_name_provided_$factory_121() {
-    var i = new _no_name_provided__153();
+    var i = new _no_name_provided__155();
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
   }
   function _no_name_provided_$factory_122() {
-    var i = new _no_name_provided__151();
+    var i = new _no_name_provided__153();
     return function (p1) {
       i.invoke_xf6auj_k$(p1);
       return Unit_getInstance();
     };
   }
   function _no_name_provided_$factory_123() {
-    var i = new _no_name_provided__152();
+    var i = new _no_name_provided__154();
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
@@ -34971,25 +35919,25 @@
       new Command();
     return Command_instance;
   }
-  function _no_name_provided__154(this$0) {
-    this._this$0_26 = this$0;
+  function _no_name_provided__156(this$0) {
+    this._this$0_27 = this$0;
   }
-  _no_name_provided__154.prototype.invoke_0_k$ = function () {
+  _no_name_provided__156.prototype.invoke_0_k$ = function () {
     var tmp$ret$0;
     $l$block: {
       var tmp0_also_0 = new PolygonScanline();
       {
       }
       {
-        tmp0_also_0.add_qvfozx_k$(this._this$0_26);
-        tmp0_also_0._version = this._this$0_26._version_0;
+        tmp0_also_0.add_qvfozx_k$(this._this$0_27);
+        tmp0_also_0._version = this._this$0_27._version_0;
       }
       tmp$ret$0 = tmp0_also_0;
       break $l$block;
     }
     return tmp$ret$0;
   };
-  _no_name_provided__154.$metadata$ = {
+  _no_name_provided__156.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -35234,7 +36182,7 @@
     interfaces: [VectorBuilder]
   };
   function _no_name_provided_$factory_124(this$0) {
-    var i = new _no_name_provided__154(this$0);
+    var i = new _no_name_provided__156(this$0);
     return function () {
       return i.invoke_0_k$();
     };
@@ -35364,16 +36312,16 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__155(this$0) {
-    this._this$0_27 = this$0;
+  function _no_name_provided__157(this$0) {
+    this._this$0_28 = this$0;
   }
-  _no_name_provided__155.prototype.invoke_wd8tzq_k$ = function () {
-    return Companion_getInstance_56().invoke_spsmd3_k$(imul(this._this$0_27._width_0, 2));
+  _no_name_provided__157.prototype.invoke_wd8tzq_k$ = function () {
+    return Companion_getInstance_56().invoke_spsmd3_k$(imul(this._this$0_28._width_0, 2));
   };
-  _no_name_provided__155.prototype.invoke_0_k$ = function () {
+  _no_name_provided__157.prototype.invoke_0_k$ = function () {
     return new RgbaArray(this.invoke_wd8tzq_k$());
   };
-  _no_name_provided__155.$metadata$ = {
+  _no_name_provided__157.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -35406,6 +36354,15 @@
   Bitmap.prototype._get_premultiplied__0_k$ = function () {
     return this._premultiplied;
   };
+  Bitmap.prototype._get_tempRgba__wd8tzq_k$ = function () {
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_getValue_0 = tempRgba$factory();
+      tmp$ret$0 = this._tempRgba$delegate._get_value__0_k$()._ints;
+      break $l$block;
+    }
+    return tmp$ret$0;
+  };
   Bitmap.prototype._get_stride__0_k$ = function () {
     return imul(this._width_0, this._bpp) / 8 | 0;
   };
@@ -35435,6 +36392,33 @@
       }
        while (inductionVariable < height);
   };
+  Bitmap.prototype.writePixelsUnsafe_c3kirt_k$ = function (x, y, width, height, out, offset_0) {
+    var n = offset_0;
+    var inductionVariable = 0;
+    if (inductionVariable < height)
+      do {
+        var y0 = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        var inductionVariable_0 = 0;
+        if (inductionVariable_0 < width)
+          do {
+            var x0 = inductionVariable_0;
+            inductionVariable_0 = inductionVariable_0 + 1 | 0;
+            var tmp = x0 + x | 0;
+            var tmp_0 = y0 + y | 0;
+            var tmp2 = n;
+            n = tmp2 + 1 | 0;
+            this.setRgba_5mmwyp_k$(tmp, tmp_0, RgbaArray__get_impl(out, tmp2));
+          }
+           while (inductionVariable_0 < width);
+      }
+       while (inductionVariable < height);
+  };
+  Bitmap.prototype.setRgba_5mmwyp_k$ = function (x, y, v) {
+    {
+      throw NotImplementedError_init_$Create$(null, 1, null);
+    }
+  };
   Bitmap.prototype.getRgba_aewswh_k$ = function (x, y) {
     return Colors_getInstance()._TRANSPARENT_BLACK;
   };
@@ -35443,6 +36427,55 @@
   };
   Bitmap.prototype.getInt_27zxwg_k$ = function (x, y) {
     return 0;
+  };
+  Bitmap.prototype.copy_ffs0tm_k$ = function (srcX, srcY, dst, dstX, dstY, width, height) {
+    var src = this;
+    var srcX0 = src.clampWidth_ha5a7z_k$(srcX);
+    var srcX1 = src.clampWidth_ha5a7z_k$(srcX + width | 0);
+    var srcY0 = src.clampHeight_ha5a7z_k$(srcY);
+    var srcY1 = src.clampHeight_ha5a7z_k$(srcY + height | 0);
+    var dstX0 = dst.clampWidth_ha5a7z_k$(dstX);
+    var dstX1 = dst.clampWidth_ha5a7z_k$(dstX + width | 0);
+    var dstY0 = dst.clampHeight_ha5a7z_k$(dstY);
+    var dstY1 = dst.clampHeight_ha5a7z_k$(dstY + height | 0);
+    var srcX_0 = srcX0;
+    var srcY_0 = srcY0;
+    var dstX_0 = dstX0;
+    var dstY_0 = dstY0;
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_min_0 = srcX1 - srcX0 | 0;
+      var tmp1_min_0 = dstX1 - dstX0 | 0;
+      tmp$ret$0 = Math.min(tmp0_min_0, tmp1_min_0);
+      break $l$block;
+    }
+    var width_0 = tmp$ret$0;
+    var tmp$ret$1;
+    $l$block_0: {
+      var tmp2_min_0 = srcY1 - srcY0 | 0;
+      var tmp3_min_0 = dstY1 - dstY0 | 0;
+      tmp$ret$1 = Math.min(tmp2_min_0, tmp3_min_0);
+      break $l$block_0;
+    }
+    var height_0 = tmp$ret$1;
+    this.copyUnchecked_ffs0tm_k$(srcX_0, srcY_0, dst, dstX_0, dstY_0, width_0, height_0);
+  };
+  Bitmap.prototype.copyUnchecked_ffs0tm_k$ = function (srcX, srcY, dst, dstX, dstY, width, height) {
+    var inductionVariable = 0;
+    if (inductionVariable < height)
+      do {
+        var y = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        this.readPixelsUnsafe_c3kirt_k$(srcX, srcY + y | 0, width, 1, this._get_tempRgba__wd8tzq_k$(), 0);
+        dst.writePixelsUnsafe_c3kirt_k$(dstX, dstY + y | 0, width, 1, this._get_tempRgba__wd8tzq_k$(), 0);
+      }
+       while (inductionVariable < height);
+  };
+  Bitmap.prototype.clampWidth_ha5a7z_k$ = function (x) {
+    return clamp_0(x, 0, this._width_0);
+  };
+  Bitmap.prototype.clampHeight_ha5a7z_k$ = function (y) {
+    return clamp_0(y, 0, this._height_0);
   };
   Bitmap.prototype.flipY_0_k$ = function () {
     var tmp$ret$0;
@@ -35544,8 +36577,13 @@
     kind: 'class',
     interfaces: [Sizeable, Extra]
   };
+  function tempRgba$factory() {
+    return getPropertyCallableRef('tempRgba', 1, KProperty1, function (receiver) {
+      return new RgbaArray(receiver._get_tempRgba__wd8tzq_k$());
+    }, null);
+  }
   function _no_name_provided_$factory_125(this$0) {
-    var i = new _no_name_provided__155(this$0);
+    var i = new _no_name_provided__157(this$0);
     return function () {
       return new RgbaArray(i.invoke_wd8tzq_k$());
     };
@@ -35592,6 +36630,23 @@
     tmp._temp_0 = tmp_0.invoke_spsmd3_k$(tmp$ret$0);
     this._bounds = new RectangleInt(Companion_getInstance_45().invoke_ihmn6a_k$(0, 0, width, height));
   }
+  Bitmap32.prototype.copyUnchecked_ffs0tm_k$ = function (srcX, srcY, dst, dstX, dstY, width, height) {
+    if (!(dst instanceof Bitmap32))
+      return Bitmap.prototype.copyUnchecked_ffs0tm_k$.call(this, srcX, srcY, dst, dstX, dstY, width, height);
+    else {
+    }
+    var src = this;
+    var srcArray = src._data_8;
+    var dstArray = dst._data_8;
+    var inductionVariable = 0;
+    if (inductionVariable < height)
+      do {
+        var y = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        arraycopy_2(_RgbaArray___get_ints__impl_(srcArray), src.index_27zxwg_k$(srcX, srcY + y | 0), _RgbaArray___get_ints__impl_(dstArray), dst.index_27zxwg_k$(dstX, dstY + y | 0), width);
+      }
+       while (inductionVariable < height);
+  };
   Bitmap32.prototype.set_5mmwyp_k$ = function (x, y, color) {
     RgbaArray__set_impl(this._data_8, this.index_27zxwg_k$(x, y), color);
   };
@@ -35606,6 +36661,9 @@
   };
   Bitmap32.prototype.getRgba_aewswh_k$ = function (x, y) {
     return RgbaArray__get_impl(this._data_8, this.index_27zxwg_k$(x, y));
+  };
+  Bitmap32.prototype.setRgba_5mmwyp_k$ = function (x, y, v) {
+    RgbaArray__set_impl(this._data_8, this.index_27zxwg_k$(x, y), v);
   };
   Bitmap32.prototype._drawUnchecked_1w577z_k$ = function (src, dx, dy, sleft, stop, sright, sbottom, mix_0) {
     var dst = this;
@@ -35907,6 +36965,22 @@
       break $l$block;
     }
     return tmp$ret$0;
+  };
+  Bitmap8.prototype.copyUnchecked_ffs0tm_k$ = function (srcX, srcY, dst, dstX, dstY, width, height) {
+    if (!(dst instanceof Bitmap8))
+      return BitmapIndexed.prototype.copyUnchecked_ffs0tm_k$.call(this, srcX, srcY, dst, dstX, dstY, width, height);
+    else {
+    }
+    var inductionVariable = 0;
+    if (inductionVariable < height)
+      do {
+        var y = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        var tmp = this._get_data__0_k$();
+        var tmp_0 = this.index_27zxwg_k$(srcX, srcY + y | 0);
+        arraycopy_1(tmp, tmp_0, (dst instanceof Bitmap8 ? dst : THROW_CCE())._get_data__0_k$(), dst.index_27zxwg_k$(dstX, dstY + y | 0), width);
+      }
+       while (inductionVariable < height);
   };
   Bitmap8.prototype.toString = function () {
     return '' + 'Bitmap8(' + this._get_width__0_k$() + ', ' + this._get_height__0_k$() + ', palette=' + _RgbaArray___get_size__impl_(this._get_palette__wd8tzq_k$()) + ')';
@@ -36453,49 +37527,17 @@
     kind: 'class',
     interfaces: [ColorFormat]
   };
-  function _no_name_provided__156() {
-  }
-  _no_name_provided__156.prototype.invoke_kqg9r2_k$ = function (p0, p1) {
-    return readU16LE(p0, p1);
-  };
-  _no_name_provided__156.prototype.invoke_osx4an_k$ = function (p1, p2) {
-    var tmp = (!(p1 == null) ? isByteArray(p1) : false) ? p1 : THROW_CCE();
-    return this.invoke_kqg9r2_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
-  };
-  _no_name_provided__156.prototype._get_name__0_k$ = function () {
-    return 'readU16LE';
-  };
-  _no_name_provided__156.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__157() {
-  }
-  _no_name_provided__157.prototype.invoke_kqg9r2_k$ = function (p0, p1) {
-    return readU16BE(p0, p1);
-  };
-  _no_name_provided__157.prototype.invoke_osx4an_k$ = function (p1, p2) {
-    var tmp = (!(p1 == null) ? isByteArray(p1) : false) ? p1 : THROW_CCE();
-    return this.invoke_kqg9r2_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
-  };
-  _no_name_provided__157.prototype._get_name__0_k$ = function () {
-    return 'readU16BE';
-  };
-  _no_name_provided__157.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
   function _no_name_provided__158() {
   }
   _no_name_provided__158.prototype.invoke_kqg9r2_k$ = function (p0, p1) {
-    return readU24LE(p0, p1);
+    return readU16LE(p0, p1);
   };
   _no_name_provided__158.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? isByteArray(p1) : false) ? p1 : THROW_CCE();
     return this.invoke_kqg9r2_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
   _no_name_provided__158.prototype._get_name__0_k$ = function () {
-    return 'readU24LE';
+    return 'readU16LE';
   };
   _no_name_provided__158.$metadata$ = {
     kind: 'class',
@@ -36504,14 +37546,14 @@
   function _no_name_provided__159() {
   }
   _no_name_provided__159.prototype.invoke_kqg9r2_k$ = function (p0, p1) {
-    return readU24BE(p0, p1);
+    return readU16BE(p0, p1);
   };
   _no_name_provided__159.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? isByteArray(p1) : false) ? p1 : THROW_CCE();
     return this.invoke_kqg9r2_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
   _no_name_provided__159.prototype._get_name__0_k$ = function () {
-    return 'readU24BE';
+    return 'readU16BE';
   };
   _no_name_provided__159.$metadata$ = {
     kind: 'class',
@@ -36520,14 +37562,14 @@
   function _no_name_provided__160() {
   }
   _no_name_provided__160.prototype.invoke_kqg9r2_k$ = function (p0, p1) {
-    return readS32LE(p0, p1);
+    return readU24LE(p0, p1);
   };
   _no_name_provided__160.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? isByteArray(p1) : false) ? p1 : THROW_CCE();
     return this.invoke_kqg9r2_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
   _no_name_provided__160.prototype._get_name__0_k$ = function () {
-    return 'readS32LE';
+    return 'readU24LE';
   };
   _no_name_provided__160.$metadata$ = {
     kind: 'class',
@@ -36536,36 +37578,52 @@
   function _no_name_provided__161() {
   }
   _no_name_provided__161.prototype.invoke_kqg9r2_k$ = function (p0, p1) {
-    return readS32BE(p0, p1);
+    return readU24BE(p0, p1);
   };
   _no_name_provided__161.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? isByteArray(p1) : false) ? p1 : THROW_CCE();
     return this.invoke_kqg9r2_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
   _no_name_provided__161.prototype._get_name__0_k$ = function () {
-    return 'readS32BE';
+    return 'readU24BE';
   };
   _no_name_provided__161.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
+  function _no_name_provided__162() {
+  }
+  _no_name_provided__162.prototype.invoke_kqg9r2_k$ = function (p0, p1) {
+    return readS32LE(p0, p1);
+  };
+  _no_name_provided__162.prototype.invoke_osx4an_k$ = function (p1, p2) {
+    var tmp = (!(p1 == null) ? isByteArray(p1) : false) ? p1 : THROW_CCE();
+    return this.invoke_kqg9r2_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
+  };
+  _no_name_provided__162.prototype._get_name__0_k$ = function () {
+    return 'readS32LE';
+  };
+  _no_name_provided__162.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__163() {
+  }
+  _no_name_provided__163.prototype.invoke_kqg9r2_k$ = function (p0, p1) {
+    return readS32BE(p0, p1);
+  };
+  _no_name_provided__163.prototype.invoke_osx4an_k$ = function (p1, p2) {
+    var tmp = (!(p1 == null) ? isByteArray(p1) : false) ? p1 : THROW_CCE();
+    return this.invoke_kqg9r2_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
+  };
+  _no_name_provided__163.prototype._get_name__0_k$ = function () {
+    return 'readS32BE';
+  };
+  _no_name_provided__163.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
   function _no_name_provided_$factory_126() {
-    var i = new _no_name_provided__156();
-    var l = function (p1, p2) {
-      return i.invoke_kqg9r2_k$(p1, p2);
-    };
-    l.callableName = i._get_name__0_k$();
-    return l;
-  }
-  function _no_name_provided_$factory_127() {
-    var i = new _no_name_provided__157();
-    var l = function (p1, p2) {
-      return i.invoke_kqg9r2_k$(p1, p2);
-    };
-    l.callableName = i._get_name__0_k$();
-    return l;
-  }
-  function _no_name_provided_$factory_128() {
     var i = new _no_name_provided__158();
     var l = function (p1, p2) {
       return i.invoke_kqg9r2_k$(p1, p2);
@@ -36573,7 +37631,7 @@
     l.callableName = i._get_name__0_k$();
     return l;
   }
-  function _no_name_provided_$factory_129() {
+  function _no_name_provided_$factory_127() {
     var i = new _no_name_provided__159();
     var l = function (p1, p2) {
       return i.invoke_kqg9r2_k$(p1, p2);
@@ -36581,7 +37639,7 @@
     l.callableName = i._get_name__0_k$();
     return l;
   }
-  function _no_name_provided_$factory_130() {
+  function _no_name_provided_$factory_128() {
     var i = new _no_name_provided__160();
     var l = function (p1, p2) {
       return i.invoke_kqg9r2_k$(p1, p2);
@@ -36589,8 +37647,24 @@
     l.callableName = i._get_name__0_k$();
     return l;
   }
-  function _no_name_provided_$factory_131() {
+  function _no_name_provided_$factory_129() {
     var i = new _no_name_provided__161();
+    var l = function (p1, p2) {
+      return i.invoke_kqg9r2_k$(p1, p2);
+    };
+    l.callableName = i._get_name__0_k$();
+    return l;
+  }
+  function _no_name_provided_$factory_130() {
+    var i = new _no_name_provided__162();
+    var l = function (p1, p2) {
+      return i.invoke_kqg9r2_k$(p1, p2);
+    };
+    l.callableName = i._get_name__0_k$();
+    return l;
+  }
+  function _no_name_provided_$factory_131() {
+    var i = new _no_name_provided__163();
     var l = function (p1, p2) {
       return i.invoke_kqg9r2_k$(p1, p2);
     };
@@ -37253,9 +38327,9 @@
     return tmp$ret$0;
   }
   var DefaultTtfFont$delegate;
-  function _no_name_provided__162() {
+  function _no_name_provided__164() {
   }
-  _no_name_provided__162.prototype.invoke_0_k$ = function () {
+  _no_name_provided__164.prototype.invoke_0_k$ = function () {
     var tmp$ret$2;
     $l$block_1: {
       var start_1 = PerformanceCounter_getInstance()._get_microseconds__0_k$();
@@ -37279,7 +38353,7 @@
     var res = tmp$ret$2;
     return res._result_0;
   };
-  _no_name_provided__162.$metadata$ = {
+  _no_name_provided__164.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -37289,7 +38363,7 @@
     }, null);
   }
   function _no_name_provided_$factory_132() {
-    var i = new _no_name_provided__162();
+    var i = new _no_name_provided__164();
     return function () {
       return i.invoke_0_k$();
     };
@@ -37520,12 +38594,12 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__163() {
+  function _no_name_provided__165() {
   }
-  _no_name_provided__163.prototype.invoke_0_k$ = function () {
+  _no_name_provided__165.prototype.invoke_0_k$ = function () {
     return LinkedHashMap_init_$Create$();
   };
-  _no_name_provided__163.$metadata$ = {
+  _no_name_provided__165.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -37540,7 +38614,7 @@
     interfaces: []
   };
   function _no_name_provided_$factory_133() {
-    var i = new _no_name_provided__163();
+    var i = new _no_name_provided__165();
     return function () {
       return i.invoke_0_k$();
     };
@@ -38393,7 +39467,7 @@
     interfaces: []
   };
   function Glyph($outer, index, xMin, yMin, xMax, yMax, advanceWidth) {
-    this._$this_9 = $outer;
+    this._$this_11 = $outer;
     this._index_3 = index;
     this._xMin = xMin;
     this._yMin = yMin;
@@ -38407,8 +39481,8 @@
       }
       var tmp$ret$0;
       $l$block: {
-        var size_2 = this._$this_9._unitsPerEm;
-        var scale_3 = getTextScale(this._$this_9, size_2);
+        var size_2 = this._$this_11._unitsPerEm;
+        var scale_3 = getTextScale(this._$this_11, size_2);
         tmp$ret$0 = new GlyphMetrics(size_2, true, -1, Companion_getInstance_44().fromBounds_i6u10_k$(this._xMin * scale_3, this._yMin * scale_3, this._xMax * scale_3, this._yMax * scale_3), this._advanceWidth_0 * scale_3);
         break $l$block;
       }
@@ -38429,7 +39503,7 @@
     interfaces: []
   };
   function CompositeGlyph($outer, index, xMin, yMin, xMax, yMax, refs, advanceWidth) {
-    this._$this_10 = $outer;
+    this._$this_12 = $outer;
     Glyph.call(this, $outer, index, xMin, yMin, xMax, yMax, advanceWidth);
     this._refs = refs;
     var tmp = this;
@@ -38504,7 +39578,7 @@
     interfaces: []
   };
   function SimpleGlyph($outer, index, xMin, yMin, xMax, yMax, contoursIndices, flags, xPos, yPos, advanceWidth) {
-    this._$this_11 = $outer;
+    this._$this_13 = $outer;
     Glyph.call(this, $outer, index, xMin, yMin, xMax, yMax, advanceWidth);
     this._contoursIndices = contoursIndices;
     this._flags = flags;
@@ -38555,8 +39629,8 @@
                   var cend_4_5_13 = this._contoursIndices[n_2_3_11 + 1 | 0];
                   var csize_5_6_14 = (cend_4_5_13 - cstart_3_4_12 | 0) + 1 | 0;
                   {
-                    var curr_7_7_15 = contour(this, cend_4_5_13, this._$this_11._tempContours[0]);
-                    var next_8_8_16 = contour(this, cstart_3_4_12, this._$this_11._tempContours[1]);
+                    var curr_7_7_15 = contour(this, cend_4_5_13, this._$this_13._tempContours[0]);
+                    var next_8_8_16 = contour(this, cstart_3_4_12, this._$this_13._tempContours[1]);
                     if (curr_7_7_15._onCurve)
                       moveTo(tmp0_also_0_9, curr_7_7_15._x_2, -curr_7_7_15._y_1 | 0);
                     else if (next_8_8_16._onCurve)
@@ -38570,7 +39644,7 @@
                         inductionVariable_1 = inductionVariable_1 + 1 | 0;
                         var prev_11_11_19 = curr_7_7_15;
                         curr_7_7_15 = next_8_8_16;
-                        next_8_8_16 = contour(this, cstart_3_4_12 + (cpos_10_10_18 + 1 | 0) % csize_5_6_14 | 0, this._$this_11._tempContours[(cpos_10_10_18 + 2 | 0) % 3]);
+                        next_8_8_16 = contour(this, cstart_3_4_12 + (cpos_10_10_18 + 1 | 0) % csize_5_6_14 | 0, this._$this_13._tempContours[(cpos_10_10_18 + 2 | 0) % 3]);
                         if (curr_7_7_15._onCurve) {
                           lineTo(tmp0_also_0_9, curr_7_7_15._x_2, -curr_7_7_15._y_1 | 0);
                         } else {
@@ -39278,17 +40352,17 @@
     return BMP_instance;
   }
   var fourcc$delegate;
-  function _no_name_provided__164() {
+  function _no_name_provided__166() {
   }
-  _no_name_provided__164.prototype.invoke_0_k$ = function () {
+  _no_name_provided__166.prototype.invoke_0_k$ = function () {
     return '    ';
   };
-  _no_name_provided__164.$metadata$ = {
+  _no_name_provided__166.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_134() {
-    var i = new _no_name_provided__164();
+    var i = new _no_name_provided__166();
     return function () {
       return i.invoke_0_k$();
     };
@@ -40166,9 +41240,9 @@
     kind: 'class',
     interfaces: [Comparator]
   };
-  function _no_name_provided__165() {
+  function _no_name_provided__167() {
   }
-  _no_name_provided__165.prototype.invoke_7j2v4_k$ = function (a, b) {
+  _no_name_provided__167.prototype.invoke_7j2v4_k$ = function (a, b) {
     var tmp$ret$2;
     $l$block_1: {
       var tmp$ret$0;
@@ -40199,11 +41273,11 @@
     }
     return tmp$ret$2;
   };
-  _no_name_provided__165.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__167.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = p1 instanceof ImageFrame ? p1 : THROW_CCE();
     return this.invoke_7j2v4_k$(tmp, p2 instanceof ImageFrame ? p2 : THROW_CCE());
   };
-  _no_name_provided__165.$metadata$ = {
+  _no_name_provided__167.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -40247,7 +41321,7 @@
     interfaces: [Extra]
   };
   function _no_name_provided_$factory_135() {
-    var i = new _no_name_provided__165();
+    var i = new _no_name_provided__167();
     return function (p1, p2) {
       return i.invoke_7j2v4_k$(p1, p2);
     };
@@ -41254,10 +42328,10 @@
     }
     return true;
   }
-  function _no_name_provided__166($bitmap) {
+  function _no_name_provided__168($bitmap) {
     this._$bitmap = $bitmap;
   }
-  _no_name_provided__166.prototype.invoke_tk82hz_k$ = function ($this$writeChunk) {
+  _no_name_provided__168.prototype.invoke_tk82hz_k$ = function ($this$writeChunk) {
     var tmp0_iterator = RgbaArray__iterator_impl(this._$bitmap._get_palette__wd8tzq_k$());
     while (tmp0_iterator.hasNext_0_k$()) {
       var c = tmp0_iterator.next_0_k$()._value_12;
@@ -41265,37 +42339,6 @@
       write8_1($this$writeChunk, _RGBA___get_g__impl_(c));
       write8_1($this$writeChunk, _RGBA___get_b__impl_(c));
     }
-  };
-  _no_name_provided__166.prototype.invoke_20e8_k$ = function (p1) {
-    this.invoke_tk82hz_k$(p1 instanceof SyncStream ? p1 : THROW_CCE());
-    return Unit_getInstance();
-  };
-  _no_name_provided__166.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__167($bitmap) {
-    this._$bitmap_0 = $bitmap;
-  }
-  _no_name_provided__167.prototype.invoke_tk82hz_k$ = function ($this$writeChunk) {
-    var tmp0_iterator = RgbaArray__iterator_impl(this._$bitmap_0._get_palette__wd8tzq_k$());
-    while (tmp0_iterator.hasNext_0_k$()) {
-      var c = tmp0_iterator.next_0_k$()._value_12;
-      write8_1($this$writeChunk, _RGBA___get_a__impl_(c));
-    }
-  };
-  _no_name_provided__167.prototype.invoke_20e8_k$ = function (p1) {
-    this.invoke_tk82hz_k$(p1 instanceof SyncStream ? p1 : THROW_CCE());
-    return Unit_getInstance();
-  };
-  _no_name_provided__167.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__168() {
-  }
-  _no_name_provided__168.prototype.invoke_tk82hz_k$ = function ($this$writeChunk) {
-    return Unit_getInstance();
   };
   _no_name_provided__168.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_tk82hz_k$(p1 instanceof SyncStream ? p1 : THROW_CCE());
@@ -41305,12 +42348,43 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__169($width, $height, $colorspace) {
+  function _no_name_provided__169($bitmap) {
+    this._$bitmap_0 = $bitmap;
+  }
+  _no_name_provided__169.prototype.invoke_tk82hz_k$ = function ($this$writeChunk) {
+    var tmp0_iterator = RgbaArray__iterator_impl(this._$bitmap_0._get_palette__wd8tzq_k$());
+    while (tmp0_iterator.hasNext_0_k$()) {
+      var c = tmp0_iterator.next_0_k$()._value_12;
+      write8_1($this$writeChunk, _RGBA___get_a__impl_(c));
+    }
+  };
+  _no_name_provided__169.prototype.invoke_20e8_k$ = function (p1) {
+    this.invoke_tk82hz_k$(p1 instanceof SyncStream ? p1 : THROW_CCE());
+    return Unit_getInstance();
+  };
+  _no_name_provided__169.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__170() {
+  }
+  _no_name_provided__170.prototype.invoke_tk82hz_k$ = function ($this$writeChunk) {
+    return Unit_getInstance();
+  };
+  _no_name_provided__170.prototype.invoke_20e8_k$ = function (p1) {
+    this.invoke_tk82hz_k$(p1 instanceof SyncStream ? p1 : THROW_CCE());
+    return Unit_getInstance();
+  };
+  _no_name_provided__170.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__171($width, $height, $colorspace) {
     this._$width = $width;
     this._$height = $height;
     this._$colorspace = $colorspace;
   }
-  _no_name_provided__169.prototype.invoke_tk82hz_k$ = function ($this$writeChunk) {
+  _no_name_provided__171.prototype.invoke_tk82hz_k$ = function ($this$writeChunk) {
     write32BE_1($this$writeChunk, this._$width);
     write32BE_1($this$writeChunk, this._$height);
     write8_1($this$writeChunk, 8);
@@ -41319,11 +42393,11 @@
     write8_1($this$writeChunk, 0);
     write8_1($this$writeChunk, 0);
   };
-  _no_name_provided__169.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__171.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_tk82hz_k$(p1 instanceof SyncStream ? p1 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__169.$metadata$ = {
+  _no_name_provided__171.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -41567,28 +42641,28 @@
     return PNG_instance;
   }
   function _no_name_provided_$factory_136($bitmap) {
-    var i = new _no_name_provided__166($bitmap);
+    var i = new _no_name_provided__168($bitmap);
     return function (p1) {
       i.invoke_tk82hz_k$(p1);
       return Unit_getInstance();
     };
   }
   function _no_name_provided_$factory_137($bitmap) {
-    var i = new _no_name_provided__167($bitmap);
+    var i = new _no_name_provided__169($bitmap);
     return function (p1) {
       i.invoke_tk82hz_k$(p1);
       return Unit_getInstance();
     };
   }
   function _no_name_provided_$factory_138() {
-    var i = new _no_name_provided__168();
+    var i = new _no_name_provided__170();
     return function (p1) {
       i.invoke_tk82hz_k$(p1);
       return Unit_getInstance();
     };
   }
   function _no_name_provided_$factory_139($width, $height, $colorspace) {
-    var i = new _no_name_provided__169($width, $height, $colorspace);
+    var i = new _no_name_provided__171($width, $height, $colorspace);
     return function (p1) {
       i.invoke_tk82hz_k$(p1);
       return Unit_getInstance();
@@ -42167,50 +43241,50 @@
     interfaces: []
   };
   function CreateStringTextRenderer(getVersion, handler) {
-    return new _no_name_provided__172(getVersion, handler);
+    return new _no_name_provided__174(getVersion, handler);
   }
   function CreateStringTextRenderer$default(getVersion, handler, $mask0, $handler) {
     if (!(($mask0 & 1) === 0)) {
       getVersion = _no_name_provided_$factory_141();
     }return CreateStringTextRenderer(getVersion, handler);
   }
-  function _no_name_provided__170() {
+  function _no_name_provided__172() {
   }
-  _no_name_provided__170.prototype.invoke_vzf3w2_k$ = function ($this$CreateStringTextRenderer, text, n, c, c1, g, advance) {
+  _no_name_provided__172.prototype.invoke_vzf3w2_k$ = function ($this$CreateStringTextRenderer, text, n, c, c1, g, advance) {
     $this$CreateStringTextRenderer.put_ha5a7z_k$(c);
     Unit_getInstance();
     $this$CreateStringTextRenderer.advance_okcceq_k$(advance);
   };
-  _no_name_provided__170.$metadata$ = {
+  _no_name_provided__172.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__171() {
+  function _no_name_provided__173() {
   }
-  _no_name_provided__171.prototype.invoke_0_k$ = function () {
+  _no_name_provided__173.prototype.invoke_0_k$ = function () {
     return 0;
   };
-  _no_name_provided__171.$metadata$ = {
+  _no_name_provided__173.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__172($getVersion, $handler) {
+  function _no_name_provided__174($getVersion, $handler) {
     this._$getVersion = $getVersion;
     this._$handler = $handler;
   }
-  _no_name_provided__172.$metadata$ = {
+  _no_name_provided__174.$metadata$ = {
     kind: 'class',
     interfaces: [TextRenderer]
   };
   function _no_name_provided_$factory_140() {
-    var i = new _no_name_provided__170();
+    var i = new _no_name_provided__172();
     return function (p1, p2, p3, p4, p5, p6, p7) {
       i.invoke_vzf3w2_k$(p1, p2, p3, p4, p5, p6, p7);
       return Unit_getInstance();
     };
   }
   function _no_name_provided_$factory_141() {
-    var i = new _no_name_provided__171();
+    var i = new _no_name_provided__173();
     return function () {
       return i.invoke_0_k$();
     };
@@ -42382,9 +43456,9 @@
   var tempI;
   var temp8;
   var isLittleEndian$delegate;
-  function _no_name_provided__173() {
+  function _no_name_provided__175() {
   }
-  _no_name_provided__173.prototype.invoke_0_k$ = function () {
+  _no_name_provided__175.prototype.invoke_0_k$ = function () {
     var tmp$ret$0;
     $l$block: {
       var tmp0_also_0 = RegisteredImageFormats_getInstance();
@@ -42398,7 +43472,7 @@
     }
     return tmp$ret$0;
   };
-  _no_name_provided__173.$metadata$ = {
+  _no_name_provided__175.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -42434,9 +43508,9 @@
       new HtmlNativeImageFormatProvider();
     return HtmlNativeImageFormatProvider_instance;
   }
-  function _no_name_provided__174() {
+  function _no_name_provided__176() {
   }
-  _no_name_provided__174.prototype.invoke_0_k$ = function () {
+  _no_name_provided__176.prototype.invoke_0_k$ = function () {
     {
       var tmp0_set_0 = tempI;
       var tmp$ret$0;
@@ -42459,18 +43533,18 @@
     }
     return tmp$ret$2 === 1;
   };
-  _no_name_provided__174.$metadata$ = {
+  _no_name_provided__176.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_142() {
-    var i = new _no_name_provided__174();
+    var i = new _no_name_provided__176();
     return function () {
       return i.invoke_0_k$();
     };
   }
   function _no_name_provided_$factory_143() {
-    var i = new _no_name_provided__173();
+    var i = new _no_name_provided__175();
     return function () {
       return i.invoke_0_k$();
     };
@@ -42669,25 +43743,25 @@
       }}
     return written;
   }
-  function _no_name_provided__175($callback) {
+  function _no_name_provided__177($callback) {
     this._$callback = $callback;
   }
-  _no_name_provided__175.prototype.invoke_27zxwg_k$ = function (current, total) {
+  _no_name_provided__177.prototype.invoke_27zxwg_k$ = function (current, total) {
     var tmp0_safe_receiver = this._$callback;
     return tmp0_safe_receiver == null ? null : tmp0_safe_receiver(2, current, total);
   };
-  _no_name_provided__175.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__177.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__175.$metadata$ = {
+  _no_name_provided__177.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__176($callback) {
+  function _no_name_provided__178($callback) {
     this._$callback_0 = $callback;
   }
-  _no_name_provided__176.prototype.invoke_27zxwg_k$ = function (current, total) {
+  _no_name_provided__178.prototype.invoke_27zxwg_k$ = function (current, total) {
     var tmp0_safe_receiver = this._$callback_0;
     if ((tmp0_safe_receiver == null ? null : tmp0_safe_receiver(current, total)) === false) {
       throw SpriteCompilerCancelledException_init_$Create$('Cancelled BLK compiler during compile phase', null, 2, null);
@@ -42695,27 +43769,27 @@
     }
     return true;
   };
-  _no_name_provided__176.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__178.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__176.$metadata$ = {
+  _no_name_provided__178.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__177($tmp1_safe_receiver) {
+  function _no_name_provided__179($tmp1_safe_receiver) {
     this._$tmp1_safe_receiver = $tmp1_safe_receiver;
   }
-  _no_name_provided__177.prototype.invoke_27zxwg_k$ = function (current, total) {
+  _no_name_provided__179.prototype.invoke_27zxwg_k$ = function (current, total) {
     if (this._$tmp1_safe_receiver(current, total) === false) {
       throw SpriteCompilerCancelledException_init_$Create$('BLK compilation cancelled during compiler phase', null, 2, null);
     }return true;
   };
-  _no_name_provided__177.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__179.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__177.$metadata$ = {
+  _no_name_provided__179.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -42726,9 +43800,6 @@
     this._BLOCK_SIZE = 128;
     this._BLOCK_BYTE_SIZE = 32768;
   }
-  BLKCompiler.prototype.compileSpriteFromImageBytes_rzv9xi_k$ = function (images, colorEncoding_0, callback) {
-    return this.compileSpriteFromImageBytes_6zxs78_k$(images, false, colorEncoding_0, callback);
-  };
   BLKCompiler.prototype.compileSpriteFromImageBytes_6zxs78_k$ = function (images, keepBlack, colorEncoding_0, callback) {
     if (images._get_size__0_k$() > 1) {
       throw Exception_init_$Create$('BLK compiler can only compile one image at a time');
@@ -42773,19 +43844,19 @@
     return BLKCompiler_instance;
   }
   function _no_name_provided_$factory_144($callback) {
-    var i = new _no_name_provided__175($callback);
+    var i = new _no_name_provided__177($callback);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
   }
   function _no_name_provided_$factory_145($callback) {
-    var i = new _no_name_provided__176($callback);
+    var i = new _no_name_provided__178($callback);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
   }
   function _no_name_provided_$factory_146($tmp1_safe_receiver) {
-    var i = new _no_name_provided__177($tmp1_safe_receiver);
+    var i = new _no_name_provided__179($tmp1_safe_receiver);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
@@ -42804,7 +43875,7 @@
             $l$block_1: {
               var tmp_0;
               var tmp0_elvis_lhs_1_1_1 = tmp0_iIf_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
+              if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
                 tmp_0 = '**LOG1** ';
               } else {
                 {
@@ -42955,47 +44026,16 @@
     Unit_getInstance();
     return new Pair(thisBuffer._get_bytes__0_k$(), lineOffsets);
   }
-  function _no_name_provided__178($callback) {
+  function _no_name_provided__180($callback) {
     this._$callback_1 = $callback;
   }
-  _no_name_provided__178.prototype.invoke_27zxwg_k$ = function (current, total) {
+  _no_name_provided__180.prototype.invoke_27zxwg_k$ = function (current, total) {
     var tmp0_safe_receiver = this._$callback_1;
     if ((tmp0_safe_receiver == null ? null : tmp0_safe_receiver(1, current, total)) === false) {
       throw SpriteCompilerCancelledException_init_$Create$('Cancelled compilation of C16 during image read', null, 2, null);
     } else {
     }
     return true;
-  };
-  _no_name_provided__178.prototype.invoke_osx4an_k$ = function (p1, p2) {
-    var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
-    return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
-  };
-  _no_name_provided__178.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__179($callback) {
-    this._$callback_2 = $callback;
-  }
-  _no_name_provided__179.prototype.invoke_27zxwg_k$ = function (current, total) {
-    var tmp0_safe_receiver = this._$callback_2;
-    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver(2, current, total);
-  };
-  _no_name_provided__179.prototype.invoke_osx4an_k$ = function (p1, p2) {
-    var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
-    return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
-  };
-  _no_name_provided__179.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__180($tmp2_safe_receiver) {
-    this._$tmp2_safe_receiver = $tmp2_safe_receiver;
-  }
-  _no_name_provided__180.prototype.invoke_27zxwg_k$ = function (current, total) {
-    if (this._$tmp2_safe_receiver(current, total) === false) {
-      throw SpriteCompilerCancelledException_init_$Create$('S16 compilation cancelled during compiler phase', null, 2, null);
-    }return true;
   };
   _no_name_provided__180.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
@@ -43005,14 +44045,42 @@
     kind: 'class',
     interfaces: []
   };
+  function _no_name_provided__181($callback) {
+    this._$callback_2 = $callback;
+  }
+  _no_name_provided__181.prototype.invoke_27zxwg_k$ = function (current, total) {
+    var tmp0_safe_receiver = this._$callback_2;
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver(2, current, total);
+  };
+  _no_name_provided__181.prototype.invoke_osx4an_k$ = function (p1, p2) {
+    var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
+    return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
+  };
+  _no_name_provided__181.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__182($tmp2_safe_receiver) {
+    this._$tmp2_safe_receiver = $tmp2_safe_receiver;
+  }
+  _no_name_provided__182.prototype.invoke_27zxwg_k$ = function (current, total) {
+    if (this._$tmp2_safe_receiver(current, total) === false) {
+      throw SpriteCompilerCancelledException_init_$Create$('S16 compilation cancelled during compiler phase', null, 2, null);
+    }return true;
+  };
+  _no_name_provided__182.prototype.invoke_osx4an_k$ = function (p1, p2) {
+    var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
+    return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
+  };
+  _no_name_provided__182.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
   function C16Compiler() {
     C16Compiler_instance = this;
     this._SPRITE_HEADER_SIZE_0 = 6;
     this._IMAGE_HEADER_SIZE_0 = 8;
   }
-  C16Compiler.prototype.compileSpriteFromImageBytes_rzv9xi_k$ = function (images, colorEncoding_0, callback) {
-    return this.compileSpriteFromImageBytes_6zxs78_k$(images, false, colorEncoding_0, callback);
-  };
   C16Compiler.prototype.compileSpriteFromImageBytes_6zxs78_k$ = function (images, keepBlack, colorEncoding_0, callback) {
     var tmp = ImageLoader_getInstance();
     var bitmaps = tmp.loadMany_1zh2rf_k$(images, _no_name_provided_$factory_147(callback));
@@ -43050,7 +44118,7 @@
             $l$block_3: {
               var tmp_1;
               var tmp0_elvis_lhs_1_1_1 = tmp0_iIf_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
+              if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
                 tmp_1 = '**LOG1** ';
               } else {
                 {
@@ -43194,19 +44262,19 @@
     return C16Compiler_instance;
   }
   function _no_name_provided_$factory_147($callback) {
-    var i = new _no_name_provided__178($callback);
+    var i = new _no_name_provided__180($callback);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
   }
   function _no_name_provided_$factory_148($callback) {
-    var i = new _no_name_provided__179($callback);
+    var i = new _no_name_provided__181($callback);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
   }
   function _no_name_provided_$factory_149($tmp2_safe_receiver) {
-    var i = new _no_name_provided__180($tmp2_safe_receiver);
+    var i = new _no_name_provided__182($tmp2_safe_receiver);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
@@ -43226,21 +44294,21 @@
     var tmp0_elvis_lhs = $this._get_supportedFormats__0_k$().get_2bw_k$(extensionUpper);
     return tmp0_elvis_lhs == null ? extensionUpper === 'PSD' ? PSD_getInstance() : null : tmp0_elvis_lhs;
   }
-  function _no_name_provided__181() {
+  function _no_name_provided__183() {
   }
-  _no_name_provided__181.prototype.invoke_0_k$ = function () {
+  _no_name_provided__183.prototype.invoke_0_k$ = function () {
     return mapOf([to('PNG', PNG_getInstance()), to('BMP', MyBMP_getInstance()), to('GIF', GIF_getInstance())]);
   };
-  _no_name_provided__181.$metadata$ = {
+  _no_name_provided__183.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__182() {
+  function _no_name_provided__184() {
   }
-  _no_name_provided__182.prototype.invoke_0_k$ = function () {
+  _no_name_provided__184.prototype.invoke_0_k$ = function () {
     return ImageLoader_getInstance()._get_supportedFormats__0_k$()._get_keys__0_k$();
   };
-  _no_name_provided__182.$metadata$ = {
+  _no_name_provided__184.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -43479,13 +44547,13 @@
     }, null);
   }
   function _no_name_provided_$factory_150() {
-    var i = new _no_name_provided__181();
+    var i = new _no_name_provided__183();
     return function () {
       return i.invoke_0_k$();
     };
   }
   function _no_name_provided_$factory_151() {
-    var i = new _no_name_provided__182();
+    var i = new _no_name_provided__184();
     return function () {
       return i.invoke_0_k$();
     };
@@ -43504,7 +44572,7 @@
             $l$block_1: {
               var tmp_0;
               var tmp0_elvis_lhs_1_1_1 = tmp0_iIf_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
+              if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
                 tmp_0 = '**LOG1** ';
               } else {
                 {
@@ -43580,47 +44648,16 @@
       throw SpriteCompileException_init_$Create$(tmp_4, null, 2, null);
     }return written;
   }
-  function _no_name_provided__183($callback) {
+  function _no_name_provided__185($callback) {
     this._$callback_3 = $callback;
   }
-  _no_name_provided__183.prototype.invoke_27zxwg_k$ = function (current, total) {
+  _no_name_provided__185.prototype.invoke_27zxwg_k$ = function (current, total) {
     var tmp0_safe_receiver = this._$callback_3;
     if ((tmp0_safe_receiver == null ? null : tmp0_safe_receiver(1, current, total)) === false) {
       throw SpriteCompilerCancelledException_init_$Create$('Cancelled SPR compilation during image loading phase', null, 2, null);
     } else {
     }
     return true;
-  };
-  _no_name_provided__183.prototype.invoke_osx4an_k$ = function (p1, p2) {
-    var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
-    return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
-  };
-  _no_name_provided__183.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__184($callback) {
-    this._$callback_4 = $callback;
-  }
-  _no_name_provided__184.prototype.invoke_27zxwg_k$ = function (current, total) {
-    var tmp0_safe_receiver = this._$callback_4;
-    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver(2, current, total);
-  };
-  _no_name_provided__184.prototype.invoke_osx4an_k$ = function (p1, p2) {
-    var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
-    return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
-  };
-  _no_name_provided__184.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__185($tmp2_safe_receiver) {
-    this._$tmp2_safe_receiver_0 = $tmp2_safe_receiver;
-  }
-  _no_name_provided__185.prototype.invoke_27zxwg_k$ = function (current, total) {
-    if (this._$tmp2_safe_receiver_0(current, total) === false) {
-      throw SpriteCompilerCancelledException_init_$Create$('S16 compilation cancelled during compiler phase', null, 2, null);
-    }return true;
   };
   _no_name_provided__185.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
@@ -43630,14 +44667,42 @@
     kind: 'class',
     interfaces: []
   };
+  function _no_name_provided__186($callback) {
+    this._$callback_4 = $callback;
+  }
+  _no_name_provided__186.prototype.invoke_27zxwg_k$ = function (current, total) {
+    var tmp0_safe_receiver = this._$callback_4;
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver(2, current, total);
+  };
+  _no_name_provided__186.prototype.invoke_osx4an_k$ = function (p1, p2) {
+    var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
+    return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
+  };
+  _no_name_provided__186.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__187($tmp2_safe_receiver) {
+    this._$tmp2_safe_receiver_0 = $tmp2_safe_receiver;
+  }
+  _no_name_provided__187.prototype.invoke_27zxwg_k$ = function (current, total) {
+    if (this._$tmp2_safe_receiver_0(current, total) === false) {
+      throw SpriteCompilerCancelledException_init_$Create$('S16 compilation cancelled during compiler phase', null, 2, null);
+    }return true;
+  };
+  _no_name_provided__187.prototype.invoke_osx4an_k$ = function (p1, p2) {
+    var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
+    return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
+  };
+  _no_name_provided__187.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
   function S16Compiler() {
     S16Compiler_instance = this;
     this._SPRITE_HEADER_SIZE_1 = 6;
     this._IMAGE_HEADER_SIZE_1 = 8;
   }
-  S16Compiler.prototype.compileSpriteFromImageBytes_rzv9xi_k$ = function (images, colorEncoding_0, callback) {
-    return this.compileSpriteFromImageBytes_6zxs78_k$(images, false, colorEncoding_0, callback);
-  };
   S16Compiler.prototype.compileSpriteFromImageBytes_6zxs78_k$ = function (images, keepBlack, colorEncoding_0, callback) {
     var tmp = ImageLoader_getInstance();
     var bitmaps = tmp.loadMany_1zh2rf_k$(images, _no_name_provided_$factory_152(callback));
@@ -43691,7 +44756,7 @@
               $l$block_3: {
                 var tmp_1;
                 var tmp0_elvis_lhs_1_1_1 = tmp0_iIf_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
+                if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
                   tmp_1 = '**LOG1** ';
                 } else {
                   {
@@ -43791,7 +44856,7 @@
             $l$block_8: {
               var tmp_9;
               var tmp0_elvis_lhs_1_1_1_0 = tmp2_iIf_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1_0) {
+              if (tmp0_elvis_lhs_1_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1_0) {
                 tmp_9 = '**LOG1** ';
               } else {
                 {
@@ -43840,19 +44905,19 @@
     return S16Compiler_instance;
   }
   function _no_name_provided_$factory_152($callback) {
-    var i = new _no_name_provided__183($callback);
+    var i = new _no_name_provided__185($callback);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
   }
   function _no_name_provided_$factory_153($callback) {
-    var i = new _no_name_provided__184($callback);
+    var i = new _no_name_provided__186($callback);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
   }
   function _no_name_provided_$factory_154($tmp2_safe_receiver) {
-    var i = new _no_name_provided__185($tmp2_safe_receiver);
+    var i = new _no_name_provided__187($tmp2_safe_receiver);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
@@ -43965,9 +45030,9 @@
       }
        while (inductionVariable < height);
   }
-  function _no_name_provided__186() {
+  function _no_name_provided__188() {
   }
-  _no_name_provided__186.prototype.invoke_0_k$ = function () {
+  _no_name_provided__188.prototype.invoke_0_k$ = function () {
     var tmp$ret$4;
     $l$block_3: {
       var tmp0_filter_0 = numberRangeToNumber(1, 255);
@@ -44013,23 +45078,23 @@
     }
     return tmp$ret$4;
   };
-  _no_name_provided__186.$metadata$ = {
+  _no_name_provided__188.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__187() {
+  function _no_name_provided__189() {
   }
-  _no_name_provided__187.prototype.invoke_0_k$ = function () {
+  _no_name_provided__189.prototype.invoke_0_k$ = function () {
     return first(_get_otherBlacks_(SprCompiler_getInstance()));
   };
-  _no_name_provided__187.$metadata$ = {
+  _no_name_provided__189.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__188($callback) {
+  function _no_name_provided__190($callback) {
     this._$callback_5 = $callback;
   }
-  _no_name_provided__188.prototype.invoke_27zxwg_k$ = function (current, total) {
+  _no_name_provided__190.prototype.invoke_27zxwg_k$ = function (current, total) {
     var tmp0_safe_receiver = this._$callback_5;
     if ((tmp0_safe_receiver == null ? null : tmp0_safe_receiver(1, current, total)) === false) {
       throw SpriteCompilerCancelledException_init_$Create$('Cancelled SPR compilation during image loading phase', null, 2, null);
@@ -44037,42 +45102,42 @@
     }
     return true;
   };
-  _no_name_provided__188.prototype.invoke_osx4an_k$ = function (p1, p2) {
-    var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
-    return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
-  };
-  _no_name_provided__188.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__189($callback) {
-    this._$callback_6 = $callback;
-  }
-  _no_name_provided__189.prototype.invoke_27zxwg_k$ = function (current, total) {
-    var tmp0_safe_receiver = this._$callback_6;
-    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver(2, current, total);
-  };
-  _no_name_provided__189.prototype.invoke_osx4an_k$ = function (p1, p2) {
-    var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
-    return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
-  };
-  _no_name_provided__189.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__190($tmp0_safe_receiver) {
-    this._$tmp0_safe_receiver = $tmp0_safe_receiver;
-  }
-  _no_name_provided__190.prototype.invoke_27zxwg_k$ = function (current, total) {
-    if (this._$tmp0_safe_receiver(current, total) === false) {
-      throw SpriteCompilerCancelledException_init_$Create$('SPR compilation cancelled during compiler phase', null, 2, null);
-    }return true;
-  };
   _no_name_provided__190.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
   _no_name_provided__190.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__191($callback) {
+    this._$callback_6 = $callback;
+  }
+  _no_name_provided__191.prototype.invoke_27zxwg_k$ = function (current, total) {
+    var tmp0_safe_receiver = this._$callback_6;
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver(2, current, total);
+  };
+  _no_name_provided__191.prototype.invoke_osx4an_k$ = function (p1, p2) {
+    var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
+    return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
+  };
+  _no_name_provided__191.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__192($tmp0_safe_receiver) {
+    this._$tmp0_safe_receiver = $tmp0_safe_receiver;
+  }
+  _no_name_provided__192.prototype.invoke_27zxwg_k$ = function (current, total) {
+    if (this._$tmp0_safe_receiver(current, total) === false) {
+      throw SpriteCompilerCancelledException_init_$Create$('SPR compilation cancelled during compiler phase', null, 2, null);
+    }return true;
+  };
+  _no_name_provided__192.prototype.invoke_osx4an_k$ = function (p1, p2) {
+    var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
+    return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
+  };
+  _no_name_provided__192.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -44087,9 +45152,6 @@
     var tmp_0 = this;
     tmp_0._solidBlack$delegate = lazy(_no_name_provided_$factory_156());
   }
-  SprCompiler.prototype.compileSpriteFromImageBytes_rzv9xi_k$ = function (images, colorEncoding_0, callback) {
-    return this.compileSpriteFromImageBytes_6zxs78_k$(images, false, colorEncoding_0, callback);
-  };
   SprCompiler.prototype.compileSpriteFromImageBytes_6zxs78_k$ = function (images, keepBlack, colorEncoding_0, callback) {
     var tmp = ImageLoader_getInstance();
     var bitmaps = tmp.loadMany_1zh2rf_k$(images, _no_name_provided_$factory_157(callback));
@@ -44199,31 +45261,31 @@
     }, null);
   }
   function _no_name_provided_$factory_155() {
-    var i = new _no_name_provided__186();
+    var i = new _no_name_provided__188();
     return function () {
       return i.invoke_0_k$();
     };
   }
   function _no_name_provided_$factory_156() {
-    var i = new _no_name_provided__187();
+    var i = new _no_name_provided__189();
     return function () {
       return i.invoke_0_k$();
     };
   }
   function _no_name_provided_$factory_157($callback) {
-    var i = new _no_name_provided__188($callback);
+    var i = new _no_name_provided__190($callback);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
   }
   function _no_name_provided_$factory_158($callback) {
-    var i = new _no_name_provided__189($callback);
+    var i = new _no_name_provided__191($callback);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
   }
   function _no_name_provided_$factory_159($tmp0_safe_receiver) {
-    var i = new _no_name_provided__190($tmp0_safe_receiver);
+    var i = new _no_name_provided__192($tmp0_safe_receiver);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
@@ -44237,9 +45299,9 @@
     }
     return tmp$ret$0;
   }
-  function _no_name_provided__191() {
+  function _no_name_provided__193() {
   }
-  _no_name_provided__191.prototype.invoke_0_k$ = function () {
+  _no_name_provided__193.prototype.invoke_0_k$ = function () {
     var black = 0;
     var i = 0;
     while (black === 0) {
@@ -44250,7 +45312,7 @@
     }
     return black;
   };
-  _no_name_provided__191.$metadata$ = {
+  _no_name_provided__193.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -44301,12 +45363,14 @@
   }
   function SpriteCompiler() {
   }
-  SpriteCompiler.prototype.compileSpriteFromImageBytes$default_h46oqk_k$ = function (images, colorEncoding_0, callback, $mask0, $handler) {
+  SpriteCompiler.prototype.compileSpriteFromImageBytes$default_ouf8qm_k$ = function (images, keepBlack, colorEncoding_0, callback, $mask0, $handler) {
     if (!(($mask0 & 2) === 0))
-      colorEncoding_0 = Companion_getInstance_69()._ENCODING_DEFAULT;
+      keepBlack = false;
     if (!(($mask0 & 4) === 0))
+      colorEncoding_0 = Companion_getInstance_69()._ENCODING_DEFAULT;
+    if (!(($mask0 & 8) === 0))
       callback = null;
-    return $handler == null ? this.compileSpriteFromImageBytes_rzv9xi_k$(images, colorEncoding_0, callback) : $handler(images, colorEncoding_0, callback);
+    return $handler == null ? this.compileSpriteFromImageBytes_6zxs78_k$(images, keepBlack, colorEncoding_0, callback) : $handler(images, keepBlack, colorEncoding_0, callback);
   };
   SpriteCompiler.prototype.compileSpriteFromLoadedImages$default_8h3m8r_k$ = function (images, keepBlack, colorEncoding_0, callback, $mask0, $handler) {
     if (!(($mask0 & 2) === 0))
@@ -44368,13 +45432,13 @@
     }, null);
   }
   function _no_name_provided_$factory_160() {
-    var i = new _no_name_provided__191();
+    var i = new _no_name_provided__193();
     return function () {
       return i.invoke_0_k$();
     };
   }
   var PART_REGEX;
-  function convertBodyPart(originalFileName, bytesBuffer, fromGame, toGame, toColorEncoding, imagesPointer, progressive, callback) {
+  function convertBodyPart(originalFileName, bytesBuffer, fromGame, toGame, toColorEncoding, imagesPointer, progressive, sameSize, sizes, callback) {
     if (toGame.equals(GameVariant_SM_getInstance()) ? true : fromGame.equals(GameVariant_SM_getInstance())) {
       throw Exception_init_$Create$('No converters registered for SeaMonkeys');
     }var tmp0_elvis_lhs = PART_REGEX.find$default_5nuume_k$(originalFileName, 0, 2, null);
@@ -44429,11 +45493,11 @@
     var encoding = tmp_1;
     var tmp_2 = SpriteParser_getInstance();
     var images = tmp_2.parse$default_zwetn_k$(originalFileName, bytesBuffer, false, 0, _no_name_provided_$factory_161(callback), 8, null);
-    var mapped = remap(images, fromGame, toGame, progressive, part, imagesPointer);
+    var mapped = remap(images, fromGame, toGame, progressive, part, imagesPointer, sameSize, sizes);
     var compiler = Companion_getInstance_60().getCompiler_v3krwk_k$(_get_spriteType_(toGame));
     return compiler.compileSpriteFromLoadedImages_kx4ton_k$(mapped, true, encoding, _no_name_provided_$factory_162(callback));
   }
-  function convertBodyPart_0(fileName, bytesBuffer, toGame, toColorEncoding, imagesPointer, progressive, callback) {
+  function convertBodyPart_0(fileName, bytesBuffer, toGame, toColorEncoding, imagesPointer, progressive, sameSize, sizes, callback) {
     var tmp0_elvis_lhs = FileNameUtil_getInstance().getExtension_6wfw3l_k$(fileName);
     var tmp;
     if (tmp0_elvis_lhs == null) {
@@ -44455,12 +45519,12 @@
     }
     var extension = tmp;
     var fromGame = extensionToGame(extension);
-    return convertBodyPart(fileName, bytesBuffer, fromGame, toGame, toColorEncoding, imagesPointer, progressive, callback);
+    return convertBodyPart(fileName, bytesBuffer, fromGame, toGame, toColorEncoding, imagesPointer, progressive, sameSize, sizes, callback);
   }
   function validateFromLength(fromGame, part, size_0) {
     return size_0 === getExpectedPartFrameCount(fromGame, part);
   }
-  function remap(images, fromGame, toGame, progressive, part, imagesPointer) {
+  function remap(images, fromGame, toGame, progressive, part, imagesPointer, sameSize, sizes) {
     var tmp0_elvis_lhs = getConverter(images, fromGame, toGame, part, progressive);
     var tmp;
     if (tmp0_elvis_lhs == null) {
@@ -44502,7 +45566,14 @@
       tmp$ret$2 = tmp$ret$1;
       break $l$block_1;
     }
-    return tmp$ret$2;
+    var out = tmp$ret$2;
+    var tmp_0;
+    if (sameSize) {
+      tmp_0 = makeSameSize(out, sizes);
+    } else {
+      tmp_0 = out;
+    }
+    return tmp_0;
   }
   function _get_spriteType_(_this_) {
     var tmp0_subject = _this_;
@@ -44608,7 +45679,7 @@
           $l$block_1: {
             var tmp_1;
             var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
               tmp_1 = '**ERROR** ';
             } else {
               {
@@ -44648,63 +45719,63 @@
     }
     return tmp;
   }
-  function _no_name_provided__192($callback) {
+  function _no_name_provided__194($callback) {
     this._$callback_7 = $callback;
   }
-  _no_name_provided__192.prototype.invoke_27zxwg_k$ = function (current, total) {
+  _no_name_provided__194.prototype.invoke_27zxwg_k$ = function (current, total) {
     var tmp0_safe_receiver = this._$callback_7;
     return tmp0_safe_receiver == null ? null : tmp0_safe_receiver(1, current, total);
   };
-  _no_name_provided__192.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__194.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
-  };
-  _no_name_provided__192.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__193($callback) {
-    this._$callback_8 = $callback;
-  }
-  _no_name_provided__193.prototype.invoke_27zxwg_k$ = function (current, total) {
-    var tmp0_safe_receiver = this._$callback_8;
-    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver(2, current, total);
-  };
-  _no_name_provided__193.prototype.invoke_osx4an_k$ = function (p1, p2) {
-    var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
-    return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
-  };
-  _no_name_provided__193.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__194($images) {
-    this._$images = $images;
-  }
-  _no_name_provided__194.prototype.invoke_ha5a7z_k$ = function (i) {
-    return this._$images.get_ha5a7z_k$(i);
-  };
-  _no_name_provided__194.prototype.invoke_20e8_k$ = function (p1) {
-    return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
   _no_name_provided__194.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
+  function _no_name_provided__195($callback) {
+    this._$callback_8 = $callback;
+  }
+  _no_name_provided__195.prototype.invoke_27zxwg_k$ = function (current, total) {
+    var tmp0_safe_receiver = this._$callback_8;
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver(2, current, total);
+  };
+  _no_name_provided__195.prototype.invoke_osx4an_k$ = function (p1, p2) {
+    var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
+    return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
+  };
+  _no_name_provided__195.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__196($images) {
+    this._$images = $images;
+  }
+  _no_name_provided__196.prototype.invoke_ha5a7z_k$ = function (i) {
+    return this._$images.get_ha5a7z_k$(i);
+  };
+  _no_name_provided__196.prototype.invoke_20e8_k$ = function (p1) {
+    return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
+  };
+  _no_name_provided__196.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
   function _no_name_provided_$factory_161($callback) {
-    var i = new _no_name_provided__192($callback);
+    var i = new _no_name_provided__194($callback);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
   }
   function _no_name_provided_$factory_162($callback) {
-    var i = new _no_name_provided__193($callback);
+    var i = new _no_name_provided__195($callback);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
   }
   function _no_name_provided_$factory_163($images) {
-    var i = new _no_name_provided__194($images);
+    var i = new _no_name_provided__196($images);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
@@ -44713,10 +45784,120 @@
     var tmp$ret$0;
     $l$block: {
       var tmp0_toRegex_0 = RegexOption_IGNORE_CASE_getInstance();
-      tmp$ret$0 = Regex_init_$Create$('([a-qA-Q])[0-7]\\d[a-zA-Z0-9]\\.(SPR|S16|C16)', tmp0_toRegex_0);
+      tmp$ret$0 = Regex_init_$Create$('([a-qA-Q])[0-7]\\d[a-zA-Z\\d]\\.(SPR|S16|C16)', tmp0_toRegex_0);
       break $l$block;
     }
     return tmp$ret$0;
+  }
+  function makeSameSize(images, sizes) {
+    var tmp$ret$2;
+    $l$block_1: {
+      var iterator_1 = images.iterator_0_k$();
+      if (!iterator_1.hasNext_0_k$())
+        throw NoSuchElementException_init_$Create$();
+      var tmp$ret$0;
+      $l$block: {
+        var tmp0__anonymous__4 = iterator_1.next_0_k$();
+        tmp$ret$0 = tmp0__anonymous__4._get_width__0_k$();
+        break $l$block;
+      }
+      var maxValue_2 = tmp$ret$0;
+      while (iterator_1.hasNext_0_k$()) {
+        var tmp$ret$1;
+        $l$block_0: {
+          var tmp1__anonymous__4 = iterator_1.next_0_k$();
+          tmp$ret$1 = tmp1__anonymous__4._get_width__0_k$();
+          break $l$block_0;
+        }
+        var v_3 = tmp$ret$1;
+        if (compareTo(maxValue_2, v_3) < 0) {
+          maxValue_2 = v_3;
+        }}
+      tmp$ret$2 = maxValue_2;
+      break $l$block_1;
+    }
+    var width = tmp$ret$2;
+    var tmp$ret$5;
+    $l$block_4: {
+      var iterator_1_0 = images.iterator_0_k$();
+      if (!iterator_1_0.hasNext_0_k$())
+        throw NoSuchElementException_init_$Create$();
+      var tmp$ret$3;
+      $l$block_2: {
+        var tmp2__anonymous__4 = iterator_1_0.next_0_k$();
+        tmp$ret$3 = tmp2__anonymous__4._get_height__0_k$();
+        break $l$block_2;
+      }
+      var maxValue_2_0 = tmp$ret$3;
+      while (iterator_1_0.hasNext_0_k$()) {
+        var tmp$ret$4;
+        $l$block_3: {
+          var tmp3__anonymous__4 = iterator_1_0.next_0_k$();
+          tmp$ret$4 = tmp3__anonymous__4._get_height__0_k$();
+          break $l$block_3;
+        }
+        var v_3_0 = tmp$ret$4;
+        if (compareTo(maxValue_2_0, v_3_0) < 0) {
+          maxValue_2_0 = v_3_0;
+        }}
+      tmp$ret$5 = maxValue_2_0;
+      break $l$block_4;
+    }
+    var height = tmp$ret$5;
+    var theSizes = mutableListOf([new Tuple(width, height)]);
+    var tmp$ret$8;
+    $l$block_7: {
+      var tmp$ret$7;
+      $l$block_6: {
+        var tmp0_mapTo_0_1 = ArrayList_init_$Create$_0(collectionSizeOrDefault(images, 10));
+        var tmp0_iterator_1_2 = images.iterator_0_k$();
+        while (tmp0_iterator_1_2.hasNext_0_k$()) {
+          var item_2_3 = tmp0_iterator_1_2.next_0_k$();
+          var tmp$ret$6;
+          $l$block_5: {
+            var image_5 = Bitmap32_init_$Create$(width, height, null, false, 12, null);
+            var frameWidth_6 = item_2_3._get_width__0_k$();
+            var frameHeight_7 = item_2_3._get_height__0_k$();
+            theSizes.add_2bq_k$(new Tuple(frameWidth_6, frameHeight_7));
+            Unit_getInstance();
+            var offsetX_8 = (width - frameWidth_6 | 0) / 2 | 0;
+            var offsetY_9 = (height - frameHeight_7 | 0) / 2 | 0;
+            item_2_3.copy_ffs0tm_k$(0, 0, image_5, offsetX_8, offsetY_9, frameWidth_6, frameHeight_7);
+            tmp$ret$6 = image_5;
+            break $l$block_5;
+          }
+          tmp0_mapTo_0_1.add_2bq_k$(tmp$ret$6);
+          Unit_getInstance();
+        }
+        tmp$ret$7 = tmp0_mapTo_0_1;
+        break $l$block_6;
+      }
+      tmp$ret$8 = tmp$ret$7;
+      break $l$block_7;
+    }
+    var temp = tmp$ret$8;
+    var tmp0_safe_receiver = sizes;
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      var tmp$ret$10;
+      $l$block_9: {
+        {
+        }
+        var tmp = tmp0_safe_receiver;
+        var tmp$ret$9;
+        $l$block_8: {
+          tmp$ret$9 = copyToArray_0(theSizes);
+          break $l$block_8;
+        }
+        tmp._value_2 = tmp$ret$9;
+        tmp$ret$10 = Unit_getInstance();
+        break $l$block_9;
+      }
+      Unit_getInstance();
+    }
+    Unit_getInstance();
+    return temp;
   }
   function getC1Converter(images, game, part, progressive) {
     if (like(game, GameVariant_C1_getInstance())) {
@@ -44751,7 +45932,7 @@
           $l$block_1: {
             var tmp_1;
             var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
               tmp_1 = '**ERROR** ';
             } else {
               {
@@ -44804,27 +45985,27 @@
     var framesPerMood = framesFacing * 2.0;
     return _no_name_provided_$factory_166(framesFacing, framesPerMood, frontRange, convertFrame, images);
   }
-  function _no_name_provided__195($images) {
+  function _no_name_provided__197($images) {
     this._$images_0 = $images;
   }
-  _no_name_provided__195.prototype.invoke_ha5a7z_k$ = function (i) {
+  _no_name_provided__197.prototype.invoke_ha5a7z_k$ = function (i) {
     return this._$images_0.get_ha5a7z_k$(i);
   };
-  _no_name_provided__195.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__197.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__195.$metadata$ = {
+  _no_name_provided__197.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__196($frontHappy, $frontNeutral, $frontSad, $frontAngry, $back) {
+  function _no_name_provided__198($frontHappy, $frontNeutral, $frontSad, $frontAngry, $back) {
     this._$frontHappy = $frontHappy;
     this._$frontNeutral = $frontNeutral;
     this._$frontSad = $frontSad;
     this._$frontAngry = $frontAngry;
     this._$back = $back;
   }
-  _no_name_provided__196.prototype.invoke_oz2wwp_k$ = function (direction, mood, eyesClosed, frame) {
+  _no_name_provided__198.prototype.invoke_oz2wwp_k$ = function (direction, mood, eyesClosed, frame) {
     var tmp0_subject = direction;
     var tmp;
     switch (tmp0_subject) {
@@ -44870,24 +46051,24 @@
     }
     return tmp_1;
   };
-  _no_name_provided__196.prototype.invoke_rsz85a_k$ = function (p1, p2, p3, p4) {
+  _no_name_provided__198.prototype.invoke_rsz85a_k$ = function (p1, p2, p3, p4) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     var tmp_0 = (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE();
     var tmp_1 = (!(p3 == null) ? typeof p3 === 'boolean' : false) ? p3 : THROW_CCE();
     return this.invoke_oz2wwp_k$(tmp, tmp_0, tmp_1, (!(p4 == null) ? typeof p4 === 'number' : false) ? p4 : THROW_CCE());
   };
-  _no_name_provided__196.$metadata$ = {
+  _no_name_provided__198.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__197($framesFacing, $framesPerMood, $frontRange, $convertFrame, $images) {
+  function _no_name_provided__199($framesFacing, $framesPerMood, $frontRange, $convertFrame, $images) {
     this._$framesFacing = $framesFacing;
     this._$framesPerMood = $framesPerMood;
     this._$frontRange = $frontRange;
     this._$convertFrame = $convertFrame;
     this._$images_1 = $images;
   }
-  _no_name_provided__197.prototype.invoke_ha5a7z_k$ = function (i) {
+  _no_name_provided__199.prototype.invoke_ha5a7z_k$ = function (i) {
     var frame = i % this._$framesFacing;
     var eyesClosed = i % this._$framesPerMood >= this._$framesFacing;
     var tmp$ret$0;
@@ -44915,27 +46096,27 @@
     frame = this._$convertFrame(direction, mood, eyesClosed, frame);
     return this._$images_1.get_ha5a7z_k$(frame);
   };
-  _no_name_provided__197.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__199.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__197.$metadata$ = {
+  _no_name_provided__199.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_164($images) {
-    var i = new _no_name_provided__195($images);
+    var i = new _no_name_provided__197($images);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
   }
   function _no_name_provided_$factory_165($frontHappy, $frontNeutral, $frontSad, $frontAngry, $back) {
-    var i = new _no_name_provided__196($frontHappy, $frontNeutral, $frontSad, $frontAngry, $back);
+    var i = new _no_name_provided__198($frontHappy, $frontNeutral, $frontSad, $frontAngry, $back);
     return function (p1, p2, p3, p4) {
       return i.invoke_oz2wwp_k$(p1, p2, p3, p4);
     };
   }
   function _no_name_provided_$factory_166($framesFacing, $framesPerMood, $frontRange, $convertFrame, $images) {
-    var i = new _no_name_provided__197($framesFacing, $framesPerMood, $frontRange, $convertFrame, $images);
+    var i = new _no_name_provided__199($framesFacing, $framesPerMood, $frontRange, $convertFrame, $images);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
@@ -44975,7 +46156,7 @@
           $l$block_1: {
             var tmp_1;
             var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
               tmp_1 = '**ERROR** ';
             } else {
               {
@@ -45028,22 +46209,22 @@
     var framesPerMood = framesFacing * 2.0;
     return _no_name_provided_$factory_170(framesFacing, framesPerMood, frontRange, convertFrame, images);
   }
-  function _no_name_provided__198($images) {
+  function _no_name_provided__200($images) {
     this._$images_2 = $images;
   }
-  _no_name_provided__198.prototype.invoke_ha5a7z_k$ = function (i) {
+  _no_name_provided__200.prototype.invoke_ha5a7z_k$ = function (i) {
     return this._$images_2.get_ha5a7z_k$(i);
   };
-  _no_name_provided__198.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__200.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__198.$metadata$ = {
+  _no_name_provided__200.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__199() {
+  function _no_name_provided__201() {
   }
-  _no_name_provided__199.prototype.invoke_oz2wwp_k$ = function (direction, mood, eyesClosed, frame) {
+  _no_name_provided__201.prototype.invoke_oz2wwp_k$ = function (direction, mood, eyesClosed, frame) {
     var tmp0_subject = direction;
     {
       var out;
@@ -45066,21 +46247,21 @@
     }
     return tmp;
   };
-  _no_name_provided__199.prototype.invoke_rsz85a_k$ = function (p1, p2, p3, p4) {
+  _no_name_provided__201.prototype.invoke_rsz85a_k$ = function (p1, p2, p3, p4) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     var tmp_0 = (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE();
     var tmp_1 = (!(p3 == null) ? typeof p3 === 'boolean' : false) ? p3 : THROW_CCE();
     return this.invoke_oz2wwp_k$(tmp, tmp_0, tmp_1, (!(p4 == null) ? typeof p4 === 'number' : false) ? p4 : THROW_CCE());
   };
-  _no_name_provided__199.$metadata$ = {
+  _no_name_provided__201.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__200($convertFrame, $images) {
+  function _no_name_provided__202($convertFrame, $images) {
     this._$convertFrame_0 = $convertFrame;
     this._$images_3 = $images;
   }
-  _no_name_provided__200.prototype.invoke_ha5a7z_k$ = function (i) {
+  _no_name_provided__202.prototype.invoke_ha5a7z_k$ = function (i) {
     var frame = i % 13;
     var eyesClosed = i >= 13;
     var tmp0_subject = frame;
@@ -45112,21 +46293,21 @@
     frame = this._$convertFrame_0(direction, mood, eyesClosed, frame);
     return this._$images_3.get_ha5a7z_k$(frame);
   };
-  _no_name_provided__200.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__202.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__200.$metadata$ = {
+  _no_name_provided__202.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__201($framesFacing, $framesPerMood, $frontRange, $convertFrame, $images) {
+  function _no_name_provided__203($framesFacing, $framesPerMood, $frontRange, $convertFrame, $images) {
     this._$framesFacing_0 = $framesFacing;
     this._$framesPerMood_0 = $framesPerMood;
     this._$frontRange_0 = $frontRange;
     this._$convertFrame_1 = $convertFrame;
     this._$images_4 = $images;
   }
-  _no_name_provided__201.prototype.invoke_ha5a7z_k$ = function (i) {
+  _no_name_provided__203.prototype.invoke_ha5a7z_k$ = function (i) {
     var frame = i % this._$framesFacing_0;
     var eyesClosed = i % this._$framesPerMood_0 >= this._$framesFacing_0;
     var tmp$ret$0;
@@ -45154,33 +46335,33 @@
     frame = this._$convertFrame_1(direction, mood, eyesClosed, frame);
     return this._$images_4.get_ha5a7z_k$(frame);
   };
-  _no_name_provided__201.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__203.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__201.$metadata$ = {
+  _no_name_provided__203.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_167($images) {
-    var i = new _no_name_provided__198($images);
+    var i = new _no_name_provided__200($images);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
   }
   function _no_name_provided_$factory_168() {
-    var i = new _no_name_provided__199();
+    var i = new _no_name_provided__201();
     return function (p1, p2, p3, p4) {
       return i.invoke_oz2wwp_k$(p1, p2, p3, p4);
     };
   }
   function _no_name_provided_$factory_169($convertFrame, $images) {
-    var i = new _no_name_provided__200($convertFrame, $images);
+    var i = new _no_name_provided__202($convertFrame, $images);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
   }
   function _no_name_provided_$factory_170($framesFacing, $framesPerMood, $frontRange, $convertFrame, $images) {
-    var i = new _no_name_provided__201($framesFacing, $framesPerMood, $frontRange, $convertFrame, $images);
+    var i = new _no_name_provided__203($framesFacing, $framesPerMood, $frontRange, $convertFrame, $images);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
@@ -45195,7 +46376,7 @@
           $l$block_1: {
             var tmp_0;
             var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
               tmp_0 = '**ERROR** ';
             } else {
               {
@@ -45272,22 +46453,22 @@
       }}
     return true;
   }
-  function _no_name_provided__202($images) {
+  function _no_name_provided__204($images) {
     this._$images_5 = $images;
   }
-  _no_name_provided__202.prototype.invoke_ha5a7z_k$ = function (i) {
+  _no_name_provided__204.prototype.invoke_ha5a7z_k$ = function (i) {
     return this._$images_5.get_ha5a7z_k$(i);
   };
-  _no_name_provided__202.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__204.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__202.$metadata$ = {
+  _no_name_provided__204.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__203() {
+  function _no_name_provided__205() {
   }
-  _no_name_provided__203.prototype.invoke_oz2wwp_k$ = function (direction, mood, eyesClosed, frame) {
+  _no_name_provided__205.prototype.invoke_oz2wwp_k$ = function (direction, mood, eyesClosed, frame) {
     var tmp0_subject = direction;
     {
       var out;
@@ -45310,21 +46491,21 @@
     }
     return tmp;
   };
-  _no_name_provided__203.prototype.invoke_rsz85a_k$ = function (p1, p2, p3, p4) {
+  _no_name_provided__205.prototype.invoke_rsz85a_k$ = function (p1, p2, p3, p4) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     var tmp_0 = (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE();
     var tmp_1 = (!(p3 == null) ? typeof p3 === 'boolean' : false) ? p3 : THROW_CCE();
     return this.invoke_oz2wwp_k$(tmp, tmp_0, tmp_1, (!(p4 == null) ? typeof p4 === 'number' : false) ? p4 : THROW_CCE());
   };
-  _no_name_provided__203.$metadata$ = {
+  _no_name_provided__205.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__204($game, $framesPerMood) {
+  function _no_name_provided__206($game, $framesPerMood) {
     this._$game = $game;
     this._$framesPerMood_1 = $framesPerMood;
   }
-  _no_name_provided__204.prototype.invoke_ha5a7z_k$ = function (frame) {
+  _no_name_provided__206.prototype.invoke_ha5a7z_k$ = function (frame) {
     var tmp0_subject = this._$game;
     var tmp;
     if (tmp0_subject.equals(GameVariant_C2_getInstance())) {
@@ -45355,17 +46536,17 @@
     }
     return tmp;
   };
-  _no_name_provided__204.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__206.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__204.$metadata$ = {
+  _no_name_provided__206.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__205($images) {
+  function _no_name_provided__207($images) {
     this._$images_6 = $images;
   }
-  _no_name_provided__205.prototype.invoke_ha5a7z_k$ = function (frameIn) {
+  _no_name_provided__207.prototype.invoke_ha5a7z_k$ = function (frameIn) {
     var tmp0_subject = frameIn;
     var tmp;
     if (0 <= tmp0_subject ? tmp0_subject <= 3 : false) {
@@ -45379,14 +46560,14 @@
     var image = this._$images_6.get_ha5a7z_k$(frame);
     return image.flipX_0_k$().toBMP32IfRequired_0_k$();
   };
-  _no_name_provided__205.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__207.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__205.$metadata$ = {
+  _no_name_provided__207.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__206($framesFacing, $framesPerMood, $getMood, $convertFrame, $images, $getMirrored) {
+  function _no_name_provided__208($framesFacing, $framesPerMood, $getMood, $convertFrame, $images, $getMirrored) {
     this._$framesFacing_1 = $framesFacing;
     this._$framesPerMood_2 = $framesPerMood;
     this._$getMood = $getMood;
@@ -45394,7 +46575,7 @@
     this._$images_7 = $images;
     this._$getMirrored = $getMirrored;
   }
-  _no_name_provided__206.prototype.invoke_ha5a7z_k$ = function (i) {
+  _no_name_provided__208.prototype.invoke_ha5a7z_k$ = function (i) {
     var frame = i % this._$framesFacing_1;
     var eyesClosed = i % this._$framesPerMood_2 >= this._$framesFacing_1;
     var mood = this._$getMood(frame);
@@ -45417,18 +46598,18 @@
     }
     return tmp_0;
   };
-  _no_name_provided__206.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__208.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__206.$metadata$ = {
+  _no_name_provided__208.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__207($part, $images) {
+  function _no_name_provided__209($part, $images) {
     this._$part = $part;
     this._$images_8 = $images;
   }
-  _no_name_provided__207.prototype.invoke_ha5a7z_k$ = function (i) {
+  _no_name_provided__209.prototype.invoke_ha5a7z_k$ = function (i) {
     var tmp;
     if (0 <= i ? i <= 7 : false) {
       tmp = i;
@@ -45442,64 +46623,64 @@
     var frame = tmp;
     return this._$images_8.get_ha5a7z_k$(frame);
   };
-  _no_name_provided__207.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__209.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__207.$metadata$ = {
+  _no_name_provided__209.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__208($images) {
+  function _no_name_provided__210($images) {
     this._$images_9 = $images;
   }
-  _no_name_provided__208.prototype.invoke_ha5a7z_k$ = function (i) {
+  _no_name_provided__210.prototype.invoke_ha5a7z_k$ = function (i) {
     return this._$images_9.get_ha5a7z_k$(i);
   };
-  _no_name_provided__208.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__210.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__208.$metadata$ = {
+  _no_name_provided__210.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_171($images) {
-    var i = new _no_name_provided__202($images);
+    var i = new _no_name_provided__204($images);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
   }
   function _no_name_provided_$factory_172() {
-    var i = new _no_name_provided__203();
+    var i = new _no_name_provided__205();
     return function (p1, p2, p3, p4) {
       return i.invoke_oz2wwp_k$(p1, p2, p3, p4);
     };
   }
   function _no_name_provided_$factory_173($game, $framesPerMood) {
-    var i = new _no_name_provided__204($game, $framesPerMood);
+    var i = new _no_name_provided__206($game, $framesPerMood);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
   }
   function _no_name_provided_$factory_174($images) {
-    var i = new _no_name_provided__205($images);
+    var i = new _no_name_provided__207($images);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
   }
   function _no_name_provided_$factory_175($framesFacing, $framesPerMood, $getMood, $convertFrame, $images, $getMirrored) {
-    var i = new _no_name_provided__206($framesFacing, $framesPerMood, $getMood, $convertFrame, $images, $getMirrored);
+    var i = new _no_name_provided__208($framesFacing, $framesPerMood, $getMood, $convertFrame, $images, $getMirrored);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
   }
   function _no_name_provided_$factory_176($part, $images) {
-    var i = new _no_name_provided__207($part, $images);
+    var i = new _no_name_provided__209($part, $images);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
   }
   function _no_name_provided_$factory_177($images) {
-    var i = new _no_name_provided__208($images);
+    var i = new _no_name_provided__210($images);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
@@ -45527,7 +46708,7 @@
           $l$block_1: {
             var tmp_1;
             var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
               tmp_1 = '**ERROR** ';
             } else {
               {
@@ -45725,20 +46906,20 @@
        while (inductionVariable <= last_2);
     return out;
   }
-  function _no_name_provided__209($images) {
+  function _no_name_provided__211($images) {
     this._$images_10 = $images;
   }
-  _no_name_provided__209.prototype.invoke_ha5a7z_k$ = function (i) {
+  _no_name_provided__211.prototype.invoke_ha5a7z_k$ = function (i) {
     return this._$images_10.get_ha5a7z_k$(i);
   };
-  _no_name_provided__209.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__211.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__209.$metadata$ = {
+  _no_name_provided__211.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__210($framesFacing, $side, $frontRange, $front, $back, $images) {
+  function _no_name_provided__212($framesFacing, $side, $frontRange, $front, $back, $images) {
     this._$framesFacing_2 = $framesFacing;
     this._$side = $side;
     this._$frontRange_1 = $frontRange;
@@ -45746,7 +46927,7 @@
     this._$back_0 = $back;
     this._$images_11 = $images;
   }
-  _no_name_provided__210.prototype.invoke_ha5a7z_k$ = function (i) {
+  _no_name_provided__212.prototype.invoke_ha5a7z_k$ = function (i) {
     var frame = i % this._$framesFacing_2;
     var tmp0_subject = frame;
     var tmp;
@@ -45768,18 +46949,18 @@
     frame = tmp;
     return this._$images_11.get_ha5a7z_k$(frame);
   };
-  _no_name_provided__210.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__212.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__210.$metadata$ = {
+  _no_name_provided__212.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__211($images, $left) {
+  function _no_name_provided__213($images, $left) {
     this._$images_12 = $images;
     this._$left = $left;
   }
-  _no_name_provided__211.prototype.invoke_ha5a7z_k$ = function (frame) {
+  _no_name_provided__213.prototype.invoke_ha5a7z_k$ = function (frame) {
     var tmp0_subject = frame;
     var tmp;
     if (0 <= tmp0_subject ? tmp0_subject <= 7 : false) {
@@ -45803,18 +46984,18 @@
     }
     return tmp;
   };
-  _no_name_provided__211.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__213.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__211.$metadata$ = {
+  _no_name_provided__213.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__212($images, $left) {
+  function _no_name_provided__214($images, $left) {
     this._$images_13 = $images;
     this._$left_0 = $left;
   }
-  _no_name_provided__212.prototype.invoke_ha5a7z_k$ = function (frame) {
+  _no_name_provided__214.prototype.invoke_ha5a7z_k$ = function (frame) {
     var tmp0_subject = frame;
     var tmp;
     if (0 <= tmp0_subject ? tmp0_subject <= 7 : false) {
@@ -45840,33 +47021,33 @@
     }
     return tmp;
   };
-  _no_name_provided__212.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__214.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__212.$metadata$ = {
+  _no_name_provided__214.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_178($images) {
-    var i = new _no_name_provided__209($images);
+    var i = new _no_name_provided__211($images);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
   }
   function _no_name_provided_$factory_179($framesFacing, $side, $frontRange, $front, $back, $images) {
-    var i = new _no_name_provided__210($framesFacing, $side, $frontRange, $front, $back, $images);
+    var i = new _no_name_provided__212($framesFacing, $side, $frontRange, $front, $back, $images);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
   }
   function _no_name_provided_$factory_180($images, $left) {
-    var i = new _no_name_provided__211($images, $left);
+    var i = new _no_name_provided__213($images, $left);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
   }
   function _no_name_provided_$factory_181($images, $left) {
-    var i = new _no_name_provided__212($images, $left);
+    var i = new _no_name_provided__214($images, $left);
     return function (p1) {
       return i.invoke_ha5a7z_k$(p1);
     };
@@ -45877,44 +47058,44 @@
     var tmp_0 = Companion_getInstance_60().getCompiler_v3krwk_k$(toSpriteType);
     return tmp_0.compileSpriteFromLoadedImages_kx4ton_k$(images, true, colorEncoding_0, _no_name_provided_$factory_183(callback));
   }
-  function _no_name_provided__213($callback) {
+  function _no_name_provided__215($callback) {
     this._$callback_9 = $callback;
   }
-  _no_name_provided__213.prototype.invoke_27zxwg_k$ = function (current, total) {
+  _no_name_provided__215.prototype.invoke_27zxwg_k$ = function (current, total) {
     var tmp0_safe_receiver = this._$callback_9;
     return tmp0_safe_receiver == null ? null : tmp0_safe_receiver(1, current, total);
   };
-  _no_name_provided__213.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__215.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__213.$metadata$ = {
+  _no_name_provided__215.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__214($callback) {
+  function _no_name_provided__216($callback) {
     this._$callback_10 = $callback;
   }
-  _no_name_provided__214.prototype.invoke_27zxwg_k$ = function (current, total) {
+  _no_name_provided__216.prototype.invoke_27zxwg_k$ = function (current, total) {
     var tmp0_safe_receiver = this._$callback_10;
     return tmp0_safe_receiver == null ? null : tmp0_safe_receiver(2, current, total);
   };
-  _no_name_provided__214.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__216.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__214.$metadata$ = {
+  _no_name_provided__216.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_182($callback) {
-    var i = new _no_name_provided__213($callback);
+    var i = new _no_name_provided__215($callback);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
   }
   function _no_name_provided_$factory_183($callback) {
-    var i = new _no_name_provided__214($callback);
+    var i = new _no_name_provided__216($callback);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
@@ -46058,17 +47239,17 @@
       new Companion_62();
     return Companion_instance_61;
   }
-  function _no_name_provided__215(this$0) {
-    this._this$0_28 = this$0;
+  function _no_name_provided__217(this$0) {
+    this._this$0_29 = this$0;
   }
-  _no_name_provided__215.prototype.invoke_3p24ox_k$ = function ($this$readAt) {
-    initFrames($this$readAt, this._this$0_28);
+  _no_name_provided__217.prototype.invoke_3p24ox_k$ = function ($this$readAt) {
+    initFrames($this$readAt, this._this$0_29);
   };
-  _no_name_provided__215.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__217.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_3p24ox_k$((!(p1 == null) ? isInterface(p1, ByteStreamReader) : false) ? p1 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__215.$metadata$ = {
+  _no_name_provided__217.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -46125,12 +47306,12 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__216($width, $height, $encoding) {
+  function _no_name_provided__218($width, $height, $encoding) {
     this._$width_0 = $width;
     this._$height_0 = $height;
     this._$encoding = $encoding;
   }
-  _no_name_provided__216.prototype.invoke_r02v3k_k$ = function ($this$readAt) {
+  _no_name_provided__218.prototype.invoke_r02v3k_k$ = function ($this$readAt) {
     var image = Bitmap32_init_$Create$(this._$width_0, this._$height_0, null, false, 12, null);
     var toRgb = this._$encoding._get_toRgb__0_k$();
     var inductionVariable = 0;
@@ -46154,10 +47335,10 @@
        while (inductionVariable < last_2);
     return image;
   };
-  _no_name_provided__216.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__218.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_r02v3k_k$((!(p1 == null) ? isInterface(p1, ByteStreamReader) : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__216.$metadata$ = {
+  _no_name_provided__218.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -46225,14 +47406,14 @@
     interfaces: []
   };
   function _no_name_provided_$factory_184(this$0) {
-    var i = new _no_name_provided__215(this$0);
+    var i = new _no_name_provided__217(this$0);
     return function (p1) {
       i.invoke_3p24ox_k$(p1);
       return Unit_getInstance();
     };
   }
   function _no_name_provided_$factory_185($width, $height, $encoding) {
-    var i = new _no_name_provided__216($width, $height, $encoding);
+    var i = new _no_name_provided__218($width, $height, $encoding);
     return function (p1) {
       return i.invoke_r02v3k_k$(p1);
     };
@@ -46354,18 +47535,18 @@
       new Companion_64();
     return Companion_instance_63;
   }
-  function _no_name_provided__217(this$0, $keepBlack) {
-    this._this$0_29 = this$0;
+  function _no_name_provided__219(this$0, $keepBlack) {
+    this._this$0_30 = this$0;
     this._$keepBlack = $keepBlack;
   }
-  _no_name_provided__217.prototype.invoke_3p24ox_k$ = function ($this$readAt) {
-    initFrames_0($this$readAt, this._this$0_29, this._$keepBlack);
+  _no_name_provided__219.prototype.invoke_3p24ox_k$ = function ($this$readAt) {
+    initFrames_0($this$readAt, this._this$0_30, this._$keepBlack);
   };
-  _no_name_provided__217.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__219.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_3p24ox_k$((!(p1 == null) ? isInterface(p1, ByteStreamReader) : false) ? p1 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__217.$metadata$ = {
+  _no_name_provided__219.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -46403,7 +47584,7 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__218($endOffset, $width, $height, $encoding, $index, $black) {
+  function _no_name_provided__220($endOffset, $width, $height, $encoding, $index, $black) {
     this._$endOffset = $endOffset;
     this._$width_1 = $width;
     this._$height_1 = $height;
@@ -46411,7 +47592,7 @@
     this._$index = $index;
     this._$black = $black;
   }
-  _no_name_provided__218.prototype.invoke_r02v3k_k$ = function ($this$readAt) {
+  _no_name_provided__220.prototype.invoke_r02v3k_k$ = function ($this$readAt) {
     if (toLong(_get_lastIndex__3($this$readAt)).compareTo_wiekkq_k$(this._$endOffset) < 0) {
       throw Exception_init_$Create$('' + 'Not enough bytes for next C16 image. Position ' + this._$endOffset + ' > limit ' + _get_lastIndex__3($this$readAt));
     }var image = Bitmap32_init_$Create$(this._$width_1, this._$height_1, null, false, 12, null);
@@ -46454,10 +47635,10 @@
        while (inductionVariable < last_2);
     return image;
   };
-  _no_name_provided__218.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__220.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_r02v3k_k$((!(p1 == null) ? isInterface(p1, ByteStreamReader) : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__218.$metadata$ = {
+  _no_name_provided__220.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -46528,14 +47709,14 @@
     interfaces: []
   };
   function _no_name_provided_$factory_186(this$0, $keepBlack) {
-    var i = new _no_name_provided__217(this$0, $keepBlack);
+    var i = new _no_name_provided__219(this$0, $keepBlack);
     return function (p1) {
       i.invoke_3p24ox_k$(p1);
       return Unit_getInstance();
     };
   }
   function _no_name_provided_$factory_187($endOffset, $width, $height, $encoding, $index, $black) {
-    var i = new _no_name_provided__218($endOffset, $width, $height, $encoding, $index, $black);
+    var i = new _no_name_provided__220($endOffset, $width, $height, $encoding, $index, $black);
     return function (p1) {
       return i.invoke_r02v3k_k$(p1);
     };
@@ -46770,18 +47951,18 @@
       new Companion_66();
     return Companion_instance_65;
   }
-  function _no_name_provided__219(this$0, $keepBlack) {
-    this._this$0_30 = this$0;
+  function _no_name_provided__221(this$0, $keepBlack) {
+    this._this$0_31 = this$0;
     this._$keepBlack_0 = $keepBlack;
   }
-  _no_name_provided__219.prototype.invoke_3p24ox_k$ = function ($this$readAt) {
-    initFrames_1($this$readAt, this._this$0_30, this._$keepBlack_0);
+  _no_name_provided__221.prototype.invoke_3p24ox_k$ = function ($this$readAt) {
+    initFrames_1($this$readAt, this._this$0_31, this._$keepBlack_0);
   };
-  _no_name_provided__219.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__221.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_3p24ox_k$((!(p1 == null) ? isInterface(p1, ByteStreamReader) : false) ? p1 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__219.$metadata$ = {
+  _no_name_provided__221.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -46819,13 +48000,13 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__220($width, $height, $encoding, $black) {
+  function _no_name_provided__222($width, $height, $encoding, $black) {
     this._$width_2 = $width;
     this._$height_2 = $height;
     this._$encoding_1 = $encoding;
     this._$black_0 = $black;
   }
-  _no_name_provided__220.prototype.invoke_r02v3k_k$ = function ($this$readAt) {
+  _no_name_provided__222.prototype.invoke_r02v3k_k$ = function ($this$readAt) {
     var image = Bitmap32_init_$Create$(this._$width_2, this._$height_2, null, false, 12, null);
     var toRgb = this._$encoding_1._get_toRgb__0_k$();
     var inductionVariable = 0;
@@ -46853,10 +48034,10 @@
        while (inductionVariable < last_2);
     return image;
   };
-  _no_name_provided__220.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__222.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_r02v3k_k$((!(p1 == null) ? isInterface(p1, ByteStreamReader) : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__220.$metadata$ = {
+  _no_name_provided__222.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -46925,14 +48106,14 @@
     interfaces: []
   };
   function _no_name_provided_$factory_188(this$0, $keepBlack) {
-    var i = new _no_name_provided__219(this$0, $keepBlack);
+    var i = new _no_name_provided__221(this$0, $keepBlack);
     return function (p1) {
       i.invoke_3p24ox_k$(p1);
       return Unit_getInstance();
     };
   }
   function _no_name_provided_$factory_189($width, $height, $encoding, $black) {
-    var i = new _no_name_provided__220($width, $height, $encoding, $black);
+    var i = new _no_name_provided__222($width, $height, $encoding, $black);
     return function (p1) {
       return i.invoke_r02v3k_k$(p1);
     };
@@ -46999,18 +48180,18 @@
       new Companion_68();
     return Companion_instance_67;
   }
-  function _no_name_provided__221(this$0, $black) {
-    this._this$0_31 = this$0;
+  function _no_name_provided__223(this$0, $black) {
+    this._this$0_32 = this$0;
     this._$black_1 = $black;
   }
-  _no_name_provided__221.prototype.invoke_3p24ox_k$ = function ($this$readAt) {
-    initFrames_2($this$readAt, this._this$0_31, this._$black_1);
+  _no_name_provided__223.prototype.invoke_3p24ox_k$ = function ($this$readAt) {
+    initFrames_2($this$readAt, this._this$0_32, this._$black_1);
   };
-  _no_name_provided__221.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__223.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_3p24ox_k$((!(p1 == null) ? isInterface(p1, ByteStreamReader) : false) ? p1 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__221.$metadata$ = {
+  _no_name_provided__223.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -47107,18 +48288,18 @@
     }
     return out;
   }
-  function _no_name_provided__222($width, $height, $black) {
+  function _no_name_provided__224($width, $height, $black) {
     this._$width_3 = $width;
     this._$height_3 = $height;
     this._$black_2 = $black;
   }
-  _no_name_provided__222.prototype.invoke_r02v3k_k$ = function ($this$readAt) {
+  _no_name_provided__224.prototype.invoke_r02v3k_k$ = function ($this$readAt) {
     return readFrame($this$readAt, Companion_getInstance_68(), this._$width_3, this._$height_3, this._$black_2);
   };
-  _no_name_provided__222.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__224.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_r02v3k_k$((!(p1 == null) ? isInterface(p1, ByteStreamReader) : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__222.$metadata$ = {
+  _no_name_provided__224.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -47186,14 +48367,14 @@
     interfaces: []
   };
   function _no_name_provided_$factory_190(this$0, $black) {
-    var i = new _no_name_provided__221(this$0, $black);
+    var i = new _no_name_provided__223(this$0, $black);
     return function (p1) {
       i.invoke_3p24ox_k$(p1);
       return Unit_getInstance();
     };
   }
   function _no_name_provided_$factory_191($width, $height, $black) {
-    var i = new _no_name_provided__222($width, $height, $black);
+    var i = new _no_name_provided__224($width, $height, $black);
     return function (p1) {
       return i.invoke_r02v3k_k$(p1);
     };
@@ -47212,7 +48393,7 @@
             $l$block_1: {
               var tmp_0;
               var tmp0_elvis_lhs_1_1_1 = tmp0_iIf_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
+              if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
                 tmp_0 = '**LOG1** ';
               } else {
                 {
@@ -47264,15 +48445,15 @@
     }if (!$this._closed_0) {
       throw Exception_init_$Create$('Failed to close byte stream');
     }}
-  function _no_name_provided__223(this$0) {
-    this._this$0_32 = this$0;
+  function _no_name_provided__225(this$0) {
+    this._this$0_33 = this$0;
   }
-  _no_name_provided__223.prototype.invoke_0_k$ = function () {
-    var tmp0_safe_receiver = this._this$0_32._progressCallback;
+  _no_name_provided__225.prototype.invoke_0_k$ = function () {
+    var tmp0_safe_receiver = this._this$0_33._progressCallback;
     if (tmp0_safe_receiver == null)
       null;
     else
-      tmp0_safe_receiver(0, this._this$0_32._get_size__0_k$());
+      tmp0_safe_receiver(0, this._this$0_33._get_size__0_k$());
     Unit_getInstance();
     {
       var tmp0_iIf_0 = Log_getInstance();
@@ -47285,7 +48466,7 @@
             $l$block_1: {
               var tmp_0;
               var tmp0_elvis_lhs_1_1_1 = tmp0_iIf_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
+              if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
                 tmp_0 = '**LOG1** ';
               } else {
                 {
@@ -47311,7 +48492,7 @@
               var tmp_3 = tmp_2;
               var tmp$ret$1;
               $l$block_0: {
-                tmp$ret$1 = '' + 'Getting frames in ' + className$factory_0(this._this$0_32);
+                tmp$ret$1 = '' + 'Getting frames in ' + className$factory_0(this._this$0_33);
                 break $l$block_0;
               }
               tmp$ret$2 = '' + tmp_1 + tmp_3 + tmp$ret$1;
@@ -47324,7 +48505,7 @@
     $l$block_5: {
       var tmp$ret$5;
       $l$block_4: {
-        var tmp2_mapIndexed_0 = this._this$0_32._get_mFrames__0_k$();
+        var tmp2_mapIndexed_0 = this._this$0_33._get_mFrames__0_k$();
         var tmp$ret$4;
         $l$block_3: {
           var tmp0_mapIndexedTo_0_1 = ArrayList_init_$Create$_0(collectionSizeOrDefault(tmp2_mapIndexed_0, 10));
@@ -47337,9 +48518,9 @@
               var tmp1_4_5 = index_1_2;
               index_1_2 = tmp1_4_5 + 1 | 0;
               var tmp3__anonymous__6 = checkIndexOverflow(tmp1_4_5);
-              if (tmp3__anonymous__6 % this._this$0_32._progressChunkSize === 0) {
-                var tmp0_safe_receiver_7 = this._this$0_32._progressCallback;
-                if ((tmp0_safe_receiver_7 == null ? null : tmp0_safe_receiver_7(tmp3__anonymous__6, this._this$0_32._get_size__0_k$())) === false) {
+              if (tmp3__anonymous__6 % this._this$0_33._progressChunkSize === 0) {
+                var tmp0_safe_receiver_7 = this._this$0_33._progressCallback;
+                if ((tmp0_safe_receiver_7 == null ? null : tmp0_safe_receiver_7(tmp3__anonymous__6, this._this$0_33._get_size__0_k$())) === false) {
                   throw SpriteParserCancelledException_init_$Create$('Parse sprite was cancelled during compile', null, 2, null);
                 } else {
                 }
@@ -47359,14 +48540,14 @@
       {
       }
       {
-        closeFully(this._this$0_32);
+        closeFully(this._this$0_33);
       }
       tmp$ret$6 = tmp4_apply_0;
       break $l$block_5;
     }
     return tmp$ret$6;
   };
-  _no_name_provided__223.$metadata$ = {
+  _no_name_provided__225.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -47407,13 +48588,13 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__224(this$0) {
-    this._this$0_33 = this$0;
+  function _no_name_provided__226(this$0) {
+    this._this$0_34 = this$0;
   }
-  _no_name_provided__224.prototype.invoke_0_k$ = function () {
-    return this._this$0_33.decodeActual_0_k$();
+  _no_name_provided__226.prototype.invoke_0_k$ = function () {
+    return this._this$0_34.decodeActual_0_k$();
   };
-  _no_name_provided__224.$metadata$ = {
+  _no_name_provided__226.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -47464,48 +48645,48 @@
     }, null);
   }
   function _no_name_provided_$factory_192(this$0) {
-    var i = new _no_name_provided__223(this$0);
+    var i = new _no_name_provided__225(this$0);
     return function () {
       return i.invoke_0_k$();
     };
   }
   function _no_name_provided_$factory_193(this$0) {
-    var i = new _no_name_provided__224(this$0);
+    var i = new _no_name_provided__226(this$0);
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided__225($progressCallback) {
+  function _no_name_provided__227($progressCallback) {
     this._$progressCallback = $progressCallback;
   }
-  _no_name_provided__225.prototype.invoke_27zxwg_k$ = function (i, count) {
+  _no_name_provided__227.prototype.invoke_27zxwg_k$ = function (i, count) {
     var tmp0_safe_receiver = this._$progressCallback;
     return tmp0_safe_receiver == null ? null : tmp0_safe_receiver(1, i, count);
   };
-  _no_name_provided__225.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__227.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__225.$metadata$ = {
+  _no_name_provided__227.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__226($progressCallback) {
+  function _no_name_provided__228($progressCallback) {
     this._$progressCallback_0 = $progressCallback;
   }
-  _no_name_provided__226.prototype.invoke_rvwcgf_k$ = function (i, count) {
+  _no_name_provided__228.prototype.invoke_rvwcgf_k$ = function (i, count) {
     var tmp0_safe_receiver = this._$progressCallback_0;
     if ((tmp0_safe_receiver == null ? null : tmp0_safe_receiver(2, i, count)) === false) {
       throw SpriteParserCancelledException_init_$Create$('Stitch BLK was cancelled during compile', null, 2, null);
     } else {
     }
   };
-  _no_name_provided__226.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__228.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     this.invoke_rvwcgf_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__226.$metadata$ = {
+  _no_name_provided__228.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -47524,7 +48705,7 @@
             $l$block_1: {
               var tmp_0;
               var tmp0_elvis_lhs_1_1_1 = tmp0_iIf_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
+              if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
                 tmp_0 = '**LOG1** ';
               } else {
                 {
@@ -47731,46 +48912,46 @@
     interfaces: []
   };
   function _no_name_provided_$factory_194($progressCallback) {
-    var i = new _no_name_provided__225($progressCallback);
+    var i = new _no_name_provided__227($progressCallback);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
   }
   function _no_name_provided_$factory_195($progressCallback) {
-    var i = new _no_name_provided__226($progressCallback);
+    var i = new _no_name_provided__228($progressCallback);
     return function (p1, p2) {
       i.invoke_rvwcgf_k$(p1, p2);
       return Unit_getInstance();
     };
   }
-  function _no_name_provided__227(this$0) {
-    this._this$0_34 = this$0;
+  function _no_name_provided__229(this$0) {
+    this._this$0_35 = this$0;
   }
-  _no_name_provided__227.prototype.invoke_fcwjfj_k$ = function (red, green, blue) {
-    return (red & this._this$0_34._encodeBitMasks._first_0) << this._this$0_34._bitShifts._first_0 | (green & this._this$0_34._encodeBitMasks._second_0) << this._this$0_34._bitShifts._second_0 | (blue & this._this$0_34._encodeBitMasks._third) >> this._this$0_34._bitShifts._third;
+  _no_name_provided__229.prototype.invoke_fcwjfj_k$ = function (red, green, blue) {
+    return (red & this._this$0_35._encodeBitMasks._first_0) << this._this$0_35._bitShifts._first_0 | (green & this._this$0_35._encodeBitMasks._second_0) << this._this$0_35._bitShifts._second_0 | (blue & this._this$0_35._encodeBitMasks._third) >> this._this$0_35._bitShifts._third;
   };
-  _no_name_provided__227.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
+  _no_name_provided__229.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     var tmp_0 = (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE();
     return this.invoke_fcwjfj_k$(tmp, tmp_0, (!(p3 == null) ? typeof p3 === 'number' : false) ? p3 : THROW_CCE());
   };
-  _no_name_provided__227.$metadata$ = {
+  _no_name_provided__229.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__228(this$0) {
-    this._this$0_35 = this$0;
+  function _no_name_provided__230(this$0) {
+    this._this$0_36 = this$0;
   }
-  _no_name_provided__228.prototype.invoke_kxqjbk_k$ = function (pixel) {
-    var red = (pixel & this._this$0_35._decodeBitMask._first_0) >> this._this$0_35._bitShifts._first_0;
-    var green = (pixel & this._this$0_35._decodeBitMask._second_0) >> this._this$0_35._bitShifts._second_0;
-    var blue = (pixel & this._this$0_35._decodeBitMask._third) << this._this$0_35._bitShifts._third;
+  _no_name_provided__230.prototype.invoke_kxqjbk_k$ = function (pixel) {
+    var red = (pixel & this._this$0_36._decodeBitMask._first_0) >> this._this$0_36._bitShifts._first_0;
+    var green = (pixel & this._this$0_36._decodeBitMask._second_0) >> this._this$0_36._bitShifts._second_0;
+    var blue = (pixel & this._this$0_36._decodeBitMask._third) << this._this$0_36._bitShifts._third;
     return Companion_getInstance_57().invoke_fnl2i9_k$(red, green, blue, 255);
   };
-  _no_name_provided__228.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__230.prototype.invoke_20e8_k$ = function (p1) {
     return new RGBA(this.invoke_kxqjbk_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE()));
   };
-  _no_name_provided__228.$metadata$ = {
+  _no_name_provided__230.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -47820,23 +49001,23 @@
       new Companion_70();
     return Companion_instance_69;
   }
-  function _no_name_provided__229(this$0) {
-    this._this$0_36 = this$0;
+  function _no_name_provided__231(this$0) {
+    this._this$0_37 = this$0;
   }
-  _no_name_provided__229.prototype.invoke_0_k$ = function () {
-    return _no_name_provided_$factory_198(this._this$0_36);
+  _no_name_provided__231.prototype.invoke_0_k$ = function () {
+    return _no_name_provided_$factory_198(this._this$0_37);
   };
-  _no_name_provided__229.$metadata$ = {
+  _no_name_provided__231.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__230(this$0) {
-    this._this$0_37 = this$0;
+  function _no_name_provided__232(this$0) {
+    this._this$0_38 = this$0;
   }
-  _no_name_provided__230.prototype.invoke_0_k$ = function () {
-    return _no_name_provided_$factory_199(this._this$0_37);
+  _no_name_provided__232.prototype.invoke_0_k$ = function () {
+    return _no_name_provided_$factory_199(this._this$0_38);
   };
-  _no_name_provided__230.$metadata$ = {
+  _no_name_provided__232.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -47929,25 +49110,25 @@
     }, null);
   }
   function _no_name_provided_$factory_196(this$0) {
-    var i = new _no_name_provided__229(this$0);
+    var i = new _no_name_provided__231(this$0);
     return function () {
       return i.invoke_0_k$();
     };
   }
   function _no_name_provided_$factory_197(this$0) {
-    var i = new _no_name_provided__230(this$0);
+    var i = new _no_name_provided__232(this$0);
     return function () {
       return i.invoke_0_k$();
     };
   }
   function _no_name_provided_$factory_198(this$0) {
-    var i = new _no_name_provided__227(this$0);
+    var i = new _no_name_provided__229(this$0);
     return function (p1, p2, p3) {
       return i.invoke_fcwjfj_k$(p1, p2, p3);
     };
   }
   function _no_name_provided_$factory_199(this$0) {
-    var i = new _no_name_provided__228(this$0);
+    var i = new _no_name_provided__230(this$0);
     return function (p1) {
       return new RGBA(i.invoke_kxqjbk_k$(p1));
     };
@@ -48189,38 +49370,10 @@
     }
     return tmp;
   }
-  function _no_name_provided__231() {
-  }
-  _no_name_provided__231.prototype.invoke_fqcrmv_k$ = function (bytes, keepBlack, progressCallback) {
-    return (new SprSpriteFile(bytes, keepBlack, 1, progressCallback))._get_frames__0_k$();
-  };
-  _no_name_provided__231.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
-    var tmp = (!(p1 == null) ? isInterface(p1, ByteStreamReader) : false) ? p1 : THROW_CCE();
-    var tmp_0 = (!(p2 == null) ? typeof p2 === 'boolean' : false) ? p2 : THROW_CCE();
-    return this.invoke_fqcrmv_k$(tmp, tmp_0, (p3 == null ? true : typeof p3 === 'function') ? p3 : THROW_CCE());
-  };
-  _no_name_provided__231.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__232() {
-  }
-  _no_name_provided__232.prototype.invoke_fqcrmv_k$ = function (bytes, keepBlack, progressCallback) {
-    return (new S16SpriteFile(bytes, keepBlack, 1, progressCallback))._get_frames__0_k$();
-  };
-  _no_name_provided__232.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
-    var tmp = (!(p1 == null) ? isInterface(p1, ByteStreamReader) : false) ? p1 : THROW_CCE();
-    var tmp_0 = (!(p2 == null) ? typeof p2 === 'boolean' : false) ? p2 : THROW_CCE();
-    return this.invoke_fqcrmv_k$(tmp, tmp_0, (p3 == null ? true : typeof p3 === 'function') ? p3 : THROW_CCE());
-  };
-  _no_name_provided__232.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
   function _no_name_provided__233() {
   }
   _no_name_provided__233.prototype.invoke_fqcrmv_k$ = function (bytes, keepBlack, progressCallback) {
-    return (new C16SpriteFile(bytes, keepBlack, 1, progressCallback))._get_frames__0_k$();
+    return (new SprSpriteFile(bytes, keepBlack, 1, progressCallback))._get_frames__0_k$();
   };
   _no_name_provided__233.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
     var tmp = (!(p1 == null) ? isInterface(p1, ByteStreamReader) : false) ? p1 : THROW_CCE();
@@ -48233,8 +49386,8 @@
   };
   function _no_name_provided__234() {
   }
-  _no_name_provided__234.prototype.invoke_fqcrmv_k$ = function (bytes, _anonymous_parameter_1_, progressCallback) {
-    return (new BlkSpriteFile(bytes, 1, progressCallback))._get_frames__0_k$();
+  _no_name_provided__234.prototype.invoke_fqcrmv_k$ = function (bytes, keepBlack, progressCallback) {
+    return (new S16SpriteFile(bytes, keepBlack, 1, progressCallback))._get_frames__0_k$();
   };
   _no_name_provided__234.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
     var tmp = (!(p1 == null) ? isInterface(p1, ByteStreamReader) : false) ? p1 : THROW_CCE();
@@ -48247,7 +49400,35 @@
   };
   function _no_name_provided__235() {
   }
-  _no_name_provided__235.prototype.invoke_r02v3k_k$ = function ($this$readAt) {
+  _no_name_provided__235.prototype.invoke_fqcrmv_k$ = function (bytes, keepBlack, progressCallback) {
+    return (new C16SpriteFile(bytes, keepBlack, 1, progressCallback))._get_frames__0_k$();
+  };
+  _no_name_provided__235.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
+    var tmp = (!(p1 == null) ? isInterface(p1, ByteStreamReader) : false) ? p1 : THROW_CCE();
+    var tmp_0 = (!(p2 == null) ? typeof p2 === 'boolean' : false) ? p2 : THROW_CCE();
+    return this.invoke_fqcrmv_k$(tmp, tmp_0, (p3 == null ? true : typeof p3 === 'function') ? p3 : THROW_CCE());
+  };
+  _no_name_provided__235.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__236() {
+  }
+  _no_name_provided__236.prototype.invoke_fqcrmv_k$ = function (bytes, _anonymous_parameter_1_, progressCallback) {
+    return (new BlkSpriteFile(bytes, 1, progressCallback))._get_frames__0_k$();
+  };
+  _no_name_provided__236.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
+    var tmp = (!(p1 == null) ? isInterface(p1, ByteStreamReader) : false) ? p1 : THROW_CCE();
+    var tmp_0 = (!(p2 == null) ? typeof p2 === 'boolean' : false) ? p2 : THROW_CCE();
+    return this.invoke_fqcrmv_k$(tmp, tmp_0, (p3 == null ? true : typeof p3 === 'function') ? p3 : THROW_CCE());
+  };
+  _no_name_provided__236.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__237() {
+  }
+  _no_name_provided__237.prototype.invoke_r02v3k_k$ = function ($this$readAt) {
     var buffer = _get_int32_($this$readAt);
     var tmp;
     if (hasFlags(buffer, 1)) {
@@ -48259,10 +49440,10 @@
     }
     return tmp;
   };
-  _no_name_provided__235.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__237.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_r02v3k_k$((!(p1 == null) ? isInterface(p1, ByteStreamReader) : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__235.$metadata$ = {
+  _no_name_provided__237.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -48283,65 +49464,65 @@
     return SpriteType_BLK_instance;
   }
   function _no_name_provided_$factory_200() {
-    var i = new _no_name_provided__231();
-    return function (p1, p2, p3) {
-      return i.invoke_fqcrmv_k$(p1, p2, p3);
-    };
-  }
-  function _no_name_provided_$factory_201() {
-    var i = new _no_name_provided__232();
-    return function (p1, p2, p3) {
-      return i.invoke_fqcrmv_k$(p1, p2, p3);
-    };
-  }
-  function _no_name_provided_$factory_202() {
     var i = new _no_name_provided__233();
     return function (p1, p2, p3) {
       return i.invoke_fqcrmv_k$(p1, p2, p3);
     };
   }
-  function _no_name_provided_$factory_203() {
+  function _no_name_provided_$factory_201() {
     var i = new _no_name_provided__234();
     return function (p1, p2, p3) {
       return i.invoke_fqcrmv_k$(p1, p2, p3);
     };
   }
-  function _no_name_provided_$factory_204() {
+  function _no_name_provided_$factory_202() {
     var i = new _no_name_provided__235();
+    return function (p1, p2, p3) {
+      return i.invoke_fqcrmv_k$(p1, p2, p3);
+    };
+  }
+  function _no_name_provided_$factory_203() {
+    var i = new _no_name_provided__236();
+    return function (p1, p2, p3) {
+      return i.invoke_fqcrmv_k$(p1, p2, p3);
+    };
+  }
+  function _no_name_provided_$factory_204() {
+    var i = new _no_name_provided__237();
     return function (p1) {
       return i.invoke_r02v3k_k$(p1);
     };
   }
-  function _no_name_provided__236() {
+  function _no_name_provided__238() {
   }
-  _no_name_provided__236.prototype.invoke_12t64v_k$ = function () {
+  _no_name_provided__238.prototype.invoke_12t64v_k$ = function () {
     return Companion_getInstance_57().invoke_fnl2i9_k$(0, 0, 0, 0);
   };
-  _no_name_provided__236.prototype.invoke_0_k$ = function () {
+  _no_name_provided__238.prototype.invoke_0_k$ = function () {
     return new RGBA(this.invoke_12t64v_k$());
   };
-  _no_name_provided__236.$metadata$ = {
+  _no_name_provided__238.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__237() {
+  function _no_name_provided__239() {
     this._i_1 = 0;
     this._max_0 = _get_lastIndex_(ColorPalette_getInstance()._paletteColors);
   }
-  _no_name_provided__237.prototype.hasNext_0_k$ = function () {
+  _no_name_provided__239.prototype.hasNext_0_k$ = function () {
     return this._i_1 < this._max_0;
   };
-  _no_name_provided__237.prototype.next_12t64v_k$ = function () {
+  _no_name_provided__239.prototype.next_12t64v_k$ = function () {
     var tmp = ColorPalette_getInstance()._paletteColors;
     var tmp0_this = this;
     var tmp1 = tmp0_this._i_1;
     tmp0_this._i_1 = tmp1 + 1 | 0;
     return tmp[tmp1]._value_12;
   };
-  _no_name_provided__237.prototype.next_0_k$ = function () {
+  _no_name_provided__239.prototype.next_0_k$ = function () {
     return new RGBA(this.next_12t64v_k$());
   };
-  _no_name_provided__237.$metadata$ = {
+  _no_name_provided__239.$metadata$ = {
     kind: 'class',
     interfaces: [Iterator_0]
   };
@@ -48375,7 +49556,7 @@
     return _get_lastIndex_(this._paletteColors);
   };
   ColorPalette.prototype.iterator_0_k$ = function () {
-    return new _no_name_provided__237();
+    return new _no_name_provided__239();
   };
   ColorPalette.$metadata$ = {
     simpleName: 'ColorPalette',
@@ -48389,7 +49570,7 @@
     return ColorPalette_instance;
   }
   function _no_name_provided_$factory_205() {
-    var i = new _no_name_provided__236();
+    var i = new _no_name_provided__238();
     return function () {
       return new RGBA(i.invoke_12t64v_k$());
     };
@@ -48414,9 +49595,9 @@
     kind: 'class',
     interfaces: [Comparator]
   };
-  function _no_name_provided__238() {
+  function _no_name_provided__240() {
   }
-  _no_name_provided__238.prototype.invoke_jg38oy_k$ = function (aRaw, bRaw) {
+  _no_name_provided__240.prototype.invoke_jg38oy_k$ = function (aRaw, bRaw) {
     var tmp$ret$1;
     $l$block_0: {
       var tmp = FileNameUtil_getInstance();
@@ -48673,16 +49854,16 @@
         return sort_1;
       }}return compareTo(a, b);
   };
-  _no_name_provided__238.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__240.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE();
     return this.invoke_jg38oy_k$(tmp, (!(p2 == null) ? typeof p2 === 'string' : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__238.$metadata$ = {
+  _no_name_provided__240.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_206() {
-    var i = new _no_name_provided__238();
+    var i = new _no_name_provided__240();
     return function (p1, p2) {
       return i.invoke_jg38oy_k$(p1, p2);
     };
@@ -48737,10 +49918,10 @@
     Unit_getInstance();
     return this;
   };
-  Compiler.prototype.compile = function (formatIn) {
-    return this.compile_uch40_k$(formatIn === void 1 ? null : formatIn);
+  Compiler.prototype.compile = function (formatIn, keepBlack) {
+    return this.compile_fdqz8a_k$(formatIn === void 1 ? null : formatIn, keepBlack === void 1 ? false : keepBlack);
   };
-  Compiler.prototype.compile_uch40_k$ = function (formatIn) {
+  Compiler.prototype.compile_fdqz8a_k$ = function (formatIn, keepBlack) {
     var tmp0_safe_receiver = formatIn;
     var tmp;
     if (tmp0_safe_receiver == null) {
@@ -48763,12 +49944,14 @@
     var tmp1_elvis_lhs = tmp;
     var type = tmp1_elvis_lhs == null ? this._format_0 : tmp1_elvis_lhs;
     var compiler = Companion_getInstance_60().getCompiler_v3krwk_k$(type);
-    return compiler.compileSpriteFromImageBytes$default_h46oqk_k$(this._images, this._encoding_3, null, 4, null);
+    return compiler.compileSpriteFromImageBytes$default_ouf8qm_k$(this._images, keepBlack, this._encoding_3, null, 8, null);
   };
-  Compiler.prototype.compile$default_nmiqce_k$ = function (formatIn, $mask0, $handler) {
+  Compiler.prototype.compile$default_2d58d4_k$ = function (formatIn, keepBlack, $mask0, $handler) {
     if (!(($mask0 & 1) === 0))
       formatIn = null;
-    return this.compile_uch40_k$(formatIn);
+    if (!(($mask0 & 2) === 0))
+      keepBlack = false;
+    return this.compile_fdqz8a_k$(formatIn, keepBlack);
   };
   Compiler.prototype.copy = function (format_0, encoding) {
     return this.copy_7y1hm6_k$(format_0 === void 1 ? this._format_0 : format_0, encoding === void 1 ? this._encoding_3 : encoding);
@@ -48813,7 +49996,7 @@
   function compileBLK(filename, backgroundBytes) {
     var tmp = BLKCompiler_getInstance();
     var tmp_0 = listOf_0(new Pair(filename, backgroundBytes));
-    return tmp.compileSpriteFromImageBytes$default_h46oqk_k$(tmp_0, null, null, 6, null);
+    return tmp.compileSpriteFromImageBytes$default_ouf8qm_k$(tmp_0, true, null, null, 12, null);
   }
   function convertSprite_0(byteArray, fromSpriteTypeString, toSpriteTypeString, colorEncodingString, callback) {
     return convertSprite_1(byteArray, fromSpriteTypeString, toSpriteTypeString, colorEncodingString === void 1 ? null : colorEncodingString, callback);
@@ -48851,6 +50034,9 @@
     return convertBodyPart_2(fileName, byteArray, toGameIn, fromGameIn === void 1 ? null : fromGameIn, genusIn === void 1 ? null : genusIn, breedSlotIn === void 1 ? null : breedSlotIn, colorEncoding_0 === void 1 ? null : colorEncoding_0, progressive, callback);
   }
   function convertBodyPart_2(fileName, byteArray, toGameIn, fromGameIn, genusIn, breedSlotIn, colorEncoding_0, progressive, callback) {
+    return convertBodyPart_3(fileName, byteArray, toGameIn, fromGameIn, genusIn, breedSlotIn, colorEncoding_0, progressive, false, null, callback);
+  }
+  function convertBodyPart_3(fileName, byteArray, toGameIn, fromGameIn, genusIn, breedSlotIn, colorEncoding_0, progressive, sameSize, sizes, callback) {
     var tmp0_elvis_lhs = FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(fileName);
     var fileNameWithoutExtension = tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs;
     if (!(fileNameWithoutExtension.length === 4)) {
@@ -48913,9 +50099,9 @@
     var encoding = tmp_2;
     var tmp_3;
     if (!(fromGame == null)) {
-      tmp_3 = convertBodyPart(fileName, new MemoryByteStreamReader(byteArray), fromGame, toGame, encoding, null, progressive, callback);
+      tmp_3 = convertBodyPart(fileName, new MemoryByteStreamReader(byteArray), fromGame, toGame, encoding, null, progressive, sameSize, sizes, callback);
     } else {
-      tmp_3 = convertBodyPart_0(fileName, new MemoryByteStreamReader(byteArray), toGame, encoding, null, progressive, callback);
+      tmp_3 = convertBodyPart_0(fileName, new MemoryByteStreamReader(byteArray), toGame, encoding, null, progressive, sameSize, sizes, callback);
     }
     var outBytes = tmp_3;
     var tmp5_safe_receiver = genusIn;
@@ -48926,44 +50112,44 @@
     var breedSlot = tmp8_elvis_lhs == null ? charSequenceGet(fileName, 3) : tmp8_elvis_lhs;
     return new Tuple('' + charSequenceGet(fileName, 0) + genus + charSequenceGet(fileName, 2) + breedSlot + new Char(46) + _get_spriteFileExtension_(toGame), outBytes);
   }
-  function _no_name_provided__239($callback) {
+  function _no_name_provided__241($callback) {
     this._$callback_11 = $callback;
   }
-  _no_name_provided__239.prototype.invoke_27zxwg_k$ = function (current, total) {
+  _no_name_provided__241.prototype.invoke_27zxwg_k$ = function (current, total) {
     var tmp0_safe_receiver = this._$callback_11;
     return tmp0_safe_receiver == null ? null : tmp0_safe_receiver(1, current, total);
   };
-  _no_name_provided__239.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__241.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__239.$metadata$ = {
+  _no_name_provided__241.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__240($callback) {
+  function _no_name_provided__242($callback) {
     this._$callback_12 = $callback;
   }
-  _no_name_provided__240.prototype.invoke_27zxwg_k$ = function (current, total) {
+  _no_name_provided__242.prototype.invoke_27zxwg_k$ = function (current, total) {
     var tmp0_safe_receiver = this._$callback_12;
     return tmp0_safe_receiver == null ? null : tmp0_safe_receiver(2, current, total);
   };
-  _no_name_provided__240.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__242.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__240.$metadata$ = {
+  _no_name_provided__242.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function _no_name_provided_$factory_207($callback) {
-    var i = new _no_name_provided__239($callback);
+    var i = new _no_name_provided__241($callback);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
   }
   function _no_name_provided_$factory_208($callback) {
-    var i = new _no_name_provided__240($callback);
+    var i = new _no_name_provided__242($callback);
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
@@ -49394,17 +50580,17 @@
     }
     return true;
   }
-  function _no_name_provided__241() {
+  function _no_name_provided__243() {
   }
-  _no_name_provided__241.prototype.invoke_8i7b4u_k$ = function (message, exitCode) {
+  _no_name_provided__243.prototype.invoke_8i7b4u_k$ = function (message, exitCode) {
     println(message);
     exitProcess(exitCode);
   };
-  _no_name_provided__241.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__243.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE();
     return this.invoke_8i7b4u_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__241.$metadata$ = {
+  _no_name_provided__243.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -50219,7 +51405,7 @@
     println('' + 'WARNING ' + message);
   }
   function _no_name_provided_$factory_209() {
-    var i = new _no_name_provided__241();
+    var i = new _no_name_provided__243();
     return function (p1, p2) {
       return i.invoke_8i7b4u_k$(p1, p2);
     };
@@ -50233,15 +51419,15 @@
   function Choice_init_$Create$(choices, toVariant, variantToString, $mask0, $marker) {
     return Choice_init_$Init$(choices, toVariant, variantToString, $mask0, $marker, Object.create(Choice.prototype));
   }
-  function _no_name_provided__242() {
+  function _no_name_provided__244() {
   }
-  _no_name_provided__242.prototype.invoke_2c5_k$ = function (it) {
+  _no_name_provided__244.prototype.invoke_2c5_k$ = function (it) {
     return toString_3(it);
   };
-  _no_name_provided__242.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__244.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_2c5_k$(isObject(p1) ? p1 : THROW_CCE());
   };
-  _no_name_provided__242.$metadata$ = {
+  _no_name_provided__244.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -50416,7 +51602,7 @@
     interfaces: []
   };
   function _no_name_provided_$factory_210() {
-    var i = new _no_name_provided__242();
+    var i = new _no_name_provided__244();
     return function (p1) {
       return i.invoke_2c5_k$(p1);
     };
@@ -50879,19 +52065,19 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__243(this$0) {
-    this._this$0_38 = this$0;
+  function _no_name_provided__245(this$0) {
+    this._this$0_39 = this$0;
   }
-  _no_name_provided__243.prototype.invoke_0_k$ = function () {
+  _no_name_provided__245.prototype.invoke_0_k$ = function () {
     var tmp;
-    if (!(this._this$0_38._defaultValue == null)) {
+    if (!(this._this$0_39._defaultValue == null)) {
       var tmp_0;
       var tmp_1;
-      var tmp_2 = this._this$0_38._defaultValue;
+      var tmp_2 = this._this$0_39._defaultValue;
       if (!(tmp_2 == null) ? isInterface(tmp_2, List) : false) {
         var tmp$ret$0;
         $l$block: {
-          var tmp0_isNotEmpty_0 = this._this$0_38._defaultValue;
+          var tmp0_isNotEmpty_0 = this._this$0_39._defaultValue;
           tmp$ret$0 = !tmp0_isNotEmpty_0.isEmpty_0_k$();
           break $l$block;
         }
@@ -50905,7 +52091,7 @@
         tmp_0 = true;
       } else {
         {
-          var tmp_3 = this._this$0_38._defaultValue;
+          var tmp_3 = this._this$0_39._defaultValue;
           tmp_0 = !(!(tmp_3 == null) ? isInterface(tmp_3, List) : false);
         }
       }
@@ -50915,7 +52101,7 @@
     }
     return tmp;
   };
-  _no_name_provided__243.$metadata$ = {
+  _no_name_provided__245.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
@@ -51129,7 +52315,7 @@
     }, null);
   }
   function _no_name_provided_$factory_211(this$0) {
-    var i = new _no_name_provided__243(this$0);
+    var i = new _no_name_provided__245(this$0);
     return function () {
       return i.invoke_0_k$();
     };
@@ -51202,8 +52388,8 @@
       throw IllegalStateException_init_$Create$_0('Not implemented for JS!');
     }
   }
-  function convertC1eAttToC2e(toGame, fromGame, imagesGetter, inputAttFilePath, outputFileName, outputDirectory, genus, male, age, breed, progressive, shouldWrite_1, $cont) {
-    var tmp = new $convertC1eAttToC2eCOROUTINE$0(toGame, fromGame, imagesGetter, inputAttFilePath, outputFileName, outputDirectory, genus, male, age, breed, progressive, shouldWrite_1, $cont);
+  function convertC1eAttToC2e(toGame, fromGame, imagesGetter, inputAttFilePath, outputFileName, outputDirectory, genus, male, age, breed, progressive, sizesWithLeadingSize, shouldWrite_1, $cont) {
+    var tmp = new $convertC1eAttToC2eCOROUTINE$0(toGame, fromGame, imagesGetter, inputAttFilePath, outputFileName, outputDirectory, genus, male, age, breed, progressive, sizesWithLeadingSize, shouldWrite_1, $cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
@@ -51245,9 +52431,9 @@
     var genusChar = tmp;
     return '' + part + genusChar + age + breed + '.att';
   }
-  function _no_name_provided__244() {
+  function _no_name_provided__246() {
   }
-  _no_name_provided__244.prototype.invoke_xd1w9n_k$ = function (it) {
+  _no_name_provided__246.prototype.invoke_xd1w9n_k$ = function (it) {
     var tmp$ret$0;
     $l$block: {
       var tmp0_trim_0 = joinToString$default_0(it, ' ', null, null, 0, null, null, 62, null);
@@ -51256,26 +52442,26 @@
     }
     return tmp$ret$0;
   };
-  _no_name_provided__244.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__246.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_xd1w9n_k$((!(p1 == null) ? isInterface(p1, List) : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__244.$metadata$ = {
+  _no_name_provided__246.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__245() {
+  function _no_name_provided__247() {
   }
-  _no_name_provided__245.prototype.invoke_xd1w9n_k$ = function (row) {
+  _no_name_provided__247.prototype.invoke_xd1w9n_k$ = function (row) {
     return '' + row.get_ha5a7z_k$(0) + ' ' + row.get_ha5a7z_k$(1);
   };
-  _no_name_provided__245.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__247.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_xd1w9n_k$((!(p1 == null) ? isInterface(p1, List) : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__245.$metadata$ = {
+  _no_name_provided__247.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function $convertC1eAttToC2eCOROUTINE$0(toGame, fromGame, imagesGetter, inputAttFilePath, outputFileName, outputDirectory, genus, male, age, breed, progressive, shouldWrite_1, resultContinuation) {
+  function $convertC1eAttToC2eCOROUTINE$0(toGame, fromGame, imagesGetter, inputAttFilePath, outputFileName, outputDirectory, genus, male, age, breed, progressive, sizesWithLeadingSize, shouldWrite_1, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
     this._toGame = toGame;
     this._fromGame = fromGame;
@@ -51288,6 +52474,7 @@
     this._age = age;
     this._breed = breed;
     this._progressive = progressive;
+    this._sizesWithLeadingSize = sizesWithLeadingSize;
     this._shouldWrite = shouldWrite_1;
   }
   $convertC1eAttToC2eCOROUTINE$0.prototype.doResume_0_k$ = function () {
@@ -51333,6 +52520,10 @@
 
             break;
           case 2:
+            var tmp1_safe_receiver = this._sizesWithLeadingSize;
+            var size_0 = tmp1_safe_receiver == null ? null : tmp1_safe_receiver[0];
+            var tmp2_safe_receiver = this._sizesWithLeadingSize;
+            var sizes = tmp2_safe_receiver == null ? null : drop(tmp2_safe_receiver, 1);
             var tmp_3;
             try {
               var tmp2_trimEnd_0 = decodeToString(loadBytes(this._inputAttFilePath));
@@ -51375,7 +52566,7 @@
                   var tmp_5 = tmp6_e_0._loggerObject;
                   var tmp_6;
                   var tmp0_elvis_lhs_1_1 = tmp6_e_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                     tmp_6 = '**ERROR** ';
                   } else {
                     {
@@ -51437,7 +52628,7 @@
                 var tmp_11 = tmp8_e_0._loggerObject;
                 var tmp_12;
                 var tmp0_elvis_lhs_1_1_0 = tmp8_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
+                if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_0) {
                   tmp_12 = '**ERROR** ';
                 } else {
                   {
@@ -51511,7 +52702,7 @@
                     var tmp_18 = tmp0_e_0_5._loggerObject;
                     var tmp_19;
                     var tmp0_elvis_lhs_1_1_6 = tmp0_e_0_5._loggerObject.prependLogType;
-                    if (tmp0_elvis_lhs_1_1_6 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_6) {
+                    if (tmp0_elvis_lhs_1_1_6 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_6) {
                       tmp_19 = '**ERROR** ';
                     } else {
                       {
@@ -51561,16 +52752,16 @@
                 tmp_24 = 4;
               }
               var expectedPoints = tmp_24;
-              var tmp1_iterator = attOut.iterator_0_k$();
-              while (tmp1_iterator.hasNext_0_k$()) {
-                var parts_0 = tmp1_iterator.next_0_k$();
+              var tmp3_iterator = attOut.iterator_0_k$();
+              while (tmp3_iterator.hasNext_0_k$()) {
+                var parts_0 = tmp3_iterator.next_0_k$();
                 if (!(parts_0._get_size__0_k$() === expectedPoints)) {
                   var tmp12_e_0 = Log_getInstance();
                   if (tmp12_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
                     var tmp_25 = tmp12_e_0._loggerObject;
                     var tmp_26;
                     var tmp0_elvis_lhs_1_1_1 = tmp12_e_0._loggerObject.prependLogType;
-                    if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
+                    if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
                       tmp_26 = '**ERROR** ';
                     } else {
                       {
@@ -51592,27 +52783,57 @@
                 }}
             }
 
+            if (!(size_0 == null) ? !(sizes == null) : false) {
+              var width = size_0.first;
+              var height = size_0.second;
+              var tmp13_mapIndexed_0 = attOut;
+              var tmp0_mapIndexedTo_0_1 = ArrayList_init_$Create$_0(collectionSizeOrDefault(tmp13_mapIndexed_0, 10));
+              var index_1_2 = 0;
+              var tmp0_iterator_2_3 = tmp13_mapIndexed_0.iterator_0_k$();
+              while (tmp0_iterator_2_3.hasNext_0_k$()) {
+                var item_3_4 = tmp0_iterator_2_3.next_0_k$();
+                var tmp1_4_5 = index_1_2;
+                index_1_2 = tmp1_4_5 + 1 | 0;
+                var tmp14__anonymous__6 = checkIndexOverflow(tmp1_4_5);
+                var offsetX_7 = (width - sizes.get_ha5a7z_k$(tmp14__anonymous__6).first | 0) / 2 | 0;
+                var offsetY_8 = (height - sizes.get_ha5a7z_k$(tmp14__anonymous__6).second | 0) / 2 | 0;
+                var tmp0_mapIndexedTo_0_1_9 = ArrayList_init_$Create$_0(collectionSizeOrDefault(item_3_4, 10));
+                var index_1_2_10 = 0;
+                var tmp0_iterator_2_3_11 = item_3_4.iterator_0_k$();
+                while (tmp0_iterator_2_3_11.hasNext_0_k$()) {
+                  var item_3_4_12 = tmp0_iterator_2_3_11.next_0_k$();
+                  var tmp1_4_5_14 = index_1_2_10;
+                  index_1_2_10 = tmp1_4_5_14 + 1 | 0;
+                  var tmp0__anonymous__6_13 = checkIndexOverflow(tmp1_4_5_14);
+                  tmp0_mapIndexedTo_0_1_9.add_2bq_k$(item_3_4_12 + (tmp0__anonymous__6_13 % 2 === 0 ? offsetX_7 : offsetY_8) | 0);
+                  Unit_getInstance();
+                }
+                tmp0_mapIndexedTo_0_1.add_2bq_k$(tmp0_mapIndexedTo_0_1_9);
+                Unit_getInstance();
+              }
+              attOut = tmp0_mapIndexedTo_0_1;
+            }
             var tmp_30 = attOut;
-            var tmp13_replace_0 = joinToString$default_0(tmp_30, '\r\n', null, null, 0, null, _no_name_provided_$factory_212(), 30, null) + '\r\n';
-            var tmp14_replace_0 = Regex_init_$Create$_0(' +');
-            var attBytes = encodeToByteArray(tmp14_replace_0.replace_abi4bo_k$(tmp13_replace_0, ' '));
+            var tmp15_replace_0 = joinToString$default_0(tmp_30, '\r\n', null, null, 0, null, _no_name_provided_$factory_212(), 30, null) + '\r\n';
+            var tmp16_replace_0 = Regex_init_$Create$_0(' +');
+            var attBytes = encodeToByteArray(tmp16_replace_0.replace_abi4bo_k$(tmp15_replace_0, ' '));
             if (this._part0.equals(new Char(97))) {
               var tmp_31 = attOut;
               var zAtt = joinToString$default_0(tmp_31, '\r\n', null, null, 0, null, _no_name_provided_$factory_213(), 30, null) + '\r\n';
               var tmp_32 = PathUtil_getInstance();
-              var tmp15_substring_0 = this._outputAttFileName1;
-              var tmp16_plus_0 = tmp15_substring_0.substring(1);
-              var zAttPath = tmp_32.combine_yn9lj1_k$([this._outputDirectory, 'z' + tmp16_plus_0]);
+              var tmp17_substring_0 = this._outputAttFileName1;
+              var tmp18_plus_0 = tmp17_substring_0.substring(1);
+              var zAttPath = tmp_32.combine_yn9lj1_k$([this._outputDirectory, 'z' + tmp18_plus_0]);
               try {
                 writeBytes_1(zAttPath, encodeToByteArray(zAtt));
               } catch ($p_0) {
                 if ($p_0 instanceof Exception) {
-                  var tmp17_e_0 = Log_getInstance();
-                  if (tmp17_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                    var tmp_33 = tmp17_e_0._loggerObject;
+                  var tmp19_e_0 = Log_getInstance();
+                  if (tmp19_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                    var tmp_33 = tmp19_e_0._loggerObject;
                     var tmp_34;
-                    var tmp0_elvis_lhs_1_1_2 = tmp17_e_0._loggerObject.prependLogType;
-                    if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_2) {
+                    var tmp0_elvis_lhs_1_1_2 = tmp19_e_0._loggerObject.prependLogType;
+                    if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_2) {
                       tmp_34 = '**ERROR** ';
                     } else {
                       {
@@ -51649,12 +52870,12 @@
             var tmp_38 = this._exception_0;
             if (tmp_38 instanceof Exception) {
               var e = this._exception_0;
-              var tmp18_e_0 = Log_getInstance();
-              if (tmp18_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                var tmp_39 = tmp18_e_0._loggerObject;
+              var tmp20_e_0 = Log_getInstance();
+              if (tmp20_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_39 = tmp20_e_0._loggerObject;
                 var tmp_40;
-                var tmp0_elvis_lhs_1_1_3 = tmp18_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3) {
+                var tmp0_elvis_lhs_1_1_3 = tmp20_e_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_3) {
                   tmp_40 = '**ERROR** ';
                 } else {
                   {
@@ -51772,7 +52993,7 @@
                 var tmp_4 = tmp2_e_0._loggerObject;
                 var tmp_5;
                 var tmp0_elvis_lhs_1_1 = tmp2_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                   tmp_5 = '**ERROR** ';
                 } else {
                   {
@@ -51895,7 +53116,7 @@
                   var tmp_5 = tmp5_e_0._loggerObject;
                   var tmp_6;
                   var tmp0_elvis_lhs_1_1 = tmp5_e_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                     tmp_6 = '**ERROR** ';
                   } else {
                     {
@@ -51929,7 +53150,7 @@
                 var tmp_10 = tmp6_e_0._loggerObject;
                 var tmp_11;
                 var tmp0_elvis_lhs_1_1_0 = tmp6_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
+                if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_0) {
                   tmp_11 = '**ERROR** ';
                 } else {
                   {
@@ -51983,7 +53204,7 @@
                 var tmp_16 = tmp8_e_0._loggerObject;
                 var tmp_17;
                 var tmp0_elvis_lhs_1_1_1 = tmp8_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
+                if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
                   tmp_17 = '**ERROR** ';
                 } else {
                   {
@@ -52166,7 +53387,7 @@
                 var tmp_26 = tmp14_e_0._loggerObject;
                 var tmp_27;
                 var tmp0_elvis_lhs_1_1_2 = tmp14_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_2) {
+                if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_2) {
                   tmp_27 = '**ERROR** ';
                 } else {
                   {
@@ -52264,7 +53485,7 @@
                   var tmp_3 = tmp0_e_0._loggerObject;
                   var tmp_4;
                   var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                     tmp_4 = '**ERROR** ';
                   } else {
                     {
@@ -52307,7 +53528,7 @@
                 var tmp_9 = tmp1_e_0._loggerObject;
                 var tmp_10;
                 var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
+                if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_0) {
                   tmp_10 = '**ERROR** ';
                 } else {
                   {
@@ -52355,13 +53576,13 @@
     interfaces: []
   };
   function _no_name_provided_$factory_212() {
-    var i = new _no_name_provided__244();
+    var i = new _no_name_provided__246();
     return function (p1) {
       return i.invoke_xd1w9n_k$(p1);
     };
   }
   function _no_name_provided_$factory_213() {
-    var i = new _no_name_provided__245();
+    var i = new _no_name_provided__247();
     return function (p1) {
       return i.invoke_xd1w9n_k$(p1);
     };
@@ -52387,122 +53608,66 @@
   function _get_keepBlack_($this) {
     return $this._keepBlack$delegate.getValue_1kobyo_k$($this, keepBlack$factory_0());
   }
-  function compileAndWrite($this, allFiles, outputFile, keepBlack, shouldWrite_1, $cont) {
-    var tmp = new $compileAndWriteCOROUTINE$4($this, allFiles, outputFile, keepBlack, shouldWrite_1, $cont);
-    tmp._result = Unit_getInstance();
-    tmp._exception_0 = null;
-    return tmp.doResume_0_k$();
+  function _no_name_provided__248() {
   }
-  function _no_name_provided__246() {
-  }
-  _no_name_provided__246.prototype.invoke_6wfw3l_k$ = function (value) {
+  _no_name_provided__248.prototype.invoke_6wfw3l_k$ = function (value) {
     return Companion_getInstance_69().fromString_6wfw3l_k$(value);
   };
-  _no_name_provided__246.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__248.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__246.$metadata$ = {
+  _no_name_provided__248.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__247() {
+  function _no_name_provided__249() {
   }
-  _no_name_provided__247.prototype.invoke_ixg9nz_k$ = function (encoding) {
+  _no_name_provided__249.prototype.invoke_ixg9nz_k$ = function (encoding) {
     return encoding._simpleName_1;
   };
-  _no_name_provided__247.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__249.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ixg9nz_k$(p1 instanceof ColorEncoding ? p1 : THROW_CCE());
   };
-  _no_name_provided__247.$metadata$ = {
+  _no_name_provided__249.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__248(this$0, $allFiles, $outputFile, $shouldWrite, resultContinuation) {
-    this._this$0_39 = this$0;
-    this._$allFiles = $allFiles;
-    this._$outputFile = $outputFile;
-    this._$shouldWrite = $shouldWrite;
+  function _no_name_provided__250($task, resultContinuation) {
+    this._$task = $task;
     CoroutineImpl_0.call(this, resultContinuation);
   }
-  _no_name_provided__248.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
+  _no_name_provided__250.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
     var tmp = this.create_y6imfn_k$($this$launch, $cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   };
-  _no_name_provided__248.prototype.invoke_20e8_k$ = function (p1, $cont) {
+  _no_name_provided__250.prototype.invoke_20e8_k$ = function (p1, $cont) {
     this.invoke_2i3g7c_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $cont);
     return Unit_getInstance();
   };
-  _no_name_provided__248.prototype.doResume_0_k$ = function () {
+  _no_name_provided__250.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
     $sm: do
       try {
         var tmp = this._state_0;
         switch (tmp) {
           case 0:
-            this._exceptionState = 3;
             this._exceptionState = 2;
             this._state_0 = 1;
-            var tmp_0 = this._$outputFile._v;
-            var tmp0_elvis_lhs = _get_keepBlack_(this._this$0_39);
-            suspendResult = compileAndWrite(this._this$0_39, this._$allFiles, tmp_0, tmp0_elvis_lhs == null ? false : tmp0_elvis_lhs, this._$shouldWrite, this);
+            suspendResult = compileSprite_0(this._$task, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
             continue $sm;
           case 1:
-            exitNative(0);
-            this._exceptionState = 3;
-            this._state_0 = 4;
-            continue $sm;
-          case 2:
-            this._exceptionState = 3;
-            var tmp_1 = this._exception_0;
-            if (tmp_1 instanceof Exception) {
-              var e = this._exception_0;
-              var tmp0_e_0 = Log_getInstance();
-              if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                var tmp_2 = tmp0_e_0._loggerObject;
-                var tmp_3;
-                var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
-                  tmp_3 = '**ERROR** ';
-                } else {
-                  {
-                    tmp_3 = '';
-                  }
-                }
-                var tmp_4 = tmp_3;
-                var tmp_5;
-                if (!(null == null ? true : isBlank(null))) {
-                  tmp_5 = 'null::';
-                } else {
-                  {
-                    tmp_5 = '';
-                  }
-                }
-                var tmp_6 = tmp_5;
-                var tmp0_elvis_lhs_3 = e.message;
-                tmp_2.error('' + tmp_4 + tmp_6 + (tmp0_elvis_lhs_3 == null ? '' + 'Error 1001: Compilation failed without error.\n' + stackTraceToString(e) : tmp0_elvis_lhs_3));
-              }exitNative(1001);
-              this._state_0 = 4;
-              continue $sm;
-            } else {
-              {
-                throw this._exception_0;
-              }
-            }
-
-            break;
-          case 3:
-            throw this._exception_0;
-          case 4:
-            this._exceptionState = 3;
+            Unit_getInstance();
             return Unit_getInstance();
+          case 2:
+            throw this._exception_0;
         }
       } catch ($p) {
-        if (this._exceptionState === 3) {
+        if (this._exceptionState === 2) {
           throw $p;
         } else {
           this._state_0 = this._exceptionState;
@@ -52511,251 +53676,15 @@
       }
      while (true);
   };
-  _no_name_provided__248.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
-    var i = new _no_name_provided__248(this._this$0_39, this._$allFiles, this._$outputFile, this._$shouldWrite, completion);
+  _no_name_provided__250.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
+    var i = new _no_name_provided__250(this._$task, completion);
     i._$this$launch = $this$launch;
     return i;
   };
-  _no_name_provided__248.$metadata$ = {
+  _no_name_provided__250.$metadata$ = {
     kind: 'class',
     interfaces: [],
     suspendArity: 1
-  };
-  function $compileAndWriteCOROUTINE$4(_this_, allFiles, outputFile, keepBlack, shouldWrite_1, resultContinuation) {
-    CoroutineImpl_0.call(this, resultContinuation);
-    this.__this__19 = _this_;
-    this._allFiles = allFiles;
-    this._outputFile = outputFile;
-    this._keepBlack = keepBlack;
-    this._shouldWrite_3 = shouldWrite_1;
-  }
-  $compileAndWriteCOROUTINE$4.prototype.doResume_0_k$ = function () {
-    var suspendResult = this._result;
-    $sm: do
-      try {
-        var tmp = this._state_0;
-        switch (tmp) {
-          case 0:
-            this._exceptionState = 7;
-            var tmp_0 = this;
-            var tmp_1 = this;
-            tmp_1._tmp0_mapTo_0_10 = ArrayList_init_$Create$_0(collectionSizeOrDefault(this._allFiles, 10));
-            var tmp0_iterator_1_2 = this._allFiles.iterator_0_k$();
-            while (tmp0_iterator_1_2.hasNext_0_k$()) {
-              var item_2_3 = tmp0_iterator_1_2.next_0_k$();
-              var bytes_5 = loadBytes(item_2_3);
-              var tmp0_elvis_lhs_7 = FileNameUtil_getInstance().getExtension_6wfw3l_k$(item_2_3);
-              var tmp_2;
-              if (tmp0_elvis_lhs_7 == null) {
-                var tmp0_let_0_8 = '' + "Error 1014: Cannot load image without extension. File: '" + item_2_3 + "'";
-                var tmp0_e_0_2_9 = Log_getInstance();
-                if (tmp0_e_0_2_9._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                  var tmp_3 = tmp0_e_0_2_9._loggerObject;
-                  var tmp_4;
-                  var tmp0_elvis_lhs_1_1_3_10 = tmp0_e_0_2_9._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1_3_10 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3_10) {
-                    tmp_4 = '**ERROR** ';
-                  } else {
-                    {
-                      tmp_4 = '';
-                    }
-                  }
-                  var tmp_5 = tmp_4;
-                  var tmp_6;
-                  if (!(null == null ? true : isBlank(null))) {
-                    tmp_6 = 'null::';
-                  } else {
-                    {
-                      tmp_6 = '';
-                    }
-                  }
-                  var tmp_7 = tmp_6;
-                  tmp_3.error('' + tmp_5 + tmp_7 + tmp0_let_0_8);
-                }return exitNative(1014);
-              } else {
-                tmp_2 = tmp0_elvis_lhs_7;
-              }
-              var thisFilesExtension_6 = tmp_2;
-              var tmp_8;
-              try {
-                tmp_8 = ImageLoader_getInstance().load_nwdxb8_k$(thisFilesExtension_6, bytes_5);
-              } catch ($p) {
-                var tmp_9;
-                if ($p instanceof Exception) {
-                  var tmp1_e_0_12 = Log_getInstance();
-                  if (tmp1_e_0_12._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                    var tmp_10 = tmp1_e_0_12._loggerObject;
-                    var tmp_11;
-                    var tmp0_elvis_lhs_1_1_13 = tmp1_e_0_12._loggerObject.prependLogType;
-                    if (tmp0_elvis_lhs_1_1_13 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_13) {
-                      tmp_11 = '**ERROR** ';
-                    } else {
-                      {
-                        tmp_11 = '';
-                      }
-                    }
-                    var tmp_12 = tmp_11;
-                    var tmp_13;
-                    if (!(null == null ? true : isBlank(null))) {
-                      tmp_13 = 'null::';
-                    } else {
-                      {
-                        tmp_13 = '';
-                      }
-                    }
-                    var tmp_14 = tmp_13;
-                    tmp_10.error('' + tmp_12 + tmp_14 + ('' + "Error 1015: Failed to load image '" + item_2_3 + "' with error: " + $p.message));
-                  }return exitNative(1015);
-                } else {
-                  {
-                    throw $p;
-                  }
-                }
-                tmp_8 = tmp_9;
-              }
-              this._tmp0_mapTo_0_10.add_2bq_k$(tmp_8);
-              Unit_getInstance();
-            }
-
-            tmp_0._images1 = this._tmp0_mapTo_0_10;
-            if (!_get_overwriteExisting_(this.__this__19) ? fileExists(this._outputFile) : false) {
-              if (_get_overwriteNone_(this.__this__19)) {
-                this._WHEN_RESULT2 = true;
-                this._state_0 = 2;
-                continue $sm;
-              } else {
-                this._state_0 = 1;
-                suspendResult = this._shouldWrite_3(this._outputFile, this);
-                if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
-                  return suspendResult;
-                }continue $sm;
-              }
-            } else {
-              this._state_0 = 4;
-              continue $sm;
-            }
-
-            break;
-          case 1:
-            var ARGUMENT = suspendResult;
-            this._WHEN_RESULT2 = !ARGUMENT;
-            this._state_0 = 2;
-            continue $sm;
-          case 2:
-            if (this._WHEN_RESULT2) {
-              return exitNative(0);
-            } else {
-              this._state_0 = 3;
-              continue $sm;
-            }
-
-            Unit_getInstance();
-            break;
-          case 3:
-            this._state_0 = 4;
-            continue $sm;
-          case 4:
-            var encoding = _get_encoding_(this.__this__19);
-            var tmp_15;
-            if (!(encoding == null)) {
-              tmp_15 = compileAndWrite_1(_get_type_(this.__this__19), this._keepBlack, encoding, this._images1);
-            } else {
-              var tmp_16 = _get_type_(this.__this__19);
-              tmp_15 = compileAndWrite$default(tmp_16, this._images1, this._keepBlack, null, 8, null);
-            }
-
-            var bytes = tmp_15;
-            this._exceptionState = 5;
-            var tmp0_elvis_lhs = makeTempFile('sprite-temp.');
-            var temp = tmp0_elvis_lhs == null ? this._outputFile : tmp0_elvis_lhs;
-            writeBytes_1(temp, bytes);
-            if (!(this._outputFile === temp)) {
-              var moveStatus = move(temp, this._outputFile, true);
-              if (moveStatus === 3) {
-                var tmp0_e_0 = Log_getInstance();
-                if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                  var tmp_17 = tmp0_e_0._loggerObject;
-                  var tmp_18;
-                  var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
-                    tmp_18 = '**ERROR** ';
-                  } else {
-                    {
-                      tmp_18 = '';
-                    }
-                  }
-                  var tmp_19 = tmp_18;
-                  var tmp_20;
-                  if (!(null == null ? true : isBlank(null))) {
-                    tmp_20 = 'null::';
-                  } else {
-                    {
-                      tmp_20 = '';
-                    }
-                  }
-                  var tmp_21 = tmp_20;
-                  tmp_17.error('' + tmp_19 + tmp_21 + 'Error 1006: Failed to move temp file into output directory');
-                }return exitNative(1006);
-              }}
-            this._exceptionState = 7;
-            this._state_0 = 6;
-            continue $sm;
-          case 5:
-            this._exceptionState = 7;
-            var tmp_22 = this._exception_0;
-            if (tmp_22 instanceof Exception) {
-              var e = this._exception_0;
-              var tmp1_e_0 = Log_getInstance();
-              if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                var tmp_23 = tmp1_e_0._loggerObject;
-                var tmp_24;
-                var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
-                  tmp_24 = '**ERROR** ';
-                } else {
-                  {
-                    tmp_24 = '';
-                  }
-                }
-                var tmp_25 = tmp_24;
-                var tmp_26;
-                if (!(null == null ? true : isBlank(null))) {
-                  tmp_26 = 'null::';
-                } else {
-                  {
-                    tmp_26 = '';
-                  }
-                }
-                var tmp_27 = tmp_26;
-                tmp_23.error('' + tmp_25 + tmp_27 + ('' + 'Failed to move compiled sprite into place; ' + e.message));
-              }return exitNative(1001);
-            } else {
-              {
-                throw this._exception_0;
-              }
-            }
-
-            break;
-          case 6:
-            this._exceptionState = 7;
-            return Unit_getInstance();
-          case 7:
-            throw this._exception_0;
-        }
-      } catch ($p_0) {
-        if (this._exceptionState === 7) {
-          throw $p_0;
-        } else {
-          this._state_0 = this._exceptionState;
-          this._exception_0 = $p_0;
-        }
-      }
-     while (true);
-  };
-  $compileAndWriteCOROUTINE$4.$metadata$ = {
-    simpleName: '$compileAndWriteCOROUTINE$4',
-    kind: 'class',
-    interfaces: []
   };
   function CompileCLI() {
     Subcommand.call(this, 'compile', 'Compile images to sprite');
@@ -52783,271 +53712,9 @@
     tmp_12._keepBlack$delegate = this.option$default_t6jqr8_k$(tmp_13, 'keep-black', null, 'Preserve black in sprites', null, 20, null).provideDelegate_1kobyo_k$(this, keepBlack$factory());
   }
   CompileCLI.prototype.execute_sv8swh_k$ = function () {
-    var tmp0_elvis_lhs = shouldOverwriteOverride;
-    var shouldWrite_1 = tmp0_elvis_lhs == null ? createDefaultShouldOverwriteCallback_0() : tmp0_elvis_lhs;
-    if (_get_overwriteExisting_(this) ? _get_overwriteNone_(this) : false) {
-      {
-        var tmp0_e_0 = Log_getInstance();
-        if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-          var tmp = tmp0_e_0._loggerObject;
-          var tmp$ret$2;
-          $l$block_1: {
-            var tmp_0;
-            var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
-              tmp_0 = '**ERROR** ';
-            } else {
-              {
-                tmp_0 = '';
-              }
-            }
-            var tmp_1 = tmp_0;
-            var tmp_2;
-            var tmp$ret$0;
-            $l$block: {
-              {
-              }
-              tmp$ret$0 = null == null ? true : isBlank(null);
-              break $l$block;
-            }
-            if (!tmp$ret$0) {
-              tmp_2 = 'null::';
-            } else {
-              {
-                tmp_2 = '';
-              }
-            }
-            var tmp_3 = tmp_2;
-            var tmp$ret$1;
-            $l$block_0: {
-              tmp$ret$1 = 'Error 1003: Cannot use overwrite existing and overwrite none.';
-              break $l$block_0;
-            }
-            tmp$ret$2 = '' + tmp_1 + tmp_3 + tmp$ret$1;
-            break $l$block_1;
-          }
-          tmp.error(tmp$ret$2);
-        }}
-      return exitNative(1003);
-    }var currentWorkingDirectory = getCurrentWorkingDirectory();
-    var tmp_4;
-    try {
-      var tmp_5 = _get_files_(this);
-      var tmp_6 = ImageLoader_getInstance()._get_supportedExtensions__0_k$();
-      tmp_4 = unpackPaths$default(tmp_5, tmp_6, null, null, 6, null);
-    } catch ($p) {
-      var tmp_7;
-      if ($p instanceof MissingFilesException) {
-        {
-          var tmp1_e_0 = Log_getInstance();
-          if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-            var tmp_8 = tmp1_e_0._loggerObject;
-            var tmp$ret$5;
-            $l$block_4: {
-              var tmp_9;
-              var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
-                tmp_9 = '**ERROR** ';
-              } else {
-                {
-                  tmp_9 = '';
-                }
-              }
-              var tmp_10 = tmp_9;
-              var tmp_11;
-              var tmp$ret$3;
-              $l$block_2: {
-                {
-                }
-                tmp$ret$3 = null == null ? true : isBlank(null);
-                break $l$block_2;
-              }
-              if (!tmp$ret$3) {
-                tmp_11 = 'null::';
-              } else {
-                {
-                  tmp_11 = '';
-                }
-              }
-              var tmp_12 = tmp_11;
-              var tmp$ret$4;
-              $l$block_3: {
-                tmp$ret$4 = 'Error 1015: ' + ensureNotNull($p.message);
-                break $l$block_3;
-              }
-              tmp$ret$5 = '' + tmp_10 + tmp_12 + tmp$ret$4;
-              break $l$block_4;
-            }
-            tmp_8.error(tmp$ret$5);
-          }}
-        return exitNative(1015);
-      } else {
-        {
-          throw $p;
-        }
-      }
-      tmp_4 = tmp_7;
-    }
-    var allFiles = tmp_4;
-    if (allFiles.isEmpty_0_k$()) {
-      {
-        var tmp2_e_0 = Log_getInstance();
-        if (tmp2_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-          var tmp_13 = tmp2_e_0._loggerObject;
-          var tmp$ret$8;
-          $l$block_7: {
-            var tmp_14;
-            var tmp0_elvis_lhs_1_1_1 = tmp2_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
-              tmp_14 = '**ERROR** ';
-            } else {
-              {
-                tmp_14 = '';
-              }
-            }
-            var tmp_15 = tmp_14;
-            var tmp_16;
-            var tmp$ret$6;
-            $l$block_5: {
-              {
-              }
-              tmp$ret$6 = null == null ? true : isBlank(null);
-              break $l$block_5;
-            }
-            if (!tmp$ret$6) {
-              tmp_16 = 'null::';
-            } else {
-              {
-                tmp_16 = '';
-              }
-            }
-            var tmp_17 = tmp_16;
-            var tmp$ret$7;
-            $l$block_6: {
-              tmp$ret$7 = 'Error 1002: No valid images found';
-              break $l$block_6;
-            }
-            tmp$ret$8 = '' + tmp_15 + tmp_17 + tmp$ret$7;
-            break $l$block_7;
-          }
-          tmp_13.error(tmp$ret$8);
-        }}
-      return exitNative(1002);
-    }var tmp_18;
-    var tmp1_safe_receiver = FileNameUtil_getInstance().getExtension_6wfw3l_k$(_get_outputFile_(this));
-    var tmp_19;
-    if (tmp1_safe_receiver == null) {
-      tmp_19 = null;
-    } else {
-      var tmp$ret$10;
-      $l$block_9: {
-        var tmp$ret$9;
-        $l$block_8: {
-          tmp$ret$9 = tmp1_safe_receiver;
-          break $l$block_8;
-        }
-        tmp$ret$10 = tmp$ret$9.toLowerCase();
-        break $l$block_9;
-      }
-      tmp_19 = tmp$ret$10;
-    }
-    var tmp_20 = tmp_19;
-    var tmp$ret$12;
-    $l$block_11: {
-      var tmp3_lowercase_0 = _get_type_(this)._get_name__0_k$();
-      var tmp$ret$11;
-      $l$block_10: {
-        tmp$ret$11 = tmp3_lowercase_0;
-        break $l$block_10;
-      }
-      tmp$ret$12 = tmp$ret$11.toLowerCase();
-      break $l$block_11;
-    }
-    if (!(tmp_20 === tmp$ret$12)) {
-      var tmp$ret$14;
-      $l$block_13: {
-        var tmp4_lowercase_0 = _get_type_(this)._get_name__0_k$();
-        var tmp$ret$13;
-        $l$block_12: {
-          tmp$ret$13 = tmp4_lowercase_0;
-          break $l$block_12;
-        }
-        tmp$ret$14 = tmp$ret$13.toLowerCase();
-        break $l$block_13;
-      }
-      tmp_18 = '' + '.' + tmp$ret$14;
-    } else {
-      {
-        tmp_18 = '';
-      }
-    }
-    var extension = tmp_18;
-    var tmp$ret$18;
-    $l$block_17: {
-      var tmp5_apply_0 = nullIfEmpty_0(_get_outputFile_(this));
-      {
-      }
-      {
-        if (tmp5_apply_0 == null) {
-          {
-            var tmp0_e_0_2 = Log_getInstance();
-            if (tmp0_e_0_2._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-              var tmp_21 = tmp0_e_0_2._loggerObject;
-              var tmp$ret$17;
-              $l$block_16: {
-                var tmp_22;
-                var tmp0_elvis_lhs_1_1_3 = tmp0_e_0_2._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3) {
-                  tmp_22 = '**ERROR** ';
-                } else {
-                  {
-                    tmp_22 = '';
-                  }
-                }
-                var tmp_23 = tmp_22;
-                var tmp_24;
-                var tmp$ret$15;
-                $l$block_14: {
-                  {
-                  }
-                  tmp$ret$15 = null == null ? true : isBlank(null);
-                  break $l$block_14;
-                }
-                if (!tmp$ret$15) {
-                  tmp_24 = 'null::';
-                } else {
-                  {
-                    tmp_24 = '';
-                  }
-                }
-                var tmp_25 = tmp_24;
-                var tmp$ret$16;
-                $l$block_15: {
-                  tmp$ret$16 = 'Error 1018: Output file cannot be blank';
-                  break $l$block_15;
-                }
-                tmp$ret$17 = '' + tmp_23 + tmp_25 + tmp$ret$16;
-                break $l$block_16;
-              }
-              tmp_21.error(tmp$ret$17);
-            }}
-          return exitNative(1018);
-        }}
-      tmp$ret$18 = tmp5_apply_0;
-      break $l$block_17;
-    }
-    var outputFile = {_v: ensureNotNull(tmp$ret$18)};
-    outputFile._v = outputFile._v + extension;
-    var tmp_26 = FileNameUtil_getInstance();
-    var tmp_27 = outputFile._v;
-    var parentDirectoryRaw = tmp_26.getSelfOrParentDirectory$default_zmr95_k$(tmp_27, false, 2, null);
-    var outputDirectory = ensureAndGetOutputDirectory(parentDirectoryRaw, currentWorkingDirectory, true);
-    var tmp_28 = PathUtil_getInstance();
-    var tmp_29 = FileNameUtil_getInstance();
-    var tmp_30 = outputFile._v;
-    outputFile._v = tmp_28.combine_yn9lj1_k$([outputDirectory, ensureNotNull(tmp_29.getLastPathComponent$default_zmr95_k$(tmp_30, false, 2, null))]);
-    var tmp_31 = GlobalScope_getInstance();
-    launch$default(tmp_31, null, null, _no_name_provided_$factory_216(this, allFiles, outputFile, shouldWrite_1, null), 3, null);
+    var task = CompileSpriteTask_init_$Create$(null, null, 3, null).withOutputType_v3krwk_k$(_get_type_(this)).withEncoding_ik3vsi_k$(_get_encoding_(this)).withOutputFile(_get_outputFile_(this)).withFiles_wgj1yh_k$(_get_files_(this)).withKeepBlack(_get_keepBlack_(this)).withOverwriteExisting_mn33cr_k$(_get_overwriteExisting_(this)).withOverwriteNone_mn33cr_k$(_get_overwriteNone_(this));
+    var tmp = GlobalScope_getInstance();
+    launch$default(tmp, null, null, _no_name_provided_$factory_216(task, null), 3, null);
     Unit_getInstance();
   };
   CompileCLI.$metadata$ = {
@@ -53055,6 +53722,18 @@
     kind: 'class',
     interfaces: []
   };
+  function compileSprite_0(task, $cont) {
+    var tmp = new $compileSpriteCOROUTINE$4(task, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  }
+  function compileAndWrite(task, allFiles, outputFile, keepBlack, shouldWrite_1, $cont) {
+    var tmp = new $compileAndWriteCOROUTINE$5(task, allFiles, outputFile, keepBlack, shouldWrite_1, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  }
   function compileAndWrite_0(type, images, keepBlack, colorEncoding_0) {
     var tmp0_subject = type;
     var tmp;
@@ -53104,6 +53783,523 @@
     }
     return tmp;
   }
+  function $compileSpriteCOROUTINE$4(task, resultContinuation) {
+    CoroutineImpl_0.call(this, resultContinuation);
+    this._task = task;
+  }
+  $compileSpriteCOROUTINE$4.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 3;
+            this._overwriteExisting0 = this._task.getOverwriteExisting() === true;
+            this._overwriteNone1 = this._task.getOverwriteNone() === true;
+            var tmp_0 = this;
+            var tmp0_elvis_lhs = shouldOverwriteOverride;
+            tmp_0._shouldWrite2 = tmp0_elvis_lhs == null ? createDefaultShouldOverwriteCallback_0() : tmp0_elvis_lhs;
+            if (this._overwriteExisting0 ? this._overwriteNone1 : false) {
+              var tmp0_e_0 = Log_getInstance();
+              if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_1 = tmp0_e_0._loggerObject;
+                var tmp_2;
+                var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
+                  tmp_2 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_2 = '';
+                  }
+                }
+                var tmp_3 = tmp_2;
+                var tmp_4;
+                if (!(null == null ? true : isBlank(null))) {
+                  tmp_4 = 'null::';
+                } else {
+                  {
+                    tmp_4 = '';
+                  }
+                }
+                var tmp_5 = tmp_4;
+                tmp_1.error('' + tmp_3 + tmp_5 + 'Error 1003: Cannot use overwrite existing and overwrite none.');
+              }return exitNative(1003);
+            }
+            this._currentWorkingDirectory3 = getCurrentWorkingDirectory();
+            var tmp_6 = this;
+            var tmp_7;
+            try {
+              var tmp_8 = this._task.getFiles_0_k$();
+              var tmp_9 = ImageLoader_getInstance()._get_supportedExtensions__0_k$();
+              tmp_7 = unpackPaths$default(tmp_8, tmp_9, null, null, 6, null);
+            } catch ($p) {
+              var tmp_10;
+              if ($p instanceof MissingFilesException) {
+                var tmp1_e_0 = Log_getInstance();
+                if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                  var tmp_11 = tmp1_e_0._loggerObject;
+                  var tmp_12;
+                  var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
+                  if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_0) {
+                    tmp_12 = '**ERROR** ';
+                  } else {
+                    {
+                      tmp_12 = '';
+                    }
+                  }
+                  var tmp_13 = tmp_12;
+                  var tmp_14;
+                  if (!(null == null ? true : isBlank(null))) {
+                    tmp_14 = 'null::';
+                  } else {
+                    {
+                      tmp_14 = '';
+                    }
+                  }
+                  var tmp_15 = tmp_14;
+                  tmp_11.error('' + tmp_13 + tmp_15 + ('Error 1015: ' + ensureNotNull($p.message)));
+                }return exitNative(1015);
+              } else {
+                {
+                  throw $p;
+                }
+              }
+              tmp_7 = tmp_10;
+            }
+
+            tmp_6._allFiles4 = tmp_7;
+            if (this._allFiles4.isEmpty_0_k$()) {
+              var tmp2_e_0 = Log_getInstance();
+              if (tmp2_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_16 = tmp2_e_0._loggerObject;
+                var tmp_17;
+                var tmp0_elvis_lhs_1_1_1 = tmp2_e_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
+                  tmp_17 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_17 = '';
+                  }
+                }
+                var tmp_18 = tmp_17;
+                var tmp_19;
+                if (!(null == null ? true : isBlank(null))) {
+                  tmp_19 = 'null::';
+                } else {
+                  {
+                    tmp_19 = '';
+                  }
+                }
+                var tmp_20 = tmp_19;
+                tmp_16.error('' + tmp_18 + tmp_20 + 'Error 1002: No valid images found');
+              }return exitNative(1002);
+            }
+            this._type5 = ensureNotNull(this._task.getOutputType_0_k$());
+            this._outputFileTemp6 = this._task.getOutputFile();
+            if (this._outputFileTemp6 == null) {
+              var tmp3_e_0 = Log_getInstance();
+              if (tmp3_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_21 = tmp3_e_0._loggerObject;
+                var tmp_22;
+                var tmp0_elvis_lhs_1_1_2 = tmp3_e_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_2) {
+                  tmp_22 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_22 = '';
+                  }
+                }
+                var tmp_23 = tmp_22;
+                var tmp_24;
+                if (!(null == null ? true : isBlank(null))) {
+                  tmp_24 = 'null::';
+                } else {
+                  {
+                    tmp_24 = '';
+                  }
+                }
+                var tmp_25 = tmp_24;
+                tmp_21.error('' + tmp_23 + tmp_25 + 'Error 1018: Output file is required');
+              }return exitNative(1018);
+            }
+            var tmp_26 = this;
+            var tmp_27;
+            var tmp1_safe_receiver = FileNameUtil_getInstance().getExtension_6wfw3l_k$(this._outputFileTemp6);
+            var tmp_28;
+            if (tmp1_safe_receiver == null) {
+              tmp_28 = null;
+            } else {
+              tmp_28 = tmp1_safe_receiver.toLowerCase();
+            }
+
+            var tmp_29 = tmp_28;
+            var tmp_30 = this;
+            tmp_30._tmp4_lowercase_07 = this._type5._get_name__0_k$();
+            if (!(tmp_29 === this._tmp4_lowercase_07.toLowerCase())) {
+              var tmp5_lowercase_0 = this._type5._get_name__0_k$();
+              tmp_27 = '' + '.' + tmp5_lowercase_0.toLowerCase();
+            } else {
+              {
+                tmp_27 = '';
+              }
+            }
+
+            tmp_26._extension8 = tmp_27;
+            var tmp_31 = this;
+            var tmp_32 = this;
+            tmp_32._tmp6_apply_09 = nullIfEmpty_0(this._outputFileTemp6);
+            if (this._tmp6_apply_09 == null) {
+              var tmp0_e_0_2 = Log_getInstance();
+              if (tmp0_e_0_2._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_33 = tmp0_e_0_2._loggerObject;
+                var tmp_34;
+                var tmp0_elvis_lhs_1_1_3 = tmp0_e_0_2._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_3) {
+                  tmp_34 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_34 = '';
+                  }
+                }
+                var tmp_35 = tmp_34;
+                var tmp_36;
+                if (!(null == null ? true : isBlank(null))) {
+                  tmp_36 = 'null::';
+                } else {
+                  {
+                    tmp_36 = '';
+                  }
+                }
+                var tmp_37 = tmp_36;
+                tmp_33.error('' + tmp_35 + tmp_37 + 'Error 1018: Output file cannot be blank');
+              }return exitNative(1018);
+            }
+            tmp_31._outputFile10 = ensureNotNull(this._tmp6_apply_09);
+            this._outputFile10 = this._outputFile10 + this._extension8;
+            var tmp_38 = this;
+            var tmp_39 = FileNameUtil_getInstance();
+            var tmp_40 = this._outputFile10;
+            tmp_38._parentDirectoryRaw11 = tmp_39.getSelfOrParentDirectory$default_zmr95_k$(tmp_40, false, 2, null);
+            this._outputDirectory12 = ensureAndGetOutputDirectory(this._parentDirectoryRaw11, this._currentWorkingDirectory3, true);
+            var tmp_41 = this;
+            var tmp_42 = PathUtil_getInstance();
+            var tmp_43 = FileNameUtil_getInstance();
+            var tmp_44 = this._outputFile10;
+            tmp_41._outputFile10 = tmp_42.combine_yn9lj1_k$([this._outputDirectory12, ensureNotNull(tmp_43.getLastPathComponent$default_zmr95_k$(tmp_44, false, 2, null))]);
+            this._exceptionState = 2;
+            this._state_0 = 1;
+            var tmp_45 = this._outputFile10;
+            var tmp2_elvis_lhs = this._task.getKeepBlack();
+            suspendResult = compileAndWrite(this._task, this._allFiles4, tmp_45, tmp2_elvis_lhs == null ? false : tmp2_elvis_lhs, this._shouldWrite2, this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            this._TRY_RESULT13 = exitNative(0);
+            this._exceptionState = 3;
+            this._state_0 = 4;
+            continue $sm;
+          case 2:
+            this._exceptionState = 3;
+            var tmp_46 = this._exception_0;
+            if (tmp_46 instanceof Exception) {
+              var e = this._exception_0;
+              var tmp_47 = this;
+              var tmp7_e_0 = Log_getInstance();
+              if (tmp7_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_48 = tmp7_e_0._loggerObject;
+                var tmp_49;
+                var tmp0_elvis_lhs_1_1_4 = tmp7_e_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_4 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_4) {
+                  tmp_49 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_49 = '';
+                  }
+                }
+                var tmp_50 = tmp_49;
+                var tmp_51;
+                if (!(null == null ? true : isBlank(null))) {
+                  tmp_51 = 'null::';
+                } else {
+                  {
+                    tmp_51 = '';
+                  }
+                }
+                var tmp_52 = tmp_51;
+                var tmp0_elvis_lhs_3 = e.message;
+                tmp_48.error('' + tmp_50 + tmp_52 + (tmp0_elvis_lhs_3 == null ? '' + 'Error 1001: Compilation failed without error.\n' + stackTraceToString(e) : tmp0_elvis_lhs_3));
+              }tmp_47._TRY_RESULT13 = exitNative(1001);
+              this._state_0 = 4;
+              continue $sm;
+            } else {
+              {
+                throw this._exception_0;
+              }
+            }
+
+            break;
+          case 3:
+            throw this._exception_0;
+          case 4:
+            this._exceptionState = 3;
+            return this._TRY_RESULT13;
+        }
+      } catch ($p_0) {
+        if (this._exceptionState === 3) {
+          throw $p_0;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p_0;
+        }
+      }
+     while (true);
+  };
+  $compileSpriteCOROUTINE$4.$metadata$ = {
+    simpleName: '$compileSpriteCOROUTINE$4',
+    kind: 'class',
+    interfaces: []
+  };
+  function $compileAndWriteCOROUTINE$5(task, allFiles, outputFile, keepBlack, shouldWrite_1, resultContinuation) {
+    CoroutineImpl_0.call(this, resultContinuation);
+    this._task_0 = task;
+    this._allFiles = allFiles;
+    this._outputFile = outputFile;
+    this._keepBlack = keepBlack;
+    this._shouldWrite_3 = shouldWrite_1;
+  }
+  $compileAndWriteCOROUTINE$5.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 6;
+            var tmp_0 = this;
+            var tmp_1 = this;
+            tmp_1._tmp0_mapTo_0_10 = ArrayList_init_$Create$_0(collectionSizeOrDefault(this._allFiles, 10));
+            var tmp0_iterator_1_2 = this._allFiles.iterator_0_k$();
+            while (tmp0_iterator_1_2.hasNext_0_k$()) {
+              var item_2_3 = tmp0_iterator_1_2.next_0_k$();
+              var bytes_5 = loadBytes(item_2_3);
+              var tmp0_elvis_lhs_7 = FileNameUtil_getInstance().getExtension_6wfw3l_k$(item_2_3);
+              var tmp_2;
+              if (tmp0_elvis_lhs_7 == null) {
+                var tmp0_let_0_8 = '' + "Error 1014: Cannot load image without extension. File: '" + item_2_3 + "'";
+                var tmp0_e_0_2_9 = Log_getInstance();
+                if (tmp0_e_0_2_9._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                  var tmp_3 = tmp0_e_0_2_9._loggerObject;
+                  var tmp_4;
+                  var tmp0_elvis_lhs_1_1_3_10 = tmp0_e_0_2_9._loggerObject.prependLogType;
+                  if (tmp0_elvis_lhs_1_1_3_10 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_3_10) {
+                    tmp_4 = '**ERROR** ';
+                  } else {
+                    {
+                      tmp_4 = '';
+                    }
+                  }
+                  var tmp_5 = tmp_4;
+                  var tmp_6;
+                  if (!(null == null ? true : isBlank(null))) {
+                    tmp_6 = 'null::';
+                  } else {
+                    {
+                      tmp_6 = '';
+                    }
+                  }
+                  var tmp_7 = tmp_6;
+                  tmp_3.error('' + tmp_5 + tmp_7 + tmp0_let_0_8);
+                }return exitNative(1014);
+              } else {
+                tmp_2 = tmp0_elvis_lhs_7;
+              }
+              var thisFilesExtension_6 = tmp_2;
+              var tmp_8;
+              try {
+                tmp_8 = ImageLoader_getInstance().load_nwdxb8_k$(thisFilesExtension_6, bytes_5);
+              } catch ($p) {
+                var tmp_9;
+                if ($p instanceof Exception) {
+                  var tmp1_e_0_12 = Log_getInstance();
+                  if (tmp1_e_0_12._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                    var tmp_10 = tmp1_e_0_12._loggerObject;
+                    var tmp_11;
+                    var tmp0_elvis_lhs_1_1_13 = tmp1_e_0_12._loggerObject.prependLogType;
+                    if (tmp0_elvis_lhs_1_1_13 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_13) {
+                      tmp_11 = '**ERROR** ';
+                    } else {
+                      {
+                        tmp_11 = '';
+                      }
+                    }
+                    var tmp_12 = tmp_11;
+                    var tmp_13;
+                    if (!(null == null ? true : isBlank(null))) {
+                      tmp_13 = 'null::';
+                    } else {
+                      {
+                        tmp_13 = '';
+                      }
+                    }
+                    var tmp_14 = tmp_13;
+                    tmp_10.error('' + tmp_12 + tmp_14 + ('' + "Error 1015: Failed to load image '" + item_2_3 + "' with error: " + $p.message));
+                  }return exitNative(1015);
+                } else {
+                  {
+                    throw $p;
+                  }
+                }
+                tmp_8 = tmp_9;
+              }
+              this._tmp0_mapTo_0_10.add_2bq_k$(tmp_8);
+              Unit_getInstance();
+            }
+
+            tmp_0._images1 = this._tmp0_mapTo_0_10;
+            this._overwriteExisting2 = this._task_0.getOverwriteExisting() === true;
+            this._overwriteNone3 = this._task_0.getOverwriteNone() === true;
+            if (!this._overwriteExisting2 ? fileExists(this._outputFile) : false) {
+              if (this._overwriteNone3) {
+                this._WHEN_RESULT4 = true;
+                this._state_0 = 2;
+                continue $sm;
+              } else {
+                this._state_0 = 1;
+                suspendResult = this._shouldWrite_3(this._outputFile, this);
+                if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+                  return suspendResult;
+                }continue $sm;
+              }
+            } else {
+              this._state_0 = 4;
+              continue $sm;
+            }
+
+            break;
+          case 1:
+            var ARGUMENT = suspendResult;
+            this._WHEN_RESULT4 = !ARGUMENT;
+            this._state_0 = 2;
+            continue $sm;
+          case 2:
+            if (this._WHEN_RESULT4) {
+              return exitNative(0);
+            } else {
+              this._state_0 = 3;
+              continue $sm;
+            }
+
+            Unit_getInstance();
+            break;
+          case 3:
+            this._state_0 = 4;
+            continue $sm;
+          case 4:
+            var type = ensureNotNull(this._task_0.getOutputType_0_k$());
+            var encoding = this._task_0.getEncoding_0_k$();
+            var tmp_15;
+            if (!(encoding == null)) {
+              tmp_15 = compileAndWrite_1(type, this._keepBlack, encoding, this._images1);
+            } else {
+              tmp_15 = compileAndWrite$default(type, this._images1, this._keepBlack, null, 8, null);
+            }
+
+            var bytes = tmp_15;
+            this._exceptionState = 5;
+            var tmp0_elvis_lhs = makeTempFile('sprite-temp.');
+            var temp = tmp0_elvis_lhs == null ? this._outputFile : tmp0_elvis_lhs;
+            writeBytes_1(temp, bytes);
+            if (!(this._outputFile === temp)) {
+              var moveStatus = move(temp, this._outputFile, true);
+              if (moveStatus === 3) {
+                var tmp0_e_0 = Log_getInstance();
+                if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                  var tmp_16 = tmp0_e_0._loggerObject;
+                  var tmp_17;
+                  var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
+                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
+                    tmp_17 = '**ERROR** ';
+                  } else {
+                    {
+                      tmp_17 = '';
+                    }
+                  }
+                  var tmp_18 = tmp_17;
+                  var tmp_19;
+                  if (!(null == null ? true : isBlank(null))) {
+                    tmp_19 = 'null::';
+                  } else {
+                    {
+                      tmp_19 = '';
+                    }
+                  }
+                  var tmp_20 = tmp_19;
+                  tmp_16.error('' + tmp_18 + tmp_20 + 'Error 1006: Failed to move temp file into output directory');
+                }return exitNative(1006);
+              }}
+            this._exceptionState = 6;
+            this._state_0 = 7;
+            continue $sm;
+          case 5:
+            this._exceptionState = 6;
+            var tmp_21 = this._exception_0;
+            if (tmp_21 instanceof Exception) {
+              var e = this._exception_0;
+              var tmp1_e_0 = Log_getInstance();
+              if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_22 = tmp1_e_0._loggerObject;
+                var tmp_23;
+                var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_0) {
+                  tmp_23 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_23 = '';
+                  }
+                }
+                var tmp_24 = tmp_23;
+                var tmp_25;
+                if (!(null == null ? true : isBlank(null))) {
+                  tmp_25 = 'null::';
+                } else {
+                  {
+                    tmp_25 = '';
+                  }
+                }
+                var tmp_26 = tmp_25;
+                tmp_22.error('' + tmp_24 + tmp_26 + ('' + 'Failed to move compiled sprite into place; ' + e.message));
+              }return exitNative(1001);
+            } else {
+              {
+                throw this._exception_0;
+              }
+            }
+
+            break;
+          case 6:
+            throw this._exception_0;
+          case 7:
+            this._exceptionState = 6;
+            return Unit_getInstance();
+        }
+      } catch ($p_0) {
+        if (this._exceptionState === 6) {
+          throw $p_0;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p_0;
+        }
+      }
+     while (true);
+  };
+  $compileAndWriteCOROUTINE$5.$metadata$ = {
+    simpleName: '$compileAndWriteCOROUTINE$5',
+    kind: 'class',
+    interfaces: []
+  };
   function type$factory() {
     return getPropertyCallableRef('type', 1, KProperty1, function (receiver) {
       return _get_type_(receiver);
@@ -53175,19 +54371,353 @@
     }, null);
   }
   function _no_name_provided_$factory_214() {
-    var i = new _no_name_provided__246();
+    var i = new _no_name_provided__248();
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
   function _no_name_provided_$factory_215() {
-    var i = new _no_name_provided__247();
+    var i = new _no_name_provided__249();
     return function (p1) {
       return i.invoke_ixg9nz_k$(p1);
     };
   }
-  function _no_name_provided_$factory_216(this$0, $allFiles, $outputFile, $shouldWrite, resultContinuation) {
-    var i = new _no_name_provided__248(this$0, $allFiles, $outputFile, $shouldWrite, resultContinuation);
+  function _no_name_provided_$factory_216($task, resultContinuation) {
+    var i = new _no_name_provided__250($task, resultContinuation);
+    var l = function (p1, $cont) {
+      return i.invoke_2i3g7c_k$(p1, $cont);
+    };
+    l.$arity = 1;
+    return l;
+  }
+  function CompileSpriteTask_init_$Init$(outputType, files, $mask0, $marker, $this) {
+    if (!(($mask0 & 1) === 0))
+      outputType = null;
+    if (!(($mask0 & 2) === 0)) {
+      var tmp$ret$0;
+      var tmp$ret$0_0;
+      $l$block: {
+        tmp$ret$0 = [];
+        tmp$ret$0_0 = Unit_getInstance();
+        break $l$block;
+      }
+      files = tmp$ret$0;
+    }CompileSpriteTask.call($this, outputType, files);
+    return $this;
+  }
+  function CompileSpriteTask_init_$Create$(outputType, files, $mask0, $marker) {
+    return CompileSpriteTask_init_$Init$(outputType, files, $mask0, $marker, Object.create(CompileSpriteTask.prototype));
+  }
+  function _no_name_provided__251(this$0, $callback, resultContinuation) {
+    this._this$0_40 = this$0;
+    this._$callback_13 = $callback;
+    CoroutineImpl_0.call(this, resultContinuation);
+  }
+  _no_name_provided__251.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
+    var tmp = this.create_y6imfn_k$($this$launch, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  };
+  _no_name_provided__251.prototype.invoke_20e8_k$ = function (p1, $cont) {
+    this.invoke_2i3g7c_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $cont);
+    return Unit_getInstance();
+  };
+  _no_name_provided__251.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 3;
+            this._exceptionState = 2;
+            this._state_0 = 1;
+            suspendResult = compileSprite_0(this._this$0_40, this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            this._TRY_RESULT0 = suspendResult;
+            this._exceptionState = 3;
+            this._state_0 = 4;
+            continue $sm;
+          case 2:
+            this._exceptionState = 3;
+            var tmp_0 = this._exception_0;
+            if (tmp_0 instanceof AppRequestTermination) {
+              var e = this._exception_0;
+              var tmp_1 = this;
+              tmp_1._TRY_RESULT0 = e._code_1;
+              this._state_0 = 4;
+              continue $sm;
+            } else {
+              {
+                throw this._exception_0;
+              }
+            }
+
+            break;
+          case 3:
+            throw this._exception_0;
+          case 4:
+            this._exceptionState = 3;
+            var exitCode = this._TRY_RESULT0;
+            var tmp0_safe_receiver = this._$callback_13;
+            if (tmp0_safe_receiver == null)
+              null;
+            else
+              tmp0_safe_receiver(exitCode);
+            Unit_getInstance();
+            return Unit_getInstance();
+        }
+      } catch ($p) {
+        if (this._exceptionState === 3) {
+          throw $p;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p;
+        }
+      }
+     while (true);
+  };
+  _no_name_provided__251.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
+    var i = new _no_name_provided__251(this._this$0_40, this._$callback_13, completion);
+    i._$this$launch_0 = $this$launch;
+    return i;
+  };
+  _no_name_provided__251.$metadata$ = {
+    kind: 'class',
+    interfaces: [],
+    suspendArity: 1
+  };
+  function CompileSpriteTask(outputType, files) {
+    var outputType_0 = outputType === void 1 ? null : outputType;
+    var tmp;
+    if (files === void 1) {
+      var tmp$ret$0;
+      var tmp$ret$0_0;
+      $l$block: {
+        tmp$ret$0 = [];
+        tmp$ret$0_0 = Unit_getInstance();
+        break $l$block;
+      }
+      tmp = tmp$ret$0;
+    } else {
+      tmp = files;
+    }
+    var files_0 = tmp;
+    var tmp_0 = this;
+    var tmp0_safe_receiver = nullIfEmpty_0(outputType_0);
+    var tmp_1;
+    if (tmp0_safe_receiver == null) {
+      tmp_1 = null;
+    } else {
+      var tmp$ret$2;
+      $l$block_1: {
+        {
+        }
+        var tmp$ret$1;
+        $l$block_0: {
+          tmp$ret$1 = Companion_getInstance_71().fromString_6wfw3l_k$(tmp0_safe_receiver);
+          break $l$block_0;
+        }
+        tmp$ret$2 = tmp$ret$1;
+        break $l$block_1;
+      }
+      tmp_1 = tmp$ret$2;
+    }
+    tmp_0._outputType = tmp_1;
+    this._encoding_4 = null;
+    this._overwriteExisting = null;
+    this._overwriteNone = null;
+    this._outputFile_0 = null;
+    this._keepBlack_0 = null;
+    this._ignoreErrors = null;
+    this._files_0 = toList(files_0);
+  }
+  CompileSpriteTask.prototype.withOutputType = function (type) {
+    this._outputType = Companion_getInstance_71().fromString_6wfw3l_k$(type);
+    return this;
+  };
+  CompileSpriteTask.prototype.withOutputType_v3krwk_k$ = function (type) {
+    this._outputType = type;
+    return this;
+  };
+  CompileSpriteTask.prototype.getOutputTypeString = function () {
+    var tmp0_safe_receiver = this._outputType;
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver._get_name__0_k$();
+  };
+  CompileSpriteTask.prototype.getOutputType_0_k$ = function () {
+    return this._outputType;
+  };
+  CompileSpriteTask.prototype.withEncoding_ik3vsi_k$ = function (encoding) {
+    this._encoding_4 = encoding;
+    return this;
+  };
+  CompileSpriteTask.prototype.withEncoding = function (encoding) {
+    return this.withEncoding_uch40_k$(encoding === void 1 ? null : encoding);
+  };
+  CompileSpriteTask.prototype.withEncoding_uch40_k$ = function (encoding) {
+    if ((!(encoding == null) ? !(encoding === '555') : false) ? !(encoding === '565') : false) {
+      throw Exception_init_$Create$('Encoding is expected to be 555 or 565');
+    }var tmp = this;
+    var tmp0_safe_receiver = encoding;
+    var tmp_0;
+    if (tmp0_safe_receiver == null) {
+      tmp_0 = null;
+    } else {
+      var tmp$ret$1;
+      $l$block_0: {
+        {
+        }
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = Companion_getInstance_69().fromString_6wfw3l_k$(encoding);
+          break $l$block;
+        }
+        tmp$ret$1 = tmp$ret$0;
+        break $l$block_0;
+      }
+      tmp_0 = tmp$ret$1;
+    }
+    tmp._encoding_4 = tmp_0;
+    return this;
+  };
+  CompileSpriteTask.prototype.withEncoding$default_nmiqce_k$ = function (encoding, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      encoding = null;
+    return this.withEncoding_uch40_k$(encoding);
+  };
+  CompileSpriteTask.prototype.getEncoding_0_k$ = function () {
+    return this._encoding_4;
+  };
+  CompileSpriteTask.prototype.getEncodingString = function () {
+    var tmp0_safe_receiver = this._encoding_4;
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver._simpleName_1;
+  };
+  CompileSpriteTask.prototype.getKeepBlack = function () {
+    return this._keepBlack_0;
+  };
+  CompileSpriteTask.prototype.withKeepBlack = function (keep) {
+    this._keepBlack_0 = keep;
+    return this;
+  };
+  CompileSpriteTask.prototype.withOverwriteExisting = function (value) {
+    return this.withOverwriteExisting_mn33cr_k$(value === void 1 ? true : value);
+  };
+  CompileSpriteTask.prototype.withOverwriteExisting_mn33cr_k$ = function (value) {
+    if ((!(value == null) ? this._overwriteNone === true : false) ? value : false) {
+      throw Exception_init_$Create$('Cannot set overwrite existing. Overwrite none is already set');
+    }this._overwriteExisting = value;
+    return this;
+  };
+  CompileSpriteTask.prototype.withOverwriteExisting$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withOverwriteExisting_mn33cr_k$(value);
+  };
+  CompileSpriteTask.prototype.getOverwriteExisting = function () {
+    return this._overwriteExisting;
+  };
+  CompileSpriteTask.prototype.withOverwriteNone = function (value) {
+    return this.withOverwriteNone_mn33cr_k$(value === void 1 ? true : value);
+  };
+  CompileSpriteTask.prototype.withOverwriteNone_mn33cr_k$ = function (value) {
+    if ((!(value == null) ? this._overwriteExisting === true : false) ? value : false) {
+      throw Exception_init_$Create$('Cannot set overwrite none. Overwrite existing is already set');
+    }this._overwriteNone = value;
+    return this;
+  };
+  CompileSpriteTask.prototype.withOverwriteNone$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withOverwriteNone_mn33cr_k$(value);
+  };
+  CompileSpriteTask.prototype.getOverwriteNone = function () {
+    return this._overwriteNone;
+  };
+  CompileSpriteTask.prototype.withIgnoreErrors = function (value) {
+    return this.withIgnoreErrors_mn33cr_k$(value === void 1 ? true : value);
+  };
+  CompileSpriteTask.prototype.withIgnoreErrors_mn33cr_k$ = function (value) {
+    this._ignoreErrors = value;
+    return this;
+  };
+  CompileSpriteTask.prototype.withIgnoreErrors$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withIgnoreErrors_mn33cr_k$(value);
+  };
+  CompileSpriteTask.prototype.getIgnoreErrors = function () {
+    return this._ignoreErrors;
+  };
+  CompileSpriteTask.prototype.withOutputFile = function (directory) {
+    this._outputFile_0 = directory;
+    return this;
+  };
+  CompileSpriteTask.prototype.getOutputFile = function () {
+    return this._outputFile_0;
+  };
+  CompileSpriteTask.prototype.withFiles = function (files) {
+    this._files_0 = toList(files);
+    return this;
+  };
+  CompileSpriteTask.prototype.withFiles_wgj1yh_k$ = function (files) {
+    this._files_0 = files;
+    return this;
+  };
+  CompileSpriteTask.prototype.getFiles_0_k$ = function () {
+    return this._files_0;
+  };
+  CompileSpriteTask.prototype.getFilesArray = function () {
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_toTypedArray_0 = this._files_0;
+      tmp$ret$0 = copyToArray_0(tmp0_toTypedArray_0);
+      break $l$block;
+    }
+    return tmp$ret$0;
+  };
+  CompileSpriteTask.prototype.copy = function () {
+    var tmp0_safe_receiver = this._outputType;
+    var tmp = tmp0_safe_receiver == null ? null : tmp0_safe_receiver._get_name__0_k$();
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_toTypedArray_0 = this._files_0;
+      tmp$ret$0 = copyToArray_0(tmp0_toTypedArray_0);
+      break $l$block;
+    }
+    var out = new CompileSpriteTask(tmp, tmp$ret$0);
+    out._keepBlack_0 = this._keepBlack_0;
+    out._encoding_4 = this._encoding_4;
+    out._overwriteExisting = this._overwriteExisting;
+    out._overwriteNone = this._overwriteNone;
+    out._ignoreErrors = this._ignoreErrors;
+    out._outputFile_0 = this._outputFile_0;
+    return out;
+  };
+  CompileSpriteTask.prototype.runTaskWithCallback = function (callback) {
+    return this.runTask_ndmljy_k$(callback === void 1 ? null : callback);
+  };
+  CompileSpriteTask.prototype.runTask_ndmljy_k$ = function (callback) {
+    var tmp = GlobalScope_getInstance();
+    launch$default(tmp, null, null, _no_name_provided_$factory_217(this, callback, null), 3, null);
+    Unit_getInstance();
+  };
+  CompileSpriteTask.prototype.runTask$default_otgbxe_k$ = function (callback, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      callback = null;
+    return this.runTask_ndmljy_k$(callback);
+  };
+  CompileSpriteTask.$metadata$ = {
+    simpleName: 'CompileSpriteTask',
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided_$factory_217(this$0, $callback, resultContinuation) {
+    var i = new _no_name_provided__251(this$0, $callback, resultContinuation);
     var l = function (p1, $cont) {
       return i.invoke_2i3g7c_k$(p1, $cont);
     };
@@ -53209,6 +54739,12 @@
   }
   function _get_outputBreed_($this) {
     return $this._outputBreed$delegate.getValue_1kobyo_k$($this, outputBreed$factory_0());
+  }
+  function _get_inputGenus_($this) {
+    return $this._inputGenus$delegate.getValue_1kobyo_k$($this, inputGenus$factory_0());
+  }
+  function _get_inputBreed_($this) {
+    return $this._inputBreed$delegate.getValue_1kobyo_k$($this, inputBreed$factory_0());
   }
   function _get_overwriteExisting__0($this) {
     return $this._overwriteExisting$delegate_0.getValue_1kobyo_k$($this, overwriteExisting$factory_2());
@@ -53240,163 +54776,104 @@
   function _get_outputDirectory_($this) {
     return $this._outputDirectory$delegate.getValue_1kobyo_k$($this, outputDirectory$factory_0());
   }
+  function _get_sameSize_($this) {
+    return $this._sameSize$delegate.getValue_1kobyo_k$($this, sameSize$factory_0());
+  }
   function _get_files__0($this) {
     return $this._files$delegate_0.getValue_1kobyo_k$($this, files$factory_2());
   }
-  function _no_name_provided__249() {
+  function _no_name_provided__252() {
   }
-  _no_name_provided__249.prototype.invoke_6wfw3l_k$ = function (value) {
+  _no_name_provided__252.prototype.invoke_6wfw3l_k$ = function (value) {
     return Companion_getInstance_69().fromString_6wfw3l_k$(value);
   };
-  _no_name_provided__249.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__252.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__249.$metadata$ = {
+  _no_name_provided__252.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__250() {
+  function _no_name_provided__253() {
   }
-  _no_name_provided__250.prototype.invoke_ixg9nz_k$ = function (encoding) {
+  _no_name_provided__253.prototype.invoke_ixg9nz_k$ = function (encoding) {
     return encoding._simpleName_1;
   };
-  _no_name_provided__250.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__253.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ixg9nz_k$(p1 instanceof ColorEncoding ? p1 : THROW_CCE());
   };
-  _no_name_provided__250.$metadata$ = {
+  _no_name_provided__253.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__251() {
+  function _no_name_provided__254() {
   }
-  _no_name_provided__251.prototype.invoke_6wfw3l_k$ = function (it) {
+  _no_name_provided__254.prototype.invoke_6wfw3l_k$ = function (it) {
     return it;
   };
-  _no_name_provided__251.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__254.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__251.$metadata$ = {
+  _no_name_provided__254.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__252($opts, $shouldWrite, $quiet, resultContinuation) {
-    this._$opts = $opts;
-    this._$shouldWrite_0 = $shouldWrite;
-    this._$quiet = $quiet;
+  function _no_name_provided__255($task, resultContinuation) {
+    this._$task_0 = $task;
     CoroutineImpl_0.call(this, resultContinuation);
   }
-  _no_name_provided__252.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
+  _no_name_provided__255.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
     var tmp = this.create_y6imfn_k$($this$launch, $cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   };
-  _no_name_provided__252.prototype.invoke_20e8_k$ = function (p1, $cont) {
+  _no_name_provided__255.prototype.invoke_20e8_k$ = function (p1, $cont) {
     this.invoke_2i3g7c_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $cont);
     return Unit_getInstance();
   };
-  _no_name_provided__252.prototype.doResume_0_k$ = function () {
+  _no_name_provided__255.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
     $sm: do
       try {
         var tmp = this._state_0;
         switch (tmp) {
           case 0:
-            this._exceptionState = 5;
+            this._exceptionState = 3;
+            this._exceptionState = 2;
             this._state_0 = 1;
-            suspendResult = next(this._$opts, 0, this._$shouldWrite_0, this);
+            suspendResult = convertBreed(this._$task_0, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
             continue $sm;
           case 1:
-            if (suspendResult) {
-              this._state_0 = 2;
-              suspendResult = writeTailFiles(this._$opts, this);
-              if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
-                return suspendResult;
-              }continue $sm;
-            } else {
-              this._WHEN_RESULT0 = false;
-              this._state_0 = 3;
-              continue $sm;
-            }
-
-            break;
-          case 2:
-            this._WHEN_RESULT0 = suspendResult;
-            this._state_0 = 3;
-            continue $sm;
-          case 3:
-            if (this._WHEN_RESULT0) {
-              if (!this._$quiet) {
-                var tmp0_i_0 = Log_getInstance();
-                if (tmp0_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
-                  var tmp_0 = tmp0_i_0._loggerObject;
-                  var tmp_1;
-                  var tmp0_elvis_lhs_1_1 = tmp0_i_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
-                    tmp_1 = '**LOG1** ';
-                  } else {
-                    {
-                      tmp_1 = '';
-                    }
-                  }
-                  var tmp_2 = tmp_1;
-                  var tmp_3;
-                  if (!(null == null ? true : isBlank(null))) {
-                    tmp_3 = 'null::';
-                  } else {
-                    {
-                      tmp_3 = '';
-                    }
-                  }
-                  var tmp_4 = tmp_3;
-                  tmp_0.info(false, '' + tmp_2 + tmp_4 + 'Convert sprite finished OK');
-                }}exitNative(0);
-              this._state_0 = 4;
-              continue $sm;
-            } else {
-              var errors = this._$opts._failed;
-              var tmp1_e_0 = Log_getInstance();
-              if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                var tmp_5 = tmp1_e_0._loggerObject;
-                var tmp_6;
-                var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
-                  tmp_6 = '**ERROR** ';
-                } else {
-                  {
-                    tmp_6 = '';
-                  }
-                }
-                var tmp_7 = tmp_6;
-                var tmp_8;
-                if (!(null == null ? true : isBlank(null))) {
-                  tmp_8 = 'null::';
-                } else {
-                  {
-                    tmp_8 = '';
-                  }
-                }
-                var tmp_9 = tmp_8;
-                var tmp_10 = errors._get_size__0_k$();
-                var tmp_11 = this._$opts._get_filesCount__0_k$();
-                tmp_5.error('' + tmp_7 + tmp_9 + ('' + 'Failed to convert (' + tmp_10 + '/' + tmp_11 + '):\n\t -' + joinToString$default_0(errors, '\n\t- ', null, null, 0, null, null, 62, null)));
-              }exitNative(1001);
-              this._state_0 = 4;
-              continue $sm;
-            }
-
             Unit_getInstance();
+            this._exceptionState = 3;
+            this._state_0 = 4;
+            continue $sm;
+          case 2:
+            this._exceptionState = 3;
+            var tmp_0 = this._exception_0;
+            if (tmp_0 instanceof AppRequestTermination) {
+              var _ = this._exception_0;
+              this._state_0 = 4;
+              continue $sm;
+            } else {
+              {
+                throw this._exception_0;
+              }
+            }
+
             break;
-          case 4:
-            return Unit_getInstance();
-          case 5:
+          case 3:
             throw this._exception_0;
+          case 4:
+            this._exceptionState = 3;
+            return Unit_getInstance();
         }
       } catch ($p) {
-        if (this._exceptionState === 5) {
+        if (this._exceptionState === 3) {
           throw $p;
         } else {
           this._state_0 = this._exceptionState;
@@ -53405,12 +54882,12 @@
       }
      while (true);
   };
-  _no_name_provided__252.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
-    var i = new _no_name_provided__252(this._$opts, this._$shouldWrite_0, this._$quiet, completion);
-    i._$this$launch_0 = $this$launch;
+  _no_name_provided__255.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
+    var i = new _no_name_provided__255(this._$task_0, completion);
+    i._$this$launch_1 = $this$launch;
     return i;
   };
-  _no_name_provided__252.$metadata$ = {
+  _no_name_provided__255.$metadata$ = {
     kind: 'class',
     interfaces: [],
     suspendArity: 1
@@ -53423,467 +54900,75 @@
     tmp_0._fromGame$delegate = this.option$default_t6jqr8_k$(GameArgType, 'from', "Input sprite's game variant (C1|C2|CV|C3|DS)", null, null, 24, null).provideDelegate_1kobyo_k$(this, fromGame$factory());
     var tmp_1 = this;
     var tmp_2 = listOf([ColorEncoding_X_555_getInstance(), ColorEncoding_X_565_getInstance()]);
-    var tmp_3 = _no_name_provided_$factory_217();
-    var tmp_4 = new Choice(tmp_2, tmp_3, _no_name_provided_$factory_218());
+    var tmp_3 = _no_name_provided_$factory_218();
+    var tmp_4 = new Choice(tmp_2, tmp_3, _no_name_provided_$factory_219());
     tmp_1._encoding$delegate_0 = this.option$default_t6jqr8_k$(tmp_4, 'encoding', 'c', 'Sprite color encoding', null, 16, null).provideDelegate_1kobyo_k$(this, encoding$factory_1());
     var tmp_5 = this;
     var tmp_6 = listOf(['n', 'norn', 'g', 'grendel', 'e', 'ettin', 's', 'shee', 'geat']);
-    var tmp_7 = _no_name_provided_$factory_219();
+    var tmp_7 = _no_name_provided_$factory_220();
     var tmp_8 = Choice_init_$Create$(tmp_6, tmp_7, null, 4, null);
     tmp_5._outputGenus$delegate = this.option$default_t6jqr8_k$(tmp_8, 'genus', 'g', 'The output genus: [n]orn, [g]rendel, [e]ttin, [s]hee, geat', null, 16, null).provideDelegate_1kobyo_k$(this, outputGenus$factory());
     var tmp_9 = this;
     var tmp_10 = String_getInstance();
     tmp_9._outputBreed$delegate = this.option$default_t6jqr8_k$(tmp_10, 'breed', 'b', 'The output breed slot for these body parts', null, 16, null).provideDelegate_1kobyo_k$(this, outputBreed$factory());
     var tmp_11 = this;
-    var tmp_12 = Flag_init_$Create$(null, 1, null);
-    tmp_11._overwriteExisting$delegate_0 = default_0(this.option$default_t6jqr8_k$(tmp_12, 'force', 'f', 'Force overwrite of existing files', null, 16, null), false).provideDelegate_1kobyo_k$(this, overwriteExisting$factory_1());
+    var tmp_12 = String_getInstance();
+    tmp_11._inputGenus$delegate = this.option$default_t6jqr8_k$(tmp_12, 'input-genus', null, 'The genus to filter input files by', null, 20, null).provideDelegate_1kobyo_k$(this, inputGenus$factory());
     var tmp_13 = this;
-    var tmp_14 = Flag_init_$Create$(null, 1, null);
-    tmp_13._progressive$delegate = default_0(this.option$default_t6jqr8_k$(tmp_14, 'progressive', null, 'Use non-linear mapping of C1e to C2e parts to fake front facing tilt', null, 20, null), false).provideDelegate_1kobyo_k$(this, progressive$factory());
+    var tmp_14 = String_getInstance();
+    tmp_13._inputBreed$delegate = this.option$default_t6jqr8_k$(tmp_14, 'input-breed', null, 'The breed to filter input files by', null, 20, null).provideDelegate_1kobyo_k$(this, inputBreed$factory());
     var tmp_15 = this;
     var tmp_16 = Flag_init_$Create$(null, 1, null);
-    tmp_15._noAgeProgression$delegate = default_0(this.option$default_t6jqr8_k$(tmp_16, 'keep-ages', null, 'Do not shift ages to match target game', null, 20, null), false).provideDelegate_1kobyo_k$(this, noAgeProgression$factory());
+    tmp_15._overwriteExisting$delegate_0 = default_0(this.option$default_t6jqr8_k$(tmp_16, 'force', 'f', 'Force overwrite of existing files', null, 16, null), false).provideDelegate_1kobyo_k$(this, overwriteExisting$factory_1());
     var tmp_17 = this;
     var tmp_18 = Flag_init_$Create$(null, 1, null);
-    tmp_17._overwriteNone$delegate_0 = default_0(this.option$default_t6jqr8_k$(tmp_18, 'skip-existing', 'x', 'Skip existing files', null, 16, null), false).provideDelegate_1kobyo_k$(this, overwriteNone$factory_1());
+    tmp_17._progressive$delegate = default_0(this.option$default_t6jqr8_k$(tmp_18, 'progressive', null, 'Use non-linear mapping of C1e to C2e parts to fake front facing tilt', null, 20, null), false).provideDelegate_1kobyo_k$(this, progressive$factory());
     var tmp_19 = this;
-    var tmp_20 = Boolean_getInstance();
-    tmp_19._noTails$delegate = default_0(this.option$default_t6jqr8_k$(tmp_20, 'no-tail', null, 'Do not create tail files (even if none are present)', null, 20, null), false).provideDelegate_1kobyo_k$(this, noTails$factory());
+    var tmp_20 = Flag_init_$Create$(null, 1, null);
+    tmp_19._noAgeProgression$delegate = default_0(this.option$default_t6jqr8_k$(tmp_20, 'keep-ages', null, 'Do not shift ages to match target game', null, 20, null), false).provideDelegate_1kobyo_k$(this, noAgeProgression$factory());
     var tmp_21 = this;
     var tmp_22 = Flag_init_$Create$(null, 1, null);
-    tmp_21._ignoreErrors$delegate = default_0(this.option$default_t6jqr8_k$(tmp_22, 'ignore-errors', 'e', 'Ignore all compilation errors. Other errors will still cancel compile', null, 16, null), false).provideDelegate_1kobyo_k$(this, ignoreErrors$factory());
+    tmp_21._overwriteNone$delegate_0 = default_0(this.option$default_t6jqr8_k$(tmp_22, 'skip-existing', 'x', 'Skip existing files', null, 16, null), false).provideDelegate_1kobyo_k$(this, overwriteNone$factory_1());
     var tmp_23 = this;
-    var tmp_24 = Flag_init_$Create$(null, 1, null);
-    tmp_23._quiet$delegate = default_0(this.option$default_t6jqr8_k$(tmp_24, 'quiet', 'q', 'Silence non-essential output', null, 16, null), false).provideDelegate_1kobyo_k$(this, quiet$factory());
+    var tmp_24 = Boolean_getInstance();
+    tmp_23._noTails$delegate = default_0(this.option$default_t6jqr8_k$(tmp_24, 'no-tail', null, 'Do not create tail files (even if none are present)', null, 20, null), false).provideDelegate_1kobyo_k$(this, noTails$factory());
     var tmp_25 = this;
     var tmp_26 = Flag_init_$Create$(null, 1, null);
-    tmp_25._progress$delegate = default_0(this.option$default_t6jqr8_k$(tmp_26, 'progress', 'p', 'Output file conversion progress', null, 16, null), false).provideDelegate_1kobyo_k$(this, progress$factory());
+    tmp_25._ignoreErrors$delegate = default_0(this.option$default_t6jqr8_k$(tmp_26, 'ignore-errors', 'e', 'Ignore all compilation errors. Other errors will still cancel compile', null, 16, null), false).provideDelegate_1kobyo_k$(this, ignoreErrors$factory());
     var tmp_27 = this;
-    var tmp_28 = String_getInstance();
-    tmp_27._attDirectory$delegate = this.option$default_t6jqr8_k$(tmp_28, 'att-dir', 'a', 'The location of atts to convert if desired', null, 16, null).provideDelegate_1kobyo_k$(this, attDirectory$factory());
+    var tmp_28 = Flag_init_$Create$(null, 1, null);
+    tmp_27._quiet$delegate = default_0(this.option$default_t6jqr8_k$(tmp_28, 'quiet', 'q', 'Silence non-essential output', null, 16, null), false).provideDelegate_1kobyo_k$(this, quiet$factory());
     var tmp_29 = this;
-    var tmp_30 = String_getInstance();
-    tmp_29._outputDirectory$delegate = this.option$default_t6jqr8_k$(tmp_30, 'output', 'o', 'Output folder for the converted breed files', null, 16, null).provideDelegate_1kobyo_k$(this, outputDirectory$factory());
+    var tmp_30 = Flag_init_$Create$(null, 1, null);
+    tmp_29._progress$delegate = default_0(this.option$default_t6jqr8_k$(tmp_30, 'progress', 'p', 'Output file conversion progress', null, 16, null), false).provideDelegate_1kobyo_k$(this, progress$factory());
     var tmp_31 = this;
     var tmp_32 = String_getInstance();
-    tmp_31._files$delegate_0 = vararg(this.argument$default_304j6g_k$(tmp_32, 'images', 'Image files or folders', null, 8, null)).provideDelegate_1kobyo_k$(this, files$factory_1());
+    tmp_31._attDirectory$delegate = this.option$default_t6jqr8_k$(tmp_32, 'att-dir', 'a', 'The location of atts to convert if desired', null, 16, null).provideDelegate_1kobyo_k$(this, attDirectory$factory());
+    var tmp_33 = this;
+    var tmp_34 = String_getInstance();
+    tmp_33._outputDirectory$delegate = this.option$default_t6jqr8_k$(tmp_34, 'output', 'o', 'Output folder for the converted breed files', null, 16, null).provideDelegate_1kobyo_k$(this, outputDirectory$factory());
+    var tmp_35 = this;
+    var tmp_36 = Flag_init_$Create$(null, 1, null);
+    tmp_35._sameSize$delegate = default_0(this.option$default_t6jqr8_k$(tmp_36, 'samesize', 'z', 'Make all frames in a body part the same size', null, 16, null), false).provideDelegate_1kobyo_k$(this, sameSize$factory());
+    var tmp_37 = this;
+    var tmp_38 = String_getInstance();
+    tmp_37._files$delegate_0 = vararg(this.argument$default_304j6g_k$(tmp_38, 'images', 'Image files or folders', null, 8, null)).provideDelegate_1kobyo_k$(this, files$factory_1());
   }
   ConvertBreedCLI.prototype.execute_sv8swh_k$ = function () {
-    var currentWorkingDirectory = getCurrentWorkingDirectory();
-    var tmp;
-    try {
-      var tmp0_$receiver = _get_files__0(this);
-      var tmp1_fileNameRegex = BREED_SPRITE_FILE_REGEX;
-      tmp = unpackPaths$default(tmp0_$receiver, null, tmp1_fileNameRegex, currentWorkingDirectory, 1, null);
-    } catch ($p) {
-      var tmp_0;
-      if ($p instanceof MissingFilesException) {
-        {
-          var tmp0_e_0 = Log_getInstance();
-          if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-            var tmp_1 = tmp0_e_0._loggerObject;
-            var tmp$ret$2;
-            $l$block_1: {
-              var tmp_2;
-              var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
-                tmp_2 = '**ERROR** ';
-              } else {
-                {
-                  tmp_2 = '';
-                }
-              }
-              var tmp_3 = tmp_2;
-              var tmp_4;
-              var tmp$ret$0;
-              $l$block: {
-                {
-                }
-                tmp$ret$0 = null == null ? true : isBlank(null);
-                break $l$block;
-              }
-              if (!tmp$ret$0) {
-                tmp_4 = 'null::';
-              } else {
-                {
-                  tmp_4 = '';
-                }
-              }
-              var tmp_5 = tmp_4;
-              var tmp$ret$1;
-              $l$block_0: {
-                tmp$ret$1 = 'Error 1015: ' + ensureNotNull($p.message);
-                break $l$block_0;
-              }
-              tmp$ret$2 = '' + tmp_3 + tmp_5 + tmp$ret$1;
-              break $l$block_1;
-            }
-            tmp_1.error(tmp$ret$2);
-          }}
-        return exitNative(1015);
-      } else {
-        {
-          throw $p;
-        }
-      }
-      tmp = tmp_0;
+    var tmp = _get_toGame_(this)._code_0;
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_toTypedArray_0 = _get_files__0(this);
+      tmp$ret$0 = copyToArray_0(tmp0_toTypedArray_0);
+      break $l$block;
     }
-    var spriteFiles = tmp;
-    if (spriteFiles.isEmpty_0_k$()) {
-      var tmp_6;
-      if (_get_ignoreErrors_(this)) {
-        if (!_get_quiet_(this)) {
-          {
-            var tmp1_w_0 = Log_getInstance();
-            if (tmp1_w_0._logLevel._value_3 >= LogLevel_WARN_getInstance()._value_3) {
-              var tmp_7 = tmp1_w_0._loggerObject;
-              var tmp$ret$5;
-              $l$block_4: {
-                var tmp_8;
-                var tmp0_elvis_lhs_1_1_0 = tmp1_w_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
-                  tmp_8 = '**WARN** ';
-                } else {
-                  {
-                    tmp_8 = '';
-                  }
-                }
-                var tmp_9 = tmp_8;
-                var tmp_10;
-                var tmp$ret$3;
-                $l$block_2: {
-                  {
-                  }
-                  tmp$ret$3 = null == null ? true : isBlank(null);
-                  break $l$block_2;
-                }
-                if (!tmp$ret$3) {
-                  tmp_10 = 'null::';
-                } else {
-                  {
-                    tmp_10 = '';
-                  }
-                }
-                var tmp_11 = tmp_10;
-                var tmp$ret$4;
-                $l$block_3: {
-                  tmp$ret$4 = 'Warn 1002: No valid breed sprite files found';
-                  break $l$block_3;
-                }
-                tmp$ret$5 = '' + tmp_9 + tmp_11 + tmp$ret$4;
-                break $l$block_4;
-              }
-              tmp_7.warning(tmp$ret$5);
-            }}
-        }tmp_6 = exitNative(0);
-      } else {
-        if (!_get_quiet_(this)) {
-          {
-            var tmp2_e_0 = Log_getInstance();
-            if (tmp2_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-              var tmp_12 = tmp2_e_0._loggerObject;
-              var tmp$ret$8;
-              $l$block_7: {
-                var tmp_13;
-                var tmp0_elvis_lhs_1_1_1 = tmp2_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
-                  tmp_13 = '**ERROR** ';
-                } else {
-                  {
-                    tmp_13 = '';
-                  }
-                }
-                var tmp_14 = tmp_13;
-                var tmp_15;
-                var tmp$ret$6;
-                $l$block_5: {
-                  {
-                  }
-                  tmp$ret$6 = null == null ? true : isBlank(null);
-                  break $l$block_5;
-                }
-                if (!tmp$ret$6) {
-                  tmp_15 = 'null::';
-                } else {
-                  {
-                    tmp_15 = '';
-                  }
-                }
-                var tmp_16 = tmp_15;
-                var tmp$ret$7;
-                $l$block_6: {
-                  tmp$ret$7 = 'Error 1002: No valid breed sprite files found';
-                  break $l$block_6;
-                }
-                tmp$ret$8 = '' + tmp_14 + tmp_16 + tmp$ret$7;
-                break $l$block_7;
-              }
-              tmp_12.error(tmp$ret$8);
-            }}
-        }tmp_6 = exitNative(1002);
-      }
-      return tmp_6;
-    }var quiet = _get_quiet_(this);
-    var tmp2_safe_receiver = _get_attDirectory_(this);
-    var tmp_17;
-    if (tmp2_safe_receiver == null) {
-      tmp_17 = null;
-    } else {
-      tmp_17 = replace$default_0(tmp2_safe_receiver, '\\ ', ' ', false, 4, null);
-    }
-    var attDirectory = tmp_17;
-    var tmp3_safe_receiver = attDirectory;
-    var tmp_18;
-    if (tmp3_safe_receiver == null) {
-      tmp_18 = null;
-    } else {
-      var tmp$ret$10;
-      $l$block_9: {
-        {
-        }
-        var tmp$ret$9;
-        $l$block_8: {
-          tmp$ret$9 = getAttFiles(currentWorkingDirectory, attDirectory, quiet);
-          break $l$block_8;
-        }
-        tmp$ret$10 = tmp$ret$9;
-        break $l$block_9;
-      }
-      tmp_18 = tmp$ret$10;
-    }
-    var attFiles = tmp_18;
-    var outputGenus = getOutputGenus(_get_outputGenus_(this));
-    var outputBreed = getOutputBreed(_get_toGame_(this), _get_outputBreed_(this));
-    var tmp_19;
-    var tmp4_safe_receiver = outputGenus;
-    var tmp_20 = tmp4_safe_receiver == null ? null : tmp4_safe_receiver._first;
-    var tmp$ret$12;
-    $l$block_11: {
-      var tmp3_lowercase_0 = _get_spriteType__0(_get_toGame_(this))._get_name__0_k$();
-      var tmp$ret$11;
-      $l$block_10: {
-        tmp$ret$11 = tmp3_lowercase_0;
-        break $l$block_10;
-      }
-      tmp$ret$12 = tmp$ret$11.toLowerCase();
-      break $l$block_11;
-    }
-    if (logDuplicatesAndGetHasDuplicates(spriteFiles, tmp_20, outputBreed, tmp$ret$12)) {
-      tmp_19 = true;
-    } else {
-      {
-        var tmp$ret$13;
-        $l$block_12: {
-          var tmp0_elvis_lhs_1 = attFiles;
-          tmp$ret$13 = tmp0_elvis_lhs_1 == null ? emptyList() : tmp0_elvis_lhs_1;
-          break $l$block_12;
-        }
-        var tmp_21 = tmp$ret$13;
-        var tmp5_safe_receiver = outputGenus;
-        tmp_19 = logDuplicatesAndGetHasDuplicates(tmp_21, tmp5_safe_receiver == null ? null : tmp5_safe_receiver._first, outputBreed, 'att');
-      }
-    }
-    var duplicates = tmp_19;
-    if (duplicates) {
-      return exitNative(1011);
-    }var tmp_22 = _get_outputDirectory_(this);
-    var outputDirectory = ensureAndGetOutputDirectory$default(tmp_22, currentWorkingDirectory, false, 4, null);
-    var ignoreErrors = _get_ignoreErrors_(this);
-    if (_get_overwriteExisting__0(this) ? _get_overwriteNone__0(this) : false) {
-      {
-        var tmp4_e_0 = Log_getInstance();
-        if (tmp4_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-          var tmp_23 = tmp4_e_0._loggerObject;
-          var tmp$ret$16;
-          $l$block_15: {
-            var tmp_24;
-            var tmp0_elvis_lhs_1_1_2 = tmp4_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_2) {
-              tmp_24 = '**ERROR** ';
-            } else {
-              {
-                tmp_24 = '';
-              }
-            }
-            var tmp_25 = tmp_24;
-            var tmp_26;
-            var tmp$ret$14;
-            $l$block_13: {
-              {
-              }
-              tmp$ret$14 = null == null ? true : isBlank(null);
-              break $l$block_13;
-            }
-            if (!tmp$ret$14) {
-              tmp_26 = 'null::';
-            } else {
-              {
-                tmp_26 = '';
-              }
-            }
-            var tmp_27 = tmp_26;
-            var tmp$ret$15;
-            $l$block_14: {
-              tmp$ret$15 = 'Error 1003: Cannot use overwrite existing and overwrite none.';
-              break $l$block_14;
-            }
-            tmp$ret$16 = '' + tmp_25 + tmp_27 + tmp$ret$15;
-            break $l$block_15;
-          }
-          tmp_23.error(tmp$ret$16);
-        }}
-      return exitNative(1003);
-    }var overwriteAll = new Pointer(_get_overwriteExisting__0(this) ? !_get_overwriteNone__0(this) : false);
-    var overwriteNone = new Pointer(!_get_overwriteExisting__0(this) ? _get_overwriteNone__0(this) : false);
-    var tmp6_elvis_lhs = shouldOverwriteOverride;
-    var shouldWrite_1 = tmp6_elvis_lhs == null ? createDefaultShouldOverwriteCallback(overwriteAll, overwriteNone) : tmp6_elvis_lhs;
-    if (!quiet) {
-      {
-        var tmp5_i_0 = Log_getInstance();
-        if (tmp5_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
-          var tmp_28 = tmp5_i_0._loggerObject;
-          var tmp$ret$19;
-          $l$block_18: {
-            var tmp_29;
-            var tmp0_elvis_lhs_1_1_3 = tmp5_i_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3) {
-              tmp_29 = '**LOG1** ';
-            } else {
-              {
-                tmp_29 = '';
-              }
-            }
-            var tmp_30 = tmp_29;
-            var tmp_31;
-            var tmp$ret$17;
-            $l$block_16: {
-              {
-              }
-              tmp$ret$17 = null == null ? true : isBlank(null);
-              break $l$block_16;
-            }
-            if (!tmp$ret$17) {
-              tmp_31 = 'null::';
-            } else {
-              {
-                tmp_31 = '';
-              }
-            }
-            var tmp_32 = tmp_31;
-            var tmp$ret$18;
-            $l$block_17: {
-              tmp$ret$18 = '' + 'Converting ' + spriteFiles._get_size__0_k$() + ' sprites to ' + _get_toGame_(this)._code_0;
-              break $l$block_17;
-            }
-            tmp$ret$19 = '' + tmp_30 + tmp_32 + tmp$ret$18;
-            break $l$block_18;
-          }
-          tmp_28.info(false, tmp$ret$19);
-        }}
-    }var tmp_33;
-    var tmp_34;
-    if (!_get_noTails_(this)) {
-      var tmp$ret$20;
-      $l$block_24: {
-        var tmp_35;
-        if (isInterface(spriteFiles, Collection)) {
-          tmp_35 = spriteFiles.isEmpty_0_k$();
-        } else {
-          {
-            tmp_35 = false;
-          }
-        }
-        if (tmp_35) {
-          tmp$ret$20 = true;
-          break $l$block_24;
-        } else {
-        }
-        var tmp0_iterator_1 = spriteFiles.iterator_0_k$();
-        while (tmp0_iterator_1.hasNext_0_k$()) {
-          var element_2 = tmp0_iterator_1.next_0_k$();
-          var tmp$ret$23;
-          $l$block_22: {
-            var tmp$ret$22;
-            $l$block_21: {
-              var tmp$ret$21;
-              $l$block_20: {
-                tmp$ret$21 = element_2;
-                break $l$block_20;
-              }
-              tmp$ret$22 = tmp$ret$21.toLowerCase();
-              break $l$block_21;
-            }
-            tmp$ret$23 = charSequenceGet(tmp$ret$22, 0).equals(new Char(109));
-            break $l$block_22;
-          }
-          if (tmp$ret$23) {
-            tmp$ret$20 = false;
-            break $l$block_24;
-          } else {
-          }
-        }
-        tmp$ret$20 = true;
-        break $l$block_24;
-      }
-      tmp_34 = tmp$ret$20;
-    } else {
-      tmp_34 = false;
-    }
-    if (tmp_34) {
-      var tmp_36;
-      if (!(outputGenus == null) ? !(outputBreed == null) : false) {
-        tmp_36 = listOf(['' + outputGenus._first + '0' + outputBreed, '' + outputGenus._second + '0' + outputBreed]);
-      } else {
-        var tmp$ret$26;
-        $l$block_27: {
-          var tmp$ret$25;
-          $l$block_26: {
-            var tmp0_flatMapTo_0_1 = ArrayList_init_$Create$();
-            var tmp0_iterator_1_2 = spriteFiles.iterator_0_k$();
-            while (tmp0_iterator_1_2.hasNext_0_k$()) {
-              var element_2_3 = tmp0_iterator_1_2.next_0_k$();
-              var tmp$ret$24;
-              $l$block_25: {
-                var fileName_6 = ensureNotNull(FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(element_2_3));
-                var tmp0_safe_receiver_9 = outputGenus;
-                var tmp1_elvis_lhs_8 = tmp0_safe_receiver_9 == null ? null : tmp0_safe_receiver_9._first;
-                var genus_7 = (tmp1_elvis_lhs_8 == null ? charSequenceGet(fileName_6, 1) : tmp1_elvis_lhs_8).minus_wi8o78_k$(new Char(48));
-                if (genus_7 >= 4) {
-                  genus_7 = genus_7 - 4 | 0;
-                }var tmp2_elvis_lhs_11 = outputBreed;
-                var breed_10 = tmp2_elvis_lhs_11 == null ? charSequenceGet(fileName_6, 3) : tmp2_elvis_lhs_11;
-                tmp$ret$24 = listOf(['' + genus_7 + '0' + breed_10, '' + (genus_7 + 4 | 0) + '0' + breed_10]);
-                break $l$block_25;
-              }
-              var list_3_4 = tmp$ret$24;
-              addAll(tmp0_flatMapTo_0_1, list_3_4);
-              Unit_getInstance();
-            }
-            tmp$ret$25 = tmp0_flatMapTo_0_1;
-            break $l$block_26;
-          }
-          tmp$ret$26 = tmp$ret$25;
-          break $l$block_27;
-        }
-        tmp_36 = distinct(tmp$ret$26);
-      }
-      tmp_33 = tmp_36;
-    } else {
-      {
-        tmp_33 = emptyList();
-      }
-    }
-    var tailFiles = tmp_33;
-    var fromGame = _get_fromGame_(this);
-    var toGame = _get_toGame_(this);
-    var fromGames = !(fromGame == null) ? null : inferGame(spriteFiles);
-    var ageProgressions = getAgeProgressions(_get_noAgeProgression_(this), fromGames, toGame, spriteFiles);
-    var tmp7_encoding = _get_encoding__0(this);
-    var tmp8_progressive = _get_progressive_(this);
-    var tmp9_progress = _get_progress_(this);
-    var opts = ConvertBreedOptions_init_$Create$(fromGame, fromGames, toGame, spriteFiles, attDirectory, attFiles, ageProgressions, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, tmp7_encoding, ignoreErrors, tailFiles, null, quiet, tmp8_progressive, tmp9_progress, shouldWrite_1, 16384, null);
-    var tmp_37 = GlobalScope_getInstance();
-    launch$default(tmp_37, null, null, _no_name_provided_$factory_220(opts, shouldWrite_1, quiet, null), 3, null);
+    var tmp_0 = new ConvertBreedTask(tmp, tmp$ret$0);
+    var tmp1_safe_receiver = _get_fromGame_(this);
+    var tmp_1 = tmp_0.withFromGame(tmp1_safe_receiver == null ? null : tmp1_safe_receiver._code_0);
+    var tmp0_safe_receiver = _get_encoding__0(this);
+    var task = tmp_1.withEncoding_uch40_k$(tmp0_safe_receiver == null ? null : tmp0_safe_receiver._simpleName_1).withOutputGenus(_get_outputGenus_(this)).withOutputBreed(_get_outputBreed_(this)).withInputGenus(_get_inputGenus_(this)).withInputBreed(_get_inputBreed_(this)).withProgress_mn33cr_k$(_get_progress_(this)).withProgressive_mn33cr_k$(_get_progressive_(this)).withAttDirectory(_get_attDirectory_(this)).withIgnoreErrors_mn33cr_k$(_get_ignoreErrors_(this)).withNoAgeProgression_mn33cr_k$(_get_noAgeProgression_(this)).withQuiet_mn33cr_k$(_get_quiet_(this)).withOutputDirectory(_get_outputDirectory_(this)).withOverwriteExisting_mn33cr_k$(_get_overwriteExisting__0(this)).withOverwriteNone_mn33cr_k$(_get_overwriteNone__0(this)).withNoTails_mn33cr_k$(_get_noTails_(this)).withSameSize(_get_sameSize_(this));
+    var tmp_2 = GlobalScope_getInstance();
+    launch$default(tmp_2, null, null, _no_name_provided_$factory_221(task, null), 3, null);
     Unit_getInstance();
   };
   ConvertBreedCLI.$metadata$ = {
@@ -53891,8 +54976,14 @@
     kind: 'class',
     interfaces: []
   };
-  function ConvertBreedOptions_init_$Init$(fromGame, fromGames, toGame, spriteFiles, attDirectory, attFiles, ageProgressions, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, progressive, progress, shouldWriteCallback, $mask0, $marker, $this) {
-    if (!(($mask0 & 16384) === 0)) {
+  function convertBreed(task, $cont) {
+    var tmp = new $convertBreedCOROUTINE$6(task, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  }
+  function ConvertBreedOptions_init_$Init$(fromGame, fromGames, toGame, spriteFiles, attDirectory, attFiles, ageProgressions, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, inputGenus, inputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, progressive, progress, sameSize, shouldWriteCallback, $mask0, $marker, $this) {
+    if (!(($mask0 & 65536) === 0)) {
       var tmp$ret$0;
       var tmp$ret$0_0;
       $l$block: {
@@ -53901,44 +54992,44 @@
         break $l$block;
       }
       failed = tmp$ret$0;
-    }ConvertBreedOptions.call($this, fromGame, fromGames, toGame, spriteFiles, attDirectory, attFiles, ageProgressions, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, progressive, progress, shouldWriteCallback);
+    }ConvertBreedOptions.call($this, fromGame, fromGames, toGame, spriteFiles, attDirectory, attFiles, ageProgressions, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, inputGenus, inputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, progressive, progress, sameSize, shouldWriteCallback);
     return $this;
   }
-  function ConvertBreedOptions_init_$Create$(fromGame, fromGames, toGame, spriteFiles, attDirectory, attFiles, ageProgressions, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, progressive, progress, shouldWriteCallback, $mask0, $marker) {
-    return ConvertBreedOptions_init_$Init$(fromGame, fromGames, toGame, spriteFiles, attDirectory, attFiles, ageProgressions, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, progressive, progress, shouldWriteCallback, $mask0, $marker, Object.create(ConvertBreedOptions.prototype));
+  function ConvertBreedOptions_init_$Create$(fromGame, fromGames, toGame, spriteFiles, attDirectory, attFiles, ageProgressions, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, inputGenus, inputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, progressive, progress, sameSize, shouldWriteCallback, $mask0, $marker) {
+    return ConvertBreedOptions_init_$Init$(fromGame, fromGames, toGame, spriteFiles, attDirectory, attFiles, ageProgressions, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, inputGenus, inputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, progressive, progress, sameSize, shouldWriteCallback, $mask0, $marker, Object.create(ConvertBreedOptions.prototype));
   }
-  function _no_name_provided__253(this$0) {
-    this._this$0_40 = this$0;
-  }
-  _no_name_provided__253.prototype.invoke_0_k$ = function () {
-    return this._this$0_40._spriteFiles._get_size__0_k$();
-  };
-  _no_name_provided__253.$metadata$ = {
-    kind: 'class',
-    interfaces: []
-  };
-  function _no_name_provided__254(this$0) {
+  function _no_name_provided__256(this$0) {
     this._this$0_41 = this$0;
   }
-  _no_name_provided__254.prototype.invoke_0_k$ = function () {
-    var tmp0_subject = this._this$0_41._toGame_2;
-    return tmp0_subject.equals(GameVariant_C1_getInstance()) ? 'spr' : tmp0_subject.equals(GameVariant_C2_getInstance()) ? 's16' : 'c16';
+  _no_name_provided__256.prototype.invoke_0_k$ = function () {
+    return this._this$0_41._spriteFiles._get_size__0_k$();
   };
-  _no_name_provided__254.$metadata$ = {
+  _no_name_provided__256.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__255(this$0) {
+  function _no_name_provided__257(this$0) {
     this._this$0_42 = this$0;
   }
-  _no_name_provided__255.prototype.invoke_0_k$ = function () {
-    return getFallbackTailSpriteBytes(this._this$0_42);
+  _no_name_provided__257.prototype.invoke_0_k$ = function () {
+    var tmp0_subject = this._this$0_42._toGame_2;
+    return tmp0_subject.equals(GameVariant_C1_getInstance()) ? 'spr' : tmp0_subject.equals(GameVariant_C2_getInstance()) ? 's16' : 'c16';
   };
-  _no_name_provided__255.$metadata$ = {
+  _no_name_provided__257.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function ConvertBreedOptions(fromGame, fromGames, toGame, spriteFiles, attDirectory, attFiles, ageProgressions, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, progressive, progress, shouldWriteCallback) {
+  function _no_name_provided__258(this$0) {
+    this._this$0_43 = this$0;
+  }
+  _no_name_provided__258.prototype.invoke_0_k$ = function () {
+    return getFallbackTailSpriteBytes(this._this$0_43);
+  };
+  _no_name_provided__258.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function ConvertBreedOptions(fromGame, fromGames, toGame, spriteFiles, attDirectory, attFiles, ageProgressions, currentWorkingDirectory, outputDirectory, outputGenus, outputBreed, inputGenus, inputBreed, encoding, ignoreErrors, tailFiles, failed, quiet, progressive, progress, sameSize, shouldWriteCallback) {
     this._fromGame_1 = fromGame;
     this._fromGames = fromGames;
     this._toGame_2 = toGame;
@@ -53950,20 +55041,23 @@
     this._outputDirectory_3 = outputDirectory;
     this._outputGenus = outputGenus;
     this._outputBreed = outputBreed;
-    this._encoding_4 = encoding;
-    this._ignoreErrors = ignoreErrors;
+    this._inputGenus = inputGenus;
+    this._inputBreed = inputBreed;
+    this._encoding_5 = encoding;
+    this._ignoreErrors_0 = ignoreErrors;
     this._tailFiles = tailFiles;
     this._failed = failed;
     this._quiet = quiet;
     this._progressive_0 = progressive;
     this._progress = progress;
+    this._sameSize = sameSize;
     this._shouldWriteCallback = shouldWriteCallback;
     var tmp = this;
-    tmp._filesCount$delegate = lazy(_no_name_provided_$factory_221(this));
+    tmp._filesCount$delegate = lazy(_no_name_provided_$factory_222(this));
     var tmp_0 = this;
-    tmp_0._toExtension$delegate = lazy(_no_name_provided_$factory_222(this));
+    tmp_0._toExtension$delegate = lazy(_no_name_provided_$factory_223(this));
     var tmp_1 = this;
-    tmp_1._fallbackTailBytes$delegate = lazy(_no_name_provided_$factory_223(this));
+    tmp_1._fallbackTailBytes$delegate = lazy(_no_name_provided_$factory_224(this));
   }
   ConvertBreedOptions.prototype._get_filesCount__0_k$ = function () {
     var tmp$ret$0;
@@ -53993,7 +55087,7 @@
     return tmp$ret$0;
   };
   ConvertBreedOptions.prototype.toString = function () {
-    return '' + 'ConvertBreedOptions(fromGame=' + this._fromGame_1 + ', fromGames=' + this._fromGames + ', toGame=' + this._toGame_2 + ', spriteFiles=' + this._spriteFiles + ', attDirectory=' + this._attDirectory + ', attFiles=' + this._attFiles + ', ageProgressions=' + this._ageProgressions + ', currentWorkingDirectory=' + this._currentWorkingDirectory + ', outputDirectory=' + this._outputDirectory_3 + ', outputGenus=' + this._outputGenus + ', outputBreed=' + this._outputBreed + ', encoding=' + this._encoding_4 + ', ignoreErrors=' + this._ignoreErrors + ', tailFiles=' + this._tailFiles + ', failed=' + this._failed + ', quiet=' + this._quiet + ', progressive=' + this._progressive_0 + ', progress=' + this._progress + ', shouldWriteCallback=' + this._shouldWriteCallback + ')';
+    return '' + 'ConvertBreedOptions(fromGame=' + this._fromGame_1 + ', fromGames=' + this._fromGames + ', toGame=' + this._toGame_2 + ', spriteFiles=' + this._spriteFiles + ', attDirectory=' + this._attDirectory + ', attFiles=' + this._attFiles + ', ageProgressions=' + this._ageProgressions + ', currentWorkingDirectory=' + this._currentWorkingDirectory + ', outputDirectory=' + this._outputDirectory_3 + ', outputGenus=' + this._outputGenus + ', outputBreed=' + this._outputBreed + ', inputGenus=' + this._inputGenus + ', inputBreed=' + this._inputBreed + ', encoding=' + this._encoding_5 + ', ignoreErrors=' + this._ignoreErrors_0 + ', tailFiles=' + this._tailFiles + ', failed=' + this._failed + ', quiet=' + this._quiet + ', progressive=' + this._progressive_0 + ', progress=' + this._progress + ', sameSize=' + this._sameSize + ', shouldWriteCallback=' + this._shouldWriteCallback + ')';
   };
   ConvertBreedOptions.prototype.hashCode = function () {
     var result = this._fromGame_1 == null ? 0 : this._fromGame_1.hashCode();
@@ -54007,13 +55101,16 @@
     result = imul(result, 31) + getStringHashCode(this._outputDirectory_3) | 0;
     result = imul(result, 31) + (this._outputGenus == null ? 0 : this._outputGenus.hashCode()) | 0;
     result = imul(result, 31) + (this._outputBreed == null ? 0 : this._outputBreed.hashCode()) | 0;
-    result = imul(result, 31) + (this._encoding_4 == null ? 0 : this._encoding_4.hashCode()) | 0;
-    result = imul(result, 31) + (this._ignoreErrors | 0) | 0;
+    result = imul(result, 31) + (this._inputGenus == null ? 0 : this._inputGenus.hashCode()) | 0;
+    result = imul(result, 31) + (this._inputBreed == null ? 0 : this._inputBreed.hashCode()) | 0;
+    result = imul(result, 31) + (this._encoding_5 == null ? 0 : this._encoding_5.hashCode()) | 0;
+    result = imul(result, 31) + (this._ignoreErrors_0 | 0) | 0;
     result = imul(result, 31) + hashCode(this._tailFiles) | 0;
     result = imul(result, 31) + hashCode(this._failed) | 0;
     result = imul(result, 31) + (this._quiet | 0) | 0;
     result = imul(result, 31) + (this._progressive_0 | 0) | 0;
     result = imul(result, 31) + (this._progress | 0) | 0;
+    result = imul(result, 31) + (this._sameSize | 0) | 0;
     result = imul(result, 31) + hashCode(this._shouldWriteCallback) | 0;
     return result;
   };
@@ -54047,9 +55144,13 @@
       return false;
     if (!equals_1(this._outputBreed, tmp0_other_with_cast._outputBreed))
       return false;
-    if (!equals_1(this._encoding_4, tmp0_other_with_cast._encoding_4))
+    if (!equals_1(this._inputGenus, tmp0_other_with_cast._inputGenus))
       return false;
-    if (!(this._ignoreErrors === tmp0_other_with_cast._ignoreErrors))
+    if (!equals_1(this._inputBreed, tmp0_other_with_cast._inputBreed))
+      return false;
+    if (!equals_1(this._encoding_5, tmp0_other_with_cast._encoding_5))
+      return false;
+    if (!(this._ignoreErrors_0 === tmp0_other_with_cast._ignoreErrors_0))
       return false;
     if (!equals_1(this._tailFiles, tmp0_other_with_cast._tailFiles))
       return false;
@@ -54060,6 +55161,8 @@
     if (!(this._progressive_0 === tmp0_other_with_cast._progressive_0))
       return false;
     if (!(this._progress === tmp0_other_with_cast._progress))
+      return false;
+    if (!(this._sameSize === tmp0_other_with_cast._sameSize))
       return false;
     if (!equals_1(this._shouldWriteCallback, tmp0_other_with_cast._shouldWriteCallback))
       return false;
@@ -54087,19 +55190,19 @@
     }return charSequenceGet(string, 0);
   }
   function next(opts, i, shouldWrite_1, $cont) {
-    var tmp = new $nextCOROUTINE$5(opts, i, shouldWrite_1, $cont);
+    var tmp = new $nextCOROUTINE$7(opts, i, shouldWrite_1, $cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   }
-  function convertAttForFile(opts, imagesGetter, originalFileName, attFile, genus, age, breedSlot, progressive, $cont) {
-    var tmp = new $convertAttForFileCOROUTINE$6(opts, imagesGetter, originalFileName, attFile, genus, age, breedSlot, progressive, $cont);
+  function convertAttForFile(opts, imagesGetter, originalFileName, attFile, genus, age, breedSlot, progressive, sizesWithLeadingSize, $cont) {
+    var tmp = new $convertAttForFileCOROUTINE$8(opts, imagesGetter, originalFileName, attFile, genus, age, breedSlot, progressive, sizesWithLeadingSize, $cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   }
   function promptOverwrite(promptString, overwriteAll, overwriteNone, $cont) {
-    var tmp = new $promptOverwriteCOROUTINE$7(promptString, overwriteAll, overwriteNone, $cont);
+    var tmp = new $promptOverwriteCOROUTINE$9(promptString, overwriteAll, overwriteNone, $cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
@@ -54111,20 +55214,20 @@
       overwriteNone = null;
     return promptOverwrite(promptString, overwriteAll, overwriteNone, $cont);
   }
-  function convert(opts, i, originalFileName, fromGame, bytes, imagesPointer, progressive) {
+  function convert(opts, i, originalFileName, fromGame, bytes, imagesPointer, sameSize, sizesWithLeadingSize, progressive) {
     var tmp;
     if (!opts._quiet ? opts._progress : false) {
       tmp = createCallback(i, opts._get_filesCount__0_k$(), originalFileName);
     } else {
-      tmp = _no_name_provided_$factory_224();
+      tmp = _no_name_provided_$factory_225();
     }
     var callback = tmp;
     var byteStreamReader = new MemoryByteStreamReader(bytes);
     var tmp_0;
     if (!(fromGame == null)) {
-      tmp_0 = convertBodyPart(originalFileName, byteStreamReader, fromGame, opts._toGame_2, opts._encoding_4, imagesPointer, progressive, callback);
+      tmp_0 = convertBodyPart(originalFileName, byteStreamReader, fromGame, opts._toGame_2, opts._encoding_5, imagesPointer, progressive, sameSize, sizesWithLeadingSize, callback);
     } else {
-      tmp_0 = convertBodyPart_0(originalFileName, byteStreamReader, opts._toGame_2, opts._encoding_4, imagesPointer, progressive, callback);
+      tmp_0 = convertBodyPart_0(originalFileName, byteStreamReader, opts._toGame_2, opts._encoding_5, imagesPointer, progressive, sameSize, sizesWithLeadingSize, callback);
     }
     return tmp_0;
   }
@@ -54145,7 +55248,7 @@
             $l$block_1: {
               var tmp_1;
               var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                 tmp_1 = '**ERROR** ';
               } else {
                 {
@@ -54188,7 +55291,7 @@
             $l$block_4: {
               var tmp_6;
               var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
+              if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_0) {
                 tmp_6 = '**ERROR** ';
               } else {
                 {
@@ -54231,7 +55334,7 @@
             $l$block_7: {
               var tmp_11;
               var tmp0_elvis_lhs_1_1_1 = tmp2_e_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
+              if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
                 tmp_11 = '**ERROR** ';
               } else {
                 {
@@ -54302,7 +55405,7 @@
               $l$block_12: {
                 var tmp_19;
                 var tmp0_elvis_lhs_1_1_2 = tmp3_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_2) {
+                if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_2) {
                   tmp_19 = '**ERROR** ';
                 } else {
                   {
@@ -54346,7 +55449,7 @@
               $l$block_15: {
                 var tmp_24;
                 var tmp0_elvis_lhs_1_1_3 = tmp4_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3) {
+                if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_3) {
                   tmp_24 = '**ERROR** ';
                 } else {
                   {
@@ -54393,8 +55496,8 @@
     return tmp;
   }
   function createCallback(i, fileCount, fileName) {
-    var percent = _no_name_provided_$factory_225(i, fileCount, fileName);
-    return _no_name_provided_$factory_226(percent);
+    var percent = _no_name_provided_$factory_226(i, fileCount, fileName);
+    return _no_name_provided_$factory_227(percent);
   }
   function getOutputBreed(toGame, outputBreedString) {
     var tmp;
@@ -54418,7 +55521,7 @@
             $l$block_1: {
               var tmp_3;
               var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                 tmp_3 = '**ERROR** ';
               } else {
                 {
@@ -54476,7 +55579,7 @@
           $l$block_4: {
             var tmp_8;
             var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
+            if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_0) {
               tmp_8 = '**ERROR** ';
             } else {
               {
@@ -54562,7 +55665,7 @@
             $l$block_3: {
               var tmp_3;
               var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                 tmp_3 = '**ERROR** ';
               } else {
                 {
@@ -54608,16 +55711,73 @@
     return outputGenus;
   }
   function writeTailFiles(opts, $cont) {
-    var tmp = new $writeTailFilesCOROUTINE$8(opts, $cont);
+    var tmp = new $writeTailFilesCOROUTINE$10(opts, $cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   }
-  function writeTailAtt(opts, fileName, shouldWrite_1, $cont) {
-    var tmp = new $writeTailAttCOROUTINE$9(opts, fileName, shouldWrite_1, $cont);
-    tmp._result = Unit_getInstance();
-    tmp._exception_0 = null;
-    return tmp.doResume_0_k$();
+  function writeTailAtt(opts, fileName, $cont) {
+    if (isNullOrEmpty(opts._attFiles))
+      return true;
+    var rows = _get_isC1e_(opts._toGame_2) ? 10 : 16;
+    var tmp = until(0, rows);
+    var att = encodeToByteArray(joinToString$default_0(tmp, '\r\n', null, null, 0, null, _no_name_provided_$factory_228(), 30, null));
+    var outputAtt = PathUtil_getInstance().combine_yn9lj1_k$([opts._outputDirectory_3, '' + fileName + '.att']);
+    if (!fileExists(outputAtt)) {
+      try {
+        writeBytes_1(outputAtt, att);
+      } catch ($p) {
+        if ($p instanceof Exception) {
+          {
+            var tmp0_e_0 = Log_getInstance();
+            if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+              var tmp_0 = tmp0_e_0._loggerObject;
+              var tmp$ret$2;
+              $l$block_1: {
+                var tmp_1;
+                var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
+                  tmp_1 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_1 = '';
+                  }
+                }
+                var tmp_2 = tmp_1;
+                var tmp_3;
+                var tmp$ret$0;
+                $l$block: {
+                  {
+                  }
+                  tmp$ret$0 = null == null ? true : isBlank(null);
+                  break $l$block;
+                }
+                if (!tmp$ret$0) {
+                  tmp_3 = 'null::';
+                } else {
+                  {
+                    tmp_3 = '';
+                  }
+                }
+                var tmp_4 = tmp_3;
+                var tmp$ret$1;
+                $l$block_0: {
+                  tmp$ret$1 = '' + 'Error 1016: Failed to write tail placeholder ' + fileName + '.att to ' + outputAtt + '. Error: ' + $p.message;
+                  break $l$block_0;
+                }
+                tmp$ret$2 = '' + tmp_2 + tmp_4 + tmp$ret$1;
+                break $l$block_1;
+              }
+              tmp_0.error(tmp$ret$2);
+            }}
+          return false;
+        } else {
+          {
+            throw $p;
+          }
+        }
+      }
+    }return true;
   }
   function getFallbackTailSpriteBytes(opts) {
     var tmp$ret$2;
@@ -54681,71 +55841,26 @@
     var tmp_0 = Companion_getInstance_60().getCompiler_6wfw3l_k$(opts._get_toExtension__0_k$());
     return tmp_0.compileSpriteFromLoadedImages$default_8h3m8r_k$(frames, true, null, null, 12, null);
   }
-  function generatePart0(sprite) {
-    var tmp = SpriteParser_getInstance();
-    var tmp_0 = new MemoryByteStreamReader(sprite);
-    var frames = tmp.parse$default_zwetn_k$('a000.c16', tmp_0, false, 0, null, 24, null);
-    var tmp$ret$0;
-    $l$block: {
-      tmp$ret$0 = ArrayList_init_$Create$();
-      break $l$block;
-    }
-    var out = tmp$ret$0;
-    {
-      {
-      }
-      var inductionVariable = 0;
-      if (inductionVariable < 6)
-        do {
-          var index_2 = inductionVariable;
-          inductionVariable = inductionVariable + 1 | 0;
-          {
-            var base_4 = imul(index_2, 32);
-            {
-              {
-              }
-              var inductionVariable_0 = 0;
-              if (inductionVariable_0 < 16)
-                do {
-                  var index_2_6 = inductionVariable_0;
-                  inductionVariable_0 = inductionVariable_0 + 1 | 0;
-                  {
-                    var frame_4_7 = frames.get_ha5a7z_k$(base_4 + index_2_6 | 0);
-                    var tmp_1 = frame_4_7._get_width__0_k$();
-                    var tmp_2 = frame_4_7._get_height__0_k$();
-                    out.add_2bq_k$(Bitmap32_init_$Create$(tmp_1, tmp_2, null, false, 12, null));
-                    Unit_getInstance();
-                  }
-                }
-                 while (inductionVariable_0 < 16);
-            }
-          }
-        }
-         while (inductionVariable < 6);
-    }
-    var tmp_3 = Companion_getInstance_60().getCompiler_v3krwk_k$(SpriteType_C16_getInstance());
-    return tmp_3.compileSpriteFromLoadedImages$default_8h3m8r_k$(out, true, null, null, 12, null);
-  }
   function _get_spriteType__0(_this_) {
     var tmp0_subject = _this_;
     return tmp0_subject.equals(GameVariant_C1_getInstance()) ? SpriteType_SPR_getInstance() : tmp0_subject.equals(GameVariant_C2_getInstance()) ? SpriteType_S16_getInstance() : SpriteType_C16_getInstance();
   }
   function getAgeProgressions(noAgeProgression, fromGames, toGame, sprites) {
     var breedAges = getAgeGroups(sprites);
-    var modIf = _no_name_provided_$factory_227(noAgeProgression, toGame);
-    var tmp$ret$9;
-    $l$block_8: {
+    var modIf = _no_name_provided_$factory_229(noAgeProgression, toGame);
+    var tmp$ret$18;
+    $l$block_18: {
       var tmp0_associate_0 = breedAges._get_entries__0_k$();
       var capacity_1 = coerceAtLeast(mapCapacity(collectionSizeOrDefault(tmp0_associate_0, 10)), 16);
-      var tmp$ret$8;
-      $l$block_7: {
+      var tmp$ret$17;
+      $l$block_17: {
         var tmp1_associateTo_0_2 = LinkedHashMap_init_$Create$_1(capacity_1);
         var tmp0_iterator_1_3 = tmp0_associate_0.iterator_0_k$();
         while (tmp0_iterator_1_3.hasNext_0_k$()) {
           var element_2_4 = tmp0_iterator_1_3.next_0_k$();
           {
-            var tmp$ret$7;
-            $l$block_6: {
+            var tmp$ret$16;
+            $l$block_16: {
               var tmp$ret$0;
               $l$block: {
                 tmp$ret$0 = element_2_4._get_key__0_k$();
@@ -54766,61 +55881,164 @@
                 break $l$block_1;
               }
               var agesSoFar_11 = tmp$ret$2;
-              var tmp$ret$6;
-              $l$block_5: {
-                var tmp0_associate_0_12 = sortedDescending(ages_8);
-                var capacity_1_13 = coerceAtLeast(mapCapacity(collectionSizeOrDefault(tmp0_associate_0_12, 10)), 16);
-                var tmp$ret$5;
-                $l$block_4: {
-                  var tmp1_associateTo_0_2_14 = LinkedHashMap_init_$Create$_1(capacity_1_13);
-                  var tmp0_iterator_1_3_15 = tmp0_associate_0_12.iterator_0_k$();
-                  while (tmp0_iterator_1_3_15.hasNext_0_k$()) {
-                    var element_2_4_16 = tmp0_iterator_1_3_15.next_0_k$();
-                    {
-                      var tmp$ret$4;
-                      $l$block_3: {
-                        var tmp = digitToChar(element_2_4_16);
-                        var tmp$ret$3;
-                        $l$block_2: {
-                          var tmp0_apply_0_7_18 = modIf(variant_9, agesSoFar_11, element_2_4_16);
-                          {
+              var tmp$ret$15;
+              $l$block_15: {
+                var tmp$ret$6;
+                $l$block_5: {
+                  var tmp0_associate_0_13 = sortedDescending(ages_8);
+                  var capacity_1_14 = coerceAtLeast(mapCapacity(collectionSizeOrDefault(tmp0_associate_0_13, 10)), 16);
+                  var tmp$ret$5;
+                  $l$block_4: {
+                    var tmp1_associateTo_0_2_15 = LinkedHashMap_init_$Create$_1(capacity_1_14);
+                    var tmp0_iterator_1_3_16 = tmp0_associate_0_13.iterator_0_k$();
+                    while (tmp0_iterator_1_3_16.hasNext_0_k$()) {
+                      var element_2_4_17 = tmp0_iterator_1_3_16.next_0_k$();
+                      {
+                        var tmp$ret$4;
+                        $l$block_3: {
+                          var tmp = digitToChar(element_2_4_17);
+                          var tmp$ret$3;
+                          $l$block_2: {
+                            var tmp0_apply_0_7_19 = modIf(variant_9, agesSoFar_11, element_2_4_17);
+                            {
+                            }
+                            {
+                              agesSoFar_11.add_2bq_k$(new Pair(element_2_4_17, tmp0_apply_0_7_19));
+                              Unit_getInstance();
+                            }
+                            tmp$ret$3 = tmp0_apply_0_7_19;
+                            break $l$block_2;
                           }
+                          tmp$ret$4 = to(tmp, tmp$ret$3);
+                          break $l$block_3;
+                        }
+                        var tmp0_plusAssign_0_5_18 = tmp$ret$4;
+                        tmp1_associateTo_0_2_15.put_1q9pf_k$(tmp0_plusAssign_0_5_18._first, tmp0_plusAssign_0_5_18._second);
+                        Unit_getInstance();
+                      }
+                    }
+                    tmp$ret$5 = tmp1_associateTo_0_2_15;
+                    break $l$block_4;
+                  }
+                  tmp$ret$6 = tmp$ret$5;
+                  break $l$block_5;
+                }
+                var tmp1_let_0_12 = tmp$ret$6;
+                {
+                }
+                var tmp$ret$14;
+                $l$block_14: {
+                  var targets_2_20 = tmp1_let_0_12._get_values__0_k$();
+                  var has_3_21 = true;
+                  var out_4_22 = tmp1_let_0_12;
+                  while (has_3_21) {
+                    has_3_21 = false;
+                    var tmp$ret$13;
+                    $l$block_13: {
+                      var tmp0_associate_0_5_23 = tmp1_let_0_12._get_entries__0_k$();
+                      var capacity_1_6_24 = coerceAtLeast(mapCapacity(collectionSizeOrDefault(tmp0_associate_0_5_23, 10)), 16);
+                      var tmp$ret$12;
+                      $l$block_12: {
+                        var tmp1_associateTo_0_2_7_25 = LinkedHashMap_init_$Create$_1(capacity_1_6_24);
+                        var tmp0_iterator_1_3_8_26 = tmp0_associate_0_5_23.iterator_0_k$();
+                        while (tmp0_iterator_1_3_8_26.hasNext_0_k$()) {
+                          var element_2_4_9_27 = tmp0_iterator_1_3_8_26.next_0_k$();
                           {
-                            agesSoFar_11.add_2bq_k$(tmp0_apply_0_7_18);
+                            var tmp$ret$11;
+                            $l$block_11: {
+                              var tmp$ret$7;
+                              $l$block_6: {
+                                tmp$ret$7 = element_2_4_9_27._get_key__0_k$();
+                                break $l$block_6;
+                              }
+                              var ageChar_7_11_29 = tmp$ret$7;
+                              var tmp$ret$8;
+                              $l$block_7: {
+                                tmp$ret$8 = element_2_4_9_27._get_value__0_k$();
+                                break $l$block_7;
+                              }
+                              var toAge_8_12_30 = tmp$ret$8;
+                              var ageInt_9_13_31 = digitToInt(ageChar_7_11_29);
+                              var tmp_0;
+                              var tmp$ret$9;
+                              $l$block_10: {
+                                var tmp_1;
+                                if (isInterface(targets_2_20, Collection)) {
+                                  tmp_1 = targets_2_20.isEmpty_0_k$();
+                                } else {
+                                  {
+                                    tmp_1 = false;
+                                  }
+                                }
+                                if (tmp_1) {
+                                  tmp$ret$9 = 0;
+                                  break $l$block_10;
+                                } else {
+                                }
+                                var count_1_10_14_32 = 0;
+                                var tmp0_iterator_2_11_15_33 = targets_2_20.iterator_0_k$();
+                                while (tmp0_iterator_2_11_15_33.hasNext_0_k$()) {
+                                  var element_3_12_16_34 = tmp0_iterator_2_11_15_33.next_0_k$();
+                                  var tmp$ret$10;
+                                  $l$block_9: {
+                                    tmp$ret$10 = element_3_12_16_34 === ageInt_9_13_31;
+                                    break $l$block_9;
+                                  }
+                                  if (tmp$ret$10) {
+                                    count_1_10_14_32 = count_1_10_14_32 + 1 | 0;
+                                    checkCountOverflow(count_1_10_14_32);
+                                    Unit_getInstance();
+                                  } else {
+                                  }
+                                }
+                                tmp$ret$9 = count_1_10_14_32;
+                                break $l$block_10;
+                              }
+                              if (tmp$ret$9 > 1) {
+                                has_3_21 = true;
+                                tmp_0 = to(ageChar_7_11_29, ageInt_9_13_31);
+                              } else {
+                                {
+                                  tmp_0 = to(ageChar_7_11_29, toAge_8_12_30);
+                                }
+                              }
+                              tmp$ret$11 = tmp_0;
+                              break $l$block_11;
+                            }
+                            var tmp0_plusAssign_0_5_10_28 = tmp$ret$11;
+                            tmp1_associateTo_0_2_7_25.put_1q9pf_k$(tmp0_plusAssign_0_5_10_28._first, tmp0_plusAssign_0_5_10_28._second);
                             Unit_getInstance();
                           }
-                          tmp$ret$3 = tmp0_apply_0_7_18;
-                          break $l$block_2;
                         }
-                        tmp$ret$4 = to(tmp, tmp$ret$3);
-                        break $l$block_3;
+                        tmp$ret$12 = tmp1_associateTo_0_2_7_25;
+                        break $l$block_12;
                       }
-                      var tmp0_plusAssign_0_5_17 = tmp$ret$4;
-                      tmp1_associateTo_0_2_14.put_1q9pf_k$(tmp0_plusAssign_0_5_17._first, tmp0_plusAssign_0_5_17._second);
-                      Unit_getInstance();
+                      tmp$ret$13 = tmp$ret$12;
+                      break $l$block_13;
                     }
+                    out_4_22 = tmp$ret$13;
                   }
-                  tmp$ret$5 = tmp1_associateTo_0_2_14;
-                  break $l$block_4;
+                  tmp$ret$14 = out_4_22;
+                  break $l$block_14;
                 }
-                tmp$ret$6 = tmp$ret$5;
-                break $l$block_5;
+                tmp$ret$15 = tmp$ret$14;
+                break $l$block_15;
               }
-              tmp$ret$7 = to(breed_7, tmp$ret$6);
-              break $l$block_6;
+              tmp$ret$16 = to(breed_7, tmp$ret$15);
+              break $l$block_16;
             }
-            var tmp0_plusAssign_0_5 = tmp$ret$7;
+            var tmp0_plusAssign_0_5 = tmp$ret$16;
             tmp1_associateTo_0_2.put_1q9pf_k$(tmp0_plusAssign_0_5._first, tmp0_plusAssign_0_5._second);
             Unit_getInstance();
           }
         }
-        tmp$ret$8 = tmp1_associateTo_0_2;
-        break $l$block_7;
+        tmp$ret$17 = tmp1_associateTo_0_2;
+        break $l$block_17;
       }
-      tmp$ret$9 = tmp$ret$8;
-      break $l$block_8;
+      tmp$ret$18 = tmp$ret$17;
+      break $l$block_18;
     }
-    return tmp$ret$9;
+    return tmp$ret$18;
   }
   function getAgeGroups(sprites) {
     var tmp$ret$0;
@@ -54996,7 +56214,7 @@
             $l$block_3: {
               var tmp_2;
               var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                 tmp_2 = '**ERROR** ';
               } else {
                 {
@@ -55053,7 +56271,7 @@
           $l$block_6: {
             var tmp_7;
             var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
+            if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_0) {
               tmp_7 = '**ERROR** ';
             } else {
               {
@@ -55110,7 +56328,7 @@
           $l$block_9: {
             var tmp_17;
             var tmp0_elvis_lhs_1_1_1 = tmp2_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
+            if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
               tmp_17 = '**ERROR** ';
             } else {
               {
@@ -55153,7 +56371,7 @@
           $l$block_12: {
             var tmp_22;
             var tmp0_elvis_lhs_1_1_2 = tmp3_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_2) {
+            if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_2) {
               tmp_22 = '**ERROR** ';
             } else {
               {
@@ -55190,19 +56408,19 @@
     }
     return exitNative(errorCode);
   }
-  function _no_name_provided__256($i, $opts, $shouldWrite, resultContinuation) {
+  function _no_name_provided__259($i, $opts, $shouldWrite, resultContinuation) {
     this._$i_2 = $i;
-    this._$opts_0 = $opts;
-    this._$shouldWrite_1 = $shouldWrite;
+    this._$opts = $opts;
+    this._$shouldWrite = $shouldWrite;
     CoroutineImpl_0.call(this, resultContinuation);
   }
-  _no_name_provided__256.prototype.invoke_0_k$ = function ($cont) {
+  _no_name_provided__259.prototype.invoke_0_k$ = function ($cont) {
     var tmp = this.create_s8oglw_k$($cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   };
-  _no_name_provided__256.prototype.doResume_0_k$ = function () {
+  _no_name_provided__259.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
     $sm: do
       try {
@@ -55212,7 +56430,7 @@
             this._exceptionState = 3;
             this._nextIndex0 = this._$i_2 + 1 | 0;
             this._state_0 = 1;
-            suspendResult = next(this._$opts_0, this._nextIndex0, this._$shouldWrite_1, this);
+            suspendResult = next(this._$opts, this._nextIndex0, this._$shouldWrite, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -55224,9 +56442,9 @@
               this._state_0 = 2;
               continue $sm;
             } else {
-              if (this._$opts_0._ignoreErrors) {
+              if (this._$opts._ignoreErrors_0) {
                 var tmp_1 = this;
-                this._$opts_0._failed.add_2bq_k$(this._$opts_0._spriteFiles.get_ha5a7z_k$(this._nextIndex0));
+                this._$opts._failed.add_2bq_k$(this._$opts._spriteFiles.get_ha5a7z_k$(this._nextIndex0));
                 Unit_getInstance();
                 tmp_1._WHEN_RESULT1_2 = false;
                 this._state_0 = 2;
@@ -55238,7 +56456,7 @@
                   var tmp_3 = tmp0_e_0._loggerObject;
                   var tmp_4;
                   var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                     tmp_4 = '**ERROR** ';
                   } else {
                     {
@@ -55255,7 +56473,7 @@
                     }
                   }
                   var tmp_7 = tmp_6;
-                  tmp_3.error('' + tmp_5 + tmp_7 + ('' + 'Failed to convert breed file ' + this._$opts_0._spriteFiles.get_ha5a7z_k$(this._$i_2)));
+                  tmp_3.error('' + tmp_5 + tmp_7 + ('' + 'Failed to convert breed file ' + this._$opts._spriteFiles.get_ha5a7z_k$(this._$i_2)));
                 }tmp_2._WHEN_RESULT1_2 = exitNative(1001);
                 this._state_0 = 2;
                 continue $sm;
@@ -55279,50 +56497,50 @@
       }
      while (true);
   };
-  _no_name_provided__256.prototype.create_s8oglw_k$ = function (completion) {
-    var i = new _no_name_provided__256(this._$i_2, this._$opts_0, this._$shouldWrite_1, completion);
+  _no_name_provided__259.prototype.create_s8oglw_k$ = function (completion) {
+    var i = new _no_name_provided__259(this._$i_2, this._$opts, this._$shouldWrite, completion);
     return i;
   };
-  _no_name_provided__256.$metadata$ = {
+  _no_name_provided__259.$metadata$ = {
     kind: 'class',
     interfaces: [],
     suspendArity: 0
   };
-  function _no_name_provided__257() {
+  function _no_name_provided__260() {
   }
-  _no_name_provided__257.prototype.invoke_fcwjfj_k$ = function (_anonymous_parameter_0_, _anonymous_parameter_1_, _anonymous_parameter_2_) {
+  _no_name_provided__260.prototype.invoke_fcwjfj_k$ = function (_anonymous_parameter_0_, _anonymous_parameter_1_, _anonymous_parameter_2_) {
     return true;
   };
-  _no_name_provided__257.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
+  _no_name_provided__260.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     var tmp_0 = (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE();
     return this.invoke_fcwjfj_k$(tmp, tmp_0, (!(p3 == null) ? typeof p3 === 'number' : false) ? p3 : THROW_CCE());
   };
-  _no_name_provided__257.$metadata$ = {
+  _no_name_provided__260.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__258($i, $fileCount, $fileName) {
+  function _no_name_provided__261($i, $fileCount, $fileName) {
     this._$i_3 = $i;
     this._$fileCount = $fileCount;
     this._$fileName = $fileName;
   }
-  _no_name_provided__258.prototype.invoke_fcwjfj_k$ = function (pass, current, total) {
+  _no_name_provided__261.prototype.invoke_fcwjfj_k$ = function (pass, current, total) {
     return '' + 'Sprite ' + (this._$i_3 + 1 | 0) + '/' + this._$fileCount + ': ' + this._$fileName + '; Pass:' + pass + '/2; ' + toFixed(current / (total * 1.0) * 100, 2) + '%';
   };
-  _no_name_provided__258.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
+  _no_name_provided__261.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     var tmp_0 = (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE();
     return this.invoke_fcwjfj_k$(tmp, tmp_0, (!(p3 == null) ? typeof p3 === 'number' : false) ? p3 : THROW_CCE());
   };
-  _no_name_provided__258.$metadata$ = {
+  _no_name_provided__261.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__259($percent) {
+  function _no_name_provided__262($percent) {
     this._$percent = $percent;
   }
-  _no_name_provided__259.prototype.invoke_fcwjfj_k$ = function (pass, current, total) {
+  _no_name_provided__262.prototype.invoke_fcwjfj_k$ = function (pass, current, total) {
     if (current === total ? pass === 2 : false) {
       {
         var tmp0_i_0 = Log_getInstance();
@@ -55332,7 +56550,7 @@
           $l$block_1: {
             var tmp_0;
             var tmp0_elvis_lhs_1_1 = tmp0_i_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
               tmp_0 = '**LOG1** ';
             } else {
               {
@@ -55364,36 +56582,36 @@
             tmp$ret$2 = '' + tmp_1 + tmp_3 + tmp$ret$1;
             break $l$block_1;
           }
-          tmp.info(false, tmp$ret$2);
+          tmp.info(true, tmp$ret$2);
         }}
     }return true;
   };
-  _no_name_provided__259.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
+  _no_name_provided__262.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     var tmp_0 = (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE();
     return this.invoke_fcwjfj_k$(tmp, tmp_0, (!(p3 == null) ? typeof p3 === 'number' : false) ? p3 : THROW_CCE());
   };
-  _no_name_provided__259.$metadata$ = {
+  _no_name_provided__262.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__260() {
+  function _no_name_provided__263() {
   }
-  _no_name_provided__260.prototype.invoke_ha5a7z_k$ = function (it) {
+  _no_name_provided__263.prototype.invoke_ha5a7z_k$ = function (it) {
     return '0 0 0 0';
   };
-  _no_name_provided__260.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__263.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ha5a7z_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__260.$metadata$ = {
+  _no_name_provided__263.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__261($noAgeProgression, $toGame) {
+  function _no_name_provided__264($noAgeProgression, $toGame) {
     this._$noAgeProgression = $noAgeProgression;
     this._$toGame = $toGame;
   }
-  _no_name_provided__261.prototype.invoke_vlkx9x_k$ = function (fromGame, ages, i) {
+  _no_name_provided__264.prototype.invoke_4tk4cw_k$ = function (fromGame, agesSoFar, i) {
     if (((this._$noAgeProgression ? true : fromGame == null) ? true : _get_isC2e_(fromGame) === _get_isC2e_(this._$toGame)) ? true : i === 0) {
       return i;
     }var tmp;
@@ -55462,29 +56680,514 @@
     }
     var mod_1 = tmp;
     var tmp_0;
-    if (ages.contains_2bq_k$(mod_1)) {
+    var tmp$ret$0;
+    $l$block_2: {
+      var tmp_1;
+      if (isInterface(agesSoFar, Collection)) {
+        tmp_1 = agesSoFar.isEmpty_0_k$();
+      } else {
+        {
+          tmp_1 = false;
+        }
+      }
+      if (tmp_1) {
+        tmp$ret$0 = false;
+        break $l$block_2;
+      } else {
+      }
+      var tmp0_iterator_1 = agesSoFar.iterator_0_k$();
+      while (tmp0_iterator_1.hasNext_0_k$()) {
+        var element_2 = tmp0_iterator_1.next_0_k$();
+        var tmp$ret$1;
+        $l$block_0: {
+          tmp$ret$1 = element_2._second === mod_1;
+          break $l$block_0;
+        }
+        if (tmp$ret$1) {
+          tmp$ret$0 = true;
+          break $l$block_2;
+        } else {
+        }
+      }
+      tmp$ret$0 = false;
+      break $l$block_2;
+    }
+    if (tmp$ret$0) {
       tmp_0 = i;
     } else {
-      tmp_0 = mod_1;
+      {
+        tmp_0 = mod_1;
+      }
     }
     return tmp_0;
   };
-  _no_name_provided__261.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
+  _no_name_provided__264.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
     var tmp = (p1 == null ? true : p1 instanceof GameVariant) ? p1 : THROW_CCE();
     var tmp_0 = (!(p2 == null) ? isInterface(p2, List) : false) ? p2 : THROW_CCE();
-    return this.invoke_vlkx9x_k$(tmp, tmp_0, (!(p3 == null) ? typeof p3 === 'number' : false) ? p3 : THROW_CCE());
+    return this.invoke_4tk4cw_k$(tmp, tmp_0, (!(p3 == null) ? typeof p3 === 'number' : false) ? p3 : THROW_CCE());
   };
-  _no_name_provided__261.$metadata$ = {
+  _no_name_provided__264.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function $nextCOROUTINE$5(opts, i, shouldWrite_1, resultContinuation) {
+  function $convertBreedCOROUTINE$6(task, resultContinuation) {
+    CoroutineImpl_0.call(this, resultContinuation);
+    this._task_1 = task;
+  }
+  $convertBreedCOROUTINE$6.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 5;
+            this._currentWorkingDirectory0 = getCurrentWorkingDirectory();
+            this._quiet1 = this._task_1.getQuiet() === true;
+            this._ignoreErrors2 = this._task_1.getIgnoreErrors() === true;
+            this._toGame3 = this._task_1.getToGame_0_k$();
+            if (this._toGame3 == null) {
+              var tmp0_e_0 = Log_getInstance();
+              if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_0 = tmp0_e_0._loggerObject;
+                var tmp_1;
+                var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
+                  tmp_1 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_1 = '';
+                  }
+                }
+                var tmp_2 = tmp_1;
+                var tmp_3;
+                if (!(null == null ? true : isBlank(null))) {
+                  tmp_3 = 'null::';
+                } else {
+                  {
+                    tmp_3 = '';
+                  }
+                }
+                var tmp_4 = tmp_3;
+                tmp_0.error('' + tmp_2 + tmp_4 + 'Cannot convert breed without "toGame" value');
+              }return exitNative(1004);
+            }
+            this._inputGenus4 = getOutputGenus(this._task_1.getInputGenus());
+            this._inputBreed5 = getOutputBreed(this._toGame3, this._task_1.getInputBreed());
+            var tmp_5 = this;
+            var tmp_6;
+            try {
+              var tmp0_$receiver = toList_2(this._task_1.getFiles_0_k$());
+              var tmp1_fileNameRegex = getBreedSpriteFileRegex(this._inputGenus4, this._inputBreed5, BASE_SPRITE_FILE_EXTENSIONS);
+              tmp_6 = unpackPaths$default(tmp0_$receiver, null, tmp1_fileNameRegex, this._currentWorkingDirectory0, 1, null);
+            } catch ($p) {
+              var tmp_7;
+              if ($p instanceof MissingFilesException) {
+                if (!this._quiet1 ? !this._ignoreErrors2 : false) {
+                  var tmp1_e_0 = Log_getInstance();
+                  if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                    var tmp_8 = tmp1_e_0._loggerObject;
+                    var tmp_9;
+                    var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
+                    if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_0) {
+                      tmp_9 = '**ERROR** ';
+                    } else {
+                      {
+                        tmp_9 = '';
+                      }
+                    }
+                    var tmp_10 = tmp_9;
+                    var tmp_11;
+                    if (!(null == null ? true : isBlank(null))) {
+                      tmp_11 = 'null::';
+                    } else {
+                      {
+                        tmp_11 = '';
+                      }
+                    }
+                    var tmp_12 = tmp_11;
+                    tmp_8.error('' + tmp_10 + tmp_12 + ('Error 1015: ' + ensureNotNull($p.message)));
+                  }}return exitNative(1015);
+              } else {
+                {
+                  throw $p;
+                }
+              }
+              tmp_6 = tmp_7;
+            }
+
+            tmp_5._spriteFiles6 = tmp_6;
+            if (this._spriteFiles6.isEmpty_0_k$()) {
+              var tmp_13;
+              if (this._ignoreErrors2) {
+                if (!this._quiet1) {
+                  var tmp2_w_0 = Log_getInstance();
+                  if (tmp2_w_0._logLevel._value_3 >= LogLevel_WARN_getInstance()._value_3) {
+                    var tmp_14 = tmp2_w_0._loggerObject;
+                    var tmp_15;
+                    var tmp0_elvis_lhs_1_1_1 = tmp2_w_0._loggerObject.prependLogType;
+                    if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
+                      tmp_15 = '**WARN** ';
+                    } else {
+                      {
+                        tmp_15 = '';
+                      }
+                    }
+                    var tmp_16 = tmp_15;
+                    var tmp_17;
+                    if (!(null == null ? true : isBlank(null))) {
+                      tmp_17 = 'null::';
+                    } else {
+                      {
+                        tmp_17 = '';
+                      }
+                    }
+                    var tmp_18 = tmp_17;
+                    tmp_14.warning('' + tmp_16 + tmp_18 + 'Warn 1002: No valid breed sprite files found');
+                  }}tmp_13 = exitNative(0);
+              } else {
+                if (!this._quiet1) {
+                  var tmp3_e_0 = Log_getInstance();
+                  if (tmp3_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                    var tmp_19 = tmp3_e_0._loggerObject;
+                    var tmp_20;
+                    var tmp0_elvis_lhs_1_1_2 = tmp3_e_0._loggerObject.prependLogType;
+                    if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_2) {
+                      tmp_20 = '**ERROR** ';
+                    } else {
+                      {
+                        tmp_20 = '';
+                      }
+                    }
+                    var tmp_21 = tmp_20;
+                    var tmp_22;
+                    if (!(null == null ? true : isBlank(null))) {
+                      tmp_22 = 'null::';
+                    } else {
+                      {
+                        tmp_22 = '';
+                      }
+                    }
+                    var tmp_23 = tmp_22;
+                    tmp_19.error('' + tmp_21 + tmp_23 + 'Error 1002: No valid breed sprite files found');
+                  }}tmp_13 = exitNative(1002);
+              }
+              return tmp_13;
+            }
+            var tmp_24 = this;
+            var tmp2_safe_receiver = this._task_1.getAttDirectory();
+            var tmp_25;
+            if (tmp2_safe_receiver == null) {
+              tmp_25 = null;
+            } else {
+              tmp_25 = replace$default_0(tmp2_safe_receiver, '\\ ', ' ', false, 4, null);
+            }
+
+            tmp_24._attDirectory7 = tmp_25;
+            var tmp_26 = this;
+            var tmp3_safe_receiver = this._attDirectory7;
+            var tmp_27;
+            if (tmp3_safe_receiver == null) {
+              tmp_27 = null;
+            } else {
+              tmp_27 = getAttFiles(this._currentWorkingDirectory0, this._attDirectory7, this._quiet1);
+            }
+
+            tmp_26._attFiles8 = tmp_27;
+            this._outputGenus9 = getOutputGenus(this._task_1.getOutputGenus());
+            this._outputBreed10 = getOutputBreed(this._toGame3, this._task_1.getOutputBreed());
+            var tmp_28 = this;
+            var tmp_29;
+            var tmp4_safe_receiver = this._outputGenus9;
+            var tmp_30 = tmp4_safe_receiver == null ? null : tmp4_safe_receiver._first;
+            var tmp_31 = this;
+            tmp_31._tmp4_lowercase_011 = _get_spriteType__0(this._toGame3)._get_name__0_k$();
+            if (logDuplicatesAndGetHasDuplicates(this._spriteFiles6, tmp_30, this._outputBreed10, this._tmp4_lowercase_011.toLowerCase())) {
+              tmp_29 = true;
+            } else {
+              {
+                var tmp0_elvis_lhs_1 = this._attFiles8;
+                var tmp_32 = tmp0_elvis_lhs_1 == null ? emptyList() : tmp0_elvis_lhs_1;
+                var tmp5_safe_receiver = this._outputGenus9;
+                tmp_29 = logDuplicatesAndGetHasDuplicates(tmp_32, tmp5_safe_receiver == null ? null : tmp5_safe_receiver._first, this._outputBreed10, 'att');
+              }
+            }
+
+            tmp_28._duplicates12 = tmp_29;
+            if (this._duplicates12) {
+              return exitNative(1011);
+            }
+            var tmp_33 = this;
+            var tmp_34 = this._task_1.getOutputDirectory();
+            tmp_33._outputDirectory13 = ensureAndGetOutputDirectory$default(tmp_34, this._currentWorkingDirectory0, false, 4, null);
+            if (this._task_1.getOverwriteExisting() === true ? this._task_1.getOverwriteNone() === true : false) {
+              var tmp5_e_0 = Log_getInstance();
+              if (tmp5_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_35 = tmp5_e_0._loggerObject;
+                var tmp_36;
+                var tmp0_elvis_lhs_1_1_3 = tmp5_e_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_3) {
+                  tmp_36 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_36 = '';
+                  }
+                }
+                var tmp_37 = tmp_36;
+                var tmp_38;
+                if (!(null == null ? true : isBlank(null))) {
+                  tmp_38 = 'null::';
+                } else {
+                  {
+                    tmp_38 = '';
+                  }
+                }
+                var tmp_39 = tmp_38;
+                tmp_35.error('' + tmp_37 + tmp_39 + 'Error 1003: Cannot use overwrite existing and overwrite none.');
+              }return exitNative(1003);
+            }
+            this._overwriteAll14 = new Pointer(this._task_1.getOverwriteExisting() === true ? !(this._task_1.getOverwriteNone() === true) : false);
+            this._overwriteNone15 = new Pointer(!(this._task_1.getOverwriteExisting() === true) ? this._task_1.getOverwriteNone() === true : false);
+            var tmp_40 = this;
+            var tmp6_elvis_lhs = shouldOverwriteOverride;
+            tmp_40._shouldWrite16 = tmp6_elvis_lhs == null ? createDefaultShouldOverwriteCallback(this._overwriteAll14, this._overwriteNone15) : tmp6_elvis_lhs;
+            if (!this._quiet1) {
+              var tmp6_i_0 = Log_getInstance();
+              if (tmp6_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
+                var tmp_41 = tmp6_i_0._loggerObject;
+                var tmp_42;
+                var tmp0_elvis_lhs_1_1_4 = tmp6_i_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_4 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_4) {
+                  tmp_42 = '**LOG1** ';
+                } else {
+                  {
+                    tmp_42 = '';
+                  }
+                }
+                var tmp_43 = tmp_42;
+                var tmp_44;
+                if (!(null == null ? true : isBlank(null))) {
+                  tmp_44 = 'null::';
+                } else {
+                  {
+                    tmp_44 = '';
+                  }
+                }
+                var tmp_45 = tmp_44;
+                tmp_41.info(false, '' + tmp_43 + tmp_45 + ('' + 'Converting ' + this._spriteFiles6._get_size__0_k$() + ' sprites to ' + this._toGame3._code_0));
+              }}
+            var tmp_46 = this;
+            var tmp_47;
+            var tmp_48;
+            if (this._task_1.getNoTails() === false) {
+              l$ret$1: do {
+                var tmp_49;
+                var tmp_50 = this._spriteFiles6;
+                if (isInterface(tmp_50, Collection)) {
+                  tmp_49 = this._spriteFiles6.isEmpty_0_k$();
+                } else {
+                  {
+                    tmp_49 = false;
+                  }
+                }
+                if (tmp_49) {
+                  this._tmp$ret$017 = true;
+                  break l$ret$1;
+                } else {
+                }
+                var tmp0_iterator_1 = this._spriteFiles6.iterator_0_k$();
+                while (tmp0_iterator_1.hasNext_0_k$()) {
+                  var element_2 = tmp0_iterator_1.next_0_k$();
+                  if (charSequenceGet(element_2.toLowerCase(), 0).equals(new Char(109))) {
+                    this._tmp$ret$017 = false;
+                    break l$ret$1;
+                  } else {
+                  }
+                }
+                this._tmp$ret$017 = true;
+              }
+               while (false);
+              tmp_48 = this._tmp$ret$017;
+            } else {
+              tmp_48 = false;
+            }
+
+            if (tmp_48) {
+              var tmp_51;
+              if (!(this._outputGenus9 == null) ? !(this._outputBreed10 == null) : false) {
+                tmp_51 = listOf(['' + this._outputGenus9._first + '0' + this._outputBreed10, '' + this._outputGenus9._second + '0' + this._outputBreed10]);
+              } else {
+                var tmp0_flatMapTo_0_1 = ArrayList_init_$Create$();
+                var tmp0_iterator_1_2 = this._spriteFiles6.iterator_0_k$();
+                while (tmp0_iterator_1_2.hasNext_0_k$()) {
+                  var element_2_3 = tmp0_iterator_1_2.next_0_k$();
+                  var fileName_6 = ensureNotNull(FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(element_2_3));
+                  var tmp0_safe_receiver_9 = this._outputGenus9;
+                  var tmp1_elvis_lhs_8 = tmp0_safe_receiver_9 == null ? null : tmp0_safe_receiver_9._first;
+                  var genus_7 = (tmp1_elvis_lhs_8 == null ? charSequenceGet(fileName_6, 1) : tmp1_elvis_lhs_8).minus_wi8o78_k$(new Char(48));
+                  if (genus_7 >= 4) {
+                    genus_7 = genus_7 - 4 | 0;
+                  }var tmp2_elvis_lhs_11 = this._outputBreed10;
+                  var breed_10 = tmp2_elvis_lhs_11 == null ? charSequenceGet(fileName_6, 3) : tmp2_elvis_lhs_11;
+                  var list_3_4 = listOf(['' + genus_7 + '0' + breed_10, '' + (genus_7 + 4 | 0) + '0' + breed_10]);
+                  addAll(tmp0_flatMapTo_0_1, list_3_4);
+                  Unit_getInstance();
+                }
+                tmp_51 = distinct(tmp0_flatMapTo_0_1);
+              }
+              tmp_47 = tmp_51;
+            } else {
+              {
+                tmp_47 = emptyList();
+              }
+            }
+
+            tmp_46._tailFiles18 = tmp_47;
+            this._fromGame19 = this._task_1.getFromGame_0_k$();
+            this._fromGames20 = !(this._fromGame19 == null) ? null : inferGame(this._spriteFiles6);
+            this._ageProgressions21 = getAgeProgressions(this._task_1.getNoAgeProgression() === true, this._fromGames20, this._toGame3, this._spriteFiles6);
+            var tmp_52 = this;
+            var tmp7_safe_receiver = this._task_1.getEncoding();
+            var tmp_53;
+            if (tmp7_safe_receiver == null) {
+              tmp_53 = null;
+            } else {
+              var tmp0_subject_2 = tmp7_safe_receiver;
+              var tmp_54;
+              switch (tmp0_subject_2) {
+                case '555':
+                  tmp_54 = ColorEncoding_X_555_getInstance();
+                  break;
+                case '565':
+                  tmp_54 = ColorEncoding_X_565_getInstance();
+                  break;
+                default:throw Exception_init_$Create$('Invalid color encoding value. Expected 555 or 565');
+              }
+              tmp_53 = tmp_54;
+            }
+
+            tmp_52._encoding22 = tmp_53;
+            var tmp_55 = this;
+            var tmp8_progressive = this._task_1.getProgressive() === true;
+            var tmp9_progress = this._task_1.getProgress() === true;
+            var tmp10_sameSize = this._task_1.getSameSize() === true;
+            tmp_55._opts23 = ConvertBreedOptions_init_$Create$(this._fromGame19, this._fromGames20, this._toGame3, this._spriteFiles6, this._attDirectory7, this._attFiles8, this._ageProgressions21, this._currentWorkingDirectory0, this._outputDirectory13, this._outputGenus9, this._outputBreed10, this._inputGenus4, this._inputBreed5, this._encoding22, this._ignoreErrors2, this._tailFiles18, null, this._quiet1, tmp8_progressive, tmp9_progress, tmp10_sameSize, this._shouldWrite16, 65536, null);
+            this._state_0 = 1;
+            suspendResult = next(this._opts23, 0, this._shouldWrite16, this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            if (suspendResult) {
+              this._state_0 = 2;
+              suspendResult = writeTailFiles(this._opts23, this);
+              if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+                return suspendResult;
+              }continue $sm;
+            } else {
+              this._WHEN_RESULT25 = false;
+              this._state_0 = 3;
+              continue $sm;
+            }
+
+            break;
+          case 2:
+            this._WHEN_RESULT25 = suspendResult;
+            this._state_0 = 3;
+            continue $sm;
+          case 3:
+            if (this._WHEN_RESULT25) {
+              var tmp_56 = this;
+              if (!this._quiet1) {
+                var tmp7_i_0 = Log_getInstance();
+                if (tmp7_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
+                  var tmp_57 = tmp7_i_0._loggerObject;
+                  var tmp_58;
+                  var tmp0_elvis_lhs_1_1_5 = tmp7_i_0._loggerObject.prependLogType;
+                  if (tmp0_elvis_lhs_1_1_5 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_5) {
+                    tmp_58 = '**LOG1** ';
+                  } else {
+                    {
+                      tmp_58 = '';
+                    }
+                  }
+                  var tmp_59 = tmp_58;
+                  var tmp_60;
+                  if (!(null == null ? true : isBlank(null))) {
+                    tmp_60 = 'null::';
+                  } else {
+                    {
+                      tmp_60 = '';
+                    }
+                  }
+                  var tmp_61 = tmp_60;
+                  tmp_57.info(true, '' + tmp_59 + tmp_61 + 'Convert sprite finished OK\n');
+                }}tmp_56._WHEN_RESULT24 = exitNative(0);
+              this._state_0 = 4;
+              continue $sm;
+            } else {
+              var tmp_62 = this;
+              var errors = this._opts23._failed;
+              var tmp8_e_0 = Log_getInstance();
+              if (tmp8_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_63 = tmp8_e_0._loggerObject;
+                var tmp_64;
+                var tmp0_elvis_lhs_1_1_6 = tmp8_e_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_6 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_6) {
+                  tmp_64 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_64 = '';
+                  }
+                }
+                var tmp_65 = tmp_64;
+                var tmp_66;
+                if (!(null == null ? true : isBlank(null))) {
+                  tmp_66 = 'null::';
+                } else {
+                  {
+                    tmp_66 = '';
+                  }
+                }
+                var tmp_67 = tmp_66;
+                var tmp_68 = errors._get_size__0_k$();
+                var tmp_69 = this._opts23._get_filesCount__0_k$();
+                tmp_63.error('' + tmp_65 + tmp_67 + ('' + 'Failed to convert (' + tmp_68 + '/' + tmp_69 + '):\n\t -' + joinToString$default_0(errors, '\n\t- ', null, null, 0, null, null, 62, null)));
+              }tmp_62._WHEN_RESULT24 = exitNative(1001);
+              this._state_0 = 4;
+              continue $sm;
+            }
+
+            Unit_getInstance();
+            break;
+          case 4:
+            return this._WHEN_RESULT24;
+          case 5:
+            throw this._exception_0;
+        }
+      } catch ($p_0) {
+        if (this._exceptionState === 5) {
+          throw $p_0;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p_0;
+        }
+      }
+     while (true);
+  };
+  $convertBreedCOROUTINE$6.$metadata$ = {
+    simpleName: '$convertBreedCOROUTINE$6',
+    kind: 'class',
+    interfaces: []
+  };
+  function $nextCOROUTINE$7(opts, i, shouldWrite_1, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
     this._opts = opts;
     this._i_2 = i;
     this._shouldWrite_4 = shouldWrite_1;
   }
-  $nextCOROUTINE$5.prototype.doResume_0_k$ = function () {
+  $nextCOROUTINE$7.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
     $sm: do
       try {
@@ -55543,15 +57246,15 @@
             var tmp_8 = this;
             var tmp5_elvis_lhs = this._opts._outputBreed;
             tmp_8._breedSlot7 = tmp5_elvis_lhs == null ? charSequenceGet(this._originalFileName2, 3) : tmp5_elvis_lhs;
-            this._extension8 = this._opts._get_toExtension__0_k$();
-            this._outputFileName9 = '' + this._part3 + this._genus5 + this._lifeStage6 + this._breedSlot7 + '.' + this._extension8;
+            this._extension8_0 = this._opts._get_toExtension__0_k$();
+            this._outputFileName9 = '' + this._part3 + this._genus5 + this._lifeStage6 + this._breedSlot7 + '.' + this._extension8_0;
             this._outputFilePath10 = PathUtil_getInstance().combine_yn9lj1_k$([this._opts._outputDirectory_3, this._outputFileName9]);
             if (this._i_2 >= this._opts._get_filesCount__0_k$()) {
               return true;
             }
             var tmp_9 = this;
             var tmp_10 = this;
-            tmp_10._tmp0_suspend_011 = _no_name_provided_$factory_228(this._i_2, this._opts, this._shouldWrite_4, null);
+            tmp_10._tmp0_suspend_011 = _no_name_provided_$factory_230(this._i_2, this._opts, this._shouldWrite_4, null);
             tmp_9._next12 = this._tmp0_suspend_011;
             this._originalBytes13 = loadBytes(this._path1);
             var tmp_11 = this;
@@ -55565,10 +57268,11 @@
 
             tmp_11._fromGame14 = tmp_12;
             this._imagesPointer15 = new Pointer(null);
+            this._sizesWithLeadingSize16 = this._opts._sameSize ? new Pointer(null) : null;
             this._exceptionState = 1;
             var tmp_13 = this;
             var tmp7_elvis_lhs = this._fromGame14;
-            tmp_13._TRY_RESULT16 = convert(this._opts, this._i_2, this._originalFileName2, tmp7_elvis_lhs == null ? this._opts._fromGame_1 : tmp7_elvis_lhs, this._originalBytes13, this._imagesPointer15, this._opts._progressive_0);
+            tmp_13._TRY_RESULT17 = convert(this._opts, this._i_2, this._originalFileName2, tmp7_elvis_lhs == null ? this._opts._fromGame_1 : tmp7_elvis_lhs, this._originalBytes13, this._imagesPointer15, this._opts._sameSize, this._sizesWithLeadingSize16, this._opts._progressive_0);
             this._exceptionState = 18;
             this._state_0 = 4;
             continue $sm;
@@ -55576,14 +57280,14 @@
             this._exceptionState = 18;
             var tmp_14 = this._exception_0;
             if (tmp_14 instanceof Exception) {
-              this._e17 = this._exception_0;
-              if (!this._opts._ignoreErrors ? !this._opts._quiet : false) {
+              this._e18 = this._exception_0;
+              if (!this._opts._ignoreErrors_0 ? !this._opts._quiet : false) {
                 var tmp1_e_0 = Log_getInstance();
                 if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
                   var tmp_15 = tmp1_e_0._loggerObject;
                   var tmp_16;
                   var tmp0_elvis_lhs_1_1 = tmp1_e_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                     tmp_16 = '**ERROR** ';
                   } else {
                     {
@@ -55600,18 +57304,18 @@
                     }
                   }
                   var tmp_19 = tmp_18;
-                  var tmp0_safe_receiver_4 = nullIfEmpty_0(this._e17.message);
+                  var tmp0_safe_receiver_4 = nullIfEmpty_0(this._e18.message);
                   var tmp_20;
                   if (tmp0_safe_receiver_4 == null) {
                     tmp_20 = null;
                   } else {
-                    tmp_20 = '' + ' with error: ' + tmp0_safe_receiver_4 + ';\n' + stackTraceToString(this._e17);
+                    tmp_20 = '' + ' with ' + getKClassFromExpression_0(this._e18)._get_simpleName__0_k$() + ': ' + tmp0_safe_receiver_4;
                   }
                   var tmp1_elvis_lhs_3 = tmp_20;
                   tmp_15.error('' + tmp_17 + tmp_19 + ('' + 'Error 1004: Failed to convert ' + this._originalFileName2 + ' to ' + this._opts._toGame_2 + ' sprite format' + (tmp1_elvis_lhs_3 == null ? '' : tmp1_elvis_lhs_3)));
                 }}this._opts._failed.add_2bq_k$(this._filePath0);
               Unit_getInstance();
-              if (this._opts._ignoreErrors) {
+              if (this._opts._ignoreErrors_0) {
                 this._state_0 = 2;
                 suspendResult = this._next12(this);
                 if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
@@ -55619,7 +57323,7 @@
                 }continue $sm;
               } else {
                 var tmp_21 = this;
-                tmp_21._WHEN_RESULT18 = exitNative(1004);
+                tmp_21._WHEN_RESULT19 = exitNative(1004);
                 this._state_0 = 3;
                 continue $sm;
               }
@@ -55631,16 +57335,16 @@
 
             break;
           case 2:
-            this._WHEN_RESULT18 = suspendResult;
+            this._WHEN_RESULT19 = suspendResult;
             this._state_0 = 3;
             continue $sm;
           case 3:
             var tmp_22 = this;
-            return this._WHEN_RESULT18;
+            return this._WHEN_RESULT19;
           case 4:
             this._exceptionState = 18;
-            this._compiledBytes19 = this._TRY_RESULT16;
-            this._nameWithoutExtension20 = FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(this._originalFileName2);
+            this._compiledBytes20 = this._TRY_RESULT17;
+            this._nameWithoutExtension21 = FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(this._originalFileName2);
             var tmp_23 = this;
             var tmp8_safe_receiver = this._opts._attFiles;
             var tmp_24;
@@ -55652,7 +57356,7 @@
                 var tmp0_iterator_1 = tmp8_safe_receiver.iterator_0_k$();
                 while (tmp0_iterator_1.hasNext_0_k$()) {
                   var element_2 = tmp0_iterator_1.next_0_k$();
-                  if (FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(element_2) == this._nameWithoutExtension20) {
+                  if (FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(element_2) == this._nameWithoutExtension21) {
                     tmp$ret$0 = element_2;
                     break l$ret$1;
                   } else {
@@ -55664,14 +57368,17 @@
               tmp_24 = tmp$ret$0;
             }
 
-            tmp_23._tmp9_safe_receiver21 = tmp_24;
-            if (this._tmp9_safe_receiver21 == null) {
-              this._WHEN_RESULT22 = null;
+            tmp_23._tmp9_safe_receiver22 = tmp_24;
+            if (this._tmp9_safe_receiver22 == null) {
+              this._WHEN_RESULT23 = null;
               this._state_0 = 6;
               continue $sm;
             } else {
               this._state_0 = 5;
-              suspendResult = convertAttForFile(this._opts, this._imagesPointer15._value_2, this._originalFileName2, this._tmp9_safe_receiver21, this._genus5, digitToInt(this._lifeStage6), this._breedSlot7, this._opts._progressive_0, this);
+              var tmp_25 = this._imagesPointer15._value_2;
+              var tmp_26 = digitToInt(this._lifeStage6);
+              var tmp0_safe_receiver_2 = this._sizesWithLeadingSize16;
+              suspendResult = convertAttForFile(this._opts, tmp_25, this._originalFileName2, this._tmp9_safe_receiver22, this._genus5, tmp_26, this._breedSlot7, this._opts._progressive_0, tmp0_safe_receiver_2 == null ? null : tmp0_safe_receiver_2._value_2, this);
               if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
                 return suspendResult;
               }continue $sm;
@@ -55679,8 +57386,8 @@
 
             break;
           case 5:
-            var tmp_25 = this;
-            tmp_25._WHEN_RESULT22 = Unit_getInstance();
+            var tmp_27 = this;
+            tmp_27._WHEN_RESULT23 = Unit_getInstance();
             this._state_0 = 6;
             continue $sm;
           case 6:
@@ -55692,8 +57399,8 @@
             }
             continue $sm;
           case 7:
-            this._ARGUMENT23 = suspendResult;
-            if (!this._ARGUMENT23) {
+            this._ARGUMENT24 = suspendResult;
+            if (!this._ARGUMENT24) {
               this._state_0 = 17;
               suspendResult = this._next12(this);
               if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
@@ -55707,77 +57414,37 @@
             break;
           case 8:
             this._exceptionState = 13;
-            this._wrote25 = writeSprite(this._opts._outputDirectory_3, this._outputFileName9, this._originalFileName2, this._compiledBytes19, true, this._opts._ignoreErrors);
-            if (!this._wrote25) {
+            this._wrote26 = writeSprite(this._opts._outputDirectory_3, this._outputFileName9, this._originalFileName2, this._compiledBytes20, true, this._opts._ignoreErrors_0);
+            if (!this._wrote26) {
               this._opts._failed.add_2bq_k$(this._filePath0);
               Unit_getInstance();
-              if (!this._opts._ignoreErrors) {
+              if (!this._opts._ignoreErrors_0) {
                 var tmp2_e_0 = Log_getInstance();
                 if (tmp2_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                  var tmp_26 = tmp2_e_0._loggerObject;
-                  var tmp_27;
-                  var tmp0_elvis_lhs_1_1_0 = tmp2_e_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
-                    tmp_27 = '**ERROR** ';
-                  } else {
-                    {
-                      tmp_27 = '';
-                    }
-                  }
-                  var tmp_28 = tmp_27;
+                  var tmp_28 = tmp2_e_0._loggerObject;
                   var tmp_29;
-                  if (!(null == null ? true : isBlank(null))) {
-                    tmp_29 = 'null::';
+                  var tmp0_elvis_lhs_1_1_0 = tmp2_e_0._loggerObject.prependLogType;
+                  if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_0) {
+                    tmp_29 = '**ERROR** ';
                   } else {
                     {
                       tmp_29 = '';
                     }
                   }
                   var tmp_30 = tmp_29;
-                  tmp_26.error('' + tmp_28 + tmp_30 + ('' + 'Failed to write write file ' + this._filePath0));
+                  var tmp_31;
+                  if (!(null == null ? true : isBlank(null))) {
+                    tmp_31 = 'null::';
+                  } else {
+                    {
+                      tmp_31 = '';
+                    }
+                  }
+                  var tmp_32 = tmp_31;
+                  tmp_28.error('' + tmp_30 + tmp_32 + ('' + 'Failed to write write file ' + this._filePath0));
                 }return exitNative(1005);
               }}
             if (this._part3.equals(new Char(97)) ? _get_isC2e_(this._opts._toGame_2) : false) {
-              var part0 = generatePart0(this._compiledBytes19);
-              try {
-                var tmp3_plus_0 = this._outputFileName9.substring(1);
-                var tmp_31 = '0' + tmp3_plus_0;
-                var tmp4_plus_0 = this._originalFileName2.substring(1);
-                writeSprite(this._opts._outputDirectory_3, tmp_31, '0' + tmp4_plus_0, part0, true, this._opts._ignoreErrors);
-                Unit_getInstance();
-              } catch ($p) {
-                if ($p instanceof Exception) {
-                  var tmp5_e_0 = Log_getInstance();
-                  if (tmp5_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                    var tmp_32 = tmp5_e_0._loggerObject;
-                    var tmp_33;
-                    var tmp0_elvis_lhs_1_1_1 = tmp5_e_0._loggerObject.prependLogType;
-                    if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
-                      tmp_33 = '**ERROR** ';
-                    } else {
-                      {
-                        tmp_33 = '';
-                      }
-                    }
-                    var tmp_34 = tmp_33;
-                    var tmp_35;
-                    if (!(null == null ? true : isBlank(null))) {
-                      tmp_35 = 'null::';
-                    } else {
-                      {
-                        tmp_35 = '';
-                      }
-                    }
-                    var tmp_36 = tmp_35;
-                    var tmp0_plus_0_3 = this._outputFileName9.substring(1);
-                    tmp_32.error('' + tmp_34 + tmp_36 + ('' + 'Error 1005: Failed to write part 0 ' + ('0' + tmp0_plus_0_3)));
-                  }return false;
-                } else {
-                  {
-                    throw $p;
-                  }
-                }
-              }
             }
             this._exceptionState = 11;
             this._state_0 = 9;
@@ -55788,28 +57455,28 @@
             continue $sm;
           case 9:
             if (suspendResult) {
-              this._WHEN_RESULT27 = this._wrote25;
+              this._WHEN_RESULT28 = this._wrote26;
               this._state_0 = 10;
               continue $sm;
             } else {
-              this._WHEN_RESULT27 = false;
+              this._WHEN_RESULT28 = false;
               this._state_0 = 10;
               continue $sm;
             }
 
             break;
           case 10:
-            this._TRY_RESULT26 = this._WHEN_RESULT27;
+            this._TRY_RESULT27 = this._WHEN_RESULT28;
             this._exceptionState = 13;
             this._state_0 = 12;
             continue $sm;
           case 11:
             this._exceptionState = 13;
-            var tmp_37 = this._exception_0;
-            if (tmp_37 instanceof Exception) {
-              this._e28 = this._exception_0;
-              var tmp_38 = this;
-              tmp_38._TRY_RESULT26 = false;
+            var tmp_33 = this._exception_0;
+            if (tmp_33 instanceof Exception) {
+              this._e29 = this._exception_0;
+              var tmp_34 = this;
+              tmp_34._TRY_RESULT27 = false;
               this._state_0 = 12;
               continue $sm;
             } else {
@@ -55821,82 +57488,82 @@
             break;
           case 12:
             this._exceptionState = 13;
-            this._TRY_RESULT24 = this._TRY_RESULT26;
+            this._TRY_RESULT25 = this._TRY_RESULT27;
             this._exceptionState = 18;
             this._state_0 = 16;
             continue $sm;
           case 13:
             this._exceptionState = 18;
-            var tmp_39 = this._exception_0;
-            if (tmp_39 instanceof Exception) {
-              this._e29 = this._exception_0;
-              var tmp_40 = this;
-              var tmp10_safe_receiver = nullIfEmpty_0(this._e29.message);
-              var tmp_41;
+            var tmp_35 = this._exception_0;
+            if (tmp_35 instanceof Exception) {
+              this._e30 = this._exception_0;
+              var tmp_36 = this;
+              var tmp10_safe_receiver = nullIfEmpty_0(this._e30.message);
+              var tmp_37;
               if (tmp10_safe_receiver == null) {
-                tmp_41 = null;
+                tmp_37 = null;
               } else {
-                tmp_41 = '' + ' with error: ' + tmp10_safe_receiver;
+                tmp_37 = '' + ' with (' + getKClassFromExpression_0(this._e30)._get_simpleName__0_k$() + '): ' + tmp10_safe_receiver;
               }
-              var tmp11_elvis_lhs = tmp_41;
-              tmp_40._error30 = '' + 'Failed to write sprite ' + this._originalFileName2 + " to '" + this._outputFilePath10 + "' " + (tmp11_elvis_lhs == null ? '' : tmp11_elvis_lhs);
-              if (this._opts._ignoreErrors) {
+              var tmp11_elvis_lhs = tmp_37;
+              tmp_36._error31 = '' + 'Failed to write sprite ' + this._originalFileName2 + " to '" + this._outputFilePath10 + "' " + (tmp11_elvis_lhs == null ? '' : tmp11_elvis_lhs);
+              if (this._opts._ignoreErrors_0) {
                 this._opts._failed.add_2bq_k$(this._filePath0);
                 Unit_getInstance();
                 if (!this._opts._quiet) {
-                  var tmp6_e_0 = Log_getInstance();
-                  if (tmp6_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                    var tmp_42 = tmp6_e_0._loggerObject;
-                    var tmp_43;
-                    var tmp0_elvis_lhs_1_1_2 = tmp6_e_0._loggerObject.prependLogType;
-                    if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_2) {
-                      tmp_43 = '**ERROR** ';
+                  var tmp3_e_0 = Log_getInstance();
+                  if (tmp3_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                    var tmp_38 = tmp3_e_0._loggerObject;
+                    var tmp_39;
+                    var tmp0_elvis_lhs_1_1_1 = tmp3_e_0._loggerObject.prependLogType;
+                    if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
+                      tmp_39 = '**ERROR** ';
                     } else {
                       {
-                        tmp_43 = '';
+                        tmp_39 = '';
                       }
                     }
-                    var tmp_44 = tmp_43;
-                    var tmp_45;
+                    var tmp_40 = tmp_39;
+                    var tmp_41;
                     if (!(null == null ? true : isBlank(null))) {
-                      tmp_45 = 'null::';
+                      tmp_41 = 'null::';
                     } else {
                       {
-                        tmp_45 = '';
+                        tmp_41 = '';
                       }
                     }
-                    var tmp_46 = tmp_45;
-                    tmp_42.error('' + tmp_44 + tmp_46 + this._error30);
+                    var tmp_42 = tmp_41;
+                    tmp_38.error('' + tmp_40 + tmp_42 + this._error31);
                   }}this._state_0 = 14;
                 suspendResult = this._next12(this);
                 if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
                   return suspendResult;
                 }continue $sm;
               } else {
-                var tmp_47 = this;
-                var tmp7_e_0 = Log_getInstance();
-                if (tmp7_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                  var tmp_48 = tmp7_e_0._loggerObject;
-                  var tmp_49;
-                  var tmp0_elvis_lhs_1_1_3 = tmp7_e_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3) {
-                    tmp_49 = '**ERROR** ';
+                var tmp_43 = this;
+                var tmp4_e_0 = Log_getInstance();
+                if (tmp4_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                  var tmp_44 = tmp4_e_0._loggerObject;
+                  var tmp_45;
+                  var tmp0_elvis_lhs_1_1_2 = tmp4_e_0._loggerObject.prependLogType;
+                  if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_2) {
+                    tmp_45 = '**ERROR** ';
                   } else {
                     {
-                      tmp_49 = '';
+                      tmp_45 = '';
                     }
                   }
-                  var tmp_50 = tmp_49;
-                  var tmp_51;
+                  var tmp_46 = tmp_45;
+                  var tmp_47;
                   if (!(null == null ? true : isBlank(null))) {
-                    tmp_51 = 'null::';
+                    tmp_47 = 'null::';
                   } else {
                     {
-                      tmp_51 = '';
+                      tmp_47 = '';
                     }
                   }
-                  var tmp_52 = tmp_51;
-                  tmp_48.error('' + tmp_50 + tmp_52 + ('' + 'Error 1005: ' + this._error30));
+                  var tmp_48 = tmp_47;
+                  tmp_44.error('' + tmp_46 + tmp_48 + ('' + 'Error 1005: ' + this._error31));
                 }return exitNative(1005);
               }
             } else {
@@ -55908,37 +57575,37 @@
             break;
           case 14:
             Unit_getInstance();
-            this._WHEN_RESULT31 = false;
+            this._WHEN_RESULT32 = false;
             this._state_0 = 15;
             continue $sm;
           case 15:
-            this._TRY_RESULT24 = this._WHEN_RESULT31;
+            this._TRY_RESULT25 = this._WHEN_RESULT32;
             this._state_0 = 16;
             continue $sm;
           case 16:
             this._exceptionState = 18;
-            return this._TRY_RESULT24;
+            return this._TRY_RESULT25;
           case 17:
             return suspendResult;
           case 18:
             throw this._exception_0;
         }
-      } catch ($p_0) {
+      } catch ($p) {
         if (this._exceptionState === 18) {
-          throw $p_0;
+          throw $p;
         } else {
           this._state_0 = this._exceptionState;
-          this._exception_0 = $p_0;
+          this._exception_0 = $p;
         }
       }
      while (true);
   };
-  $nextCOROUTINE$5.$metadata$ = {
-    simpleName: '$nextCOROUTINE$5',
+  $nextCOROUTINE$7.$metadata$ = {
+    simpleName: '$nextCOROUTINE$7',
     kind: 'class',
     interfaces: []
   };
-  function $convertAttForFileCOROUTINE$6(opts, imagesGetter, originalFileName, attFile, genus, age, breedSlot, progressive, resultContinuation) {
+  function $convertAttForFileCOROUTINE$8(opts, imagesGetter, originalFileName, attFile, genus, age, breedSlot, progressive, sizesWithLeadingSize, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
     this._opts_0 = opts;
     this._imagesGetter_0 = imagesGetter;
@@ -55948,8 +57615,9 @@
     this._age_3 = age;
     this._breedSlot = breedSlot;
     this._progressive_1 = progressive;
+    this._sizesWithLeadingSize_0 = sizesWithLeadingSize;
   }
-  $convertAttForFileCOROUTINE$6.prototype.doResume_0_k$ = function () {
+  $convertAttForFileCOROUTINE$8.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
     $sm: do
       try {
@@ -55985,7 +57653,7 @@
             this._exceptionState = 6;
             if (_get_isC1e_(this._fromGame2) ? _get_isC2e_(this._opts_0._toGame_2) : false) {
               this._state_0 = 4;
-              suspendResult = convertC1eAttToC2e(this._opts_0._toGame_2, this._fromGame2, this._imagesGetter_0, this._attFile, null, this._opts_0._outputDirectory_3, ensureNotNull(toIntOrNull('' + this._genus_3)), this._male3, this._age_3, this._breedSlot, this._progressive_1, this._opts_0._shouldWriteCallback, this);
+              suspendResult = convertC1eAttToC2e(this._opts_0._toGame_2, this._fromGame2, this._imagesGetter_0, this._attFile, null, this._opts_0._outputDirectory_3, ensureNotNull(toIntOrNull('' + this._genus_3)), this._male3, this._age_3, this._breedSlot, this._progressive_1, this._sizesWithLeadingSize_0, this._opts_0._shouldWriteCallback, this);
               if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
                 return suspendResult;
               }continue $sm;
@@ -56028,7 +57696,7 @@
                       var tmp_5 = tmp1_e_0._loggerObject;
                       var tmp_6;
                       var tmp0_elvis_lhs_1_1 = tmp1_e_0._loggerObject.prependLogType;
-                      if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                      if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                         tmp_6 = '**ERROR** ';
                       } else {
                         {
@@ -56057,31 +57725,31 @@
 
             break;
           case 1:
-            this._WHEN_RESULT4 = suspendResult;
+            this._WHEN_RESULT4_0 = suspendResult;
             this._state_0 = 5;
             continue $sm;
           case 2:
-            this._WHEN_RESULT4 = suspendResult;
+            this._WHEN_RESULT4_0 = suspendResult;
             this._state_0 = 5;
             continue $sm;
           case 3:
-            this._WHEN_RESULT4 = suspendResult;
+            this._WHEN_RESULT4_0 = suspendResult;
             this._state_0 = 5;
             continue $sm;
           case 4:
-            this._WHEN_RESULT4 = suspendResult;
+            this._WHEN_RESULT4_0 = suspendResult;
             this._state_0 = 5;
             continue $sm;
           case 5:
-            var out = this._WHEN_RESULT4;
+            var out = this._WHEN_RESULT4_0;
             if (out == null) {
-              if (!this._opts_0._ignoreErrors) {
+              if (!this._opts_0._ignoreErrors_0) {
                 var tmp2_e_0 = Log_getInstance();
                 if (tmp2_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
                   var tmp_10 = tmp2_e_0._loggerObject;
                   var tmp_11;
                   var tmp0_elvis_lhs_1_1_0 = tmp2_e_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
+                  if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_0) {
                     tmp_11 = '**ERROR** ';
                   } else {
                     {
@@ -56098,7 +57766,8 @@
                     }
                   }
                   var tmp_14 = tmp_13;
-                  tmp_10.error('' + tmp_12 + tmp_14 + 'Error 1004: Att conversion failed without error');
+                  var tmp_15 = FileNameUtil_getInstance();
+                  tmp_10.error('' + tmp_12 + tmp_14 + ('' + 'Error 1004: Att conversion of ' + tmp_15.getLastPathComponent$default_zmr95_k$(this._attFile, false, 2, null) + ' failed without error'));
                 }return exitNative(1004);
               }}
             this._exceptionState = 7;
@@ -56106,33 +57775,34 @@
             continue $sm;
           case 6:
             this._exceptionState = 7;
-            var tmp_15 = this._exception_0;
-            if (tmp_15 instanceof Exception) {
+            var tmp_16 = this._exception_0;
+            if (tmp_16 instanceof Exception) {
               var e = this._exception_0;
-              if (!this._opts_0._ignoreErrors) {
+              if (!this._opts_0._ignoreErrors_0) {
                 var tmp3_e_0 = Log_getInstance();
                 if (tmp3_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                  var tmp_16 = tmp3_e_0._loggerObject;
-                  var tmp_17;
+                  var tmp_17 = tmp3_e_0._loggerObject;
+                  var tmp_18;
                   var tmp0_elvis_lhs_1_1_1 = tmp3_e_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
-                    tmp_17 = '**ERROR** ';
+                  if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
+                    tmp_18 = '**ERROR** ';
                   } else {
                     {
-                      tmp_17 = '';
+                      tmp_18 = '';
                     }
                   }
-                  var tmp_18 = tmp_17;
-                  var tmp_19;
+                  var tmp_19 = tmp_18;
+                  var tmp_20;
                   if (!(null == null ? true : isBlank(null))) {
-                    tmp_19 = 'null::';
+                    tmp_20 = 'null::';
                   } else {
                     {
-                      tmp_19 = '';
+                      tmp_20 = '';
                     }
                   }
-                  var tmp_20 = tmp_19;
-                  tmp_16.error('' + tmp_18 + tmp_20 + ('' + 'Error 1004: Failed to convert ATT with error: ' + e.message));
+                  var tmp_21 = tmp_20;
+                  var tmp_22 = FileNameUtil_getInstance();
+                  tmp_17.error('' + tmp_19 + tmp_21 + ('' + 'Error 1004: Failed to convert ATT ' + tmp_22.getLastPathComponent$default_zmr95_k$(this._attFile, false, 2, null) + ' with ' + getKClassFromExpression_0(e)._get_simpleName__0_k$() + ': ' + e.message));
                 }return exitNative(1015);
               }this._state_0 = 8;
               continue $sm;
@@ -56159,18 +57829,18 @@
       }
      while (true);
   };
-  $convertAttForFileCOROUTINE$6.$metadata$ = {
-    simpleName: '$convertAttForFileCOROUTINE$6',
+  $convertAttForFileCOROUTINE$8.$metadata$ = {
+    simpleName: '$convertAttForFileCOROUTINE$8',
     kind: 'class',
     interfaces: []
   };
-  function $promptOverwriteCOROUTINE$7(promptString, overwriteAll, overwriteNone, resultContinuation) {
+  function $promptOverwriteCOROUTINE$9(promptString, overwriteAll, overwriteNone, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
     this._promptString = promptString;
     this._overwriteAll = overwriteAll;
-    this._overwriteNone = overwriteNone;
+    this._overwriteNone_0 = overwriteNone;
   }
-  $promptOverwriteCOROUTINE$7.prototype.doResume_0_k$ = function () {
+  $promptOverwriteCOROUTINE$9.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
     $sm: do
       try {
@@ -56202,12 +57872,12 @@
             var tmp_1 = this;
             tmp_1._tmp1_subject1 = charSequenceGet(this._response0.toUpperCase(), 0);
             if (this._tmp1_subject1.equals(new Char(89))) {
-              this._WHEN_RESULT2_0 = true;
+              this._WHEN_RESULT2 = true;
               this._state_0 = 3;
               continue $sm;
             } else {
               if (this._tmp1_subject1.equals(new Char(78))) {
-                this._WHEN_RESULT2_0 = false;
+                this._WHEN_RESULT2 = false;
                 this._state_0 = 3;
                 continue $sm;
               } else {
@@ -56218,18 +57888,18 @@
                     Unit_getInstance();
                   } else
                     tmp2_safe_receiver._value_2 = true;
-                  tmp_2._WHEN_RESULT2_0 = true;
+                  tmp_2._WHEN_RESULT2 = true;
                   this._state_0 = 3;
                   continue $sm;
                 } else {
                   if (this._tmp1_subject1.equals(new Char(88))) {
                     var tmp_3 = this;
-                    var tmp3_safe_receiver = this._overwriteNone;
+                    var tmp3_safe_receiver = this._overwriteNone_0;
                     if (tmp3_safe_receiver == null) {
                       Unit_getInstance();
                     } else
                       tmp3_safe_receiver._value_2 = true;
-                    tmp_3._WHEN_RESULT2_0 = false;
+                    tmp_3._WHEN_RESULT2 = false;
                     this._state_0 = 3;
                     continue $sm;
                   } else {
@@ -56239,7 +57909,7 @@
                       var tmp_5 = this._tmp0_e_03._loggerObject;
                       var tmp_6;
                       var tmp0_elvis_lhs_1_1 = this._tmp0_e_03._loggerObject.prependLogType;
-                      if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                      if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                         tmp_6 = '**ERROR** ';
                       } else {
                         {
@@ -56258,7 +57928,7 @@
                       var tmp_9 = tmp_8;
                       tmp_5.error('' + tmp_7 + tmp_9 + 'Invalid input for overwrite file...');
                     }this._state_0 = 2;
-                    suspendResult = promptOverwrite(this._promptString, this._overwriteAll, this._overwriteNone, this);
+                    suspendResult = promptOverwrite(this._promptString, this._overwriteAll, this._overwriteNone_0, this);
                     if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
                       return suspendResult;
                     }continue $sm;
@@ -56272,18 +57942,18 @@
 
             break;
           case 2:
-            this._WHEN_RESULT2_0 = suspendResult;
+            this._WHEN_RESULT2 = suspendResult;
             this._state_0 = 3;
             continue $sm;
           case 3:
-            var tmp1_apply_0 = this._WHEN_RESULT2_0;
+            var tmp1_apply_0 = this._WHEN_RESULT2;
             if (tmp1_apply_0) {
               var tmp0_i_0_2 = Log_getInstance();
               if (tmp0_i_0_2._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
                 var tmp_10 = tmp0_i_0_2._loggerObject;
                 var tmp_11;
                 var tmp0_elvis_lhs_1_1_3 = tmp0_i_0_2._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3) {
+                if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_3) {
                   tmp_11 = '**LOG1** ';
                 } else {
                   {
@@ -56307,7 +57977,7 @@
                 var tmp_15 = tmp1_i_0_4._loggerObject;
                 var tmp_16;
                 var tmp0_elvis_lhs_1_1_5 = tmp1_i_0_4._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_5 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_5) {
+                if (tmp0_elvis_lhs_1_1_5 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_5) {
                   tmp_16 = '**LOG1** ';
                 } else {
                   {
@@ -56341,16 +58011,16 @@
       }
      while (true);
   };
-  $promptOverwriteCOROUTINE$7.$metadata$ = {
-    simpleName: '$promptOverwriteCOROUTINE$7',
+  $promptOverwriteCOROUTINE$9.$metadata$ = {
+    simpleName: '$promptOverwriteCOROUTINE$9',
     kind: 'class',
     interfaces: []
   };
-  function $writeTailFilesCOROUTINE$8(opts, resultContinuation) {
+  function $writeTailFilesCOROUTINE$10(opts, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
     this._opts_1 = opts;
   }
-  $writeTailFilesCOROUTINE$8.prototype.doResume_0_k$ = function () {
+  $writeTailFilesCOROUTINE$10.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
     $sm: do
       try {
@@ -56389,7 +58059,7 @@
                     var tmp_1 = tmp0_e_0._loggerObject;
                     var tmp_2;
                     var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-                    if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                    if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                       tmp_2 = '**ERROR** ';
                     } else {
                       {
@@ -56416,7 +58086,7 @@
               }
             }
             this._state_0 = 3;
-            suspendResult = writeTailAtt(this._opts_1, this._fileName4, this._opts_1._shouldWriteCallback, this);
+            suspendResult = writeTailAtt(this._opts_1, this._fileName4, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -56452,99 +58122,8 @@
       }
      while (true);
   };
-  $writeTailFilesCOROUTINE$8.$metadata$ = {
-    simpleName: '$writeTailFilesCOROUTINE$8',
-    kind: 'class',
-    interfaces: []
-  };
-  function $writeTailAttCOROUTINE$9(opts, fileName, shouldWrite_1, resultContinuation) {
-    CoroutineImpl_0.call(this, resultContinuation);
-    this._opts_2 = opts;
-    this._fileName = fileName;
-    this._shouldWrite_5 = shouldWrite_1;
-  }
-  $writeTailAttCOROUTINE$9.prototype.doResume_0_k$ = function () {
-    var suspendResult = this._result;
-    $sm: do
-      try {
-        var tmp = this._state_0;
-        switch (tmp) {
-          case 0:
-            this._exceptionState = 3;
-            if (isNullOrEmpty(this._opts_2._attFiles))
-              return true;
-            this._rows0 = _get_isC1e_(this._opts_2._toGame_2) ? 10 : 16;
-            var tmp_0 = this;
-            var tmp_1 = until(0, this._rows0);
-            tmp_0._att1 = encodeToByteArray(joinToString$default_0(tmp_1, '\r\n', null, null, 0, null, _no_name_provided_$factory_229(), 30, null));
-            this._outputAtt2 = PathUtil_getInstance().combine_yn9lj1_k$([this._opts_2._outputDirectory_3, '' + this._fileName + '.att']);
-            this._state_0 = 1;
-            suspendResult = this._shouldWrite_5(this._outputAtt2, this);
-            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
-              return suspendResult;
-            }
-            continue $sm;
-          case 1:
-            if (suspendResult) {
-              try {
-                writeBytes_1(this._outputAtt2, this._att1);
-              } catch ($p) {
-                if ($p instanceof Exception) {
-                  var tmp0_e_0 = Log_getInstance();
-                  if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                    var tmp_2 = tmp0_e_0._loggerObject;
-                    var tmp_3;
-                    var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-                    if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
-                      tmp_3 = '**ERROR** ';
-                    } else {
-                      {
-                        tmp_3 = '';
-                      }
-                    }
-                    var tmp_4 = tmp_3;
-                    var tmp_5;
-                    if (!(null == null ? true : isBlank(null))) {
-                      tmp_5 = 'null::';
-                    } else {
-                      {
-                        tmp_5 = '';
-                      }
-                    }
-                    var tmp_6 = tmp_5;
-                    tmp_2.error('' + tmp_4 + tmp_6 + ('' + 'Error 1016: Failed to write tail placeholder ' + this._fileName + '.att to ' + this._outputAtt2 + '. Error: ' + $p.message));
-                  }return false;
-                } else {
-                  {
-                    throw $p;
-                  }
-                }
-              }
-              this._state_0 = 2;
-              continue $sm;
-            } else {
-              this._state_0 = 2;
-              continue $sm;
-            }
-
-            break;
-          case 2:
-            return true;
-          case 3:
-            throw this._exception_0;
-        }
-      } catch ($p_0) {
-        if (this._exceptionState === 3) {
-          throw $p_0;
-        } else {
-          this._state_0 = this._exceptionState;
-          this._exception_0 = $p_0;
-        }
-      }
-     while (true);
-  };
-  $writeTailAttCOROUTINE$9.$metadata$ = {
-    simpleName: '$writeTailAttCOROUTINE$9',
+  $writeTailFilesCOROUTINE$10.$metadata$ = {
+    simpleName: '$writeTailFilesCOROUTINE$10',
     kind: 'class',
     interfaces: []
   };
@@ -56571,6 +58150,16 @@
   function outputBreed$factory() {
     return getPropertyCallableRef('outputBreed', 1, KProperty1, function (receiver) {
       return _get_outputBreed_(receiver);
+    }, null);
+  }
+  function inputGenus$factory() {
+    return getPropertyCallableRef('inputGenus', 1, KProperty1, function (receiver) {
+      return _get_inputGenus_(receiver);
+    }, null);
+  }
+  function inputBreed$factory() {
+    return getPropertyCallableRef('inputBreed', 1, KProperty1, function (receiver) {
+      return _get_inputBreed_(receiver);
     }, null);
   }
   function overwriteExisting$factory_1() {
@@ -56623,6 +58212,11 @@
       return _get_outputDirectory_(receiver);
     }, null);
   }
+  function sameSize$factory() {
+    return getPropertyCallableRef('sameSize', 1, KProperty1, function (receiver) {
+      return _get_sameSize_(receiver);
+    }, null);
+  }
   function files$factory_1() {
     return getPropertyCallableRef('files', 1, KProperty1, function (receiver) {
       return _get_files__0(receiver);
@@ -56651,6 +58245,16 @@
   function outputBreed$factory_0() {
     return getPropertyCallableRef('outputBreed', 1, KProperty1, function (receiver) {
       return _get_outputBreed_(receiver);
+    }, null);
+  }
+  function inputGenus$factory_0() {
+    return getPropertyCallableRef('inputGenus', 1, KProperty1, function (receiver) {
+      return _get_inputGenus_(receiver);
+    }, null);
+  }
+  function inputBreed$factory_0() {
+    return getPropertyCallableRef('inputBreed', 1, KProperty1, function (receiver) {
+      return _get_inputBreed_(receiver);
     }, null);
   }
   function overwriteExisting$factory_2() {
@@ -56703,6 +58307,11 @@
       return _get_outputDirectory_(receiver);
     }, null);
   }
+  function sameSize$factory_0() {
+    return getPropertyCallableRef('sameSize', 1, KProperty1, function (receiver) {
+      return _get_sameSize_(receiver);
+    }, null);
+  }
   function files$factory_2() {
     return getPropertyCallableRef('files', 1, KProperty1, function (receiver) {
       return _get_files__0(receiver);
@@ -56723,87 +58332,687 @@
       return receiver._get_fallbackTailBytes__0_k$();
     }, null);
   }
-  function _no_name_provided_$factory_217() {
-    var i = new _no_name_provided__249();
+  function _no_name_provided_$factory_218() {
+    var i = new _no_name_provided__252();
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_218() {
-    var i = new _no_name_provided__250();
+  function _no_name_provided_$factory_219() {
+    var i = new _no_name_provided__253();
     return function (p1) {
       return i.invoke_ixg9nz_k$(p1);
     };
   }
-  function _no_name_provided_$factory_219() {
-    var i = new _no_name_provided__251();
+  function _no_name_provided_$factory_220() {
+    var i = new _no_name_provided__254();
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_220($opts, $shouldWrite, $quiet, resultContinuation) {
-    var i = new _no_name_provided__252($opts, $shouldWrite, $quiet, resultContinuation);
+  function _no_name_provided_$factory_221($task, resultContinuation) {
+    var i = new _no_name_provided__255($task, resultContinuation);
     var l = function (p1, $cont) {
       return i.invoke_2i3g7c_k$(p1, $cont);
     };
     l.$arity = 1;
     return l;
   }
-  function _no_name_provided_$factory_221(this$0) {
-    var i = new _no_name_provided__253(this$0);
-    return function () {
-      return i.invoke_0_k$();
-    };
-  }
   function _no_name_provided_$factory_222(this$0) {
-    var i = new _no_name_provided__254(this$0);
+    var i = new _no_name_provided__256(this$0);
     return function () {
       return i.invoke_0_k$();
     };
   }
   function _no_name_provided_$factory_223(this$0) {
-    var i = new _no_name_provided__255(this$0);
+    var i = new _no_name_provided__257(this$0);
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_224() {
-    var i = new _no_name_provided__257();
+  function _no_name_provided_$factory_224(this$0) {
+    var i = new _no_name_provided__258(this$0);
+    return function () {
+      return i.invoke_0_k$();
+    };
+  }
+  function _no_name_provided_$factory_225() {
+    var i = new _no_name_provided__260();
     return function (p1, p2, p3) {
       return i.invoke_fcwjfj_k$(p1, p2, p3);
     };
   }
-  function _no_name_provided_$factory_225($i, $fileCount, $fileName) {
-    var i = new _no_name_provided__258($i, $fileCount, $fileName);
+  function _no_name_provided_$factory_226($i, $fileCount, $fileName) {
+    var i = new _no_name_provided__261($i, $fileCount, $fileName);
     return function (p1, p2, p3) {
       return i.invoke_fcwjfj_k$(p1, p2, p3);
     };
   }
-  function _no_name_provided_$factory_226($percent) {
-    var i = new _no_name_provided__259($percent);
+  function _no_name_provided_$factory_227($percent) {
+    var i = new _no_name_provided__262($percent);
     return function (p1, p2, p3) {
       return i.invoke_fcwjfj_k$(p1, p2, p3);
     };
   }
-  function _no_name_provided_$factory_227($noAgeProgression, $toGame) {
-    var i = new _no_name_provided__261($noAgeProgression, $toGame);
-    return function (p1, p2, p3) {
-      return i.invoke_vlkx9x_k$(p1, p2, p3);
+  function _no_name_provided_$factory_228() {
+    var i = new _no_name_provided__263();
+    return function (p1) {
+      return i.invoke_ha5a7z_k$(p1);
     };
   }
-  function _no_name_provided_$factory_228($i, $opts, $shouldWrite, resultContinuation) {
-    var i = new _no_name_provided__256($i, $opts, $shouldWrite, resultContinuation);
+  function _no_name_provided_$factory_229($noAgeProgression, $toGame) {
+    var i = new _no_name_provided__264($noAgeProgression, $toGame);
+    return function (p1, p2, p3) {
+      return i.invoke_4tk4cw_k$(p1, p2, p3);
+    };
+  }
+  function _no_name_provided_$factory_230($i, $opts, $shouldWrite, resultContinuation) {
+    var i = new _no_name_provided__259($i, $opts, $shouldWrite, resultContinuation);
     var l = function ($cont) {
       return i.invoke_0_k$($cont);
     };
     l.$arity = 0;
     return l;
   }
-  function _no_name_provided_$factory_229() {
-    var i = new _no_name_provided__260();
-    return function (p1) {
-      return i.invoke_ha5a7z_k$(p1);
+  function ConvertBreedTask_init_$Init$(toGame, files, $mask0, $marker, $this) {
+    if (!(($mask0 & 1) === 0))
+      toGame = null;
+    if (!(($mask0 & 2) === 0)) {
+      var tmp$ret$0;
+      var tmp$ret$0_0;
+      $l$block: {
+        tmp$ret$0 = [];
+        tmp$ret$0_0 = Unit_getInstance();
+        break $l$block;
+      }
+      files = tmp$ret$0;
+    }ConvertBreedTask.call($this, toGame, files);
+    return $this;
+  }
+  function ConvertBreedTask_init_$Create$(toGame, files, $mask0, $marker) {
+    return ConvertBreedTask_init_$Init$(toGame, files, $mask0, $marker, Object.create(ConvertBreedTask.prototype));
+  }
+  function assertValidGenus($this, genus, fieldName) {
+    var tmp;
+    if (genus == null) {
+      tmp = true;
+    } else {
+      var tmp_0 = Companion_getInstance_73()._genera;
+      var tmp$ret$2;
+      $l$block_1: {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = toString_3(trim_0((!(genus == null) ? isCharSequence(genus) : false) ? genus : THROW_CCE()));
+          break $l$block;
+        }
+        var tmp0_lowercase_0 = tmp$ret$0;
+        var tmp$ret$1;
+        $l$block_0: {
+          tmp$ret$1 = tmp0_lowercase_0;
+          break $l$block_0;
+        }
+        tmp$ret$2 = tmp$ret$1.toLowerCase();
+        break $l$block_1;
+      }
+      tmp = tmp_0.contains_2bq_k$(tmp$ret$2);
+    }
+    if (tmp) {
+      return Unit_getInstance();
+    } else {
+    }
+    throw Exception_init_$Create$('' + 'Invalid ' + fieldName + ' value. Expected [n]orn, [g]rendel, [e]ttin, [s]hee, [g]eat');
+  }
+  function getGenus($this, theGenus) {
+    var tmp0_subject = theGenus;
+    switch (tmp0_subject) {
+      case 'n':
+      case 'norn':
+        return 'norn';
+      case 'g':
+      case 'grendel':
+        return 'grendel';
+      case 'e':
+      case 'ettin':
+        return 'ettin';
+      case 's':
+      case 'shee':
+      case 'geat':
+        return 'shee';
+      default:return null;
+    }
+  }
+  function assertValidBreed($this, breedIn, fieldName) {
+    var tmp;
+    if (breedIn == null) {
+      tmp = true;
+    } else {
+      var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = toString_3(trim_0((!(breedIn == null) ? isCharSequence(breedIn) : false) ? breedIn : THROW_CCE()));
+        break $l$block;
+      }
+      tmp = tmp$ret$0.length === 1;
+    }
+    if (tmp) {
+      return Unit_getInstance();
+    } else {
+    }
+    throw Exception_init_$Create$('' + fieldName + ' is expected to be a single character');
+  }
+  function Companion_74() {
+    Companion_instance_73 = this;
+    this._genera = listOf(['n', 'norn', 'g', 'gren', 'grendel', 'e', 'ettin', 's', 'shee', 'geat']);
+  }
+  Companion_74.$metadata$ = {
+    simpleName: 'Companion',
+    kind: 'object',
+    interfaces: []
+  };
+  var Companion_instance_73;
+  function Companion_getInstance_73() {
+    if (Companion_instance_73 == null)
+      new Companion_74();
+    return Companion_instance_73;
+  }
+  function _no_name_provided__265(this$0, $callback, resultContinuation) {
+    this._this$0_44 = this$0;
+    this._$callback_14 = $callback;
+    CoroutineImpl_0.call(this, resultContinuation);
+  }
+  _no_name_provided__265.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
+    var tmp = this.create_y6imfn_k$($this$launch, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  };
+  _no_name_provided__265.prototype.invoke_20e8_k$ = function (p1, $cont) {
+    this.invoke_2i3g7c_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $cont);
+    return Unit_getInstance();
+  };
+  _no_name_provided__265.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 3;
+            this._exceptionState = 2;
+            this._state_0 = 1;
+            suspendResult = convertBreed(this._this$0_44, this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            this._TRY_RESULT0_0 = suspendResult;
+            this._exceptionState = 3;
+            this._state_0 = 4;
+            continue $sm;
+          case 2:
+            this._exceptionState = 3;
+            var tmp_0 = this._exception_0;
+            if (tmp_0 instanceof AppRequestTermination) {
+              var e = this._exception_0;
+              var tmp_1 = this;
+              tmp_1._TRY_RESULT0_0 = e._code_1;
+              this._state_0 = 4;
+              continue $sm;
+            } else {
+              {
+                throw this._exception_0;
+              }
+            }
+
+            break;
+          case 3:
+            throw this._exception_0;
+          case 4:
+            this._exceptionState = 3;
+            var exitCode = this._TRY_RESULT0_0;
+            var tmp0_safe_receiver = this._$callback_14;
+            if (tmp0_safe_receiver == null)
+              null;
+            else
+              tmp0_safe_receiver(exitCode);
+            Unit_getInstance();
+            return Unit_getInstance();
+        }
+      } catch ($p) {
+        if (this._exceptionState === 3) {
+          throw $p;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p;
+        }
+      }
+     while (true);
+  };
+  _no_name_provided__265.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
+    var i = new _no_name_provided__265(this._this$0_44, this._$callback_14, completion);
+    i._$this$launch_2 = $this$launch;
+    return i;
+  };
+  _no_name_provided__265.$metadata$ = {
+    kind: 'class',
+    interfaces: [],
+    suspendArity: 1
+  };
+  function ConvertBreedTask(toGame, files) {
+    Companion_getInstance_73();
+    var toGame_0 = toGame === void 1 ? null : toGame;
+    var tmp;
+    if (files === void 1) {
+      var tmp$ret$0;
+      var tmp$ret$0_0;
+      $l$block: {
+        tmp$ret$0 = [];
+        tmp$ret$0_0 = Unit_getInstance();
+        break $l$block;
+      }
+      tmp = tmp$ret$0;
+    } else {
+      tmp = files;
+    }
+    var files_0 = tmp;
+    var tmp_0 = this;
+    var tmp0_safe_receiver = nullIfEmpty_0(toGame_0);
+    var tmp_1;
+    if (tmp0_safe_receiver == null) {
+      tmp_1 = null;
+    } else {
+      var tmp$ret$2;
+      $l$block_1: {
+        {
+        }
+        var tmp$ret$1;
+        $l$block_0: {
+          tmp$ret$1 = ensureNotNull(Companion_getInstance_70().fromString_6wfw3l_k$(tmp0_safe_receiver));
+          break $l$block_0;
+        }
+        tmp$ret$2 = tmp$ret$1;
+        break $l$block_1;
+      }
+      tmp_1 = tmp$ret$2;
+    }
+    tmp_0._toGame_3 = tmp_1;
+    this._fromGame_2 = null;
+    this._outputGenus_0 = null;
+    this._outputBreed_0 = null;
+    this._inputGenus_0 = null;
+    this._inputBreed_0 = null;
+    this._attDirectory_0 = null;
+    this._encoding_6 = null;
+    this._overwriteExisting_0 = null;
+    this._overwriteNone_1 = null;
+    this._progressive_2 = null;
+    this._noAgeProgression = null;
+    this._noTails = null;
+    this._ignoreErrors_1 = null;
+    this._quiet_0 = null;
+    this._progress_0 = null;
+    this._outputDirectory_4 = null;
+    this._sameSize_0 = null;
+    this._files_1 = toList(files_0);
+  }
+  ConvertBreedTask.prototype.withToGame = function (gameVariant) {
+    this._toGame_3 = ensureNotNull(Companion_getInstance_70().fromString_6wfw3l_k$(gameVariant));
+    return this;
+  };
+  ConvertBreedTask.prototype.withToGame_kh0iql_k$ = function (gameVariant) {
+    this._toGame_3 = gameVariant;
+  };
+  ConvertBreedTask.prototype.getToGame_0_k$ = function () {
+    return this._toGame_3;
+  };
+  ConvertBreedTask.prototype.withFromGame = function (from) {
+    var tmp = this;
+    var tmp0_safe_receiver = from;
+    var tmp_0;
+    if (tmp0_safe_receiver == null) {
+      tmp_0 = null;
+    } else {
+      var tmp$ret$1;
+      $l$block_0: {
+        {
+        }
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = ensureNotNull(Companion_getInstance_70().fromString_6wfw3l_k$(tmp0_safe_receiver));
+          break $l$block;
+        }
+        tmp$ret$1 = tmp$ret$0;
+        break $l$block_0;
+      }
+      tmp_0 = tmp$ret$1;
+    }
+    tmp._fromGame_2 = tmp_0;
+    return this;
+  };
+  ConvertBreedTask.prototype.getFromGame_0_k$ = function () {
+    return this._fromGame_2;
+  };
+  ConvertBreedTask.prototype.withOutputGenus = function (genus) {
+    assertValidGenus(this, genus, 'output genus');
+    this._outputGenus_0 = genus;
+    return this;
+  };
+  ConvertBreedTask.prototype.withInputGenus = function (genus) {
+    assertValidGenus(this, genus, 'input genus');
+    this._inputGenus_0 = genus;
+    return this;
+  };
+  ConvertBreedTask.prototype.getOutputGenus = function () {
+    return getGenus(this, this._outputGenus_0);
+  };
+  ConvertBreedTask.prototype.getInputGenus = function () {
+    return getGenus(this, this._inputGenus_0);
+  };
+  ConvertBreedTask.prototype.withOutputBreed = function (breedIn) {
+    assertValidBreed(this, breedIn, 'Output breed');
+    var tmp = this;
+    var tmp0_safe_receiver = breedIn;
+    var tmp_0;
+    if (tmp0_safe_receiver == null) {
+      tmp_0 = null;
+    } else {
+      var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = toString_3(trim_0((!(tmp0_safe_receiver == null) ? isCharSequence(tmp0_safe_receiver) : false) ? tmp0_safe_receiver : THROW_CCE()));
+        break $l$block;
+      }
+      tmp_0 = tmp$ret$0;
+    }
+    var tmp1_safe_receiver = tmp_0;
+    var tmp_1;
+    if (tmp1_safe_receiver == null) {
+      tmp_1 = null;
+    } else {
+      var tmp$ret$2;
+      $l$block_1: {
+        var tmp$ret$1;
+        $l$block_0: {
+          tmp$ret$1 = tmp1_safe_receiver;
+          break $l$block_0;
+        }
+        tmp$ret$2 = tmp$ret$1.toLowerCase();
+        break $l$block_1;
+      }
+      tmp_1 = tmp$ret$2;
+    }
+    tmp._outputBreed_0 = tmp_1;
+    return this;
+  };
+  ConvertBreedTask.prototype.getOutputBreed = function () {
+    return this._outputBreed_0;
+  };
+  ConvertBreedTask.prototype.withInputBreed = function (breedIn) {
+    assertValidBreed(this, breedIn, 'Input breed');
+    var tmp = this;
+    var tmp0_safe_receiver = breedIn;
+    var tmp_0;
+    if (tmp0_safe_receiver == null) {
+      tmp_0 = null;
+    } else {
+      var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = toString_3(trim_0((!(tmp0_safe_receiver == null) ? isCharSequence(tmp0_safe_receiver) : false) ? tmp0_safe_receiver : THROW_CCE()));
+        break $l$block;
+      }
+      tmp_0 = tmp$ret$0;
+    }
+    var tmp1_safe_receiver = tmp_0;
+    var tmp_1;
+    if (tmp1_safe_receiver == null) {
+      tmp_1 = null;
+    } else {
+      var tmp$ret$2;
+      $l$block_1: {
+        var tmp$ret$1;
+        $l$block_0: {
+          tmp$ret$1 = tmp1_safe_receiver;
+          break $l$block_0;
+        }
+        tmp$ret$2 = tmp$ret$1.toLowerCase();
+        break $l$block_1;
+      }
+      tmp_1 = tmp$ret$2;
+    }
+    tmp._inputBreed_0 = tmp_1;
+    return this;
+  };
+  ConvertBreedTask.prototype.getInputBreed = function () {
+    return this._inputBreed_0;
+  };
+  ConvertBreedTask.prototype.withAttDirectory = function (directory) {
+    this._attDirectory_0 = directory;
+    return this;
+  };
+  ConvertBreedTask.prototype.getAttDirectory = function () {
+    return this._attDirectory_0;
+  };
+  ConvertBreedTask.prototype.withEncoding = function (encoding) {
+    return this.withEncoding_uch40_k$(encoding === void 1 ? null : encoding);
+  };
+  ConvertBreedTask.prototype.withEncoding_uch40_k$ = function (encoding) {
+    if ((!(encoding == null) ? !(encoding === '555') : false) ? !(encoding === '565') : false) {
+      throw Exception_init_$Create$('Encoding is expected to be 555 or 565');
+    }this._encoding_6 = encoding;
+    return this;
+  };
+  ConvertBreedTask.prototype.withEncoding$default_nmiqce_k$ = function (encoding, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      encoding = null;
+    return this.withEncoding_uch40_k$(encoding);
+  };
+  ConvertBreedTask.prototype.getEncoding = function () {
+    return this._encoding_6;
+  };
+  ConvertBreedTask.prototype.withOverwriteExisting = function (value) {
+    return this.withOverwriteExisting_mn33cr_k$(value === void 1 ? true : value);
+  };
+  ConvertBreedTask.prototype.withOverwriteExisting_mn33cr_k$ = function (value) {
+    if ((!(value == null) ? this._overwriteNone_1 === true : false) ? value : false) {
+      throw Exception_init_$Create$('Cannot set overwrite existing. Overwrite none is already set');
+    }this._overwriteExisting_0 = value;
+    return this;
+  };
+  ConvertBreedTask.prototype.withOverwriteExisting$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withOverwriteExisting_mn33cr_k$(value);
+  };
+  ConvertBreedTask.prototype.getOverwriteExisting = function () {
+    return this._overwriteExisting_0;
+  };
+  ConvertBreedTask.prototype.withOverwriteNone = function (value) {
+    return this.withOverwriteNone_mn33cr_k$(value === void 1 ? true : value);
+  };
+  ConvertBreedTask.prototype.withOverwriteNone_mn33cr_k$ = function (value) {
+    if ((!(value == null) ? this._overwriteExisting_0 === true : false) ? value : false) {
+      throw Exception_init_$Create$('Cannot set overwrite none. Overwrite existing is already set');
+    }this._overwriteNone_1 = value;
+    return this;
+  };
+  ConvertBreedTask.prototype.withOverwriteNone$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withOverwriteNone_mn33cr_k$(value);
+  };
+  ConvertBreedTask.prototype.getOverwriteNone = function () {
+    return this._overwriteNone_1;
+  };
+  ConvertBreedTask.prototype.withProgressive = function (value) {
+    return this.withProgressive_mn33cr_k$(value === void 1 ? true : value);
+  };
+  ConvertBreedTask.prototype.withProgressive_mn33cr_k$ = function (value) {
+    this._progress_0 = value;
+    return this;
+  };
+  ConvertBreedTask.prototype.withProgressive$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withProgressive_mn33cr_k$(value);
+  };
+  ConvertBreedTask.prototype.getProgressive = function () {
+    return this._progressive_2;
+  };
+  ConvertBreedTask.prototype.withNoAgeProgression = function (value) {
+    return this.withNoAgeProgression_mn33cr_k$(value === void 1 ? true : value);
+  };
+  ConvertBreedTask.prototype.withNoAgeProgression_mn33cr_k$ = function (value) {
+    this._noAgeProgression = value;
+    return this;
+  };
+  ConvertBreedTask.prototype.withNoAgeProgression$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withNoAgeProgression_mn33cr_k$(value);
+  };
+  ConvertBreedTask.prototype.getNoAgeProgression = function () {
+    return this._noAgeProgression;
+  };
+  ConvertBreedTask.prototype.withNoTails = function (value) {
+    return this.withNoTails_mn33cr_k$(value === void 1 ? true : value);
+  };
+  ConvertBreedTask.prototype.withNoTails_mn33cr_k$ = function (value) {
+    this._noTails = value;
+    return this;
+  };
+  ConvertBreedTask.prototype.withNoTails$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withNoTails_mn33cr_k$(value);
+  };
+  ConvertBreedTask.prototype.getNoTails = function () {
+    return this._noTails;
+  };
+  ConvertBreedTask.prototype.withIgnoreErrors = function (value) {
+    return this.withIgnoreErrors_mn33cr_k$(value === void 1 ? true : value);
+  };
+  ConvertBreedTask.prototype.withIgnoreErrors_mn33cr_k$ = function (value) {
+    this._ignoreErrors_1 = value;
+    return this;
+  };
+  ConvertBreedTask.prototype.withIgnoreErrors$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withIgnoreErrors_mn33cr_k$(value);
+  };
+  ConvertBreedTask.prototype.getIgnoreErrors = function () {
+    return this._ignoreErrors_1;
+  };
+  ConvertBreedTask.prototype.withQuiet = function (value) {
+    return this.withQuiet_mn33cr_k$(value === void 1 ? true : value);
+  };
+  ConvertBreedTask.prototype.withQuiet_mn33cr_k$ = function (value) {
+    this._quiet_0 = value;
+    return this;
+  };
+  ConvertBreedTask.prototype.withQuiet$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withQuiet_mn33cr_k$(value);
+  };
+  ConvertBreedTask.prototype.getQuiet = function () {
+    return this._quiet_0;
+  };
+  ConvertBreedTask.prototype.withProgress = function (value) {
+    return this.withProgress_mn33cr_k$(value === void 1 ? true : value);
+  };
+  ConvertBreedTask.prototype.withProgress_mn33cr_k$ = function (value) {
+    this._progress_0 = value;
+    return this;
+  };
+  ConvertBreedTask.prototype.withProgress$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withProgress_mn33cr_k$(value);
+  };
+  ConvertBreedTask.prototype.getProgress = function () {
+    return this._progress_0;
+  };
+  ConvertBreedTask.prototype.withOutputDirectory = function (directory) {
+    this._outputDirectory_4 = directory;
+    return this;
+  };
+  ConvertBreedTask.prototype.getOutputDirectory = function () {
+    return this._outputDirectory_4;
+  };
+  ConvertBreedTask.prototype.withFiles = function (files) {
+    this._files_1 = toList(files);
+    return this;
+  };
+  ConvertBreedTask.prototype.withFiles_wgj1yh_k$ = function (files) {
+    this._files_1 = files;
+    return this;
+  };
+  ConvertBreedTask.prototype.getFiles_0_k$ = function () {
+    return this._files_1;
+  };
+  ConvertBreedTask.prototype.getFilesArray = function () {
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_toTypedArray_0 = this._files_1;
+      tmp$ret$0 = copyToArray_0(tmp0_toTypedArray_0);
+      break $l$block;
+    }
+    return tmp$ret$0;
+  };
+  ConvertBreedTask.prototype.withSameSize = function (sameSize) {
+    this._sameSize_0 = sameSize;
+    return this;
+  };
+  ConvertBreedTask.prototype.getSameSize = function () {
+    return this._sameSize_0;
+  };
+  ConvertBreedTask.prototype.copy = function () {
+    var out = ConvertBreedTask_init_$Create$(null, null, 3, null);
+    out._toGame_3 = this._toGame_3;
+    out._files_1 = this._files_1;
+    out._fromGame_2 = this._fromGame_2;
+    out._outputGenus_0 = this._outputGenus_0;
+    out._outputBreed_0 = this._outputBreed_0;
+    out._inputGenus_0 = this._inputGenus_0;
+    out._inputBreed_0 = this._inputBreed_0;
+    out._attDirectory_0 = this._attDirectory_0;
+    out._encoding_6 = this._encoding_6;
+    out._overwriteExisting_0 = this._overwriteExisting_0;
+    out._overwriteNone_1 = this._overwriteNone_1;
+    out._progressive_2 = this._progressive_2;
+    out._noAgeProgression = this._noAgeProgression;
+    out._noTails = this._noTails;
+    out._ignoreErrors_1 = this._ignoreErrors_1;
+    out._quiet_0 = this._quiet_0;
+    out._progress_0 = this._progress_0;
+    out._outputDirectory_4 = this._outputDirectory_4;
+    return out;
+  };
+  ConvertBreedTask.prototype.runTaskWithCallback = function (callback) {
+    return this.runTask_ndmljy_k$(callback === void 1 ? null : callback);
+  };
+  ConvertBreedTask.prototype.runTask_ndmljy_k$ = function (callback) {
+    var tmp = GlobalScope_getInstance();
+    launch$default(tmp, null, null, _no_name_provided_$factory_231(this, callback, null), 3, null);
+    Unit_getInstance();
+  };
+  ConvertBreedTask.prototype.runTask$default_otgbxe_k$ = function (callback, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      callback = null;
+    return this.runTask_ndmljy_k$(callback);
+  };
+  ConvertBreedTask.$metadata$ = {
+    simpleName: 'ConvertBreedTask',
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided_$factory_231(this$0, $callback, resultContinuation) {
+    var i = new _no_name_provided__265(this$0, $callback, resultContinuation);
+    var l = function (p1, $cont) {
+      return i.invoke_2i3g7c_k$(p1, $cont);
     };
+    l.$arity = 1;
+    return l;
   }
   function _get_outputType_($this) {
     return $this._outputType$delegate.getValue_1kobyo_k$($this, outputType$factory_0());
@@ -56835,142 +59044,66 @@
   function _get_files__1($this) {
     return $this._files$delegate_1.getValue_1kobyo_k$($this, files$factory_4());
   }
-  function _no_name_provided__262() {
+  function _no_name_provided__266() {
   }
-  _no_name_provided__262.prototype.invoke_6wfw3l_k$ = function (value) {
+  _no_name_provided__266.prototype.invoke_6wfw3l_k$ = function (value) {
     return Companion_getInstance_69().fromString_6wfw3l_k$(value);
   };
-  _no_name_provided__262.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__266.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__262.$metadata$ = {
+  _no_name_provided__266.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__263() {
+  function _no_name_provided__267() {
   }
-  _no_name_provided__263.prototype.invoke_ixg9nz_k$ = function (encoding) {
+  _no_name_provided__267.prototype.invoke_ixg9nz_k$ = function (encoding) {
     return encoding._simpleName_1;
   };
-  _no_name_provided__263.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__267.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_ixg9nz_k$(p1 instanceof ColorEncoding ? p1 : THROW_CCE());
   };
-  _no_name_provided__263.$metadata$ = {
+  _no_name_provided__267.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__264($opts, this$0, resultContinuation) {
-    this._$opts_1 = $opts;
-    this._this$0_43 = this$0;
+  function _no_name_provided__268($task, resultContinuation) {
+    this._$task_1 = $task;
     CoroutineImpl_0.call(this, resultContinuation);
   }
-  _no_name_provided__264.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
+  _no_name_provided__268.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
     var tmp = this.create_y6imfn_k$($this$launch, $cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   };
-  _no_name_provided__264.prototype.invoke_20e8_k$ = function (p1, $cont) {
+  _no_name_provided__268.prototype.invoke_20e8_k$ = function (p1, $cont) {
     this.invoke_2i3g7c_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $cont);
     return Unit_getInstance();
   };
-  _no_name_provided__264.prototype.doResume_0_k$ = function () {
+  _no_name_provided__268.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
     $sm: do
       try {
         var tmp = this._state_0;
-        switch (tmp) {
-          case 0:
-            this._exceptionState = 3;
-            this._state_0 = 1;
-            suspendResult = next_0(this._$opts_1, 0, this);
-            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
-              return suspendResult;
-            }
-            continue $sm;
-          case 1:
-            if (suspendResult) {
-              if (!_get_quiet__0(this._this$0_43)) {
-                var tmp0_i_0 = Log_getInstance();
-                if (tmp0_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
-                  var tmp_0 = tmp0_i_0._loggerObject;
-                  var tmp_1;
-                  var tmp0_elvis_lhs_1_1 = tmp0_i_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
-                    tmp_1 = '**LOG1** ';
-                  } else {
-                    {
-                      tmp_1 = '';
-                    }
-                  }
-                  var tmp_2 = tmp_1;
-                  var tmp_3;
-                  if (!(null == null ? true : isBlank(null))) {
-                    tmp_3 = 'null::';
-                  } else {
-                    {
-                      tmp_3 = '';
-                    }
-                  }
-                  var tmp_4 = tmp_3;
-                  tmp_0.info(false, '' + tmp_2 + tmp_4 + 'Convert sprites finished OK');
-                }}exitNative(0);
-              this._state_0 = 2;
-              continue $sm;
-            } else {
-              var errors = this._$opts_1._failed_0;
-              var tmp1_e_0 = Log_getInstance();
-              if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-                var tmp_5 = tmp1_e_0._loggerObject;
-                var tmp_6;
-                var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
-                  tmp_6 = '**ERROR** ';
-                } else {
-                  {
-                    tmp_6 = '';
-                  }
-                }
-                var tmp_7 = tmp_6;
-                var tmp_8;
-                if (!(null == null ? true : isBlank(null))) {
-                  tmp_8 = 'null::';
-                } else {
-                  {
-                    tmp_8 = '';
-                  }
-                }
-                var tmp_9 = tmp_8;
-                var tmp_10 = errors._get_size__0_k$();
-                var tmp_11 = this._$opts_1._get_filesCount__0_k$();
-                tmp_5.error('' + tmp_7 + tmp_9 + ('' + 'Error 1001: Failed to convert (' + tmp_10 + '/' + tmp_11 + ') files:\n\t -' + joinToString$default_0(errors, '\n\t- ', null, null, 0, null, null, 62, null)));
-              }exitNative(1001);
-              this._state_0 = 2;
-              continue $sm;
-            }
-
-            break;
-          case 2:
-            return Unit_getInstance();
-          case 3:
-            throw this._exception_0;
-        }
-      } catch ($p) {
-        if (this._exceptionState === 3) {
-          throw $p;
-        } else {
-          this._state_0 = this._exceptionState;
-          this._exception_0 = $p;
-        }
+        if (tmp === 0) {
+          this._exceptionState = 1;
+          this._$task_1.runTask$default_otgbxe_k$(null, 1, null);
+          return Unit_getInstance();
+        } else if (tmp === 1) {
+          throw this._exception_0;
+        }} catch ($p) {
+        throw $p;
       }
      while (true);
   };
-  _no_name_provided__264.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
-    var i = new _no_name_provided__264(this._$opts_1, this._this$0_43, completion);
-    i._$this$launch_1 = $this$launch;
+  _no_name_provided__268.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
+    var i = new _no_name_provided__268(this._$task_1, completion);
+    i._$this$launch_3 = $this$launch;
     return i;
   };
-  _no_name_provided__264.$metadata$ = {
+  _no_name_provided__268.$metadata$ = {
     kind: 'class',
     interfaces: [],
     suspendArity: 1
@@ -56981,8 +59114,8 @@
     tmp._outputType$delegate = this.argument$default_304j6g_k$(SpriteArgType, 'type', 'Target output sprite type', null, 8, null).provideDelegate_1kobyo_k$(this, outputType$factory());
     var tmp_0 = this;
     var tmp_1 = listOf([ColorEncoding_X_555_getInstance(), ColorEncoding_X_565_getInstance()]);
-    var tmp_2 = _no_name_provided_$factory_230();
-    var tmp_3 = new Choice(tmp_1, tmp_2, _no_name_provided_$factory_231());
+    var tmp_2 = _no_name_provided_$factory_232();
+    var tmp_3 = new Choice(tmp_1, tmp_2, _no_name_provided_$factory_233());
     tmp_0._encoding$delegate_1 = default_0(this.option$default_t6jqr8_k$(tmp_3, 'encoding', 'c', 'Sprite color encoding', null, 16, null), ColorEncoding_X_565_getInstance()).provideDelegate_1kobyo_k$(this, encoding$factory_3());
     var tmp_4 = this;
     var tmp_5 = String_getInstance();
@@ -57011,269 +59144,9 @@
     this.subcommands_t5tza2_k$([]);
   }
   ConvertSpriteCLI.prototype.execute_sv8swh_k$ = function () {
-    var tmp;
-    try {
-      tmp = _get_outputType_(this);
-    } catch ($p) {
-      var tmp_0;
-      if ($p instanceof Exception) {
-        {
-          var tmp0_e_0 = Log_getInstance();
-          if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-            var tmp_1 = tmp0_e_0._loggerObject;
-            var tmp$ret$2;
-            $l$block_1: {
-              var tmp_2;
-              var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
-                tmp_2 = '**ERROR** ';
-              } else {
-                {
-                  tmp_2 = '';
-                }
-              }
-              var tmp_3 = tmp_2;
-              var tmp_4;
-              var tmp$ret$0;
-              $l$block: {
-                {
-                }
-                tmp$ret$0 = null == null ? true : isBlank(null);
-                break $l$block;
-              }
-              if (!tmp$ret$0) {
-                tmp_4 = 'null::';
-              } else {
-                {
-                  tmp_4 = '';
-                }
-              }
-              var tmp_5 = tmp_4;
-              var tmp$ret$1;
-              $l$block_0: {
-                var tmp0_elvis_lhs_3 = $p.message;
-                tmp$ret$1 = tmp0_elvis_lhs_3 == null ? 'Invalid or empty sprite output type' : tmp0_elvis_lhs_3;
-                break $l$block_0;
-              }
-              tmp$ret$2 = '' + tmp_3 + tmp_5 + tmp$ret$1;
-              break $l$block_1;
-            }
-            tmp_1.error(tmp$ret$2);
-          }}
-        printStackTrace($p);
-        return exitNative(1008);
-      } else {
-        {
-          throw $p;
-        }
-      }
-      tmp = tmp_0;
-    }
-    var outputType = tmp;
-    var currentWorkingDirectory = getCurrentWorkingDirectory();
-    var tmp_6;
-    try {
-      var tmp_7 = _get_files__1(this);
-      tmp_6 = unpackPaths$default(tmp_7, BASE_SPRITE_FILE_EXTENSIONS, null, null, 6, null);
-    } catch ($p_0) {
-      var tmp_8;
-      if ($p_0 instanceof MissingFilesException) {
-        {
-          var tmp1_e_0 = Log_getInstance();
-          if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-            var tmp_9 = tmp1_e_0._loggerObject;
-            var tmp$ret$5;
-            $l$block_4: {
-              var tmp_10;
-              var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
-                tmp_10 = '**ERROR** ';
-              } else {
-                {
-                  tmp_10 = '';
-                }
-              }
-              var tmp_11 = tmp_10;
-              var tmp_12;
-              var tmp$ret$3;
-              $l$block_2: {
-                {
-                }
-                tmp$ret$3 = null == null ? true : isBlank(null);
-                break $l$block_2;
-              }
-              if (!tmp$ret$3) {
-                tmp_12 = 'null::';
-              } else {
-                {
-                  tmp_12 = '';
-                }
-              }
-              var tmp_13 = tmp_12;
-              var tmp$ret$4;
-              $l$block_3: {
-                tmp$ret$4 = 'Error 1015: ' + ensureNotNull($p_0.message);
-                break $l$block_3;
-              }
-              tmp$ret$5 = '' + tmp_11 + tmp_13 + tmp$ret$4;
-              break $l$block_4;
-            }
-            tmp_9.error(tmp$ret$5);
-          }}
-        tmp_8 = exitNative(1015);
-      } else {
-        {
-          throw $p_0;
-        }
-      }
-      tmp_6 = tmp_8;
-    }
-    var spriteFiles = tmp_6;
-    if (spriteFiles.isEmpty_0_k$()) {
-      {
-        var tmp2_e_0 = Log_getInstance();
-        if (tmp2_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-          var tmp_14 = tmp2_e_0._loggerObject;
-          var tmp$ret$8;
-          $l$block_7: {
-            var tmp_15;
-            var tmp0_elvis_lhs_1_1_1 = tmp2_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
-              tmp_15 = '**ERROR** ';
-            } else {
-              {
-                tmp_15 = '';
-              }
-            }
-            var tmp_16 = tmp_15;
-            var tmp_17;
-            var tmp$ret$6;
-            $l$block_5: {
-              {
-              }
-              tmp$ret$6 = null == null ? true : isBlank(null);
-              break $l$block_5;
-            }
-            if (!tmp$ret$6) {
-              tmp_17 = 'null::';
-            } else {
-              {
-                tmp_17 = '';
-              }
-            }
-            var tmp_18 = tmp_17;
-            var tmp$ret$7;
-            $l$block_6: {
-              tmp$ret$7 = 'Error 1002: No valid sprites found';
-              break $l$block_6;
-            }
-            tmp$ret$8 = '' + tmp_16 + tmp_18 + tmp$ret$7;
-            break $l$block_7;
-          }
-          tmp_14.error(tmp$ret$8);
-        }}
-      return exitNative(1002);
-    }var duplicates = logDuplicatesAndGetHasDuplicates_0(spriteFiles, currentWorkingDirectory);
-    if (duplicates) {
-      return exitNative(1011);
-    }var tmp_19 = _get_outputDirectory__0(this);
-    var outputDirectory = ensureAndGetOutputDirectory$default(tmp_19, currentWorkingDirectory, false, 4, null);
-    var ignoreErrors = _get_ignoreErrors__0(this);
-    if (_get_overwriteExisting__1(this) ? _get_overwriteNone__1(this) : false) {
-      {
-        var tmp3_e_0 = Log_getInstance();
-        if (tmp3_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-          var tmp_20 = tmp3_e_0._loggerObject;
-          var tmp$ret$11;
-          $l$block_10: {
-            var tmp_21;
-            var tmp0_elvis_lhs_1_1_2 = tmp3_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_2) {
-              tmp_21 = '**ERROR** ';
-            } else {
-              {
-                tmp_21 = '';
-              }
-            }
-            var tmp_22 = tmp_21;
-            var tmp_23;
-            var tmp$ret$9;
-            $l$block_8: {
-              {
-              }
-              tmp$ret$9 = null == null ? true : isBlank(null);
-              break $l$block_8;
-            }
-            if (!tmp$ret$9) {
-              tmp_23 = 'null::';
-            } else {
-              {
-                tmp_23 = '';
-              }
-            }
-            var tmp_24 = tmp_23;
-            var tmp$ret$10;
-            $l$block_9: {
-              tmp$ret$10 = 'Error 1003: Cannot use overwrite existing and overwrite none.';
-              break $l$block_9;
-            }
-            tmp$ret$11 = '' + tmp_22 + tmp_24 + tmp$ret$10;
-            break $l$block_10;
-          }
-          tmp_20.error(tmp$ret$11);
-        }}
-      return exitNative(1003);
-    }var overwriteAll = new Pointer(_get_overwriteExisting__1(this) ? !_get_overwriteNone__1(this) : false);
-    var overwriteNone = new Pointer(!_get_overwriteExisting__1(this) ? _get_overwriteNone__1(this) : false);
-    var shouldWrite_1 = createDefaultShouldOverwriteCallback(overwriteAll, overwriteNone);
-    if (!_get_quiet__0(this)) {
-      {
-        var tmp4_i_0 = Log_getInstance();
-        if (tmp4_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
-          var tmp_25 = tmp4_i_0._loggerObject;
-          var tmp$ret$14;
-          $l$block_13: {
-            var tmp_26;
-            var tmp0_elvis_lhs_1_1_3 = tmp4_i_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3) {
-              tmp_26 = '**LOG1** ';
-            } else {
-              {
-                tmp_26 = '';
-              }
-            }
-            var tmp_27 = tmp_26;
-            var tmp_28;
-            var tmp$ret$12;
-            $l$block_11: {
-              {
-              }
-              tmp$ret$12 = null == null ? true : isBlank(null);
-              break $l$block_11;
-            }
-            if (!tmp$ret$12) {
-              tmp_28 = 'null::';
-            } else {
-              {
-                tmp_28 = '';
-              }
-            }
-            var tmp_29 = tmp_28;
-            var tmp$ret$13;
-            $l$block_12: {
-              tmp$ret$13 = '' + 'Converting ' + spriteFiles._get_size__0_k$() + ' sprites to ' + outputType._get_name__0_k$() + ' format';
-              break $l$block_12;
-            }
-            tmp$ret$14 = '' + tmp_27 + tmp_29 + tmp$ret$13;
-            break $l$block_13;
-          }
-          tmp_25.info(false, tmp$ret$14);
-        }}
-    }var tmp_30 = _get_encoding__1(this);
-    var tmp_31 = _get_keepBlack__0(this);
-    var opts = ConvertSpriteOptions_init_$Create$(outputType, spriteFiles, shouldWrite_1, currentWorkingDirectory, outputDirectory, tmp_30, ignoreErrors, tmp_31, null, _get_quiet__0(this), _get_progress__0(this), 256, null);
-    var tmp_32 = GlobalScope_getInstance();
-    launch$default(tmp_32, null, null, _no_name_provided_$factory_232(opts, this, null), 3, null);
+    var task = ConvertSpriteTask_init_$Create$(null, null, 3, null).withOutputType_v3krwk_k$(_get_outputType_(this)).withEncoding_ik3vsi_k$(_get_encoding__1(this)).withKeepBlack(_get_keepBlack__0(this)).withIgnoreErrors_mn33cr_k$(_get_ignoreErrors__0(this)).withQuiet_mn33cr_k$(_get_quiet__0(this)).withOutputDirectory(_get_outputDirectory__0(this)).withOverwriteExisting_mn33cr_k$(_get_overwriteExisting__1(this)).withOverwriteNone_mn33cr_k$(_get_overwriteNone__1(this)).withProgress_mn33cr_k$(_get_progress__0(this)).withFiles_wgj1yh_k$(_get_files__1(this));
+    var tmp = GlobalScope_getInstance();
+    launch$default(tmp, null, null, _no_name_provided_$factory_234(task, null), 3, null);
     Unit_getInstance();
   };
   ConvertSpriteCLI.$metadata$ = {
@@ -57281,6 +59154,12 @@
     kind: 'class',
     interfaces: []
   };
+  function convertSprite_2(task, $cont) {
+    var tmp = new $convertSpriteCOROUTINE$11(task, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  }
   function ConvertSpriteOptions_init_$Init$(toType, spriteFiles, shouldWrite_1, currentWorkingDirectory, outputDirectory, encoding, ignoreErrors, keepBlack, failed, quiet, progress, $mask0, $marker, $this) {
     if (!(($mask0 & 256) === 0)) {
       var tmp$ret$0;
@@ -57297,23 +59176,23 @@
   function ConvertSpriteOptions_init_$Create$(toType, spriteFiles, shouldWrite_1, currentWorkingDirectory, outputDirectory, encoding, ignoreErrors, keepBlack, failed, quiet, progress, $mask0, $marker) {
     return ConvertSpriteOptions_init_$Init$(toType, spriteFiles, shouldWrite_1, currentWorkingDirectory, outputDirectory, encoding, ignoreErrors, keepBlack, failed, quiet, progress, $mask0, $marker, Object.create(ConvertSpriteOptions.prototype));
   }
-  function _no_name_provided__265(this$0) {
-    this._this$0_44 = this$0;
+  function _no_name_provided__269(this$0) {
+    this._this$0_45 = this$0;
   }
-  _no_name_provided__265.prototype.invoke_0_k$ = function () {
-    return this._this$0_44._spriteFiles_0._get_size__0_k$();
+  _no_name_provided__269.prototype.invoke_0_k$ = function () {
+    return this._this$0_45._spriteFiles_0._get_size__0_k$();
   };
-  _no_name_provided__265.$metadata$ = {
+  _no_name_provided__269.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__266(this$0) {
-    this._this$0_45 = this$0;
+  function _no_name_provided__270(this$0) {
+    this._this$0_46 = this$0;
   }
-  _no_name_provided__266.prototype.invoke_0_k$ = function () {
+  _no_name_provided__270.prototype.invoke_0_k$ = function () {
     var tmp$ret$1;
     $l$block_0: {
-      var tmp0_lowercase_0 = this._this$0_45._toType._get_name__0_k$();
+      var tmp0_lowercase_0 = this._this$0_46._toType._get_name__0_k$();
       var tmp$ret$0;
       $l$block: {
         tmp$ret$0 = tmp0_lowercase_0;
@@ -57324,26 +59203,26 @@
     }
     return tmp$ret$1;
   };
-  _no_name_provided__266.$metadata$ = {
+  _no_name_provided__270.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
   function ConvertSpriteOptions(toType, spriteFiles, shouldWrite_1, currentWorkingDirectory, outputDirectory, encoding, ignoreErrors, keepBlack, failed, quiet, progress) {
     this._toType = toType;
     this._spriteFiles_0 = spriteFiles;
-    this._shouldWrite_6 = shouldWrite_1;
+    this._shouldWrite_5 = shouldWrite_1;
     this._currentWorkingDirectory_0 = currentWorkingDirectory;
-    this._outputDirectory_4 = outputDirectory;
-    this._encoding_5 = encoding;
-    this._ignoreErrors_0 = ignoreErrors;
-    this._keepBlack_0 = keepBlack;
+    this._outputDirectory_5 = outputDirectory;
+    this._encoding_7 = encoding;
+    this._ignoreErrors_2 = ignoreErrors;
+    this._keepBlack_1 = keepBlack;
     this._failed_0 = failed;
-    this._quiet_0 = quiet;
-    this._progress_0 = progress;
+    this._quiet_1 = quiet;
+    this._progress_1 = progress;
     var tmp = this;
-    tmp._filesCount$delegate_0 = lazy(_no_name_provided_$factory_233(this));
+    tmp._filesCount$delegate_0 = lazy(_no_name_provided_$factory_235(this));
     var tmp_0 = this;
-    tmp_0._toExtension$delegate_0 = lazy(_no_name_provided_$factory_234(this));
+    tmp_0._toExtension$delegate_0 = lazy(_no_name_provided_$factory_236(this));
   }
   ConvertSpriteOptions.prototype._get_filesCount__0_k$ = function () {
     var tmp$ret$0;
@@ -57364,20 +59243,20 @@
     return tmp$ret$0;
   };
   ConvertSpriteOptions.prototype.toString = function () {
-    return '' + 'ConvertSpriteOptions(toType=' + this._toType + ', spriteFiles=' + this._spriteFiles_0 + ', shouldWrite=' + this._shouldWrite_6 + ', currentWorkingDirectory=' + this._currentWorkingDirectory_0 + ', outputDirectory=' + this._outputDirectory_4 + ', encoding=' + this._encoding_5 + ', ignoreErrors=' + this._ignoreErrors_0 + ', keepBlack=' + this._keepBlack_0 + ', failed=' + this._failed_0 + ', quiet=' + this._quiet_0 + ', progress=' + this._progress_0 + ')';
+    return '' + 'ConvertSpriteOptions(toType=' + this._toType + ', spriteFiles=' + this._spriteFiles_0 + ', shouldWrite=' + this._shouldWrite_5 + ', currentWorkingDirectory=' + this._currentWorkingDirectory_0 + ', outputDirectory=' + this._outputDirectory_5 + ', encoding=' + this._encoding_7 + ', ignoreErrors=' + this._ignoreErrors_2 + ', keepBlack=' + this._keepBlack_1 + ', failed=' + this._failed_0 + ', quiet=' + this._quiet_1 + ', progress=' + this._progress_1 + ')';
   };
   ConvertSpriteOptions.prototype.hashCode = function () {
     var result = this._toType.hashCode();
     result = imul(result, 31) + hashCode(this._spriteFiles_0) | 0;
-    result = imul(result, 31) + hashCode(this._shouldWrite_6) | 0;
+    result = imul(result, 31) + hashCode(this._shouldWrite_5) | 0;
     result = imul(result, 31) + getStringHashCode(this._currentWorkingDirectory_0) | 0;
-    result = imul(result, 31) + getStringHashCode(this._outputDirectory_4) | 0;
-    result = imul(result, 31) + (this._encoding_5 == null ? 0 : this._encoding_5.hashCode()) | 0;
-    result = imul(result, 31) + (this._ignoreErrors_0 | 0) | 0;
-    result = imul(result, 31) + (this._keepBlack_0 | 0) | 0;
+    result = imul(result, 31) + getStringHashCode(this._outputDirectory_5) | 0;
+    result = imul(result, 31) + (this._encoding_7 == null ? 0 : this._encoding_7.hashCode()) | 0;
+    result = imul(result, 31) + (this._ignoreErrors_2 | 0) | 0;
+    result = imul(result, 31) + (this._keepBlack_1 | 0) | 0;
     result = imul(result, 31) + hashCode(this._failed_0) | 0;
-    result = imul(result, 31) + (this._quiet_0 | 0) | 0;
-    result = imul(result, 31) + (this._progress_0 | 0) | 0;
+    result = imul(result, 31) + (this._quiet_1 | 0) | 0;
+    result = imul(result, 31) + (this._progress_1 | 0) | 0;
     return result;
   };
   ConvertSpriteOptions.prototype.equals = function (other) {
@@ -57392,23 +59271,23 @@
       return false;
     if (!equals_1(this._spriteFiles_0, tmp0_other_with_cast._spriteFiles_0))
       return false;
-    if (!equals_1(this._shouldWrite_6, tmp0_other_with_cast._shouldWrite_6))
+    if (!equals_1(this._shouldWrite_5, tmp0_other_with_cast._shouldWrite_5))
       return false;
     if (!(this._currentWorkingDirectory_0 === tmp0_other_with_cast._currentWorkingDirectory_0))
       return false;
-    if (!(this._outputDirectory_4 === tmp0_other_with_cast._outputDirectory_4))
+    if (!(this._outputDirectory_5 === tmp0_other_with_cast._outputDirectory_5))
       return false;
-    if (!equals_1(this._encoding_5, tmp0_other_with_cast._encoding_5))
+    if (!equals_1(this._encoding_7, tmp0_other_with_cast._encoding_7))
       return false;
-    if (!(this._ignoreErrors_0 === tmp0_other_with_cast._ignoreErrors_0))
+    if (!(this._ignoreErrors_2 === tmp0_other_with_cast._ignoreErrors_2))
       return false;
-    if (!(this._keepBlack_0 === tmp0_other_with_cast._keepBlack_0))
+    if (!(this._keepBlack_1 === tmp0_other_with_cast._keepBlack_1))
       return false;
     if (!equals_1(this._failed_0, tmp0_other_with_cast._failed_0))
       return false;
-    if (!(this._quiet_0 === tmp0_other_with_cast._quiet_0))
+    if (!(this._quiet_1 === tmp0_other_with_cast._quiet_1))
       return false;
-    if (!(this._progress_0 === tmp0_other_with_cast._progress_0))
+    if (!(this._progress_1 === tmp0_other_with_cast._progress_1))
       return false;
     return true;
   };
@@ -57418,7 +59297,7 @@
     interfaces: []
   };
   function next_0(opts, i, $cont) {
-    var tmp = new $nextCOROUTINE$10(opts, i, $cont);
+    var tmp = new $nextCOROUTINE$12(opts, i, $cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
@@ -57440,7 +59319,7 @@
             $l$block_1: {
               var tmp_3;
               var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                 tmp_3 = '**ERROR** ';
               } else {
                 {
@@ -57488,11 +59367,11 @@
     var bytesBuffer = new MemoryByteStreamReader(bytes);
     var tmp$ret$6;
     $l$block_5: {
-      var tmp1_apply_0 = convertSprite(bytesBuffer, fromSprite, opts._toType, opts._keepBlack_0, opts._encoding_5, null);
+      var tmp1_apply_0 = convertSprite(bytesBuffer, fromSprite, opts._toType, opts._keepBlack_1, opts._encoding_7, null);
       {
       }
       {
-        if (!opts._quiet_0 ? opts._progress_0 : false) {
+        if (!opts._quiet_1 ? opts._progress_1 : false) {
           {
             var tmp0_i_0_2 = Log_getInstance();
             if (tmp0_i_0_2._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
@@ -57501,7 +59380,7 @@
               $l$block_4: {
                 var tmp_9;
                 var tmp0_elvis_lhs_1_1_3 = tmp0_i_0_2._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3) {
+                if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_3) {
                   tmp_9 = '**LOG1** ';
                 } else {
                   {
@@ -57541,18 +59420,18 @@
     }
     return tmp$ret$6;
   }
-  function _no_name_provided__267($i, $opts, resultContinuation) {
+  function _no_name_provided__271($i, $opts, resultContinuation) {
     this._$i_4 = $i;
-    this._$opts_2 = $opts;
+    this._$opts_0 = $opts;
     CoroutineImpl_0.call(this, resultContinuation);
   }
-  _no_name_provided__267.prototype.invoke_0_k$ = function ($cont) {
+  _no_name_provided__271.prototype.invoke_0_k$ = function ($cont) {
     var tmp = this.create_s8oglw_k$($cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   };
-  _no_name_provided__267.prototype.doResume_0_k$ = function () {
+  _no_name_provided__271.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
     $sm: do
       try {
@@ -57562,7 +59441,7 @@
             this._exceptionState = 3;
             this._nextIndex0_0 = this._$i_4 + 1 | 0;
             this._state_0 = 1;
-            suspendResult = next_0(this._$opts_2, this._nextIndex0_0, this);
+            suspendResult = next_0(this._$opts_0, this._nextIndex0_0, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -57574,9 +59453,9 @@
               this._state_0 = 2;
               continue $sm;
             } else {
-              if (this._$opts_2._ignoreErrors_0) {
+              if (this._$opts_0._ignoreErrors_2) {
                 var tmp_1 = this;
-                this._$opts_2._failed_0.add_2bq_k$(this._$opts_2._spriteFiles_0.get_ha5a7z_k$(this._nextIndex0_0));
+                this._$opts_0._failed_0.add_2bq_k$(this._$opts_0._spriteFiles_0.get_ha5a7z_k$(this._nextIndex0_0));
                 Unit_getInstance();
                 tmp_1._WHEN_RESULT1_3 = false;
                 this._state_0 = 2;
@@ -57606,21 +59485,302 @@
       }
      while (true);
   };
-  _no_name_provided__267.prototype.create_s8oglw_k$ = function (completion) {
-    var i = new _no_name_provided__267(this._$i_4, this._$opts_2, completion);
+  _no_name_provided__271.prototype.create_s8oglw_k$ = function (completion) {
+    var i = new _no_name_provided__271(this._$i_4, this._$opts_0, completion);
     return i;
   };
-  _no_name_provided__267.$metadata$ = {
+  _no_name_provided__271.$metadata$ = {
     kind: 'class',
     interfaces: [],
     suspendArity: 0
   };
-  function $nextCOROUTINE$10(opts, i, resultContinuation) {
+  function $convertSpriteCOROUTINE$11(task, resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
-    this._opts_3 = opts;
+    this._task_2 = task;
+  }
+  $convertSpriteCOROUTINE$11.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 3;
+            var tmp_0 = this;
+            var tmp_1;
+            try {
+              tmp_1 = ensureNotNull(this._task_2.getOutputType_0_k$());
+            } catch ($p) {
+              var tmp_2;
+              if ($p instanceof Exception) {
+                var tmp0_e_0 = Log_getInstance();
+                if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                  var tmp_3 = tmp0_e_0._loggerObject;
+                  var tmp_4;
+                  var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
+                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
+                    tmp_4 = '**ERROR** ';
+                  } else {
+                    {
+                      tmp_4 = '';
+                    }
+                  }
+                  var tmp_5 = tmp_4;
+                  var tmp_6;
+                  if (!(null == null ? true : isBlank(null))) {
+                    tmp_6 = 'null::';
+                  } else {
+                    {
+                      tmp_6 = '';
+                    }
+                  }
+                  var tmp_7 = tmp_6;
+                  var tmp0_elvis_lhs_3 = $p.message;
+                  tmp_3.error('' + tmp_5 + tmp_7 + (tmp0_elvis_lhs_3 == null ? 'Invalid or empty sprite output type' : tmp0_elvis_lhs_3));
+                }printStackTrace($p);
+                return exitNative(1008);
+              } else {
+                {
+                  throw $p;
+                }
+              }
+              tmp_1 = tmp_2;
+            }
+
+            tmp_0._outputType0 = tmp_1;
+            this._currentWorkingDirectory1 = getCurrentWorkingDirectory();
+            var tmp_8 = this;
+            var tmp_9;
+            try {
+              var tmp_10 = this._task_2.getFiles_0_k$();
+              tmp_9 = unpackPaths$default(tmp_10, BASE_SPRITE_FILE_EXTENSIONS, null, null, 6, null);
+            } catch ($p_0) {
+              var tmp_11;
+              if ($p_0 instanceof MissingFilesException) {
+                var tmp1_e_0 = Log_getInstance();
+                if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                  var tmp_12 = tmp1_e_0._loggerObject;
+                  var tmp_13;
+                  var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
+                  if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_0) {
+                    tmp_13 = '**ERROR** ';
+                  } else {
+                    {
+                      tmp_13 = '';
+                    }
+                  }
+                  var tmp_14 = tmp_13;
+                  var tmp_15;
+                  if (!(null == null ? true : isBlank(null))) {
+                    tmp_15 = 'null::';
+                  } else {
+                    {
+                      tmp_15 = '';
+                    }
+                  }
+                  var tmp_16 = tmp_15;
+                  tmp_12.error('' + tmp_14 + tmp_16 + ('Error 1015: ' + ensureNotNull($p_0.message)));
+                }tmp_11 = exitNative(1015);
+              } else {
+                {
+                  throw $p_0;
+                }
+              }
+              tmp_9 = tmp_11;
+            }
+
+            tmp_8._spriteFiles2 = tmp_9;
+            if (this._spriteFiles2.isEmpty_0_k$()) {
+              var tmp2_e_0 = Log_getInstance();
+              if (tmp2_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_17 = tmp2_e_0._loggerObject;
+                var tmp_18;
+                var tmp0_elvis_lhs_1_1_1 = tmp2_e_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
+                  tmp_18 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_18 = '';
+                  }
+                }
+                var tmp_19 = tmp_18;
+                var tmp_20;
+                if (!(null == null ? true : isBlank(null))) {
+                  tmp_20 = 'null::';
+                } else {
+                  {
+                    tmp_20 = '';
+                  }
+                }
+                var tmp_21 = tmp_20;
+                tmp_17.error('' + tmp_19 + tmp_21 + 'Error 1002: No valid sprites found');
+              }return exitNative(1002);
+            }
+            this._duplicates3 = logDuplicatesAndGetHasDuplicates_0(this._spriteFiles2, this._currentWorkingDirectory1);
+            if (this._duplicates3) {
+              return exitNative(1011);
+            }
+            var tmp_22 = this;
+            var tmp_23 = this._task_2.getOutputDirectory();
+            tmp_22._outputDirectory4 = ensureAndGetOutputDirectory$default(tmp_23, this._currentWorkingDirectory1, false, 4, null);
+            this._ignoreErrors5 = this._task_2.getIgnoreErrors() === true;
+            if (this._task_2.getOverwriteExisting() === true ? this._task_2.getOverwriteNone() === true : false) {
+              var tmp3_e_0 = Log_getInstance();
+              if (tmp3_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_24 = tmp3_e_0._loggerObject;
+                var tmp_25;
+                var tmp0_elvis_lhs_1_1_2 = tmp3_e_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_2) {
+                  tmp_25 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_25 = '';
+                  }
+                }
+                var tmp_26 = tmp_25;
+                var tmp_27;
+                if (!(null == null ? true : isBlank(null))) {
+                  tmp_27 = 'null::';
+                } else {
+                  {
+                    tmp_27 = '';
+                  }
+                }
+                var tmp_28 = tmp_27;
+                tmp_24.error('' + tmp_26 + tmp_28 + 'Error 1003: Cannot use overwrite existing and overwrite none.');
+              }return exitNative(1003);
+            }
+            this._overwriteAll6 = new Pointer(this._task_2.getOverwriteExisting() === true ? !(this._task_2.getOverwriteNone() === true) : false);
+            this._overwriteNone7 = new Pointer(!(this._task_2.getOverwriteExisting() === true) ? this._task_2.getOverwriteNone() === true : false);
+            this._shouldWrite8 = createDefaultShouldOverwriteCallback(this._overwriteAll6, this._overwriteNone7);
+            this._quiet9 = this._task_2.getQuiet() === true;
+            if (this._quiet9) {
+              var tmp4_i_0 = Log_getInstance();
+              if (tmp4_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
+                var tmp_29 = tmp4_i_0._loggerObject;
+                var tmp_30;
+                var tmp0_elvis_lhs_1_1_3 = tmp4_i_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_3) {
+                  tmp_30 = '**LOG1** ';
+                } else {
+                  {
+                    tmp_30 = '';
+                  }
+                }
+                var tmp_31 = tmp_30;
+                var tmp_32;
+                if (!(null == null ? true : isBlank(null))) {
+                  tmp_32 = 'null::';
+                } else {
+                  {
+                    tmp_32 = '';
+                  }
+                }
+                var tmp_33 = tmp_32;
+                tmp_29.info(false, '' + tmp_31 + tmp_33 + ('' + 'Converting ' + this._spriteFiles2._get_size__0_k$() + ' sprites to ' + this._outputType0._get_name__0_k$() + ' format'));
+              }}
+            var tmp_34 = this;
+            var tmp_35 = this._task_2.getEncoding_0_k$();
+            var tmp0_elvis_lhs = this._task_2.getKeepBlack();
+            var tmp_36 = tmp0_elvis_lhs == null ? false : tmp0_elvis_lhs;
+            var tmp1_elvis_lhs = this._task_2.getProgress();
+            tmp_34._opts10 = ConvertSpriteOptions_init_$Create$(this._outputType0, this._spriteFiles2, this._shouldWrite8, this._currentWorkingDirectory1, this._outputDirectory4, tmp_35, this._ignoreErrors5, tmp_36, null, this._quiet9, tmp1_elvis_lhs == null ? false : tmp1_elvis_lhs, 256, null);
+            this._state_0 = 1;
+            suspendResult = next_0(this._opts10, 0, this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            if (suspendResult) {
+              var tmp_37 = this;
+              if (!this._quiet9) {
+                var tmp5_i_0 = Log_getInstance();
+                if (tmp5_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
+                  var tmp_38 = tmp5_i_0._loggerObject;
+                  var tmp_39;
+                  var tmp0_elvis_lhs_1_1_4 = tmp5_i_0._loggerObject.prependLogType;
+                  if (tmp0_elvis_lhs_1_1_4 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_4) {
+                    tmp_39 = '**LOG1** ';
+                  } else {
+                    {
+                      tmp_39 = '';
+                    }
+                  }
+                  var tmp_40 = tmp_39;
+                  var tmp_41;
+                  if (!(null == null ? true : isBlank(null))) {
+                    tmp_41 = 'null::';
+                  } else {
+                    {
+                      tmp_41 = '';
+                    }
+                  }
+                  var tmp_42 = tmp_41;
+                  tmp_38.info(false, '' + tmp_40 + tmp_42 + 'Convert sprites finished OK');
+                }}tmp_37._WHEN_RESULT11 = exitNative(0);
+              this._state_0 = 2;
+              continue $sm;
+            } else {
+              var tmp_43 = this;
+              var errors = this._opts10._failed_0;
+              var tmp6_e_0 = Log_getInstance();
+              if (tmp6_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_44 = tmp6_e_0._loggerObject;
+                var tmp_45;
+                var tmp0_elvis_lhs_1_1_5 = tmp6_e_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_5 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_5) {
+                  tmp_45 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_45 = '';
+                  }
+                }
+                var tmp_46 = tmp_45;
+                var tmp_47;
+                if (!(null == null ? true : isBlank(null))) {
+                  tmp_47 = 'null::';
+                } else {
+                  {
+                    tmp_47 = '';
+                  }
+                }
+                var tmp_48 = tmp_47;
+                var tmp_49 = errors._get_size__0_k$();
+                var tmp_50 = this._opts10._get_filesCount__0_k$();
+                tmp_44.error('' + tmp_46 + tmp_48 + ('' + 'Error 1001: Failed to convert (' + tmp_49 + '/' + tmp_50 + ') files:\n\t -' + joinToString$default_0(errors, '\n\t- ', null, null, 0, null, null, 62, null)));
+              }tmp_43._WHEN_RESULT11 = exitNative(1001);
+              this._state_0 = 2;
+              continue $sm;
+            }
+
+            break;
+          case 2:
+            return this._WHEN_RESULT11;
+          case 3:
+            throw this._exception_0;
+        }
+      } catch ($p_1) {
+        if (this._exceptionState === 3) {
+          throw $p_1;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p_1;
+        }
+      }
+     while (true);
+  };
+  $convertSpriteCOROUTINE$11.$metadata$ = {
+    simpleName: '$convertSpriteCOROUTINE$11',
+    kind: 'class',
+    interfaces: []
+  };
+  function $nextCOROUTINE$12(opts, i, resultContinuation) {
+    CoroutineImpl_0.call(this, resultContinuation);
+    this._opts_2 = opts;
     this._i_3 = i;
   }
-  $nextCOROUTINE$10.prototype.doResume_0_k$ = function () {
+  $nextCOROUTINE$12.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
     $sm: do
       try {
@@ -57628,14 +59788,14 @@
         switch (tmp) {
           case 0:
             this._exceptionState = 20;
-            if (this._i_3 >= this._opts_3._get_filesCount__0_k$()) {
+            if (this._i_3 >= this._opts_2._get_filesCount__0_k$()) {
               return true;
             }
-            this._filePath0_0 = this._opts_3._spriteFiles_0.get_ha5a7z_k$(this._i_3);
+            this._filePath0_0 = this._opts_2._spriteFiles_0.get_ha5a7z_k$(this._i_3);
             var tmp_0 = this;
             var tmp_1;
             if (!isAbsolute_0(this._filePath0_0)) {
-              tmp_1 = PathUtil_getInstance().combine_yn9lj1_k$([this._opts_3._currentWorkingDirectory_0, this._filePath0_0]);
+              tmp_1 = PathUtil_getInstance().combine_yn9lj1_k$([this._opts_2._currentWorkingDirectory_0, this._filePath0_0]);
             } else {
               tmp_1 = this._filePath0_0;
             }
@@ -57645,7 +59805,7 @@
             var tmp_3 = FileNameUtil_getInstance();
             var tmp0_elvis_lhs = tmp_3.getLastPathComponent$default_zmr95_k$(this._path1_0, false, 2, null);
             tmp_2._originalFileName2_0 = tmp0_elvis_lhs == null ? this._path1_0 : tmp0_elvis_lhs;
-            this._extension3 = this._opts_3._get_toExtension__0_k$();
+            this._extension3 = this._opts_2._get_toExtension__0_k$();
             var tmp_4 = this;
             var tmp_5 = this;
             tmp_5._tmp0_apply_04 = FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(this._originalFileName2_0);
@@ -57655,7 +59815,7 @@
                 var tmp_6 = tmp0_e_0_2._loggerObject;
                 var tmp_7;
                 var tmp0_elvis_lhs_1_1_3 = tmp0_e_0_2._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3) {
+                if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_3) {
                   tmp_7 = '**ERROR** ';
                 } else {
                   {
@@ -57677,16 +59837,16 @@
             }
             tmp_4._outputFileName5 = ensureNotNull(this._tmp0_apply_04);
             this._outputFileName5 = this._outputFileName5 + ('' + '.' + this._extension3);
-            this._outputFilePath6 = PathUtil_getInstance().combine_yn9lj1_k$([this._opts_3._outputDirectory_4, this._outputFileName5]);
-            if (this._i_3 >= this._opts_3._get_filesCount__0_k$()) {
+            this._outputFilePath6 = PathUtil_getInstance().combine_yn9lj1_k$([this._opts_2._outputDirectory_5, this._outputFileName5]);
+            if (this._i_3 >= this._opts_2._get_filesCount__0_k$()) {
               return true;
             }
             var tmp_11 = this;
             var tmp_12 = this;
-            tmp_12._tmp1_suspend_07 = _no_name_provided_$factory_235(this._i_3, this._opts_3, null);
+            tmp_12._tmp1_suspend_07 = _no_name_provided_$factory_237(this._i_3, this._opts_2, null);
             tmp_11._next8 = this._tmp1_suspend_07;
             this._state_0 = 1;
-            suspendResult = this._opts_3._shouldWrite_6(this._outputFilePath6, this);
+            suspendResult = this._opts_2._shouldWrite_5(this._outputFilePath6, this);
             if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
               return suspendResult;
             }
@@ -57718,7 +59878,7 @@
               tmp_13 = tmp1_safe_receiver.toLowerCase();
             }
 
-            if (tmp_13 === this._opts_3._get_toExtension__0_k$()) {
+            if (tmp_13 === this._opts_2._get_toExtension__0_k$()) {
               this._exceptionState = 5;
               this._bytes10 = loadBytes(this._path1_0);
               writeBytes_1(this._outputFilePath6, this._bytes10);
@@ -57747,7 +59907,7 @@
                 var tmp_15 = tmp2_e_0._loggerObject;
                 var tmp_16;
                 var tmp0_elvis_lhs_1_1 = tmp2_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                   tmp_16 = '**ERROR** ';
                 } else {
                   {
@@ -57782,7 +59942,7 @@
             this._originalBytes12 = loadBytes(this._path1_0);
             this._exceptionState = 8;
             var tmp_20 = this;
-            tmp_20._TRY_RESULT13 = convert_0(this._opts_3, this._i_3, this._originalFileName2_0, this._originalBytes12);
+            tmp_20._TRY_RESULT13_0 = convert_0(this._opts_2, this._i_3, this._originalFileName2_0, this._originalBytes12);
             this._exceptionState = 20;
             this._state_0 = 11;
             continue $sm;
@@ -57797,7 +59957,7 @@
                 var tmp_23 = this._tmp3_e_015._loggerObject;
                 var tmp_24;
                 var tmp0_elvis_lhs_1_1_0 = this._tmp3_e_015._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
+                if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_0) {
                   tmp_24 = '**ERROR** ';
                 } else {
                   {
@@ -57814,7 +59974,7 @@
                   }
                 }
                 var tmp_27 = tmp_26;
-                var tmp_28 = this._opts_3._toType._get_name__0_k$();
+                var tmp_28 = this._opts_2._toType._get_name__0_k$();
                 var tmp0_safe_receiver_4 = nullIfEmpty_0(this._e14.message);
                 var tmp_29;
                 if (tmp0_safe_receiver_4 == null) {
@@ -57824,9 +59984,9 @@
                 }
                 var tmp1_elvis_lhs_3 = tmp_29;
                 tmp_23.error('' + tmp_25 + tmp_27 + ('' + 'Error: 1004: Failed to convert ' + this._originalFileName2_0 + ' to ' + tmp_28 + ' sprite format' + (tmp1_elvis_lhs_3 == null ? '' : tmp1_elvis_lhs_3)));
-              }this._opts_3._failed_0.add_2bq_k$(this._filePath0_0);
+              }this._opts_2._failed_0.add_2bq_k$(this._filePath0_0);
               Unit_getInstance();
-              if (this._opts_3._ignoreErrors_0) {
+              if (this._opts_2._ignoreErrors_2) {
                 this._state_0 = 9;
                 suspendResult = this._next8(this);
                 if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
@@ -57854,13 +60014,13 @@
             return this._WHEN_RESULT16;
           case 11:
             this._exceptionState = 20;
-            this._compiledBytes17 = this._TRY_RESULT13;
+            this._compiledBytes17 = this._TRY_RESULT13_0;
             this._exceptionState = 16;
-            this._wrote19 = writeSprite(this._opts_3._outputDirectory_4, this._outputFileName5, this._originalFileName2_0, this._compiledBytes17, true, this._opts_3._ignoreErrors_0);
+            this._wrote19 = writeSprite(this._opts_2._outputDirectory_5, this._outputFileName5, this._originalFileName2_0, this._compiledBytes17, true, this._opts_2._ignoreErrors_2);
             if (!this._wrote19) {
-              this._opts_3._failed_0.add_2bq_k$(this._filePath0_0);
+              this._opts_2._failed_0.add_2bq_k$(this._filePath0_0);
               Unit_getInstance();
-              if (!this._opts_3._ignoreErrors_0) {
+              if (!this._opts_2._ignoreErrors_2) {
                 return exitNative(1005);
               }}
             this._exceptionState = 14;
@@ -57924,8 +60084,8 @@
               }
               var tmp3_elvis_lhs = tmp_36;
               tmp_35._error24 = '' + 'Failed to write sprite ' + this._originalFileName2_0 + " to '" + this._outputFilePath6 + "' " + (tmp3_elvis_lhs == null ? '' : tmp3_elvis_lhs);
-              if (this._opts_3._ignoreErrors_0) {
-                this._opts_3._failed_0.add_2bq_k$(this._filePath0_0);
+              if (this._opts_2._ignoreErrors_2) {
+                this._opts_2._failed_0.add_2bq_k$(this._filePath0_0);
                 Unit_getInstance();
                 var tmp_37 = this;
                 tmp_37._tmp4_e_026 = Log_getInstance();
@@ -57933,7 +60093,7 @@
                   var tmp_38 = this._tmp4_e_026._loggerObject;
                   var tmp_39;
                   var tmp0_elvis_lhs_1_1_1 = this._tmp4_e_026._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
+                  if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
                     tmp_39 = '**ERROR** ';
                   } else {
                     {
@@ -57963,7 +60123,7 @@
                   var tmp_44 = tmp5_e_0._loggerObject;
                   var tmp_45;
                   var tmp0_elvis_lhs_1_1_2 = tmp5_e_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_2) {
+                  if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_2) {
                     tmp_45 = '**ERROR** ';
                   } else {
                     {
@@ -57992,11 +60152,11 @@
             break;
           case 17:
             Unit_getInstance();
-            this._WHEN_RESULT25 = false;
+            this._WHEN_RESULT25_0 = false;
             this._state_0 = 18;
             continue $sm;
           case 18:
-            this._TRY_RESULT18 = this._WHEN_RESULT25;
+            this._TRY_RESULT18 = this._WHEN_RESULT25_0;
             this._state_0 = 19;
             continue $sm;
           case 19:
@@ -58015,8 +60175,8 @@
       }
      while (true);
   };
-  $nextCOROUTINE$10.$metadata$ = {
-    simpleName: '$nextCOROUTINE$10',
+  $nextCOROUTINE$12.$metadata$ = {
+    simpleName: '$nextCOROUTINE$12',
     kind: 'class',
     interfaces: []
   };
@@ -58130,44 +60290,412 @@
       return receiver._get_toExtension__0_k$();
     }, null);
   }
-  function _no_name_provided_$factory_230() {
-    var i = new _no_name_provided__262();
+  function _no_name_provided_$factory_232() {
+    var i = new _no_name_provided__266();
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_231() {
-    var i = new _no_name_provided__263();
+  function _no_name_provided_$factory_233() {
+    var i = new _no_name_provided__267();
     return function (p1) {
       return i.invoke_ixg9nz_k$(p1);
     };
   }
-  function _no_name_provided_$factory_232($opts, this$0, resultContinuation) {
-    var i = new _no_name_provided__264($opts, this$0, resultContinuation);
+  function _no_name_provided_$factory_234($task, resultContinuation) {
+    var i = new _no_name_provided__268($task, resultContinuation);
     var l = function (p1, $cont) {
       return i.invoke_2i3g7c_k$(p1, $cont);
     };
     l.$arity = 1;
     return l;
   }
-  function _no_name_provided_$factory_233(this$0) {
-    var i = new _no_name_provided__265(this$0);
+  function _no_name_provided_$factory_235(this$0) {
+    var i = new _no_name_provided__269(this$0);
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_234(this$0) {
-    var i = new _no_name_provided__266(this$0);
+  function _no_name_provided_$factory_236(this$0) {
+    var i = new _no_name_provided__270(this$0);
     return function () {
       return i.invoke_0_k$();
     };
   }
-  function _no_name_provided_$factory_235($i, $opts, resultContinuation) {
-    var i = new _no_name_provided__267($i, $opts, resultContinuation);
+  function _no_name_provided_$factory_237($i, $opts, resultContinuation) {
+    var i = new _no_name_provided__271($i, $opts, resultContinuation);
     var l = function ($cont) {
       return i.invoke_0_k$($cont);
     };
     l.$arity = 0;
+    return l;
+  }
+  function ConvertSpriteTask_init_$Init$(outputType, files, $mask0, $marker, $this) {
+    if (!(($mask0 & 1) === 0))
+      outputType = null;
+    if (!(($mask0 & 2) === 0)) {
+      var tmp$ret$0;
+      var tmp$ret$0_0;
+      $l$block: {
+        tmp$ret$0 = [];
+        tmp$ret$0_0 = Unit_getInstance();
+        break $l$block;
+      }
+      files = tmp$ret$0;
+    }ConvertSpriteTask.call($this, outputType, files);
+    return $this;
+  }
+  function ConvertSpriteTask_init_$Create$(outputType, files, $mask0, $marker) {
+    return ConvertSpriteTask_init_$Init$(outputType, files, $mask0, $marker, Object.create(ConvertSpriteTask.prototype));
+  }
+  function _no_name_provided__272(this$0, $callback, resultContinuation) {
+    this._this$0_47 = this$0;
+    this._$callback_15 = $callback;
+    CoroutineImpl_0.call(this, resultContinuation);
+  }
+  _no_name_provided__272.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
+    var tmp = this.create_y6imfn_k$($this$launch, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  };
+  _no_name_provided__272.prototype.invoke_20e8_k$ = function (p1, $cont) {
+    this.invoke_2i3g7c_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $cont);
+    return Unit_getInstance();
+  };
+  _no_name_provided__272.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 3;
+            this._exceptionState = 2;
+            this._state_0 = 1;
+            suspendResult = convertSprite_2(this._this$0_47, this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            this._TRY_RESULT0_1 = suspendResult;
+            this._exceptionState = 3;
+            this._state_0 = 4;
+            continue $sm;
+          case 2:
+            this._exceptionState = 3;
+            var tmp_0 = this._exception_0;
+            if (tmp_0 instanceof AppRequestTermination) {
+              var e = this._exception_0;
+              var tmp_1 = this;
+              tmp_1._TRY_RESULT0_1 = e._code_1;
+              this._state_0 = 4;
+              continue $sm;
+            } else {
+              {
+                throw this._exception_0;
+              }
+            }
+
+            break;
+          case 3:
+            throw this._exception_0;
+          case 4:
+            this._exceptionState = 3;
+            var exitCode = this._TRY_RESULT0_1;
+            var tmp0_safe_receiver = this._$callback_15;
+            if (tmp0_safe_receiver == null)
+              null;
+            else
+              tmp0_safe_receiver(exitCode);
+            Unit_getInstance();
+            return Unit_getInstance();
+        }
+      } catch ($p) {
+        if (this._exceptionState === 3) {
+          throw $p;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p;
+        }
+      }
+     while (true);
+  };
+  _no_name_provided__272.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
+    var i = new _no_name_provided__272(this._this$0_47, this._$callback_15, completion);
+    i._$this$launch_4 = $this$launch;
+    return i;
+  };
+  _no_name_provided__272.$metadata$ = {
+    kind: 'class',
+    interfaces: [],
+    suspendArity: 1
+  };
+  function ConvertSpriteTask(outputType, files) {
+    var outputType_0 = outputType === void 1 ? null : outputType;
+    var tmp;
+    if (files === void 1) {
+      var tmp$ret$0;
+      var tmp$ret$0_0;
+      $l$block: {
+        tmp$ret$0 = [];
+        tmp$ret$0_0 = Unit_getInstance();
+        break $l$block;
+      }
+      tmp = tmp$ret$0;
+    } else {
+      tmp = files;
+    }
+    var files_0 = tmp;
+    var tmp_0 = this;
+    var tmp0_safe_receiver = nullIfEmpty_0(outputType_0);
+    var tmp_1;
+    if (tmp0_safe_receiver == null) {
+      tmp_1 = null;
+    } else {
+      var tmp$ret$2;
+      $l$block_1: {
+        {
+        }
+        var tmp$ret$1;
+        $l$block_0: {
+          tmp$ret$1 = Companion_getInstance_71().fromString_6wfw3l_k$(tmp0_safe_receiver);
+          break $l$block_0;
+        }
+        tmp$ret$2 = tmp$ret$1;
+        break $l$block_1;
+      }
+      tmp_1 = tmp$ret$2;
+    }
+    tmp_0._outputType_0 = tmp_1;
+    this._encoding_8 = null;
+    this._overwriteExisting_1 = null;
+    this._overwriteNone_2 = null;
+    this._outputDirectory_6 = null;
+    this._keepBlack_2 = null;
+    this._ignoreErrors_3 = null;
+    this._quiet_2 = null;
+    this._progress_2 = null;
+    this._files_2 = toList(files_0);
+  }
+  ConvertSpriteTask.prototype.withOutputType = function (type) {
+    this._outputType_0 = Companion_getInstance_71().fromString_6wfw3l_k$(type);
+    return this;
+  };
+  ConvertSpriteTask.prototype.withOutputType_v3krwk_k$ = function (type) {
+    this._outputType_0 = type;
+    return this;
+  };
+  ConvertSpriteTask.prototype.getOutputTypeString = function () {
+    var tmp0_safe_receiver = this._outputType_0;
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver._get_name__0_k$();
+  };
+  ConvertSpriteTask.prototype.getOutputType_0_k$ = function () {
+    return this._outputType_0;
+  };
+  ConvertSpriteTask.prototype.withEncoding_ik3vsi_k$ = function (encoding) {
+    this._encoding_8 = encoding;
+    return this;
+  };
+  ConvertSpriteTask.prototype.withEncoding = function (encoding) {
+    return this.withEncoding_uch40_k$(encoding === void 1 ? null : encoding);
+  };
+  ConvertSpriteTask.prototype.withEncoding_uch40_k$ = function (encoding) {
+    if ((!(encoding == null) ? !(encoding === '555') : false) ? !(encoding === '565') : false) {
+      throw Exception_init_$Create$('Encoding is expected to be 555 or 565');
+    }var tmp = this;
+    var tmp0_safe_receiver = encoding;
+    var tmp_0;
+    if (tmp0_safe_receiver == null) {
+      tmp_0 = null;
+    } else {
+      var tmp$ret$1;
+      $l$block_0: {
+        {
+        }
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = Companion_getInstance_69().fromString_6wfw3l_k$(encoding);
+          break $l$block;
+        }
+        tmp$ret$1 = tmp$ret$0;
+        break $l$block_0;
+      }
+      tmp_0 = tmp$ret$1;
+    }
+    tmp._encoding_8 = tmp_0;
+    return this;
+  };
+  ConvertSpriteTask.prototype.withEncoding$default_nmiqce_k$ = function (encoding, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      encoding = null;
+    return this.withEncoding_uch40_k$(encoding);
+  };
+  ConvertSpriteTask.prototype.getEncoding_0_k$ = function () {
+    return this._encoding_8;
+  };
+  ConvertSpriteTask.prototype.getEncodingString = function () {
+    var tmp0_safe_receiver = this._encoding_8;
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver._simpleName_1;
+  };
+  ConvertSpriteTask.prototype.getKeepBlack = function () {
+    return this._keepBlack_2;
+  };
+  ConvertSpriteTask.prototype.withKeepBlack = function (keep) {
+    this._keepBlack_2 = keep;
+    return this;
+  };
+  ConvertSpriteTask.prototype.withOverwriteExisting = function (value) {
+    return this.withOverwriteExisting_mn33cr_k$(value === void 1 ? true : value);
+  };
+  ConvertSpriteTask.prototype.withOverwriteExisting_mn33cr_k$ = function (value) {
+    if ((!(value == null) ? this._overwriteNone_2 === true : false) ? value : false) {
+      throw Exception_init_$Create$('Cannot set overwrite existing. Overwrite none is already set');
+    }this._overwriteExisting_1 = value;
+    return this;
+  };
+  ConvertSpriteTask.prototype.withOverwriteExisting$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withOverwriteExisting_mn33cr_k$(value);
+  };
+  ConvertSpriteTask.prototype.getOverwriteExisting = function () {
+    return this._overwriteExisting_1;
+  };
+  ConvertSpriteTask.prototype.withOverwriteNone = function (value) {
+    return this.withOverwriteNone_mn33cr_k$(value === void 1 ? true : value);
+  };
+  ConvertSpriteTask.prototype.withOverwriteNone_mn33cr_k$ = function (value) {
+    if ((!(value == null) ? this._overwriteExisting_1 === true : false) ? value : false) {
+      throw Exception_init_$Create$('Cannot set overwrite none. Overwrite existing is already set');
+    }this._overwriteNone_2 = value;
+    return this;
+  };
+  ConvertSpriteTask.prototype.withOverwriteNone$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withOverwriteNone_mn33cr_k$(value);
+  };
+  ConvertSpriteTask.prototype.getOverwriteNone = function () {
+    return this._overwriteNone_2;
+  };
+  ConvertSpriteTask.prototype.withIgnoreErrors = function (value) {
+    return this.withIgnoreErrors_mn33cr_k$(value === void 1 ? true : value);
+  };
+  ConvertSpriteTask.prototype.withIgnoreErrors_mn33cr_k$ = function (value) {
+    this._ignoreErrors_3 = value;
+    return this;
+  };
+  ConvertSpriteTask.prototype.withIgnoreErrors$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withIgnoreErrors_mn33cr_k$(value);
+  };
+  ConvertSpriteTask.prototype.getIgnoreErrors = function () {
+    return this._ignoreErrors_3;
+  };
+  ConvertSpriteTask.prototype.withQuiet = function (value) {
+    return this.withQuiet_mn33cr_k$(value === void 1 ? true : value);
+  };
+  ConvertSpriteTask.prototype.withQuiet_mn33cr_k$ = function (value) {
+    this._quiet_2 = value;
+    return this;
+  };
+  ConvertSpriteTask.prototype.withQuiet$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withQuiet_mn33cr_k$(value);
+  };
+  ConvertSpriteTask.prototype.getQuiet = function () {
+    return this._quiet_2;
+  };
+  ConvertSpriteTask.prototype.withProgress = function (value) {
+    return this.withProgress_mn33cr_k$(value === void 1 ? true : value);
+  };
+  ConvertSpriteTask.prototype.withProgress_mn33cr_k$ = function (value) {
+    this._progress_2 = value;
+    return this;
+  };
+  ConvertSpriteTask.prototype.withProgress$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withProgress_mn33cr_k$(value);
+  };
+  ConvertSpriteTask.prototype.getProgress = function () {
+    return this._progress_2;
+  };
+  ConvertSpriteTask.prototype.withOutputDirectory = function (directory) {
+    this._outputDirectory_6 = directory;
+    return this;
+  };
+  ConvertSpriteTask.prototype.getOutputDirectory = function () {
+    return this._outputDirectory_6;
+  };
+  ConvertSpriteTask.prototype.withFiles = function (files) {
+    this._files_2 = toList(files);
+    return this;
+  };
+  ConvertSpriteTask.prototype.withFiles_wgj1yh_k$ = function (files) {
+    this._files_2 = files;
+    return this;
+  };
+  ConvertSpriteTask.prototype.getFiles_0_k$ = function () {
+    return this._files_2;
+  };
+  ConvertSpriteTask.prototype.getFilesArray = function () {
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_toTypedArray_0 = this._files_2;
+      tmp$ret$0 = copyToArray_0(tmp0_toTypedArray_0);
+      break $l$block;
+    }
+    return tmp$ret$0;
+  };
+  ConvertSpriteTask.prototype.copy = function () {
+    var tmp0_safe_receiver = this._outputType_0;
+    var tmp = tmp0_safe_receiver == null ? null : tmp0_safe_receiver._get_name__0_k$();
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_toTypedArray_0 = this._files_2;
+      tmp$ret$0 = copyToArray_0(tmp0_toTypedArray_0);
+      break $l$block;
+    }
+    var out = new ConvertSpriteTask(tmp, tmp$ret$0);
+    out._keepBlack_2 = this._keepBlack_2;
+    out._encoding_8 = this._encoding_8;
+    out._overwriteExisting_1 = this._overwriteExisting_1;
+    out._overwriteNone_2 = this._overwriteNone_2;
+    out._ignoreErrors_3 = this._ignoreErrors_3;
+    out._quiet_2 = this._quiet_2;
+    out._progress_2 = this._progress_2;
+    out._outputDirectory_6 = this._outputDirectory_6;
+    return out;
+  };
+  ConvertSpriteTask.prototype.runTaskWithCallback = function (callback) {
+    return this.runTask_ndmljy_k$(callback === void 1 ? null : callback);
+  };
+  ConvertSpriteTask.prototype.runTask_ndmljy_k$ = function (callback) {
+    var tmp = GlobalScope_getInstance();
+    launch$default(tmp, null, null, _no_name_provided_$factory_238(this, callback, null), 3, null);
+    Unit_getInstance();
+  };
+  ConvertSpriteTask.prototype.runTask$default_otgbxe_k$ = function (callback, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      callback = null;
+    return this.runTask_ndmljy_k$(callback);
+  };
+  ConvertSpriteTask.$metadata$ = {
+    simpleName: 'ConvertSpriteTask',
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided_$factory_238(this$0, $callback, resultContinuation) {
+    var i = new _no_name_provided__272(this$0, $callback, resultContinuation);
+    var l = function (p1, $cont) {
+      return i.invoke_2i3g7c_k$(p1, $cont);
+    };
+    l.$arity = 1;
     return l;
   }
   function _get_output_($this) {
@@ -58191,6 +60719,60 @@
   function _get_input_($this) {
     return $this._input$delegate.getValue_1kobyo_k$($this, input$factory_0());
   }
+  function _no_name_provided__273($task, resultContinuation) {
+    this._$task_2 = $task;
+    CoroutineImpl_0.call(this, resultContinuation);
+  }
+  _no_name_provided__273.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
+    var tmp = this.create_y6imfn_k$($this$launch, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  };
+  _no_name_provided__273.prototype.invoke_20e8_k$ = function (p1, $cont) {
+    this.invoke_2i3g7c_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $cont);
+    return Unit_getInstance();
+  };
+  _no_name_provided__273.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 2;
+            this._state_0 = 1;
+            suspendResult = parseSprites(this._$task_2, this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            Unit_getInstance();
+            return Unit_getInstance();
+          case 2:
+            throw this._exception_0;
+        }
+      } catch ($p) {
+        if (this._exceptionState === 2) {
+          throw $p;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p;
+        }
+      }
+     while (true);
+  };
+  _no_name_provided__273.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
+    var i = new _no_name_provided__273(this._$task_2, completion);
+    i._$this$launch_5 = $this$launch;
+    return i;
+  };
+  _no_name_provided__273.$metadata$ = {
+    kind: 'class',
+    interfaces: [],
+    suspendArity: 1
+  };
   function ParseSpriteCLI() {
     Subcommand.call(this, 'parse', 'Parse sprite file to png');
     var tmp = this;
@@ -58216,182 +60798,22 @@
     tmp_11._input$delegate = vararg(this.argument$default_304j6g_k$(tmp_12, 'File name', 'Sprite files to parse (supports some glob syntax)', null, 8, null)).provideDelegate_1kobyo_k$(this, input$factory());
   }
   ParseSpriteCLI.prototype.execute_sv8swh_k$ = function () {
-    var tmp;
-    try {
-      var tmp_0 = _get_input_(this);
-      tmp = unpackPaths$default(tmp_0, ALL_SPRITE_FILE_EXTENSIONS, null, null, 6, null);
-    } catch ($p) {
-      var tmp_1;
-      if ($p instanceof MissingFilesException) {
-        {
-          var tmp0_e_0 = Log_getInstance();
-          if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-            var tmp_2 = tmp0_e_0._loggerObject;
-            var tmp$ret$2;
-            $l$block_1: {
-              var tmp_3;
-              var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
-                tmp_3 = '**ERROR** ';
-              } else {
-                {
-                  tmp_3 = '';
-                }
-              }
-              var tmp_4 = tmp_3;
-              var tmp_5;
-              var tmp$ret$0;
-              $l$block: {
-                {
-                }
-                tmp$ret$0 = null == null ? true : isBlank(null);
-                break $l$block;
-              }
-              if (!tmp$ret$0) {
-                tmp_5 = 'null::';
-              } else {
-                {
-                  tmp_5 = '';
-                }
-              }
-              var tmp_6 = tmp_5;
-              var tmp$ret$1;
-              $l$block_0: {
-                tmp$ret$1 = 'Error 1015: ' + ensureNotNull($p.message);
-                break $l$block_0;
-              }
-              tmp$ret$2 = '' + tmp_4 + tmp_6 + tmp$ret$1;
-              break $l$block_1;
-            }
-            tmp_2.error(tmp$ret$2);
-          }}
-        return exitNative(1015);
-      } else {
-        {
-          throw $p;
-        }
-      }
-      tmp = tmp_1;
-    }
-    var input = tmp;
-    if (input.isEmpty_0_k$()) {
-      {
-        var tmp1_e_0 = Log_getInstance();
-        if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-          var tmp_7 = tmp1_e_0._loggerObject;
-          var tmp$ret$5;
-          $l$block_4: {
-            var tmp_8;
-            var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
-              tmp_8 = '**ERROR** ';
-            } else {
-              {
-                tmp_8 = '';
-              }
-            }
-            var tmp_9 = tmp_8;
-            var tmp_10;
-            var tmp$ret$3;
-            $l$block_2: {
-              {
-              }
-              tmp$ret$3 = null == null ? true : isBlank(null);
-              break $l$block_2;
-            }
-            if (!tmp$ret$3) {
-              tmp_10 = 'null::';
-            } else {
-              {
-                tmp_10 = '';
-              }
-            }
-            var tmp_11 = tmp_10;
-            var tmp$ret$4;
-            $l$block_3: {
-              var tmp_12 = _get_input_(this);
-              tmp$ret$4 = '' + 'No sprites found to parse in [' + joinToString$default_0(tmp_12, ',', null, null, 0, null, null, 62, null) + ']';
-              break $l$block_3;
-            }
-            tmp$ret$5 = '' + tmp_9 + tmp_11 + tmp$ret$4;
-            break $l$block_4;
-          }
-          tmp_7.error(tmp$ret$5);
-        }}
-      return exitNative(1002);
-    }var nest = !(input._get_size__0_k$() === 1);
-    var currentWorkingDirectory = getCurrentWorkingDirectory();
-    var output_0 = ensureEndsWith(ensureAndGetOutputDirectory(_get_output_(this), currentWorkingDirectory, true), _get_pathSeparatorChar_());
-    var tmp$ret$8;
-    $l$block_7: {
-      var tmp2_map_0 = duplicateFileNamesWithoutExtension$default(input, null, 1, null);
-      var tmp$ret$7;
-      $l$block_6: {
-        var tmp0_mapTo_0_1 = ArrayList_init_$Create$_0(collectionSizeOrDefault(tmp2_map_0, 10));
-        var tmp0_iterator_1_2 = tmp2_map_0.iterator_0_k$();
-        while (tmp0_iterator_1_2.hasNext_0_k$()) {
-          var item_2_3 = tmp0_iterator_1_2.next_0_k$();
-          var tmp$ret$6;
-          $l$block_5: {
-            tmp$ret$6 = item_2_3._first;
-            break $l$block_5;
-          }
-          tmp0_mapTo_0_1.add_2bq_k$(tmp$ret$6);
-          Unit_getInstance();
-        }
-        tmp$ret$7 = tmp0_mapTo_0_1;
-        break $l$block_6;
-      }
-      tmp$ret$8 = tmp$ret$7;
-      break $l$block_7;
-    }
-    var duplicates = tmp$ret$8;
-    var tmp0_iterator = input.iterator_0_k$();
-    while (tmp0_iterator.hasNext_0_k$()) {
-      var path_0 = tmp0_iterator.next_0_k$();
-      var tmp_13;
-      if (nest) {
-        var folderName = FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(path_0);
-        var tmp_14;
-        if (contains_2(duplicates, folderName)) {
-          var tmp$ret$10;
-          $l$block_9: {
-            var tmp3_lowercase_0 = ensureNotNull(FileNameUtil_getInstance().getExtension_6wfw3l_k$(path_0));
-            var tmp$ret$9;
-            $l$block_8: {
-              tmp$ret$9 = tmp3_lowercase_0;
-              break $l$block_8;
-            }
-            tmp$ret$10 = tmp$ret$9.toLowerCase();
-            break $l$block_9;
-          }
-          tmp_14 = '_' + tmp$ret$10;
-        } else {
-          tmp_14 = '';
-        }
-        var suffix = tmp_14;
-        tmp_13 = output_0 + folderName + suffix + _get_pathSeparatorChar_();
-      } else {
-        tmp_13 = output_0;
-      }
-      var outputDirectory = tmp_13;
-      var tmp_15;
-      if (nest) {
-        var tmp1_elvis_lhs = _get_prefix_(this);
-        tmp_15 = (tmp1_elvis_lhs == null ? '' : tmp1_elvis_lhs) + FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(path_0) + '-' + FileNameUtil_getInstance().getExtension_6wfw3l_k$(path_0) + new Char(45);
-      } else {
-        var tmp2_elvis_lhs = _get_prefix_(this);
-        tmp_15 = tmp2_elvis_lhs == null ? plus_2(FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(path_0), '-') : tmp2_elvis_lhs;
-      }
-      var prefix = tmp_15;
-      parseFile(path_0, outputDirectory, prefix, !_get_noStitch_(this), _get_keepBlack__1(this), _get_progress__1(this), _get_numberPadding_(this));
-    }
+    var task = ParseSpriteTask_init_$Create$(null, 1, null).withFiles_wgj1yh_k$(_get_input_(this)).withOutputDirectory(_get_output_(this)).withPrefix(_get_prefix_(this)).withProgress_mn33cr_k$(_get_progress__1(this)).withStitch(!_get_noStitch_(this)).withKeepBlack(_get_keepBlack__1(this)).withNumberPadding(_get_numberPadding_(this));
+    var tmp = GlobalScope_getInstance();
+    launch$default(tmp, null, null, _no_name_provided_$factory_239(task, null), 3, null);
+    Unit_getInstance();
   };
   ParseSpriteCLI.$metadata$ = {
     simpleName: 'ParseSpriteCLI',
     kind: 'class',
     interfaces: []
   };
+  function parseSprites(task, $cont) {
+    var tmp = new $parseSpritesCOROUTINE$13(task, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  }
   function parseFile(input, output_0, prefix, stitch, keepBlack, showProgress, numberPadding) {
     if (!fileExists(input)) {
       {
@@ -58402,7 +60824,7 @@
           $l$block_1: {
             var tmp_0;
             var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
               tmp_0 = '**ERROR** ';
             } else {
               {
@@ -58451,7 +60873,7 @@
             $l$block_4: {
               var tmp_7;
               var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
+              if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_0) {
                 tmp_7 = '**ERROR** ';
               } else {
                 {
@@ -58509,7 +60931,7 @@
           $l$block_7: {
             var tmp_12;
             var tmp0_elvis_lhs_1_1_1 = tmp2_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_1) {
+            if (tmp0_elvis_lhs_1_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_1) {
               tmp_12 = '**ERROR** ';
             } else {
               {
@@ -58567,7 +60989,7 @@
       if (stitch) {
         var tmp_17;
         if (showProgress) {
-          tmp_17 = _no_name_provided_$factory_236();
+          tmp_17 = _no_name_provided_$factory_240();
         } else {
           tmp_17 = null;
         }
@@ -58586,7 +61008,7 @@
                 $l$block_12: {
                   var tmp_20;
                   var tmp0_elvis_lhs_1_1_2 = tmp3_i_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_2) {
+                  if (tmp0_elvis_lhs_1_1_2 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_2) {
                     tmp_20 = '**LOG1** ';
                   } else {
                     {
@@ -58612,7 +61034,7 @@
                   var tmp_23 = tmp_22;
                   var tmp$ret$12;
                   $l$block_11: {
-                    tmp$ret$12 = '' + "\nWrote stitched blk '" + last_0(split$default_0(input, [pathSeparator], false, 0, 6, null)) + "' to '" + outputFileName + "'";
+                    tmp$ret$12 = '' + "\nWrote stitched blk '" + last_0(split$default_0(input, [pathSeparator_0], false, 0, 6, null)) + "' to '" + outputFileName + "'";
                     break $l$block_11;
                   }
                   tmp$ret$13 = '' + tmp_21 + tmp_23 + tmp$ret$12;
@@ -58645,7 +61067,7 @@
                 $l$block_17: {
                   var tmp_25;
                   var tmp0_elvis_lhs_1_1_3 = tmp5_e_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_3) {
+                  if (tmp0_elvis_lhs_1_1_3 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_3) {
                     tmp_25 = '**ERROR** ';
                   } else {
                     {
@@ -58671,7 +61093,7 @@
                   var tmp_28 = tmp_27;
                   var tmp$ret$17;
                   $l$block_16: {
-                    tmp$ret$17 = '' + "Failed write stitched blk '" + last_0(split$default_0(input, [pathSeparator], false, 0, 6, null)) + "' to '" + outputFileName + "'; " + errorPrefix + ': ' + $p_0.message;
+                    tmp$ret$17 = '' + "Failed write stitched blk '" + last_0(split$default_0(input, [pathSeparator_0], false, 0, 6, null)) + "' to '" + outputFileName + "'; " + errorPrefix + ': ' + $p_0.message;
                     break $l$block_16;
                   }
                   tmp$ret$18 = '' + tmp_26 + tmp_28 + tmp$ret$17;
@@ -58688,7 +61110,7 @@
         }
       }}var tmp_29;
     if (showProgress) {
-      tmp_29 = _no_name_provided_$factory_237();
+      tmp_29 = _no_name_provided_$factory_241();
     } else {
       tmp_29 = null;
     }
@@ -58768,7 +61190,7 @@
                 $l$block_25: {
                   var tmp_38;
                   var tmp0_elvis_lhs_1_1_4 = tmp9_e_0._loggerObject.prependLogType;
-                  if (tmp0_elvis_lhs_1_1_4 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_4) {
+                  if (tmp0_elvis_lhs_1_1_4 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_4) {
                     tmp_38 = '**ERROR** ';
                   } else {
                     {
@@ -58820,7 +61242,7 @@
           $l$block_28: {
             var tmp_43;
             var tmp0_elvis_lhs_1_1_5 = tmp10_i_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_5 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_5) {
+            if (tmp0_elvis_lhs_1_1_5 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_5) {
               tmp_43 = '**LOG1** ';
             } else {
               {
@@ -58846,7 +61268,7 @@
             var tmp_46 = tmp_45;
             var tmp$ret$28;
             $l$block_27: {
-              tmp$ret$28 = '' + '\nParsed all images in sprite ' + last_0(split$default_0(input, [pathSeparator], false, 0, 6, null));
+              tmp$ret$28 = '' + '\nParsed all images in sprite ' + last_0(split$default_0(input, [pathSeparator_0], false, 0, 6, null));
               break $l$block_27;
             }
             tmp$ret$29 = '' + tmp_44 + tmp_46 + tmp$ret$28;
@@ -58855,9 +61277,98 @@
           tmp_42.info(false, tmp$ret$29);
         }}
     }}
-  function _no_name_provided__268() {
+  function _no_name_provided__274($nest, $duplicates, $output, $task, resultContinuation) {
+    this._$nest = $nest;
+    this._$duplicates = $duplicates;
+    this._$output = $output;
+    this._$task_3 = $task;
+    CoroutineImpl_0.call(this, resultContinuation);
   }
-  _no_name_provided__268.prototype.invoke_fcwjfj_k$ = function (pass, i, total) {
+  _no_name_provided__274.prototype.invoke_6wfw3l_k$ = function (path_0, $cont) {
+    var tmp = this.create_dsepsj_k$(path_0, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  };
+  _no_name_provided__274.prototype.invoke_20e8_k$ = function (p1, $cont) {
+    return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE(), $cont);
+  };
+  _no_name_provided__274.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        if (tmp === 0) {
+          this._exceptionState = 1;
+          var tmp_0;
+          if (this._$nest) {
+            var folderName = FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(this._path_3);
+            var tmp_1;
+            if (contains_2(this._$duplicates, folderName)) {
+              var tmp0_lowercase_0 = ensureNotNull(FileNameUtil_getInstance().getExtension_6wfw3l_k$(this._path_3));
+              tmp_1 = '_' + tmp0_lowercase_0.toLowerCase();
+            } else {
+              tmp_1 = '';
+            }
+            var suffix = tmp_1;
+            tmp_0 = this._$output + folderName + suffix + _get_pathSeparatorChar_();
+          } else {
+            tmp_0 = this._$output;
+          }
+          var outputDirectory = tmp_0;
+          var tmp_2;
+          if (this._$nest) {
+            var tmp0_elvis_lhs = this._$task_3.getPrefix();
+            tmp_2 = (tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs) + FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(this._path_3) + '-' + FileNameUtil_getInstance().getExtension_6wfw3l_k$(this._path_3) + new Char(45);
+          } else {
+            var tmp1_elvis_lhs = this._$task_3.getPrefix();
+            tmp_2 = tmp1_elvis_lhs == null ? plus_2(FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(this._path_3), '-') : tmp1_elvis_lhs;
+          }
+          var prefix = tmp_2;
+          var tmp_3;
+          try {
+            var tmp_4 = !(this._$task_3.getStitch() === false);
+            var tmp2_elvis_lhs = this._$task_3.getKeepBlack();
+            var tmp_5 = tmp2_elvis_lhs == null ? false : tmp2_elvis_lhs;
+            var tmp3_elvis_lhs = this._$task_3.getProgress();
+            parseFile(this._path_3, outputDirectory, prefix, tmp_4, tmp_5, tmp3_elvis_lhs == null ? true : tmp3_elvis_lhs, this._$task_3.getNumberPadding());
+            tmp_3 = 0;
+          } catch ($p) {
+            var tmp_6;
+            if ($p instanceof AppRequestTerminationOK) {
+              tmp_6 = 0;
+            } else {
+              if ($p instanceof AppRequestTerminationError) {
+                tmp_6 = $p._get_code__0_k$();
+              } else {
+                {
+                  throw $p;
+                }
+              }
+            }
+            tmp_3 = tmp_6;
+          }
+          return tmp_3;
+        } else if (tmp === 1) {
+          throw this._exception_0;
+        }} catch ($p_0) {
+        throw $p_0;
+      }
+     while (true);
+  };
+  _no_name_provided__274.prototype.create_dsepsj_k$ = function (path_0, completion) {
+    var i = new _no_name_provided__274(this._$nest, this._$duplicates, this._$output, this._$task_3, completion);
+    i._path_3 = path_0;
+    return i;
+  };
+  _no_name_provided__274.$metadata$ = {
+    kind: 'class',
+    interfaces: [],
+    suspendArity: 1
+  };
+  function _no_name_provided__275() {
+  }
+  _no_name_provided__275.prototype.invoke_fcwjfj_k$ = function (pass, i, total) {
     if (total > 0) {
       var tmp$ret$0;
       $l$block: {
@@ -58874,7 +61385,7 @@
           $l$block_2: {
             var tmp_0;
             var tmp0_elvis_lhs_1_1 = tmp1_i_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
               tmp_0 = '**LOG1** ';
             } else {
               {
@@ -58910,18 +61421,18 @@
         }}
     }return true;
   };
-  _no_name_provided__268.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
+  _no_name_provided__275.prototype.invoke_ifn5k1_k$ = function (p1, p2, p3) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     var tmp_0 = (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE();
     return this.invoke_fcwjfj_k$(tmp, tmp_0, (!(p3 == null) ? typeof p3 === 'number' : false) ? p3 : THROW_CCE());
   };
-  _no_name_provided__268.$metadata$ = {
+  _no_name_provided__275.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__269() {
+  function _no_name_provided__276() {
   }
-  _no_name_provided__269.prototype.invoke_27zxwg_k$ = function (i, total) {
+  _no_name_provided__276.prototype.invoke_27zxwg_k$ = function (i, total) {
     var tmp$ret$0;
     $l$block: {
       var tmp0_floor_0 = i / total * 100.0;
@@ -58937,7 +61448,7 @@
         $l$block_2: {
           var tmp_0;
           var tmp0_elvis_lhs_1_1 = tmp1_i_0._loggerObject.prependLogType;
-          if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+          if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
             tmp_0 = '**LOG1** ';
           } else {
             {
@@ -58973,11 +61484,149 @@
       }}
     return true;
   };
-  _no_name_provided__269.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__276.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE();
     return this.invoke_27zxwg_k$(tmp, (!(p2 == null) ? typeof p2 === 'number' : false) ? p2 : THROW_CCE());
   };
-  _no_name_provided__269.$metadata$ = {
+  _no_name_provided__276.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function $parseSpritesCOROUTINE$13(task, resultContinuation) {
+    CoroutineImpl_0.call(this, resultContinuation);
+    this._task_3 = task;
+  }
+  $parseSpritesCOROUTINE$13.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 2;
+            var tmp_0 = this;
+            var tmp_1;
+            try {
+              var tmp_2 = this._task_3.getFiles_0_k$();
+              tmp_1 = unpackPaths$default(tmp_2, ALL_SPRITE_FILE_EXTENSIONS, null, null, 6, null);
+            } catch ($p) {
+              var tmp_3;
+              if ($p instanceof MissingFilesException) {
+                var tmp0_e_0 = Log_getInstance();
+                if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                  var tmp_4 = tmp0_e_0._loggerObject;
+                  var tmp_5;
+                  var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
+                  if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
+                    tmp_5 = '**ERROR** ';
+                  } else {
+                    {
+                      tmp_5 = '';
+                    }
+                  }
+                  var tmp_6 = tmp_5;
+                  var tmp_7;
+                  if (!(null == null ? true : isBlank(null))) {
+                    tmp_7 = 'null::';
+                  } else {
+                    {
+                      tmp_7 = '';
+                    }
+                  }
+                  var tmp_8 = tmp_7;
+                  tmp_4.error('' + tmp_6 + tmp_8 + ('Error 1015: ' + ensureNotNull($p.message)));
+                }return exitNative(1015);
+              } else {
+                {
+                  throw $p;
+                }
+              }
+              tmp_1 = tmp_3;
+            }
+
+            tmp_0._input0 = tmp_1;
+            if (this._input0.isEmpty_0_k$()) {
+              var tmp1_e_0 = Log_getInstance();
+              if (tmp1_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
+                var tmp_9 = tmp1_e_0._loggerObject;
+                var tmp_10;
+                var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
+                if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_0) {
+                  tmp_10 = '**ERROR** ';
+                } else {
+                  {
+                    tmp_10 = '';
+                  }
+                }
+                var tmp_11 = tmp_10;
+                var tmp_12;
+                if (!(null == null ? true : isBlank(null))) {
+                  tmp_12 = 'null::';
+                } else {
+                  {
+                    tmp_12 = '';
+                  }
+                }
+                var tmp_13 = tmp_12;
+                var tmp_14 = this._task_3.getFiles_0_k$();
+                tmp_9.error('' + tmp_11 + tmp_13 + ('' + 'No sprites found to parse in [' + joinToString$default_0(tmp_14, ',', null, null, 0, null, null, 62, null) + ']'));
+              }return exitNative(1002);
+            }
+            this._nest1 = !(this._input0._get_size__0_k$() === 1);
+            this._currentWorkingDirectory2 = getCurrentWorkingDirectory();
+            this._output3 = ensureEndsWith(ensureAndGetOutputDirectory(this._task_3.getOutputDirectory(), this._currentWorkingDirectory2, true), _get_pathSeparatorChar_());
+            var tmp_15 = this;
+            var tmp_16 = this;
+            tmp_16._tmp2_map_04 = duplicateFileNamesWithoutExtension$default(this._input0, null, 1, null);
+            var tmp_17 = this;
+            tmp_17._tmp0_mapTo_0_15 = ArrayList_init_$Create$_0(collectionSizeOrDefault(this._tmp2_map_04, 10));
+            var tmp0_iterator_1_2 = this._tmp2_map_04.iterator_0_k$();
+            while (tmp0_iterator_1_2.hasNext_0_k$()) {
+              var item_2_3 = tmp0_iterator_1_2.next_0_k$();
+              this._tmp0_mapTo_0_15.add_2bq_k$(item_2_3._first);
+              Unit_getInstance();
+            }
+
+            tmp_15._duplicates6 = this._tmp0_mapTo_0_15;
+            this._state_0 = 1;
+            suspendResult = mapAsync(this._input0, _no_name_provided_$factory_242(this._nest1, this._duplicates6, this._output3, this._task_3, null), this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            var codes = suspendResult;
+            var tmp$ret$0;
+            l$ret$1: do {
+              var tmp0_iterator_1 = codes.iterator_0_k$();
+              while (tmp0_iterator_1.hasNext_0_k$()) {
+                var element_2 = tmp0_iterator_1.next_0_k$();
+                if (!(element_2 === 0)) {
+                  tmp$ret$0 = element_2;
+                  break l$ret$1;
+                } else {
+                }
+              }
+              tmp$ret$0 = null;
+            }
+             while (false);
+            var tmp0_elvis_lhs = tmp$ret$0;
+            return tmp0_elvis_lhs == null ? 0 : tmp0_elvis_lhs;
+          case 2:
+            throw this._exception_0;
+        }
+      } catch ($p_0) {
+        if (this._exceptionState === 2) {
+          throw $p_0;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p_0;
+        }
+      }
+     while (true);
+  };
+  $parseSpritesCOROUTINE$13.$metadata$ = {
+    simpleName: '$parseSpritesCOROUTINE$13',
     kind: 'class',
     interfaces: []
   };
@@ -59051,17 +61700,268 @@
       return _get_input_(receiver);
     }, null);
   }
-  function _no_name_provided_$factory_236() {
-    var i = new _no_name_provided__268();
+  function _no_name_provided_$factory_239($task, resultContinuation) {
+    var i = new _no_name_provided__273($task, resultContinuation);
+    var l = function (p1, $cont) {
+      return i.invoke_2i3g7c_k$(p1, $cont);
+    };
+    l.$arity = 1;
+    return l;
+  }
+  function _no_name_provided_$factory_240() {
+    var i = new _no_name_provided__275();
     return function (p1, p2, p3) {
       return i.invoke_fcwjfj_k$(p1, p2, p3);
     };
   }
-  function _no_name_provided_$factory_237() {
-    var i = new _no_name_provided__269();
+  function _no_name_provided_$factory_241() {
+    var i = new _no_name_provided__276();
     return function (p1, p2) {
       return i.invoke_27zxwg_k$(p1, p2);
     };
+  }
+  function _no_name_provided_$factory_242($nest, $duplicates, $output, $task, resultContinuation) {
+    var i = new _no_name_provided__274($nest, $duplicates, $output, $task, resultContinuation);
+    var l = function (p1, $cont) {
+      return i.invoke_6wfw3l_k$(p1, $cont);
+    };
+    l.$arity = 1;
+    return l;
+  }
+  function ParseSpriteTask_init_$Init$(files, $mask0, $marker, $this) {
+    if (!(($mask0 & 1) === 0)) {
+      var tmp$ret$0;
+      var tmp$ret$0_0;
+      $l$block: {
+        tmp$ret$0 = [];
+        tmp$ret$0_0 = Unit_getInstance();
+        break $l$block;
+      }
+      files = tmp$ret$0;
+    }ParseSpriteTask.call($this, files);
+    return $this;
+  }
+  function ParseSpriteTask_init_$Create$(files, $mask0, $marker) {
+    return ParseSpriteTask_init_$Init$(files, $mask0, $marker, Object.create(ParseSpriteTask.prototype));
+  }
+  function _no_name_provided__277(this$0, $callback, resultContinuation) {
+    this._this$0_48 = this$0;
+    this._$callback_16 = $callback;
+    CoroutineImpl_0.call(this, resultContinuation);
+  }
+  _no_name_provided__277.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
+    var tmp = this.create_y6imfn_k$($this$launch, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  };
+  _no_name_provided__277.prototype.invoke_20e8_k$ = function (p1, $cont) {
+    this.invoke_2i3g7c_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $cont);
+    return Unit_getInstance();
+  };
+  _no_name_provided__277.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 3;
+            this._exceptionState = 2;
+            this._state_0 = 1;
+            suspendResult = parseSprites(this._this$0_48, this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            this._TRY_RESULT0_2 = suspendResult;
+            this._exceptionState = 3;
+            this._state_0 = 4;
+            continue $sm;
+          case 2:
+            this._exceptionState = 3;
+            var tmp_0 = this._exception_0;
+            if (tmp_0 instanceof AppRequestTermination) {
+              var e = this._exception_0;
+              var tmp_1 = this;
+              tmp_1._TRY_RESULT0_2 = e._code_1;
+              this._state_0 = 4;
+              continue $sm;
+            } else {
+              {
+                throw this._exception_0;
+              }
+            }
+
+            break;
+          case 3:
+            throw this._exception_0;
+          case 4:
+            this._exceptionState = 3;
+            var exitCode = this._TRY_RESULT0_2;
+            var tmp0_safe_receiver = this._$callback_16;
+            if (tmp0_safe_receiver == null)
+              null;
+            else
+              tmp0_safe_receiver(exitCode);
+            Unit_getInstance();
+            return Unit_getInstance();
+        }
+      } catch ($p) {
+        if (this._exceptionState === 3) {
+          throw $p;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p;
+        }
+      }
+     while (true);
+  };
+  _no_name_provided__277.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
+    var i = new _no_name_provided__277(this._this$0_48, this._$callback_16, completion);
+    i._$this$launch_6 = $this$launch;
+    return i;
+  };
+  _no_name_provided__277.$metadata$ = {
+    kind: 'class',
+    interfaces: [],
+    suspendArity: 1
+  };
+  function ParseSpriteTask(files) {
+    var tmp;
+    if (files === void 1) {
+      var tmp$ret$0;
+      var tmp$ret$0_0;
+      $l$block: {
+        tmp$ret$0 = [];
+        tmp$ret$0_0 = Unit_getInstance();
+        break $l$block;
+      }
+      tmp = tmp$ret$0;
+    } else {
+      tmp = files;
+    }
+    var files_0 = tmp;
+    this._prefix_0 = null;
+    this._numberPadding = null;
+    this._stitch = null;
+    this._outputDirectory_7 = null;
+    this._keepBlack_3 = null;
+    this._progress_3 = null;
+    this._files_3 = toList(files_0);
+  }
+  ParseSpriteTask.prototype.getKeepBlack = function () {
+    return this._keepBlack_3;
+  };
+  ParseSpriteTask.prototype.withKeepBlack = function (keep) {
+    this._keepBlack_3 = keep;
+    return this;
+  };
+  ParseSpriteTask.prototype.withProgress = function (value) {
+    return this.withProgress_mn33cr_k$(value === void 1 ? true : value);
+  };
+  ParseSpriteTask.prototype.withProgress_mn33cr_k$ = function (value) {
+    this._progress_3 = value;
+    return this;
+  };
+  ParseSpriteTask.prototype.withProgress$default_h1jrdv_k$ = function (value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      value = true;
+    return this.withProgress_mn33cr_k$(value);
+  };
+  ParseSpriteTask.prototype.getProgress = function () {
+    return this._progress_3;
+  };
+  ParseSpriteTask.prototype.withOutputDirectory = function (directory) {
+    this._outputDirectory_7 = directory;
+    return this;
+  };
+  ParseSpriteTask.prototype.getOutputDirectory = function () {
+    return this._outputDirectory_7;
+  };
+  ParseSpriteTask.prototype.withFiles = function (files) {
+    this._files_3 = toList(files);
+    return this;
+  };
+  ParseSpriteTask.prototype.withFiles_wgj1yh_k$ = function (files) {
+    this._files_3 = files;
+    return this;
+  };
+  ParseSpriteTask.prototype.getFiles_0_k$ = function () {
+    return this._files_3;
+  };
+  ParseSpriteTask.prototype.getFilesArray = function () {
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_toTypedArray_0 = this._files_3;
+      tmp$ret$0 = copyToArray_0(tmp0_toTypedArray_0);
+      break $l$block;
+    }
+    return tmp$ret$0;
+  };
+  ParseSpriteTask.prototype.withPrefix = function (prefix) {
+    this._prefix_0 = prefix;
+    return this;
+  };
+  ParseSpriteTask.prototype.getPrefix = function () {
+    return this._prefix_0;
+  };
+  ParseSpriteTask.prototype.withNumberPadding = function (padding) {
+    this._numberPadding = padding;
+    return this;
+  };
+  ParseSpriteTask.prototype.getNumberPadding = function () {
+    return this._numberPadding;
+  };
+  ParseSpriteTask.prototype.withStitch = function (stitch) {
+    this._stitch = stitch;
+    return this;
+  };
+  ParseSpriteTask.prototype.getStitch = function () {
+    return this._stitch;
+  };
+  ParseSpriteTask.prototype.copy = function () {
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_toTypedArray_0 = this._files_3;
+      tmp$ret$0 = copyToArray_0(tmp0_toTypedArray_0);
+      break $l$block;
+    }
+    var out = new ParseSpriteTask(tmp$ret$0);
+    out._keepBlack_3 = this._keepBlack_3;
+    out._prefix_0 = this._prefix_0;
+    out._numberPadding = this._numberPadding;
+    out._stitch = this._stitch;
+    out._progress_3 = this._progress_3;
+    out._outputDirectory_7 = this._outputDirectory_7;
+    return out;
+  };
+  ParseSpriteTask.prototype.runTaskWithCallback = function (callback) {
+    return this.runTask_ndmljy_k$(callback === void 1 ? null : callback);
+  };
+  ParseSpriteTask.prototype.runTask_ndmljy_k$ = function (callback) {
+    var tmp = GlobalScope_getInstance();
+    launch$default(tmp, null, null, _no_name_provided_$factory_243(this, callback, null), 3, null);
+    Unit_getInstance();
+  };
+  ParseSpriteTask.prototype.runTask$default_otgbxe_k$ = function (callback, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      callback = null;
+    return this.runTask_ndmljy_k$(callback);
+  };
+  ParseSpriteTask.$metadata$ = {
+    simpleName: 'ParseSpriteTask',
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided_$factory_243(this$0, $callback, resultContinuation) {
+    var i = new _no_name_provided__277(this$0, $callback, resultContinuation);
+    var l = function (p1, $cont) {
+      return i.invoke_2i3g7c_k$(p1, $cont);
+    };
+    l.$arity = 1;
+    return l;
   }
   var SpriteArgType;
   var GameArgType;
@@ -59107,33 +62007,33 @@
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__270() {
+  function _no_name_provided__278() {
   }
-  _no_name_provided__270.prototype.invoke_6wfw3l_k$ = function (arg) {
+  _no_name_provided__278.prototype.invoke_6wfw3l_k$ = function (arg) {
     return Companion_getInstance_71().fromString_6wfw3l_k$(arg);
   };
-  _no_name_provided__270.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__278.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__270.$metadata$ = {
+  _no_name_provided__278.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__271() {
+  function _no_name_provided__279() {
   }
-  _no_name_provided__271.prototype.invoke_v3krwk_k$ = function (type) {
+  _no_name_provided__279.prototype.invoke_v3krwk_k$ = function (type) {
     return type._get_name__0_k$();
   };
-  _no_name_provided__271.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__279.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_v3krwk_k$(p1 instanceof SpriteType ? p1 : THROW_CCE());
   };
-  _no_name_provided__271.$metadata$ = {
+  _no_name_provided__279.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__272() {
+  function _no_name_provided__280() {
   }
-  _no_name_provided__272.prototype.invoke_6wfw3l_k$ = function (arg) {
+  _no_name_provided__280.prototype.invoke_6wfw3l_k$ = function (arg) {
     var tmp0_elvis_lhs = Companion_getInstance_70().fromString_6wfw3l_k$(arg);
     var tmp;
     if (tmp0_elvis_lhs == null) {
@@ -59143,58 +62043,58 @@
     }
     return tmp;
   };
-  _no_name_provided__272.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__280.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__272.$metadata$ = {
+  _no_name_provided__280.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__273() {
+  function _no_name_provided__281() {
   }
-  _no_name_provided__273.prototype.invoke_wl7vma_k$ = function (type) {
+  _no_name_provided__281.prototype.invoke_wl7vma_k$ = function (type) {
     return type._get_name__0_k$();
   };
-  _no_name_provided__273.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__281.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_wl7vma_k$(p1 instanceof GameVariant ? p1 : THROW_CCE());
   };
-  _no_name_provided__273.$metadata$ = {
+  _no_name_provided__281.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided_$factory_238() {
-    var i = new _no_name_provided__270();
+  function _no_name_provided_$factory_244() {
+    var i = new _no_name_provided__278();
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_239() {
-    var i = new _no_name_provided__271();
+  function _no_name_provided_$factory_245() {
+    var i = new _no_name_provided__279();
     return function (p1) {
       return i.invoke_v3krwk_k$(p1);
     };
   }
-  function _no_name_provided_$factory_240() {
-    var i = new _no_name_provided__272();
+  function _no_name_provided_$factory_246() {
+    var i = new _no_name_provided__280();
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_241() {
-    var i = new _no_name_provided__273();
+  function _no_name_provided_$factory_247() {
+    var i = new _no_name_provided__281();
     return function (p1) {
       return i.invoke_wl7vma_k$(p1);
     };
   }
   function SpriteArgType$init$() {
     var tmp = toList(values_3());
-    var tmp_0 = _no_name_provided_$factory_238();
-    return new Choice(tmp, tmp_0, _no_name_provided_$factory_239());
+    var tmp_0 = _no_name_provided_$factory_244();
+    return new Choice(tmp, tmp_0, _no_name_provided_$factory_245());
   }
   function GameArgType$init$() {
     var tmp = toList(values_2());
-    var tmp_0 = _no_name_provided_$factory_240();
-    return new Choice(tmp, tmp_0, _no_name_provided_$factory_241());
+    var tmp_0 = _no_name_provided_$factory_246();
+    return new Choice(tmp, tmp_0, _no_name_provided_$factory_247());
   }
   function runMain(args) {
     var parser = ArgParser_init_$Create$('SpriteUtil', false, null, false, false, 30, null);
@@ -59216,7 +62116,7 @@
             $l$block_2: {
               var tmp_0;
               var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                 tmp_0 = '**ERROR** ';
               } else {
                 {
@@ -59276,10 +62176,10 @@
   }
   var shouldOverwriteOverride;
   function createDefaultShouldOverwriteCallback(overwriteAll, overwriteNone) {
-    return _no_name_provided_$factory_242(overwriteAll, overwriteNone, null);
+    return _no_name_provided_$factory_248(overwriteAll, overwriteNone, null);
   }
   function createDefaultShouldOverwriteCallback_0() {
-    return _no_name_provided_$factory_243(null);
+    return _no_name_provided_$factory_249(null);
   }
   function shouldWrite(outputFilePath, overwriteAll, overwriteNone, $cont) {
     if (overwriteAll._value_2) {
@@ -59301,21 +62201,21 @@
     var promptString = '' + 'Overwrite file ' + tmp + ' in ' + tmp_0.getSelfOrParentDirectory$default_zmr95_k$(outputFilePath, false, 2, null) + '?\r\n\t' + '[y]es (default), [n]o: ';
     return promptOverwrite$default(promptString, null, null, 6, null, $cont);
   }
-  function _no_name_provided__274($overwriteAll, $overwriteNone, resultContinuation) {
+  function _no_name_provided__282($overwriteAll, $overwriteNone, resultContinuation) {
     this._$overwriteAll = $overwriteAll;
     this._$overwriteNone = $overwriteNone;
     CoroutineImpl_0.call(this, resultContinuation);
   }
-  _no_name_provided__274.prototype.invoke_6wfw3l_k$ = function (filePath, $cont) {
+  _no_name_provided__282.prototype.invoke_6wfw3l_k$ = function (filePath, $cont) {
     var tmp = this.create_dsepsj_k$(filePath, $cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   };
-  _no_name_provided__274.prototype.invoke_20e8_k$ = function (p1, $cont) {
+  _no_name_provided__282.prototype.invoke_20e8_k$ = function (p1, $cont) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE(), $cont);
   };
-  _no_name_provided__274.prototype.doResume_0_k$ = function () {
+  _no_name_provided__282.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
     $sm: do
       try {
@@ -59344,29 +62244,29 @@
       }
      while (true);
   };
-  _no_name_provided__274.prototype.create_dsepsj_k$ = function (filePath, completion) {
-    var i = new _no_name_provided__274(this._$overwriteAll, this._$overwriteNone, completion);
+  _no_name_provided__282.prototype.create_dsepsj_k$ = function (filePath, completion) {
+    var i = new _no_name_provided__282(this._$overwriteAll, this._$overwriteNone, completion);
     i._filePath = filePath;
     return i;
   };
-  _no_name_provided__274.$metadata$ = {
+  _no_name_provided__282.$metadata$ = {
     kind: 'class',
     interfaces: [],
     suspendArity: 1
   };
-  function _no_name_provided__275(resultContinuation) {
+  function _no_name_provided__283(resultContinuation) {
     CoroutineImpl_0.call(this, resultContinuation);
   }
-  _no_name_provided__275.prototype.invoke_6wfw3l_k$ = function (filePath, $cont) {
+  _no_name_provided__283.prototype.invoke_6wfw3l_k$ = function (filePath, $cont) {
     var tmp = this.create_dsepsj_k$(filePath, $cont);
     tmp._result = Unit_getInstance();
     tmp._exception_0 = null;
     return tmp.doResume_0_k$();
   };
-  _no_name_provided__275.prototype.invoke_20e8_k$ = function (p1, $cont) {
+  _no_name_provided__283.prototype.invoke_20e8_k$ = function (p1, $cont) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE(), $cont);
   };
-  _no_name_provided__275.prototype.doResume_0_k$ = function () {
+  _no_name_provided__283.prototype.doResume_0_k$ = function () {
     var suspendResult = this._result;
     $sm: do
       try {
@@ -59395,26 +62295,26 @@
       }
      while (true);
   };
-  _no_name_provided__275.prototype.create_dsepsj_k$ = function (filePath, completion) {
-    var i = new _no_name_provided__275(completion);
+  _no_name_provided__283.prototype.create_dsepsj_k$ = function (filePath, completion) {
+    var i = new _no_name_provided__283(completion);
     i._filePath_0 = filePath;
     return i;
   };
-  _no_name_provided__275.$metadata$ = {
+  _no_name_provided__283.$metadata$ = {
     kind: 'class',
     interfaces: [],
     suspendArity: 1
   };
-  function _no_name_provided_$factory_242($overwriteAll, $overwriteNone, resultContinuation) {
-    var i = new _no_name_provided__274($overwriteAll, $overwriteNone, resultContinuation);
+  function _no_name_provided_$factory_248($overwriteAll, $overwriteNone, resultContinuation) {
+    var i = new _no_name_provided__282($overwriteAll, $overwriteNone, resultContinuation);
     var l = function (p1, $cont) {
       return i.invoke_6wfw3l_k$(p1, $cont);
     };
     l.$arity = 1;
     return l;
   }
-  function _no_name_provided_$factory_243(resultContinuation) {
-    var i = new _no_name_provided__275(resultContinuation);
+  function _no_name_provided_$factory_249(resultContinuation) {
+    var i = new _no_name_provided__283(resultContinuation);
     var l = function (p1, $cont) {
       return i.invoke_6wfw3l_k$(p1, $cont);
     };
@@ -59424,9 +62324,9 @@
   function duplicateFileNamesWithoutExtension(_this_, maxLength) {
     var tmp;
     if (!(maxLength == null) ? maxLength > 0 : false) {
-      tmp = _no_name_provided_$factory_244(maxLength);
+      tmp = _no_name_provided_$factory_250(maxLength);
     } else {
-      tmp = _no_name_provided_$factory_245();
+      tmp = _no_name_provided_$factory_251();
     }
     var process_1 = tmp;
     var tmp$ret$2;
@@ -59581,7 +62481,7 @@
     if (tmp$ret$3) {
       var newline = '\n\t-';
       var doubleIndent = '\n\t\t';
-      var filesListString = newline + joinToString$default_0(duplicates, newline, null, null, 0, null, _no_name_provided_$factory_246(doubleIndent), 30, null);
+      var filesListString = newline + joinToString$default_0(duplicates, newline, null, null, 0, null, _no_name_provided_$factory_252(doubleIndent), 30, null);
       var tmp_1;
       var tmp$ret$5;
       $l$block_4: {
@@ -59609,7 +62509,7 @@
           $l$block_7: {
             var tmp_3;
             var tmp0_elvis_lhs_1_1 = tmp1_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
               tmp_3 = '**ERROR** ';
             } else {
               {
@@ -59663,7 +62563,7 @@
     if (tmp$ret$0) {
       var newline = '\n\t-';
       var doubleIndent = '\n\t\t';
-      var filesListString = newline + joinToString$default_0(duplicates, newline, null, null, 0, null, _no_name_provided_$factory_247(doubleIndent), 30, null);
+      var filesListString = newline + joinToString$default_0(duplicates, newline, null, null, 0, null, _no_name_provided_$factory_253(doubleIndent), 30, null);
       var tmp;
       var tmp$ret$2;
       $l$block_1: {
@@ -59691,7 +62591,7 @@
           $l$block_4: {
             var tmp_1;
             var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+            if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
               tmp_1 = '**ERROR** ';
             } else {
               {
@@ -59735,10 +62635,10 @@
     }
     return tmp$ret$6;
   }
-  function _no_name_provided__276($maxLength) {
+  function _no_name_provided__284($maxLength) {
     this._$maxLength = $maxLength;
   }
-  _no_name_provided__276.prototype.invoke_6wfw3l_k$ = function (aPath) {
+  _no_name_provided__284.prototype.invoke_6wfw3l_k$ = function (aPath) {
     var tmp0_safe_receiver = FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(aPath);
     var tmp;
     if (tmp0_safe_receiver == null) {
@@ -59775,16 +62675,16 @@
     }
     return tmp_0;
   };
-  _no_name_provided__276.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__284.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__276.$metadata$ = {
+  _no_name_provided__284.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__277() {
+  function _no_name_provided__285() {
   }
-  _no_name_provided__277.prototype.invoke_6wfw3l_k$ = function (aPath) {
+  _no_name_provided__285.prototype.invoke_6wfw3l_k$ = function (aPath) {
     var tmp0_safe_receiver = FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(aPath);
     var tmp;
     if (tmp0_safe_receiver == null) {
@@ -59804,65 +62704,65 @@
     }
     return tmp;
   };
-  _no_name_provided__277.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__285.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__277.$metadata$ = {
+  _no_name_provided__285.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__278($doubleIndent) {
+  function _no_name_provided__286($doubleIndent) {
     this._$doubleIndent = $doubleIndent;
   }
-  _no_name_provided__278.prototype.invoke_vugk84_k$ = function (_name_for_destructuring_parameter_0_) {
+  _no_name_provided__286.prototype.invoke_vugk84_k$ = function (_name_for_destructuring_parameter_0_) {
     var name = _name_for_destructuring_parameter_0_.component1_0_k$();
     var files = _name_for_destructuring_parameter_0_.component2_0_k$();
     var tmp = name + this._$doubleIndent;
     return tmp + joinToString$default_0(files, this._$doubleIndent, null, null, 0, null, null, 62, null);
   };
-  _no_name_provided__278.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__286.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_vugk84_k$(p1 instanceof Pair ? p1 : THROW_CCE());
   };
-  _no_name_provided__278.$metadata$ = {
+  _no_name_provided__286.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__279($doubleIndent) {
+  function _no_name_provided__287($doubleIndent) {
     this._$doubleIndent_0 = $doubleIndent;
   }
-  _no_name_provided__279.prototype.invoke_vugk84_k$ = function (_name_for_destructuring_parameter_0_) {
+  _no_name_provided__287.prototype.invoke_vugk84_k$ = function (_name_for_destructuring_parameter_0_) {
     var name = _name_for_destructuring_parameter_0_.component1_0_k$();
     var files = _name_for_destructuring_parameter_0_.component2_0_k$();
     var tmp = name + this._$doubleIndent_0;
     return tmp + joinToString$default_0(files, this._$doubleIndent_0, null, null, 0, null, null, 62, null);
   };
-  _no_name_provided__279.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__287.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_vugk84_k$(p1 instanceof Pair ? p1 : THROW_CCE());
   };
-  _no_name_provided__279.$metadata$ = {
+  _no_name_provided__287.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided_$factory_244($maxLength) {
-    var i = new _no_name_provided__276($maxLength);
+  function _no_name_provided_$factory_250($maxLength) {
+    var i = new _no_name_provided__284($maxLength);
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_245() {
-    var i = new _no_name_provided__277();
+  function _no_name_provided_$factory_251() {
+    var i = new _no_name_provided__285();
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_246($doubleIndent) {
-    var i = new _no_name_provided__278($doubleIndent);
+  function _no_name_provided_$factory_252($doubleIndent) {
+    var i = new _no_name_provided__286($doubleIndent);
     return function (p1) {
       return i.invoke_vugk84_k$(p1);
     };
   }
-  function _no_name_provided_$factory_247($doubleIndent) {
-    var i = new _no_name_provided__279($doubleIndent);
+  function _no_name_provided_$factory_253($doubleIndent) {
+    var i = new _no_name_provided__287($doubleIndent);
     return function (p1) {
       return i.invoke_vugk84_k$(p1);
     };
@@ -59872,6 +62772,104 @@
   var BREED_FILENAME_WITHOUT_EXTENSION_REGEX;
   var BREED_SPRITE_FILE_REGEX;
   var BREED_ATT_FILE_REGEX;
+  function getBreedSpriteFileRegex(genus, breed, extensions) {
+    var tmp0_safe_receiver = genus;
+    var tmp;
+    if (tmp0_safe_receiver == null) {
+      tmp = null;
+    } else {
+      var tmp$ret$1;
+      $l$block_0: {
+        {
+        }
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = '' + tmp0_safe_receiver._first + tmp0_safe_receiver._second;
+          break $l$block;
+        }
+        tmp$ret$1 = tmp$ret$0;
+        break $l$block_0;
+      }
+      tmp = tmp$ret$1;
+    }
+    var tmp1_elvis_lhs = tmp;
+    var genusRegex = tmp1_elvis_lhs == null ? '0-7' : tmp1_elvis_lhs;
+    var tmp2_safe_receiver = breed;
+    var tmp3_elvis_lhs = nullIfEmpty_0(tmp2_safe_receiver == null ? null : tmp2_safe_receiver.toString());
+    var breedRegex = tmp3_elvis_lhs == null ? 'a-z0-9' : tmp3_elvis_lhs;
+    var tmp4_safe_receiver = extensions;
+    var tmp5_safe_receiver = tmp4_safe_receiver == null ? null : nullIfEmpty(tmp4_safe_receiver);
+    var tmp_0;
+    if (tmp5_safe_receiver == null) {
+      tmp_0 = null;
+    } else {
+      var tmp$ret$3;
+      $l$block_2: {
+        {
+        }
+        var tmp$ret$2;
+        $l$block_1: {
+          tmp$ret$2 = '' + '\\.(' + joinToString$default_0(extensions, '|', null, null, 0, null, null, 62, null) + ')';
+          break $l$block_1;
+        }
+        tmp$ret$3 = tmp$ret$2;
+        break $l$block_2;
+      }
+      tmp_0 = tmp$ret$3;
+    }
+    var tmp6_elvis_lhs = tmp_0;
+    var extensionsRegex = tmp6_elvis_lhs == null ? '' : tmp6_elvis_lhs;
+    {
+      var tmp0_i_0 = Log_getInstance();
+      if (tmp0_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
+        var tmp_1 = tmp0_i_0._loggerObject;
+        var tmp$ret$6;
+        $l$block_5: {
+          var tmp_2;
+          var tmp0_elvis_lhs_1_1 = tmp0_i_0._loggerObject.prependLogType;
+          if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
+            tmp_2 = '**LOG1** ';
+          } else {
+            {
+              tmp_2 = '';
+            }
+          }
+          var tmp_3 = tmp_2;
+          var tmp_4;
+          var tmp$ret$4;
+          $l$block_3: {
+            {
+            }
+            tmp$ret$4 = null == null ? true : isBlank(null);
+            break $l$block_3;
+          }
+          if (!tmp$ret$4) {
+            tmp_4 = 'null::';
+          } else {
+            {
+              tmp_4 = '';
+            }
+          }
+          var tmp_5 = tmp_4;
+          var tmp$ret$5;
+          $l$block_4: {
+            tmp$ret$5 = '' + 'Regex: "^[a-q][' + genusRegex + ']\\\\d[' + breedRegex + ']' + extensionsRegex + '"';
+            break $l$block_4;
+          }
+          tmp$ret$6 = '' + tmp_3 + tmp_5 + tmp$ret$5;
+          break $l$block_5;
+        }
+        tmp_1.info(false, tmp$ret$6);
+      }}
+    var tmp$ret$7;
+    $l$block_6: {
+      var tmp1_toRegex_0 = '' + '^[a-q][' + genusRegex + ']\\d[' + breedRegex + ']' + extensionsRegex;
+      var tmp2_toRegex_0 = RegexOption_IGNORE_CASE_getInstance();
+      tmp$ret$7 = Regex_init_$Create$(tmp1_toRegex_0, tmp2_toRegex_0);
+      break $l$block_6;
+    }
+    return tmp$ret$7;
+  }
   function ensureAndGetOutputDirectory(outputDirectory, currentWorkingDirectory, recursive) {
     var tmp0_safe_receiver = outputDirectory;
     var tmp;
@@ -59914,7 +62912,7 @@
               $l$block_3: {
                 var tmp_2;
                 var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-                if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+                if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                   tmp_2 = '**ERROR** ';
                 } else {
                   {
@@ -59964,7 +62962,7 @@
           $l$block_6: {
             var tmp_7;
             var tmp0_elvis_lhs_1_1_0 = tmp1_e_0._loggerObject.prependLogType;
-            if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1_0) {
+            if (tmp0_elvis_lhs_1_1_0 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1_0) {
               tmp_7 = '**ERROR** ';
             } else {
               {
@@ -60055,10 +63053,10 @@
         break $l$block_4;
       }
       var extensionsLowerCase = tmp$ret$5;
-      tmp = _no_name_provided_$factory_248(extensionsLowerCase, fileNameRegex);
+      tmp = _no_name_provided_$factory_254(extensionsLowerCase, fileNameRegex);
     } else {
       if (!(fileNameRegex == null)) {
-        tmp = _no_name_provided_$factory_249(fileNameRegex);
+        tmp = _no_name_provided_$factory_255(fileNameRegex);
       } else {
         var tmp$ret$6;
         $l$block_5: {
@@ -60099,10 +63097,10 @@
             break $l$block_10;
           }
           var extensionsLowerCase_0 = tmp$ret$11;
-          tmp = _no_name_provided_$factory_250(extensionsLowerCase_0);
+          tmp = _no_name_provided_$factory_256(extensionsLowerCase_0);
         } else {
           {
-            tmp = _no_name_provided_$factory_251();
+            tmp = _no_name_provided_$factory_257();
           }
         }
       }
@@ -60288,10 +63286,10 @@
     return tmp;
   }
   function getEmptyGlobMessage(emptyGlobs) {
-    return '' + 'Failed to glob any files with: \n\t - ' + joinToString$default_0(emptyGlobs, '\n\t- ', null, null, 0, null, _no_name_provided_$factory_252(), 30, null) + '\n';
+    return '' + 'Failed to glob any files with: \n\t - ' + joinToString$default_0(emptyGlobs, '\n\t- ', null, null, 0, null, _no_name_provided_$factory_258(), 30, null) + '\n';
   }
   function getMissingFilesMessage(missingFiles) {
-    return '' + 'Failed to locate files:\n\t- ' + joinToString$default_0(missingFiles, '\n\t- ', null, null, 0, null, _no_name_provided_$factory_253(), 30, null) + ' \n';
+    return '' + 'Failed to locate files:\n\t- ' + joinToString$default_0(missingFiles, '\n\t- ', null, null, 0, null, _no_name_provided_$factory_259(), 30, null) + ' \n';
   }
   function MissingFilesException_init_$Init$(paths, emptyGlobs, throwable, $mask0, $marker, $this) {
     if (!(($mask0 & 4) === 0))
@@ -60324,17 +63322,17 @@
         break $l$block;
       }
       var tmp0_replace_0 = tmp$ret$0;
-      var tmp1_replace_0 = pathSeparator;
+      var tmp1_replace_0 = pathSeparator_0;
       tmp$ret$1 = tmp0_replace_0.replace_abi4bo_k$(path_0, tmp1_replace_0);
       break $l$block_0;
     }
     return tmp$ret$1;
   }
-  function _no_name_provided__280($extensionsLowerCase, $fileNameRegex) {
+  function _no_name_provided__288($extensionsLowerCase, $fileNameRegex) {
     this._$extensionsLowerCase = $extensionsLowerCase;
     this._$fileNameRegex = $fileNameRegex;
   }
-  _no_name_provided__280.prototype.invoke_6wfw3l_k$ = function (childPath) {
+  _no_name_provided__288.prototype.invoke_6wfw3l_k$ = function (childPath) {
     var tmp;
     var tmp_0;
     var tmp_1;
@@ -60385,17 +63383,17 @@
     }
     return tmp;
   };
-  _no_name_provided__280.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__288.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__280.$metadata$ = {
+  _no_name_provided__288.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__281($fileNameRegex) {
+  function _no_name_provided__289($fileNameRegex) {
     this._$fileNameRegex_0 = $fileNameRegex;
   }
-  _no_name_provided__281.prototype.invoke_6wfw3l_k$ = function (childPath) {
+  _no_name_provided__289.prototype.invoke_6wfw3l_k$ = function (childPath) {
     var tmp;
     var tmp_0;
     var tmp$ret$0;
@@ -60421,17 +63419,17 @@
     }
     return tmp;
   };
-  _no_name_provided__281.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__289.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__281.$metadata$ = {
+  _no_name_provided__289.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__282($extensionsLowerCase) {
+  function _no_name_provided__290($extensionsLowerCase) {
     this._$extensionsLowerCase_0 = $extensionsLowerCase;
   }
-  _no_name_provided__282.prototype.invoke_6wfw3l_k$ = function (childPath) {
+  _no_name_provided__290.prototype.invoke_6wfw3l_k$ = function (childPath) {
     var tmp;
     var tmp_0;
     var tmp$ret$0;
@@ -60472,16 +63470,16 @@
     }
     return tmp;
   };
-  _no_name_provided__282.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__290.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__282.$metadata$ = {
+  _no_name_provided__290.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__283() {
+  function _no_name_provided__291() {
   }
-  _no_name_provided__283.prototype.invoke_6wfw3l_k$ = function (childPath) {
+  _no_name_provided__291.prototype.invoke_6wfw3l_k$ = function (childPath) {
     var tmp;
     var tmp$ret$0;
     $l$block: {
@@ -60497,77 +63495,77 @@
     }
     return tmp;
   };
-  _no_name_provided__283.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__291.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__283.$metadata$ = {
+  _no_name_provided__291.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__284() {
+  function _no_name_provided__292() {
   }
-  _no_name_provided__284.prototype.invoke_6wfw3l_k$ = function (p0) {
+  _no_name_provided__292.prototype.invoke_6wfw3l_k$ = function (p0) {
     return unescapePath(p0);
   };
-  _no_name_provided__284.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__292.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__284.prototype._get_name__0_k$ = function () {
+  _no_name_provided__292.prototype._get_name__0_k$ = function () {
     return 'unescapePath';
   };
-  _no_name_provided__284.$metadata$ = {
+  _no_name_provided__292.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__285() {
+  function _no_name_provided__293() {
   }
-  _no_name_provided__285.prototype.invoke_6wfw3l_k$ = function (p0) {
+  _no_name_provided__293.prototype.invoke_6wfw3l_k$ = function (p0) {
     return unescapePath(p0);
   };
-  _no_name_provided__285.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__293.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
   };
-  _no_name_provided__285.prototype._get_name__0_k$ = function () {
+  _no_name_provided__293.prototype._get_name__0_k$ = function () {
     return 'unescapePath';
   };
-  _no_name_provided__285.$metadata$ = {
+  _no_name_provided__293.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided_$factory_248($extensionsLowerCase, $fileNameRegex) {
-    var i = new _no_name_provided__280($extensionsLowerCase, $fileNameRegex);
+  function _no_name_provided_$factory_254($extensionsLowerCase, $fileNameRegex) {
+    var i = new _no_name_provided__288($extensionsLowerCase, $fileNameRegex);
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_249($fileNameRegex) {
-    var i = new _no_name_provided__281($fileNameRegex);
+  function _no_name_provided_$factory_255($fileNameRegex) {
+    var i = new _no_name_provided__289($fileNameRegex);
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_250($extensionsLowerCase) {
-    var i = new _no_name_provided__282($extensionsLowerCase);
+  function _no_name_provided_$factory_256($extensionsLowerCase) {
+    var i = new _no_name_provided__290($extensionsLowerCase);
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_251() {
-    var i = new _no_name_provided__283();
+  function _no_name_provided_$factory_257() {
+    var i = new _no_name_provided__291();
     return function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
   }
-  function _no_name_provided_$factory_252() {
-    var i = new _no_name_provided__284();
+  function _no_name_provided_$factory_258() {
+    var i = new _no_name_provided__292();
     var l = function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
     l.callableName = i._get_name__0_k$();
     return l;
   }
-  function _no_name_provided_$factory_253() {
-    var i = new _no_name_provided__285();
+  function _no_name_provided_$factory_259() {
+    var i = new _no_name_provided__293();
     var l = function (p1) {
       return i.invoke_6wfw3l_k$(p1);
     };
@@ -60603,7 +63601,81 @@
     return tmp$ret$0;
   }
   var WINDOWS_ABSOLUTE_PATH_PREFIX;
+  var mIsCLI;
   var imageExtensions;
+  function AppRequestTerminationOK_init_$Init$(code, throwable, $mask0, $marker, $this) {
+    if (!(($mask0 & 1) === 0))
+      code = 0;
+    if (!(($mask0 & 2) === 0))
+      throwable = null;
+    AppRequestTerminationOK.call($this, code, throwable);
+    return $this;
+  }
+  function AppRequestTerminationOK_init_$Create$(code, throwable, $mask0, $marker) {
+    var tmp = AppRequestTerminationOK_init_$Init$(code, throwable, $mask0, $marker, Object.create(AppRequestTerminationOK.prototype));
+    captureStack(tmp, AppRequestTerminationOK_init_$Create$);
+    return tmp;
+  }
+  function AppRequestTerminationError_init_$Init$(code, throwable, $mask0, $marker, $this) {
+    if (!(($mask0 & 2) === 0))
+      throwable = null;
+    AppRequestTerminationError.call($this, code, throwable);
+    return $this;
+  }
+  function AppRequestTerminationError_init_$Create$(code, throwable, $mask0, $marker) {
+    var tmp = AppRequestTerminationError_init_$Init$(code, throwable, $mask0, $marker, Object.create(AppRequestTerminationError.prototype));
+    captureStack(tmp, AppRequestTerminationError_init_$Create$);
+    return tmp;
+  }
+  function AppRequestTermination_init_$Init$(code, throwable, $mask0, $marker, $this) {
+    if (!(($mask0 & 2) === 0))
+      throwable = null;
+    AppRequestTermination.call($this, code, throwable);
+    return $this;
+  }
+  function AppRequestTermination_init_$Create$(code, throwable, $mask0, $marker) {
+    var tmp = AppRequestTermination_init_$Init$(code, throwable, $mask0, $marker, Object.create(AppRequestTermination.prototype));
+    captureStack(tmp, AppRequestTermination_init_$Create$);
+    return tmp;
+  }
+  function AppRequestTerminationOK(code, throwable) {
+    var code_0 = code === void 1 ? 0 : code;
+    var throwable_0 = throwable === void 1 ? null : throwable;
+    AppRequestTermination.call(this, code_0, throwable_0);
+    captureStack(this, AppRequestTerminationOK);
+  }
+  AppRequestTerminationOK.$metadata$ = {
+    simpleName: 'AppRequestTerminationOK',
+    kind: 'class',
+    interfaces: []
+  };
+  function AppRequestTerminationError(code, throwable) {
+    var throwable_0 = throwable === void 1 ? null : throwable;
+    AppRequestTermination.call(this, code, throwable_0);
+    captureStack(this, AppRequestTerminationError);
+  }
+  AppRequestTerminationError.$metadata$ = {
+    simpleName: 'AppRequestTerminationError',
+    kind: 'class',
+    interfaces: []
+  };
+  function AppRequestTermination(code, throwable) {
+    Exception_init_$Init$_2(throwable, this);
+    this._code_1 = code;
+    captureStack(this, AppRequestTermination);
+  }
+  AppRequestTermination.prototype._get_code__0_k$ = function () {
+    return this._code_1;
+  };
+  AppRequestTermination.$metadata$ = {
+    simpleName: 'AppRequestTermination',
+    kind: 'class',
+    interfaces: []
+  };
+  Object.defineProperty(AppRequestTermination.prototype, 'code', {
+    configurable: true,
+    get: AppRequestTermination.prototype._get_code__0_k$
+  });
   function isAbsolute_0(path_0) {
     var tmp;
     var tmp_0 = new Char(47);
@@ -60642,6 +63714,829 @@
     }
     return tmp$ret$2;
   }
+  function mapAsync(_this_, f, $cont) {
+    return coroutineScope(_no_name_provided_$factory_260(_this_, f, null), $cont);
+  }
+  function _no_name_provided__294($f, $item_2_3, resultContinuation) {
+    this._$f = $f;
+    this._$item_2_3 = $item_2_3;
+    CoroutineImpl_0.call(this, resultContinuation);
+  }
+  _no_name_provided__294.prototype.invoke_mzru1z_k$ = function ($this$async, $cont) {
+    var tmp = this.create_y6imfn_k$($this$async, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  };
+  _no_name_provided__294.prototype.invoke_20e8_k$ = function (p1, $cont) {
+    return this.invoke_mzru1z_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $cont);
+  };
+  _no_name_provided__294.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 2;
+            this._state_0 = 1;
+            suspendResult = this._$f(this._$item_2_3, this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            return suspendResult;
+          case 2:
+            throw this._exception_0;
+        }
+      } catch ($p) {
+        if (this._exceptionState === 2) {
+          throw $p;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p;
+        }
+      }
+     while (true);
+  };
+  _no_name_provided__294.prototype.create_y6imfn_k$ = function ($this$async, completion) {
+    var i = new _no_name_provided__294(this._$f, this._$item_2_3, completion);
+    i._$this$async = $this$async;
+    return i;
+  };
+  _no_name_provided__294.$metadata$ = {
+    kind: 'class',
+    interfaces: [],
+    suspendArity: 1
+  };
+  function _no_name_provided__295($this_mapAsync, $f, resultContinuation) {
+    this._$this_mapAsync = $this_mapAsync;
+    this._$f_0 = $f;
+    CoroutineImpl_0.call(this, resultContinuation);
+  }
+  _no_name_provided__295.prototype.invoke_mzru1z_k$ = function ($this$coroutineScope, $cont) {
+    var tmp = this.create_y6imfn_k$($this$coroutineScope, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  };
+  _no_name_provided__295.prototype.invoke_20e8_k$ = function (p1, $cont) {
+    return this.invoke_mzru1z_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $cont);
+  };
+  _no_name_provided__295.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 2;
+            this._state_0 = 1;
+            var tmp_0 = this;
+            tmp_0._tmp0_mapTo_0_10_0 = ArrayList_init_$Create$_0(collectionSizeOrDefault(this._$this_mapAsync, 10));
+            var tmp0_iterator_1_2 = this._$this_mapAsync.iterator_0_k$();
+            while (tmp0_iterator_1_2.hasNext_0_k$()) {
+              var item_2_3 = tmp0_iterator_1_2.next_0_k$();
+              this._tmp0_mapTo_0_10_0.add_2bq_k$(async$default(this._$this$coroutineScope, null, null, _no_name_provided_$factory_261(this._$f_0, item_2_3, null), 3, null));
+              Unit_getInstance();
+            }
+
+            suspendResult = awaitAll(this._tmp0_mapTo_0_10_0, this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            return suspendResult;
+          case 2:
+            throw this._exception_0;
+        }
+      } catch ($p) {
+        if (this._exceptionState === 2) {
+          throw $p;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p;
+        }
+      }
+     while (true);
+  };
+  _no_name_provided__295.prototype.create_y6imfn_k$ = function ($this$coroutineScope, completion) {
+    var i = new _no_name_provided__295(this._$this_mapAsync, this._$f_0, completion);
+    i._$this$coroutineScope = $this$coroutineScope;
+    return i;
+  };
+  _no_name_provided__295.$metadata$ = {
+    kind: 'class',
+    interfaces: [],
+    suspendArity: 1
+  };
+  function _no_name_provided_$factory_260($this_mapAsync, $f, resultContinuation) {
+    var i = new _no_name_provided__295($this_mapAsync, $f, resultContinuation);
+    var l = function (p1, $cont) {
+      return i.invoke_mzru1z_k$(p1, $cont);
+    };
+    l.$arity = 1;
+    return l;
+  }
+  function _no_name_provided_$factory_261($f, $item_2_3, resultContinuation) {
+    var i = new _no_name_provided__294($f, $item_2_3, resultContinuation);
+    var l = function (p1, $cont) {
+      return i.invoke_mzru1z_k$(p1, $cont);
+    };
+    l.$arity = 1;
+    return l;
+  }
+  function setShouldOverwriteCallback(callback) {
+    shouldOverwriteOverride = _no_name_provided_$factory_262(callback, null);
+  }
+  function runCliWithArray(args) {
+    runMain(args);
+  }
+  function setLogger_0(logger) {
+    setLogger(logger);
+  }
+  function setLogMode(mode, enabled) {
+    Log_getInstance().setMode_5xhc52_k$(mode, enabled);
+  }
+  function _no_name_provided__296($callback, resultContinuation) {
+    this._$callback_17 = $callback;
+    CoroutineImpl_0.call(this, resultContinuation);
+  }
+  _no_name_provided__296.prototype.invoke_6wfw3l_k$ = function (fileName, $cont) {
+    var tmp = this.create_dsepsj_k$(fileName, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  };
+  _no_name_provided__296.prototype.invoke_20e8_k$ = function (p1, $cont) {
+    return this.invoke_6wfw3l_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE(), $cont);
+  };
+  _no_name_provided__296.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 2;
+            this._state_0 = 1;
+            suspendResult = await_0(this._$callback_17(this._fileName), this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            return suspendResult;
+          case 2:
+            throw this._exception_0;
+        }
+      } catch ($p) {
+        if (this._exceptionState === 2) {
+          throw $p;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p;
+        }
+      }
+     while (true);
+  };
+  _no_name_provided__296.prototype.create_dsepsj_k$ = function (fileName, completion) {
+    var i = new _no_name_provided__296(this._$callback_17, completion);
+    i._fileName = fileName;
+    return i;
+  };
+  _no_name_provided__296.$metadata$ = {
+    kind: 'class',
+    interfaces: [],
+    suspendArity: 1
+  };
+  function _no_name_provided_$factory_262($callback, resultContinuation) {
+    var i = new _no_name_provided__296($callback, resultContinuation);
+    var l = function (p1, $cont) {
+      return i.invoke_6wfw3l_k$(p1, $cont);
+    };
+    l.$arity = 1;
+    return l;
+  }
+  function _no_name_provided__297(this$0, $resolve, resultContinuation) {
+    this._this$0_49 = this$0;
+    this._$resolve = $resolve;
+    CoroutineImpl_0.call(this, resultContinuation);
+  }
+  _no_name_provided__297.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
+    var tmp = this.create_y6imfn_k$($this$launch, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  };
+  _no_name_provided__297.prototype.invoke_20e8_k$ = function (p1, $cont) {
+    this.invoke_2i3g7c_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $cont);
+    return Unit_getInstance();
+  };
+  _no_name_provided__297.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 4;
+            this._exceptionState = 2;
+            this._state_0 = 1;
+            suspendResult = convertSprite_2(this._this$0_49, this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            this._TRY_RESULT0_3 = suspendResult;
+            this._exceptionState = 4;
+            this._state_0 = 3;
+            continue $sm;
+          case 2:
+            this._exceptionState = 4;
+            var tmp_0 = this._exception_0;
+            if (tmp_0 instanceof AppRequestTermination) {
+              var e = this._exception_0;
+              var tmp_1 = this;
+              tmp_1._TRY_RESULT0_3 = e._code_1;
+              this._state_0 = 3;
+              continue $sm;
+            } else {
+              {
+                throw this._exception_0;
+              }
+            }
+
+            break;
+          case 3:
+            this._exceptionState = 4;
+            var exitCode = this._TRY_RESULT0_3;
+            this._$resolve(exitCode === 0);
+            return Unit_getInstance();
+          case 4:
+            throw this._exception_0;
+        }
+      } catch ($p) {
+        if (this._exceptionState === 4) {
+          throw $p;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p;
+        }
+      }
+     while (true);
+  };
+  _no_name_provided__297.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
+    var i = new _no_name_provided__297(this._this$0_49, this._$resolve, completion);
+    i._$this$launch_7 = $this$launch;
+    return i;
+  };
+  _no_name_provided__297.$metadata$ = {
+    kind: 'class',
+    interfaces: [],
+    suspendArity: 1
+  };
+  function ConvertSpriteTaskJs_init_$Init$(outputType, files, $mask0, $marker, $this) {
+    if (!(($mask0 & 1) === 0))
+      outputType = null;
+    if (!(($mask0 & 2) === 0)) {
+      var tmp$ret$0;
+      var tmp$ret$0_0;
+      $l$block: {
+        tmp$ret$0 = [];
+        tmp$ret$0_0 = Unit_getInstance();
+        break $l$block;
+      }
+      files = tmp$ret$0;
+    }ConvertSpriteTaskJs.call($this, outputType, files);
+    return $this;
+  }
+  function ConvertSpriteTaskJs_init_$Create$(outputType, files, $mask0, $marker) {
+    return ConvertSpriteTaskJs_init_$Init$(outputType, files, $mask0, $marker, Object.create(ConvertSpriteTaskJs.prototype));
+  }
+  function _no_name_provided__298(this$0) {
+    this._this$0_50 = this$0;
+  }
+  _no_name_provided__298.prototype.invoke_vv0idl_k$ = function (resolve, _anonymous_parameter_1_) {
+    var tmp = GlobalScope_getInstance();
+    launch$default(tmp, null, null, _no_name_provided_$factory_264(this._this$0_50, resolve, null), 3, null);
+    Unit_getInstance();
+  };
+  _no_name_provided__298.prototype.invoke_osx4an_k$ = function (p1, p2) {
+    var tmp = (!(p1 == null) ? typeof p1 === 'function' : false) ? p1 : THROW_CCE();
+    this.invoke_vv0idl_k$(tmp, (!(p2 == null) ? typeof p2 === 'function' : false) ? p2 : THROW_CCE());
+    return Unit_getInstance();
+  };
+  _no_name_provided__298.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function ConvertSpriteTaskJs(outputType, files) {
+    var outputType_0 = outputType === void 1 ? null : outputType;
+    var tmp;
+    if (files === void 1) {
+      var tmp$ret$0;
+      var tmp$ret$0_0;
+      $l$block: {
+        tmp$ret$0 = [];
+        tmp$ret$0_0 = Unit_getInstance();
+        break $l$block;
+      }
+      tmp = tmp$ret$0;
+    } else {
+      tmp = files;
+    }
+    var files_0 = tmp;
+    ConvertSpriteTask.call(this, outputType_0, files_0);
+  }
+  ConvertSpriteTaskJs.prototype.runTaskAsync = function () {
+    return new Promise(_no_name_provided_$factory_263(this));
+  };
+  ConvertSpriteTaskJs.$metadata$ = {
+    simpleName: 'ConvertSpriteTaskJs',
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__299(this$0, $resolve, resultContinuation) {
+    this._this$0_51 = this$0;
+    this._$resolve_0 = $resolve;
+    CoroutineImpl_0.call(this, resultContinuation);
+  }
+  _no_name_provided__299.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
+    var tmp = this.create_y6imfn_k$($this$launch, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  };
+  _no_name_provided__299.prototype.invoke_20e8_k$ = function (p1, $cont) {
+    this.invoke_2i3g7c_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $cont);
+    return Unit_getInstance();
+  };
+  _no_name_provided__299.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 4;
+            this._exceptionState = 2;
+            this._state_0 = 1;
+            suspendResult = convertBreed(this._this$0_51, this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            this._TRY_RESULT0_4 = suspendResult;
+            this._exceptionState = 4;
+            this._state_0 = 3;
+            continue $sm;
+          case 2:
+            this._exceptionState = 4;
+            var tmp_0 = this._exception_0;
+            if (tmp_0 instanceof AppRequestTermination) {
+              var e = this._exception_0;
+              var tmp_1 = this;
+              tmp_1._TRY_RESULT0_4 = e._code_1;
+              this._state_0 = 3;
+              continue $sm;
+            } else {
+              {
+                throw this._exception_0;
+              }
+            }
+
+            break;
+          case 3:
+            this._exceptionState = 4;
+            var exitCode = this._TRY_RESULT0_4;
+            this._$resolve_0(exitCode === 0);
+            return Unit_getInstance();
+          case 4:
+            throw this._exception_0;
+        }
+      } catch ($p) {
+        if (this._exceptionState === 4) {
+          throw $p;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p;
+        }
+      }
+     while (true);
+  };
+  _no_name_provided__299.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
+    var i = new _no_name_provided__299(this._this$0_51, this._$resolve_0, completion);
+    i._$this$launch_8 = $this$launch;
+    return i;
+  };
+  _no_name_provided__299.$metadata$ = {
+    kind: 'class',
+    interfaces: [],
+    suspendArity: 1
+  };
+  function ConvertBreedTaskJs_init_$Init$(toGame, files, $mask0, $marker, $this) {
+    if (!(($mask0 & 1) === 0))
+      toGame = null;
+    if (!(($mask0 & 2) === 0)) {
+      var tmp$ret$0;
+      var tmp$ret$0_0;
+      $l$block: {
+        tmp$ret$0 = [];
+        tmp$ret$0_0 = Unit_getInstance();
+        break $l$block;
+      }
+      files = tmp$ret$0;
+    }ConvertBreedTaskJs.call($this, toGame, files);
+    return $this;
+  }
+  function ConvertBreedTaskJs_init_$Create$(toGame, files, $mask0, $marker) {
+    return ConvertBreedTaskJs_init_$Init$(toGame, files, $mask0, $marker, Object.create(ConvertBreedTaskJs.prototype));
+  }
+  function _no_name_provided__300(this$0) {
+    this._this$0_52 = this$0;
+  }
+  _no_name_provided__300.prototype.invoke_vv0idl_k$ = function (resolve, _anonymous_parameter_1_) {
+    var tmp = GlobalScope_getInstance();
+    launch$default(tmp, null, null, _no_name_provided_$factory_266(this._this$0_52, resolve, null), 3, null);
+    Unit_getInstance();
+  };
+  _no_name_provided__300.prototype.invoke_osx4an_k$ = function (p1, p2) {
+    var tmp = (!(p1 == null) ? typeof p1 === 'function' : false) ? p1 : THROW_CCE();
+    this.invoke_vv0idl_k$(tmp, (!(p2 == null) ? typeof p2 === 'function' : false) ? p2 : THROW_CCE());
+    return Unit_getInstance();
+  };
+  _no_name_provided__300.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function ConvertBreedTaskJs(toGame, files) {
+    var toGame_0 = toGame === void 1 ? null : toGame;
+    var tmp;
+    if (files === void 1) {
+      var tmp$ret$0;
+      var tmp$ret$0_0;
+      $l$block: {
+        tmp$ret$0 = [];
+        tmp$ret$0_0 = Unit_getInstance();
+        break $l$block;
+      }
+      tmp = tmp$ret$0;
+    } else {
+      tmp = files;
+    }
+    var files_0 = tmp;
+    ConvertBreedTask.call(this, toGame_0, files_0);
+  }
+  ConvertBreedTaskJs.prototype.runTaskAsync = function () {
+    return new Promise(_no_name_provided_$factory_265(this));
+  };
+  ConvertBreedTaskJs.$metadata$ = {
+    simpleName: 'ConvertBreedTaskJs',
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__301(this$0, $resolve, resultContinuation) {
+    this._this$0_53 = this$0;
+    this._$resolve_1 = $resolve;
+    CoroutineImpl_0.call(this, resultContinuation);
+  }
+  _no_name_provided__301.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
+    var tmp = this.create_y6imfn_k$($this$launch, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  };
+  _no_name_provided__301.prototype.invoke_20e8_k$ = function (p1, $cont) {
+    this.invoke_2i3g7c_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $cont);
+    return Unit_getInstance();
+  };
+  _no_name_provided__301.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 4;
+            this._exceptionState = 2;
+            this._state_0 = 1;
+            suspendResult = compileSprite_0(this._this$0_53, this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            this._TRY_RESULT0_5 = suspendResult;
+            this._exceptionState = 4;
+            this._state_0 = 3;
+            continue $sm;
+          case 2:
+            this._exceptionState = 4;
+            var tmp_0 = this._exception_0;
+            if (tmp_0 instanceof AppRequestTermination) {
+              var e = this._exception_0;
+              var tmp_1 = this;
+              tmp_1._TRY_RESULT0_5 = e._code_1;
+              this._state_0 = 3;
+              continue $sm;
+            } else {
+              {
+                throw this._exception_0;
+              }
+            }
+
+            break;
+          case 3:
+            this._exceptionState = 4;
+            var exitCode = this._TRY_RESULT0_5;
+            this._$resolve_1(exitCode === 0);
+            return Unit_getInstance();
+          case 4:
+            throw this._exception_0;
+        }
+      } catch ($p) {
+        if (this._exceptionState === 4) {
+          throw $p;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p;
+        }
+      }
+     while (true);
+  };
+  _no_name_provided__301.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
+    var i = new _no_name_provided__301(this._this$0_53, this._$resolve_1, completion);
+    i._$this$launch_9 = $this$launch;
+    return i;
+  };
+  _no_name_provided__301.$metadata$ = {
+    kind: 'class',
+    interfaces: [],
+    suspendArity: 1
+  };
+  function CompileSpriteTaskJs_init_$Init$(type, files, $mask0, $marker, $this) {
+    if (!(($mask0 & 1) === 0))
+      type = null;
+    if (!(($mask0 & 2) === 0)) {
+      var tmp$ret$0;
+      var tmp$ret$0_0;
+      $l$block: {
+        tmp$ret$0 = [];
+        tmp$ret$0_0 = Unit_getInstance();
+        break $l$block;
+      }
+      files = tmp$ret$0;
+    }CompileSpriteTaskJs.call($this, type, files);
+    return $this;
+  }
+  function CompileSpriteTaskJs_init_$Create$(type, files, $mask0, $marker) {
+    return CompileSpriteTaskJs_init_$Init$(type, files, $mask0, $marker, Object.create(CompileSpriteTaskJs.prototype));
+  }
+  function _no_name_provided__302(this$0) {
+    this._this$0_54 = this$0;
+  }
+  _no_name_provided__302.prototype.invoke_vv0idl_k$ = function (resolve, _anonymous_parameter_1_) {
+    var tmp = GlobalScope_getInstance();
+    launch$default(tmp, null, null, _no_name_provided_$factory_268(this._this$0_54, resolve, null), 3, null);
+    Unit_getInstance();
+  };
+  _no_name_provided__302.prototype.invoke_osx4an_k$ = function (p1, p2) {
+    var tmp = (!(p1 == null) ? typeof p1 === 'function' : false) ? p1 : THROW_CCE();
+    this.invoke_vv0idl_k$(tmp, (!(p2 == null) ? typeof p2 === 'function' : false) ? p2 : THROW_CCE());
+    return Unit_getInstance();
+  };
+  _no_name_provided__302.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function CompileSpriteTaskJs(type, files) {
+    var type_0 = type === void 1 ? null : type;
+    var tmp;
+    if (files === void 1) {
+      var tmp$ret$0;
+      var tmp$ret$0_0;
+      $l$block: {
+        tmp$ret$0 = [];
+        tmp$ret$0_0 = Unit_getInstance();
+        break $l$block;
+      }
+      tmp = tmp$ret$0;
+    } else {
+      tmp = files;
+    }
+    var files_0 = tmp;
+    CompileSpriteTask.call(this, type_0, files_0);
+  }
+  CompileSpriteTaskJs.prototype.runTaskAsync = function () {
+    return new Promise(_no_name_provided_$factory_267(this));
+  };
+  CompileSpriteTaskJs.$metadata$ = {
+    simpleName: 'CompileSpriteTaskJs',
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided__303(this$0, $resolve, resultContinuation) {
+    this._this$0_55 = this$0;
+    this._$resolve_2 = $resolve;
+    CoroutineImpl_0.call(this, resultContinuation);
+  }
+  _no_name_provided__303.prototype.invoke_2i3g7c_k$ = function ($this$launch, $cont) {
+    var tmp = this.create_y6imfn_k$($this$launch, $cont);
+    tmp._result = Unit_getInstance();
+    tmp._exception_0 = null;
+    return tmp.doResume_0_k$();
+  };
+  _no_name_provided__303.prototype.invoke_20e8_k$ = function (p1, $cont) {
+    this.invoke_2i3g7c_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $cont);
+    return Unit_getInstance();
+  };
+  _no_name_provided__303.prototype.doResume_0_k$ = function () {
+    var suspendResult = this._result;
+    $sm: do
+      try {
+        var tmp = this._state_0;
+        switch (tmp) {
+          case 0:
+            this._exceptionState = 4;
+            this._exceptionState = 2;
+            this._state_0 = 1;
+            suspendResult = parseSprites(this._this$0_55, this);
+            if (suspendResult === _get_COROUTINE_SUSPENDED_()) {
+              return suspendResult;
+            }
+            continue $sm;
+          case 1:
+            this._TRY_RESULT0_6 = suspendResult;
+            this._exceptionState = 4;
+            this._state_0 = 3;
+            continue $sm;
+          case 2:
+            this._exceptionState = 4;
+            var tmp_0 = this._exception_0;
+            if (tmp_0 instanceof AppRequestTermination) {
+              var e = this._exception_0;
+              var tmp_1 = this;
+              tmp_1._TRY_RESULT0_6 = e._code_1;
+              this._state_0 = 3;
+              continue $sm;
+            } else {
+              {
+                throw this._exception_0;
+              }
+            }
+
+            break;
+          case 3:
+            this._exceptionState = 4;
+            var exitCode = this._TRY_RESULT0_6;
+            this._$resolve_2(exitCode === 0);
+            return Unit_getInstance();
+          case 4:
+            throw this._exception_0;
+        }
+      } catch ($p) {
+        if (this._exceptionState === 4) {
+          throw $p;
+        } else {
+          this._state_0 = this._exceptionState;
+          this._exception_0 = $p;
+        }
+      }
+     while (true);
+  };
+  _no_name_provided__303.prototype.create_y6imfn_k$ = function ($this$launch, completion) {
+    var i = new _no_name_provided__303(this._this$0_55, this._$resolve_2, completion);
+    i._$this$launch_10 = $this$launch;
+    return i;
+  };
+  _no_name_provided__303.$metadata$ = {
+    kind: 'class',
+    interfaces: [],
+    suspendArity: 1
+  };
+  function ParseSpriteTaskJs_init_$Init$(files, $mask0, $marker, $this) {
+    if (!(($mask0 & 1) === 0)) {
+      var tmp$ret$0;
+      var tmp$ret$0_0;
+      $l$block: {
+        tmp$ret$0 = [];
+        tmp$ret$0_0 = Unit_getInstance();
+        break $l$block;
+      }
+      files = tmp$ret$0;
+    }ParseSpriteTaskJs.call($this, files);
+    return $this;
+  }
+  function ParseSpriteTaskJs_init_$Create$(files, $mask0, $marker) {
+    return ParseSpriteTaskJs_init_$Init$(files, $mask0, $marker, Object.create(ParseSpriteTaskJs.prototype));
+  }
+  function _no_name_provided__304(this$0) {
+    this._this$0_56 = this$0;
+  }
+  _no_name_provided__304.prototype.invoke_vv0idl_k$ = function (resolve, _anonymous_parameter_1_) {
+    var tmp = GlobalScope_getInstance();
+    launch$default(tmp, null, null, _no_name_provided_$factory_270(this._this$0_56, resolve, null), 3, null);
+    Unit_getInstance();
+  };
+  _no_name_provided__304.prototype.invoke_osx4an_k$ = function (p1, p2) {
+    var tmp = (!(p1 == null) ? typeof p1 === 'function' : false) ? p1 : THROW_CCE();
+    this.invoke_vv0idl_k$(tmp, (!(p2 == null) ? typeof p2 === 'function' : false) ? p2 : THROW_CCE());
+    return Unit_getInstance();
+  };
+  _no_name_provided__304.$metadata$ = {
+    kind: 'class',
+    interfaces: []
+  };
+  function ParseSpriteTaskJs(files) {
+    var tmp;
+    if (files === void 1) {
+      var tmp$ret$0;
+      var tmp$ret$0_0;
+      $l$block: {
+        tmp$ret$0 = [];
+        tmp$ret$0_0 = Unit_getInstance();
+        break $l$block;
+      }
+      tmp = tmp$ret$0;
+    } else {
+      tmp = files;
+    }
+    var files_0 = tmp;
+    ParseSpriteTask.call(this, files_0);
+  }
+  ParseSpriteTaskJs.prototype.runTaskAsync = function () {
+    return new Promise(_no_name_provided_$factory_269(this));
+  };
+  ParseSpriteTaskJs.$metadata$ = {
+    simpleName: 'ParseSpriteTaskJs',
+    kind: 'class',
+    interfaces: []
+  };
+  function _no_name_provided_$factory_263(this$0) {
+    var i = new _no_name_provided__298(this$0);
+    return function (p1, p2) {
+      i.invoke_vv0idl_k$(p1, p2);
+      return Unit_getInstance();
+    };
+  }
+  function _no_name_provided_$factory_264(this$0, $resolve, resultContinuation) {
+    var i = new _no_name_provided__297(this$0, $resolve, resultContinuation);
+    var l = function (p1, $cont) {
+      return i.invoke_2i3g7c_k$(p1, $cont);
+    };
+    l.$arity = 1;
+    return l;
+  }
+  function _no_name_provided_$factory_265(this$0) {
+    var i = new _no_name_provided__300(this$0);
+    return function (p1, p2) {
+      i.invoke_vv0idl_k$(p1, p2);
+      return Unit_getInstance();
+    };
+  }
+  function _no_name_provided_$factory_266(this$0, $resolve, resultContinuation) {
+    var i = new _no_name_provided__299(this$0, $resolve, resultContinuation);
+    var l = function (p1, $cont) {
+      return i.invoke_2i3g7c_k$(p1, $cont);
+    };
+    l.$arity = 1;
+    return l;
+  }
+  function _no_name_provided_$factory_267(this$0) {
+    var i = new _no_name_provided__302(this$0);
+    return function (p1, p2) {
+      i.invoke_vv0idl_k$(p1, p2);
+      return Unit_getInstance();
+    };
+  }
+  function _no_name_provided_$factory_268(this$0, $resolve, resultContinuation) {
+    var i = new _no_name_provided__301(this$0, $resolve, resultContinuation);
+    var l = function (p1, $cont) {
+      return i.invoke_2i3g7c_k$(p1, $cont);
+    };
+    l.$arity = 1;
+    return l;
+  }
+  function _no_name_provided_$factory_269(this$0) {
+    var i = new _no_name_provided__304(this$0);
+    return function (p1, p2) {
+      i.invoke_vv0idl_k$(p1, p2);
+      return Unit_getInstance();
+    };
+  }
+  function _no_name_provided_$factory_270(this$0, $resolve, resultContinuation) {
+    var i = new _no_name_provided__303(this$0, $resolve, resultContinuation);
+    var l = function (p1, $cont) {
+      return i.invoke_2i3g7c_k$(p1, $cont);
+    };
+    l.$arity = 1;
+    return l;
+  }
   function loadBytes(filePath) {
     var tmp = readFileSync_0(filePath, (!(null == null) ? typeof null === 'string' : false) ? null : null);
     var buffer = tmp instanceof Buffer ? tmp : THROW_CCE();
@@ -60671,10 +64566,16 @@
     return replace$default(tmp, tmp_0, tmp_1, false, 4, null);
   }
   function exitNative(code) {
-    process_0.exit(code);
-    Unit_getInstance();
-    ensureNotNull(null);
-    return throwKotlinNothingValueException();
+    if (mIsCLI) {
+      process_0.exit(code);
+      Unit_getInstance();
+      ensureNotNull(null);
+      return throwKotlinNothingValueException();
+    } else if (code === 0) {
+      throw AppRequestTerminationOK_init_$Create$(0, null, 2, null);
+    } else {
+      throw AppRequestTerminationError_init_$Create$(code, null, 2, null);
+    }
   }
   function fileExists(filePath) {
     return existsSync_0(filePath);
@@ -60759,35 +64660,35 @@
     return tmp.join(tmpdir_1, tmp$ret$1 + randomBytes_1);
   }
   function readLine(prompt, default_1, $cont) {
-    var tmp = new Promise(_no_name_provided_$factory_254(prompt, default_1));
-    return await_0(tmp.catch(_no_name_provided_$factory_255()), $cont);
+    var tmp = new Promise(_no_name_provided_$factory_271(prompt, default_1));
+    return await_0(tmp.catch(_no_name_provided_$factory_272()), $cont);
   }
   function readLine$default(prompt, default_1, $mask0, $handler, $cont) {
     if (!(($mask0 & 2) === 0))
       default_1 = null;
     return readLine(prompt, default_1, $cont);
   }
-  function _no_name_provided__286($resolve, $default) {
-    this._$resolve = $resolve;
+  function _no_name_provided__305($resolve, $default) {
+    this._$resolve_3 = $resolve;
     this._$default = $default;
   }
-  _no_name_provided__286.prototype.invoke_a4enbm_k$ = function (it) {
+  _no_name_provided__305.prototype.invoke_a4enbm_k$ = function (it) {
     var tmp0_elvis_lhs = nullIfEmpty_0(it);
-    this._$resolve(tmp0_elvis_lhs == null ? this._$default : tmp0_elvis_lhs);
+    this._$resolve_3(tmp0_elvis_lhs == null ? this._$default : tmp0_elvis_lhs);
   };
-  _no_name_provided__286.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__305.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_a4enbm_k$((!(p1 == null) ? typeof p1 === 'string' : false) ? p1 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__286.$metadata$ = {
+  _no_name_provided__305.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__287($prompt, $default) {
+  function _no_name_provided__306($prompt, $default) {
     this._$prompt = $prompt;
     this._$default_0 = $default;
   }
-  _no_name_provided__287.prototype.invoke_lmz38d_k$ = function (resolve, _anonymous_parameter_1_) {
+  _no_name_provided__306.prototype.invoke_lmz38d_k$ = function (resolve, _anonymous_parameter_1_) {
     var tmp = {};
     var readLineOptions = (!(tmp == null) ? isObject(tmp) : false) ? tmp : THROW_CCE();
     readLineOptions.input = process_0.stdin;
@@ -60795,7 +64696,7 @@
     readLineOptions.output = isObject(tmp_0) ? tmp_0 : null;
     var readLine_0 = createInterface_0(readLineOptions);
     try {
-      readLine_0.question(this._$prompt, _no_name_provided_$factory_256(resolve, this._$default_0));
+      readLine_0.question(this._$prompt, _no_name_provided_$factory_273(resolve, this._$default_0));
     } catch ($p) {
       if ($p instanceof Exception) {
         {
@@ -60806,7 +64707,7 @@
             $l$block_1: {
               var tmp_2;
               var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
                 tmp_2 = '**ERROR** ';
               } else {
                 {
@@ -60848,18 +64749,18 @@
       }
     }
   };
-  _no_name_provided__287.prototype.invoke_osx4an_k$ = function (p1, p2) {
+  _no_name_provided__306.prototype.invoke_osx4an_k$ = function (p1, p2) {
     var tmp = (!(p1 == null) ? typeof p1 === 'function' : false) ? p1 : THROW_CCE();
     this.invoke_lmz38d_k$(tmp, (!(p2 == null) ? typeof p2 === 'function' : false) ? p2 : THROW_CCE());
     return Unit_getInstance();
   };
-  _no_name_provided__287.$metadata$ = {
+  _no_name_provided__306.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided__288() {
+  function _no_name_provided__307() {
   }
-  _no_name_provided__288.prototype.invoke_onfaoi_k$ = function (e) {
+  _no_name_provided__307.prototype.invoke_onfaoi_k$ = function (e) {
     {
       var tmp0_e_0 = Log_getInstance();
       if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
@@ -60868,7 +64769,7 @@
         $l$block_1: {
           var tmp_0;
           var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-          if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType : tmp0_elvis_lhs_1_1) {
+          if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
             tmp_0 = '**ERROR** ';
           } else {
             {
@@ -60904,28 +64805,28 @@
       }}
     return null;
   };
-  _no_name_provided__288.prototype.invoke_20e8_k$ = function (p1) {
+  _no_name_provided__307.prototype.invoke_20e8_k$ = function (p1) {
     return this.invoke_onfaoi_k$(p1 instanceof Error ? p1 : THROW_CCE());
   };
-  _no_name_provided__288.$metadata$ = {
+  _no_name_provided__307.$metadata$ = {
     kind: 'class',
     interfaces: []
   };
-  function _no_name_provided_$factory_254($prompt, $default) {
-    var i = new _no_name_provided__287($prompt, $default);
+  function _no_name_provided_$factory_271($prompt, $default) {
+    var i = new _no_name_provided__306($prompt, $default);
     return function (p1, p2) {
       i.invoke_lmz38d_k$(p1, p2);
       return Unit_getInstance();
     };
   }
-  function _no_name_provided_$factory_255() {
-    var i = new _no_name_provided__288();
+  function _no_name_provided_$factory_272() {
+    var i = new _no_name_provided__307();
     return function (p1) {
       return i.invoke_onfaoi_k$(p1);
     };
   }
-  function _no_name_provided_$factory_256($resolve, $default) {
-    var i = new _no_name_provided__286($resolve, $default);
+  function _no_name_provided_$factory_273($resolve, $default) {
+    var i = new _no_name_provided__305($resolve, $default);
     return function (p1) {
       i.invoke_a4enbm_k$(p1);
       return Unit_getInstance();
@@ -60999,7 +64900,7 @@
     }
     if (tmp$ret$3) {
       var tmp_6 = args.get_ha5a7z_k$(0);
-      var tmp_7 = '' + pathSeparator + 'sprite-util';
+      var tmp_7 = '' + pathSeparator_0 + 'sprite-util';
       tmp_5 = endsWith$default_0(tmp_6, tmp_7, false, 2, null);
     } else {
       {
@@ -61050,6 +64951,16 @@
   LazyStandaloneCoroutine.prototype.get_9uvjra_k$ = Element_0.prototype.get_9uvjra_k$;
   LazyStandaloneCoroutine.prototype.fold_cq605b_k$ = Element_0.prototype.fold_cq605b_k$;
   LazyStandaloneCoroutine.prototype.minusKey_djuxjq_k$ = Element_0.prototype.minusKey_djuxjq_k$;
+  DeferredCoroutine.prototype.invokeOnCompletion$default_n4h7x8_k$ = Job.prototype.invokeOnCompletion$default_n4h7x8_k$;
+  DeferredCoroutine.prototype.plus_d7pszg_k$ = CoroutineContext.prototype.plus_d7pszg_k$;
+  DeferredCoroutine.prototype.get_9uvjra_k$ = Element_0.prototype.get_9uvjra_k$;
+  DeferredCoroutine.prototype.fold_cq605b_k$ = Element_0.prototype.fold_cq605b_k$;
+  DeferredCoroutine.prototype.minusKey_djuxjq_k$ = Element_0.prototype.minusKey_djuxjq_k$;
+  LazyDeferredCoroutine.prototype.invokeOnCompletion$default_n4h7x8_k$ = Job.prototype.invokeOnCompletion$default_n4h7x8_k$;
+  LazyDeferredCoroutine.prototype.plus_d7pszg_k$ = CoroutineContext.prototype.plus_d7pszg_k$;
+  LazyDeferredCoroutine.prototype.get_9uvjra_k$ = Element_0.prototype.get_9uvjra_k$;
+  LazyDeferredCoroutine.prototype.fold_cq605b_k$ = Element_0.prototype.fold_cq605b_k$;
+  LazyDeferredCoroutine.prototype.minusKey_djuxjq_k$ = Element_0.prototype.minusKey_djuxjq_k$;
   SchedulerTask.prototype.run_sv8swh_k$ = Runnable.prototype.run_sv8swh_k$;
   CompletableDeferredImpl.prototype.invokeOnCompletion$default_n4h7x8_k$ = Job.prototype.invokeOnCompletion$default_n4h7x8_k$;
   CompletableDeferredImpl.prototype.plus_d7pszg_k$ = CoroutineContext.prototype.plus_d7pszg_k$;
@@ -61072,6 +64983,11 @@
   Unconfined.prototype.get_9uvjra_k$ = ContinuationInterceptor.prototype.get_9uvjra_k$;
   Unconfined.prototype.fold_cq605b_k$ = Element_0.prototype.fold_cq605b_k$;
   Unconfined.prototype.minusKey_djuxjq_k$ = ContinuationInterceptor.prototype.minusKey_djuxjq_k$;
+  ScopeCoroutine.prototype.invokeOnCompletion$default_n4h7x8_k$ = Job.prototype.invokeOnCompletion$default_n4h7x8_k$;
+  ScopeCoroutine.prototype.plus_d7pszg_k$ = CoroutineContext.prototype.plus_d7pszg_k$;
+  ScopeCoroutine.prototype.get_9uvjra_k$ = Element_0.prototype.get_9uvjra_k$;
+  ScopeCoroutine.prototype.fold_cq605b_k$ = Element_0.prototype.fold_cq605b_k$;
+  ScopeCoroutine.prototype.minusKey_djuxjq_k$ = Element_0.prototype.minusKey_djuxjq_k$;
   JsMainDispatcher.prototype.plus_d7pszg_k$ = CoroutineContext.prototype.plus_d7pszg_k$;
   JsMainDispatcher.prototype.get_9uvjra_k$ = ContinuationInterceptor.prototype.get_9uvjra_k$;
   JsMainDispatcher.prototype.fold_cq605b_k$ = Element_0.prototype.fold_cq605b_k$;
@@ -61096,13 +65012,13 @@
   WindowDispatcher.prototype.get_9uvjra_k$ = ContinuationInterceptor.prototype.get_9uvjra_k$;
   WindowDispatcher.prototype.fold_cq605b_k$ = Element_0.prototype.fold_cq605b_k$;
   WindowDispatcher.prototype.minusKey_djuxjq_k$ = ContinuationInterceptor.prototype.minusKey_djuxjq_k$;
-  _no_name_provided__77.prototype.get_9uvjra_k$ = ContinuationInterceptor.prototype.get_9uvjra_k$;
-  _no_name_provided__77.prototype.fold_cq605b_k$ = Element_0.prototype.fold_cq605b_k$;
-  _no_name_provided__77.prototype.minusKey_djuxjq_k$ = ContinuationInterceptor.prototype.minusKey_djuxjq_k$;
-  _no_name_provided__77.prototype.plus_d7pszg_k$ = CoroutineContext.prototype.plus_d7pszg_k$;
-  _no_name_provided__77.prototype.releaseInterceptedContinuation_h7c6yl_k$ = ContinuationInterceptor.prototype.releaseInterceptedContinuation_h7c6yl_k$;
-  _no_name_provided__83.prototype.write_majfzk_k$ = AsyncOutputStream.prototype.write_majfzk_k$;
-  _no_name_provided__114.prototype.write_majfzk_k$ = AsyncOutputStream.prototype.write_majfzk_k$;
+  _no_name_provided__79.prototype.get_9uvjra_k$ = ContinuationInterceptor.prototype.get_9uvjra_k$;
+  _no_name_provided__79.prototype.fold_cq605b_k$ = Element_0.prototype.fold_cq605b_k$;
+  _no_name_provided__79.prototype.minusKey_djuxjq_k$ = ContinuationInterceptor.prototype.minusKey_djuxjq_k$;
+  _no_name_provided__79.prototype.plus_d7pszg_k$ = CoroutineContext.prototype.plus_d7pszg_k$;
+  _no_name_provided__79.prototype.releaseInterceptedContinuation_h7c6yl_k$ = ContinuationInterceptor.prototype.releaseInterceptedContinuation_h7c6yl_k$;
+  _no_name_provided__85.prototype.write_majfzk_k$ = AsyncOutputStream.prototype.write_majfzk_k$;
+  _no_name_provided__116.prototype.write_majfzk_k$ = AsyncOutputStream.prototype.write_majfzk_k$;
   SyncStream.prototype.read$default_82dsjl_k$ = SyncInputStream.prototype.read$default_82dsjl_k$;
   Adler32.prototype.update$default_esd280_k$ = SimpleChecksum.prototype.update$default_esd280_k$;
   CRC32.prototype.update$default_esd280_k$ = SimpleChecksum.prototype.update$default_esd280_k$;
@@ -61116,13 +65032,13 @@
   ColorFormat24.prototype.getB_ha5a7z_k$ = ColorFormat.prototype.getB_ha5a7z_k$;
   ColorFormat24.prototype.getA_ha5a7z_k$ = ColorFormat.prototype.getA_ha5a7z_k$;
   ColorFormat24.prototype.pack_w0xdj4_k$ = ColorFormat.prototype.pack_w0xdj4_k$;
-  BLKCompiler.prototype.compileSpriteFromImageBytes$default_h46oqk_k$ = SpriteCompiler.prototype.compileSpriteFromImageBytes$default_h46oqk_k$;
+  BLKCompiler.prototype.compileSpriteFromImageBytes$default_ouf8qm_k$ = SpriteCompiler.prototype.compileSpriteFromImageBytes$default_ouf8qm_k$;
   BLKCompiler.prototype.compileSpriteFromLoadedImages$default_8h3m8r_k$ = SpriteCompiler.prototype.compileSpriteFromLoadedImages$default_8h3m8r_k$;
-  C16Compiler.prototype.compileSpriteFromImageBytes$default_h46oqk_k$ = SpriteCompiler.prototype.compileSpriteFromImageBytes$default_h46oqk_k$;
+  C16Compiler.prototype.compileSpriteFromImageBytes$default_ouf8qm_k$ = SpriteCompiler.prototype.compileSpriteFromImageBytes$default_ouf8qm_k$;
   C16Compiler.prototype.compileSpriteFromLoadedImages$default_8h3m8r_k$ = SpriteCompiler.prototype.compileSpriteFromLoadedImages$default_8h3m8r_k$;
-  S16Compiler.prototype.compileSpriteFromImageBytes$default_h46oqk_k$ = SpriteCompiler.prototype.compileSpriteFromImageBytes$default_h46oqk_k$;
+  S16Compiler.prototype.compileSpriteFromImageBytes$default_ouf8qm_k$ = SpriteCompiler.prototype.compileSpriteFromImageBytes$default_ouf8qm_k$;
   S16Compiler.prototype.compileSpriteFromLoadedImages$default_8h3m8r_k$ = SpriteCompiler.prototype.compileSpriteFromLoadedImages$default_8h3m8r_k$;
-  SprCompiler.prototype.compileSpriteFromImageBytes$default_h46oqk_k$ = SpriteCompiler.prototype.compileSpriteFromImageBytes$default_h46oqk_k$;
+  SprCompiler.prototype.compileSpriteFromImageBytes$default_ouf8qm_k$ = SpriteCompiler.prototype.compileSpriteFromImageBytes$default_ouf8qm_k$;
   SprCompiler.prototype.compileSpriteFromLoadedImages$default_8h3m8r_k$ = SpriteCompiler.prototype.compileSpriteFromLoadedImages$default_8h3m8r_k$;
   ArgumentSingleValue.prototype.getValue_1kobyo_k$ = ArgumentValueDelegate.prototype.getValue_1kobyo_k$;
   ArgumentMultipleValues.prototype.getValue_1kobyo_k$ = ArgumentValueDelegate.prototype.getValue_1kobyo_k$;
@@ -61149,12 +65065,13 @@
   BASE64_ALPHABET = toCharArray('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/');
   NON_BASE_64_REGEX = NON_BASE_64_REGEX$init$();
   NEWLINE_REGEX = NEWLINE_REGEX$init$();
+  allchars = toCharArray('abcdefghijklmnopqrstuvwxyz0123456789');
   errorToleranceRange = rangeTo(-1.0E-4, 1.0E-4);
   readBuffer = new DataView(new ArrayBuffer(8));
   floatsBuffer = new Float32Array(1);
   doubleBuffer = new Float64Array(1);
   pathSeparatorChar$delegate = lazy(_no_name_provided_$factory_43());
-  pathSeparator = '' + _get_pathSeparatorChar_();
+  pathSeparator_0 = '' + _get_pathSeparatorChar_();
   applicationSupportPath = null;
   KlockLocale_default = Companion_getInstance_15();
   ExtendedTimezoneNames = ExtendedTimezoneNames$init$();
@@ -61171,6 +65088,7 @@
   isNodeJs$delegate = lazy(_no_name_provided_$factory_51());
   _global = typeof global !== 'undefined' ? global : this;
   isNative = false;
+  RESUME_TOKEN = new Symbol('RESUME_TOKEN');
   COMPLETING_ALREADY = new Symbol('COMPLETING_ALREADY');
   COMPLETING_WAITING_CHILDREN = new Symbol('COMPLETING_WAITING_CHILDREN');
   COMPLETING_RETRY = new Symbol('COMPLETING_RETRY');
@@ -61266,12 +65184,14 @@
   BREED_SPRITE_FILE_REGEX = BREED_SPRITE_FILE_REGEX$init$();
   BREED_ATT_FILE_REGEX = BREED_ATT_FILE_REGEX$init$();
   WINDOWS_ABSOLUTE_PATH_PREFIX = WINDOWS_ABSOLUTE_PATH_PREFIX$init$();
+  mIsCLI = true;
   imageExtensions = imageExtensions$init$();
   var $bedalton = _.bedalton || (_.bedalton = {});
   var $bedalton$creatures = $bedalton.creatures || ($bedalton.creatures = {});
   var $bedalton$creatures$geometry = $bedalton$creatures.geometry || ($bedalton$creatures.geometry = {});
   var $bedalton$creatures$structs = $bedalton$creatures.structs || ($bedalton$creatures.structs = {});
   var $bedalton$creatures$util = $bedalton$creatures.util || ($bedalton$creatures.util = {});
+  $bedalton$creatures.LoggerBuilder = LoggerBuilder;
   $bedalton$creatures$util.CommonException = CommonException;
   $bedalton$creatures$util.setLogger = setLogger;
   var $bedalton$creatures$bytes = $bedalton$creatures.bytes || ($bedalton$creatures.bytes = {});
@@ -61293,6 +65213,21 @@
   _.stitchBlkToPng = stitchBlkToPng;
   var $bedalton$creatures$sprite = $bedalton$creatures.sprite || ($bedalton$creatures.sprite = {});
   var $bedalton$creatures$sprite$cli = $bedalton$creatures$sprite.cli || ($bedalton$creatures$sprite.cli = {});
+  $bedalton$creatures$sprite$cli.CompileSpriteTask = CompileSpriteTask;
+  $bedalton$creatures$sprite$cli.ConvertBreedTask = ConvertBreedTask;
+  $bedalton$creatures$sprite$cli.ConvertSpriteTask = ConvertSpriteTask;
+  $bedalton$creatures$sprite$cli.ParseSpriteTask = ParseSpriteTask;
+  $bedalton$creatures$sprite$cli.AppRequestTermination = AppRequestTermination;
+  $bedalton$creatures$sprite$cli.AppRequestTermination.AppRequestTerminationOK = AppRequestTerminationOK;
+  $bedalton$creatures$sprite$cli.AppRequestTermination.AppRequestTerminationError = AppRequestTerminationError;
+  _.setShouldOverwriteCallback = setShouldOverwriteCallback;
+  _.runCliWithArray = runCliWithArray;
+  _.setLogger = setLogger_0;
+  _.setLogMode = setLogMode;
+  _.ConvertSpriteTaskJs = ConvertSpriteTaskJs;
+  _.ConvertBreedTaskJs = ConvertBreedTaskJs;
+  _.CompileSpriteTaskJs = CompileSpriteTaskJs;
+  _.ParseSpriteTaskJs = ParseSpriteTaskJs;
   $bedalton$creatures$sprite$cli.runWhenReady = runWhenReady;
   return _;
 }(module.exports, require('process'), require('path'), require('stream'), require('crypto'), require('events'), require('fs'), require('net'), require('os'), require('readline'), require('tty'), require('glob')));
