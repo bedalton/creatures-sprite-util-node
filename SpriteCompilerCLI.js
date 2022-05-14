@@ -1200,14 +1200,6 @@
       return tmp$ret$0;
     }return toList_2(_this_.subList_27zxwg_k$(indices._get_start__0_k$(), indices._get_endInclusive__0_k$() + 1 | 0));
   }
-  function plus_0(_this_, element) {
-    var result = ArrayList_init_$Create$_0(_this_._get_size__0_k$() + 1 | 0);
-    result.addAll_dxd4eo_k$(_this_);
-    Unit_getInstance();
-    result.add_2bq_k$(element);
-    Unit_getInstance();
-    return result;
-  }
   function toIntArray(_this_) {
     var result = new Int32Array(_this_._get_size__0_k$());
     var index = 0;
@@ -1543,7 +1535,7 @@
     kind: 'class',
     interfaces: [Iterable_0]
   };
-  function plus_1(_this_, elements) {
+  function plus_0(_this_, elements) {
     var result = LinkedHashSet_init_$Create$_1(mapCapacity(_this_._get_size__0_k$() + elements.length | 0));
     result.addAll_dxd4eo_k$(_this_);
     Unit_getInstance();
@@ -10798,7 +10790,7 @@
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : toString_3(tmp0_safe_receiver);
     return tmp1_elvis_lhs == null ? 'null' : tmp1_elvis_lhs;
   }
-  function plus_2(_this_, other) {
+  function plus_1(_this_, other) {
     var tmp2_safe_receiver = _this_;
     var tmp3_elvis_lhs = tmp2_safe_receiver == null ? null : toString_3(tmp2_safe_receiver);
     var tmp = tmp3_elvis_lhs == null ? 'null' : tmp3_elvis_lhs;
@@ -42970,7 +42962,7 @@
     return RegisteredImageFormats_formats;
   };
   RegisteredImageFormats.prototype.register_mo7ym5_k$ = function (formats) {
-    this._set_formats__nv0xm4_k$(new ImageFormats(plus_1(this._get_formats__0_k$()._formats, formats)));
+    this._set_formats__nv0xm4_k$(new ImageFormats(plus_0(this._get_formats__0_k$()._formats, formats)));
   };
   RegisteredImageFormats.prototype.readImage_55aaqy_k$ = function (s, props) {
     return this._get_formats__0_k$().readImage_55aaqy_k$(s, props);
@@ -46795,34 +46787,22 @@
     var tmp;
     switch (tmp0_subject) {
       case 8:
-        tmp = flipAttX(images, att, left ? 5 : 1);
-        break;
       case 9:
       case 10:
         tmp = att.get_ha5a7z_k$(8);
         break;
       case 11:
-        tmp = flipAttY(images, att, left ? 2 : 6);
+        tmp = att.get_ha5a7z_k$(left ? 3 : 7);
         break;
       case 12:
-        tmp = flipAttX(images, att, left ? 1 : 5);
-        break;
       case 13:
-        tmp = att.get_ha5a7z_k$(9);
+        tmp = att.get_ha5a7z_k$(left ? 0 : 4);
         break;
       case 14:
-        tmp = flipAttY(images, att, left ? 6 : 2);
+        tmp = att.get_ha5a7z_k$(left ? 6 : 2);
         break;
       case 15:
-        var line8 = flipAttY(images, att, 8);
-        var tmp$ret$0;
-        $l$block: {
-          var tmp0_plusElement_0 = att.subList_27zxwg_k$(0, 8);
-          tmp$ret$0 = plus_0(tmp0_plusElement_0, line8);
-          break $l$block;
-        }
-
-        tmp = flipAttX(images, tmp$ret$0, 8);
+        tmp = att.get_ha5a7z_k$(left ? 7 : 3);
         break;
       default:throw Exception_init_$Create$('' + 'Invalid part upper arm frame request for [' + frame + '].');
     }
@@ -46842,69 +46822,17 @@
     } else if (tmp0_subject === 11) {
       tmp = att.get_ha5a7z_k$(left ? 3 : 7);
     } else if (tmp0_subject === 12) {
-      tmp = att.get_ha5a7z_k$(left ? 0 : 4);
-    } else if (tmp0_subject === 13) {
       tmp = att.get_ha5a7z_k$(left ? 1 : 5);
+    } else if (tmp0_subject === 13) {
+      tmp = att.get_ha5a7z_k$(left ? 0 : 4);
     } else if (tmp0_subject === 14) {
-      tmp = att.get_ha5a7z_k$(left ? 2 : 6);
+      tmp = att.get_ha5a7z_k$(left ? 6 : 2);
     } else if (tmp0_subject === 15) {
       tmp = att.get_ha5a7z_k$(left ? 7 : 3);
     } else {
       throw Exception_init_$Create$('' + 'Invalid part upper arm frame request for [' + frame + '].');
     }
     return tmp;
-  }
-  function flipAttX(image, attLines, frame) {
-    var width = image(frame)._get_width__0_k$();
-    var tmp$ret$0;
-    $l$block: {
-      tmp$ret$0 = ArrayList_init_$Create$();
-      break $l$block;
-    }
-    var out = tmp$ret$0;
-    var att = attLines.get_ha5a7z_k$(frame);
-    var inductionVariable = 0;
-    var last_2 = att._get_size__0_k$() - 1 | 0;
-    if (inductionVariable <= last_2)
-      do {
-        var i = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        if (i % 2 === 0) {
-          out.add_2bq_k$(width - att.get_ha5a7z_k$(i) | 0);
-          Unit_getInstance();
-        } else {
-          out.add_2bq_k$(att.get_ha5a7z_k$(i));
-          Unit_getInstance();
-        }
-      }
-       while (inductionVariable <= last_2);
-    return out;
-  }
-  function flipAttY(image, attLines, frame) {
-    var height = image(frame)._get_height__0_k$();
-    var tmp$ret$0;
-    $l$block: {
-      tmp$ret$0 = ArrayList_init_$Create$();
-      break $l$block;
-    }
-    var out = tmp$ret$0;
-    var att = attLines.get_ha5a7z_k$(frame);
-    var inductionVariable = 0;
-    var last_2 = att._get_size__0_k$() - 1 | 0;
-    if (inductionVariable <= last_2)
-      do {
-        var i = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        if (i % 2 === 1) {
-          out.add_2bq_k$(height - att.get_ha5a7z_k$(i) | 0);
-          Unit_getInstance();
-        } else {
-          out.add_2bq_k$(att.get_ha5a7z_k$(i));
-          Unit_getInstance();
-        }
-      }
-       while (inductionVariable <= last_2);
-    return out;
   }
   function _no_name_provided__211($images) {
     this._$images_10 = $images;
@@ -46965,20 +46893,16 @@
     var tmp;
     if (0 <= tmp0_subject ? tmp0_subject <= 7 : false) {
       tmp = this._$images_12.get_ha5a7z_k$(frame);
-    } else if (tmp0_subject === 8) {
-      tmp = this._$images_12.get_ha5a7z_k$(this._$left ? 5 : 1).clone_0_k$().flipX_0_k$().toBMP32IfRequired_0_k$();
-    } else if (tmp0_subject === 9 ? true : tmp0_subject === 10) {
+    } else if ((tmp0_subject === 8 ? true : tmp0_subject === 9) ? true : tmp0_subject === 10) {
       tmp = this._$images_12.get_ha5a7z_k$(8);
     } else if (tmp0_subject === 11) {
-      tmp = this._$images_12.get_ha5a7z_k$(this._$left ? 2 : 6).clone_0_k$().flipY_0_k$().toBMP32IfRequired_0_k$();
-    } else if (tmp0_subject === 12) {
-      tmp = this._$images_12.get_ha5a7z_k$(this._$left ? 1 : 5).clone_0_k$().flipX_0_k$().toBMP32IfRequired_0_k$();
-    } else if (tmp0_subject === 13) {
-      tmp = this._$images_12.get_ha5a7z_k$(9);
+      tmp = this._$images_12.get_ha5a7z_k$(this._$left ? 3 : 7);
+    } else if (tmp0_subject === 12 ? true : tmp0_subject === 13) {
+      tmp = this._$images_12.get_ha5a7z_k$(this._$left ? 0 : 4);
     } else if (tmp0_subject === 14) {
-      tmp = this._$images_12.get_ha5a7z_k$(this._$left ? 6 : 2).clone_0_k$().flipY_0_k$().toBMP32IfRequired_0_k$();
+      tmp = this._$images_12.get_ha5a7z_k$(this._$left ? 6 : 2);
     } else if (tmp0_subject === 15) {
-      tmp = this._$images_12.get_ha5a7z_k$(8).clone_0_k$().flipX_0_k$().flipY_0_k$().toBMP32IfRequired_0_k$();
+      tmp = this._$images_12.get_ha5a7z_k$(this._$left ? 7 : 3);
     } else {
       throw Exception_init_$Create$('' + 'Invalid part upper arm frame request for [' + frame + '].');
     }
@@ -47009,11 +46933,11 @@
     } else if (tmp0_subject === 11) {
       tmp = this._$images_13.get_ha5a7z_k$(this._$left_0 ? 3 : 7);
     } else if (tmp0_subject === 12) {
-      tmp = this._$images_13.get_ha5a7z_k$(this._$left_0 ? 0 : 4);
-    } else if (tmp0_subject === 13) {
       tmp = this._$images_13.get_ha5a7z_k$(this._$left_0 ? 1 : 5);
+    } else if (tmp0_subject === 13) {
+      tmp = this._$images_13.get_ha5a7z_k$(this._$left_0 ? 0 : 4);
     } else if (tmp0_subject === 14) {
-      tmp = this._$images_13.get_ha5a7z_k$(this._$left_0 ? 2 : 6);
+      tmp = this._$images_13.get_ha5a7z_k$(this._$left_0 ? 6 : 2);
     } else if (tmp0_subject === 15) {
       tmp = this._$images_13.get_ha5a7z_k$(this._$left_0 ? 7 : 3);
     } else {
@@ -58846,7 +58770,7 @@
     return this.withProgressive_mn33cr_k$(value === void 1 ? true : value);
   };
   ConvertBreedTask.prototype.withProgressive_mn33cr_k$ = function (value) {
-    this._progress_0 = value;
+    this._progressive_2 = value;
     return this;
   };
   ConvertBreedTask.prototype.withProgressive$default_h1jrdv_k$ = function (value, $mask0, $handler) {
@@ -61322,7 +61246,7 @@
             tmp_2 = (tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs) + FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(this._path_3) + '-' + FileNameUtil_getInstance().getExtension_6wfw3l_k$(this._path_3) + new Char(45);
           } else {
             var tmp1_elvis_lhs = this._$task_3.getPrefix();
-            tmp_2 = tmp1_elvis_lhs == null ? plus_2(FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(this._path_3), '-') : tmp1_elvis_lhs;
+            tmp_2 = tmp1_elvis_lhs == null ? plus_1(FileNameUtil_getInstance().getFileNameWithoutExtension_6wfw3l_k$(this._path_3), '-') : tmp1_elvis_lhs;
           }
           var prefix = tmp_2;
           var tmp_3;
@@ -62108,64 +62032,6 @@
       Unit_getInstance();
     } catch ($p) {
       if ($p instanceof IllegalStateException) {
-        {
-          var tmp0_e_0 = Log_getInstance();
-          if (tmp0_e_0._logLevel._value_3 >= LogLevel_ERROR_getInstance()._value_3) {
-            var tmp = tmp0_e_0._loggerObject;
-            var tmp$ret$3;
-            $l$block_2: {
-              var tmp_0;
-              var tmp0_elvis_lhs_1_1 = tmp0_e_0._loggerObject.prependLogType;
-              if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
-                tmp_0 = '**ERROR** ';
-              } else {
-                {
-                  tmp_0 = '';
-                }
-              }
-              var tmp_1 = tmp_0;
-              var tmp_2;
-              var tmp$ret$0;
-              $l$block: {
-                {
-                }
-                tmp$ret$0 = null == null ? true : isBlank(null);
-                break $l$block;
-              }
-              if (!tmp$ret$0) {
-                tmp_2 = 'null::';
-              } else {
-                {
-                  tmp_2 = '';
-                }
-              }
-              var tmp_3 = tmp_2;
-              var tmp$ret$2;
-              $l$block_1: {
-                var tmp_4;
-                var tmp$ret$1;
-                $l$block_0: {
-                  var tmp0_isNullOrBlank_0_3 = $p.message;
-                  {
-                  }
-                  tmp$ret$1 = tmp0_isNullOrBlank_0_3 == null ? true : isBlank(tmp0_isNullOrBlank_0_3);
-                  break $l$block_0;
-                }
-                if (tmp$ret$1) {
-                  tmp_4 = '';
-                } else {
-                  {
-                    tmp_4 = '; Error: ' + $p.message + ('' + ';\nArgs: ' + args);
-                  }
-                }
-                tmp$ret$2 = 'Run failed without exit code' + tmp_4;
-                break $l$block_1;
-              }
-              tmp$ret$3 = '' + tmp_1 + tmp_3 + tmp$ret$2;
-              break $l$block_2;
-            }
-            tmp.error(tmp$ret$3);
-          }}
         return exitNative(5000);
       } else {
         {
@@ -62819,56 +62685,14 @@
     }
     var tmp6_elvis_lhs = tmp_0;
     var extensionsRegex = tmp6_elvis_lhs == null ? '' : tmp6_elvis_lhs;
-    {
-      var tmp0_i_0 = Log_getInstance();
-      if (tmp0_i_0._logLevel._value_3 >= LogLevel_LOG_1_getInstance()._value_3) {
-        var tmp_1 = tmp0_i_0._loggerObject;
-        var tmp$ret$6;
-        $l$block_5: {
-          var tmp_2;
-          var tmp0_elvis_lhs_1_1 = tmp0_i_0._loggerObject.prependLogType;
-          if (tmp0_elvis_lhs_1_1 == null ? DefaultLoggerObject_getInstance()._prependLogType_0 : tmp0_elvis_lhs_1_1) {
-            tmp_2 = '**LOG1** ';
-          } else {
-            {
-              tmp_2 = '';
-            }
-          }
-          var tmp_3 = tmp_2;
-          var tmp_4;
-          var tmp$ret$4;
-          $l$block_3: {
-            {
-            }
-            tmp$ret$4 = null == null ? true : isBlank(null);
-            break $l$block_3;
-          }
-          if (!tmp$ret$4) {
-            tmp_4 = 'null::';
-          } else {
-            {
-              tmp_4 = '';
-            }
-          }
-          var tmp_5 = tmp_4;
-          var tmp$ret$5;
-          $l$block_4: {
-            tmp$ret$5 = '' + 'Regex: "^[a-q][' + genusRegex + ']\\\\d[' + breedRegex + ']' + extensionsRegex + '"';
-            break $l$block_4;
-          }
-          tmp$ret$6 = '' + tmp_3 + tmp_5 + tmp$ret$5;
-          break $l$block_5;
-        }
-        tmp_1.info(false, tmp$ret$6);
-      }}
-    var tmp$ret$7;
-    $l$block_6: {
-      var tmp1_toRegex_0 = '' + '^[a-q][' + genusRegex + ']\\d[' + breedRegex + ']' + extensionsRegex;
-      var tmp2_toRegex_0 = RegexOption_IGNORE_CASE_getInstance();
-      tmp$ret$7 = Regex_init_$Create$(tmp1_toRegex_0, tmp2_toRegex_0);
-      break $l$block_6;
+    var tmp$ret$4;
+    $l$block_3: {
+      var tmp0_toRegex_0 = '' + '^[a-q][' + genusRegex + ']\\d[' + breedRegex + ']' + extensionsRegex;
+      var tmp1_toRegex_0 = RegexOption_IGNORE_CASE_getInstance();
+      tmp$ret$4 = Regex_init_$Create$(tmp0_toRegex_0, tmp1_toRegex_0);
+      break $l$block_3;
     }
-    return tmp$ret$7;
+    return tmp$ret$4;
   }
   function ensureAndGetOutputDirectory(outputDirectory, currentWorkingDirectory, recursive) {
     var tmp0_safe_receiver = outputDirectory;
