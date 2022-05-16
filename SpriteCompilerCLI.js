@@ -62956,8 +62956,35 @@
             $l$block_14: {
               var path_6 = qualifyPath(baseDirectory, element_2_3);
               var tmp_1;
-              var tmp_2 = new Char(42);
-              if (contains$default(path_6, tmp_2, false, 2, null)) {
+              var tmp_2;
+              var tmp_3;
+              var tmp_4 = new Char(42);
+              if (contains$default(path_6, tmp_4, false, 2, null)) {
+                tmp_3 = true;
+              } else {
+                {
+                  var tmp_5 = new Char(63);
+                  tmp_3 = contains$default(path_6, tmp_5, false, 2, null);
+                }
+              }
+              if (tmp_3) {
+                tmp_2 = true;
+              } else {
+                {
+                  var tmp_6;
+                  var tmp_7 = new Char(91);
+                  if (contains$default(path_6, tmp_7, false, 2, null)) {
+                    var tmp_8 = new Char(93);
+                    tmp_6 = contains$default(path_6, tmp_8, false, 2, null);
+                  } else {
+                    {
+                      tmp_6 = false;
+                    }
+                  }
+                  tmp_2 = tmp_6;
+                }
+              }
+              if (tmp_2) {
                 var tmp$ret$14;
                 $l$block_13: {
                   var tmp0_apply_0_7 = sortedNice(toList(globFiles(path_6, baseDirectory)));
@@ -63014,14 +63041,14 @@
       break $l$block_18;
     }
     var result = distinct(tmp$ret$19);
-    var tmp_3;
+    var tmp_9;
     var tmp$ret$20;
     $l$block_19: {
       tmp$ret$20 = !missingFiles.isEmpty_0_k$();
       break $l$block_19;
     }
     if (tmp$ret$20) {
-      tmp_3 = true;
+      tmp_9 = true;
     } else {
       {
         var tmp$ret$21;
@@ -63029,10 +63056,10 @@
           tmp$ret$21 = !emptyGlobs.isEmpty_0_k$();
           break $l$block_20;
         }
-        tmp_3 = tmp$ret$21;
+        tmp_9 = tmp$ret$21;
       }
     }
-    if (tmp_3) {
+    if (tmp_9) {
       throw MissingFilesException_init_$Create$(missingFiles, emptyGlobs, null, 4, null);
     } else {
     }
@@ -63399,7 +63426,7 @@
   function BREED_FILENAME_WITHOUT_EXTENSION_REGEX$init$() {
     var tmp$ret$0;
     $l$block: {
-      var tmp0_toRegex_0 = '[a-qA-Q][0-7][0-9][a-zA-Z0-9]';
+      var tmp0_toRegex_0 = '[a-qA-Q][0-7]\\d[a-zA-Z\\d]';
       tmp$ret$0 = Regex_init_$Create$_0(tmp0_toRegex_0);
       break $l$block;
     }
@@ -63408,7 +63435,7 @@
   function BREED_SPRITE_FILE_REGEX$init$() {
     var tmp$ret$0;
     $l$block: {
-      var tmp0_toRegex_0 = '^[a-qA-Q][0-7][0-9][a-zA-Z0-9]\\.(spr|s16|c16)$';
+      var tmp0_toRegex_0 = '^[a-qA-Q][0-7]\\d[a-zA-Z\\d]\\.(spr|s16|c16)$';
       var tmp1_toRegex_0 = RegexOption_IGNORE_CASE_getInstance();
       tmp$ret$0 = Regex_init_$Create$(tmp0_toRegex_0, tmp1_toRegex_0);
       break $l$block;
@@ -63418,7 +63445,7 @@
   function BREED_ATT_FILE_REGEX$init$() {
     var tmp$ret$0;
     $l$block: {
-      var tmp0_toRegex_0 = '^[a-qA-Q][0-7][0-9][a-zA-Z0-9]\\.[Aa][Tt][Tt]$';
+      var tmp0_toRegex_0 = '^[a-qA-Q][0-7]\\d[a-zA-Z\\d]\\.[Aa][Tt][Tt]$';
       tmp$ret$0 = Regex_init_$Create$_0(tmp0_toRegex_0);
       break $l$block;
     }
